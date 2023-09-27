@@ -1,0 +1,7 @@
+#C++ Objects
+*.a
+*.lib
+*.o
+
+#Visual Studio
+.vs/

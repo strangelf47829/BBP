@@ -32,7 +32,7 @@ CMCFLAGS=
 
 # == END OF USER SETTINGS -- NO NEED TO CHANGE ANYTHING BELOW THIS LINE =======
 
-PLATS= guess aix bsd c89 freebsd generic ios linux linux-readline macosx mingw posix solaris arm x86
+PLATS= guess aix bsd c89 freebsd generic ios linux linux-readline macosx mingw posix solaris arm x86 x86Debug
 
 LUA_A=	liblua.a
 CORE_O=	lapi.o lcode.o lctype.o ldebug.o ldo.o ldump.o lfunc.o lgc.o llex.o lmem.o lobject.o lopcodes.o lparser.o lstate.o lstring.o ltable.o ltm.o lundump.o lvm.o lzio.o
@@ -146,7 +146,9 @@ SunOS solaris:
 	$(MAKE) $(ALL) SYSCFLAGS="-DLUA_USE_POSIX -DLUA_USE_DLOPEN -D_REENTRANT" SYSLIBS="-ldl"
 
 arm:
-	$(MAKE) $(ALL) MYCFLAGS="-c -nostdlib -ffreestanding" CC="arm-none-eabi-gcc"
+	$(MAKE) $(ALL) MYCFLAGS="-c -nostdlib -ffreestanding -DLUA_32BITS" CC="arm-none-eabi-gcc"
+
+x86Debug: x86
 
 x86:
 	$(MAKE) $(ALL) CC="x86_64-w64-mingw32-gcc"

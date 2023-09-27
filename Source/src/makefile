@@ -2,7 +2,7 @@
 
 # == CHANGE THE SETTINGS BELOW TO SUIT THE ENVIRONMENT ==
 
-PLAT= x86
+PLAT= x86Debug
 
 # Where to install
 INSTALL_TOP= ../../
@@ -13,8 +13,8 @@ INSTALL_LIB= $(INSTALL_TOP)/Build/lib
 CC= gcc
 CXX= g++
 
-CFLAGS= $(SYSCFLAGS) $(MYCFLAGS)
-CXXFLAGS= $(SYSCXFLAGS) $(MYCXFLAGS)
+CFLAGS= $(SYSCFLAGS) $(MYCFLAGS) $(EXT_CFLAGS)
+CXXFLAGS= $(SYSCXFLAGS) $(MYCXFLAGS) $(EXT_CXFLAGS)
 
 LDFLAGS= $(SYSLDFLAGS) $(MYLDFLAGS)
 LIBS= $(SYSLIBS) $(MYLIBS)
@@ -32,9 +32,12 @@ MYCXFLAGS= -Iinclude/
 MYLDFLAGS=
 MYLIBS=
 
+EXT_CFLAGS=
+EXT_CXFLAGS=
+
 # == END OF USER SETTINGS ==
 
-PLATS= x86 micro stdgnu
+PLATS= x86 micro stdgnu x86Debug
 
 KERNEL_A= libBBPRing0libs.a
 KERNEL_O= kernel.o
@@ -48,7 +51,8 @@ KERNEL_T= libBBPRing0.a
 ALL_O= $(BASE_O) $(KERNEL_O)
 ALL_T= $(KERNEL_A) $(KERNEL_T)
 ALL_A= $(KERNEL_A)
-ALL_H= ../include/Kernel.h ../include/lua.h ../include/lapi.h ../include/lauxlib.h
+ALL_H= ../include/*
+#ALL_H= ../include/Kernel.h ../include/lua.h ../include/lapi.h ../include/lauxlib.h
 
 
 # Targets start here
@@ -79,10 +83,10 @@ clean_all:
 
 generic: all
 
-x86noDebug:
+x86:
 	$(MAKE) $(ALL) CC="x86_64-w64-mingw32-gcc" CXX="x86_64-w64-mingw32-g++"
 
-x86:
+x86Debug:
 	$(MAKE) $(ALL) CC="x86_64-w64-mingw32-gcc" CXX="x86_64-w64-mingw32-g++" SYSCXFLAGS="-c -DBBP_DEBUG"
 
 nostdlib:

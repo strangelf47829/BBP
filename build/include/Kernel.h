@@ -39,10 +39,17 @@ enum KERNEL_STATUS : int
 };
 
 #ifndef BBP_DEBUG
+#ifdef BBP_C_ENTRY
+/// @brief Brief description
+/// @return Returns a value!
+extern KERNEL_STATUS kernel_entry(const char *);
+#else
 /// @brief Brief description
 /// @return Returns a value!
 extern KERNEL_STATUS kernel_entry();
 #endif
+#endif
+
 #ifdef BBP_DEBUG
 /// @brief Brief description
 /// @return Returns a value!

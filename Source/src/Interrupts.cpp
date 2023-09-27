@@ -323,6 +323,21 @@ int BBP::Services::Interrupts::createInterrupt()
 	// Since we know that at this point the index is valid, create a new interrupt at that index
 	BBP::Services::Interrupts::interrupts[index] = new BBP::Services::Interrupts::Interrupt_handle();
 
+#ifdef BBP_DEBUG
+	BBP::Debug::Capture();
+	BBP::Debug::SetTerminalColor(30);
+	BBP::Debug::SetTerminalColor(41);
+
+	printf("[INTERRUPT]");
+
+	BBP::Debug::SetTerminalColor(33);
+	BBP::Debug::SetTerminalColor(40);
+
+	printf(" Interrupt %d created\n", index);
+
+	BBP::Debug::Restore();
+#endif
+
 	// Nothing special needs to be done here. Just return the index
 	return index;
 }

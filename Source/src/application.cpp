@@ -122,13 +122,7 @@ bool BBP::Services::ApplicationServices::Lua::Execute(BBP::application *app, cha
 		app->lastAudit = app->executingSince;
 
 		// Execute string
-		//try {
-			luaL_dostring(app->applicationState, str);
-		//}
-		//catch (...)
-		//{
-			//printf("Lua error\n");
-		//}
+		luaL_dostring(app->applicationState, str);
 
 		// The lua state is no longer busy
 		app->busy = false;
@@ -381,7 +375,7 @@ bool BBP::Services::ApplicationServices::Lua::ClearBackLog(BBP::application *app
 		BBP::Debug::SetTerminalColor(30);
 		BBP::Debug::SetTerminalColor(41);
 
-		printf("[INTERRUPT]");
+		printf("[BACKLOG]");
 
 		BBP::Debug::SetTerminalColor(32);
 		BBP::Debug::SetTerminalColor(40);
@@ -413,7 +407,7 @@ bool BBP::Services::ApplicationServices::Lua::ClearBackLog(BBP::application *app
 	return false;
 }
 
-void BBP::Services::ApplicationServices::Lua::AddBackLog(BBP::application *app, char *action) 
+void BBP::Services::ApplicationServices::Lua::AddBackLog(BBP::application *app, char *action)
 {
 	// If application is invalid, return
 	if (app == nullptr)
@@ -424,9 +418,9 @@ void BBP::Services::ApplicationServices::Lua::AddBackLog(BBP::application *app, 
 	while (action[actionLength++]) {}
 
 	// Create new string
-	char *newBacklog = (char *)BBP::Services::c_alloc(app->backlog_len + actionLength, sizeof(char));
+	char *newBacklog = (char *)BBP::Services::c_alloc(app->backlog_len + actionLength + 1, sizeof(char));
 
-	
+
 
 	// Copy over data, except for terminating null
 	for (int i = 0; i < app->backlog_len; i++)
@@ -434,7 +428,7 @@ void BBP::Services::ApplicationServices::Lua::AddBackLog(BBP::application *app, 
 			newBacklog[i] = app->backlog[i];
 		else
 			newBacklog[i] = BBP::Encodings::Roman::returncarriage;
-	
+
 	// Now copy over new data, including terminating null
 	for (int i = app->backlog_len; i < app->backlog_len + actionLength; i++)
 		if (action[i - app->backlog_len] != 0)
@@ -442,6 +436,8 @@ void BBP::Services::ApplicationServices::Lua::AddBackLog(BBP::application *app, 
 		else
 			newBacklog[i] = BBP::Encodings::Roman::returncarriage;
 
+	// Last byte is always null
+	newBacklog[app->backlog_len + actionLength];
 
 	// If the backlog is allocated, free it
 	if (app->backlog != nullptr)
@@ -450,5 +446,5 @@ void BBP::Services::ApplicationServices::Lua::AddBackLog(BBP::application *app, 
 	// Set new data
 	app->backlog = newBacklog;
 	app->backlog_c++;
-	app->backlog_len += actionLength;
+	app->backlog_len += actionLength + 1;
 }

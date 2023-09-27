@@ -49,7 +49,11 @@ void POST(BBP::Graphics::window *window, BBP::IO::SDMMC::VOLUME_INFO bootVolume)
 }
 
 #ifndef BBP_DEBUG
+#ifdef BBP_C_ENTRY
+KERNEL_STATUS kernel_entry(const char *file)
+#else
 KERNEL_STATUS kernel_entry()
+#endif
 #else
 KERNEL_STATUS kernel_entry(const char* file)
 #endif
@@ -137,21 +141,6 @@ KERNEL_STATUS kernel_entry(const char* file)
 #endif
 
 	BBP::Services::ApplicationServices::Lua::Execute(bootable, "main()", true);
-
-#ifdef BBP_DEBUG
-	BBP::Debug::Capture();
-	BBP::Debug::SetTerminalColor(37);
-	BBP::Debug::SetTerminalColor(45);
-
-	printf("[KERNEL]");
-
-	BBP::Debug::SetTerminalColor(37);
-	BBP::Debug::SetTerminalColor(40);
-
-	printf(" main() executed.\n", file);
-
-	BBP::Debug::Restore();
-#endif
 
 	int masterloop = BBP::Services::Interrupts::createInterrupt();
 	BBP::Services::Interrupts::Timer::attachTimerInterruptTo(masterloop, 5000, false);

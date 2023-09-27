@@ -1,6 +1,8 @@
 ## TODO Implement stuff here
 
-PLAT= x86
+
+PLATS= x86 arm x86Debug
+PLAT= x86Debug
 
 TOPDIR= ..
 SOURCEDIR= $(TOPDIR)/Source
@@ -10,6 +12,8 @@ BBPDIR= $(SOURCEDIR)/src
 
 BBP_LIBDIR= $(SOURCEDIR)/lib
 
+EXT_FLAGS=
+
 all: LUA RING0
 
 LUA:
@@ -17,10 +21,19 @@ LUA:
 	@cd $(LUADIR); make $(PLAT) -s;
 	@echo === Copying data ===
 	@cp $(LUADIR)/liblua.a $(BBP_LIBDIR)/liblua.a
-	@cd $(LUADIR); make clean -s
 	@echo === LUA COMPILATION COMPLETED. ===
 
 RING0:
 	@echo === Compiling BBP RING 0 for $(PLAT) ===
-	@cd $(BBPDIR); make $(PLAT) -s; make clean -s
+	@cd $(BBPDIR); make $(PLAT) "EXT_CXFLAGS= $(EXT_FLAGS)" -s; make clean -s
+	@echo === Copying data ===
+	@cp $(TOPDIR)/build/bin/libBBPRing0.a $(TOPDIR)/build/lib/libBBPRing0.a
+	@cp $(TOPDIR)/build/bin/libBBPRing0libs.a $(TOPDIR)/build/lib/libBBPRing0libs.a
+	@rm $(TOPDIR)/build/bin/libBBPRing0.a
+	@rm $(TOPDIR)/build/bin/libBBPRing0libs.a
 	@echo === COMPILATION COMPLETE ===
+
+clean_all:
+	@echo === Cleaning all ===
+	@cd $(LUADIR); make clean
+	@cd $(BBPDIR); make clean
