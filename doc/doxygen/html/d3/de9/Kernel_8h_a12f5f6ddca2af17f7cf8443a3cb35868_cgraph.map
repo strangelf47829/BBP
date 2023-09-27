@@ -1,0 +1,52 @@
+<map id="kernel_entry" name="kernel_entry">
+<area shape="rect" id="node1" title="Brief description." alt="" coords="5,909,108,936"/>
+<area shape="rect" id="node2" href="$d9/d31/namespaceBBP_1_1Services_1_1Interrupts_1_1Timer.html#a2c80e0b7a89a08a417ab024fdf300939" title=" " alt="" coords="159,469,385,510"/>
+<area shape="rect" id="node6" href="$d6/d6b/namespaceBBP_1_1Debug.html#ab866e7ba50c63089e5e2d0c92d375b95" title=" " alt="" coords="1797,1269,1955,1296"/>
+<area shape="rect" id="node7" href="$dc/d2c/namespaceBBP_1_1Services_1_1ApplicationServices.html#a8d86d8b928f49b36b7910e0ce5829642" title=" " alt="" coords="1037,561,1229,602"/>
+<area shape="rect" id="node11" href="$d3/d2f/namespaceBBP_1_1Services_1_1ApplicationServices_1_1Lua.html#af93abf672673807b9dfb9a5a7d515388" title=" " alt="" coords="1304,851,1496,893"/>
+<area shape="rect" id="node13" href="$d6/d6b/namespaceBBP_1_1Debug.html#a6a5a6354fd8f72ac451fabd4d41e6032" title=" " alt="" coords="1798,1447,1954,1473"/>
+<area shape="rect" id="node14" href="$d6/d6b/namespaceBBP_1_1Debug.html#a9f50d3f912114b43905daec2e3910d8b" title=" " alt="" coords="2003,1396,2220,1423"/>
+<area shape="rect" id="node15" href="$dc/d2c/namespaceBBP_1_1Services_1_1ApplicationServices.html#ab2c7743af7419aff96d80b60ac0f9e69" title=" " alt="" coords="436,529,691,570"/>
+<area shape="rect" id="node25" href="$d3/dea/namespaceBBP_1_1Services_1_1Interrupts.html#a11abcd79ad17dba6d28a57d4e1a000b7" title=" " alt="" coords="472,370,655,411"/>
+<area shape="rect" id="node26" href="$d5/dc6/namespaceBBP_1_1Services.html#a2160c9b8931422de7a295d23c8b4949a" title=" " alt="" coords="193,808,351,835"/>
+<area shape="rect" id="node27" href="$de/dfd/namespaceBBP_1_1Graphics_1_1Driver.html#adc497650f74bea9847ae44ca5e543248" title=" " alt="" coords="1052,1498,1213,1539"/>
+<area shape="rect" id="node28" href="$d6/d7b/namespaceBBP_1_1Graphics_1_1R2D.html#a4100d3f2042fae645faa25f3235e602a" title=" " alt="" coords="489,214,637,255"/>
+<area shape="rect" id="node32" href="$db/d5a/namespaceBBP_1_1IO_1_1Memory_1_1ROM.html#acad782d5116dc2316b3e473beb78e1d0" title=" " alt="" coords="1047,94,1218,135"/>
+<area shape="rect" id="node33" href="$dc/d09/namespaceBBP_1_1IO_1_1SDMMC.html#ad3c1ac0e1c3bc7cace3d299ac1dfd35a" title=" " alt="" coords="169,1098,375,1139"/>
+<area shape="rect" id="node34" href="$dc/d09/namespaceBBP_1_1IO_1_1SDMMC.html#adcdb663c816cb67e663e3acf37232c03" title=" " alt="" coords="156,1164,388,1191"/>
+<area shape="rect" id="node35" href="$de/dfd/namespaceBBP_1_1Graphics_1_1Driver.html#ad4ae335c21493284e8bb160e23de26c1" title=" " alt="" coords="191,1215,353,1257"/>
+<area shape="rect" id="node36" href="$d3/dea/namespaceBBP_1_1Services_1_1Interrupts.html#a0ce1981f97f5ae32beabfc89b7a8b00f" title=" " alt="" coords="759,279,941,321"/>
+<area shape="rect" id="node37" href="$db/d5a/namespaceBBP_1_1IO_1_1Memory_1_1ROM.html#a650e6710d5b7430ccf36f983aa768a17" title=" " alt="" coords="187,1382,357,1423"/>
+<area shape="rect" id="node38" href="$dc/d09/namespaceBBP_1_1IO_1_1SDMMC.html#a9d28cc12aedde4be808059603f43c33d" title=" " alt="" coords="175,1447,369,1489"/>
+<area shape="rect" id="node39" href="$d3/dea/namespaceBBP_1_1Services_1_1Interrupts.html#a31740859208c6157b9eb552db5f4ac25" title=" " alt="" coords="472,843,655,885"/>
+<area shape="rect" id="node43" href="$dc/d09/namespaceBBP_1_1IO_1_1SDMMC.html#a613450937482dfcfa5f050972d70ec36" title=" " alt="" coords="177,1564,367,1591"/>
+<area shape="rect" id="node44" href="$d3/dea/namespaceBBP_1_1Services_1_1Interrupts.html#afeb8f9c44868ac333fcc957c567cbd63" title=" " alt="" coords="181,1033,363,1074"/>
+<area shape="rect" id="node3" href="$d9/d31/namespaceBBP_1_1Services_1_1Interrupts_1_1Timer.html#a9d39ef370205101b3b242ae140b0566d" title=" " alt="" coords="458,463,669,505"/>
+<area shape="rect" id="node4" href="$d5/dc6/namespaceBBP_1_1Services.html#a66f319cf100e1e402780349a4ae1c38b" title=" " alt="" coords="1569,917,1724,944"/>
+<area shape="rect" id="node5" href="$d5/dc6/namespaceBBP_1_1Services.html#a58d754d99892b85e0b6aca82449d45f9" title=" " alt="" coords="771,345,929,372"/>
+<area shape="rect" id="node8" href="$dc/d32/namespaceBBP_1_1Services_1_1Interrupts_1_1Lua.html#ab7d9a884818832ce627c80b0d9e33c43" title=" " alt="" coords="1309,481,1491,522"/>
+<area shape="rect" id="node9" href="$d5/dc6/namespaceBBP_1_1Services.html#a901044ed4e7b6bf75958d9faa7ed3de6" title=" " alt="" coords="1803,547,1949,573"/>
+<area shape="rect" id="node10" href="$dc/d2c/namespaceBBP_1_1Services_1_1ApplicationServices.html#a22b8811a1bc60199a99034e803cf411e" title=" " alt="" coords="1547,598,1746,639"/>
+<area shape="rect" id="node12" href="$d3/d2f/namespaceBBP_1_1Services_1_1ApplicationServices_1_1Lua.html#ad75cf4a4be4831451432753ef6858174" title=" " alt="" coords="1544,851,1749,893"/>
+<area shape="rect" id="node16" href="$d5/dc6/namespaceBBP_1_1Services.html#a9183d2472e5150d12ee9e0e4e0fe4d19" title=" " alt="" coords="1051,211,1215,237"/>
+<area shape="rect" id="node17" href="$d3/d2f/namespaceBBP_1_1Services_1_1ApplicationServices_1_1Lua.html#af5cd872bec0d26ff8b32b56da38b59c0" title=" " alt="" coords="739,513,961,554"/>
+<area shape="rect" id="node24" href="$dc/d2c/namespaceBBP_1_1Services_1_1ApplicationServices.html#a4e49098b032409b2679989ac55fc6c92" title=" " alt="" coords="746,447,954,489"/>
+<area shape="rect" id="node18" href="$d3/d2f/namespaceBBP_1_1Services_1_1ApplicationServices_1_1Lua.html#a413760fd89d7e394c44cdf10228575cf" title=" " alt="" coords="1024,627,1241,683"/>
+<area shape="rect" id="node21" href="$d3/d2f/namespaceBBP_1_1Services_1_1ApplicationServices_1_1Lua.html#a4a20bd6c10eb45f113cfab894e17bc4f" title=" " alt="" coords="1009,443,1256,485"/>
+<area shape="rect" id="node22" href="$d3/d2f/namespaceBBP_1_1Services_1_1ApplicationServices_1_1Lua.html#a68061f452d1676fedab6eab100adca09" title=" " alt="" coords="1031,313,1234,354"/>
+<area shape="rect" id="node23" href="$d3/d2f/namespaceBBP_1_1Services_1_1ApplicationServices_1_1Lua.html#a8b1cb8a9e8a2d4f997e23a9adf4fe681" title=" " alt="" coords="1013,378,1252,419"/>
+<area shape="rect" id="node19" href="$d2/d8e/LuaLibraries_8cpp.html#adb343a8f97b0a17190e01d14192e23ed" title=" " alt="" coords="1359,648,1441,675"/>
+<area shape="rect" id="node20" href="$d2/d8e/LuaLibraries_8cpp.html#a81eada2467ec912ed073012c9dde410a" title=" " alt="" coords="1361,749,1439,776"/>
+<area shape="rect" id="node29" href="$db/d5a/namespaceBBP_1_1IO_1_1Memory_1_1ROM.html#a2aaa7046fd5b69478bde0767c083ab76" title=" " alt="" coords="765,214,935,255"/>
+<area shape="rect" id="node31" href="$db/d5a/namespaceBBP_1_1IO_1_1Memory_1_1ROM.html#abb7f99cb4c63dfba9196391d513a54f4" title=" " alt="" coords="765,149,935,190"/>
+<area shape="rect" id="node30" href="$db/d5a/namespaceBBP_1_1IO_1_1Memory_1_1ROM.html#a211c8677e497abc9c625dbc36844e732" title="This is a brief explanation about what the function does which you can see here." alt="" coords="1315,123,1485,165"/>
+<area shape="rect" id="node40" href="$d3/dea/namespaceBBP_1_1Services_1_1Interrupts.html#a2a03a02a447921d8a5f884832deeb601" title=" " alt="" coords="759,910,941,951"/>
+<area shape="rect" id="node42" href="$dc/d32/namespaceBBP_1_1Services_1_1Interrupts_1_1Lua.html#a42cb02288103369946af1c880ee7acf6" title=" " alt="" coords="1041,975,1224,1017"/>
+<area shape="rect" id="node41" href="$d9/d31/namespaceBBP_1_1Services_1_1Interrupts_1_1Timer.html#a1b66333d9abd53f77a7f5274a8883a50" title=" " alt="" coords="1041,910,1224,951"/>
+<area shape="rect" id="node45" href="$d3/d2f/namespaceBBP_1_1Services_1_1ApplicationServices_1_1Lua.html#a93152235408deeeae51a9f2fac8e80fc" title=" " alt="" coords="752,691,948,733"/>
+<area shape="rect" id="node46" href="$d3/d2f/namespaceBBP_1_1Services_1_1ApplicationServices_1_1Lua.html#ac679bda5aa677f56d9131cf5098b87e9" title=" " alt="" coords="467,1295,659,1337"/>
+<area shape="rect" id="node48" href="$d3/dea/namespaceBBP_1_1Services_1_1Interrupts.html#a638a6f1d52f36dfb203e57b870872e32" title=" " alt="" coords="453,1062,673,1103"/>
+<area shape="rect" id="node49" href="$d3/dea/namespaceBBP_1_1Services_1_1Interrupts.html#a3fe5fe6b3d9b1f2227d37d54ae33410d" title=" " alt="" coords="457,1127,670,1169"/>
+<area shape="rect" id="node50" href="$d9/d31/namespaceBBP_1_1Services_1_1Interrupts_1_1Timer.html#ac6013f49535f8e120d72bdabde2a6eae" title=" " alt="" coords="1309,1026,1491,1067"/>
+<area shape="rect" id="node47" href="$d3/d2f/namespaceBBP_1_1Services_1_1ApplicationServices_1_1Lua.html#ab56765fbbafa8e021ce6f576c6306445" title=" " alt="" coords="754,1389,946,1430"/>
+</map>

@@ -1,0 +1,13 @@
+var searchData=
+[
+  ['s_783',['S',['../d9/d02/namespaceBBP_1_1Encodings_1_1Roman.html#a6aaf5a2f4f9f4d079351b6379a852cc8a5c850b311580d980941f77941a4f8dab',1,'BBP::Encodings::Roman::S()'],['../d9/d02/namespaceBBP_1_1Encodings_1_1Roman.html#a6aaf5a2f4f9f4d079351b6379a852cc8ac2d8b40b8975fa3bb4a347922d7504f5',1,'BBP::Encodings::Roman::s()']]],
+  ['sa_784',['sa',['../d9/d4e/namespaceBBP_1_1Encodings_1_1Japanese.html#a640eaebc2cbed5063ba71f087485e9f6a8b2a145319b832441e624e09a86edd56',1,'BBP::Encodings::Japanese']]],
+  ['se_785',['se',['../d9/d4e/namespaceBBP_1_1Encodings_1_1Japanese.html#a640eaebc2cbed5063ba71f087485e9f6ace9c3bb112bfc312382caaf151e1aecc',1,'BBP::Encodings::Japanese']]],
+  ['semicolon_786',['semicolon',['../d9/d02/namespaceBBP_1_1Encodings_1_1Roman.html#a6aaf5a2f4f9f4d079351b6379a852cc8a055362a09b1c9d4e91bf869518be124e',1,'BBP::Encodings::Roman::semicolon()'],['../d9/d4e/namespaceBBP_1_1Encodings_1_1Japanese.html#a640eaebc2cbed5063ba71f087485e9f6a3166b016c6b9e8655ce1904e9e8e9251',1,'BBP::Encodings::Japanese::semicolon()']]],
+  ['seven_787',['seven',['../d9/d02/namespaceBBP_1_1Encodings_1_1Roman.html#a6aaf5a2f4f9f4d079351b6379a852cc8a07a661d243ce0a50832f7b843bfb3e4f',1,'BBP::Encodings::Roman::seven()'],['../d9/d4e/namespaceBBP_1_1Encodings_1_1Japanese.html#a640eaebc2cbed5063ba71f087485e9f6a4ab80f0468697f0a1893be266ce9063d',1,'BBP::Encodings::Japanese::seven()']]],
+  ['shi_788',['shi',['../d9/d4e/namespaceBBP_1_1Encodings_1_1Japanese.html#a640eaebc2cbed5063ba71f087485e9f6a6cd70691ebe431e62377a64b28c969eb',1,'BBP::Encodings::Japanese']]],
+  ['six_789',['six',['../d9/d02/namespaceBBP_1_1Encodings_1_1Roman.html#a6aaf5a2f4f9f4d079351b6379a852cc8a7881dfdfe4f62e0e3a73a1e5a47ffd94',1,'BBP::Encodings::Roman::six()'],['../d9/d4e/namespaceBBP_1_1Encodings_1_1Japanese.html#a640eaebc2cbed5063ba71f087485e9f6abbc10f9cfbf8a6ee5e36c1df32fd3679',1,'BBP::Encodings::Japanese::six()']]],
+  ['so_790',['so',['../d9/d4e/namespaceBBP_1_1Encodings_1_1Japanese.html#a640eaebc2cbed5063ba71f087485e9f6abe1c823ec1424b0979ad8a645d8ee5cf',1,'BBP::Encodings::Japanese']]],
+  ['space_791',['space',['../d9/d02/namespaceBBP_1_1Encodings_1_1Roman.html#a6aaf5a2f4f9f4d079351b6379a852cc8a6c8ac6f5e4e0f37aaecd8c483f0e65b3',1,'BBP::Encodings::Roman::space()'],['../d9/d4e/namespaceBBP_1_1Encodings_1_1Japanese.html#a640eaebc2cbed5063ba71f087485e9f6a2a71364712a33a9847a1ace73034b712',1,'BBP::Encodings::Japanese::space()']]],
+  ['su_792',['su',['../d9/d4e/namespaceBBP_1_1Encodings_1_1Japanese.html#a640eaebc2cbed5063ba71f087485e9f6aaa80a607d70b6801451370eac83a2c7a',1,'BBP::Encodings::Japanese']]]
+];
