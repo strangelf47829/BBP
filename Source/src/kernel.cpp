@@ -25,12 +25,12 @@ void POST(BBP::Graphics::window *window, BBP::IO::File::VOLUME_INFO bootVolume)
 	BBP::Graphics::R2D::fill(window, 255, 0, 0);
 	BBP::Graphics::R2D::print(window, "BB607");
 
-	char POSTdata[161];
+	char POSTdata[190];
 	const char *Vendor =
 		"\n\n\n"
 		"BBP BIOS(C) One Blast\n"
 		"Running " BBP_KERNEL_NAME " OS V" BBP_KERNEL_VERSION "\n"
-		"MCU : STM32L0\n\n"
+		"ARCH : " BBP_ARCH "\n\n"
 
 		"Boot found on volume '%c' (SDMMC)\n"
 		"Press \'\u000d\' to enter BIOS\n\n"
@@ -126,6 +126,21 @@ KERNEL_STATUS kernel_entry(const char *file)
 	// Load the font into graphics
 	BBP::Graphics::R2D::GetFontFromROM(&bootable->renderer, 7, amountOfFontsInRom);
 
+#ifdef BBP_DEBUG
+	BBP::Debug::Capture();
+	BBP::Debug::SetTerminalColor(37);
+	BBP::Debug::SetTerminalColor(45);
+
+	printf("[KERNEL]");
+
+	BBP::Debug::SetTerminalColor(37);
+	BBP::Debug::SetTerminalColor(40);
+
+	printf(" Success in booting, executing main() from file '%s'\n", file);
+
+	BBP::Debug::Restore();
+#endif
+
 	// Show POST
 	POST(&bootable->renderer, vol);
 
@@ -139,6 +154,21 @@ KERNEL_STATUS kernel_entry(const char *file)
 	{
 		BBP::Services::Interrupts::updateInterrupts();
 	}
+
+#ifdef BBP_DEBUG
+	BBP::Debug::Capture();
+	BBP::Debug::SetTerminalColor(37);
+	BBP::Debug::SetTerminalColor(45);
+
+	printf("[KERNEL]");
+
+	BBP::Debug::SetTerminalColor(37);
+	BBP::Debug::SetTerminalColor(40);
+
+	printf(" End reached. Exiting....\n");
+
+	BBP::Debug::Restore();
+#endif
 
 	BBP::Services::ApplicationServices::closeApplication(bootable, false);
 
@@ -155,6 +185,21 @@ void BBP::Services::Delay(long long delay)
 {
 	int timer = BBP::Services::Interrupts::createInterrupt();
 	int tim = BBP::Services::Interrupts::Timer::attachTimerInterruptTo(timer, delay, false);
+
+#ifdef BBP_DEBUG
+	BBP::Debug::Capture();
+	BBP::Debug::SetTerminalColor(37);
+	BBP::Debug::SetTerminalColor(45);
+
+	printf("[KERNEL]");
+
+	BBP::Debug::SetTerminalColor(37);
+	BBP::Debug::SetTerminalColor(40);
+
+	printf(" Generating %d second delay\n", delay);
+
+	BBP::Debug::Restore();
+#endif
 
 	while (!BBP::Services::Interrupts::Poll(timer))
 		BBP::Services::Interrupts::updateInterrupts();

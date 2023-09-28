@@ -36,7 +36,9 @@ int l_g_fill(lua_State *L)
 	int r = lua_tonumber(L, -3);
 
 	BBP::Graphics::R2D::fill(&(BBP::Services::ApplicationServices::applicationsVector[applicationIndex]->renderer), r, g, b);
-
+#ifdef BBP_DEBUG
+	BBP::Debug::setTerminalForegroundColor(BBP::Services::ApplicationServices::applicationsVector[applicationIndex]->renderer.Fill.RGBA);
+#endif
 	return 0;
 }
 int l_g_stroke(lua_State *L) 
@@ -214,7 +216,10 @@ int l_g_background(lua_State *L)
 	u_char r = lua_tonumber(L, -3);
 
 	BBP::Graphics::R2D::background(&(BBP::Services::ApplicationServices::applicationsVector[applicationIndex]->renderer), r, g, b);
-
+#ifdef BBP_DEBUG
+	int color = BBP::Graphics::R2D::convertUCHARtoINT(r, g, b, 0xFF);
+	BBP::Debug::setTerminalBackgroundColor(color);
+#endif
 	return 0;
 }
 int l_g_update(lua_State *L)
@@ -236,6 +241,17 @@ int l_g_print(lua_State *L)
 
 	const char *f = lua_tostring(L, -1);
 
+#ifdef BBP_DEBUG
+	BBP::Debug::Capture();
+	BBP::Debug::SetTerminalColor(37);
+	BBP::Debug::SetTerminalColor(42);
+
+	printf("[APP %04d]", BBP::Services::ApplicationServices::applicationsVector[applicationIndex]->PID);
+
+	BBP::Debug::Restore();
+	printf(" ");
+#endif
+
 	BBP::Graphics::R2D::print(&(BBP::Services::ApplicationServices::applicationsVector[applicationIndex]->renderer), f);
 
 	return 0;
@@ -248,6 +264,18 @@ int l_g_println(lua_State *L)
 		return 0;
 
 	const char *f = lua_tostring(L, -1);
+
+#ifdef BBP_DEBUG
+	BBP::Debug::Capture();
+	BBP::Debug::SetTerminalColor(37);
+	BBP::Debug::SetTerminalColor(42);
+
+	printf("[APP %04d]", BBP::Services::ApplicationServices::applicationsVector[applicationIndex]->PID);
+
+	BBP::Debug::Restore();
+	printf(" ");
+#endif
+
 
 	BBP::Graphics::R2D::print(&(BBP::Services::ApplicationServices::applicationsVector[applicationIndex]->renderer), f);
 	BBP::Graphics::R2D::print(&(BBP::Services::ApplicationServices::applicationsVector[applicationIndex]->renderer), '\n');

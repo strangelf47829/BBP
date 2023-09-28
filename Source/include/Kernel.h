@@ -1,6 +1,6 @@
 /**  \file Kernel.h
 *	Header file for the compilation of BBP
-* 
+*
 *	Something something blah blah
 */
 
@@ -22,6 +22,11 @@
 
 #ifdef BBP_ARCH_x86Debug
 #define BBP_DEBUG
+#define BBP_ARCH "x86 (Debug mode)"
+#endif
+
+#ifdef BBP_ARCH_x86
+#define BBP_ARCH "x86"
 #endif
 
 #ifndef BBP_ARCH
@@ -109,7 +114,7 @@ typedef mem_t BBP_MEMORY_TYPE;
 #else
 /**
  * @brief The type with which data is encoded into memory.
- * 
+ *
  * @details When the kernel does basic IO functions (such as reading from ROM for bios operations) the kernel uses this type to define what one 'element' is. @n
  * By default, ::mem_t is of type 'unsigned char'.
  * If the architecture requires it, the default type can be overridden by defining 'BBP_MEMORY_TYPE'.
@@ -117,7 +122,7 @@ typedef mem_t BBP_MEMORY_TYPE;
 typedef u_char mem_t;
 #endif
 
-// Define the type of the time used 
+// Define the type of the time used
 /** Alias for 'long long' */
 typedef long long ll_int;
 #ifdef BBP_TIME_TYPE
@@ -156,7 +161,7 @@ namespace BBP
 	*/
 	namespace IO
 	{
-		
+
 		/**
 		 * @addtogroup Memory
 		 * @{
@@ -173,7 +178,7 @@ namespace BBP
 			 * @addtogroup ROM
 			 * @{
 			*/
-			
+
 			/**
 			 * @brief High level access to ROM
 			 *
@@ -193,7 +198,7 @@ namespace BBP
 			{
 				/**
 				 * @brief The size (in bytes) of the ROM.
-				 * 
+				 *
 				 * @details This value represents the maximum amount of bytes stored in ROM (in bytes).
 				 * This value should be set externally by BBP::IO::Memory::ROM::initializeROM.
 				*/
@@ -268,11 +273,11 @@ namespace BBP
 				//TODO: Implement
 			}
 
-			/** 
+			/**
 			* @}
 			*/
 		}
-		
+
 		/**
 		 * @}
 		*/

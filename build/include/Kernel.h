@@ -22,6 +22,11 @@
 
 #ifdef BBP_ARCH_x86Debug
 #define BBP_DEBUG
+#define BBP_ARCH "x86 (Debug mode)"
+#endif
+
+#ifdef BBP_ARCH_x86
+#define BBP_ARCH "x86"
 #endif
 
 #ifndef BBP_ARCH

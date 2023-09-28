@@ -17,7 +17,7 @@ INSTALL_TO= /usr/local/bin
 INSTALL= install
 INSTALL_EXEC= $(INSTALL) -m 0755
 
-TO_BIN= x86_64-bbp-debugger x86_64-bbp-gui x86_64-bbp-win-debugger x86_64-win-gui
+TO_BIN= x86_64-bbp-debugger x86_64-bbp-gui x86_64-bbp-win-debugger x86_64-bbp-win-gui
 
 # source library settings
 BBP_DIR= $(PROJDIR)/build
