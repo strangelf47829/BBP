@@ -16,8 +16,10 @@ SAMPLES_SRC= $(INSTALL_TOP)/samples/src/$(SAMPLE)
 
 OUT_DIR= ./bin
 
-CC= x86_64-w64-mingw32-gcc
-CXX=x86_64-w64-mingw32-g++
+CC= arm-none-eabi-gcc
+CXX= arm-none-eabi-g++
+
+AR= arm-none-eabi-ar
 
 CFLAGS= $(SYSCFLAGS) $(MYCFLAGS)
 CXXFLAGS= $(SYSCXFLAGS) $(MYCXFLAGS)
@@ -31,7 +33,7 @@ RANLIB= ranlib
 SYSCFLAGS=-c
 SYSCXFLAGS=-c
 SYSLDFLAGS=
-SYSLIBS= -llibBBPRing0.a -lliblua.a
+SYSLIBS= -lBBPRing0 -llua
 
 MYCFLAGS=
 MYCXFLAGS= -I$(INSTALL_INC)
@@ -48,25 +50,15 @@ ALL_O= $(SAMPLES_SRC)/boot.o $(SAMPLES_SRC)/GraphicsDriver.o $(SAMPLES_SRC)/IO.o
 
 default: $(SAMPLE)
 
-gui: $(ALL_O)
-	@$(CXX) -o $(OUT_DIR)/$(SAMPLE) $(ALL_O) -L$(INSTALL_LIB) -lBBPRing0 -llua -lSDL2
-	@cp $(OUT_DIR)/$(SAMPLE).exe $(OUT_DIR)/x86_64-bbp-$(SAMPLE)
-	@rm $(OUT_DIR)/$(SAMPLE).exe
+gui:
 	@echo
-	@echo Compiled sample '$(SAMPLE)' x86_64-bbp-$(SAMPLE)
+	@echo !!!!!!!!!!!!!!! ERROR! ARM does not support the SDL2 dll this sample uses, this sample is X86 Only!
 	@echo
-	@rm $(ALL_O)
 
 debugger: $(ALL_O)
-	@$(CXX) -o $(OUT_DIR)/$(SAMPLE) $(ALL_O) -L$(INSTALL_LIB) -lBBPRing0 -llua -lSDL2
-	@cp $(OUT_DIR)/$(SAMPLE).exe $(OUT_DIR)/x86_64-bbp-$(SAMPLE)
-	@rm $(OUT_DIR)/$(SAMPLE).exe
+	$(AR) $(OUT_DIR)/libbbp_arm_debugger.a $(ALL_O)
 	@echo
-	@echo Compiled sample '$(SAMPLE)' x86_64-bbp-$(SAMPLE)
+	@echo Compiled sample '$(SAMPLE)' as $(OUT_DIR)/libbbp_arm_debugger.a
 	@echo
-	@rm $(ALL_O)
-
-clean:
-	@echo == Cleaning $(SAMPLE) ==
 	@rm $(ALL_O)
 

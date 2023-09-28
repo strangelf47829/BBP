@@ -37,10 +37,6 @@ int l_g_fill(lua_State *L)
 
 	BBP::Graphics::R2D::fill(&(BBP::Services::ApplicationServices::applicationsVector[applicationIndex]->renderer), r, g, b);
 
-#ifdef BBP_DEBUG
-	BBP::Debug::setTerminalForegroundColor(BBP::Services::ApplicationServices::applicationsVector[applicationIndex]->renderer.Fill.RGBA);
-#endif
-
 	return 0;
 }
 int l_g_stroke(lua_State *L) 
@@ -217,10 +213,6 @@ int l_g_background(lua_State *L)
 	u_char g = lua_tonumber(L, -2);
 	u_char r = lua_tonumber(L, -3);
 
-#ifdef BBP_DEBUG
-	int color = BBP::Graphics::R2D::convertUCHARtoINT(r, g, b, 0xFF);
-	BBP::Debug::setTerminalBackgroundColor(color);
-#endif
 	BBP::Graphics::R2D::background(&(BBP::Services::ApplicationServices::applicationsVector[applicationIndex]->renderer), r, g, b);
 
 	return 0;
@@ -244,17 +236,6 @@ int l_g_print(lua_State *L)
 
 	const char *f = lua_tostring(L, -1);
 
-#ifdef BBP_DEBUG
-	BBP::Debug::Capture();
-	BBP::Debug::SetTerminalColor(37);
-	BBP::Debug::SetTerminalColor(42);
-
-	printf("[APP %04d]", BBP::Services::ApplicationServices::applicationsVector[applicationIndex]->PID);
-
-	BBP::Debug::Restore();
-	printf(" ");
-#endif
-
 	BBP::Graphics::R2D::print(&(BBP::Services::ApplicationServices::applicationsVector[applicationIndex]->renderer), f);
 
 	return 0;
@@ -267,17 +248,6 @@ int l_g_println(lua_State *L)
 		return 0;
 
 	const char *f = lua_tostring(L, -1);
-
-#ifdef BBP_DEBUG
-	BBP::Debug::Capture();
-	BBP::Debug::SetTerminalColor(37);
-	BBP::Debug::SetTerminalColor(42);
-
-	printf("[APP %04d]", BBP::Services::ApplicationServices::applicationsVector[applicationIndex]->PID);
-
-	BBP::Debug::Restore();
-	printf(" ");
-#endif
 
 	BBP::Graphics::R2D::print(&(BBP::Services::ApplicationServices::applicationsVector[applicationIndex]->renderer), f);
 	BBP::Graphics::R2D::print(&(BBP::Services::ApplicationServices::applicationsVector[applicationIndex]->renderer), '\n');
@@ -303,14 +273,14 @@ int l_s_millis(lua_State *L)
 	return 1;
 }
 
-time_t lastTimeCalled = 0;
+b_time_t lastTimeCalled = 0;
 int l_s_delta(lua_State *L)
 {
 	// Get the current time
-	time_t now = BBP::Services::millis();
+	b_time_t now = BBP::Services::millis();
 
 	// Calculate difference
-	time_t delta = now - lastTimeCalled;
+	b_time_t delta = now - lastTimeCalled;
 
 	// Update 'lastTimeCalled'
 	lastTimeCalled = now;
