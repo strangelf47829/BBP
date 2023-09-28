@@ -2,10 +2,10 @@
 
 # == CHANGE THE SETTINGS BELOW TO SUIT THE ENVIRONMENT ==
 
-PLAT= x86
+PLAT= x86Debug
 
 # Where to install
-INSTALL_TOP= ../..
+INSTALL_TOP= ../../
 INSTALL_BIN= $(INSTALL_TOP)/Build/bin
 INSTALL_INC= $(INSTALL_TOP)/Build/include
 INSTALL_LIB= $(INSTALL_TOP)/Build/lib
@@ -43,7 +43,7 @@ KERNEL_A= libBBPRing0libs.a
 KERNEL_O= kernel.o
 
 CORE_O= application.o Interrupts.o
-LIB_O= ROM.o R2D.o LuaLibraries.o
+LIB_O= ROM.o R2D.o LuaLibraries.o Debug.o
 BASE_O= $(CORE_O) $(LIB_O)
 
 KERNEL_T= libBBPRing0.a
@@ -86,6 +86,9 @@ generic: all
 x86:
 	$(MAKE) $(ALL) CC="x86_64-w64-mingw32-gcc" CXX="x86_64-w64-mingw32-g++"
 
+x86Debug:
+	$(MAKE) $(ALL) CC="x86_64-w64-mingw32-gcc" CXX="x86_64-w64-mingw32-g++" SYSCXFLAGS="-c -DBBP_DEBUG"
+
 nostdlib:
 	$(MAKE) $(ALL) SYSCFLAGS="-nostdlib" SYSCXFLAGS="-nostdlib"
 
@@ -106,3 +109,4 @@ serices.o: services.cpp
 Interrupts.o: Interrupts.cpp
 kernel.o: kernel.cpp
 LuaLibraries.o: LuaLibraries.cpp
+Debug.o: Debug.cpp

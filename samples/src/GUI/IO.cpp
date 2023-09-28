@@ -107,19 +107,19 @@ bool BBP::IO::SDMMC::initializeSDMMC()
     return false;
 }
 
-int BBP::IO::File::getVolumeCount()
+int BBP::IO::SDMMC::getVolumeCount()
 {
     return 1;
 }
 
-BBP::IO::File::VOLUME_INFO BBP::IO::File::getVolumeInfo(int volume)
+BBP::IO::SDMMC::VOLUME_INFO BBP::IO::SDMMC::getVolumeInfo(int volume)
 {
-    return BBP::IO::File::VOLUME_INFO(
+    return BBP::IO::SDMMC::VOLUME_INFO(
         {
             100,
             100,
 
-            BBP::IO::File::VOLUME_INFO::B607,
+            '8',
 
             'V',
 
@@ -128,14 +128,15 @@ BBP::IO::File::VOLUME_INFO BBP::IO::File::getVolumeInfo(int volume)
 
             true,
             true,
+            true,
             
             nullptr
         });
 }
 
-BBP::IO::File::FILE_HANDLE BBP::IO::SDMMC::readFile(const char *file)
+BBP::IO::SDMMC::FILE_HANDLE BBP::IO::SDMMC::readFile(const char *file)
 {
-    BBP::IO::File::FILE_HANDLE handle = BBP::IO::File::FILE_HANDLE({nullptr,  0, nullptr, 0});
+    BBP::IO::SDMMC::FILE_HANDLE handle = BBP::IO::SDMMC::FILE_HANDLE({nullptr,  0, nullptr, 0});
 
     if(file == nullptr)
         return handle;

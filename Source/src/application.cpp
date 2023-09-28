@@ -1,4 +1,5 @@
 #include "../include/Kernel.h"
+#include <stdio.h>
 
 BBP::application **BBP::Services::ApplicationServices::applicationsVector = nullptr;
 unsigned int BBP::Services::ApplicationServices::applicationsCount = 0;
@@ -139,7 +140,7 @@ bool BBP::Services::ApplicationServices::Lua::Execute(BBP::application *app, cha
 	}
 }
 
-int BBP::Services::ApplicationServices::createApplicationFromFile(BBP::IO::File::FILE_HANDLE handle)
+int BBP::Services::ApplicationServices::createApplicationFromFile(BBP::IO::SDMMC::FILE_HANDLE handle)
 {
 	// Create a new application
 	application *app = new application
@@ -257,7 +258,7 @@ bool BBP::Services::ApplicationServices::registerApplication(BBP::application *a
 	return true;
 }
 
-void BBP::Services::ApplicationServices::Lua::Audit(BBP::application *app, b_time_t now)
+void BBP::Services::ApplicationServices::Lua::Audit(BBP::application *app, time_t now)
 {
 	// If the application is invalid, return.
 	if (app == nullptr)
@@ -280,7 +281,7 @@ void BBP::Services::ApplicationServices::Lua::Audit(BBP::application *app, b_tim
 		return;
 
 	// Get the difference in time between now and the last time the app has responded.
-	b_time_t difference = now - app->lastAudit;
+	time_t difference = now - app->lastAudit;
 
 
 	// If the difference is not greater than the timeout, return
@@ -296,9 +297,22 @@ void BBP::Services::ApplicationServices::Lua::Audit(BBP::application *app, b_tim
 	BBP::Graphics::R2D::fill(appRenderer, 0, 0, 255);
 	BBP::Graphics::R2D::setCursorPos(appRenderer, 10, 10);
 
+#ifdef BBP_DEBUG
+	BBP::Debug::Capture();
+	BBP::Debug::SetTerminalColor(37);
+	BBP::Debug::SetTerminalColor(44);
 
+	printf("[APPLICATION MANAGER]");
+
+	BBP::Debug::SetTerminalColor(31);
+	BBP::Debug::SetTerminalColor(40);
+
+	printf(" Application has crashed due to audit timeout\n");
+
+	BBP::Debug::Restore();
+#else
 	BBP::Graphics::R2D::print(appRenderer, "Application has crashed because it was unresponsive.\n");
-
+#endif
 	BBP::Graphics::Driver::drawWindow(appRenderer);
 
 	BBP::Services::ApplicationServices::closeApplication(app, true);
@@ -307,7 +321,7 @@ void BBP::Services::ApplicationServices::Lua::Audit(BBP::application *app, b_tim
 void BBP::Services::ApplicationServices::Lua::AuditAll()
 {
 	// fetch the current time
-	b_time_t now = BBP::Services::millis();
+	time_t now = BBP::Services::millis();
 
 	// loop over each application and audit
 	for (int i = 0; i < BBP::Services::ApplicationServices::applicationsCount; i++)
@@ -356,8 +370,38 @@ bool BBP::Services::ApplicationServices::Lua::ClearBackLog(BBP::application *app
 		app->backlog_c = 0;
 		app->backlog_len = 0;
 
+#ifdef BBP_DEBUG
+		BBP::Debug::Capture();
+		BBP::Debug::SetTerminalColor(30);
+		BBP::Debug::SetTerminalColor(41);
+
+		printf("[BACKLOG]");
+
+		BBP::Debug::SetTerminalColor(32);
+		BBP::Debug::SetTerminalColor(40);
+
+		printf(" Backlog for application %d cleared.\n", app->PID);
+
+		BBP::Debug::Restore();
+#endif
+
 		return true;
 	}
+
+#ifdef BBP_DEBUG
+	BBP::Debug::Capture();
+	BBP::Debug::SetTerminalColor(30);
+	BBP::Debug::SetTerminalColor(41);
+
+	printf("[INTERRUPT]");
+
+	BBP::Debug::SetTerminalColor(31);
+	BBP::Debug::SetTerminalColor(40);
+
+	printf(" Backlog for application %d could not be cleared.\n", app->PID);
+
+	BBP::Debug::Restore();
+#endif
 
 	// Backlog has not been cleared
 	return false;

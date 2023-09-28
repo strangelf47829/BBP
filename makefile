@@ -1,20 +1,5 @@
 
 
 
-all:
-	cd ./samples; make all;
-	make docs
-
-docs: doxygen sphinx
-
-doxygen:
+docs:
 	cd config; doxygen doxygen.cfg
-
-sphinx:
-	cd config/sphinx; make html
-
-clean:
-	cd ./samples; make clean
-	cd ./build; make clean_all
-	cd ./doc/doxygen/; rm -r html; rm -r latex; rm -r xml
-	cd ./doc/sphinx/; rm -r html; rm -r doctrees
