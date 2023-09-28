@@ -1,6 +1,6 @@
 #include "../include/Kernel.h"
 
-void POST(BBP::Graphics::window *window, BBP::IO::SDMMC::VOLUME_INFO bootVolume)
+void POST(BBP::Graphics::window *window, BBP::IO::File::VOLUME_INFO bootVolume)
 {
 	/*
 	BBP BIOS (C) One Blast
@@ -17,7 +17,7 @@ void POST(BBP::Graphics::window *window, BBP::IO::SDMMC::VOLUME_INFO bootVolume)
 
 	BBP::Graphics::R2D::noStroke(window);
 	BBP::Graphics::R2D::fill(window, 255, 0, 0);
-	BBP::Graphics::R2D::Rect(window, 5, 5, 40, 65);
+	BBP::Graphics::R2D::Rect(window, 5, 5, 65, 40);
 
 	BBP::Graphics::R2D::setCursorPos(window, 10, 10);
 	BBP::Graphics::R2D::fill(window, 0, 0, 0);
@@ -48,15 +48,8 @@ void POST(BBP::Graphics::window *window, BBP::IO::SDMMC::VOLUME_INFO bootVolume)
 	BBP::Services::Delay(5000);
 }
 
-#ifndef BBP_DEBUG
-#ifdef BBP_C_ENTRY
-KERNEL_STATUS kernel_entry(const char *file)
-#else
+
 KERNEL_STATUS kernel_entry()
-#endif
-#else
-KERNEL_STATUS kernel_entry(const char* file)
-#endif
 {
 	// Initialize ROM
 	int ROM_status = BBP::IO::Memory::ROM::initializeROM();
@@ -74,17 +67,17 @@ KERNEL_STATUS kernel_entry(const char* file)
 		return KERNEL_BIOSERROR_SDMMC; // Return with error if SDMMC could not be loaded
 
 	// Get the amount of drives available
-	int SDMMC_drives = BBP::IO::SDMMC::getVolumeCount();
+	int SDMMC_drives = BBP::IO::File::getVolumeCount();
 	if (SDMMC_drives == 0)
 		return KERNEL_NOVOLUME; // Return with error if no volumes were found
 
 	// Loop until bootable volume found
 	int bootable_volume = -1;
-	BBP::IO::SDMMC::VOLUME_INFO vol;
+	BBP::IO::File::VOLUME_INFO vol;
 	for (int i = 0; i < SDMMC_drives; i++)
 	{
 		// Get volume data for index
-		vol = BBP::IO::SDMMC::getVolumeInfo(i);
+		vol = BBP::IO::File::getVolumeInfo(i);
 
 		// If not bootable, continue
 		if (!vol.bootable)
@@ -100,11 +93,7 @@ KERNEL_STATUS kernel_entry(const char* file)
 		return KERNEL_NOBOOT;
 
 	// Since we know the bootable medium is available, fetch the bootable file
-#ifndef BBP_DEBUG
-	BBP::IO::SDMMC::FILE_HANDLE bootableFile = BBP::IO::SDMMC::readFile("V:\\BOOT\\OS.lua");
-#else
-	BBP::IO::SDMMC::FILE_HANDLE bootableFile = BBP::IO::SDMMC::readFile(file);
-#endif
+	BBP::IO::File::FILE_HANDLE bootableFile = BBP::IO::SDMMC::readFile(BBP_KERNEL_BOOTLOCATION);
 
 	// Check if the bootable file is valid
 	if (bootableFile.fileVector == nullptr || bootableFile.byteCount == 0)
@@ -125,21 +114,10 @@ KERNEL_STATUS kernel_entry(const char* file)
 	// Load the font into graphics
 	BBP::Graphics::R2D::GetFontFromROM(&bootable->renderer, 7, amountOfFontsInRom);
 
-#ifdef BBP_DEBUG
-	BBP::Debug::Capture();
-	BBP::Debug::SetTerminalColor(37);
-	BBP::Debug::SetTerminalColor(45);
+	// Show POST
+	POST(&bootable->renderer, vol);
 
-	printf("[KERNEL]");
-
-	BBP::Debug::SetTerminalColor(37);
-	BBP::Debug::SetTerminalColor(40);
-
-	printf(" Success in booting, executing main() from file '%s'\n",file);
-
-	BBP::Debug::Restore();
-#endif
-
+	// Execute the main function.
 	BBP::Services::ApplicationServices::Lua::Execute(bootable, "main()", true);
 
 	int masterloop = BBP::Services::Interrupts::createInterrupt();
@@ -151,21 +129,6 @@ KERNEL_STATUS kernel_entry(const char* file)
 	}
 
 	BBP::Services::ApplicationServices::closeApplication(bootable, false);
-
-#ifdef BBP_DEBUG
-	BBP::Debug::Capture();
-	BBP::Debug::SetTerminalColor(37);
-	BBP::Debug::SetTerminalColor(45);
-
-	printf("[KERNEL]");
-
-	BBP::Debug::SetTerminalColor(37);
-	BBP::Debug::SetTerminalColor(40);
-
-	printf(" End reached. Exiting....\n");
-
-	BBP::Debug::Restore();
-#endif
 
 	BBP::Graphics::Driver::drawWindow(&bootable->renderer);
 	BBP::Services::Delay(4000);
@@ -181,24 +144,8 @@ void BBP::Services::Delay(long long delay)
 	int timer = BBP::Services::Interrupts::createInterrupt();
 	int tim = BBP::Services::Interrupts::Timer::attachTimerInterruptTo(timer, delay, false);
 
-#ifdef BBP_DEBUG
-	BBP::Debug::Capture();
-	BBP::Debug::SetTerminalColor(37);
-	BBP::Debug::SetTerminalColor(45);
-
-	printf("[KERNEL]");
-
-	BBP::Debug::SetTerminalColor(37);
-	BBP::Debug::SetTerminalColor(40);
-
-	printf(" Generating %d second delay\n", delay);
-
-	BBP::Debug::Restore();
-#endif
-
 	while (!BBP::Services::Interrupts::Poll(timer))
 		BBP::Services::Interrupts::updateInterrupts();
-
 }
 
 void BBP::Services::Throw(KERNEL_STATUS status)

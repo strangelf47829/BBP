@@ -7,18 +7,21 @@
 PLAT= guess
 
 CC= gcc -std=gnu99
-CFLAGS= -O2 -Wall -Wextra -DLUA_COMPAT_5_3 $(SYSCFLAGS) $(MYCFLAGS)
+CFLAGS= -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -I$(INC_DIR) $(SYSCFLAGS) $(MYCFLAGS)
 LDFLAGS= $(SYSLDFLAGS) $(MYLDFLAGS)
 LIBS= -lm $(SYSLIBS) $(MYLIBS)
 
-VPATH= ../Source/src:../Source/include
+INC_DIR= ../include/
+
+VPATH= $(INC_DIR)
 
 AR= ar rcu
 RANLIB= ranlib
 RM= rm -f
 UNAME= uname
 
-SYSCFLAGS=
+EXT_FLAGS=
+SYSCFLAGS= $(EXT_FLAGS)
 SYSLDFLAGS=
 SYSLIBS=
 
@@ -169,6 +172,10 @@ lparser.o:
 
 lcode.o:
 	$(CC) $(CFLAGS) $(CMCFLAGS) -c lcode.c
+
+# For some reason .h files are seen as depencancies?
+*.h:
+	@echo $@
 
 # DO NOT DELETE
 

@@ -50,10 +50,23 @@ default: $(SAMPLE)
 
 gui: $(ALL_O)
 	@$(CXX) -o $(OUT_DIR)/$(SAMPLE) $(ALL_O) -L$(INSTALL_LIB) -lBBPRing0 -llua -lSDL2
-	@cp $(OUT_DIR)/$(SAMPLE).exe $(OUT_DIR)/bbp_x86_$(SAMPLE)
+	@cp $(OUT_DIR)/$(SAMPLE).exe $(OUT_DIR)/x86_64-bbp-$(SAMPLE)
 	@rm $(OUT_DIR)/$(SAMPLE).exe
 	@echo
-	@echo Compiled sample '$(SAMPLE)'
+	@echo Compiled sample '$(SAMPLE)' x86_64-bbp-$(SAMPLE)
 	@echo
+	@rm $(ALL_O)
+
+debugger: $(ALL_O)
+	@$(CXX) -o $(OUT_DIR)/$(SAMPLE) $(ALL_O) -L$(INSTALL_LIB) -lBBPRing0 -llua -lSDL2
+	@cp $(OUT_DIR)/$(SAMPLE).exe $(OUT_DIR)/x86_64-bbp-$(SAMPLE)
+	@rm $(OUT_DIR)/$(SAMPLE).exe
+	@echo
+	@echo Compiled sample '$(SAMPLE)' x86_64-bbp-$(SAMPLE)
+	@echo
+	@rm $(ALL_O)
+
+clean:
+	@echo == Cleaning $(SAMPLE) ==
 	@rm $(ALL_O)
 

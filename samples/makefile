@@ -17,31 +17,40 @@ INSTALL_TO= /usr/local/bin
 INSTALL= install
 INSTALL_EXEC= $(INSTALL) -m 0755
 
-TO_BIN= bbp_x86_debugger bbp_x86_gui
+TO_BIN= x86_64-bbp-debugger x86_64-bbp-gui
 
 # source library settings
 BBP_DIR= $(PROJDIR)/build
 CLEAN_ALL= cd $(BBP_DIR); make clean_all
 # == Platform rules
 x86:
-	$(CLEAN_ALL) -s; make "PLAT= x86" -s
-x86Debug:
-	$(CLEAN_ALL) -s; make "PLAT= x86Debug" -s
+	$(CLEAN_ALL) -s; make "PLAT= x86"
+arm:
+	$(CLEAN_ALL) -s; make "PLAT= arm"
 # == Samples per platform
-all: ALL_X86Debug ALL_X86
+all: ALL_x86 ALL_ARM
 
-ALL_X86Debug: x86Debug debugger
-ALL_X86: GUI x86
-# == X86Debug targets
-debugger:
-	make -f makefile.x86Debug debugger
+ALL_x86: x86 debugger_x86 GUI_x86
+ALL_ARM: arm debugger_arm GUI_arm
 # == X86 targets
-GUI:
-	$(CLEAN_ALL) -s; make PLAT="x86" EXT_FLAGS="-DBBP_C_ENTRY" -s
-	make -f makefile.x86 gui
+debugger_x86:
+	make -f makefile.x86 SAMPLE="debugger"
+
+GUI_x86:
+	make -f makefile.x86 SAMPLE="gui"
+# == ARM targets
+debugger_arm:
+	make -f makefile.arm SAMPLE="debugger"
+
+GUI_arm:
+	make -f makefile.arm SAMPLE="gui"
 # == Installation rules
 install:
 	@cd $(OUT_DIR); $(INSTALL_EXEC) $(TO_BIN) $(INSTALL_TO)
 
 uninstall:
 	@cd $(INSTALL_TO); rm $(TO_BIN)
+# == Cleanup rules
+clean:
+	@echo == Cleaning $(OUT_DIR) ==
+	@rm -r $(OUT_DIR); mkdir $(OUT_DIR)
