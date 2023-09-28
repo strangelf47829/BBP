@@ -1,4 +1,4 @@
-#define BBP_DEBUG
+
 #include "../include/kernel.h"
 
 #include <cstdio>
@@ -29,8 +29,6 @@ int BBP::Graphics::Driver::initializeGraphics(BBP::Graphics::window *wind, int w
 
 void BBP::Graphics::Driver::drawWindow(BBP::Graphics::window *wind)
 {
-	BBP::Debug::Capture();
-	BBP::Debug::Restore();
 }
 
 void BBP::Graphics::Driver::destructGraphics()

@@ -71,10 +71,7 @@ bool BBP::Services::Interrupts::Clear(int index, bool triggerOnClear)
 		{
 			if (triggerOnClear)	// Only trigger lua interrupt if triggerOnClear is on
 				if (!BBP::Services::Interrupts::Lua::Trigger(luaIndex)) // Execute lua trigger
-#ifdef BBP_DEBUG
-					printf("Lua interrupt %d could not trigger while clearing it.\n", luaIndex); // Lua trigger error
-#endif
-			BBP::Services::Interrupts::Lua::Clear(luaIndex);
+					BBP::Services::Interrupts::Lua::Clear(luaIndex);
 			
 		}
 	}
@@ -251,21 +248,6 @@ void BBP::Services::Interrupts::updateInterrupts()
 		{
 			if (BBP::Services::Interrupts::Lua::Trigger(i))
 				continue; // The interrupt must be cleared by the lua application
-
-#ifdef BBP_DEBUG
-			BBP::Debug::Capture();
-			BBP::Debug::SetTerminalColor(30);
-			BBP::Debug::SetTerminalColor(41);
-
-			printf("[INTERRUPT]");
-
-			BBP::Debug::SetTerminalColor(33);
-			BBP::Debug::SetTerminalColor(40);
-
-			printf(" Operation could not be completed: Application %d is busy.\n", BBP::Services::Interrupts::Lua::lua_interrupts[i]->owner->PID);
-
-			BBP::Debug::Restore();
-#endif
 			
 			// Add interrupt contents to backlog if the interrupt has that enabled
 			if (BBP::Services::Interrupts::Lua::lua_interrupts[i]->addToBacklog)
@@ -322,21 +304,6 @@ int BBP::Services::Interrupts::createInterrupt()
 
 	// Since we know that at this point the index is valid, create a new interrupt at that index
 	BBP::Services::Interrupts::interrupts[index] = new BBP::Services::Interrupts::Interrupt_handle();
-
-#ifdef BBP_DEBUG
-	BBP::Debug::Capture();
-	BBP::Debug::SetTerminalColor(30);
-	BBP::Debug::SetTerminalColor(41);
-
-	printf("[INTERRUPT]");
-
-	BBP::Debug::SetTerminalColor(33);
-	BBP::Debug::SetTerminalColor(40);
-
-	printf(" Interrupt %d created\n", index);
-
-	BBP::Debug::Restore();
-#endif
 
 	// Nothing special needs to be done here. Just return the index
 	return index;

@@ -4,8 +4,6 @@
 #include <stdlib.h>
 #include <fstream>
 
-#include "../include/SDL.h"
-
 using namespace BBP::IO;
 /*
 #pragma region GPIO
@@ -88,14 +86,14 @@ void Memory::ROM::terminateROM()
 
 void BBP::Services::Interrupts::preupdateInterruptsExternal()
 {
-	SDL_Event event;
-	while (SDL_PollEvent(&event)) {
+	//SDL_Event event;
+	//while (SDL_PollEvent(&event)) {
 		/* handle your event here */
 	//User requests quit
 		//if( event.type == SDL_QUIT )
             //BBP::Services::Interrupts::interrupts[0]->triggered = true;
 			//BBP::IO::Interrupts::KERNEL_QUIT_INTERRUPT = true;
-	}
+	//}
 }
 
 #pragma endregion
@@ -107,19 +105,19 @@ bool BBP::IO::SDMMC::initializeSDMMC()
     return false;
 }
 
-int BBP::IO::SDMMC::getVolumeCount()
+int BBP::IO::File::getVolumeCount()
 {
     return 1;
 }
 
-BBP::IO::SDMMC::VOLUME_INFO BBP::IO::SDMMC::getVolumeInfo(int volume)
+BBP::IO::File::VOLUME_INFO BBP::IO::File::getVolumeInfo(int volume)
 {
-    return BBP::IO::SDMMC::VOLUME_INFO(
+    return BBP::IO::File::VOLUME_INFO(
         {
             100,
             100,
 
-            '8',
+            BBP::IO::File::VOLUME_INFO::B607,
 
             'V',
 
@@ -128,15 +126,14 @@ BBP::IO::SDMMC::VOLUME_INFO BBP::IO::SDMMC::getVolumeInfo(int volume)
 
             true,
             true,
-            true,
             
             nullptr
         });
 }
 
-BBP::IO::SDMMC::FILE_HANDLE BBP::IO::SDMMC::readFile(const char *file)
+BBP::IO::File::FILE_HANDLE BBP::IO::SDMMC::readFile(const char *file)
 {
-    BBP::IO::SDMMC::FILE_HANDLE handle = BBP::IO::SDMMC::FILE_HANDLE({nullptr,  0, nullptr, 0});
+    BBP::IO::File::FILE_HANDLE handle = BBP::IO::File::FILE_HANDLE({nullptr,  0, nullptr, 0});
 
     if(file == nullptr)
         return handle;
