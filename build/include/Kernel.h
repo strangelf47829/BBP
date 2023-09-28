@@ -20,9 +20,15 @@
 #define BBP_KERNEL_BOOTLOCATION "V:\\BOOT\\OS.lua" /**< The default location to boot to in a file system. */
 #endif
 
+#ifdef BBP_ARCH_x86Debug
+#define BBP_DEBUG
+#endif
+
 #ifndef BBP_ARCH
 #define BBP_ARCH "None" /**< When the kernel is being compiled, this macro is automatically defined externally to indicate the target platform. If this is not done, it is 'none' by default */
 #endif
+
+
 
 #ifdef BBP_CREATE_ERROR
 #undef BBP_CREATE_ERROR
@@ -30,14 +36,6 @@
 #define BBP_CREATE_ERROR
 /* ^^^ Stupid hack to get doxygen to see this macro */
 #error Why would you enable this?
-#endif
-
-#ifdef BBP_DEBUG
-#error This branch does not support debugging. Please disable this flag
-#endif
-
-#ifdef BBP_C_ENTRY
-#error This branch does not support debugging. Please disable this flag
 #endif
 
 /**
@@ -68,7 +66,23 @@ enum KERNEL_STATUS : int
  * @brief The entry point of the kernel. Should be called by the bootloader
  * @return The kernel returns a value which corresponds to the reason it returned to the bootloader.
 */
+#ifndef BBP_DEBUG
+#ifdef BBP_C_ENTRY
+/// @brief Brief description
+/// @return Returns a value!
+extern KERNEL_STATUS kernel_entry(const char *);
+#else
+/// @brief Brief description
+/// @return Returns a value!
 extern KERNEL_STATUS kernel_entry();
+#endif
+#endif
+
+#ifdef BBP_DEBUG
+/// @brief Brief description
+/// @return Returns a value!
+extern KERNEL_STATUS kernel_entry(const char *);
+#endif
 
 
 // Inlcude lua files
@@ -77,9 +91,6 @@ extern "C"
 #include "lapi.h"
 #include "lauxlib.h"
 #include "lua.h"
-
-	// Defined after these headers, as to not interfere with the declaration/definition of 'printf' in cstdio or whatever
-#define printf(x, y) static_assert(false, " !!! --- printf statement found in non-debugging context --- !!!")
 }
 
 // Define the type of the data stored in CMOS and SDMMC
@@ -1096,3 +1107,31 @@ int l_a_echo(lua_State *);
 #pragma endregion
 
 #endif
+
+#ifdef BBP_DEBUG
+
+#ifndef BBP_DEBUG_H
+#define BBP_DEBUG_H
+
+namespace BBP
+{
+	namespace Debug
+	{
+		void printToConsole(char a);
+
+		void SetTerminalColor(int colour);
+
+		void setTerminalForegroundColor(int colour);
+		void setTerminalBackgroundColor(int colour);
+
+		int ConvertColorToOffset(int colour);
+
+		void Capture();
+		void Restore();
+	}
+
+}
+
+#endif
+#endif
+

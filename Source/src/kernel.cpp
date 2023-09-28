@@ -49,7 +49,15 @@ void POST(BBP::Graphics::window *window, BBP::IO::File::VOLUME_INFO bootVolume)
 }
 
 
+#ifndef BBP_DEBUG
+#ifdef BBP_C_ENTRY
+KERNEL_STATUS kernel_entry(const char *file)
+#else
 KERNEL_STATUS kernel_entry()
+#endif
+#else
+KERNEL_STATUS kernel_entry(const char *file)
+#endif
 {
 	// Initialize ROM
 	int ROM_status = BBP::IO::Memory::ROM::initializeROM();
@@ -93,7 +101,11 @@ KERNEL_STATUS kernel_entry()
 		return KERNEL_NOBOOT;
 
 	// Since we know the bootable medium is available, fetch the bootable file
+#ifndef BBP_DEBUG
 	BBP::IO::File::FILE_HANDLE bootableFile = BBP::IO::SDMMC::readFile(BBP_KERNEL_BOOTLOCATION);
+#else
+	BBP::IO::File::FILE_HANDLE bootableFile = BBP::IO::SDMMC::readFile(file);
+#endif
 
 	// Check if the bootable file is valid
 	if (bootableFile.fileVector == nullptr || bootableFile.byteCount == 0)

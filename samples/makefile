@@ -17,7 +17,7 @@ INSTALL_TO= /usr/local/bin
 INSTALL= install
 INSTALL_EXEC= $(INSTALL) -m 0755
 
-TO_BIN= x86_64-bbp-debugger x86_64-bbp-gui
+TO_BIN= x86_64-bbp-debugger x86_64-bbp-gui x86_64-bbp-win-debugger x86_64-win-gui
 
 # source library settings
 BBP_DIR= $(PROJDIR)/build
@@ -27,11 +27,14 @@ x86:
 	$(CLEAN_ALL) -s; make "PLAT= x86"
 arm:
 	$(CLEAN_ALL) -s; make "PLAT= arm"
+x86Debug:
+	$(CLEAN_ALL) -s; make "PLAT= x86Debug" EXT_FLAG="-DBBP_DEBUG"
 # == Samples per platform
-all: ALL_x86 ALL_ARM
+all: ALL_x86 ALL_x86Debug ALL_ARM
 
 ALL_x86: x86 debugger_x86 GUI_x86
 ALL_ARM: arm debugger_arm GUI_arm
+ALL_x86Debug: x86Debug debugger_x86Debug GUI_x86Debug
 # == X86 targets
 debugger_x86:
 	make -f makefile.x86 SAMPLE="debugger"
@@ -44,6 +47,12 @@ debugger_arm:
 
 GUI_arm:
 	make -f makefile.arm SAMPLE="gui"
+# == X86 Debug targets
+debugger_x86Debug:
+	make -f makefile.x86Debug SAMPLE="debugger"
+
+GUI_x86Debug:
+	make -f makefile.x86Debug SAMPLE="gui"
 # == Installation rules
 install:
 	@cd $(OUT_DIR); $(INSTALL_EXEC) $(TO_BIN) $(INSTALL_TO)

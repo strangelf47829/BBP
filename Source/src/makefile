@@ -43,7 +43,8 @@ KERNEL_A= libBBPRing0libs.a
 KERNEL_O= kernel.o
 
 CORE_O= application.o Interrupts.o
-LIB_O= ROM.o R2D.o LuaLibraries.o
+LIB_O= ROM.o R2D.o LuaLibraries.o $(EXT_O)
+EXT_O=
 BASE_O= $(CORE_O) $(LIB_O)
 
 KERNEL_T= libBBPRing0.a
@@ -86,6 +87,11 @@ generic: all
 x86:
 	$(MAKE) $(ALL) CC="x86_64-w64-mingw32-gcc" CXX="x86_64-w64-mingw32-g++"
 
+x86Debug:
+	echo hehehehhehehe
+	make x86 EXT_O="Debug.o"
+#	$(MAKE) $(ALL) CC="x86_64-w64-mingw32-gcc" CXX="x86_64-w64-mingw32-g++" 
+
 nostdlib:
 	$(MAKE) $(ALL) SYSCFLAGS="-nostdlib" SYSCXFLAGS="-nostdlib"
 
@@ -97,7 +103,6 @@ arm:
 
 
 
-
 # Make rules
 application.o: application.cpp
 R2D.o: R2D.cpp
@@ -106,3 +111,4 @@ serices.o: services.cpp
 Interrupts.o: Interrupts.cpp
 kernel.o: kernel.cpp
 LuaLibraries.o: LuaLibraries.cpp
+Debug.o: Debug.cpp

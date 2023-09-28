@@ -12,7 +12,7 @@ INSTALL_BIN= $(INSTALL_TOP)/samples/$(SAMPLE)
 INSTALL_INC= $(INSTALL_TOP)/build/include
 INSTALL_LIB= $(INSTALL_TOP)/build/lib
 
-SAMPLES_SRC= $(INSTALL_TOP)/samples/src/$(SAMPLE)
+SAMPLES_SRC= $(INSTALL_TOP)/samples/src_arm/$(SAMPLE)
 
 OUT_DIR= ./bin
 
