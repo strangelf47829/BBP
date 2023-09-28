@@ -515,7 +515,11 @@ void R2D::PrintCharacterAt(window *window, int x, int y, mem_t ch, int size)
 
 void R2D::print(window *window, mem_t ch)
 {
-    // TODO expand
+    // TODO: handle enters and such
+
+#ifdef BBP_DEBUG
+    BBP::Debug::printToConsole(ch);
+#endif
 
     switch (ch)
     {

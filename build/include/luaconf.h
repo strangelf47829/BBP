@@ -41,7 +41,7 @@
 ** Define it if you want Lua to avoid the use of a few C99 features
 ** or Windows-specific features on Windows.
 */
-#define LUA_USE_C89 
+/* #define LUA_USE_C89 */
 
 
 /*
@@ -122,7 +122,7 @@
 /*
 @@ LUA_32BITS enables Lua with 32-bit integers and 32-bit floats.
 */
-#define LUA_32BITS	1
+#define LUA_32BITS	0
 
 
 /*
@@ -516,7 +516,6 @@
 #if LUA_INT_TYPE == LUA_INT_INT		/* { int */
 
 #define LUA_INTEGER		int
-#define BBP_TIME_TYPE	LUA_INTEGER
 #define LUA_INTEGER_FRMLEN	""
 
 #define LUA_MAXINTEGER		INT_MAX
