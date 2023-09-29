@@ -9,3 +9,4 @@
 #Doxygen stuff
 .doc/doxygen/html
 .doc/doxygen/latex
+/CppProperties.json
