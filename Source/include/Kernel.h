@@ -38,7 +38,7 @@ Author: Rafael de Bie
 #endif
 
 #ifndef BBP_KERNEL_BOOTLOCATION
-#define BBP_KERNEL_BOOTLOCATION "V:\\BOOT\\OS.lua" /**< The default location to boot to in a file system. */
+#define BBP_KERNEL_BOOTLOCATION "/mnt/v/boot/OS.lua" /**< The default location to boot to in a file system. */
 #endif
 
 #ifdef BBP_ARCH_x86Debug
@@ -453,6 +453,8 @@ namespace BBP
 			 * @return The handle to the file. If file is not present, the handle will have invalid content.
 			*/
 			extern File::FILE_HANDLE readFile(const char *fileName);
+
+			extern void writeFile(const char *fileName, mem_t *vector, unsigned int fileSize);
 
 			/**
 			 * @brief Initialize the SD card

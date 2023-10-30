@@ -5,6 +5,12 @@
 
 #Visual Studio
 .vs/
+.vscode/
+
+BBP.sln
+BBP.vcxproj
+BBP.vcxproj.filters
+BBP.vcxproj.user
 
 #Doxygen stuff
 .doc/doxygen/html

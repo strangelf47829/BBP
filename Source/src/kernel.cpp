@@ -19,7 +19,8 @@ Author: Rafael de Bie
 
 */
 
-#include "../include/Kernel.h"
+#include "Kernel.h"
+
 
 void POST(BBP::Graphics::window *window, BBP::IO::File::VOLUME_INFO bootVolume)
 {

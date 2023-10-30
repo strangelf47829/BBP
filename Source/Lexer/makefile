@@ -22,13 +22,15 @@ LIBS= $(SYSLIBS) $(MYLIBS)
 AR= ar rcu
 RANLIB= ranlib
 
-SYSCFLAGS=-c
-SYSCXFLAGS=-c
+SYSCFLAGS=
+SYSCXFLAGS=
 SYSLDFLAGS=
 SYSLIBS=
 
-MYCFLAGS= -I../include/ -I$(INSTALL_INC)/
-MYCXFLAGS= -I../include/ -I$(INSTALL_INC)/
+INCDIR= ../include/
+
+MYCFLAGS= -I$(INCDIR) -I$(INSTALL_INC)/
+MYCXFLAGS= -I$(INCDIR) -I$(INSTALL_INC)/
 MYLDFLAGS=
 MYLIBS=
 
@@ -39,21 +41,16 @@ EXT_CXFLAGS=
 
 PLATS= x86 micro stdgnu x86Debug
 
-KERNEL_A= libBBPRing0libs.a
-KERNEL_O= kernel.o
+LIB_A= libLexer.a
 
-CORE_O= application.o Interrupts.o
-LIB_O= ROM.o R2D.o LuaLibraries.o Debug.o
+CORE_O= Lexer.o
+LIB_O= LuaLexer.o LuaELF.o $(EXT_O)
 EXT_O=
 BASE_O= $(CORE_O) $(LIB_O)
 
-KERNEL_T= libBBPRing0.a
-
-ALL_O= $(BASE_O) $(KERNEL_O)
-ALL_T= $(KERNEL_A) $(KERNEL_T)
-ALL_A= $(KERNEL_A)
-ALL_H= ../include/*
-#ALL_H= ../include/Kernel.h ../include/lua.h ../include/lapi.h ../include/lauxlib.h
+ALL_O= $(BASE_O)
+ALL_A= $(ALL_O) $(LIB_A)
+ALL_H= $(INCDIR)Lexer.h $(INCDIR)LuaLexer.h $(INCDIR)LuaELF.h
 
 
 # Targets start here
@@ -61,23 +58,19 @@ ALL= all
 
 default: $(PLAT)
 
-all: $(ALL_T)
+all: $(ALL_A)
 
 o: $(ALL_O)
 
 a: $(ALL_A)
 
-$(KERNEL_A): $(BASE_O)
-	$(AR) $@ $(BASE_O)
-
-$(KERNEL_T): $(KERNEL_O) $(KERNEL_A)
+$(LIB_A): $(KERNEL_O) $(KERNEL_A)
 	$(AR) $@ $(ALL_O)
-	cp $(KERNEL_A) $(INSTALL_BIN)/$(KERNEL_A)
-	cp $(KERNEL_T) $(INSTALL_BIN)/$(KERNEL_T)
-	cp -r ../lib/* $(INSTALL_LIB)
+	cp $(LIB_A) $(INSTALL_BIN)/$(LIB_A)
+	cp $(LIB_A) ../lib/$(LIB_A)
 
 clean:
-	rm -rf $(ALL_T) $(wildcard *.o)
+	rm -rf $(ALL_A) $(wildcard *.o)
 clean_all:
 	rm -rf $(ALL_T) $(ALL_O) $(INSTALL_BIN)/* $(INSTALL_LIB)/* $(INSTALL_INC)/*
 
@@ -86,12 +79,8 @@ generic: all
 x86:
 	$(MAKE) $(ALL) CC="x86_64-w64-mingw32-gcc" CXX="x86_64-w64-mingw32-g++"
 
-x86DD:
-	$(MAKE) $(ALL) CC="gcc" CXX="g++"
-
 x86Debug:
-	make x86DD EXT_O="Debug.o" SYSCXFLAGS="-g"
-#	$(MAKE) $(ALL) CC="x86_64-w64-mingw32-gcc" CXX="x86_64-w64-mingw32-g++" 
+	$(MAKE) $(ALL) CC="gcc" CXX="g++" SYSCXFLAGS="-g"
 
 nostdlib:
 	$(MAKE) $(ALL) SYSCFLAGS="-nostdlib" SYSCXFLAGS="-nostdlib"
@@ -105,11 +94,6 @@ arm:
 
 
 # Make rules
-application.o: application.cpp
-R2D.o: R2D.cpp
-ROM.o: ROM.cpp
-serices.o: services.cpp
-Interrupts.o: Interrupts.cpp
-kernel.o: kernel.cpp
-LuaLibraries.o: LuaLibraries.cpp
-Debug.o: Debug.cpp
+Lexer.o: Lexer.cpp
+LuaLexer.o: LuaLexer.cpp
+LuaELF.o: LuaELF.cpp

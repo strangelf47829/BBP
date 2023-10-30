@@ -7,11 +7,11 @@
 PLAT= guess
 
 CC= gcc -std=gnu99
-CFLAGS= -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -I$(INC_DIR) $(SYSCFLAGS) $(MYCFLAGS)
+CFLAGS= -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -I$(INC_DIR) $(SYSCFLAGS) $(MYCFLAGS) $(EXT_CXFLAGS)
 LDFLAGS= $(SYSLDFLAGS) $(MYLDFLAGS)
 LIBS= -lm $(SYSLIBS) $(MYLIBS)
 
-INC_DIR= ../include/
+INC_DIR= ../../build/include/
 
 VPATH= $(INC_DIR)
 
@@ -20,8 +20,8 @@ RANLIB= ranlib
 RM= rm -f
 UNAME= uname
 
-EXT_FLAGS=
-SYSCFLAGS= $(EXT_FLAGS)
+EXT_CXFLAGS=
+SYSCFLAGS= 
 SYSLDFLAGS=
 SYSLIBS=
 
@@ -151,7 +151,8 @@ SunOS solaris:
 arm:
 	$(MAKE) $(ALL) MYCFLAGS="-c -nostdlib -ffreestanding -DLUA_32BITS" CC="arm-none-eabi-gcc"
 
-x86Debug: x86
+x86Debug:
+	$(MAKE) $(ALL) CC="gcc" MYCFLAGS="-g"
 
 x86:
 	$(MAKE) $(ALL) CC="x86_64-w64-mingw32-gcc"

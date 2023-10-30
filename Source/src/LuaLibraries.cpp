@@ -19,7 +19,7 @@ Author: Rafael de Bie
 
 */
 
-#include "../include/Kernel.h"
+#include "Kernel.h"
 
 #include <stdio.h>
 
