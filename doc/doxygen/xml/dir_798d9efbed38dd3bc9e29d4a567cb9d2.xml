@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_798d9efbed38dd3bc9e29d4a567cb9d2" kind="dir">
+    <compoundname>env_EMULATOR</compoundname>
+    <innerfile refid="d9/dbc/env__EMULATOR_2Dir_8cpp">env_EMULATOR/Dir.cpp</innerfile>
+    <innerfile refid="d3/dce/env__EMULATOR_2File_8cpp">env_EMULATOR/File.cpp</innerfile>
+    <innerfile refid="d3/df1/EMULATOR_2Graphics_8cpp">EMULATOR/Graphics.cpp</innerfile>
+    <innerfile refid="de/d25/EMULATOR_2Memory_8cpp">EMULATOR/Memory.cpp</innerfile>
+    <innerfile refid="d0/d06/EMULATOR_2Start_8cpp">EMULATOR/Start.cpp</innerfile>
+    <innerfile refid="de/df0/EMULATOR_2Time_8cpp">EMULATOR/Time.cpp</innerfile>
+    <innerfile refid="d0/d6f/EMULATOR_2tterm_8cpp">EMULATOR/tterm.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_EMULATOR/"/>
+  </compounddef>
+</doxygen>

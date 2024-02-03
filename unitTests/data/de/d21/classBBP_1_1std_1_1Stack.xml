@@ -1,0 +1,666 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="de/d21/classBBP_1_1std_1_1Stack" kind="class" language="C++" prot="public">
+    <compoundname>BBP::std::Stack</compoundname>
+    <includes refid="dc/db6/Stack_8h" local="no">Stack.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename K</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="de/d21/classBBP_1_1std_1_1Stack_1a64efed21ad317ae0bf94d025de408605" prot="public" static="no">
+        <type>void(*)(K &amp;)</type>
+        <definition>using BBP::std::Stack&lt; K &gt;::Iterator =  void (*)(K &amp;)</definition>
+        <argsstring></argsstring>
+        <name>Iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="74" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="de/d21/classBBP_1_1std_1_1Stack_1ac4bff5854bfb1d7e168fc46e9ff7f0c7" prot="public" static="no">
+        <type>bool(*)(K &amp;)</type>
+        <definition>using BBP::std::Stack&lt; K &gt;::Predicate =  bool (*)(K &amp;)</definition>
+        <argsstring></argsstring>
+        <name>Predicate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="75" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="de/d21/classBBP_1_1std_1_1Stack_1aaacd32840edd56a62471a2aedbbe85dc" prot="public" static="no" mutable="no">
+        <type><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">PAGE</ref>&lt; K &gt; *</type>
+        <definition>PAGE&lt;K&gt;* BBP::std::Stack&lt; K &gt;::page</definition>
+        <argsstring></argsstring>
+        <name>page</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="64" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" bodystart="64" bodyend="-1"/>
+        <referencedby refid="d9/d6f/namespaceBBP_1acdc8259ae9919d6dad925d6ead142a50" compoundref="d7/d40/badapple_8cpp" startline="33" endline="70">BBP::badapple_main</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1aec7ebe885d0c8a1b5bf5b98b4d08a4ef" compoundref="de/db8/R2D_8cpp" startline="167" endline="217">BBP::std::R2D::GetFontFromFile</referencedby>
+        <referencedby refid="d0/dbe/classBBP_1_1esa_1_1BinaryApplication_1a1937e2e6c48c065edd37d61fc2c6f812" compoundref="d2/d8c/EABI_8cpp" startline="5" endline="91">BBP::esa::BinaryApplication::mangle</referencedby>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1a350236449e81981979f94acf450a2113" compoundref="de/d6d/Strings_8cpp" startline="370" endline="414">BBP::std::operator&gt;</referencedby>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1af3ec20a9dd652424defa2f6fbaacfe41" compoundref="de/d6d/Strings_8cpp" startline="290" endline="349">BBP::std::operator&gt;&gt;=</referencedby>
+        <referencedby refid="d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_1aec4c5d7614d9bdcd3575f4d0c9b52312" compoundref="d2/d15/Lexer_8cpp" startline="25" endline="56">BBP::std::Lexer::lex_context::parseFile</referencedby>
+        <referencedby refid="d9/d6f/namespaceBBP_1ac0a46562b554fd736c409bf2c645c9ba" compoundref="df/d6c/Shell_8cpp" startline="18" endline="93">BBP::shell</referencedby>
+        <referencedby refid="d9/d6f/namespaceBBP_1a0ba2e2ff83f9f917f9811058a5d02a0b" compoundref="de/dd1/Smile_8cpp" startline="21" endline="306">BBP::smile_main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="de/d21/classBBP_1_1std_1_1Stack_1af6e3fecce1efb9635ba76706c25e08c8" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">size_t</ref></type>
+        <definition>size_t BBP::std::Stack&lt; K &gt;::max_elements</definition>
+        <argsstring></argsstring>
+        <name>max_elements</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="66" column="8" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" bodystart="66" bodyend="-1"/>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1a27729307826cf7d30436c8280997ed0f" compoundref="de/d6d/Strings_8cpp" startline="218" endline="236">BBP::std::operator&lt;&lt;</referencedby>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1af3ec20a9dd652424defa2f6fbaacfe41" compoundref="de/d6d/Strings_8cpp" startline="290" endline="349">BBP::std::operator&gt;&gt;=</referencedby>
+        <referencedby refid="df/d72/namespaceBBP_1_1esa_1a1823ca27ef7c399993c2afd0120757bc" compoundref="da/d4c/Actions_8cpp" startline="736" endline="768">BBP::esa::TOKEN</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="de/d21/classBBP_1_1std_1_1Stack_1a752abbe63aa4dc1f0e3f13cacd9feb20" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">index_t</ref></type>
+        <definition>index_t BBP::std::Stack&lt; K &gt;::atElement</definition>
+        <argsstring></argsstring>
+        <name>atElement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="67" column="9" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="df/d72/namespaceBBP_1_1esa_1a12036e29fe89ed5f33db3ef83bed0099" compoundref="da/d4c/Actions_8cpp" startline="410" endline="443">BBP::esa::ACTION</referencedby>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1af4b6ff6fcde258840f428e3ea3493758" compoundref="de/dec/Auxiliary_8cpp" startline="5" endline="168">BBP::esa::esaProcessor::ExpectDelimiters</referencedby>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a32d036e0f72c2f867f4b83b8d5f9a351" compoundref="de/dec/Auxiliary_8cpp" startline="170" endline="238">BBP::esa::esaProcessor::includeFromPath</referencedby>
+        <referencedby refid="d0/dbe/classBBP_1_1esa_1_1BinaryApplication_1a1937e2e6c48c065edd37d61fc2c6f812" compoundref="d2/d8c/EABI_8cpp" startline="5" endline="91">BBP::esa::BinaryApplication::mangle</referencedby>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1a27729307826cf7d30436c8280997ed0f" compoundref="de/d6d/Strings_8cpp" startline="218" endline="236">BBP::std::operator&lt;&lt;</referencedby>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1a350236449e81981979f94acf450a2113" compoundref="de/d6d/Strings_8cpp" startline="370" endline="414">BBP::std::operator&gt;</referencedby>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1af3ec20a9dd652424defa2f6fbaacfe41" compoundref="de/d6d/Strings_8cpp" startline="290" endline="349">BBP::std::operator&gt;&gt;=</referencedby>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1aa57aff72c2c8ab0a35bd8a4bffd32d01" compoundref="d4/d83/Frontend_8cpp" startline="461" endline="464">BBP::esa::esaProcessor::setProcedureAddress</referencedby>
+        <referencedby refid="df/d72/namespaceBBP_1_1esa_1a82381333342e731dfb93f09c84b51132" compoundref="da/d4c/Actions_8cpp" startline="681" endline="698">BBP::esa::TOKEN</referencedby>
+        <referencedby refid="d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_1a4395935c27b686c8c04bd1234f595685" compoundref="d2/d15/Lexer_8cpp" startline="5" endline="23">BBP::std::Lexer::lex_context::translateUnit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="de/d21/classBBP_1_1std_1_1Stack_1a14dc7eb377f345c44025fcc38fd9aaa8" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* BBP::std::Stack&lt; K &gt;::readFrom) (Stack&lt; K &gt; *)</definition>
+        <argsstring>)(Stack&lt; K &gt; *)</argsstring>
+        <name>readFrom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="71" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" bodystart="71" bodyend="-1"/>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1a350236449e81981979f94acf450a2113" compoundref="de/d6d/Strings_8cpp" startline="370" endline="414">BBP::std::operator&gt;</referencedby>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1af3ec20a9dd652424defa2f6fbaacfe41" compoundref="de/d6d/Strings_8cpp" startline="290" endline="349">BBP::std::operator&gt;&gt;=</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="de/d21/classBBP_1_1std_1_1Stack_1a32ce717db41d8608a8659a0ebac0ae16" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* BBP::std::Stack&lt; K &gt;::writeTo) (Stack&lt; K &gt; *)</definition>
+        <argsstring>)(Stack&lt; K &gt; *)</argsstring>
+        <name>writeTo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="72" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" bodystart="72" bodyend="-1"/>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1a70dd1e33acbfe3b2a80db1362ee0b7df" compoundref="de/d6d/Strings_8cpp" startline="160" endline="170">BBP::std::operator&lt;&lt;=</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="de/d21/classBBP_1_1std_1_1Stack_1a8e1d01f86a2a53884afa6409e907c2f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BBP::std::Stack&lt; K &gt;::Stack</definition>
+        <argsstring>(PAGE&lt; K &gt; *_page)</argsstring>
+        <name>Stack</name>
+        <param>
+          <type><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">PAGE</ref>&lt; K &gt; *</type>
+          <declname>_page</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="19" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/classBBP_1_1std_1_1Stack_1ae489b0256b2add75816b35b7ebaf1613" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BBP::std::Stack&lt; K &gt;::Stack</definition>
+        <argsstring>(PAGE&lt; K &gt; *_page, size_t max)</argsstring>
+        <name>Stack</name>
+        <param>
+          <type><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">PAGE</ref>&lt; K &gt; *</type>
+          <declname>_page</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">size_t</ref></type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="20" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/classBBP_1_1std_1_1Stack_1a49ad838d49b7f52fdbc308b7b9106cd0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>int</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>BBP::std::Stack&lt; K &gt;::Stack</definition>
+        <argsstring>(STATIC_PAGE&lt; K, N &gt; *_page)</argsstring>
+        <name>Stack</name>
+        <param>
+          <type><ref refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE" kindref="compound">STATIC_PAGE</ref>&lt; K, N &gt; *</type>
+          <declname>_page</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="24" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/classBBP_1_1std_1_1Stack_1a17b43148ac641825cd5cf9efcd0df9ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>int</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>BBP::std::Stack&lt; K &gt;::Stack</definition>
+        <argsstring>(STATIC_PAGE&lt; K, N &gt; *_page, size_t max)</argsstring>
+        <name>Stack</name>
+        <param>
+          <type><ref refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE" kindref="compound">STATIC_PAGE</ref>&lt; K, N &gt; *</type>
+          <declname>_page</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">size_t</ref></type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="26" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/classBBP_1_1std_1_1Stack_1a8d19bc2f830f72bd25727b41979de021" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">Stack</ref>&lt; K &gt; &amp;</type>
+        <definition>Stack&lt; K &gt; &amp; BBP::std::Stack&lt; K &gt;::operator&lt;&lt;</definition>
+        <argsstring>(K value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>K</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="26" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.hxx" bodystart="27" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/classBBP_1_1std_1_1Stack_1adf3ff221c692972347ea334d007da4fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">Stack</ref>&lt; K &gt; &amp;</type>
+        <definition>Stack&lt; K &gt; &amp; BBP::std::Stack&lt; K &gt;::operator&gt;&gt;</definition>
+        <argsstring>(K &amp;value)</argsstring>
+        <name>operator&gt;&gt;</name>
+        <param>
+          <type>K &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="31" column="7" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.hxx" bodystart="43" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/classBBP_1_1std_1_1Stack_1ae6e1627a74280e8f8c9ab1c4bf053462" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">Stack</ref>&lt; K &gt; &amp;</type>
+        <definition>Stack&lt; K &gt; &amp; BBP::std::Stack&lt; K &gt;::operator&lt;=</definition>
+        <argsstring>(K value)</argsstring>
+        <name>operator&lt;=</name>
+        <param>
+          <type>K</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="31" column="7" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.hxx" bodystart="77" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/classBBP_1_1std_1_1Stack_1a2438b5918618976f30c3512037d987ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">Stack</ref>&lt; K &gt; &amp;</type>
+        <definition>Stack&lt; K &gt; &amp; BBP::std::Stack&lt; K &gt;::operator&gt;=</definition>
+        <argsstring>(K &amp;value)</argsstring>
+        <name>operator&gt;=</name>
+        <param>
+          <type>K &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="35" column="7" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.hxx" bodystart="89" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/classBBP_1_1std_1_1Stack_1a0130c9118ae0c4802d35c0a094311c12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">Stack</ref>&lt; K &gt; &amp;</type>
+        <definition>Stack&lt; K &gt; &amp; BBP::std::Stack&lt; K &gt;::operator&gt;&gt;</definition>
+        <argsstring>(Stack&lt; K &gt; &amp;)</argsstring>
+        <name>operator&gt;&gt;</name>
+        <param>
+          <type><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">Stack</ref>&lt; K &gt; &amp;</type>
+          <defname>value</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="38" column="7" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.hxx" bodystart="68" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/classBBP_1_1std_1_1Stack_1a9cca09e173921658db58e2a4ca8c8a42" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">Stack</ref>&lt; K &gt; &amp;</type>
+        <definition>Stack&lt; K &gt; &amp; BBP::std::Stack&lt; K &gt;::operator&lt;&lt;</definition>
+        <argsstring>(Stack&lt; K &gt; &amp;)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">Stack</ref>&lt; K &gt; &amp;</type>
+          <defname>value</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="38" column="7" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.hxx" bodystart="59" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/classBBP_1_1std_1_1Stack_1a42f8fad3c66f0d7026bcd081fcd401e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>K &amp;</type>
+        <definition>K &amp; BBP::std::Stack&lt; K &gt;::operator+=</definition>
+        <argsstring>(std::s_offset_t offset)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a09c2478fc1c6c40cd9c195abdfa4b84a" kindref="member">std::s_offset_t</ref></type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="42" column="3" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.hxx" bodystart="108" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/classBBP_1_1std_1_1Stack_1ae9fbcbaf4b3d75bf8d664eb1cb73ffce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>K &amp;</type>
+        <definition>K &amp; BBP::std::Stack&lt; K &gt;::operator%=</definition>
+        <argsstring>(std::s_offset_t offset)</argsstring>
+        <name>operator%=</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a09c2478fc1c6c40cd9c195abdfa4b84a" kindref="member">std::s_offset_t</ref></type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="43" column="3" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.hxx" bodystart="118" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/classBBP_1_1std_1_1Stack_1a4a0a0bbb8783b49135716a1a28f42125" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>K &amp;</type>
+        <definition>K &amp; BBP::std::Stack&lt; K &gt;::operator[]</definition>
+        <argsstring>(std::index_t)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref></type>
+          <defname>access</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="46" column="3" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.hxx" bodystart="101" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/classBBP_1_1std_1_1Stack_1a370763394876da6f2cd48878755ceb1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">Stack</ref>&lt; K &gt; &amp;</type>
+        <definition>Stack&lt; K &gt; &amp; BBP::std::Stack&lt; K &gt;::operator++</definition>
+        <argsstring>()</argsstring>
+        <name>operator++</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="48" column="7" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.hxx" bodystart="13" bodyend="17"/>
+        <referencedby refid="de/d21/classBBP_1_1std_1_1Stack_1a2a8fd467416463b2606b3ca0dfa1d306" compoundref="dc/db6/Stack_8h" startline="51" endline="56">BBP::std::Stack&lt; BBP::std::DIRECTORY &gt;::operator++</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/classBBP_1_1std_1_1Stack_1a5c38aeadecf0e79334ae07b7aa205091" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">Stack</ref>&lt; K &gt; &amp;</type>
+        <definition>Stack&lt; K &gt; &amp; BBP::std::Stack&lt; K &gt;::operator--</definition>
+        <argsstring>()</argsstring>
+        <name>operator--</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="49" column="7" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.hxx" bodystart="20" bodyend="24"/>
+        <referencedby refid="de/d21/classBBP_1_1std_1_1Stack_1a675a80c3a04b2c93cddca6395fd5625c" compoundref="dc/db6/Stack_8h" startline="57" endline="62">BBP::std::Stack&lt; BBP::std::DIRECTORY &gt;::operator--</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/classBBP_1_1std_1_1Stack_1a2a8fd467416463b2606b3ca0dfa1d306" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">Stack</ref>&lt; K &gt; &amp;</type>
+        <definition>Stack&lt;K&gt;&amp; BBP::std::Stack&lt; K &gt;::operator++</definition>
+        <argsstring>(int a)</argsstring>
+        <name>operator++</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="51" column="14" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" bodystart="51" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/classBBP_1_1std_1_1Stack_1a675a80c3a04b2c93cddca6395fd5625c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">Stack</ref>&lt; K &gt; &amp;</type>
+        <definition>Stack&lt;K&gt;&amp; BBP::std::Stack&lt; K &gt;::operator--</definition>
+        <argsstring>(int a)</argsstring>
+        <name>operator--</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="57" column="14" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" bodystart="57" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/classBBP_1_1std_1_1Stack_1a4b4f719f8f4c0c213a11fc81bf2d929a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::Stack&lt; K &gt;::Extend</definition>
+        <argsstring>(std::ResourceManager *, size_t)</argsstring>
+        <name>Extend</name>
+        <param>
+          <type><ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager" kindref="compound">std::ResourceManager</ref> *</type>
+          <defname>allocator</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">size_t</ref></type>
+          <defname>by</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="69" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.hxx" bodystart="125" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/classBBP_1_1std_1_1Stack_1af634fcf9694db9550d929e1d65998984" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::Stack&lt; K &gt;::foreach</definition>
+        <argsstring>(Iterator)</argsstring>
+        <name>foreach</name>
+        <param>
+          <type><ref refid="de/d21/classBBP_1_1std_1_1Stack_1a64efed21ad317ae0bf94d025de408605" kindref="member">Iterator</ref></type>
+          <defname>lambda</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="77" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.hxx" bodystart="151" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/classBBP_1_1std_1_1Stack_1a2adcd35954408a0e5a503e87f263a50b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BBP::std::Stack&lt; K &gt;::all</definition>
+        <argsstring>(Predicate)</argsstring>
+        <name>all</name>
+        <param>
+          <type><ref refid="de/d21/classBBP_1_1std_1_1Stack_1ac4bff5854bfb1d7e168fc46e9ff7f0c7" kindref="member">Predicate</ref></type>
+          <defname>lambda</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="78" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.hxx" bodystart="158" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d21/classBBP_1_1std_1_1Stack_1a2101f38fbf210dd57d4fba1721357e6a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BBP::std::Stack&lt; K &gt;::any</definition>
+        <argsstring>(Predicate)</argsstring>
+        <name>any</name>
+        <param>
+          <type><ref refid="de/d21/classBBP_1_1std_1_1Stack_1ac4bff5854bfb1d7e168fc46e9ff7f0c7" kindref="member">Predicate</ref></type>
+          <defname>lambda</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="79" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.hxx" bodystart="167" bodyend="173"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="7">
+        <label>BBP::std::Stack&lt; std::string_element &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; std::string_element &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>BBP::std::Stack&lt; BBP::std::FILE &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; BBP::std::FILE &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>BBP::std::Stack&lt; std::byte &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; std::byte &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>BBP::std::Stack&lt; BBP::std::DIRECTORY &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; BBP::std::DIRECTORY &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>BBP::std::Stack&lt; string_element &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; string_element &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>BBP::std::Stack&lt; BBP::std::ELF::SectionBuilder &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; BBP::std::ELF::SectionBuilder &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>BBP::std::Stack&lt; BBP::std::ELF::SegmentBuilder &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; BBP::std::ELF::SegmentBuilder &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>BBP::std::Stack&lt; std::Lexer::lex_keywordhandle &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; std::Lexer::lex_keywordhandle &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BBP::std::Stack&lt; std::index_t &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; std::index_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>BBP::std::Stack&lt; K &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+      </node>
+      <node id="3">
+        <label>BBP::std::Stack&lt; std::word &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; std::word &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>BBP::std::Stack&lt; BBP::std::ELF::SymbolBuilder &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; BBP::std::ELF::SymbolBuilder &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>BBP::std::Stack&lt; std::halfword &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; std::halfword &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>BBP::std::Stack&lt; BBP::std::Lexer::lex_keyword &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; BBP::std::Lexer::lex_keyword &gt;</edgelabel>
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>BBP::std::PAGE&lt; K &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; K &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>BBP::std::Stack&lt; K &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+page</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BBP::std::PAGE&lt; T &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" line="15" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Stack.h" bodystart="14" bodyend="83"/>
+    <listofallmembers>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1a2adcd35954408a0e5a503e87f263a50b" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>all</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1a2101f38fbf210dd57d4fba1721357e6a" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>any</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1a752abbe63aa4dc1f0e3f13cacd9feb20" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>atElement</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1a4b4f719f8f4c0c213a11fc81bf2d929a" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>Extend</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1af634fcf9694db9550d929e1d65998984" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>foreach</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1a64efed21ad317ae0bf94d025de408605" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>Iterator</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1af6e3fecce1efb9635ba76706c25e08c8" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>max_elements</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1ae9fbcbaf4b3d75bf8d664eb1cb73ffce" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>operator%=</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1a370763394876da6f2cd48878755ceb1f" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>operator++</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1a2a8fd467416463b2606b3ca0dfa1d306" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>operator++</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1a42f8fad3c66f0d7026bcd081fcd401e7" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>operator+=</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1a5c38aeadecf0e79334ae07b7aa205091" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>operator--</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1a675a80c3a04b2c93cddca6395fd5625c" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>operator--</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1a8d19bc2f830f72bd25727b41979de021" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>operator&lt;&lt;</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1a9cca09e173921658db58e2a4ca8c8a42" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>operator&lt;&lt;</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1ae6e1627a74280e8f8c9ab1c4bf053462" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>operator&lt;=</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1a2438b5918618976f30c3512037d987ce" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>operator&gt;=</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1adf3ff221c692972347ea334d007da4fb" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>operator&gt;&gt;</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1a0130c9118ae0c4802d35c0a094311c12" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>operator&gt;&gt;</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1a4a0a0bbb8783b49135716a1a28f42125" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>operator[]</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1aaacd32840edd56a62471a2aedbbe85dc" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>page</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1ac4bff5854bfb1d7e168fc46e9ff7f0c7" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>Predicate</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1a14dc7eb377f345c44025fcc38fd9aaa8" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>readFrom</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1a8e1d01f86a2a53884afa6409e907c2f1" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>Stack</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1ae489b0256b2add75816b35b7ebaf1613" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>Stack</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1a49ad838d49b7f52fdbc308b7b9106cd0" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>Stack</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1a17b43148ac641825cd5cf9efcd0df9ae" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>Stack</name></member>
+      <member refid="de/d21/classBBP_1_1std_1_1Stack_1a32ce717db41d8608a8659a0ebac0ae16" prot="public" virt="non-virtual"><scope>BBP::std::Stack</scope><name>writeTo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

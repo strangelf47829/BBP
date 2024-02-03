@@ -1,0 +1,3146 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Embeddable Simple Assembly (language) &mdash; BBP 0.2.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b1f64a84"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ESA Embedded Application Binary Interface" href="EABI.html" />
+    <link rel="prev" title="The Userspace" href="Userspace.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            BBP
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stub.html">Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Userspace.html">The Userspace</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Embeddable Simple Assembly (language)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compiling-esa-files">Compiling .esa files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installing-elsa">Installing ELSA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-use-elsa">How to use ELSA</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#invoking-elsa">Invoking ELSA</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#memory-model">Memory model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#physical-memory">Physical memory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#virtual-memory">Virtual memory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#meta-memory">Meta memory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#addressing-schemes">Addressing schemes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#syntax">Syntax</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#comments">Comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lvalues-rvalues-and-xvalues">lvalues, rvalues, and xvalues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#directives">Directives</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#using-directive">“Using” directive</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#handler-directive">“Handler” directive</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#symbol-definitions">Symbol definitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#procedures">Procedures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#instructions">Instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#registers">Registers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#general-purpose-registers">General purpose registers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#thread-specific-registers">Thread specific registers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#segmentation-registers">Segmentation registers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#extended-registers">Extended registers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usage-examples">Usage examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#the-stack">The stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#signals">Signals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#signal-handler">Signal Handler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#signal-types">Signal Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#referencing-signals">Referencing signals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sigabrt">SIGABRT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sigcont">SIGCONT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sigill">SIGILL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sigint">SIGINT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sigkill">SIGKILL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sigpoll">SIGPOLL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sigsegv">SIGSEGV</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sigstop">SIGSTOP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sigsys">SIGSYS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sigterm">SIGTERM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sigaovf">SIGAOVF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sigdby0">SIGDBY0</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#byte-code-representation">Byte code representation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#morphemes">Morphemes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#statements">Statements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#statement-example">Statement example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mnemonic-mapping">Mnemonic mapping</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#nil">nil</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nop">nop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hlt">hlt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hcf">hcf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mov">mov</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inc">inc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dec">dec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add">add</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sub">sub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mul">mul</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#div">div</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mod">mod</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#and">and</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#orr">orr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#xor">xor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#not">not</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neg">neg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jmp">jmp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#push">push</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pop">pop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#call">call</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ret">ret</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#syscall">syscall</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#raise">raise</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="EABI.html">ESA Embedded Application Binary Interface</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">BBP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Embeddable Simple Assembly (language)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/ESA.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="embeddable-simple-assembly-language">
+<h1>Embeddable Simple Assembly (language)<a class="headerlink" href="#embeddable-simple-assembly-language" title="Permalink to this heading"></a></h1>
+<section id="overview">
+<span id="id1"></span><h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>The <strong>Embeddable Simple Assembly</strong> language was developed as a simple assembler language that can be virtualized reasonably easily.</p>
+</div></blockquote>
+</section>
+<section id="compiling-esa-files">
+<h2>Compiling .esa files<a class="headerlink" href="#compiling-esa-files" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>.esa files can be compiled by using the <strong>EmbeddabLe Simple Assembler</strong> (or <strong>ELSA</strong> for short) compiler, which can be invoked either from
+a BBP shell, or directly through an OS Shell (assuming ELSA is installed).</p>
+</div></blockquote>
+<section id="installing-elsa">
+<h3>Installing ELSA<a class="headerlink" href="#installing-elsa" title="Permalink to this heading"></a></h3>
+<p>Just build your own ELSA lel</p>
+</section>
+<section id="how-to-use-elsa">
+<h3>How to use ELSA<a class="headerlink" href="#how-to-use-elsa" title="Permalink to this heading"></a></h3>
+<section id="invoking-elsa">
+<h4>Invoking ELSA<a class="headerlink" href="#invoking-elsa" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Option</p></td>
+<td><p>Description</p></td>
+<td><p>Notes</p></td>
+</tr>
+<tr class="row-even"><td><p>-h</p></td>
+<td><p>Displays a help page on the terminal</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+</section>
+</section>
+<section id="memory-model">
+<h2>Memory model<a class="headerlink" href="#memory-model" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>ESA has three seperate memory “domains”: the <strong>physical</strong> memory, the <strong>virtual</strong> memory, and <strong>meta</strong> memory.</p>
+</div></blockquote>
+<section id="physical-memory">
+<h3>Physical memory<a class="headerlink" href="#physical-memory" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Physical memory is the memory physically accessible by the host hardware.
+This hardware is not directly accessible to ESA processes, but can be manipulated by syscalls and special instructions.</p>
+<p>Physical memory is managed by BBP and does not need to be accessed directly.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>You are heavily discouraged</strong> from accessing physical memory directly, as BBP has no C++ signal handling capabilities.</p>
+<p>Instead, use the <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">std</span><span class="o">::</span><span class="n">read</span></code> and <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">std</span><span class="o">::</span><span class="n">write</span></code> functions provided by BBP, as they will handle exceptions for you.</p>
+</div>
+</div></blockquote>
+</section>
+<section id="virtual-memory">
+<h3>Virtual memory<a class="headerlink" href="#virtual-memory" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Virtual memory is memory which lives on physical memory but is addressable independantly of where it lives.</p>
+<p>That is to say, physical address <code class="code highlight cpp docutils literal highlight-cpp"><span class="mh">0x105</span></code> can only be the 6th element of a page living at physical address <code class="code highlight cpp docutils literal highlight-cpp"><span class="mh">0x100</span></code>,
+but virtual memory <code class="code highlight cpp docutils literal highlight-cpp"><span class="mh">0x005</span></code> will <em>always</em> be index 5, regardless of where in memory the page lives.</p>
+<p>Virtual memory is always relative to <em>something</em> (which in turn lives on physical memory).
+Virtual memory is said to be relative to <em>segments</em>, essentially named ‘blocks’ of memory that may share a specific function.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although ESA refers to memory <em>segments</em>, they are not the same as ELF <em>segments</em>, but rather ELF <em>sections</em>.</p>
+</div>
+<p>When ESA multiple binaries are loaded into memory, the <a class="reference internal" href="stub.html#id1"><span class="std std-ref">sections</span></a> contained within are linked together,
+forming one large <em>segment</em> comprising of multiple <em>pages</em>.</p>
+<p>This relies on the fact that the relative addressing of virtual memory addresses stays the same regardless of where the initial offset is:
+<em>Virtual memory is memory which lives on physical memory but is addressable independantly of where it lives.</em></p>
+</div></blockquote>
+<section id="meta-memory">
+<h4>Meta memory<a class="headerlink" href="#meta-memory" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><p>Some memory addresses are neither neither “physical” nor “virtual”. These memory addresses are said to be <em>meta</em>.</p>
+<p>One such example are the <a class="reference internal" href="stub.html#id1"><span class="std std-ref">registers</span></a>. Functionally, they live on virtual memory, just like .text or .rodata, however
+it would be semantically incorrect to refer to meta memory as virtual memory, <a class="reference external" href="https://imgs.xkcd.com/comics/argument_victory.png">because I say so.</a></p>
+<p>The reason for this distinction is that because registers (among other values) are never stored in virtual memory, their addresses cannot be represented in ESA.</p>
+</div></blockquote>
+</section>
+<section id="addressing-schemes">
+<h4>Addressing schemes<a class="headerlink" href="#addressing-schemes" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><p>Virtual memory can be represented using the following scheme:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;[&lt;section&gt;[+ offset]] | 0&quot; &lt;base&gt; &lt;index&gt;.
+</pre></div>
+</div>
+<p>Essentially, if the memory address is not relative to any specific segment (such as offsets / indicies), it is prefixed with a 0.
+Otherwise, a 2 digit identifier is used as the prefix. <a class="reference internal" href="stub.html#id1"><span class="std std-ref">Here</span></a> is a list of commonly used identifiers.</p>
+<dl class="simple">
+<dt>The base of the index is then appended:</dt><dd><ul class="simple">
+<li><p>‘b’ for binary numbers;</p></li>
+<li><p>‘x’ for hexadecimal numbers;</p></li>
+<li><p>‘o’ for octal numbers;</p></li>
+<li><p>‘_’ for decimal numbers.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The index is then appended in the specified base.</p>
+<p>For example, <code class="code highlight esa none docutils literal highlight-none">0x05</code> refers to virtual memory offset 5, relative to no specific segment.
+<code class="code highlight esa none docutils literal highlight-none">BS_10</code> refers to virtual memory offset 10, relative to the .bss segment.
+<code class="code highlight esa none docutils literal highlight-none">BS+50_10</code> refers to virtual memory offset 10, relative to the .bss segment offset by 50.</p>
+<p>Physical memory cannot be represented in EAS, and so have no representation.
+Notwithstanding, this document does sometimes represent physical memory in hexadecimal notation.
+This is possible because this document is written in english. (Yes I actually wrote that, it is not AI generated).</p>
+</div></blockquote>
+</section>
+</section>
+</section>
+<section id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>ESA has a rather simple syntax (hence the <em>simple assembly</em>).</p>
+</div></blockquote>
+<section id="comments">
+<h3>Comments<a class="headerlink" href="#comments" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Comments can be defined anywhere on a line, and extend until the end of the current line.
+ESA has no multiline comments.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>; This is a comment
+<span class="linenos">2</span>mov eax, 3 ; This is also a comment
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="lvalues-rvalues-and-xvalues">
+<h3>lvalues, rvalues, and xvalues<a class="headerlink" href="#lvalues-rvalues-and-xvalues" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Although there is no real notion of ‘lvalues’ or ‘rvalues’ in ESA, certain notation exists which cannot be described without defining what an lvalue or rvalue is.</p>
+<p>The syntax to dereference an expression is [expression]. This will return the value stored in virtual memory.
+The syntax to get the address of an rvalue is %expression%. This will return the address of the rvalue.
+It is only possible to get the address of a value that lives on virtual memory.</p>
+<p>An <strong>lvalue</strong> is any value that is either a register or a <em>dereferenced</em> value, while an <strong>rvalue</strong> is a value that immediately exists on <em>virtual memory</em>, a constant expression, or a register.
+An <strong>xvalue</strong> is a value that is both an <strong>lvalue</strong> and an <strong>rvalue</strong>.</p>
+<p>Consider the following C code</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="linenos">2</span><span class="kt">int</span><span class="w"> </span><span class="o">**</span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="n">a</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>On line 1, the value <em>0</em> is stored into <em>a</em>.
+Since <em>a</em> is a dereferenced (in EAS), <em>a</em> is an lvalue.
+Since <em>a</em> can also exist on virtual memory, <em>a</em> is also an rvalue.
+Because <em>a</em> is both an lvalue and rvalue, <em>a</em> is said to be an <strong>xvalue</strong>.</p>
+<p>On line 2, the address of the address of <em>a</em> is being stored into <em>b</em>.
+However, the “address of <em>a</em>” is never stored in virtual memory and so is not an rvalue.
+This means that this assignment cannot be made, and so generates an error.</p>
+<p>In ESA, the internal representation of a symbol is the dereferenced offset of the symbol,
+while the internal representation of a register is a physical memory address.</p>
+<p>Since that is technically a ‘dereferenced’ value, all symbols (except for quasi-symbols) are <em>xvalues</em>.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>static (myInt) db 42
+<span class="linenos"> 2</span>    ; Internally, &#39;myInt&#39; represents &#39;dereferenced offset 0&#39;.
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span>mov myInt, eax
+<span class="linenos"> 5</span>    ; OK, because myInt and eax are xvalues.
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>mov eax, myInt
+<span class="linenos"> 8</span>    ; OK, because myInt and eax are xvalues.
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>mov eax, %myInt%
+<span class="linenos">11</span>    ; OK, because &#39;offset 0&#39; is a constant expression
+<span class="linenos">12</span>
+<span class="linenos">13</span>mov eax, %%myInt%%
+<span class="linenos">14</span>    ; Not OK, because &#39;offset 0&#39; is never stored on virtual memory.
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="directives">
+<h3>Directives<a class="headerlink" href="#directives" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Directives are commands given to ELSA that do not translate directly into bytecode.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Directives must be given at the start of each line, and always start with a pound (#) sign.</p>
+</div>
+</div></blockquote>
+<section id="using-directive">
+<h4>“Using” directive<a class="headerlink" href="#using-directive" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><p>The “using” directive functions identically to C/C++’s <code class="code highlight cpp docutils literal highlight-cpp"><span class="cp">#include</span></code> directive.</p>
+</div></blockquote>
+</section>
+<section id="handler-directive">
+<h4>“Handler” directive<a class="headerlink" href="#handler-directive" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><p>The handler directive tells ELSA what <a class="reference internal" href="stub.html#id1"><span class="std std-ref">procedure</span></a> to call for a given <a class="reference internal" href="stub.html#id1"><span class="std std-ref">signal</span></a>.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>procedure (myHandler) (0)
+<span class="linenos">2</span>
+<span class="linenos">3</span>end
+<span class="linenos">4</span>
+<span class="linenos">5</span>#handler SIGINT myHandler
+</pre></div>
+</div>
+<p>The handler directive must come after a procedure declaration; The following code has the same effect as the code above.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>extern procedure (myHandler) (0)
+<span class="linenos">2</span>#handler SIGINT myHandler
+<span class="linenos">3</span>
+<span class="linenos">4</span>procedure (myHandler) (0)
+<span class="linenos">5</span>
+<span class="linenos">6</span>end
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>ELSA may fail to compile and/or ignore a handler directive if the procedure is declared but not defined within a translation unit,
+or if the procedure referenced takes an incorrect amount of arguments.</p>
+</div>
+</div></blockquote>
+</section>
+</section>
+<section id="symbol-definitions">
+<h3>Symbol definitions<a class="headerlink" href="#symbol-definitions" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Symbols are defined using the following syntax:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;access&gt; &lt;modifiers&gt; (&lt;Identifier&gt;) &lt;size&gt; &lt;data&gt;
+</pre></div>
+</div>
+<p>The access keyword can be either <code class="code highlight cpp docutils literal highlight-cpp"><span class="k">static</span></code>, <code class="code highlight cpp docutils literal highlight-cpp"><span class="k">virtual</span></code>, or nothing, in which case the symbol is said to be a quasi-symbol.
+ELSA will attempt to expand all references of quasi-symbols where found in source code.
+Quasi-symbols are not exported by ELSA; How other symbols are exported depends on their access and modifier keywords.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>(myInt) db 42
+<span class="linenos">2</span>mov eax, myInt
+<span class="linenos">3</span>
+<span class="linenos">4</span>    ; is equivalent to ...
+<span class="linenos">5</span>
+<span class="linenos">6</span>mov eax, 42
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Specifying any modifiers on quasi-symbols will result in compilation errors.</p>
+<p>Keep in mind that this is simply a macro expansion, so</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>(myTwoInts) db 42, 42
+<span class="linenos">2</span>mov eax, myTwoInts
+<span class="linenos">3</span>
+<span class="linenos">4</span>; Expands to:
+<span class="linenos">5</span>mov eax, 42, 42
+</pre></div>
+</div>
+<p>will trigger an error because ‘mov’ only expects two arguments.</p>
+</div>
+<p>Static symbols are simply symbols which are initialized before code execution. In other words, static symbols are stored in the ELF binary.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Contents of static symbols can easily be viewed and modified externally.</p>
+<p><strong>Do not store security sensitive data as static symbols.</strong></p>
+</div>
+<p>Static symbols are emitted inside of the .data section.</p>
+<p>Virtual symbols are symbols which also need to be statically-allocated, but not necessarily initialized.
+Virtual symbols live on the .bss section, as opposed to the .data section.</p>
+<p>Please refer to <a class="reference internal" href="stub.html#id1"><span class="std std-ref">(Stub)</span></a> to learn how .bss and .data is treated.</p>
+<p>Modifiers modify the default behaviour of ELSA.</p>
+<p>the following modifiers are valid:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">- Const</div>
+<div class="line">- Static (only valid directly after <code class="code highlight cpp docutils literal highlight-cpp"><span class="k">virtual</span></code>)</div>
+<div class="line">- Extern</div>
+</div>
+</div></blockquote>
+<p>The <em>const</em> modifier forces ELSA to emit data on .rodata (read only data) instead of .data.</p>
+<p>The <em>static</em> modifier is only valid on virtual symbols and <em>must</em> come directly after the virtual keyword.
+If a virtual symbol is modified by <em>static</em>, the virtual symbol transforms into a pointer that holds the offset of the data initialized at .bss.</p>
+<p>This is the C equivalent of the following:</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kt">int</span><span class="w"> </span><span class="n">bssData</span><span class="p">[];</span>
+<span class="linenos">2</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">virtualSymbol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">bssData</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>If a virtual symbol is modified by <em>static</em> and <em>const</em>, the symbol is stored in .rodata instead of .data.</p>
+<p>The extern modifier tells ELSA that the definition for that symbol is not available within this translation unit.</p>
+<p><strong>Size</strong> refers to the physical size of <strong>data</strong>.
+Valid sizes are listed in the table below.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Keyword</p></td>
+<td><p>Size (bit)</p></td>
+<td><p>notes</p></td>
+</tr>
+<tr class="row-even"><td><p>db</p></td>
+<td><p>8</p></td>
+<td><p>Define Bytes</p></td>
+</tr>
+<tr class="row-odd"><td><p>dh</p></td>
+<td><p>16</p></td>
+<td><p>Define Halfword</p></td>
+</tr>
+<tr class="row-even"><td><p>dw</p></td>
+<td><p>32</p></td>
+<td><p>Define Word</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>0</p></td>
+<td><p>Only valid for quasi-symbols</p></td>
+</tr>
+</tbody>
+</table>
+<p>The size of a symbol can be referred to during compile time by encapsulating a symbol identifier in angled brackets.
+If a single bracket is used, it returns the size of the symbol in bytes.
+If a double bracket is used, it returns the size of the symbol in bits.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>static (myVar) db 42
+<span class="linenos">2</span>
+<span class="linenos">3</span>mov eax, &lt;myVar&gt;
+<span class="linenos">4</span>; Is equivalent to:
+<span class="linenos">5</span>mov eax, 1
+<span class="linenos">6</span>
+<span class="linenos">7</span>mov eax, &lt;&lt;myVar&gt;&gt;
+<span class="linenos">8</span>; Is equivalent to:
+<span class="linenos">9</span>mov eax, 8
+</pre></div>
+</div>
+<p><strong>Data</strong> can be any sequence of constant expressions.
+Constant expressions are values that are known at compile time.
+Valid constant expressions are integer constants, &lt;&gt; expressions, &lt;&lt;&gt;&gt; expressions, hexadecimal expressions, and (multi)-char sequences.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>&#39;H&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;, &#39; &#39;, &#39;W&#39;, &#39;o&#39;, &#39;r&#39;, &#39;l&#39;, &#39;d&#39;, &#39;!&#39;, 0
+<span class="linenos">2</span>; Is equivalent to
+<span class="linenos">3</span>&quot;Hello, World!&quot;, 0
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>multi-char sequences are not null-terminated and must be terminated explicitly by adding a 0 after the sequence</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Hello, World&quot;</span>    <span class="p">;</span> <span class="n">Not</span> <span class="n">null</span> <span class="n">terminated</span>
+<span class="s2">&quot;Hello, World&quot;</span><span class="p">,</span> <span class="mi">0</span> <span class="p">;</span> <span class="n">Null</span> <span class="n">terminated</span>
+</pre></div>
+</div>
+</div>
+<p>The size (in bytes) of a data sequence is known at compile time and can be expressed by encapsulating the symbol identifier in curly braces</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">static</span> <span class="p">(</span><span class="n">myString</span><span class="p">)</span> <span class="n">db</span> <span class="s2">&quot;Hello, world!&quot;</span><span class="p">,</span> <span class="mi">0</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="n">mov</span> <span class="n">eax</span><span class="p">,</span> <span class="p">{</span><span class="n">myString</span><span class="p">}</span>
+<span class="linenos">4</span><span class="p">;</span> <span class="n">Is</span> <span class="n">equivalent</span> <span class="n">to</span>
+<span class="linenos">5</span><span class="n">mov</span> <span class="n">eax</span><span class="p">,</span> <span class="mi">14</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="procedures">
+<h3>Procedures<a class="headerlink" href="#procedures" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Procedures are blocks of instructions that can be called from other sections.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The actual inner workings of procedures are defined in the ABI.</p>
+<p>This section only describes the syntax of procedures, and not the ABI.</p>
+</div>
+<p>Procedures are defined using the following structure</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>&lt;modifiers&gt; procedure (&lt;identifier&gt;) (&lt;arguments&gt;)
+<span class="linenos">2</span>    &lt;code&gt;
+<span class="linenos">3</span>end
+</pre></div>
+</div>
+<p>The only valid modifier is <code class="code highlight cpp docutils literal highlight-cpp"><span class="k">extern</span></code>. In such case, ELSA will ignore any provided function body (but emit a warning), and can safely be omitted.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>extern procedure (myFunc) (0)
+<span class="linenos">2</span>; ^^ Compiles OK
+<span class="linenos">3</span>
+<span class="linenos">4</span>extern procedure (myFunc) (0)
+<span class="linenos">5</span>end
+<span class="linenos">6</span>; ^^ Compiles OK, but generates warning &quot;Body defined for procedure marked extern&quot;.
+</pre></div>
+</div>
+<p><strong>Arguments</strong> is any valid integer constant expression and defines how many arguments the function takes.
+These arguments are not stored in any register, but are instead placed on the argument stack (please see the <a class="reference internal" href="stub.html#id1"><span class="std std-ref">ABI</span></a> for more details).</p>
+<p>Procedures can be overloaded by simply specifying different amount of arguments.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>procedure (myFunc) (1)
+<span class="linenos">2</span>end
+<span class="linenos">3</span>
+<span class="linenos">4</span>procedure (myFunc) (2)
+<span class="linenos">5</span>end
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="instructions">
+<h3>Instructions<a class="headerlink" href="#instructions" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>The bytecode executed by the <a class="reference internal" href="stub.html#id1"><span class="std std-ref">virtual processor</span></a> is represented by instructions.
+Instructions are composed in the following structure:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;mnemonic&gt; &lt;arg1&gt;, &lt;arg2&gt;, ...
+</pre></div>
+</div>
+<p>The <strong>mnemonic</strong> of an instruction is the plain-text name of an instruction. This differs from an <em>opcode</em> because a single <strong>mnemonic</strong> can map to multiple <em>opcodes</em>.</p>
+<p><strong>arg1</strong> and <strong>arg2</strong> are arguments passed onto the instruction, however the instruction may take more or less than the demonstrated 2.</p>
+<p>arguments can be of any type except for mnemonic or arrays.</p>
+</div></blockquote>
+</section>
+</section>
+<section id="registers">
+<h2>Registers<a class="headerlink" href="#registers" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>The virtual processor has registers that can be written to or read from.</p>
+<p>Registers live on physical memory, and as such are <strong>xvalues</strong>.
+Some registers may refer to the same physical memory. Which register references what section of what memory is explicitly defined in this section.</p>
+<p>Registers may also have different sizes, which are either 32 bit, 16 bit, or 8 bit;
+The <code class="code highlight esa none docutils literal highlight-none">&lt;&gt;</code> and <code class="code highlight esa none docutils literal highlight-none">&lt;&lt;&gt;&gt;</code> notation can be used to retrieve register sizes.</p>
+</div></blockquote>
+<section id="general-purpose-registers">
+<h3>General purpose registers<a class="headerlink" href="#general-purpose-registers" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Some registers, such as <code class="code highlight asm docutils literal highlight-asm"><span class="nf">eax</span></code> are <em>general purpose</em>, meaning that they have no specific purpose and can be used freely.
+The following registers are general purpose:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td colspan="7"><p>Accumulator register</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><p>Arithmetic operations.</p></td>
+<td rowspan="3"><p>EAX</p></td>
+<td colspan="4"><p>(cannot be addressed)</p></td>
+<td rowspan="3"><p>32 bit</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>AX</p></td>
+<td><p>AH</p></td>
+<td><p>8 bit</p></td>
+<td rowspan="2"><p>16 bit</p></td>
+</tr>
+<tr class="row-even"><td><p>AL</p></td>
+<td><p>8 bit</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td colspan="7"><p>Counter register</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><p>Indexing purposes,
+such as for ‘for’ loops.</p></td>
+<td rowspan="3"><p>ECX</p></td>
+<td colspan="4"><p>(cannot be addressed)</p></td>
+<td rowspan="3"><p>32 bit</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>CX</p></td>
+<td><p>CH</p></td>
+<td><p>8 bit</p></td>
+<td rowspan="2"><p>16 bit</p></td>
+</tr>
+<tr class="row-even"><td><p>CL</p></td>
+<td><p>8 bit</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td colspan="7"><p>Data register</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><p>I/O operations, as well
+as arithmetic
+operations.</p></td>
+<td rowspan="3"><p>EDX</p></td>
+<td colspan="4"><p>(cannot be addressed)</p></td>
+<td rowspan="3"><p>32 bit</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>DX</p></td>
+<td><p>DH</p></td>
+<td><p>8 bit</p></td>
+<td rowspan="2"><p>16 bit</p></td>
+</tr>
+<tr class="row-even"><td><p>DL</p></td>
+<td><p>8 bit</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td colspan="7"><p>Base register</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><p>General pointer to data.</p></td>
+<td rowspan="3"><p>EBX</p></td>
+<td colspan="4"><p>(cannot be addressed)</p></td>
+<td rowspan="3"><p>32 bit</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>BX</p></td>
+<td><p>BH</p></td>
+<td><p>8 bit</p></td>
+<td rowspan="2"><p>16 bit</p></td>
+</tr>
+<tr class="row-even"><td><p>BL</p></td>
+<td><p>8 bit</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td colspan="7"><p>Stack pointer register</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><p><strong>readonly</strong></p></td>
+<td rowspan="3"><p>ESP</p></td>
+<td colspan="4"><p>(cannot be addressed)</p></td>
+<td rowspan="3"><p>32 bit</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>–</p></td>
+<td><p>–</p></td>
+<td><p>8 bit</p></td>
+<td rowspan="2"><p>16 bit</p></td>
+</tr>
+<tr class="row-even"><td><p>–</p></td>
+<td><p>8 bit</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td colspan="7"><p>Stack Base register</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><p><strong>readonly</strong></p></td>
+<td rowspan="3"><p>EBX</p></td>
+<td colspan="4"><p>(cannot be addressed)</p></td>
+<td rowspan="3"><p>32 bit</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>–</p></td>
+<td><p>–</p></td>
+<td><p>8 bit</p></td>
+<td rowspan="2"><p>16 bit</p></td>
+</tr>
+<tr class="row-even"><td><p>–</p></td>
+<td><p>8 bit</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td colspan="7"><p>Source register</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"></td>
+<td rowspan="3"><p>ESI</p></td>
+<td colspan="4"><p>(cannot be addressed)</p></td>
+<td rowspan="3"><p>32 bit</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>–</p></td>
+<td><p>–</p></td>
+<td><p>8 bit</p></td>
+<td rowspan="2"><p>16 bit</p></td>
+</tr>
+<tr class="row-even"><td><p>–</p></td>
+<td><p>8 bit</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td colspan="7"><p>Destination register</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"></td>
+<td rowspan="3"><p>EDI</p></td>
+<td colspan="4"><p>(cannot be addressed)</p></td>
+<td rowspan="3"><p>32 bit</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>–</p></td>
+<td><p>–</p></td>
+<td><p>8 bit</p></td>
+<td rowspan="2"><p>16 bit</p></td>
+</tr>
+<tr class="row-even"><td><p>–</p></td>
+<td><p>8 bit</p></td>
+</tr>
+</tbody>
+</table>
+<p>Although these are <em>general purpose</em>, they are used with a generally consistent purpose.
+It is up to the programmer to follow the conventions specified within these tables.</p>
+</div></blockquote>
+</section>
+<section id="thread-specific-registers">
+<h3>Thread specific registers<a class="headerlink" href="#thread-specific-registers" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Some registers are used to keep track of information which is specific to the thread hosting the application.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Although the name <em>thread specific</em> implies that only these registers are “specific” to this thread (as opposed to all of them),
+this is incorrect.</p>
+<p><strong>Every register is “specific” to its thread</strong>. <em>Thread specific</em> refers to how the host treats these registers between threads.</p>
+</div>
+<p>Thread specific registers cannot be modified by the application directly (I.E., these registers are all readonly).
+Some registers, such as <code class="code highlight esa none docutils literal highlight-none">eip</code> can be modified <em>indirectly</em> by instructions like <code class="code highlight asm docutils literal highlight-asm"><span class="nf">call</span></code> or <code class="code highlight asm docutils literal highlight-asm"><span class="nf">ret</span></code>.</p>
+<p>The following registers are thread specific:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td colspan="7"><p>Thread information register</p></td>
+</tr>
+<tr class="row-even"><td rowspan="4"><p><em>TP</em> (Thread Parent)</p>
+<p><em>TI</em> (Thread ID)</p>
+<p><strong>readonly</strong></p>
+</td>
+<td rowspan="4"><p>ETI</p></td>
+<td rowspan="2"><p>ST</p></td>
+<td><p>OB</p></td>
+<td><p>8 bit</p></td>
+<td rowspan="2"><p>16 bit</p></td>
+<td rowspan="4"><p>32 bit</p></td>
+</tr>
+<tr class="row-odd"><td><p>TB</p></td>
+<td><p>8 bit</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>PI</p></td>
+<td><p>TP</p></td>
+<td><p>8 bit</p></td>
+<td rowspan="2"><p>16 bit</p></td>
+</tr>
+<tr class="row-odd"><td><p>TI</p></td>
+<td><p>8 bit</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="code highlight esa none docutils literal highlight-none">PI</code> register holds the <em>Process Information</em>. The <em>thread parent</em> is the id of the thread
+that spawned this thread, and the <em>thread id</em> is the PID of the currently running thread.</p>
+<p>The <code class="code highlight esa none docutils literal highlight-none">ST</code> register holds the process information of the process from which a raised signal comes from.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td colspan="7"><p>Signal state register</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><p>Signal handling and
+state.</p></td>
+<td rowspan="3"><p>SSX</p></td>
+<td><p>HP</p></td>
+<td colspan="2"></td>
+<td><p>16 bit</p></td>
+<td rowspan="3"><p>32 bit</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>SS</p></td>
+<td><p>CS</p></td>
+<td><p>8 bit</p></td>
+<td rowspan="2"><p>16 bit</p></td>
+</tr>
+<tr class="row-even"><td><p>SF</p></td>
+<td><p>8 bit</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="code highlight esa none docutils literal highlight-none">SSX</code> register holds information about the current signalling state of the thread.</p>
+<p>The <code class="code highlight esa none docutils literal highlight-none">SS</code> (Signal State) register holds the integer representation of the current signal (<code class="code highlight esa none docutils literal highlight-none">CS</code>),
+and any associated flags (<code class="code highlight esa none docutils literal highlight-none">SF</code>).</p>
+<p>The handler pointer (<code class="code highlight esa none docutils literal highlight-none">HP</code>) register points to the address of the procedure that gets called when a signal is raised.</p>
+<p>Please refer to the <a class="reference internal" href="stub.html#id1"><span class="std std-ref">ABI</span></a> to learn how signals are processed, and <a class="reference internal" href="stub.html#id1"><span class="std std-ref">here</span></a> to learn what signals are.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td colspan="6"><p>Stack unwinding register</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"></td>
+<td rowspan="2"><p>SUD</p></td>
+<td><p>ASU</p></td>
+<td></td>
+<td><p>16 bit</p></td>
+<td rowspan="2"><p>32 bit</p></td>
+</tr>
+<tr class="row-odd"><td><p>GSU</p></td>
+<td></td>
+<td><p>16 bit</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="code highlight esa none docutils literal highlight-none">SUD</code> register holds information about how the virtual processor must unwind the stack.</p>
+<p>The <code class="code highlight esa none docutils literal highlight-none">ASU</code> register corresponds to the argument stack, and the <code class="code highlight esa none docutils literal highlight-none">GSU</code> refers to the general stack.
+Please refer to <a class="reference internal" href="stub.html#id1"><span class="std std-ref">this</span></a> page to learn about stack unwinding.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td colspan="7"><p>Instruction pointer</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><p>Points to the next
+instruction.</p>
+<p><strong>readonly</strong></p>
+</td>
+<td rowspan="3"><p>EIP</p></td>
+<td colspan="4"><p>(cannot be addressed)</p></td>
+<td rowspan="3"><p>32 bit</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>IP</p></td>
+<td><p>IH</p></td>
+<td><p>8 bit</p></td>
+<td rowspan="2"><p>16 bit</p></td>
+</tr>
+<tr class="row-even"><td><p>IL</p></td>
+<td><p>8 bit</p></td>
+</tr>
+</tbody>
+</table>
+<p>The instruction pointer points to the next instruction to be run, assuming no branching takes place.</p>
+<p>The reason for this is that it simplifies the control flow between procedure calls.
+Please refer to the <a class="reference internal" href="stub.html#id1"><span class="std std-ref">ABI</span></a> for a more detailed explanation.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td colspan="4"><p>Flags register</p></td>
+</tr>
+<tr class="row-even"><td><p>The state of the
+Processor.</p>
+<p><strong>readonly</strong></p>
+</td>
+<td><p>FLG</p></td>
+<td><p>(cannot be addressed)</p></td>
+<td><p>32 bit</p></td>
+</tr>
+</tbody>
+</table>
+<p>The Flags register is used internally by the virtual processor to store the executing state of the thread.
+The internal structuring of the FLG register can be found <a class="reference internal" href="stub.html#id1"><span class="std std-ref">here</span></a>.</p>
+</div></blockquote>
+</section>
+<section id="segmentation-registers">
+<h3>Segmentation registers<a class="headerlink" href="#segmentation-registers" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Segmentation registers are registers that store the size and <strong>physical address</strong> of physical memory pages.</p>
+<p>The purpose of these registers is to give the user a way to interface with the actual hardware of the host.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The only way to read and write to the data pointed to by these registers is by using the dedicated <code class="code highlight esa none docutils literal highlight-none">read</code> and <code class="code highlight esa none docutils literal highlight-none">write</code>
+instructions. Attempting to read data outside of the below listed pages (ie, past their size) will result in a segfault.</p>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>name</p></th>
+<th class="head"><p>physical size</p></th>
+<th class="head"><p>Holds the size of</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SPS</p></td>
+<td><p>Stack page size</p></td>
+<td><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="k">sizeof</span><span class="p">(</span><span class="kt">size_t</span><span class="p">)</span></code></p></td>
+<td><p>Size of .stack</p></td>
+</tr>
+<tr class="row-odd"><td><p>CPS</p></td>
+<td><p>Code page size</p></td>
+<td><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="k">sizeof</span><span class="p">(</span><span class="kt">size_t</span><span class="p">)</span></code></p></td>
+<td><p>Size of .text</p></td>
+</tr>
+<tr class="row-even"><td><p>DPS</p></td>
+<td><p>Data page size</p></td>
+<td><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="k">sizeof</span><span class="p">(</span><span class="kt">size_t</span><span class="p">)</span></code></p></td>
+<td><p>Size of .data</p></td>
+</tr>
+<tr class="row-odd"><td><p>RPS</p></td>
+<td><p>Read only Data page size</p></td>
+<td><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="k">sizeof</span><span class="p">(</span><span class="kt">size_t</span><span class="p">)</span></code></p></td>
+<td><p>Size of .rodata</p></td>
+</tr>
+<tr class="row-even"><td><p>EPS</p></td>
+<td><p>Extra page size</p></td>
+<td><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="k">sizeof</span><span class="p">(</span><span class="kt">size_t</span><span class="p">)</span></code></p></td>
+<td><p>Size of .bss</p></td>
+</tr>
+<tr class="row-odd"><td><p>UAS</p></td>
+<td><p>User allocated page size</p></td>
+<td><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="k">sizeof</span><span class="p">(</span><span class="kt">size_t</span><span class="p">)</span></code></p></td>
+<td><p>Size of alloc’d data by user</p></td>
+</tr>
+<tr class="row-even"><td><p>SAS</p></td>
+<td><p>System allocated page size</p></td>
+<td><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="k">sizeof</span><span class="p">(</span><span class="kt">size_t</span><span class="p">)</span></code></p></td>
+<td><p>Size of alloc’d data by system</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>name</p></th>
+<th class="head"><p>physical size</p></th>
+<th class="head"><p>Holds a pointer to</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SPP</p></td>
+<td><p>Stack page pointer</p></td>
+<td><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="k">sizeof</span><span class="p">(</span><span class="kt">uint8_t</span><span class="o">*</span><span class="p">)</span></code></p></td>
+<td><p>Physical address of .stack</p></td>
+</tr>
+<tr class="row-odd"><td><p>CPP</p></td>
+<td><p>Code page pointer</p></td>
+<td><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="k">sizeof</span><span class="p">(</span><span class="kt">uint8_t</span><span class="o">*</span><span class="p">)</span></code></p></td>
+<td><p>Physical address of .text</p></td>
+</tr>
+<tr class="row-even"><td><p>DPP</p></td>
+<td><p>Data page pointer</p></td>
+<td><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="k">sizeof</span><span class="p">(</span><span class="kt">uint8_t</span><span class="o">*</span><span class="p">)</span></code></p></td>
+<td><p>Physical address of .data</p></td>
+</tr>
+<tr class="row-odd"><td><p>RPP</p></td>
+<td><p>Read only Data page pointer</p></td>
+<td><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="k">sizeof</span><span class="p">(</span><span class="kt">uint8_t</span><span class="o">*</span><span class="p">)</span></code></p></td>
+<td><p>Physical address of .rodata</p></td>
+</tr>
+<tr class="row-even"><td><p>EPP</p></td>
+<td><p>Extra page pointer</p></td>
+<td><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="k">sizeof</span><span class="p">(</span><span class="kt">uint8_t</span><span class="o">*</span><span class="p">)</span></code></p></td>
+<td><p>Physical address of .bss</p></td>
+</tr>
+<tr class="row-odd"><td><p>UAP</p></td>
+<td><p>User allocated page pointer</p></td>
+<td><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="k">sizeof</span><span class="p">(</span><span class="kt">uint8_t</span><span class="o">*</span><span class="p">)</span></code></p></td>
+<td><p>Physical address of page alloc’d by user</p></td>
+</tr>
+<tr class="row-even"><td><p>SAP</p></td>
+<td><p>System allocated page pointer</p></td>
+<td><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="k">sizeof</span><span class="p">(</span><span class="kt">uint8_t</span><span class="o">*</span><span class="p">)</span></code></p></td>
+<td><p>Physical address of page alloc’d by system</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<section id="extended-registers">
+<h4>Extended registers<a class="headerlink" href="#extended-registers" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><p>Some implementations of BBP may need extra registers, which are defined as <em>extended</em> registers (not to be confused with registers that are extended).
+These registers may offer direct control of GPIO states, for example, by setting physical addresses.</p>
+<p>Please refer to ‘<a class="reference internal" href="stub.html#id1"><span class="std std-ref">Extending BBP</span></a>’ to learn how to implement extended registers.</p>
+</div></blockquote>
+</section>
+<section id="usage-examples">
+<h4>Usage examples<a class="headerlink" href="#usage-examples" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These examples are written in ESA, but are not neccesarily compliant with the <a class="reference internal" href="stub.html#id1"><span class="std std-ref">ABI</span></a>, because
+they are intentionally made to be minimal examples.</p>
+</div>
+<p>The following code demonstrates the use of <a class="reference internal" href="stub.html#id1"><span class="std std-ref">General purpose registers</span></a> and <a class="reference internal" href="stub.html#id1"><span class="std std-ref">Segmentation registers</span></a>.
+It reads each byte available by the system, increments its value, then overwrites that byte with the result.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>procedure (example) (0)
+<span class="linenos"> 2</span>    ; This is an example on how to use the segmentation registers
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span>    push eax ; Push accumulator
+<span class="linenos"> 5</span>    push ecx ; Push counter
+<span class="linenos"> 6</span>    push ebx ; Push base
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>    mov ecx, 0
+<span class="linenos"> 9</span>        ;; Move into ecx the number 0
+<span class="linenos">10</span>    mov ebx, sas
+<span class="linenos">11</span>        ;; Move into ebx the physical size of system allocated memory
+<span class="linenos">12</span>
+<span class="linenos">13</span>    label loop: ; Define a label that can be jumped to
+<span class="linenos">14</span>        sub ecx, ebx
+<span class="linenos">15</span>            ;; Subtract the value of eax and ebx (result stored in eax)
+<span class="linenos">16</span>        jez quitloop
+<span class="linenos">17</span>            ;; If the 0 flag is set (I.E., ecx == ebx)
+<span class="linenos">18</span>
+<span class="linenos">19</span>        ;; There is still data available
+<span class="linenos">20</span>
+<span class="linenos">21</span>        shread ecx
+<span class="linenos">22</span>            ;; (system-heap-read) the data at index ecx relative to system alloc&#39;d page into eax.
+<span class="linenos">23</span>
+<span class="linenos">24</span>        inc eax
+<span class="linenos">25</span>            ;; Add one to eax
+<span class="linenos">26</span>
+<span class="linenos">27</span>        shwrite ecx, eax
+<span class="linenos">28</span>            ;; Write into ecx the value of eax
+<span class="linenos">29</span>
+<span class="linenos">30</span>        inc ecx
+<span class="linenos">31</span>            ;; Increment ecx (index)
+<span class="linenos">32</span>
+<span class="linenos">33</span>        jmp loop
+<span class="linenos">34</span>            ;; Unconditional jump to &#39;loop&#39;.
+<span class="linenos">35</span>    label quitloop:
+<span class="linenos">36</span>
+<span class="linenos">37</span>    shfree sap (system-heap-free)
+<span class="linenos">38</span>        ;; Tell the system to free the system allocated data, since we are done with it.
+<span class="linenos">39</span>
+<span class="linenos">40</span>    pop ebx ; Pop into ebx
+<span class="linenos">41</span>    pop ecx ; Pop into counter
+<span class="linenos">42</span>    pop eax ; Pop into accumulator
+<span class="linenos">43</span>
+<span class="linenos">44</span>    ret
+<span class="linenos">45</span>        ;; Return control to previous procedure
+<span class="linenos">46</span>end
+</pre></div>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Lines</p></th>
+<th class="head"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>4-6</p></td>
+<td><p>Push the values of eax, ebx, and ecx onto the stack
+so they can later be retrieved.</p></td>
+</tr>
+<tr class="row-odd"><td><p>8-11</p></td>
+<td><p>Write 0 to ecx to start at index 0.
+Write the size of the allocated page into ebx.</p></td>
+</tr>
+<tr class="row-even"><td><p>13-17</p></td>
+<td><p>Define a for loop by providing a label to jump to and
+the conditions to exit the for loop.</p></td>
+</tr>
+<tr class="row-odd"><td><p>21-22</p></td>
+<td><p>Read one byte from allocated page with offset ebx into
+eax.</p></td>
+</tr>
+<tr class="row-even"><td><p>24-25</p></td>
+<td><p>Increment the value of eax (the byte that was read)</p></td>
+</tr>
+<tr class="row-odd"><td><p>27-28</p></td>
+<td><p>Write the value of eax back into the physical memory.</p></td>
+</tr>
+<tr class="row-even"><td><p>30-34</p></td>
+<td><p>Increment the index by one (ecx), and continue the
+loop.</p></td>
+</tr>
+<tr class="row-odd"><td><p>37-38</p></td>
+<td><p>Free the memory allocated by the system.</p></td>
+</tr>
+<tr class="row-even"><td><p>40-42</p></td>
+<td><p>Pop the values pushed in lines 4-6 back into the
+registers.</p></td>
+</tr>
+</tbody>
+</table>
+<p>the equivalent C code is:</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">data</span><span class="p">;</span>
+<span class="linenos"> 2</span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="p">;</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="kt">int</span><span class="w"> </span><span class="nf">example</span><span class="p">()</span>
+<span class="linenos"> 5</span><span class="p">{</span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">ebx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">size</span><span class="p">;</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">ecx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">ecx</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">ebx</span><span class="p">;</span><span class="w"> </span><span class="n">ecx</span><span class="o">++</span><span class="p">)</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="n">data</span><span class="p">[</span><span class="n">ecx</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="n">ecx</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="linenos">12</span><span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+</section>
+<section id="the-stack">
+<h2>The stack<a class="headerlink" href="#the-stack" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This section describes the model ESA uses when running a program, and not the <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">std</span><span class="o">::</span><span class="n">Stack</span><span class="o">&lt;&gt;</span></code> data type.</p>
+<p>For more information on how the stack is implemented, please read the <a class="reference internal" href="stub.html#id1"><span class="std std-ref">ABI</span></a>.
+For more information on the <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">std</span><span class="o">::</span><span class="n">Stack</span><span class="o">&lt;&gt;</span></code> datatype, please read <a class="reference internal" href="stub.html#id1"><span class="std std-ref">here</span></a>.</p>
+</div>
+<p>ESA models a stack as a pointer that can move up and down a memory page.
+When adding a value to the stack (called <em>pushing</em> a value), the pointer is incremented.
+When reading a value to the stack (called <em>popping</em> a value), the pointer is decremented.</p>
+<p>Attempts to read past the boundaries of the page will result in a signal being raised for the offending thread.</p>
+<p>ESA has two distinct stacks: the general stack and the argument stack.</p>
+<p>The <em>general</em> stack can be accessed by the user using the <code class="code highlight esa none docutils literal highlight-none">push</code> and <code class="code highlight esa none docutils literal highlight-none">pop</code> instructions.
+The <code class="code highlight esa none docutils literal highlight-none">push</code> command takes an rvalue, and places it on top of the stack.
+The <code class="code highlight esa none docutils literal highlight-none">pop</code> command takes an lvalue, and assigns it the rvalue last pushed into the stack (FILO).</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>push 42
+<span class="linenos">2</span>    ;; Pushes the rvalue &#39;42&#39; onto the stack.
+<span class="linenos">3</span>
+<span class="linenos">4</span>pop eax
+<span class="linenos">5</span>    ;; Pops the top element of the stack into lvalue &#39;eax&#39;.
+</pre></div>
+</div>
+<p>The <em>argument</em> stack is a stack that cannot be pushed or popped by the user.
+Instead, the vitual processor pushes and pops values according to the <a class="reference internal" href="stub.html#id1"><span class="std std-ref">ABI</span></a>.</p>
+<p>In summary, whenever a procedure is called, the virtual processor pushes the arguments onto the <em>argument</em> stack, as well as the return value address
+and return instruction pointer.</p>
+<p>There are two ways to call procedures: using the <code class="code highlight esa none docutils literal highlight-none">call</code> instruction, and the <code class="code highlight esa none docutils literal highlight-none">callp</code> (call promise) instruction.</p>
+<p>When calling a procedure using <code class="code highlight esa none docutils literal highlight-none">call</code>, the processor only pushes <code class="code highlight esa none docutils literal highlight-none">eip</code> twice, and any arguments afterwards.
+When calling a procedure using <code class="code highlight esa none docutils literal highlight-none">callp</code>, the processor pushes both <code class="code highlight esa none docutils literal highlight-none">eip</code> and a return address, along with any arguments.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>callp eax, add5, 5
+<span class="linenos"> 2</span>    ;; Stack looks like this:
+<span class="linenos"> 3</span>    ;; +    -- top --    +
+<span class="linenos"> 4</span>    ;; |        5        | ; Argument one
+<span class="linenos"> 5</span>    ;; |       eax       | ; Where to put the returned value
+<span class="linenos"> 6</span>    ;; |       eip       | ; Where to return to
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>call add5, 5
+<span class="linenos"> 9</span>    ;; +    -- top --    +
+<span class="linenos">10</span>    ;; |        5        | ; Argument one
+<span class="linenos">11</span>    ;; |       eip       | ; Where to put the returned value
+<span class="linenos">12</span>    ;; |       eip       | ; Where to return to
+</pre></div>
+</div>
+<p>The user can access the arguments by using the <code class="code highlight esa none docutils literal highlight-none">arg</code> instruction (<a class="reference internal" href="stub.html#id1"><span class="std std-ref">main page</span></a>).</p>
+<p>The <code class="code highlight esa none docutils literal highlight-none">arg</code> instruction takes two arguments, a constant expression and an lvalue.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>procedure (add5) (1)
+<span class="linenos"> 2</span>    ;; When add5, 5 is called...
+<span class="linenos"> 3</span>    ;; +    -- top --    +
+<span class="linenos"> 4</span>    ;; |        5        | (element 0)
+<span class="linenos"> 5</span>    ;; |       eip       | (element 1)
+<span class="linenos"> 6</span>    ;; |       eip       | (element 2)
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>    arg 0, eax
+<span class="linenos"> 9</span>        ;; When this is called, the processor will move the value &#39;5&#39; into eax, because &#39;5&#39; is on top of the stack
+<span class="linenos">10</span>
+<span class="linenos">11</span>    arg 1, eax
+<span class="linenos">12</span>        ;; Will raise the SIGILL signal (Unless the process runs with priveliges).
+<span class="linenos">13</span>
+<span class="linenos">14</span>    ;; The stack is unchanged, because arg does not pop, but peek.
+</pre></div>
+</div>
+<p>The user can indirectly pop elements from the argument stack by using the <code class="code highlight esa none docutils literal highlight-none">ret</code> instruction.
+This instruction pops all arguments from the argument stack,
+then moves an rvalue into the return lvalue stored on the argument stack if one is provided, then moves the last rvalue into eip, and then the processor cycles.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The <code class="code highlight esa none docutils literal highlight-none">end</code> keyword is functionally identical to <code class="code highlight esa none docutils literal highlight-none">ret 0</code>, and is not just syntactic fluff.</p>
+<p>The programmer could, if they so desire, omit the <code class="code highlight esa none docutils literal highlight-none">end</code> keyword and create nested functions <a class="reference internal" href="stub.html#id1"><span class="std std-ref">like this</span></a>
+unless an EOF would be encountered first.</p>
+<p>Unfortunately, ELSA does not currently have this functionality, but is a planned feature.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Be careful not to callp functions that do not expect it.</p>
+<p>Assume any function may return the equivalent of <code class="code highlight cpp docutils literal highlight-cpp"><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="mi">0</span></code>;</p>
+</div>
+</div>
+<p>This has the effect of returning the argument stack back to how it was before the function call.
+This is also the reason why <code class="code highlight esa none docutils literal highlight-none">eip</code> points to the next instruction: When the processor cycles, it will execute the next instruction immediately
+after the <code class="code highlight esa none docutils literal highlight-none">call</code> instruction.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although this example is written in ESA, it is not neccesarily compliant with the <a class="reference internal" href="stub.html#id1"><span class="std std-ref">ABI</span></a>, because
+it is made to be a minimal example.</p>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>;; Assuming _entry gets called on entry...
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span>procedure (_entry) (0)
+<span class="linenos"> 4</span>    ;; Pretend the argument stack is empty here.
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>    push eax
+<span class="linenos"> 7</span>        ;; Since we are returning to eax, push eax
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>    callp eax, add5, 5
+<span class="linenos">10</span>        ;; eax is now 5+5
+<span class="linenos">11</span>
+<span class="linenos">12</span>    pop eax
+<span class="linenos">13</span>        ;; Return eax to how it was
+<span class="linenos">14</span>
+<span class="linenos">15</span>end
+<span class="linenos">16</span>
+<span class="linenos">17</span>procedure (add5) (1)
+<span class="linenos">18</span>
+<span class="linenos">19</span>    arg 0, eax
+<span class="linenos">20</span>        ;; Get the first argument, and move it into eax
+<span class="linenos">21</span>
+<span class="linenos">22</span>    add eax, 5
+<span class="linenos">23</span>        ;; Adds 5 to eax, and stores the result in eax
+<span class="linenos">24</span>
+<span class="linenos">25</span>ret eax
+</pre></div>
+</div>
+<p>The code will execute as follows:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Instruction cycle</p></th>
+<th class="head"><p>clock cycle</p></th>
+<th class="head"><p>current line</p></th>
+<th class="head"><p>micro code</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>arg 0, eax</p></td>
+<td><p>peek argument 0 into eax</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="4"><p>2</p></td>
+<td><p>2</p></td>
+<td rowspan="4"><p>callp eax, add5, 5</p></td>
+<td><p>push eip onto the arg stack</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>push %eax% onto the arg stack</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>push 5 onto the arg stack</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>move address of add5 into eip</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>6</p></td>
+<td><p>arg 0, eax</p></td>
+<td><p>peek argument 0 into eax</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><p>4</p></td>
+<td><p>7</p></td>
+<td rowspan="3"><p>add eax, 5</p></td>
+<td><p>compute eax + 5</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>move result into eax</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>update FLG register</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="4"><p>5</p></td>
+<td><p>10</p></td>
+<td rowspan="4"><p>ret eax</p></td>
+<td><p>pop 5 from the argument stack</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>push eax into %eax%</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>pop %eax% from argument stack</p></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p>pop argument stack into eip</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>14</p></td>
+<td><p>pop eax</p></td>
+<td><p>pop stack into eax</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><p>end</p></td>
+<td><p>(end of example)</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="signals">
+<h2>Signals<a class="headerlink" href="#signals" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>Signals in ESA handle much like exceptions do in C++.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This documentation uses terminology like <em>raises the signal</em> or <em>causes a SEGFAULT</em>.
+These signals are not the C++ signals, but rather these “virtualized” signals.</p>
+<p>The documentation will state explicitly if it is referring to a C++ signal:
+“<code class="code highlight cpp docutils literal highlight-cpp"><span class="o">*</span><span class="p">((</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="mi">0</span><span class="p">)</span></code> will cause a C++ signal”.</p>
+</div>
+<p>Signals are just integer constants that can be passed between threads to mean different things.
+What makes signals worthwhile is the way ESA handles them.</p>
+<p>The virtual processor stores all relevant signal handling information in the <code class="code highlight esa none docutils literal highlight-none">SSX</code> register.</p>
+<p>The user may raise a signal for it or another thread using the following syntax:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>raise SIGABRT
+<span class="linenos">2</span>    ;; Raises the signal SIGABRT for this thread
+<span class="linenos">3</span>
+<span class="linenos">4</span>raise SIGABRT, tp
+<span class="linenos">5</span>    ;; Raises the signal SIGABRT for thread with the pid corresponding to register &#39;tp&#39;
+</pre></div>
+</div>
+<p>The virtual processor will only react to received signals when the thread resumes execution, which is not instant.</p>
+<p>If the thread receives two signals before the thread resumes execution, the virtual processor will immediately execute the
+signal handler for the first signal, then the second one immediately after. The virtual processor will not switch to a different
+thread before both signals are resolved.</p>
+<p>If a signal is raised by the signal handler, a double fault will occur. In such cases, the process is killed normally and its resources free’d.</p>
+<p>If another signal is raised while killing the process, a triple fault will occur. If this happens, it is likely that some section of the
+loaded binary has been corrupted. Since the binary has been corrupted, it is unlikely that continuing to execute any code without hinderence.</p>
+<p>Because of this, the processor will trigger a kernel panic if a triple fault occurs.</p>
+<p>If a C++ signal is raised during normal execution, the offending process is killed immediately without executing .fini,
+however the resources used by the process will still be free’d.</p>
+</div></blockquote>
+<section id="signal-handler">
+<h3>Signal Handler<a class="headerlink" href="#signal-handler" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>The <em>signal handler</em> is the handler that handles signals.
+That is to say, <strong>it is the handler that calls the user defined handler procedure, or if none is present, the default signal action.</strong></p>
+<p>When the virtual processor resumes the execution of a thread, it will check the <code class="code highlight esa none docutils literal highlight-none">CS</code> register.
+If a signal is present, the signal handler is called.</p>
+<p>First, the signal handler looks up the corresponding procedure on the handler vector table,
+which is either a default procedure or one set by the <code class="code highlight esa none docutils literal highlight-none">#handler</code> directive.</p>
+<p>What happens next depends on the type of signal (I.E., the <code class="code highlight esa none docutils literal highlight-none">SF</code> register).</p>
+<p>Some signals are just that, <em>signals</em>. They can be used to pass information between processes.
+These types of signals can be ignored safely, after which the process resumes as normal.</p>
+<p>Other signals cannot be ignored and must be handled.
+Whether the thread can continue execution after receiving depends on the ‘unwind’ flag.</p>
+<p>If the unwind flag is not set, the call to the handler is treated as a normal procedure call.
+If the unwind flag is set, the virtual processor will unwind both the argument stack and general stack according to the <code class="code highlight esa none docutils literal highlight-none">SUD</code> register.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The virtual processor will not perform multi-threading while a signal handler is running.</p>
+</div>
+<p>Stack unwinding is just moving the stack pointer to a known state.</p>
+<p>ESA, unlike C++, does not have destructors (or constructors). This means that no destructors have to be called when unwinding the stack.
+Although it is theoretically possible for a process to continue executing after a stack unwinding, such functionality is not currently supported.</p>
+</div></blockquote>
+</section>
+<section id="signal-types">
+<h3>Signal Types<a class="headerlink" href="#signal-types" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Signals are really just integer constants built into ELSA with a predefined meaning (similar to how errno.h works in C).</p>
+</div></blockquote>
+<section id="referencing-signals">
+<h4>Referencing signals<a class="headerlink" href="#referencing-signals" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><p>Signals are referenced like any other value, and are treated like constant expressions.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>mov eax, SIGINT
+<span class="linenos">2</span>    ;; Moves the value of &#39;sigint&#39; into eax
+</pre></div>
+</div>
+<p>Is a syntactically valid statement.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Because signals are basically fancy macros, you cannot declare a symbol with an identifier identical to that of a signal.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>(SIGINT) db 3
+<span class="linenos">2</span>    ;; To ELSA, this is the same as:
+<span class="linenos">3</span>(.. some integer constant ..) db 3
+<span class="linenos">4</span>    ;; Which is an illegal statement
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+</section>
+<section id="sigabrt">
+<h4>SIGABRT<a class="headerlink" href="#sigabrt" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Signal</p></th>
+<th class="head"><p>integer constant</p></th>
+<th class="head"><p>Can be raised by user?</p></th>
+<th class="head"><p>Can be handled by user?</p></th>
+<th class="head"><p>Recoverable?</p></th>
+<th class="head"><p>Causes unwinding?</p></th>
+<th class="head"><p>Arguments</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGABRT</p></td>
+<td><p>1</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>No</p></td>
+<td><p>Yes</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<p>The SIGABRT signal is used by a process to tell the virtual processor that it should stop executing the process.
+Although the user can define a signal handler, the process is not allowed to resume execution.</p>
+<p>This signal cannot be called for other processes.</p>
+</div></blockquote>
+</section>
+<section id="sigcont">
+<h4>SIGCONT<a class="headerlink" href="#sigcont" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Signal</p></th>
+<th class="head"><p>integer constant</p></th>
+<th class="head"><p>Can be raised by user?</p></th>
+<th class="head"><p>Can be handled by user?</p></th>
+<th class="head"><p>Recoverable?</p></th>
+<th class="head"><p>Causes unwinding?</p></th>
+<th class="head"><p>Arguments</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGCONT</p></td>
+<td><p>2</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>No</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<p>The SIGCONT signal tells the virtual processor to continue executing a previously stopped process.
+Although the user can define a signal handler for this signal, it should only be used to check if the thread <em>can</em> continue executing.</p>
+<p>A user could, if they wish, abort the contiuation of the thread by raising a SIGABRT, since it would cause a <a class="reference internal" href="stub.html#id1"><span class="std std-ref">double fault</span></a>.</p>
+</div></blockquote>
+</section>
+<section id="sigill">
+<h4>SIGILL<a class="headerlink" href="#sigill" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Signal</p></th>
+<th class="head"><p>integer constant</p></th>
+<th class="head"><p>Can be raised by user?</p></th>
+<th class="head"><p>Can be handled by user?</p></th>
+<th class="head"><p>Recoverable?</p></th>
+<th class="head"><p>Causes unwinding?</p></th>
+<th class="head"><p>Arguments</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGILL</p></td>
+<td><p>3</p></td>
+<td><p>Yes</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+<td><p>Yes</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<p>The SIGILL signal is raised when an illegal instruction is encountered, such as an onrecognized op-code, unrecognized register value,
+or other generally ill-formed instructions.</p>
+<p>The user cannot handle this signal, because it is assumed that the process that caused this signal to begin with has been corrupted.
+The .fini code does get executed, since it lives on a different page than .text.</p>
+<p>Although the user is not meant to be able to call SIGILL, doing so anyway will cause a SIGILL because <code class="code highlight esa none docutils literal highlight-none">raise SIGILL</code> is an illegal instruction.</p>
+</div></blockquote>
+</section>
+<section id="sigint">
+<h4>SIGINT<a class="headerlink" href="#sigint" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Signal</p></th>
+<th class="head"><p>integer constant</p></th>
+<th class="head"><p>Can be raised by user?</p></th>
+<th class="head"><p>Can be handled by user?</p></th>
+<th class="head"><p>Recoverable?</p></th>
+<th class="head"><p>Causes unwinding?</p></th>
+<th class="head"><p>Arguments</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGINT</p></td>
+<td><p>4</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>No</p></td>
+<td><p>2</p></td>
+</tr>
+</tbody>
+</table>
+<p>The SIGINT signal is a “general purpose” signal. It is generally used for I/O purposes.</p>
+<p>It takes one argument with no predefined purpose.</p>
+<p>It can be safely ignored.</p>
+</div></blockquote>
+</section>
+<section id="sigkill">
+<h4>SIGKILL<a class="headerlink" href="#sigkill" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Signal</p></th>
+<th class="head"><p>integer constant</p></th>
+<th class="head"><p>Can be raised by user?</p></th>
+<th class="head"><p>Can be handled by user?</p></th>
+<th class="head"><p>Recoverable?</p></th>
+<th class="head"><p>Causes unwinding?</p></th>
+<th class="head"><p>Arguments</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGKILL</p></td>
+<td><p>5</p></td>
+<td><p>Yes</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<p>The SIGKILL signal functions like the SIGABRT signal, except it causes the process to be killed immediately.</p>
+</div></blockquote>
+</section>
+<section id="sigpoll">
+<h4>SIGPOLL<a class="headerlink" href="#sigpoll" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Signal</p></th>
+<th class="head"><p>integer constant</p></th>
+<th class="head"><p>Can be raised by user?</p></th>
+<th class="head"><p>Can be handled by user?</p></th>
+<th class="head"><p>Recoverable?</p></th>
+<th class="head"><p>Causes unwinding?</p></th>
+<th class="head"><p>Arguments</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGPOLL</p></td>
+<td><p>6</p></td>
+<td><p>No</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>No</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+<p>The SIGPOLL signal is raised by the virtual processor if a watched file descriptor has been written to.</p>
+<p>The signal handler must take one argument, which is the INode of the file descriptor.</p>
+</div></blockquote>
+</section>
+<section id="sigsegv">
+<h4>SIGSEGV<a class="headerlink" href="#sigsegv" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Signal</p></th>
+<th class="head"><p>integer constant</p></th>
+<th class="head"><p>Can be raised by user?</p></th>
+<th class="head"><p>Can be handled by user?</p></th>
+<th class="head"><p>Recoverable?</p></th>
+<th class="head"><p>Causes unwinding?</p></th>
+<th class="head"><p>Arguments</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGSEGV</p></td>
+<td><p>7</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+<td><p>Yes</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<p><a class="reference external" href="https://ih1.redbubble.net/image.706543508.5629/st,small,507x507-pad,600x600,f8f8f8.u3.jpg">I don’t think this signal needs an introduction.</a></p>
+</div></blockquote>
+</section>
+<section id="sigstop">
+<h4>SIGSTOP<a class="headerlink" href="#sigstop" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Signal</p></th>
+<th class="head"><p>integer constant</p></th>
+<th class="head"><p>Can be raised by user?</p></th>
+<th class="head"><p>Can be handled by user?</p></th>
+<th class="head"><p>Recoverable?</p></th>
+<th class="head"><p>Causes unwinding?</p></th>
+<th class="head"><p>Arguments</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGSTOP</p></td>
+<td><p>8</p></td>
+<td><p>Yes</p></td>
+<td><p>No</p></td>
+<td><p>Yes</p></td>
+<td><p>No</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<p>The SIGSTOP signal tells the virtual processor to stop executing this thread.</p>
+<p>This signal cannot be handled since the processor stops executing this thread.</p>
+</div></blockquote>
+</section>
+<section id="sigsys">
+<h4>SIGSYS<a class="headerlink" href="#sigsys" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Signal</p></th>
+<th class="head"><p>integer constant</p></th>
+<th class="head"><p>Can be raised by user?</p></th>
+<th class="head"><p>Can be handled by user?</p></th>
+<th class="head"><p>Recoverable?</p></th>
+<th class="head"><p>Causes unwinding?</p></th>
+<th class="head"><p>Arguments</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGSYS</p></td>
+<td><p>9</p></td>
+<td><p>No</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>No</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<p>The SIGSYS signal is raised when a system call is made with ill-formed arguments, to a non-existant system call, or any other
+error occurs when calling a system call.</p>
+<p>By default, the binary is assumed to be incompatible with the host system or has been corrupted, which is grounds for immediate termination.</p>
+</div></blockquote>
+</section>
+<section id="sigterm">
+<h4>SIGTERM<a class="headerlink" href="#sigterm" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Signal</p></th>
+<th class="head"><p>integer constant</p></th>
+<th class="head"><p>Can be raised by user?</p></th>
+<th class="head"><p>Can be handled by user?</p></th>
+<th class="head"><p>Recoverable?</p></th>
+<th class="head"><p>Causes unwinding?</p></th>
+<th class="head"><p>Arguments</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGTERM</p></td>
+<td><p>10</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>No</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<p>Unlike the SIGKILL or SIGABRT signals, the SIGTERM acts as a <em>request</em> to terminate. This request can safely be ignored.</p>
+<p>The process can cause a double fault by raising a SIGABRT when handling a SIGTERM.</p>
+</div></blockquote>
+</section>
+<section id="sigaovf">
+<h4>SIGAOVF<a class="headerlink" href="#sigaovf" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Signal</p></th>
+<th class="head"><p>integer constant</p></th>
+<th class="head"><p>Can be raised by user?</p></th>
+<th class="head"><p>Can be handled by user?</p></th>
+<th class="head"><p>Recoverable?</p></th>
+<th class="head"><p>Causes unwinding?</p></th>
+<th class="head"><p>Arguments</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGAOVF</p></td>
+<td><p>11</p></td>
+<td><p>No</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>No</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<p>SIGAOVF is raised when the processor encounters an overflow when performing arithmetic operations.</p>
+</div></blockquote>
+</section>
+<section id="sigdby0">
+<h4>SIGDBY0<a class="headerlink" href="#sigdby0" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Signal</p></th>
+<th class="head"><p>integer constant</p></th>
+<th class="head"><p>Can be raised by user?</p></th>
+<th class="head"><p>Can be handled by user?</p></th>
+<th class="head"><p>Recoverable?</p></th>
+<th class="head"><p>Causes unwinding?</p></th>
+<th class="head"><p>Arguments</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGDBY0</p></td>
+<td><p>12</p></td>
+<td><p>No</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>No</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<p>SIGAOVF is raised when the processor is instructed to divide by 0.</p>
+</div></blockquote>
+</section>
+</section>
+</section>
+<section id="byte-code-representation">
+<h2>Byte code representation<a class="headerlink" href="#byte-code-representation" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>This section defines the binary representation of instructions, and what mnemonic maps to what op-code.</p>
+</div></blockquote>
+<section id="morphemes">
+<h3>Morphemes<a class="headerlink" href="#morphemes" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>A morpheme is the smallest unit of a language that still holds any meaningful sense.</p>
+<p>Defining ESA bytecode in terms of morphemes allows for higher level structures to emerge naturally from these morphemes.</p>
+<p>ESA bytecode, as the name suggests, is expressed in bytes. As such, so are morphemes.
+A morpheme is said to be <em>independant</em> if it maintains meaning even when taken out of context.
+A morpheme is said to be a <em>modifier</em> if a morpheme does not have a meaning itself, but meaning is removed if ignored.
+A morpheme is said to be a <em>lexeme</em> if substituting the morpheme for an equivalent value would not change the idea of the phrase.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Consider the phrase “10 bears”.</p>
+<p>The phrase “10 bears” consists of a lexeme, independant morpheme, and a modifying morpheme.</p>
+<p>Although substituting “10” with “9” would change the meaning of the phrase, it does not change the idea.
+The phrase <em>10 bears</em> conveys the same idea as <em>9 bears</em>: “a collection of bears”.</p>
+<p>“bear” is an independant morpheme because “bear” still holds meaning in and of itself.</p>
+<p>“-s” is a modifying morpheme because “-s” holds no meaning, but modifies the meaning of “bear”.</p>
+</div>
+</div></blockquote>
+</section>
+<section id="statements">
+<h3>Statements<a class="headerlink" href="#statements" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Programs are made up of statements, which in turn are made up of morphemes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The term “statement” in this context means <em>The smallest subdivision of morphemes which the virtual processor can step over</em>.</p>
+<p>It does not have the same meaning as the commonly used meaning of the word “statement”, as in, <em>statements and expressions</em>.</p>
+</div>
+<p>Each statement starts with one word (called the <em>header</em>), structured like this:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>name:</strong></p></td>
+<td><p>Prefix</p></td>
+<td><p>Op-code</p></td>
+<td><p>Suffix</p></td>
+<td><p>flags</p></td>
+<td><p>args</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>type:</strong></p></td>
+<td><p><em>modifier</em></p></td>
+<td><p><em>independant</em></p></td>
+<td><p><em>modifier</em></p></td>
+<td><p><em>indepentant</em></p></td>
+<td><p><em>lexeme</em></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>size:</strong></p></td>
+<td><p>8 bits</p></td>
+<td><p>8 bits</p></td>
+<td><p>8 bits</p></td>
+<td><p>4 bits</p></td>
+<td><p>4 bits</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <em>op-code</em> field is a single byte that tells the processor what the instruction it wants to execute is (such as <code class="code highlight esa none docutils literal highlight-none">mov</code> or <code class="code highlight esa none docutils literal highlight-none">jmp</code>).</p>
+<p>The <em>suffix</em> modifier is a modifier that modifies the behaviour of an instruction. The effect of the suffix modifier depends on the op-code,
+and are described <a class="reference internal" href="stub.html#id1"><span class="std std-ref">here</span></a>.</p>
+<p>The <em>flags</em> field, in contrast to <em>suffix</em>, does not modify the behaviour of the instruction but signals various things to the processor.
+Bit 1 is reserved for future use, bit 2 asks the processor not to perform multithreading tasks, bit 3 asks the processor to switch to another task,
+and bit 4 is reserved for future use.</p>
+<p>The <em>args</em> lexeme is a single (unsigned) 4 bit lexeme that encodes the amount of arguments the processor should expect.</p>
+<p>The prefix modifier is a bitfield that represents whether an argument is a numerical constant or not: A <em>0</em> designates a numerical constant, and a <em>1</em>
+designates elsewise.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This means that instructions are limited to 8 arguments; Procedure calls are also limited to 8 arguments because it could
+otherwise not be called by a <code class="code highlight esa none docutils literal highlight-none">call</code> instruction.</p>
+</div>
+<p>A statement header is then followed by <strong>at least</strong> <em>args</em> amount of words, where the type of argument n is determined by the nth bit in the prefix field.</p>
+<p>If the argument is of type ‘<em>numerical constant</em>’, it is simply treated as a numerical constant.</p>
+<p>Otherwise, the argument is read using the following structure:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>name:</strong></p></td>
+<td><p>referenced</p></td>
+<td><p>dereferenced</p></td>
+<td><p>offset</p></td>
+<td><p>trailers</p></td>
+<td><p>data</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>type:</strong></p></td>
+<td><p><em>modifier</em></p></td>
+<td><p><em>modifier</em></p></td>
+<td><p><em>indepentant</em></p></td>
+<td><p><em>lexeme</em></p></td>
+<td><p><em>independant</em></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>size:</strong></p></td>
+<td><p>1 bit</p></td>
+<td><p>1 bit</p></td>
+<td><p>4 bits</p></td>
+<td><p>2 bits</p></td>
+<td><p>24 bits</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <em>referenced</em> and <em>dereferenced</em> flags are used to tell the virtual processor to either reference, or dereference, a certain address.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although technically supported, the <em>referenced</em> flag is usually used by the virtual processor internally to represent references of things
+the programmer cannot represent, such as <code class="code highlight esa none docutils literal highlight-none">%eip%</code>.</p>
+</div>
+<p>If the <em>referenced</em> and <em>dereferenced</em> flags are both set, a SIGILL signal will be raised.</p>
+<p>Since a referenced value is an rvalue, an atomic reference to a reference cannot exist; Setting the <em>referenced</em> flag is enough to reference a value.</p>
+<p>Dereferencing, on the other hand, can be done as many times as the user desires. In order to support multiple dereferences (atomically), an extra
+argument is needed. The amount of extra arguments taken is stored in the <em>trailers</em> field. Although currently, only the <em>dereferenced</em> flag needs
+trailers, future revisions may need extra fields and thus 2 bits have been allocated to this field.</p>
+<p>Trailers are 32-bit signed numerical expressions, <strong>and are considered an extension of the argument</strong>; the header does not need to specify the type of a trailer,
+nor does it need to count it in the <em>args</em> field.</p>
+<p>The <em>offset</em> and <em>data</em> fields are what make up the actual argument.</p>
+<p>The <em>offset</em> field is used to specify where the processor should fix the 0th index of the page specified by <em>data</em>.</p>
+<p><em>Data</em> specifies both the page and index of that page using the following structure:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>name:</strong></p></td>
+<td><p>Page</p></td>
+<td><p>Index</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>size:</strong></p></td>
+<td><p>4 bits</p></td>
+<td><p>20 bits</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <em>page</em> field specifies which page <em>index</em> is relative to.</p>
+</div></blockquote>
+<section id="statement-example">
+<h4>Statement example<a class="headerlink" href="#statement-example" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><p>Consider the following statement:</p>
+<p><code class="code highlight esa none docutils literal highlight-none">0x02C10002 0x84000001 0x0000002A</code></p>
+<p>This statement comprises of a header and 2 arguments.</p>
+<p>The header decodes as follows:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>name:</strong></p></td>
+<td><p>Prefix</p></td>
+<td><p>Op-code</p></td>
+<td><p>Suffix</p></td>
+<td><p>flags</p></td>
+<td><p>args</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>value:</strong></p></td>
+<td><p>0x02</p></td>
+<td><p>0xC1</p></td>
+<td><p>0x00</p></td>
+<td><p>0x0</p></td>
+<td><p>0x2</p></td>
+</tr>
+</tbody>
+</table>
+<p>This tells the virtual processor to execute op-code <code class="code highlight esa none docutils literal highlight-none">0xC1</code> with 2 arguments of which argument 1 is not a literal, does not ask
+the processor to switch thread, nor does it ask to remain on this thread.</p>
+<p>Argument 1, <code class="code highlight esa none docutils literal highlight-none">0x84000001</code> is not a constant and so is decoded as follows:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>name:</strong></p></td>
+<td><p>referenced</p></td>
+<td><p>dereferenced</p></td>
+<td><p>offset</p></td>
+<td><p>trailers</p></td>
+<td><p>data</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>value:</strong></p></td>
+<td><p>0b1</p></td>
+<td><p>0b0</p></td>
+<td><p>0b0001</p></td>
+<td><p>0b00</p></td>
+<td><p>0x000001</p></td>
+</tr>
+</tbody>
+</table>
+<p>Argument 1 is a reference to index ‘1’ of page ‘0’, with an offset of type ‘1’, and has no trailers.</p>
+<p>Argument 2 is the literal constant of ‘42’ (<code class="code highlight esa none docutils literal highlight-none">0x2A</code>).</p>
+</div></blockquote>
+</section>
+</section>
+<section id="mnemonic-mapping">
+<h3>Mnemonic mapping<a class="headerlink" href="#mnemonic-mapping" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>This section contains the list of mnemonics used by ESA, their respective op-code, and any other information regarding the instruction.</p>
+</div></blockquote>
+<section id="nil">
+<h4>nil<a class="headerlink" href="#nil" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>Usage: <code class="code highlight esa none docutils literal highlight-none">nil</code></p></li>
+<li><p>Stands for: nill (null).</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Op-code</p></th>
+<th class="head"><p>0x00</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Priv?</p></td>
+<td><p>no</p></td>
+</tr>
+<tr class="row-odd"><td><p>args?</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>atomic?</p></td>
+<td><p>yes</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="code highlight esa none docutils literal highlight-none">nil</code> instruction is an instruction that does not exist.</p>
+<p>Raises SIGILL if executed.</p>
+</div></blockquote>
+</section>
+<section id="nop">
+<h4>nop<a class="headerlink" href="#nop" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>Usage: <code class="code highlight esa none docutils literal highlight-none">nop</code></p></li>
+<li><p>Stands for: no operation.</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Op-code</p></th>
+<th class="head"><p>0x01</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Priv?</p></td>
+<td><p>no</p></td>
+</tr>
+<tr class="row-odd"><td><p>args?</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>atomic?</p></td>
+<td><p>yes</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="code highlight esa none docutils literal highlight-none">nop</code> instruction does nothing.</p>
+</div></blockquote>
+</section>
+<section id="hlt">
+<h4>hlt<a class="headerlink" href="#hlt" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>Usage: <code class="code highlight esa none docutils literal highlight-none">hlt</code></p></li>
+<li><p>Stands for: halt.</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Op-code</p></th>
+<th class="head"><p>0x02</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Priv?</p></td>
+<td><p>no</p></td>
+</tr>
+<tr class="row-odd"><td><p>args?</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>atomic?</p></td>
+<td><p>yes</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="code highlight esa none docutils literal highlight-none">hlt</code> instruction tells the processor to stop executing the thread, but not to kill it.
+It is analogous to <code class="code highlight esa none docutils literal highlight-none">dec eip</code>.</p>
+</div></blockquote>
+</section>
+<section id="hcf">
+<h4>hcf<a class="headerlink" href="#hcf" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>Usage: <code class="code highlight esa none docutils literal highlight-none">hcf</code></p></li>
+<li><p>Stands for: halt catch fire.</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Op-code</p></th>
+<th class="head"><p>0x03</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Priv?</p></td>
+<td><p>no</p></td>
+</tr>
+<tr class="row-odd"><td><p>args?</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>atomic?</p></td>
+<td><p>yes</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="code highlight esa none docutils literal highlight-none">hcf</code> instruction forces the processor to do nothing indefinately, until reset.</p>
+</div></blockquote>
+</section>
+<section id="mov">
+<h4>mov<a class="headerlink" href="#mov" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>Usage: <code class="code highlight esa none docutils literal highlight-none">mov [dst] [src]</code></p></li>
+<li><p>Stands for: move into <em>dst</em>, <em>src</em>.</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Op-code</p></th>
+<th class="head"><p>0x04</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Priv?</p></td>
+<td><p>no</p></td>
+</tr>
+<tr class="row-odd"><td><p>args?</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>atomic?</p></td>
+<td><p>yes</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="code highlight esa none docutils literal highlight-none">mov</code> instruction moves a value from one location into another.</p>
+<p><code class="code highlight esa none docutils literal highlight-none">mov</code> takes two arguments, <em>src</em> and <em>dst</em>, where:</p>
+<ul class="simple">
+<li><p><em>src</em> must be an lvalue;</p></li>
+<li><p><em>dst</em> must be an rvalue.</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Raises</p></th>
+<th class="head"><p>If</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGILL</p></td>
+<td><ul class="simple">
+<li><p><em>src</em> is not an lvalue</p></li>
+<li><p><em>dst</em> is not an rvalue</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>SIGSEGV</p></td>
+<td><ul class="simple">
+<li><p><em>src</em> does not exist</p></li>
+<li><p><em>dst</em> does not exist</p></li>
+<li><p><em>src</em> cannot be written to</p></li>
+<li><p><em>dst</em> cannot be read from</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="inc">
+<h4>inc<a class="headerlink" href="#inc" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>Usage: <code class="code highlight esa none docutils literal highlight-none">inc [reg]</code></p></li>
+<li><p>Stands for: increment <em>reg</em> by one.</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Op-code</p></th>
+<th class="head"><p>0x05</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Priv?</p></td>
+<td><p>no</p></td>
+</tr>
+<tr class="row-odd"><td><p>args?</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>atomic?</p></td>
+<td><p>yes</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="code highlight esa none docutils literal highlight-none">in</code> instruction increments lvalue <em>reg</em> by one.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Raises</p></th>
+<th class="head"><p>If</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGILL</p></td>
+<td><ul class="simple">
+<li><p><em>reg</em> is not an lvalue</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>SIGSEGV</p></td>
+<td><ul class="simple">
+<li><p><em>reg</em> does not exist</p></li>
+<li><p><em>reg</em> cannot be written to</p></li>
+<li><p><em>reg</em> cannot be read from</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Modifier</p></th>
+<th class="head"><p>Append</p></th>
+<th class="head"><p>Effect</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x00</p></td>
+<td></td>
+<td><p>Treat <em>reg</em> as an integer</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x01</p></td>
+<td><p>-f</p></td>
+<td><p>Treat <em>reg</em> as a 32 bit float</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="dec">
+<h4>dec<a class="headerlink" href="#dec" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>Usage: <code class="code highlight esa none docutils literal highlight-none">dec [reg]</code></p></li>
+<li><p>Stands for: decrement <em>reg</em> by one.</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Op-code</p></th>
+<th class="head"><p>0x06</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Priv?</p></td>
+<td><p>no</p></td>
+</tr>
+<tr class="row-odd"><td><p>args?</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>atomic?</p></td>
+<td><p>yes</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="code highlight esa none docutils literal highlight-none">dec</code> instruction increments lvalue <em>reg</em> by one.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Raises</p></th>
+<th class="head"><p>If</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGILL</p></td>
+<td><ul class="simple">
+<li><p><em>reg</em> is not an lvalue</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>SIGSEGV</p></td>
+<td><ul class="simple">
+<li><p><em>reg</em> does not exist</p></li>
+<li><p><em>reg</em> cannot be written to</p></li>
+<li><p><em>reg</em> cannot be read from</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Modifier</p></th>
+<th class="head"><p>Append</p></th>
+<th class="head"><p>Effect</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x-0</p></td>
+<td></td>
+<td><p>Treat <em>reg</em> as an integer</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x-1</p></td>
+<td><p>-f</p></td>
+<td><p>Treat <em>reg</em> as a 32 bit float</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="add">
+<h4>add<a class="headerlink" href="#add" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>Usage: <code class="code highlight esa none docutils literal highlight-none">add [a] [b]</code></p></li>
+<li><p>Stands for: add <em>a</em> and <em>b</em>, and store the result in eax.</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Op-code</p></th>
+<th class="head"><p>0x07</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Priv?</p></td>
+<td><p>no</p></td>
+</tr>
+<tr class="row-odd"><td><p>args?</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>atomic?</p></td>
+<td><p>yes</p></td>
+</tr>
+</tbody>
+</table>
+<p><code class="code highlight esa none docutils literal highlight-none">add</code> also updates the FLG register.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Raises</p></th>
+<th class="head"><p>If</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGSEGV</p></td>
+<td><ul class="simple">
+<li><p><em>a</em> does not exist</p></li>
+<li><p><em>a</em> cannot be read from</p></li>
+<li><p><em>b</em> does not exist</p></li>
+<li><p><em>b</em> cannot be read from</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Modifier</p></th>
+<th class="head"><p>Append</p></th>
+<th class="head"><p>Effect</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x-0</p></td>
+<td></td>
+<td><p>Treat <em>a</em> as an integer</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x-1</p></td>
+<td><p>-f</p></td>
+<td><p>Treat <em>a</em> as a 32 bit float
+Treat <em>eax</em> as a 32 bit float</p></td>
+</tr>
+<tr class="row-even"><td><p>0x0-</p></td>
+<td></td>
+<td><p>Treat <em>b</em> as an integer</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x1-</p></td>
+<td><p>-F</p></td>
+<td><p>Treat <em>b</em> as a 32 bit float
+Treat <em>eax</em> as a 32 bit float</p></td>
+</tr>
+<tr class="row-even"><td><p>0x-2</p></td>
+<td><p>-u</p></td>
+<td><p>Treat <em>a</em> as unsigned</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x2-</p></td>
+<td><p>-U</p></td>
+<td><p>Treat <em>b</em> as unsigned</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="sub">
+<h4>sub<a class="headerlink" href="#sub" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>Usage: <code class="code highlight esa none docutils literal highlight-none">sub [a] [b]</code></p></li>
+<li><p>Stands for: subtract <em>b</em> from <em>a</em>, and store the result in eax.</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Op-code</p></th>
+<th class="head"><p>0x08</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Priv?</p></td>
+<td><p>no</p></td>
+</tr>
+<tr class="row-odd"><td><p>args?</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>atomic?</p></td>
+<td><p>yes</p></td>
+</tr>
+</tbody>
+</table>
+<p><code class="code highlight esa none docutils literal highlight-none">sub</code> also updates the FLG register.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Raises</p></th>
+<th class="head"><p>If</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGSEGV</p></td>
+<td><ul class="simple">
+<li><p><em>a</em> does not exist</p></li>
+<li><p><em>a</em> cannot be read from</p></li>
+<li><p><em>b</em> does not exist</p></li>
+<li><p><em>b</em> cannot be read from</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Modifier</p></th>
+<th class="head"><p>Append</p></th>
+<th class="head"><p>Effect</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x-0</p></td>
+<td></td>
+<td><p>Treat <em>a</em> as an integer</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x-1</p></td>
+<td><p>-f</p></td>
+<td><p>Treat <em>a</em> as a 32 bit float
+Treat <em>eax</em> as a 32 bit float</p></td>
+</tr>
+<tr class="row-even"><td><p>0x0-</p></td>
+<td></td>
+<td><p>Treat <em>b</em> as an integer</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x1-</p></td>
+<td><p>-F</p></td>
+<td><p>Treat <em>b</em> as a 32 bit float
+Treat <em>eax</em> as a 32 bit float</p></td>
+</tr>
+<tr class="row-even"><td><p>0x-2</p></td>
+<td><p>-u</p></td>
+<td><p>Treat <em>a</em> as unsigned</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x2-</p></td>
+<td><p>-U</p></td>
+<td><p>Treat <em>b</em> as unsigned</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="mul">
+<h4>mul<a class="headerlink" href="#mul" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>Usage: <code class="code highlight esa none docutils literal highlight-none">mul [a] [b]</code></p></li>
+<li><p>Stands for: multiply <em>a</em> and <em>b</em>, and store the result in eax.</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Op-code</p></th>
+<th class="head"><p>0x09</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Priv?</p></td>
+<td><p>no</p></td>
+</tr>
+<tr class="row-odd"><td><p>args?</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>atomic?</p></td>
+<td><p>yes</p></td>
+</tr>
+</tbody>
+</table>
+<p><code class="code highlight esa none docutils literal highlight-none">mul</code> also updates the FLG register.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Raises</p></th>
+<th class="head"><p>If</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGSEGV</p></td>
+<td><ul class="simple">
+<li><p><em>a</em> does not exist</p></li>
+<li><p><em>a</em> cannot be read from</p></li>
+<li><p><em>b</em> does not exist</p></li>
+<li><p><em>b</em> cannot be read from</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Modifier</p></th>
+<th class="head"><p>Append</p></th>
+<th class="head"><p>Effect</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x-0</p></td>
+<td></td>
+<td><p>Treat <em>a</em> as an integer</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x-1</p></td>
+<td><p>-f</p></td>
+<td><p>Treat <em>a</em> as a 32 bit float
+Treat <em>eax</em> as a 32 bit float</p></td>
+</tr>
+<tr class="row-even"><td><p>0x0-</p></td>
+<td></td>
+<td><p>Treat <em>b</em> as an integer</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x1-</p></td>
+<td><p>-F</p></td>
+<td><p>Treat <em>b</em> as a 32 bit float
+Treat <em>eax</em> as a 32 bit float</p></td>
+</tr>
+<tr class="row-even"><td><p>0x-2</p></td>
+<td><p>-u</p></td>
+<td><p>Treat <em>a</em> as unsigned</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x2-</p></td>
+<td><p>-U</p></td>
+<td><p>Treat <em>b</em> as unsigned</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="div">
+<h4>div<a class="headerlink" href="#div" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>Usage: <code class="code highlight esa none docutils literal highlight-none">div [a] [b]</code></p></li>
+<li><p>Stands for: divide <em>a</em> by <em>b</em>, and store the result in eax.</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Op-code</p></th>
+<th class="head"><p>0x0A</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Priv?</p></td>
+<td><p>no</p></td>
+</tr>
+<tr class="row-odd"><td><p>args?</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>atomic?</p></td>
+<td><p>yes</p></td>
+</tr>
+</tbody>
+</table>
+<p><code class="code highlight esa none docutils literal highlight-none">div</code> also updates the FLG register.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Raises</p></th>
+<th class="head"><p>If</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGSEGV</p></td>
+<td><ul class="simple">
+<li><p><em>a</em> does not exist</p></li>
+<li><p><em>a</em> cannot be read from</p></li>
+<li><p><em>b</em> does not exist</p></li>
+<li><p><em>b</em> cannot be read from</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>SIGDBY0</p></td>
+<td><ul class="simple">
+<li><p><em>b</em> is 0</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Modifier</p></th>
+<th class="head"><p>Append</p></th>
+<th class="head"><p>Effect</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x-0</p></td>
+<td></td>
+<td><p>Treat <em>a</em> as an integer</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x-1</p></td>
+<td><p>-f</p></td>
+<td><p>Treat <em>a</em> as a 32 bit float
+Treat <em>eax</em> as a 32 bit float</p></td>
+</tr>
+<tr class="row-even"><td><p>0x0-</p></td>
+<td></td>
+<td><p>Treat <em>b</em> as an integer</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x1-</p></td>
+<td><p>-F</p></td>
+<td><p>Treat <em>b</em> as a 32 bit float
+Treat <em>eax</em> as a 32 bit float</p></td>
+</tr>
+<tr class="row-even"><td><p>0x-2</p></td>
+<td><p>-u</p></td>
+<td><p>Treat <em>a</em> as unsigned</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x2-</p></td>
+<td><p>-U</p></td>
+<td><p>Treat <em>b</em> as unsigned</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="mod">
+<h4>mod<a class="headerlink" href="#mod" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>Usage: <code class="code highlight esa none docutils literal highlight-none">mod [a] [b]</code></p></li>
+<li><p>Stands for: compute the module <em>b</em> of <em>a</em> (a % b), and store the result in eax.</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Op-code</p></th>
+<th class="head"><p>0x0B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Priv?</p></td>
+<td><p>no</p></td>
+</tr>
+<tr class="row-odd"><td><p>args?</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>atomic?</p></td>
+<td><p>yes</p></td>
+</tr>
+</tbody>
+</table>
+<p><code class="code highlight esa none docutils literal highlight-none">mod</code> also updates the FLG register.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Raises</p></th>
+<th class="head"><p>If</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGSEGV</p></td>
+<td><ul class="simple">
+<li><p><em>a</em> does not exist</p></li>
+<li><p><em>a</em> cannot be read from</p></li>
+<li><p><em>b</em> does not exist</p></li>
+<li><p><em>b</em> cannot be read from</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>SIGDBY0</p></td>
+<td><ul class="simple">
+<li><p><em>b</em> is 0</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Modifier</p></th>
+<th class="head"><p>Append</p></th>
+<th class="head"><p>Effect</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x-0</p></td>
+<td></td>
+<td><p>Treat <em>a</em> as an integer</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x-1</p></td>
+<td><p>-f</p></td>
+<td><p>Treat <em>a</em> as a 32 bit float
+Treat <em>eax</em> as a 32 bit float</p></td>
+</tr>
+<tr class="row-even"><td><p>0x0-</p></td>
+<td></td>
+<td><p>Treat <em>b</em> as an integer</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x1-</p></td>
+<td><p>-F</p></td>
+<td><p>Treat <em>b</em> as a 32 bit float
+Treat <em>eax</em> as a 32 bit float</p></td>
+</tr>
+<tr class="row-even"><td><p>0x-2</p></td>
+<td><p>-u</p></td>
+<td><p>Treat <em>a</em> as unsigned</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x2-</p></td>
+<td><p>-U</p></td>
+<td><p>Treat <em>b</em> as unsigned</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="and">
+<h4>and<a class="headerlink" href="#and" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>Usage: <code class="code highlight esa none docutils literal highlight-none">and [a] [b]</code></p></li>
+<li><p>Stands for: Compute <em>a</em> and <em>b</em>, and store the result in eax.</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Op-code</p></th>
+<th class="head"><p>0x0B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Priv?</p></td>
+<td><p>no</p></td>
+</tr>
+<tr class="row-odd"><td><p>args?</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>atomic?</p></td>
+<td><p>yes</p></td>
+</tr>
+</tbody>
+</table>
+<p><code class="code highlight esa none docutils literal highlight-none">and</code> also updates the FLG register.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Raises</p></th>
+<th class="head"><p>If</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGSEGV</p></td>
+<td><ul class="simple">
+<li><p><em>a</em> does not exist</p></li>
+<li><p><em>a</em> cannot be read from</p></li>
+<li><p><em>b</em> does not exist</p></li>
+<li><p><em>b</em> cannot be read from</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Modifier</p></th>
+<th class="head"><p>Append</p></th>
+<th class="head"><p>Effect</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x00</p></td>
+<td></td>
+<td><p>perform a bitwise and (&amp;)</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x01</p></td>
+<td><p>-b</p></td>
+<td><p>perform a binary and (&amp;&amp;)</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="orr">
+<h4>orr<a class="headerlink" href="#orr" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>Usage: <code class="code highlight esa none docutils literal highlight-none">orr [a] [b]</code></p></li>
+<li><p>Stands for: Compute <em>a</em> or <em>b</em>, and store the result in eax.</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Op-code</p></th>
+<th class="head"><p>0x0C</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Priv?</p></td>
+<td><p>no</p></td>
+</tr>
+<tr class="row-odd"><td><p>args?</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>atomic?</p></td>
+<td><p>yes</p></td>
+</tr>
+</tbody>
+</table>
+<p><code class="code highlight esa none docutils literal highlight-none">orr</code> also updates the FLG register.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Raises</p></th>
+<th class="head"><p>If</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGSEGV</p></td>
+<td><ul class="simple">
+<li><p><em>a</em> does not exist</p></li>
+<li><p><em>a</em> cannot be read from</p></li>
+<li><p><em>b</em> does not exist</p></li>
+<li><p><em>b</em> cannot be read from</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Modifier</p></th>
+<th class="head"><p>Append</p></th>
+<th class="head"><p>Effect</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x00</p></td>
+<td></td>
+<td><p>perform a bitwise or (|)</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x01</p></td>
+<td><p>-b</p></td>
+<td><p>perform a binary or (||)</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="xor">
+<h4>xor<a class="headerlink" href="#xor" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>Usage: <code class="code highlight esa none docutils literal highlight-none">xor [a] [b]</code></p></li>
+<li><p>Stands for: Compute <em>a</em> exclusive or <em>b</em>, and store the result in eax.</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Op-code</p></th>
+<th class="head"><p>0x0D</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Priv?</p></td>
+<td><p>no</p></td>
+</tr>
+<tr class="row-odd"><td><p>args?</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>atomic?</p></td>
+<td><p>yes</p></td>
+</tr>
+</tbody>
+</table>
+<p><code class="code highlight esa none docutils literal highlight-none">xor</code> also updates the FLG register.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Raises</p></th>
+<th class="head"><p>If</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGSEGV</p></td>
+<td><ul class="simple">
+<li><p><em>a</em> does not exist</p></li>
+<li><p><em>a</em> cannot be read from</p></li>
+<li><p><em>b</em> does not exist</p></li>
+<li><p><em>b</em> cannot be read from</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Modifier</p></th>
+<th class="head"><p>Append</p></th>
+<th class="head"><p>Effect</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x00</p></td>
+<td></td>
+<td><p>perform a bitwise xor (^)</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x01</p></td>
+<td><p>-b</p></td>
+<td><p>perform a binary xor (^^)</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="not">
+<h4>not<a class="headerlink" href="#not" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>Usage: <code class="code highlight esa none docutils literal highlight-none">not [a]</code></p></li>
+<li><p>Stands for: Compute not <em>a</em>, and store the result in eax.</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Op-code</p></th>
+<th class="head"><p>0x0E</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Priv?</p></td>
+<td><p>no</p></td>
+</tr>
+<tr class="row-odd"><td><p>args?</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>atomic?</p></td>
+<td><p>yes</p></td>
+</tr>
+</tbody>
+</table>
+<p><code class="code highlight esa none docutils literal highlight-none">not</code> also updates the FLG register.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Raises</p></th>
+<th class="head"><p>If</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGSEGV</p></td>
+<td><ul class="simple">
+<li><p><em>a</em> does not exist</p></li>
+<li><p><em>a</em> cannot be read from</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Modifier</p></th>
+<th class="head"><p>Append</p></th>
+<th class="head"><p>Effect</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x00</p></td>
+<td></td>
+<td><p>perform a bitwise not (~)</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x01</p></td>
+<td><p>-b</p></td>
+<td><p>perform a binary not (!)</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="neg">
+<h4>neg<a class="headerlink" href="#neg" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>Usage: <code class="code highlight esa none docutils literal highlight-none">neg [a]</code></p></li>
+<li><p>Stands for: Negate <em>a</em>, and store the result in eax.</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Op-code</p></th>
+<th class="head"><p>0x0F</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Priv?</p></td>
+<td><p>no</p></td>
+</tr>
+<tr class="row-odd"><td><p>args?</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>atomic?</p></td>
+<td><p>yes</p></td>
+</tr>
+</tbody>
+</table>
+<p><code class="code highlight esa none docutils literal highlight-none">neg</code> also updates the FLG register.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Raises</p></th>
+<th class="head"><p>If</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SIGSEGV</p></td>
+<td><ul class="simple">
+<li><p><em>a</em> does not exist</p></li>
+<li><p><em>a</em> cannot be read from</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</section>
+<section id="jmp">
+<h4>jmp<a class="headerlink" href="#jmp" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><p>The jump instruction is a family of instructions that jump to an absolute or relative address based on conditions.</p>
+<p>The op-code for a jump instruction is 0x11, and may take 1 or 3 arguments.
+The <em>suffix</em> field dictates what condition needs to be met to jump to a certain address.</p>
+<p>If the suffix field has its 4th bit set, the jump is considered to be relative, otherwise it is absolute.</p>
+<p>An <strong>absolute jump</strong> is a jump that will set the eip to whatever address is specified.
+A <strong>relative jump</strong> is a jump that will add an offset to eip.</p>
+<p>Where the processor will jump to is dictated by the first argument; If the jump is absolute, the first argument must be an lvalue,
+Otherwise if the jump is relative, the first argument must be an xvalue.</p>
+<p>Whether the instruction takes 1 or 3 arguments depends on the type of the instruction, which is encoded in the 5th to 8th bit of
+the <em>suffix</em> field.</p>
+<p>The following table shows all implemented types of the jump instruction.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Mnemonic</p></th>
+<th class="head"><p>Relative or absolute</p></th>
+<th class="head"><p>suffix</p></th>
+<th class="head"><p>args</p></th>
+<th class="head"><p>Jumps if</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>jmp</p></td>
+<td><p>Absolute</p></td>
+<td><p>0x00</p></td>
+<td><p>1</p></td>
+<td><p>unconditional</p></td>
+</tr>
+<tr class="row-odd"><td><p>jro</p></td>
+<td><p>Relative</p></td>
+<td><p>0x10</p></td>
+<td><p>1</p></td>
+<td><p>unconditional</p></td>
+</tr>
+<tr class="row-even"><td><p>jnz</p></td>
+<td><p>Absolute</p></td>
+<td><p>0x01</p></td>
+<td><p>1</p></td>
+<td><p>zero flag not set</p></td>
+</tr>
+<tr class="row-odd"><td><p>jez</p></td>
+<td><p>Absolute</p></td>
+<td><p>0x02</p></td>
+<td><p>1</p></td>
+<td><p>zero flag set</p></td>
+</tr>
+<tr class="row-even"><td><p>jgz</p></td>
+<td><p>Absolute</p></td>
+<td><p>0x03</p></td>
+<td><p>1</p></td>
+<td><p>comp flag not set</p></td>
+</tr>
+<tr class="row-odd"><td><p>jlz</p></td>
+<td><p>Absolute</p></td>
+<td><p>0x04</p></td>
+<td><p>1</p></td>
+<td><p>comp flag set</p></td>
+</tr>
+<tr class="row-even"><td><p>jnq</p></td>
+<td><p>Absolute</p></td>
+<td><p>0x05</p></td>
+<td><p>3</p></td>
+<td><p>b != c</p></td>
+</tr>
+<tr class="row-odd"><td><p>jeq</p></td>
+<td><p>Absolute</p></td>
+<td><p>0x06</p></td>
+<td><p>3</p></td>
+<td><p>b == c</p></td>
+</tr>
+<tr class="row-even"><td><p>jgt</p></td>
+<td><p>Absolute</p></td>
+<td><p>0x07</p></td>
+<td><p>3</p></td>
+<td><p>b &gt; c</p></td>
+</tr>
+<tr class="row-odd"><td><p>jlt</p></td>
+<td><p>Absolute</p></td>
+<td><p>0x08</p></td>
+<td><p>3</p></td>
+<td><p>b &lt; c</p></td>
+</tr>
+<tr class="row-even"><td><p>jno</p></td>
+<td><p>Relative</p></td>
+<td><p>0x11</p></td>
+<td><p>1</p></td>
+<td><p>zero flag not set</p></td>
+</tr>
+<tr class="row-odd"><td><p>jeo</p></td>
+<td><p>Relative</p></td>
+<td><p>0x12</p></td>
+<td><p>1</p></td>
+<td><p>zero flag set</p></td>
+</tr>
+<tr class="row-even"><td><p>jgo</p></td>
+<td><p>Relative</p></td>
+<td><p>0x13</p></td>
+<td><p>1</p></td>
+<td><p>comp flag not set</p></td>
+</tr>
+<tr class="row-odd"><td><p>jlo</p></td>
+<td><p>Relative</p></td>
+<td><p>0x14</p></td>
+<td><p>1</p></td>
+<td><p>comp flag set</p></td>
+</tr>
+<tr class="row-even"><td><p>jon</p></td>
+<td><p>Relative</p></td>
+<td><p>0x15</p></td>
+<td><p>3</p></td>
+<td><p>b != c</p></td>
+</tr>
+<tr class="row-odd"><td><p>joe</p></td>
+<td><p>Relative</p></td>
+<td><p>0x16</p></td>
+<td><p>3</p></td>
+<td><p>b == c</p></td>
+</tr>
+<tr class="row-even"><td><p>jog</p></td>
+<td><p>Relative</p></td>
+<td><p>0x17</p></td>
+<td><p>3</p></td>
+<td><p>b &gt; c</p></td>
+</tr>
+<tr class="row-odd"><td><p>jol</p></td>
+<td><p>Relative</p></td>
+<td><p>0x18</p></td>
+<td><p>3</p></td>
+<td><p>b &lt; c</p></td>
+</tr>
+</tbody>
+</table>
+<p>If a jump instruction is found that does not belong to any of these types, or if
+the amount of arguments suppied does not match the amount expected, a SIGILL is raised.</p>
+<p>If the address supplied cannot be jumped to, or if any <em>b</em> and/or <em>c</em> cannot be accessed, a SIGSEGV signal is raised.</p>
+</div></blockquote>
+</section>
+<section id="push">
+<h4>push<a class="headerlink" href="#push" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><p>The push instruction has an op-code of 0x12 and takes 1 argument, which must be an rvalue.</p>
+<p>This instruction is atomic, and does not take any modifiers.</p>
+</div></blockquote>
+</section>
+<section id="pop">
+<h4>pop<a class="headerlink" href="#pop" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><p>The pop instruction has an op-code of 0x13 and takes 1 argument, which must be an lvalue.</p>
+<p>This instruction is atomic, and does not take any modifiers.</p>
+</div></blockquote>
+</section>
+<section id="call">
+<h4>call<a class="headerlink" href="#call" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><p>… Fill in</p>
+</div></blockquote>
+</section>
+<section id="ret">
+<h4>ret<a class="headerlink" href="#ret" title="Permalink to this heading"></a></h4>
+</section>
+<section id="syscall">
+<h4>syscall<a class="headerlink" href="#syscall" title="Permalink to this heading"></a></h4>
+</section>
+<section id="raise">
+<h4>raise<a class="headerlink" href="#raise" title="Permalink to this heading"></a></h4>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Userspace.html" class="btn btn-neutral float-left" title="The Userspace" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="EABI.html" class="btn btn-neutral float-right" title="ESA Embedded Application Binary Interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Rafael Bie.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,454 @@
+.TH "BBP::userspace::Thread" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BBP::userspace::Thread
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Threading\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBThread\fP ()"
+.br
+.in -1c
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBBinaryExecutable\fP \fBexecutable\fP"
+.br
+.ti -1c
+.RI "\fBstd::STATIC_PAGE\fP< \fBstd::byte\fP, \fBregisterCount\fP *4 > \fBregisterData\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBeax\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBax\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBah\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBal\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBecx\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBcx\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBch\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBcl\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBedx\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBdx\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBdh\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBdl\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBebx\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBbx\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBbh\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBbl\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBesi\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBsix\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBsih\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBsil\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBedi\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBdix\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBdih\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBdil\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBtix\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBst\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBob\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBtb\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBct\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBpp\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBtp\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBssx\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBhv\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBho\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBht\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBss\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBcs\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBsf\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBsui\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBasi\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBgsi\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBeip\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBip\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBih\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBil\fP"
+.br
+.ti -1c
+.RI "\fBregister_t\fP \fBsip\fP"
+.br
+.ti -1c
+.RI "\fBstd::PAGE\fP< \fBstd::string_element\fP > \fBallocatedData\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr \fBstd::size_t\fP \fBregisterCount\fP = 4"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 15 of file Threading\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "BBP::userspace::Thread::Thread ()\fC [inline]\fP"
+
+.PP
+Definition at line 91 of file Threading\&.h\&.
+.PP
+.nf
+92                 : eax(*this, 0, 0, thirtyTwoBit),
+93                    ax(*this, 0, 0, sixteenBit),
+94                    ah(*this, 0, 1, eightBit),
+95                    al(*this, 0, 0, eightBit),
+96 
+97                 ecx(*this, 0, 0, thirtyTwoBit),
+98                 cx(*this, 0, 0, sixteenBit),
+99                 ch(*this, 0, 1, eightBit),
+100                 cl(*this, 0, 0, eightBit),
+101 
+102                 edx(*this, 0, 0, thirtyTwoBit),
+103                 dx(*this, 0, 0, sixteenBit),
+104                 dh(*this, 0, 1, eightBit),
+105                 dl(*this, 0, 0, eightBit),
+106 
+107                 ebx(*this, 0, 0, thirtyTwoBit),
+108                 bx(*this, 0, 0, sixteenBit),
+109                 bh(*this, 0, 1, eightBit),
+110                 bl(*this, 0, 0, eightBit),
+111 
+112                 esi(*this, 0, 0, thirtyTwoBit),
+113                 six(*this, 0, 0, sixteenBit),
+114                 sih(*this, 0, 1, eightBit),
+115                 sil(*this, 0, 0, eightBit),
+116 
+117                 edi(*this, 0, 0, thirtyTwoBit),
+118                 dix(*this, 0, 0, sixteenBit),
+119                 dih(*this, 0, 1, eightBit),
+120                 dil(*this, 0, 0, eightBit),
+121 
+122                 tix(*this, 0, 0, thirtyTwoBit),
+123                 st(*this, 0, 0, sixteenBit),
+124                 ob(*this, 0, 1, eightBit),
+125                 tb(*this, 0, 0, eightBit),
+126                 ct(*this, 0, 0, thirtyTwoBit),
+127                 pp(*this, 0, 0, sixteenBit),
+128                 tp(*this, 0, 1, eightBit),
+129 
+130                 ssx(*this, 0, 0, thirtyTwoBit),
+131                 hv(*this, 0, 0, sixteenBit),
+132                 ho(*this, 0, 1, eightBit),
+133                 ht(*this, 0, 0, eightBit),
+134                 ss(*this, 0, 0, thirtyTwoBit),
+135                 cs(*this, 0, 0, sixteenBit),
+136                 sf(*this, 0, 1, eightBit),
+137 
+138                 sui(*this, 0, 0, thirtyTwoBit),
+139                 asi(*this, 0, 0, sixteenBit),
+140                 gsi(*this, 0, 1, eightBit),
+141 
+142                 eip(*this, 0, 0, thirtyTwoBit),
+143                 ip(*this, 0, 0, sixteenBit),
+144                 ih(*this, 0, 1, eightBit),
+145                 il(*this, 0, 0, eightBit),
+146 
+147                 sip(*this, 0, 0, thirtyTwoBit)
+148             {
+149 
+150             }
+.fi
+.SH "Field Documentation"
+.PP 
+.SS "\fBregister_t\fP BBP::userspace::Thread::ah"
+
+.PP
+Definition at line 26 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::al"
+
+.PP
+Definition at line 27 of file Threading\&.h\&.
+.SS "\fBstd::PAGE\fP<\fBstd::string_element\fP> BBP::userspace::Thread::allocatedData"
+
+.PP
+Definition at line 83 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::asi"
+
+.PP
+Definition at line 71 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::ax"
+
+.PP
+Definition at line 25 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::bh"
+
+.PP
+Definition at line 41 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::bl"
+
+.PP
+Definition at line 42 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::bx"
+
+.PP
+Definition at line 40 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::ch"
+
+.PP
+Definition at line 31 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::cl"
+
+.PP
+Definition at line 32 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::cs"
+
+.PP
+Definition at line 67 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::ct"
+
+.PP
+Definition at line 58 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::cx"
+
+.PP
+Definition at line 30 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::dh"
+
+.PP
+Definition at line 36 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::dih"
+
+.PP
+Definition at line 51 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::dil"
+
+.PP
+Definition at line 52 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::dix"
+
+.PP
+Definition at line 50 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::dl"
+
+.PP
+Definition at line 37 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::dx"
+
+.PP
+Definition at line 35 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::eax"
+
+.PP
+Definition at line 24 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::ebx"
+
+.PP
+Definition at line 39 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::ecx"
+
+.PP
+Definition at line 29 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::edi"
+
+.PP
+Definition at line 49 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::edx"
+
+.PP
+Definition at line 34 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::eip"
+
+.PP
+Definition at line 74 of file Threading\&.h\&.
+.PP
+Referenced by BBP::smile_main()\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::esi"
+
+.PP
+Definition at line 44 of file Threading\&.h\&.
+.SS "\fBBinaryExecutable\fP BBP::userspace::Thread::executable"
+
+.PP
+Definition at line 18 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::gsi"
+
+.PP
+Definition at line 72 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::ho"
+
+.PP
+Definition at line 64 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::ht"
+
+.PP
+Definition at line 65 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::hv"
+
+.PP
+Definition at line 63 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::ih"
+
+.PP
+Definition at line 76 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::il"
+
+.PP
+Definition at line 77 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::ip"
+
+.PP
+Definition at line 75 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::ob"
+
+.PP
+Definition at line 56 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::pp"
+
+.PP
+Definition at line 59 of file Threading\&.h\&.
+.SS "constexpr \fBstd::size_t\fP BBP::userspace::Thread::registerCount = 4\fC [static]\fP, \fC [constexpr]\fP"
+
+.PP
+Definition at line 21 of file Threading\&.h\&.
+.SS "\fBstd::STATIC_PAGE\fP<\fBstd::byte\fP, \fBregisterCount\fP * 4> BBP::userspace::Thread::registerData"
+
+.PP
+Definition at line 22 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::sf"
+
+.PP
+Definition at line 68 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::sih"
+
+.PP
+Definition at line 46 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::sil"
+
+.PP
+Definition at line 47 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::sip"
+
+.PP
+Definition at line 79 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::six"
+
+.PP
+Definition at line 45 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::ss"
+
+.PP
+Definition at line 66 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::ssx"
+
+.PP
+Definition at line 62 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::st"
+
+.PP
+Definition at line 55 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::sui"
+
+.PP
+Definition at line 70 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::tb"
+
+.PP
+Definition at line 57 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::tix"
+
+.PP
+Definition at line 54 of file Threading\&.h\&.
+.SS "\fBregister_t\fP BBP::userspace::Thread::tp"
+
+.PP
+Definition at line 60 of file Threading\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

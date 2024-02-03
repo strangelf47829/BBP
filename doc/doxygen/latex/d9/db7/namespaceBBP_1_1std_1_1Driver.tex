@@ -1,0 +1,155 @@
+\hypertarget{namespaceBBP_1_1std_1_1Driver}{}\doxysection{B\+BP\+::std\+::Driver Namespace Reference}
+\label{namespaceBBP_1_1std_1_1Driver}\index{BBP::std::Driver@{BBP::std::Driver}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespaceBBP_1_1std_1_1Driver_af890afe53347748ccc3240bab4225a98}{draw\+Window}} (\mbox{\hyperlink{structBBP_1_1std_1_1window}{window}} $\ast$)
+\item 
+int \mbox{\hyperlink{namespaceBBP_1_1std_1_1Driver_affc18526448cf9c01bfb96ffd83aed81}{initialize\+Graphics}} (\mbox{\hyperlink{structBBP_1_1std_1_1window}{window}} $\ast$, int width, int height)
+\item 
+void \mbox{\hyperlink{namespaceBBP_1_1std_1_1Driver_afdd73d9627318511baf99a3392dd0b7e}{destruct\+Graphics}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceBBP_1_1std_1_1Driver_afdd73d9627318511baf99a3392dd0b7e}\label{namespaceBBP_1_1std_1_1Driver_afdd73d9627318511baf99a3392dd0b7e}} 
+\index{BBP::std::Driver@{BBP::std::Driver}!destructGraphics@{destructGraphics}}
+\index{destructGraphics@{destructGraphics}!BBP::std::Driver@{BBP::std::Driver}}
+\doxysubsubsection{\texorpdfstring{destructGraphics()}{destructGraphics()}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Driver\+::destruct\+Graphics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 74 of file Graphics.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{75 \{}
+\DoxyCodeLine{76     SDL\_DestroyWindow(\mbox{\hyperlink{Graphics_8cpp_aa6e721a97183db093899a7a38ff00ba2}{\_window}});}
+\DoxyCodeLine{77     SDL\_DestroyRenderer(\mbox{\hyperlink{Graphics_8cpp_a966da7a60c4ea3ba301e26ccc5efe452}{renderer}});}
+\DoxyCodeLine{78     SDL\_Quit();}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80     \mbox{\hyperlink{namespaceBBP_1_1std_a0d9f6105cb70d5bbf4ea7a9c5f317b18}{gINIT}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{81 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{d9/db7/namespaceBBP_1_1std_1_1Driver_afdd73d9627318511baf99a3392dd0b7e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceBBP_1_1std_1_1Driver_af890afe53347748ccc3240bab4225a98}\label{namespaceBBP_1_1std_1_1Driver_af890afe53347748ccc3240bab4225a98}} 
+\index{BBP::std::Driver@{BBP::std::Driver}!drawWindow@{drawWindow}}
+\index{drawWindow@{drawWindow}!BBP::std::Driver@{BBP::std::Driver}}
+\doxysubsubsection{\texorpdfstring{drawWindow()}{drawWindow()}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Driver\+::draw\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBBP_1_1std_1_1window}{window}} $\ast$}]{wind }\end{DoxyParamCaption})}
+
+
+
+Definition at line 49 of file Graphics.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50 \{}
+\DoxyCodeLine{51     SDL\_SetRenderDrawColor(\mbox{\hyperlink{Graphics_8cpp_a966da7a60c4ea3ba301e26ccc5efe452}{renderer}}, 255, 255, 255, 255);}
+\DoxyCodeLine{52     SDL\_RenderClear(\mbox{\hyperlink{Graphics_8cpp_a966da7a60c4ea3ba301e26ccc5efe452}{renderer}});}
+\DoxyCodeLine{53     \textcolor{keywordtype}{int} \mbox{\hyperlink{namespaceBBP_1_1std_a370f972c44b9f597cdda3e119899f60f}{last}} = 0;}
+\DoxyCodeLine{54     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} X = 0; X < wind-\/>width; X++)}
+\DoxyCodeLine{55     \{}
+\DoxyCodeLine{56         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} Y = 0; Y < wind-\/>height; Y++)}
+\DoxyCodeLine{57         \{}
+\DoxyCodeLine{58             \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespaceBBP_1_1std_a370f972c44b9f597cdda3e119899f60f}{last}} -\/ wind-\/>backBuffer.data[X + Y * wind-\/>width])}
+\DoxyCodeLine{59             \{}
+\DoxyCodeLine{60                 \mbox{\hyperlink{namespaceBBP_1_1std_a370f972c44b9f597cdda3e119899f60f}{last}} = wind-\/>backBuffer.data[X + Y * wind-\/>width];}
+\DoxyCodeLine{61                 \textcolor{keywordtype}{int} \mbox{\hyperlink{Graphics_8cpp_acab531abaa74a7e664e3986f2522b33a}{r}} = (\mbox{\hyperlink{namespaceBBP_1_1std_a370f972c44b9f597cdda3e119899f60f}{last}} \& (0xFF000000)) >> 24;}
+\DoxyCodeLine{62                 \textcolor{keywordtype}{int} \mbox{\hyperlink{Graphics_8cpp_a71867e609034d4dbd6d0ad8d84540e59}{g}} = (\mbox{\hyperlink{namespaceBBP_1_1std_a370f972c44b9f597cdda3e119899f60f}{last}} \& (0x00FF0000)) >> 16;}
+\DoxyCodeLine{63                 \textcolor{keywordtype}{int} \mbox{\hyperlink{Graphics_8cpp_a148e3876077787926724625411d6e7a9}{b}} = (\mbox{\hyperlink{namespaceBBP_1_1std_a370f972c44b9f597cdda3e119899f60f}{last}} \& (0x0000FF00)) >> 8;}
+\DoxyCodeLine{64                 \textcolor{keywordtype}{int} \mbox{\hyperlink{namespaceBBP_1_1Locale_1_1Japanese_a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a}{a}} = (\mbox{\hyperlink{namespaceBBP_1_1std_a370f972c44b9f597cdda3e119899f60f}{last}} \& (0x000000FF));}
+\DoxyCodeLine{65                 SDL\_SetRenderDrawColor(\mbox{\hyperlink{Graphics_8cpp_a966da7a60c4ea3ba301e26ccc5efe452}{renderer}}, \mbox{\hyperlink{Graphics_8cpp_acab531abaa74a7e664e3986f2522b33a}{r}}, \mbox{\hyperlink{Graphics_8cpp_a71867e609034d4dbd6d0ad8d84540e59}{g}}, \mbox{\hyperlink{Graphics_8cpp_a148e3876077787926724625411d6e7a9}{b}}, \mbox{\hyperlink{namespaceBBP_1_1Locale_1_1Japanese_a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a}{a}});}
+\DoxyCodeLine{66             \}}
+\DoxyCodeLine{67             SDL\_RenderDrawPoint(\mbox{\hyperlink{Graphics_8cpp_a966da7a60c4ea3ba301e26ccc5efe452}{renderer}}, X + wind-\/>xPos, Y + wind-\/>yPos);}
+\DoxyCodeLine{68         \}}
+\DoxyCodeLine{69     \}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71     SDL\_RenderPresent(\mbox{\hyperlink{Graphics_8cpp_a966da7a60c4ea3ba301e26ccc5efe452}{renderer}});}
+\DoxyCodeLine{72 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/db7/namespaceBBP_1_1std_1_1Driver_af890afe53347748ccc3240bab4225a98_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/db7/namespaceBBP_1_1std_1_1Driver_af890afe53347748ccc3240bab4225a98_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceBBP_1_1std_1_1Driver_affc18526448cf9c01bfb96ffd83aed81}\label{namespaceBBP_1_1std_1_1Driver_affc18526448cf9c01bfb96ffd83aed81}} 
+\index{BBP::std::Driver@{BBP::std::Driver}!initializeGraphics@{initializeGraphics}}
+\index{initializeGraphics@{initializeGraphics}!BBP::std::Driver@{BBP::std::Driver}}
+\doxysubsubsection{\texorpdfstring{initializeGraphics()}{initializeGraphics()}}
+{\footnotesize\ttfamily int B\+B\+P\+::std\+::\+Driver\+::initialize\+Graphics (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBBP_1_1std_1_1window}{std\+::window}} $\ast$}]{window,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Definition at line 13 of file Graphics.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15     \mbox{\hyperlink{Graphics_8cpp_aa6e721a97183db093899a7a38ff00ba2}{\_window}} = NULL;}
+\DoxyCodeLine{16     SDL\_Surface *screenSurface = NULL;}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     \textcolor{keywordflow}{if} (SDL\_Init(SDL\_INIT\_VIDEO) < 0)}
+\DoxyCodeLine{19     \{}
+\DoxyCodeLine{20         \mbox{\hyperlink{namespaceBBP_1_1std_a8d46784954bec3eed0277416001174a5}{printf}}(\textcolor{stringliteral}{"could not initialize SDL2: \%s\(\backslash\)n"}, SDL\_GetError());}
+\DoxyCodeLine{21         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{22     \}}
+\DoxyCodeLine{23     SDL\_CreateWindowAndRenderer(w, h, 0, \&\mbox{\hyperlink{Graphics_8cpp_aa6e721a97183db093899a7a38ff00ba2}{\_window}}, \&\mbox{\hyperlink{Graphics_8cpp_a966da7a60c4ea3ba301e26ccc5efe452}{renderer}});}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{comment}{/*window = SDL\_CreateWindow(}}
+\DoxyCodeLine{26 \textcolor{comment}{            "hello\_sdl2",}}
+\DoxyCodeLine{27 \textcolor{comment}{            SDL\_WINDOWPOS\_UNDEFINED, SDL\_WINDOWPOS\_UNDEFINED,}}
+\DoxyCodeLine{28 \textcolor{comment}{            width, height,}}
+\DoxyCodeLine{29 \textcolor{comment}{            SDL\_WINDOW\_SHOWN}}
+\DoxyCodeLine{30 \textcolor{comment}{            );*/}}
+\DoxyCodeLine{31     \textcolor{keywordflow}{if} (\mbox{\hyperlink{Graphics_8cpp_aa6e721a97183db093899a7a38ff00ba2}{\_window}} == NULL)}
+\DoxyCodeLine{32     \{}
+\DoxyCodeLine{33         \mbox{\hyperlink{namespaceBBP_1_1std_a8d46784954bec3eed0277416001174a5}{printf}}(\textcolor{stringliteral}{"could not create window: \%s\(\backslash\)n"}, SDL\_GetError());}
+\DoxyCodeLine{34         \textcolor{keywordflow}{return} 2;}
+\DoxyCodeLine{35     \}}
+\DoxyCodeLine{36     screenSurface = SDL\_GetWindowSurface(\mbox{\hyperlink{Graphics_8cpp_aa6e721a97183db093899a7a38ff00ba2}{\_window}});}
+\DoxyCodeLine{37     SDL\_FillRect(screenSurface, NULL, SDL\_MapRGB(screenSurface-\/>format, 0x00, 0x00, 0x00));}
+\DoxyCodeLine{38     SDL\_UpdateWindowSurface(\mbox{\hyperlink{Graphics_8cpp_aa6e721a97183db093899a7a38ff00ba2}{\_window}});}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     window-\/>backBuffer.data = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{42     \mbox{\hyperlink{namespaceBBP_1_1std_1_1R2D_abd452b23f01af75984864049dd13670b}{R2D::newWindow}}(window, w, h, 0, 0, 0);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \mbox{\hyperlink{namespaceBBP_1_1std_a0d9f6105cb70d5bbf4ea7a9c5f317b18}{gINIT}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{47 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/db7/namespaceBBP_1_1std_1_1Driver_affc18526448cf9c01bfb96ffd83aed81_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{d9/db7/namespaceBBP_1_1std_1_1Driver_affc18526448cf9c01bfb96ffd83aed81_icgraph}
+\end{center}
+\end{figure}

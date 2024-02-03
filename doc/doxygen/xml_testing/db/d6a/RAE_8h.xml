@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="db/d6a/RAE_8h" kind="file" language="C++">
+    <compoundname>RAE.h</compoundname>
+    <includes refid="d0/dde/Hyperv_8h" local="yes">Hyperv.h</includes>
+    <includedby refid="d0/dde/Hyperv_8h" local="yes">Hyperv.h</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>Memory.h</label>
+        <link refid="de/d5c/Memory_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Strings.h</label>
+        <link refid="de/d53/Strings_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Resources.h</label>
+        <link refid="d0/d33/Resources_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>ELF32.h</label>
+        <link refid="d1/d5d/ELF32_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Stack.hxx</label>
+        <link refid="db/d61/Stack_8hxx"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Memory.hxx</label>
+        <link refid="d5/d4e/Memory_8hxx"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>RAE.h</label>
+        <link refid="db/d6a/RAE_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>errno.h</label>
+        <link refid="d8/dc2/errno_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Hyperv.h</label>
+        <link refid="d0/dde/Hyperv_8h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>Registers.h</label>
+        <link refid="d7/d2a/Registers_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Signal.h</label>
+        <link refid="d0/def/Signal_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Except.h</label>
+        <link refid="dc/d88/Except_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stdint.h</label>
+        <link refid="df/dd8/stdint_8h"/>
+      </node>
+      <node id="6">
+        <label>stddef.h</label>
+        <link refid="d3/dce/stddef_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>BinaryExecutable.h</label>
+        <link refid="d0/dcf/BinaryExecutable_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ELF.h</label>
+        <link refid="db/de5/ELF_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Stack.h</label>
+        <link refid="dc/db6/Stack_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>RAE.h</label>
+        <link refid="db/d6a/RAE_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Hyperv.h</label>
+        <link refid="d0/dde/Hyperv_8h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d7/db5/classBBP_1_1userspace_1_1RAE" prot="public">BBP::userspace::RAE</innerclass>
+    <innernamespace refid="d9/d6f/namespaceBBP">BBP</innernamespace>
+    <innernamespace refid="de/dfe/namespaceBBP_1_1userspace">BBP::userspace</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/RAE.h"/>
+  </compounddef>
+</doxygen>

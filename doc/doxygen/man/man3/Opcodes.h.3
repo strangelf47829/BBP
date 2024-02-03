@@ -1,0 +1,55 @@
+.TH "Opcodes.h" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Opcodes.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stddef\&.h'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBBBP\fP"
+.br
+.ti -1c
+.RI " \fBBBP::userspace\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBBBP::userspace::OPCODES\fP : std::byte { \fBBBP::userspace::NIL\fP = 0, \fBBBP::userspace::STACK\fP = 1, \fBBBP::userspace::CTRL\fP = 2, \fBBBP::userspace::MEM\fP = 3, \fBBBP::userspace::INC\fP = 4, \fBBBP::userspace::DEC\fP = 5, \fBBBP::userspace::NEG\fP = 6, \fBBBP::userspace::ADD\fP = 7, \fBBBP::userspace::SUB\fP = 8, \fBBBP::userspace::MUL\fP = 9, \fBBBP::userspace::DIV\fP = 10, \fBBBP::userspace::MOD\fP = 11, \fBBBP::userspace::LBS\fP = 12, \fBBBP::userspace::RBS\fP = 13, \fBBBP::userspace::OR\fP = 14, \fBBBP::userspace::XOR\fP = 15, \fBBBP::userspace::AND\fP = 16, \fBBBP::userspace::NOT\fP = 17, \fBBBP::userspace::FLAG\fP = 18, \fBBBP::userspace::JMP\fP = 19, \fBBBP::userspace::JMPZ\fP = 20, \fBBBP::userspace::JMPC\fP = 21, \fBBBP::userspace::PAGE\fP = 22, \fBBBP::userspace::SIGNAL\fP = 23, \fBBBP::userspace::HALT\fP = 24 }"
+.br
+.ti -1c
+.RI "enum \fBBBP::userspace::STACKSUFFIXES\fP : std::byte { \fBBBP::userspace::push\fP = 1, \fBBBP::userspace::pop\fP = 2, \fBBBP::userspace::argument\fP = 4 }"
+.br
+.ti -1c
+.RI "enum \fBBBP::userspace::CTRLSUFFIXES\fP : std::byte { \fBBBP::userspace::ret\fP = 1, \fBBBP::userspace::call\fP = 2, \fBBBP::userspace::callp\fP = 4, \fBBBP::userspace::syscall\fP = 8, \fBBBP::userspace::routine\fP = 16, \fBBBP::userspace::absolute\fP = 32 }"
+.br
+.ti -1c
+.RI "enum \fBBBP::userspace::MATHSUFFIXES\fP : std::byte { \fBBBP::userspace::ffloat\fP = 1, \fBBBP::userspace::sfloat\fP = 2 }"
+.br
+.ti -1c
+.RI "enum \fBBBP::userspace::LOGICSUFFIXES\fP : std::byte { \fBBBP::userspace::bitwise\fP = 1, \fBBBP::userspace::inplace\fP = 2 }"
+.br
+.ti -1c
+.RI "enum \fBBBP::userspace::JMPSUFFIXES\fP : std::byte { \fBBBP::userspace::jmproutine\fP = 1, \fBBBP::userspace::negated\fP = 2, \fBBBP::userspace::lessthan\fP = 4, \fBBBP::userspace::greaterthan\fP = 8, \fBBBP::userspace::equalto\fP = 16, \fBBBP::userspace::absoluteJmp\fP = 32 }"
+.br
+.ti -1c
+.RI "enum \fBBBP::userspace::PAGESUFFIXES\fP : std::byte { \fBBBP::userspace::assign\fP = 1, \fBBBP::userspace::read\fP = 2, \fBBBP::userspace::write\fP = 4, \fBBBP::userspace::memoryOp\fP = 8, \fBBBP::userspace::sizeOp\fP = 16, \fBBBP::userspace::bytes\fP = 32 }"
+.br
+.ti -1c
+.RI "enum \fBBBP::userspace::MEMSUFFIXES\fP : std::byte { \fBBBP::userspace::fbyte\fP = 1, \fBBBP::userspace::fhalfword\fP = 2, \fBBBP::userspace::fword\fP = 4, \fBBBP::userspace::faddress\fP = 8, \fBBBP::userspace::sbyte\fP = 16, \fBBBP::userspace::shalfword\fP = 32, \fBBBP::userspace::sword\fP = 64, \fBBBP::userspace::saddress\fP = 128 }"
+.br
+.ti -1c
+.RI "enum \fBBBP::userspace::REGISTERMODIFIERS\fP : std::byte { \fBBBP::userspace::HIHW\fP = 16, \fBBBP::userspace::LOHW\fP = 32, \fBBBP::userspace::HIBY\fP = 64, \fBBBP::userspace::LOBY\fP = 128 }"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

@@ -1,0 +1,174 @@
+\hypertarget{structBBP_1_1std_1_1PAGE}{}\doxysection{B\+BP\+::std\+::P\+A\+GE$<$ T $>$ Struct Template Reference}
+\label{structBBP_1_1std_1_1PAGE}\index{BBP::std::PAGE$<$ T $>$@{BBP::std::PAGE$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Memory.\+h$>$}
+
+
+
+Inheritance diagram for B\+BP\+::std\+::P\+A\+GE$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d81/structBBP_1_1std_1_1PAGE__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for B\+BP\+::std\+::P\+A\+GE$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d23/structBBP_1_1std_1_1PAGE__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_af9a5521fb19a11cc4a8508affedee6aa}{P\+A\+GE}} (\mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{size\+\_\+t}} Size, T $\ast$dat)
+\item 
+\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a441f2061f6374798411cbc677508cdd0}{P\+A\+GE}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{size\+\_\+t}} \mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a3b5c962d781f42d8dc36949061c308ab}{data\+Size}}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{size\+\_\+t}} \mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a34a405792bd6c28ec010833acc6ee2f2}{bytes}}
+\item 
+\mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{P\+A\+GE}}$<$ T $>$ $\ast$ \mbox{\hyperlink{structBBP_1_1std_1_1PAGE_ae3ed5c6be788a903036a151ac69cd2d9}{prev\+Page}}
+\item 
+\mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{P\+A\+GE}}$<$ T $>$ $\ast$ \mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a8d21ebf8bb4b9485b67e17698ff1f890}{next\+Page}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{namespaceBBP_1_1std_ae05c88ad8c36bd02dd1fd949e8b5cab2}{mem\_t}} $\ast$ \mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a1ce02e31f319282c829fa96e887df0d8}{raw}}\\
+\>T $\ast$ \mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a02cc2cb6b1940e10fb3b4defba203ac6}{data}}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+struct B\+B\+P\+::std\+::\+P\+A\+G\+E$<$ T $>$}
+
+
+
+Definition at line 33 of file Memory.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structBBP_1_1std_1_1PAGE_af9a5521fb19a11cc4a8508affedee6aa}\label{structBBP_1_1std_1_1PAGE_af9a5521fb19a11cc4a8508affedee6aa}} 
+\index{BBP::std::PAGE$<$ T $>$@{BBP::std::PAGE$<$ T $>$}!PAGE@{PAGE}}
+\index{PAGE@{PAGE}!BBP::std::PAGE$<$ T $>$@{BBP::std::PAGE$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{PAGE()}{PAGE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{B\+B\+P\+::std\+::\+P\+A\+GE}}$<$ T $>$\+::\mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{P\+A\+GE}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{size\+\_\+t}}}]{Size,  }\item[{T $\ast$}]{dat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 46 of file Memory.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46 : \mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a3b5c962d781f42d8dc36949061c308ab}{dataSize}}(Size), \mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a34a405792bd6c28ec010833acc6ee2f2}{bytes}}(Size * (\textcolor{keyword}{sizeof}(T) / \textcolor{keyword}{sizeof}(\mbox{\hyperlink{namespaceBBP_1_1std_ae05c88ad8c36bd02dd1fd949e8b5cab2}{mem\_t}}))), \mbox{\hyperlink{structBBP_1_1std_1_1PAGE_ae3ed5c6be788a903036a151ac69cd2d9}{prevPage}}(\textcolor{keyword}{nullptr}), \mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a8d21ebf8bb4b9485b67e17698ff1f890}{nextPage}}(\textcolor{keyword}{nullptr}), \mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a02cc2cb6b1940e10fb3b4defba203ac6}{data}}(dat) \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structBBP_1_1std_1_1PAGE_a441f2061f6374798411cbc677508cdd0}\label{structBBP_1_1std_1_1PAGE_a441f2061f6374798411cbc677508cdd0}} 
+\index{BBP::std::PAGE$<$ T $>$@{BBP::std::PAGE$<$ T $>$}!PAGE@{PAGE}}
+\index{PAGE@{PAGE}!BBP::std::PAGE$<$ T $>$@{BBP::std::PAGE$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{PAGE()}{PAGE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{B\+B\+P\+::std\+::\+P\+A\+GE}}$<$ T $>$\+::\mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{P\+A\+GE}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 47 of file Memory.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47 : \mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a3b5c962d781f42d8dc36949061c308ab}{dataSize}}(0), \mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a34a405792bd6c28ec010833acc6ee2f2}{bytes}}(0), \mbox{\hyperlink{structBBP_1_1std_1_1PAGE_ae3ed5c6be788a903036a151ac69cd2d9}{prevPage}}(0), \mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a8d21ebf8bb4b9485b67e17698ff1f890}{nextPage}}(0), \mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a02cc2cb6b1940e10fb3b4defba203ac6}{data}}(\textcolor{keyword}{nullptr}) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structBBP_1_1std_1_1PAGE_a4d8d38013243d5b6ed71bae9cf46b272}\label{structBBP_1_1std_1_1PAGE_a4d8d38013243d5b6ed71bae9cf46b272}} 
+\doxysubsubsection{\texorpdfstring{"@1}{@1}}
+{\footnotesize\ttfamily union \{ ... \} }
+
+\mbox{\Hypertarget{structBBP_1_1std_1_1PAGE_a34a405792bd6c28ec010833acc6ee2f2}\label{structBBP_1_1std_1_1PAGE_a34a405792bd6c28ec010833acc6ee2f2}} 
+\index{BBP::std::PAGE$<$ T $>$@{BBP::std::PAGE$<$ T $>$}!bytes@{bytes}}
+\index{bytes@{bytes}!BBP::std::PAGE$<$ T $>$@{BBP::std::PAGE$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{bytes}{bytes}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{size\+\_\+t}} \mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{B\+B\+P\+::std\+::\+P\+A\+GE}}$<$ T $>$\+::bytes}
+
+
+
+Definition at line 36 of file Memory.\+h.
+
+\mbox{\Hypertarget{structBBP_1_1std_1_1PAGE_a02cc2cb6b1940e10fb3b4defba203ac6}\label{structBBP_1_1std_1_1PAGE_a02cc2cb6b1940e10fb3b4defba203ac6}} 
+\index{BBP::std::PAGE$<$ T $>$@{BBP::std::PAGE$<$ T $>$}!data@{data}}
+\index{data@{data}!BBP::std::PAGE$<$ T $>$@{BBP::std::PAGE$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ \mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{B\+B\+P\+::std\+::\+P\+A\+GE}}$<$ T $>$\+::data}
+
+
+
+Definition at line 43 of file Memory.\+h.
+
+\mbox{\Hypertarget{structBBP_1_1std_1_1PAGE_a3b5c962d781f42d8dc36949061c308ab}\label{structBBP_1_1std_1_1PAGE_a3b5c962d781f42d8dc36949061c308ab}} 
+\index{BBP::std::PAGE$<$ T $>$@{BBP::std::PAGE$<$ T $>$}!dataSize@{dataSize}}
+\index{dataSize@{dataSize}!BBP::std::PAGE$<$ T $>$@{BBP::std::PAGE$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{dataSize}{dataSize}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{size\+\_\+t}} \mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{B\+B\+P\+::std\+::\+P\+A\+GE}}$<$ T $>$\+::data\+Size}
+
+
+
+Definition at line 35 of file Memory.\+h.
+
+\mbox{\Hypertarget{structBBP_1_1std_1_1PAGE_a8d21ebf8bb4b9485b67e17698ff1f890}\label{structBBP_1_1std_1_1PAGE_a8d21ebf8bb4b9485b67e17698ff1f890}} 
+\index{BBP::std::PAGE$<$ T $>$@{BBP::std::PAGE$<$ T $>$}!nextPage@{nextPage}}
+\index{nextPage@{nextPage}!BBP::std::PAGE$<$ T $>$@{BBP::std::PAGE$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{nextPage}{nextPage}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{P\+A\+GE}}$<$T$>$$\ast$ \mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{B\+B\+P\+::std\+::\+P\+A\+GE}}$<$ T $>$\+::next\+Page}
+
+
+
+Definition at line 39 of file Memory.\+h.
+
+\mbox{\Hypertarget{structBBP_1_1std_1_1PAGE_ae3ed5c6be788a903036a151ac69cd2d9}\label{structBBP_1_1std_1_1PAGE_ae3ed5c6be788a903036a151ac69cd2d9}} 
+\index{BBP::std::PAGE$<$ T $>$@{BBP::std::PAGE$<$ T $>$}!prevPage@{prevPage}}
+\index{prevPage@{prevPage}!BBP::std::PAGE$<$ T $>$@{BBP::std::PAGE$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{prevPage}{prevPage}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{P\+A\+GE}}$<$T$>$$\ast$ \mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{B\+B\+P\+::std\+::\+P\+A\+GE}}$<$ T $>$\+::prev\+Page}
+
+
+
+Definition at line 38 of file Memory.\+h.
+
+\mbox{\Hypertarget{structBBP_1_1std_1_1PAGE_a1ce02e31f319282c829fa96e887df0d8}\label{structBBP_1_1std_1_1PAGE_a1ce02e31f319282c829fa96e887df0d8}} 
+\index{BBP::std::PAGE$<$ T $>$@{BBP::std::PAGE$<$ T $>$}!raw@{raw}}
+\index{raw@{raw}!BBP::std::PAGE$<$ T $>$@{BBP::std::PAGE$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{raw}{raw}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{namespaceBBP_1_1std_ae05c88ad8c36bd02dd1fd949e8b5cab2}{mem\+\_\+t}}$\ast$ \mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{B\+B\+P\+::std\+::\+P\+A\+GE}}$<$ T $>$\+::raw}
+
+
+
+Definition at line 42 of file Memory.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Memory_8h}{Memory.\+h}}\end{DoxyCompactItemize}

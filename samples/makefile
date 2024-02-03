@@ -83,31 +83,33 @@ ALL_PLAT:
 gui_o= $(SRC_DIR)/IO.o $(SRC_DIR)/GraphicsDriver.o $(SRC_DIR)/boot.o
 debugger_o= $(SRC_DIR)/IO.o $(SRC_DIR)/GraphicsDriver.o $(SRC_DIR)/boot.o
 l++_o= $(SRC_DIR)/IO.o $(SRC_DIR)/lpp.o
+drv-check_o= $(SRC_DIR)/IO.o $(SRC_DIR)/boot.o
 sample_o=
 
 gui: $(SRC_DIR)/IO.o $(SRC_DIR)/GraphicsDriver.o $(SRC_DIR)/boot.o
 debugger: $(SRC_DIR)/IO.o $(SRC_DIR)/GraphicsDriver.o $(SRC_DIR)/boot.o
 l++: $(SRC_DIR)/IO.o $(SRC_DIR)/lpp.o
+drv-check: $(SRC_DIR)/IO.o $(SRC_DIR)/boot.o
 # == X86 Flags
 x86_CXXFLAGS=
 x86_CFLAGS=
 x86_CXX= x86_64-w64-mingw32-g++
 x86_CC= x86_64-w64-mingw32-gcc
-x86_LIBS= SDL2 BBPRing0 lua ELF lpp Lexer
+x86_LIBS= SDL2 BBPRing0 lua ELF lpp Lexer Buffers
 x86_PREFIX= x86_64-w64-mingw32-
 # == ARM Flags
 arm_CXXFLAGS=
 arm_CFLAGS=
 arm_CXX= arm-none-eabi-g++
 arm_CC= arm-none-eabi-gcc
-arm_LIBS= BBPRing0 lua lpp ELF Lexer
+arm_LIBS= BBPRing0 lua lpp ELF Lexer Buffers
 arm_PREFIX= arm-none-eabi-
 # == X86Debug Flags
 x86Debug_CXXFLAGS=-g
 x86Debug_CFLAGS=-g
 x86Debug_CXX= g++
 x86Debug_CC= gcc
-x86Debug_LIBS= SDL2 BBPRing0 lua ELF lpp Lexer
+x86Debug_LIBS= SDL2 BBPRing0 lua ELF lpp Lexer Buffers
 x86Debug_PREFIX=
 # == Makefile Flags
 INC= -I$(BBP_INCDIR) -I$(SRC_INCDIR)
@@ -158,8 +160,8 @@ ALL_x86: ALL_PLAT
 	@make $(SAMPLE).sample --no-print-directory SAMPLE="$(SAMPLE)" PLAT="$(PLAT)"
 gui.arm:
 	@make $(SAMPLE).unavail --no-print-directory SAMPLE="$(SAMPLE)" PLAT="$(PLAT)"
-l++.arm:
-	@make $(SAMPLE).unavail --no-print-directory SAMPLE="$(SAMPLE)" PLAT="$(PLAT)"
+#l++.arm:
+#	@make $(SAMPLE).unavail --no-print-directory SAMPLE="$(SAMPLE)" PLAT="$(PLAT)"
 debugger.arm:
 	@make $(SAMPLE).unavail --no-print-directory SAMPLE="$(SAMPLE)" PLAT="$(PLAT)"
 ALL_arm: SAMPLE = $(basename $@)
@@ -190,4 +192,18 @@ clean:
 	@mkdir $(OUT_DIR)
 
 test:
-	valgrind --leak-check=full --show-leak-kinds=all -s bin/l++ -e -c header.lua
+	@echo "Running -e -V"
+	@bin/l++ -e test.lua -V
+	@echo "Running -V"
+	@bin/l++ test.lua -V
+#	valgrind --leak-check=full --show-leak-kinds=all -s bin/l++ -e -c header.lua
+driv: x86Debug drv-check.x86Debug
+	bin/drv-check obj.o
+#	valgrind bin/driver obj.o
+
+show:
+	clear
+	hexdump -x a.out -n 52
+	hexdump -x obj.o -n 52
+	bin/driver obj.o
+#	valgrind bin/driver obj.o

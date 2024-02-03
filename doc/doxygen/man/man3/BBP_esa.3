@@ -1,0 +1,2421 @@
+.TH "BBP::esa" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BBP::esa
+.SH SYNOPSIS
+.br
+.PP
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "class \fBBinaryApplication\fP"
+.br
+.ti -1c
+.RI "struct \fBdataEntry\fP"
+.br
+.ti -1c
+.RI "class \fBesaProcessor\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBELSA_TYPE\fP : uint32_t { \fBUNKOWN_T\fP, \fBSYMBOL_T\fP, \fBPROCEDURE_T\fP, \fBINSTRUCTION_T\fP }"
+.br
+.ti -1c
+.RI "enum \fBSYMBOL_TYPE\fP : uint32_t { \fBSYMTACC_VIRTUAL\fP = 0b1, \fBSYMTACC_STATIC\fP = SYMTACC_VIRTUAL << 1, \fBSYMTMOD_EXTERN\fP = SYMTACC_STATIC << 1, \fBSYMTMOD_CONST\fP = SYMTMOD_EXTERN << 1, \fBSYMTMOD_STATIC\fP = SYMTMOD_CONST << 1, \fBSYMTSZ_NIL\fP = SYMTMOD_STATIC << 1, \fBSYMTSZ_DN\fP = SYMTSZ_NIL << 1, \fBSYMTSZ_DB\fP = SYMTSZ_DN << 1, \fBSYMTSZ_DH\fP = SYMTSZ_DB << 1, \fBSYMTSZ_DI\fP = SYMTSZ_DH << 1, \fBSYMTSZ_DA\fP = SYMTSZ_DI << 1, \fBSYMTSZ_DW\fP = SYMTSZ_DA << 1 }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPRAGMA\fP (include)"
+.br
+.ti -1c
+.RI "\fBPRAGMA\fP (handler)"
+.br
+.ti -1c
+.RI "\fBPRAGMA\fP (define)"
+.br
+.ti -1c
+.RI "\fBPRAGMA\fP (undef)"
+.br
+.ti -1c
+.RI "\fBPRAGMA\fP (ifndef)"
+.br
+.ti -1c
+.RI "\fBPRAGMA\fP (ifdef)"
+.br
+.ti -1c
+.RI "\fBPRAGMA\fP (endif)"
+.br
+.ti -1c
+.RI "\fBPRAGMA\fP (else)"
+.br
+.ti -1c
+.RI "\fBPRAGMA\fP (atomic)"
+.br
+.ti -1c
+.RI "\fBPRAGMA\fP (handover)"
+.br
+.ti -1c
+.RI "\fBPRAGMA\fP (continue)"
+.br
+.ti -1c
+.RI "\fBACTION\fP (static)"
+.br
+.ti -1c
+.RI "\fBACTION\fP (const)"
+.br
+.ti -1c
+.RI "\fBACTION\fP (virtual)"
+.br
+.ti -1c
+.RI "\fBACTION\fP (extern)"
+.br
+.ti -1c
+.RI "\fBACTION\fP (procedure)"
+.br
+.ti -1c
+.RI "\fBACTION\fP (end)"
+.br
+.ti -1c
+.RI "\fBACTION\fP (endroutine)"
+.br
+.ti -1c
+.RI "\fBTOKEN\fP (newline)"
+.br
+.ti -1c
+.RI "\fBTOKEN\fP (semicolon)"
+.br
+.ti -1c
+.RI "\fBTOKEN\fP (openDelimiter)"
+.br
+.ti -1c
+.RI "\fBTOKEN\fP (closeDelimiter)"
+.br
+.ti -1c
+.RI "\fBTOKEN\fP (comma)"
+.br
+.ti -1c
+.RI "\fBTOKEN\fP (caret)"
+.br
+.ti -1c
+.RI "\fBTOKEN\fP (doubleQuote)"
+.br
+.ti -1c
+.RI "\fBTOKEN\fP (singleQuote)"
+.br
+.ti -1c
+.RI "\fBTOKEN\fP (colon)"
+.br
+.ti -1c
+.RI "\fBTOKEN\fP (backslash)"
+.br
+.ti -1c
+.RI "\fBTOKEN\fP (size)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (nil)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (stack)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (ctrl)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (mem)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (inc)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (dec)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (neg)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (add)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (sub)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (mul)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (div)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (mod)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (lbs)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (rbs)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (or)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (xor)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (and)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (not)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (flag)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (jmp)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (jmpc)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (jmpz)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (page)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (signal)"
+.br
+.ti -1c
+.RI "\fBINSTRUCTION\fP (halt)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "static const char *const \fBkeywords\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBtokens\fP [] = { '\\r', '\\n', ';', '(', ')', ',', '[', ']', '{', '}', '^', '<', '>', '\\'', ''', ':', '\\\\', 'dn', 'db', 'dh', 'di', 'da', 'dw' }"
+.br
+.ti -1c
+.RI "static const char *const \fBmnemonics\fP []"
+.br
+.ti -1c
+.RI "static constexpr \fBstd::size_t\fP \fBkeywordCount\fP = 18"
+.br
+.ti -1c
+.RI "static constexpr \fBstd::size_t\fP \fBtokenCount\fP = 23"
+.br
+.ti -1c
+.RI "static constexpr \fBstd::size_t\fP \fBmnemonicsCount\fP = 110"
+.br
+.ti -1c
+.RI "static const \fBstd::Lexer::lex_action\fP \fBkeywordActions\fP []"
+.br
+.ti -1c
+.RI "static const \fBstd::Lexer::lex_action\fP \fBtokenActions\fP []"
+.br
+.ti -1c
+.RI "static const \fBstd::Lexer::lex_action\fP \fBmnemonicsActions\fP []"
+.br
+.ti -1c
+.RI "static const char \fBflags\fP [23][8]"
+.br
+.ti -1c
+.RI "\fBesaProcessor\fP \fBprocessor\fP"
+.br
+.in -1c
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBBBP::esa::ELSA_TYPE\fP : \fBuint32_t\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIUNKOWN_T \fP\fP
+.TP
+\fB\fISYMBOL_T \fP\fP
+.TP
+\fB\fIPROCEDURE_T \fP\fP
+.TP
+\fB\fIINSTRUCTION_T \fP\fP
+.PP
+Definition at line 148 of file ELSA\&.h\&.
+.PP
+.nf
+148                        : uint32_t
+149         {
+150             UNKOWN_T,
+151             SYMBOL_T,
+152             PROCEDURE_T,
+153             INSTRUCTION_T
+154         };
+.fi
+.SS "enum \fBBBP::esa::SYMBOL_TYPE\fP : \fBuint32_t\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fISYMTACC_VIRTUAL \fP\fP
+.TP
+\fB\fISYMTACC_STATIC \fP\fP
+.TP
+\fB\fISYMTMOD_EXTERN \fP\fP
+.TP
+\fB\fISYMTMOD_CONST \fP\fP
+.TP
+\fB\fISYMTMOD_STATIC \fP\fP
+.TP
+\fB\fISYMTSZ_NIL \fP\fP
+.TP
+\fB\fISYMTSZ_DN \fP\fP
+.TP
+\fB\fISYMTSZ_DB \fP\fP
+.TP
+\fB\fISYMTSZ_DH \fP\fP
+.TP
+\fB\fISYMTSZ_DI \fP\fP
+.TP
+\fB\fISYMTSZ_DA \fP\fP
+.TP
+\fB\fISYMTSZ_DW \fP\fP
+.PP
+Definition at line 156 of file ELSA\&.h\&.
+.PP
+.nf
+156                          : uint32_t
+157         {
+158             // Defines the access of a symbol\&. If none used, it is a quasi-symbol\&.
+159             SYMTACC_VIRTUAL = 0b1,
+160             SYMTACC_STATIC = SYMTACC_VIRTUAL << 1,
+161 
+162             // Modifiers that can be used
+163             SYMTMOD_EXTERN = SYMTACC_STATIC << 1,
+164             SYMTMOD_CONST = SYMTMOD_EXTERN << 1,
+165             SYMTMOD_STATIC = SYMTMOD_CONST << 1,
+166 
+167             // The size of the symbol
+168             SYMTSZ_NIL = SYMTMOD_STATIC << 1,
+169             SYMTSZ_DN = SYMTSZ_NIL << 1,
+170             SYMTSZ_DB = SYMTSZ_DN << 1,
+171             SYMTSZ_DH = SYMTSZ_DB << 1,
+172             SYMTSZ_DI = SYMTSZ_DH << 1,
+173             SYMTSZ_DA = SYMTSZ_DI << 1,
+174             SYMTSZ_DW = SYMTSZ_DA << 1
+175         };
+.fi
+.SH "Function Documentation"
+.PP 
+.SS "BBP::esa::ACTION (const)"
+
+.PP
+Definition at line 380 of file Actions\&.cpp\&.
+.PP
+.nf
+381 {
+382     return processor\&.markConst();
+383 }
+.fi
+.PP
+References BBP::esa::esaProcessor::markConst(), and processor\&.
+.SS "BBP::esa::ACTION (end)"
+
+.PP
+Definition at line 410 of file Actions\&.cpp\&.
+.PP
+.nf
+411 {
+412     // Check if inside a procedure
+413     if (processor\&.procedureHash == 0)
+414         return "EInvalid 'end'; Must be matched with 'procedure'\&.";
+415 
+416     // Save end
+417     processor\&.endedAt = processor\&.application->builder\&._text()\&.stack\&.atElement;
+418 
+419     // Push function
+420     std::conststring error = processor\&.emitProcedure();
+421 
+422     // Now reset procedure flags
+423     processor\&.procedureName\&.static_data[0] = 0;
+424     processor\&.procedureHash = 0;
+425     processor\&.startedAt = 0;
+426     processor\&.endedAt = 0;
+427     processor\&.procedureArgumentCount = 0;
+428     processor\&.doneDeclaringProcedure = false;
+429     processor\&.externProcedure = false;
+430 
+431     // Check for any subscribers\&.
+432     if (processor\&.routineStarts\&.atElement)
+433     {
+434         // Reset them
+435         processor\&.routineStarts\&.atElement = 0;
+436 
+437         // Return error
+438         return "EUnterminated ':' tokens before end of procedure\&.";
+439     }
+440 
+441     // Then return error
+442     return error;
+443 }
+.fi
+.PP
+References BBP::std::ELF::ELFBuilder::_text(), BBP::esa::esaProcessor::application, BBP::std::Stack< K >::atElement, BBP::esa::BinaryApplication::builder, BBP::std::conststring, BBP::esa::esaProcessor::doneDeclaringProcedure, BBP::esa::esaProcessor::emitProcedure(), BBP::esa::esaProcessor::endedAt, BBP::esa::esaProcessor::externProcedure, BBP::esa::esaProcessor::procedureArgumentCount, BBP::esa::esaProcessor::procedureHash, BBP::esa::esaProcessor::procedureName, processor, BBP::esa::esaProcessor::routineStarts, BBP::std::ELF::SectionBuilder::stack, BBP::esa::esaProcessor::startedAt, and BBP::std::STATIC_PAGE< T, K >::static_data\&.
+.SS "BBP::esa::ACTION (endroutine)"
+
+.PP
+Definition at line 445 of file Actions\&.cpp\&.
+.PP
+.nf
+446 {
+447     // If no subscribers, emit warning
+448     if (processor\&.routineStarts\&.atElement == 0)
+449     {
+450         context->resetInfo(context->debugInformation);
+451         context->debugInformation\&.errName = "-Wignored-double-at";
+452         return "WIgnored stray '@@' because no ':' tokens precedes it\&.";
+453     }
+454 
+455     // Get current index in \&.text
+456     std::index_t currentIndex = processor\&.application->builder\&.sections[processor\&.application->builder\&.text]\&.stack\&.atElement;
+457 
+458     // Loop over subscribers
+459     for (std::index_t index = 0; index < std::read(&processor\&.routineSubscriberCount, processor\&.routineStarts\&.atElement); index++)
+460     {
+461         // Get target offset
+462         std::offset_t target = processor\&.subscribers[index];
+463 
+464         // Write into section
+465         processor\&.application->builder\&.sections[processor\&.application->builder\&.text]\&.stack[target] = (currentIndex >> 24) & 0xFF;
+466         processor\&.application->builder\&.sections[processor\&.application->builder\&.text]\&.stack[target+1] = (currentIndex >> 16) & 0xFF;
+467         processor\&.application->builder\&.sections[processor\&.application->builder\&.text]\&.stack[target+2] = (currentIndex >> 8) & 0xFF;
+468         processor\&.application->builder\&.sections[processor\&.application->builder\&.text]\&.stack[target+3] = (currentIndex >> 0) & 0xFF;
+469 
+470     }
+471 
+472     // Now reset
+473     std::index_t zero = 0;
+474     std::write(&processor\&.routineSubscriberCount, zero, processor\&.routineStarts\&.atElement);
+475     processor\&.routineStarts--;
+476 
+477     return nullptr;
+478 }
+.fi
+.PP
+References BBP::esa::esaProcessor::application, BBP::std::Stack< K >::atElement, BBP::esa::BinaryApplication::builder, processor, BBP::userspace::read, BBP::esa::esaProcessor::routineStarts, BBP::esa::esaProcessor::routineSubscriberCount, BBP::std::ELF::ELFBuilder::sections, BBP::esa::esaProcessor::subscribers, BBP::std::ELF::ELFBuilder::text, BBP::userspace::write, and BBP::Locale::Japanese::zero\&.
+.SS "BBP::esa::ACTION (extern)"
+
+.PP
+Definition at line 390 of file Actions\&.cpp\&.
+.PP
+.nf
+391 {
+392     return processor\&.markExtern();
+393 }
+.fi
+.PP
+References BBP::esa::esaProcessor::markExtern(), and processor\&.
+.SS "BBP::esa::ACTION (procedure)"
+
+.PP
+Definition at line 395 of file Actions\&.cpp\&.
+.PP
+.nf
+396 {
+397     // Check appropriate flags
+398     if (processor\&.lineIsDefiningInstruction || processor\&.lineIsDefiningSymbolDefinition)
+399         return "E'procedure' is a reserved keyword\&."; // If any of these flags are true, return error\&.
+400 
+401     // Set appropriate flags
+402     processor\&.lineIsDefiningProcedure = true;
+403 
+404     // Set index to here
+405     processor\&.setProcedureAddress();
+406 
+407     return nullptr;
+408 }
+.fi
+.PP
+References BBP::esa::esaProcessor::lineIsDefiningInstruction, BBP::esa::esaProcessor::lineIsDefiningProcedure, BBP::esa::esaProcessor::lineIsDefiningSymbolDefinition, processor, and BBP::esa::esaProcessor::setProcedureAddress()\&.
+.SS "BBP::esa::ACTION (static)"
+
+.PP
+Definition at line 375 of file Actions\&.cpp\&.
+.PP
+.nf
+376 {
+377     return processor\&.markStatic();
+378 }
+.fi
+.PP
+References BBP::esa::esaProcessor::markStatic(), and processor\&.
+.SS "BBP::esa::ACTION (virtual)"
+
+.PP
+Definition at line 385 of file Actions\&.cpp\&.
+.PP
+.nf
+386 {
+387     return processor\&.markVirtual();
+388 }
+.fi
+.PP
+References BBP::esa::esaProcessor::markVirtual(), and processor\&.
+.SS "BBP::esa::INSTRUCTION (add)"
+
+.PP
+Definition at line 1037 of file Actions\&.cpp\&.
+.PP
+.nf
+1038 {
+1039     std::byte suffix = 0;
+1040 
+1041     switch (handle)
+1042     {
+1043     case ADD_HANDLE:
+1044         suffix = 0;
+1045         break;
+1046     case ADDF_HANDLE:
+1047         suffix = userspace::ffloat;
+1048         break;
+1049     case ADDIF_HANDLE:
+1050         suffix = userspace::sfloat;
+1051         break;
+1052     case ADDFF_HANDLE:
+1053         suffix = userspace::ffloat | userspace::sfloat;
+1054         break;
+1055     }
+1056 
+1057     // If the handle is ADD, expect any amount of args
+1058     if (handle == ADD_HANDLE)
+1059     {
+1060         processor\&.setInstruction(userspace::ADD, suffix, 0, 8);
+1061         processor\&.surpressArgCountWarning();
+1062         processor\&.expectAny(0);
+1063         processor\&.expectAny(1);
+1064         processor\&.expectAny(2);
+1065         processor\&.expectAny(3);
+1066         processor\&.expectAny(4);
+1067         processor\&.expectAny(5);
+1068         processor\&.expectAny(6);
+1069         processor\&.expectAny(7);
+1070 
+1071         return nullptr;
+1072     }
+1073 
+1074     processor\&.setInstruction(userspace::ADD, suffix, 0, 2);
+1075     processor\&.expectAny(0);
+1076     processor\&.expectAny(1);
+1077 
+1078     return nullptr;
+1079 }
+.fi
+.PP
+References BBP::userspace::ADD, ADD_HANDLE, ADDF_HANDLE, ADDFF_HANDLE, ADDIF_HANDLE, BBP::esa::esaProcessor::expectAny(), BBP::userspace::ffloat, processor, BBP::esa::esaProcessor::setInstruction(), BBP::userspace::sfloat, and BBP::esa::esaProcessor::surpressArgCountWarning()\&.
+.SS "BBP::esa::INSTRUCTION (and)"
+
+.PP
+Definition at line 1325 of file Actions\&.cpp\&.
+.PP
+.nf
+1326 {
+1327 
+1328     std::byte suffix = 0;
+1329 
+1330     switch (handle)
+1331     {
+1332     case AND_HANDLE:
+1333         suffix = 0;
+1334         break;
+1335     case ANDIP_HANDLE:
+1336         suffix = userspace::inplace;
+1337         break;
+1338     case ANDB_HANDLE: // I AM ORB!!!!!!!!!!!!!!!!!!!!!!!!! FUCK YOU MOTHERFUCKERSSSSSSSSSSSSSSSSS
+1339         suffix = userspace::bitwise;
+1340         break;
+1341     case ANDBIP_HANDLE:
+1342         suffix = userspace::bitwise | userspace::inplace;
+1343         break;
+1344     }
+1345 
+1346     // Set instruction
+1347     processor\&.setInstruction(userspace::AND, suffix, 0, 2);
+1348 
+1349     // If in place, expect writeable value
+1350     if (suffix | userspace::inplace)
+1351         processor\&.expectAddress(0);
+1352     else
+1353         processor\&.expectAny(0);
+1354 
+1355     // Expect anything on second arg
+1356     processor\&.expectAny(1);
+1357 
+1358     return nullptr;
+1359 }
+.fi
+.PP
+References BBP::userspace::AND, AND_HANDLE, ANDB_HANDLE, ANDBIP_HANDLE, ANDIP_HANDLE, BBP::userspace::bitwise, BBP::esa::esaProcessor::expectAddress(), BBP::esa::esaProcessor::expectAny(), BBP::userspace::inplace, processor, and BBP::esa::esaProcessor::setInstruction()\&.
+.SS "BBP::esa::INSTRUCTION (ctrl)"
+
+.PP
+Definition at line 841 of file Actions\&.cpp\&.
+.PP
+.nf
+842 {
+843     std::byte suffix = 0;
+844     std::byte argCount = 0;
+845 
+846     switch (handle)
+847     {
+848     case RET_HANDLE:
+849         suffix = userspace::ret;
+850         argCount = 1;
+851         processor\&.surpressArgCountWarning(0);
+852         processor\&.setInstruction(userspace::CTRL, suffix, 0, argCount);
+853         break;
+854 
+855     case CALL_HANDLE:
+856         suffix = userspace::call;
+857         argCount = 8;
+858         processor\&.surpressArgCountWarning();
+859         processor\&.surpress[0] = false;
+860         processor\&.setInstruction(userspace::CTRL, suffix, 0, argCount);
+861         processor\&.expectAddress(0);
+862         for (std::byte n = 1; n < 8; n++)
+863             processor\&.expectAny(n);
+864         break;
+865 
+866     case CALLP_HANDLE:
+867         suffix = userspace::callp;
+868         argCount = 8;
+869         processor\&.surpressArgCountWarning();
+870         processor\&.surpress[0] = false;
+871         processor\&.setInstruction(userspace::CTRL, suffix, 0, argCount);
+872         processor\&.expectAddress(0);
+873         for (std::byte n = 1; n < 8; n++)
+874             processor\&.expectAny(n);
+875         break;
+876 
+877     case SYSCALL_HANDLE:
+878         suffix = userspace::syscall;
+879         argCount = 8;
+880         processor\&.surpressArgCountWarning();
+881         processor\&.surpress[0] = false;
+882         processor\&.setInstruction(userspace::CTRL, suffix, 0, argCount);
+883         processor\&.expectLiteral(0);
+884         for (std::byte n = 1; n < 8; n++)
+885             processor\&.expectAny(n);
+886         break;
+887 
+888     case ROUTINE_HANDLE:
+889         suffix = userspace::routine;
+890         argCount = 1;
+891         processor\&.setInstruction(userspace::CTRL, suffix, 0, argCount);
+892         processor\&.expectLiteral(0);
+893         break;
+894     }
+895 
+896     return nullptr;
+897 }
+.fi
+.PP
+References BBP::userspace::call, CALL_HANDLE, BBP::userspace::callp, CALLP_HANDLE, BBP::userspace::CTRL, BBP::esa::esaProcessor::expectAddress(), BBP::esa::esaProcessor::expectAny(), BBP::esa::esaProcessor::expectLiteral(), BBP::Locale::Japanese::n, processor, BBP::userspace::ret, RET_HANDLE, BBP::userspace::routine, ROUTINE_HANDLE, BBP::esa::esaProcessor::setInstruction(), BBP::esa::esaProcessor::surpress, BBP::esa::esaProcessor::surpressArgCountWarning(), BBP::userspace::syscall, and SYSCALL_HANDLE\&.
+.SS "BBP::esa::INSTRUCTION (dec)"
+
+.PP
+Definition at line 997 of file Actions\&.cpp\&.
+.PP
+.nf
+998 {
+999     std::byte suffix = 0;
+1000 
+1001     switch (handle)
+1002     {
+1003     case DEC_HANDLE:
+1004         suffix = 0;
+1005         break;
+1006     case DECF_HANDLE:
+1007         suffix = userspace::ffloat;
+1008         break;
+1009     }
+1010 
+1011     processor\&.setInstruction(userspace::DEC, suffix, 0, 1);
+1012     processor\&.expectAddress(0);
+1013 
+1014     return nullptr;
+1015 }
+.fi
+.PP
+References BBP::userspace::DEC, DEC_HANDLE, DECF_HANDLE, BBP::esa::esaProcessor::expectAddress(), BBP::userspace::ffloat, processor, and BBP::esa::esaProcessor::setInstruction()\&.
+.SS "BBP::esa::INSTRUCTION (div)"
+
+.PP
+Definition at line 1169 of file Actions\&.cpp\&.
+.PP
+.nf
+1170 {
+1171     std::byte suffix = 0;
+1172 
+1173     switch (handle)
+1174     {
+1175     case DIV_HANDLE:
+1176         suffix = 0;
+1177         break;
+1178     case DIVF_HANDLE:
+1179         suffix = userspace::ffloat;
+1180         break;
+1181     case DIVIF_HANDLE:
+1182         suffix = userspace::sfloat;
+1183         break;
+1184     case DIVFF_HANDLE:
+1185         suffix = userspace::ffloat | userspace::sfloat;
+1186         break;
+1187     }
+1188 
+1189     // Divide always expects 2 arguments
+1190     processor\&.setInstruction(userspace::DIV, suffix, 0, 2);
+1191     processor\&.expectAny(0);
+1192     processor\&.expectAny(1);
+1193 
+1194     return nullptr;
+1195 }
+.fi
+.PP
+References BBP::userspace::DIV, DIV_HANDLE, DIVF_HANDLE, DIVFF_HANDLE, DIVIF_HANDLE, BBP::esa::esaProcessor::expectAny(), BBP::userspace::ffloat, processor, BBP::esa::esaProcessor::setInstruction(), and BBP::userspace::sfloat\&.
+.SS "BBP::esa::INSTRUCTION (flag)"
+
+.PP
+Definition at line 1397 of file Actions\&.cpp\&.
+.PP
+.nf
+1398 {
+1399     // If simple flag handle, then just do this
+1400     if (handle == FLAG_HANDLE)
+1401     {
+1402         processor\&.setInstruction(userspace::FLAG, 1, 0, 1);
+1403         processor\&.expectLiteral(0);
+1404 
+1405         return nullptr;
+1406     }
+1407 
+1408     // Otherwise, this is compare flag\&.
+1409     processor\&.setInstruction(userspace::FLAG, 0, 0, 2);
+1410     processor\&.surpressArgCountWarning(1);
+1411     processor\&.expectAny(0);
+1412     processor\&.expectAny(1);
+1413 
+1414     return nullptr;
+1415 }
+.fi
+.PP
+References BBP::esa::esaProcessor::expectAny(), BBP::esa::esaProcessor::expectLiteral(), BBP::userspace::FLAG, FLAG_HANDLE, processor, BBP::esa::esaProcessor::setInstruction(), and BBP::esa::esaProcessor::surpressArgCountWarning()\&.
+.SS "BBP::esa::INSTRUCTION (halt)"
+
+.PP
+Definition at line 1609 of file Actions\&.cpp\&.
+.PP
+.nf
+1610 {
+1611     switch (handle)
+1612     {
+1613     case HLT_HANDLE:
+1614         processor\&.setInstruction(userspace::HALT, 0, 0, 0);
+1615         return nullptr;
+1616     case HCF_HANDLE:
+1617         processor\&.setInstruction(userspace::HALT, 1, 0, 0);
+1618         processor\&.esaParser\&.debugInformation\&.errName = "-Wuse-of-hcf";
+1619         return "WHCF instruction emitted\&.";
+1620     case HBU_HANDLE:
+1621         processor\&.setInstruction(userspace::HALT, 2, 0, 0);
+1622         processor\&.esaParser\&.debugInformation\&.errName = "-Wuse-of-hbu";
+1623         return "WHBU instruction emitted\&.";
+1624         return nullptr;
+1625     }
+1626     return "AUnrecognized halt instruction\&. Please make sure you are using the right version of ELSA\&.";
+1627 }
+.fi
+.PP
+References BBP::std::Lexer::lex_context::debugInformation, BBP::std::Lexer::lex_debugInfo::errName, BBP::esa::esaProcessor::esaParser, BBP::userspace::HALT, HBU_HANDLE, HCF_HANDLE, HLT_HANDLE, processor, and BBP::esa::esaProcessor::setInstruction()\&.
+.SS "BBP::esa::INSTRUCTION (inc)"
+
+.PP
+Definition at line 977 of file Actions\&.cpp\&.
+.PP
+.nf
+978 {
+979     std::byte suffix = 0;
+980     
+981     switch (handle)
+982     {
+983     case INC_HANDLE:
+984         suffix = 0;
+985         break;
+986     case INCF_HANDLE:
+987         suffix = userspace::ffloat;
+988         break;
+989     }
+990 
+991     processor\&.setInstruction(userspace::INC, suffix, 0, 1);
+992     processor\&.expectAddress(0);
+993 
+994     return nullptr;
+995 }
+.fi
+.PP
+References BBP::esa::esaProcessor::expectAddress(), BBP::userspace::ffloat, BBP::userspace::INC, INC_HANDLE, INCF_HANDLE, processor, and BBP::esa::esaProcessor::setInstruction()\&.
+.SS "BBP::esa::INSTRUCTION (jmp)"
+
+.PP
+Definition at line 1417 of file Actions\&.cpp\&.
+.PP
+.nf
+1418 {
+1419     if (handle == JMP_HANDLE)
+1420     {
+1421         processor\&.setInstruction(userspace::JMP, 0, 0, 1);
+1422         processor\&.expectAddress(0);
+1423         
+1424         return nullptr;
+1425     }
+1426 
+1427     processor\&.setInstruction(userspace::JMP, userspace::jmproutine, 0, 0);
+1428     return nullptr;
+1429 }
+.fi
+.PP
+References BBP::esa::esaProcessor::expectAddress(), BBP::userspace::JMP, JMP_HANDLE, BBP::userspace::jmproutine, processor, and BBP::esa::esaProcessor::setInstruction()\&.
+.SS "BBP::esa::INSTRUCTION (jmpc)"
+
+.PP
+Definition at line 1431 of file Actions\&.cpp\&.
+.PP
+.nf
+1432 {
+1433 
+1434     std::byte suffix = 0;
+1435 
+1436     switch (handle)
+1437     {
+1438     case JLTNR_HANDLE:
+1439         suffix = userspace::negated;
+1440     case JLTR_HANDLE:
+1441         suffix |= userspace::lessthan | userspace::jmproutine;
+1442         processor\&.setInstruction(userspace::JMPC, suffix, 0, 0);
+1443         return nullptr;
+1444 
+1445     case JLTN_HANDLE:
+1446         suffix = userspace::negated;
+1447     case JLT_HANDLE:
+1448         suffix |= userspace::lessthan;
+1449         processor\&.setInstruction(userspace::JMPC, suffix, 0, 1);
+1450         processor\&.expectAddress(0);
+1451         return nullptr;
+1452 
+1453 
+1454     case JGTNR_HANDLE:
+1455         suffix = userspace::negated;
+1456     case JGTR_HANDLE:
+1457         suffix |= userspace::greaterthan | userspace::jmproutine;
+1458         processor\&.setInstruction(userspace::JMPC, suffix, 0, 0);
+1459         return nullptr;
+1460 
+1461     case JGTN_HANDLE:
+1462         suffix = userspace::negated;
+1463     case JGT_HANDLE:
+1464         suffix |= userspace::greaterthan;
+1465         processor\&.setInstruction(userspace::JMPC, suffix, 0, 1);
+1466         processor\&.expectAddress(0);
+1467         return nullptr;
+1468     }
+1469 
+1470     return nullptr;
+1471 }
+.fi
+.PP
+References BBP::esa::esaProcessor::expectAddress(), BBP::userspace::greaterthan, JGT_HANDLE, JGTN_HANDLE, JGTNR_HANDLE, JGTR_HANDLE, JLT_HANDLE, JLTN_HANDLE, JLTNR_HANDLE, JLTR_HANDLE, BBP::userspace::JMPC, BBP::userspace::jmproutine, BBP::userspace::lessthan, BBP::userspace::negated, processor, and BBP::esa::esaProcessor::setInstruction()\&.
+.SS "BBP::esa::INSTRUCTION (jmpz)"
+
+.PP
+Definition at line 1473 of file Actions\&.cpp\&.
+.PP
+.nf
+1474 {
+1475 
+1476     std::byte suffix = 0;
+1477 
+1478     switch (handle)
+1479     {
+1480     case JLZNR_HANDLE:
+1481         suffix = userspace::negated;
+1482     case JLZR_HANDLE:
+1483         suffix |= userspace::jmproutine | userspace::lessthan;
+1484         processor\&.setInstruction(userspace::JMPZ, suffix, 0, 0);
+1485         return nullptr;
+1486 
+1487     case JLZN_HANDLE:
+1488         suffix = userspace::negated;
+1489     case JLZ_HANDLE:
+1490         suffix |= userspace::lessthan;
+1491         processor\&.setInstruction(userspace::JMPZ, suffix, 0, 1);
+1492         processor\&.expectAddress(0);
+1493         return nullptr;
+1494 
+1495 
+1496 
+1497 
+1498     case JEZNR_HANDLE:
+1499         suffix = userspace::negated;
+1500     case JEZR_HANDLE:
+1501         suffix |= userspace::jmproutine | userspace::equalto;
+1502         processor\&.setInstruction(userspace::JMPZ, suffix, 0, 0);
+1503         return nullptr;
+1504 
+1505     case JEZN_HANDLE:
+1506         suffix = userspace::negated;
+1507     case JEZ_HANDLE:
+1508         suffix |= userspace::equalto;
+1509         processor\&.setInstruction(userspace::JMPZ, suffix, 0, 1);
+1510         processor\&.expectAddress(0);
+1511         return nullptr;
+1512 
+1513 
+1514 
+1515 
+1516     case JGZNR_HANDLE:
+1517         suffix = userspace::negated;
+1518     case JGZR_HANDLE:
+1519         suffix |= userspace::jmproutine | userspace::greaterthan;
+1520         processor\&.setInstruction(userspace::JMPZ, suffix, 0, 0);
+1521         return nullptr;
+1522 
+1523     case JGZN_HANDLE:
+1524         suffix = userspace::negated;
+1525     case JGZ_HANDLE:
+1526         suffix |= userspace::greaterthan;
+1527         processor\&.setInstruction(userspace::JMPZ, suffix, 0, 1);
+1528         processor\&.expectAddress(0);
+1529         return nullptr;
+1530     }
+1531 
+1532 
+1533     return nullptr;
+1534 }
+.fi
+.PP
+References BBP::userspace::equalto, BBP::esa::esaProcessor::expectAddress(), BBP::userspace::greaterthan, JEZ_HANDLE, JEZN_HANDLE, JEZNR_HANDLE, JEZR_HANDLE, JGZ_HANDLE, JGZN_HANDLE, JGZNR_HANDLE, JGZR_HANDLE, JLZ_HANDLE, JLZN_HANDLE, JLZNR_HANDLE, JLZR_HANDLE, BBP::userspace::jmproutine, BBP::userspace::JMPZ, BBP::userspace::lessthan, BBP::userspace::negated, processor, and BBP::esa::esaProcessor::setInstruction()\&.
+.SS "BBP::esa::INSTRUCTION (lbs)"
+
+.PP
+Definition at line 1225 of file Actions\&.cpp\&.
+.PP
+.nf
+1226 {
+1227     // Set based on handle
+1228     processor\&.setInstruction(userspace::LBS, handle == LBS_HANDLE ? 0 : userspace::inplace, 0, 2);
+1229 
+1230     if (handle == LBS_HANDLE)
+1231         processor\&.expectAny(0);
+1232     else
+1233         processor\&.expectAddress(0);
+1234 
+1235     processor\&.expectAny(1);
+1236     return nullptr;
+1237 }
+.fi
+.PP
+References BBP::esa::esaProcessor::expectAddress(), BBP::esa::esaProcessor::expectAny(), BBP::userspace::inplace, BBP::userspace::LBS, LBS_HANDLE, processor, and BBP::esa::esaProcessor::setInstruction()\&.
+.SS "BBP::esa::INSTRUCTION (mem)"
+
+.PP
+Definition at line 899 of file Actions\&.cpp\&.
+.PP
+.nf
+900 {
+901     
+902     std::byte firsttype = 0;
+903     std::byte secondtype = 0;
+904 
+905     // Decode first type
+906     switch (handle)
+907     {
+908     case MOVB_HANDLE:
+909     case MOVBH_HANDLE:
+910     case MOVBW_HANDLE:
+911     case MOVBA_HANDLE:
+912         firsttype = userspace::fbyte;
+913         break;
+914 
+915     case MOVH_HANDLE:
+916     case MOVHB_HANDLE:
+917     case MOVHW_HANDLE:
+918     case MOVHA_HANDLE:
+919         firsttype = userspace::fhalfword;
+920         break;
+921 
+922     case MOVW_HANDLE:
+923     case MOVWB_HANDLE:
+924     case MOVWH_HANDLE:
+925     case MOVWA_HANDLE:
+926         firsttype = userspace::fword;
+927         break;
+928 
+929     case MOVA_HANDLE:
+930     case MOVAB_HANDLE:
+931     case MOVAH_HANDLE:
+932     case MOVAW_HANDLE:
+933         firsttype = userspace::faddress;
+934         break;
+935 
+936     }
+937 
+938     // Decode second type
+939     switch (handle)
+940     {
+941     case MOVB_HANDLE:
+942     case MOVHB_HANDLE:
+943     case MOVWB_HANDLE:
+944     case MOVAB_HANDLE:
+945         secondtype = userspace::sbyte;
+946         break;
+947 
+948     case MOVH_HANDLE:
+949     case MOVBH_HANDLE:
+950     case MOVWH_HANDLE:
+951     case MOVAH_HANDLE:
+952         secondtype = userspace::shalfword;
+953         break;
+954 
+955     case MOVW_HANDLE:
+956     case MOVBW_HANDLE:
+957     case MOVHW_HANDLE:
+958     case MOVAW_HANDLE:
+959         secondtype = userspace::sword;
+960         break;
+961 
+962     case MOVA_HANDLE:
+963     case MOVBA_HANDLE:
+964     case MOVHA_HANDLE:
+965     case MOVWA_HANDLE:
+966         secondtype = userspace::saddress;
+967         break;
+968     }
+969 
+970     processor\&.setInstruction(userspace::MEM, firsttype | secondtype, 0, 2);
+971     processor\&.expectAddress(0);
+972     processor\&.expectAny(1);
+973 
+974     return nullptr;
+975 }
+.fi
+.PP
+References BBP::esa::esaProcessor::expectAddress(), BBP::esa::esaProcessor::expectAny(), BBP::userspace::faddress, BBP::userspace::fbyte, BBP::userspace::fhalfword, BBP::userspace::fword, BBP::userspace::MEM, MOVA_HANDLE, MOVAB_HANDLE, MOVAH_HANDLE, MOVAW_HANDLE, MOVB_HANDLE, MOVBA_HANDLE, MOVBH_HANDLE, MOVBW_HANDLE, MOVH_HANDLE, MOVHA_HANDLE, MOVHB_HANDLE, MOVHW_HANDLE, MOVW_HANDLE, MOVWA_HANDLE, MOVWB_HANDLE, MOVWH_HANDLE, processor, BBP::userspace::saddress, BBP::userspace::sbyte, BBP::esa::esaProcessor::setInstruction(), and BBP::userspace::shalfword\&.
+.SS "BBP::esa::INSTRUCTION (mod)"
+
+.PP
+Definition at line 1197 of file Actions\&.cpp\&.
+.PP
+.nf
+1198 {
+1199     std::byte suffix = 0;
+1200 
+1201     switch (handle)
+1202     {
+1203     case ADD_HANDLE:
+1204         suffix = 0;
+1205         break;
+1206     case ADDF_HANDLE:
+1207         suffix = userspace::ffloat;
+1208         break;
+1209     case ADDIF_HANDLE:
+1210         suffix = userspace::sfloat;
+1211         break;
+1212     case ADDFF_HANDLE:
+1213         suffix = userspace::ffloat | userspace::sfloat;
+1214         break;
+1215     }
+1216     
+1217     // Mod always expects 2 arguments
+1218     processor\&.setInstruction(userspace::MOD, suffix, 0, 2);
+1219     processor\&.expectAny(0);
+1220     processor\&.expectAny(1);
+1221 
+1222     return nullptr;
+1223 }
+.fi
+.PP
+References ADD_HANDLE, ADDF_HANDLE, ADDFF_HANDLE, ADDIF_HANDLE, BBP::esa::esaProcessor::expectAny(), BBP::userspace::ffloat, BBP::userspace::MOD, processor, BBP::esa::esaProcessor::setInstruction(), and BBP::userspace::sfloat\&.
+.SS "BBP::esa::INSTRUCTION (mul)"
+
+.PP
+Definition at line 1125 of file Actions\&.cpp\&.
+.PP
+.nf
+1126 {
+1127     std::byte suffix = 0;
+1128 
+1129     switch (handle)
+1130     {
+1131     case MUL_HANDLE:
+1132         suffix = 0;
+1133         break;
+1134     case MULF_HANDLE:
+1135         suffix = userspace::ffloat;
+1136         break;
+1137     case MULIF_HANDLE:
+1138         suffix = userspace::sfloat;
+1139         break;
+1140     case MULFF_HANDLE:
+1141         suffix = userspace::ffloat | userspace::sfloat;
+1142         break;
+1143     }
+1144 
+1145     // If the handle is MUL, expect any amount of args
+1146     if (handle == MUL_HANDLE)
+1147     {
+1148         processor\&.setInstruction(userspace::MUL, suffix, 0, 8);
+1149         processor\&.surpressArgCountWarning();
+1150         processor\&.expectAny(0);
+1151         processor\&.expectAny(1);
+1152         processor\&.expectAny(2);
+1153         processor\&.expectAny(3);
+1154         processor\&.expectAny(4);
+1155         processor\&.expectAny(5);
+1156         processor\&.expectAny(6);
+1157         processor\&.expectAny(7);
+1158 
+1159         return nullptr;
+1160     }
+1161 
+1162     processor\&.setInstruction(userspace::MUL, suffix, 0, 2);
+1163     processor\&.expectAny(0);
+1164     processor\&.expectAny(1);
+1165 
+1166     return nullptr;
+1167 }
+.fi
+.PP
+References BBP::esa::esaProcessor::expectAny(), BBP::userspace::ffloat, BBP::userspace::MUL, MUL_HANDLE, MULF_HANDLE, MULFF_HANDLE, MULIF_HANDLE, processor, BBP::esa::esaProcessor::setInstruction(), BBP::userspace::sfloat, and BBP::esa::esaProcessor::surpressArgCountWarning()\&.
+.SS "BBP::esa::INSTRUCTION (neg)"
+
+.PP
+Definition at line 1017 of file Actions\&.cpp\&.
+.PP
+.nf
+1018 {
+1019     std::byte suffix = 0;
+1020 
+1021     switch (handle)
+1022     {
+1023     case NEG_HANDLE:
+1024         suffix = 0;
+1025         break;
+1026     case NEGF_HANDLE:
+1027         suffix = userspace::ffloat;
+1028         break;
+1029     }
+1030 
+1031     processor\&.setInstruction(userspace::NEG, suffix, 0, 1);
+1032     processor\&.expectAddress(0);
+1033 
+1034     return nullptr;
+1035 }
+.fi
+.PP
+References BBP::esa::esaProcessor::expectAddress(), BBP::userspace::ffloat, BBP::userspace::NEG, NEG_HANDLE, NEGF_HANDLE, processor, and BBP::esa::esaProcessor::setInstruction()\&.
+.SS "BBP::esa::INSTRUCTION (nil)"
+
+.PP
+Definition at line 808 of file Actions\&.cpp\&.
+.PP
+.nf
+809 {
+810     processor\&.setInstruction(userspace::NIL, 0, 0, 0);
+811 
+812     return nullptr;
+813 }
+.fi
+.PP
+References BBP::userspace::NIL, processor, and BBP::esa::esaProcessor::setInstruction()\&.
+.SS "BBP::esa::INSTRUCTION (not)"
+
+.PP
+Definition at line 1361 of file Actions\&.cpp\&.
+.PP
+.nf
+1362 {
+1363 
+1364     std::byte suffix = 0;
+1365 
+1366     switch (handle)
+1367     {
+1368     case NOT_HANDLE:
+1369         suffix = 0;
+1370         break;
+1371     case NOTIP_HANDLE:
+1372         suffix = userspace::inplace;
+1373         break;
+1374     case NOTB_HANDLE: // I AM ORB!!!!!!!!!!!!!!!!!!!!!!!!! FUCK YOU MOTHERFUCKERSSSSSSSSSSSSSSSSS
+1375         suffix = userspace::bitwise;
+1376         break;
+1377     case NOTBIP_HANDLE:
+1378         suffix = userspace::bitwise | userspace::inplace;
+1379         break;
+1380     }
+1381 
+1382     // Set instruction
+1383     processor\&.setInstruction(userspace::NOT, suffix, 0, 2);
+1384 
+1385     // If in place, expect writeable value
+1386     if (suffix | userspace::inplace)
+1387         processor\&.expectAddress(0);
+1388     else
+1389         processor\&.expectAny(0);
+1390 
+1391     // Expect anything on second arg
+1392     processor\&.expectAny(1);
+1393 
+1394     return nullptr;
+1395 }
+.fi
+.PP
+References BBP::userspace::bitwise, BBP::esa::esaProcessor::expectAddress(), BBP::esa::esaProcessor::expectAny(), BBP::userspace::inplace, BBP::userspace::NOT, NOT_HANDLE, NOTB_HANDLE, NOTBIP_HANDLE, NOTIP_HANDLE, processor, and BBP::esa::esaProcessor::setInstruction()\&.
+.SS "BBP::esa::INSTRUCTION (or)"
+
+.PP
+Definition at line 1253 of file Actions\&.cpp\&.
+.PP
+.nf
+1254 {
+1255 
+1256     std::byte suffix = 0;
+1257 
+1258     switch (handle)
+1259     {
+1260     case OR_HANDLE:
+1261         suffix = 0;
+1262         break;
+1263     case ORIP_HANDLE:
+1264         suffix = userspace::inplace;
+1265         break;
+1266     case ORB_HANDLE: // I AM ORB!!!!!!!!!!!!!!!!!!!!!!!!! FUCK YOU MOTHERFUCKERSSSSSSSSSSSSSSSSS
+1267         suffix = userspace::bitwise;
+1268         break;
+1269     case ORBIP_HANDLE:
+1270         suffix = userspace::bitwise | userspace::inplace;
+1271         break;
+1272     }
+1273 
+1274     // Set instruction
+1275     processor\&.setInstruction(userspace::OR, suffix, 0, 2);
+1276 
+1277     // If in place, expect writeable value
+1278     if (suffix | userspace::inplace)
+1279         processor\&.expectAddress(0);
+1280     else
+1281         processor\&.expectAny(0);
+1282 
+1283     // Expect anything on second arg
+1284     processor\&.expectAny(1);
+1285 
+1286     return nullptr;
+1287 }
+.fi
+.PP
+References BBP::userspace::bitwise, BBP::esa::esaProcessor::expectAddress(), BBP::esa::esaProcessor::expectAny(), BBP::userspace::inplace, BBP::userspace::OR, OR_HANDLE, ORB_HANDLE, ORBIP_HANDLE, ORIP_HANDLE, processor, and BBP::esa::esaProcessor::setInstruction()\&.
+.SS "BBP::esa::INSTRUCTION (page)"
+
+.PP
+Definition at line 1536 of file Actions\&.cpp\&.
+.PP
+.nf
+1537 {
+1538    switch(handle)
+1539    {
+1540    case PAGE_HANDLE:
+1541        processor\&.setInstruction(userspace::PAGE, userspace::assign | userspace::read | userspace::write, 0, 1);
+1542        processor\&.expectLiteral(0);
+1543        return nullptr;
+1544 
+1545    case PAGEAW_HANDLE:
+1546        processor\&.setInstruction(userspace::PAGE, userspace::assign | userspace::write, 0, 1);
+1547        processor\&.expectLiteral(0);
+1548        return nullptr;
+1549    case PAGEAR_HANDLE:
+1550        processor\&.setInstruction(userspace::PAGE, userspace::assign | userspace::read, 0, 1);
+1551        processor\&.expectLiteral(0);
+1552        return nullptr;
+1553 
+1554    case PAGEW_HANDLE:
+1555        processor\&.setInstruction(userspace::PAGE, userspace::write, 0, 2);
+1556        processor\&.expectLiteral(0);
+1557        processor\&.expectAny(1);
+1558        return nullptr;
+1559    case PAGER_HANDLE:
+1560        processor\&.setInstruction(userspace::PAGE, userspace::read, 0, 2);
+1561        processor\&.expectLiteral(0);
+1562        processor\&.expectAny(1);
+1563        return nullptr;
+1564 
+1565    case PALLOC_HANDLE:
+1566        processor\&.setInstruction(userspace::PAGE, userspace::assign | userspace::memoryOp | userspace::sizeOp, 0, 1);
+1567        processor\&.expectLiteral(0);
+1568        return nullptr;
+1569    case PFREE_HANDLE:
+1570        processor\&.setInstruction(userspace::PAGE, userspace::memoryOp | userspace::sizeOp, 0, 0);
+1571        return nullptr;
+1572 
+1573    case PAGES_HANDLE:
+1574        processor\&.setInstruction(userspace::PAGE, userspace::sizeOp | userspace::read, 0, 2);
+1575        processor\&.expectAddress(0);
+1576        processor\&.expectLiteral(1);
+1577        return nullptr;
+1578    case PAGEBC_HANDLE:
+1579        processor\&.setInstruction(userspace::PAGE, userspace::sizeOp | userspace::read | userspace::bytes, 0, 2);
+1580        processor\&.expectAddress(0);
+1581        processor\&.expectLiteral(1);
+1582        return nullptr;
+1583 
+1584    case PASSIGN_HANDLE:
+1585        processor\&.setInstruction(userspace::PAGE, userspace::assign | userspace::read | userspace::write | userspace::memoryOp, 0, 1);
+1586        processor\&.expectAddress(0);
+1587        return nullptr;
+1588    }
+1589 
+1590    return "APage instruction not recognized\&. Please ensure you are using the right version of ELSA\&.";
+1591 }
+.fi
+.PP
+References BBP::userspace::assign, BBP::userspace::bytes, BBP::esa::esaProcessor::expectAddress(), BBP::esa::esaProcessor::expectAny(), BBP::esa::esaProcessor::expectLiteral(), BBP::userspace::memoryOp, BBP::userspace::PAGE, PAGE_HANDLE, PAGEAR_HANDLE, PAGEAW_HANDLE, PAGEBC_HANDLE, PAGER_HANDLE, PAGES_HANDLE, PAGEW_HANDLE, PALLOC_HANDLE, PASSIGN_HANDLE, PFREE_HANDLE, processor, BBP::userspace::read, BBP::esa::esaProcessor::setInstruction(), BBP::userspace::sizeOp, and BBP::userspace::write\&.
+.SS "BBP::esa::INSTRUCTION (rbs)"
+
+.PP
+Definition at line 1239 of file Actions\&.cpp\&.
+.PP
+.nf
+1240 {
+1241     // Set based on handle
+1242     processor\&.setInstruction(userspace::LBS, handle == RBS_HANDLE ? 0 : userspace::inplace, 0, 2);
+1243 
+1244     if (handle == RBS_HANDLE)
+1245         processor\&.expectAny(0);
+1246     else
+1247         processor\&.expectAddress(0);
+1248 
+1249     processor\&.expectAny(1);
+1250     return nullptr;
+1251 }
+.fi
+.PP
+References BBP::esa::esaProcessor::expectAddress(), BBP::esa::esaProcessor::expectAny(), BBP::userspace::inplace, BBP::userspace::LBS, processor, RBS_HANDLE, and BBP::esa::esaProcessor::setInstruction()\&.
+.SS "BBP::esa::INSTRUCTION (signal)"
+
+.PP
+Definition at line 1593 of file Actions\&.cpp\&.
+.PP
+.nf
+1594 {
+1595     processor\&.setInstruction(userspace::SIGNAL, handle == SIGNALF_HANDLE ? 1 : 0, 0, handle == SIGNALF_HANDLE ? 2 : 1);
+1596     if (handle == SIGNALF_HANDLE)
+1597     {
+1598         processor\&.expectLiteral(0);
+1599         processor\&.expectLiteral(1);
+1600     }
+1601     else
+1602     {
+1603         processor\&.expectLiteral(0);
+1604     }
+1605 
+1606     return nullptr;
+1607 }
+.fi
+.PP
+References BBP::esa::esaProcessor::expectLiteral(), processor, BBP::esa::esaProcessor::setInstruction(), BBP::userspace::SIGNAL, and SIGNALF_HANDLE\&.
+.SS "BBP::esa::INSTRUCTION (stack)"
+
+.PP
+Definition at line 815 of file Actions\&.cpp\&.
+.PP
+.nf
+816 {
+817     std::byte suffix = 0;
+818 
+819     switch (handle)
+820     {
+821     case PUSH_HANDLE:
+822         suffix = userspace::push;
+823         break;
+824     case POP_HANDLE:
+825         suffix = userspace::pop;
+826         break;
+827     case POPA_HANDLE:
+828         suffix = userspace::pop | userspace::argument;
+829         break;
+830     }
+831 
+832     processor\&.setInstruction(userspace::STACK, suffix, 0, 1);
+833     if (handle == PUSH_HANDLE)
+834         processor\&.expectAny(0);
+835     else
+836         processor\&.expectAddress(0);
+837 
+838     return nullptr;
+839 }
+.fi
+.PP
+References BBP::userspace::argument, BBP::esa::esaProcessor::expectAddress(), BBP::esa::esaProcessor::expectAny(), BBP::userspace::pop, POP_HANDLE, POPA_HANDLE, processor, BBP::userspace::push, PUSH_HANDLE, BBP::esa::esaProcessor::setInstruction(), and BBP::userspace::STACK\&.
+.SS "BBP::esa::INSTRUCTION (sub)"
+
+.PP
+Definition at line 1081 of file Actions\&.cpp\&.
+.PP
+.nf
+1082 {
+1083     std::byte suffix = 0;
+1084 
+1085     switch (handle)
+1086     {
+1087     case SUB_HANDLE:
+1088         suffix = 0;
+1089         break;
+1090     case SUBF_HANDLE:
+1091         suffix = userspace::ffloat;
+1092         break;
+1093     case SUBIF_HANDLE:
+1094         suffix = userspace::sfloat;
+1095         break;
+1096     case SUBFF_HANDLE:
+1097         suffix = userspace::ffloat | userspace::sfloat;
+1098         break;
+1099     }
+1100 
+1101     // If the handle is SUB, expect any amount of args
+1102     if (handle == SUB_HANDLE)
+1103     {
+1104         processor\&.setInstruction(userspace::SUB, suffix, 0, 8);
+1105         processor\&.surpressArgCountWarning();
+1106         processor\&.expectAny(0);
+1107         processor\&.expectAny(1);
+1108         processor\&.expectAny(2);
+1109         processor\&.expectAny(3);
+1110         processor\&.expectAny(4);
+1111         processor\&.expectAny(5);
+1112         processor\&.expectAny(6);
+1113         processor\&.expectAny(7);
+1114 
+1115         return nullptr;
+1116     }
+1117 
+1118     processor\&.setInstruction(userspace::SUB, suffix, 0, 2);
+1119     processor\&.expectAny(0);
+1120     processor\&.expectAny(1);
+1121 
+1122     return nullptr;
+1123 }
+.fi
+.PP
+References BBP::esa::esaProcessor::expectAny(), BBP::userspace::ffloat, processor, BBP::esa::esaProcessor::setInstruction(), BBP::userspace::sfloat, BBP::userspace::SUB, SUB_HANDLE, SUBF_HANDLE, SUBFF_HANDLE, SUBIF_HANDLE, and BBP::esa::esaProcessor::surpressArgCountWarning()\&.
+.SS "BBP::esa::INSTRUCTION (xor)"
+
+.PP
+Definition at line 1289 of file Actions\&.cpp\&.
+.PP
+.nf
+1290 {
+1291 
+1292     std::byte suffix = 0;
+1293 
+1294     switch (handle)
+1295     {
+1296     case XOR_HANDLE:
+1297         suffix = 0;
+1298         break;
+1299     case XORIP_HANDLE:
+1300         suffix = userspace::inplace;
+1301         break;
+1302     case XORB_HANDLE: // I AM ORB!!!!!!!!!!!!!!!!!!!!!!!!! FUCK YOU MOTHERFUCKERSSSSSSSSSSSSSSSSS
+1303         suffix = userspace::bitwise;
+1304         break;
+1305     case XORBIP_HANDLE:
+1306         suffix = userspace::bitwise | userspace::inplace;
+1307         break;
+1308     }
+1309 
+1310     // Set instruction
+1311     processor\&.setInstruction(userspace::XOR, suffix, 0, 2);
+1312 
+1313     // If in place, expect writeable value
+1314     if (suffix | userspace::inplace)
+1315         processor\&.expectAddress(0);
+1316     else
+1317         processor\&.expectAny(0);
+1318 
+1319     // Expect anything on second arg
+1320     processor\&.expectAny(1);
+1321 
+1322     return nullptr;
+1323 }
+.fi
+.PP
+References BBP::userspace::bitwise, BBP::esa::esaProcessor::expectAddress(), BBP::esa::esaProcessor::expectAny(), BBP::userspace::inplace, processor, BBP::esa::esaProcessor::setInstruction(), BBP::userspace::XOR, XOR_HANDLE, XORB_HANDLE, XORBIP_HANDLE, and XORIP_HANDLE\&.
+.SS "BBP::esa::PRAGMA (atomic)"
+
+.PP
+Definition at line 358 of file Actions\&.cpp\&.
+.PP
+.nf
+359 {
+360     return nullptr;
+361 }
+.fi
+.SS "BBP::esa::PRAGMA (continue)"
+
+.PP
+Definition at line 368 of file Actions\&.cpp\&.
+.PP
+.nf
+369 {
+370     return nullptr;
+371 }
+.fi
+.SS "BBP::esa::PRAGMA (define)"
+
+.PP
+Definition at line 83 of file Actions\&.cpp\&.
+.PP
+.nf
+84 {
+85     // Hash next word\&.
+86     std::hash_t macroHash = 0;
+87     bool couldHash = context->moveToAndHashNextWord(macroHash, '\n');
+88 
+89     // Then move up one more\&.
+90     context->atPosition++;
+91 
+92     // If the word could not be hashed, return an error\&.
+93     if (!couldHash)
+94     {
+95         // Reset debug info
+96         context->resetInfo(context->debugInformation);
+97 
+98         // Set other pertinent info
+99         context->debugInformation\&.errName = "-Wempty-define";
+100         return "WEmpty #define directive ignored\&.";
+101     }
+102 
+103     // Otherwise print
+104     if (processor\&.beVerbose)
+105         std::printf("Defining 0x%08x\n", macroHash);
+106 
+107     // Look for empty definition in define pages\&.
+108     std::index_t reserved = 0;
+109     for (std::index_t idx = 0; idx < 256; idx++)
+110     {
+111         // If we have not found a spot yet, look for an empty slot\&.
+112         if (defines[idx] == 0 && reserved == 0)
+113             reserved = idx;
+114 
+115         // We can continue checking for duplicates
+116         if (defines[idx] == macroHash)
+117         {
+118             if (processor\&.beVerbose)
+119                 std::printf("Found duplicate hash at index %u\&.\n", idx);
+120 
+121             // Reset debug info
+122             context->resetInfo(context->debugInformation);
+123 
+124             // Set other pertinent info
+125             context->debugInformation\&.errName = "-Wduplicate-define";
+126             context->debugInformation\&.highlight = index;
+127             context->debugInformation\&.highlightLength = context->atPosition - index + 1;
+128             context->debugInformation\&.highlightmsg = "N#define found here";
+129             return "WDuplicate #define directive ignored\&.";
+130         }
+131     }
+132 
+133     // If we have not reserved anything yet, return error\&.
+134     if (reserved == 0)
+135     {
+136         // Reset debug info
+137         context->resetInfo(context->debugInformation);
+138 
+139         // Set other pertinent info
+140         return "E#define directive failed: page is full\&.";
+141     }
+142 
+143     // Just write the hash in, and maybe be verbose
+144     defines[reserved] = macroHash;
+145 
+146     if (processor\&.beVerbose)
+147         std::printf("Stored hash 0x%08x in %u\&.\n", macroHash, reserved);
+148 
+149     return nullptr;
+150 }
+.fi
+.PP
+References BBP::esa::esaProcessor::beVerbose, BBP::std::printf(), and processor\&.
+.SS "BBP::esa::PRAGMA (else)"
+
+.PP
+Definition at line 328 of file Actions\&.cpp\&.
+.PP
+.nf
+329 {
+330     // If else is found in isolation, emit warning
+331     if (shouldEmit\&.atElement == 0 || alreadyElsed\&.atElement == 0)
+332     {
+333         context->resetInfo(context->debugInformation);
+334         context->debugInformation\&.errName = "-Wstray-else";
+335         context->debugInformation\&.highlight = index;
+336         context->debugInformation\&.highlightLength = context->atPosition - index + 1;
+337         context->debugInformation\&.highlightmsg = "N#else found here";
+338         return "WConsider removing stray #else\&.";
+339     }
+340 
+341     if (alreadyElsed[alreadyElsed\&.atElement - 1])
+342     {
+343         // If already elsed, emit error\&.
+344         context->debugInformation\&.highlight = index;
+345         context->debugInformation\&.highlightLength = context->atPosition - index + 1;
+346         context->debugInformation\&.highlightmsg = "NHere";
+347         return "eMultiple #else directives used, only one is allowed\&.";
+348     }
+349 
+350     // Now flip it
+351     alreadyElsed[alreadyElsed\&.atElement - 1] = true;
+352     shouldEmit[shouldEmit\&.atElement - 1] = !shouldEmit[shouldEmit\&.atElement - 1];
+353     context->commentDepth = shouldEmit[shouldEmit\&.atElement - 1] ? 0 : 4;
+354 
+355     return nullptr;
+356 }
+.fi
+.SS "BBP::esa::PRAGMA (endif)"
+
+.PP
+Definition at line 280 of file Actions\&.cpp\&.
+.PP
+.nf
+281 {
+282     // If endif is found in isolation, emit warning
+283     if (shouldEmit\&.atElement == 0 || alreadyElsed\&.atElement == 0)
+284     {
+285         context->resetInfo(context->debugInformation);
+286         context->debugInformation\&.errName = "-Wstray-endif";
+287         context->debugInformation\&.highlight = index;
+288         context->debugInformation\&.highlightLength = context->atPosition - index + 1;
+289         context->debugInformation\&.highlightmsg = "N#endif found here";
+290         return "WConsider removing stray #endif\&.";
+291     }
+292 
+293     {
+294         // A place where variables go to die\&.
+295         bool thebin;
+296 
+297         //Bye-Bye!
+298         shouldEmit >> thebin;
+299         alreadyElsed >> thebin;
+300     }
+301 
+302     // If there is nothing in the stack, just go back to normal\&.
+303     if (shouldEmit\&.atElement == 0 || alreadyElsed\&.atElement == 0)
+304     {
+305         context->commentDepth = 0;
+306         if (processor\&.beVerbose)
+307             std::printf("#endif resulted in comment depth %u (nesting at %u)\&.\n", context->commentDepth, shouldEmit\&.atElement);
+308         return nullptr;
+309     }
+310 
+311     // Restore last settings\&.
+312     bool shouldContinue = shouldEmit[shouldEmit\&.atElement - 1];
+313     context->commentDepth = shouldContinue ? 0 : 4;
+314 
+315     if (processor\&.beVerbose)
+316     {
+317         std::printf("#endif resulted in comment depth %u (nesting at %u)\&.\n#endif: Restored ", context->commentDepth, shouldEmit\&.atElement);
+318         if (shouldContinue)
+319             std::printf("\e[0;32mGo\e[0;37m\&.\n\n");
+320         else
+321             std::printf("\e[0;31mStop\e[0;37m\&.\n\n");
+322     }
+323 
+324 
+325     return nullptr;
+326 }
+.fi
+.PP
+References BBP::esa::esaProcessor::beVerbose, BBP::std::printf(), and processor\&.
+.SS "BBP::esa::PRAGMA (handler)"
+
+.PP
+Definition at line 78 of file Actions\&.cpp\&.
+.PP
+.nf
+79 {
+80     return nullptr;
+81 }
+.fi
+.SS "BBP::esa::PRAGMA (handover)"
+
+.PP
+Definition at line 363 of file Actions\&.cpp\&.
+.PP
+.nf
+364 {
+365     return nullptr;
+366 }
+.fi
+.SS "BBP::esa::PRAGMA (ifdef)"
+
+.PP
+Definition at line 243 of file Actions\&.cpp\&.
+.PP
+.nf
+244 {
+245     // Hash next word\&.
+246     std::hash_t macroHash = 0;
+247     bool couldHash = context->moveToAndHashNextWord(macroHash, '\n');
+248 
+249     // If the word could not be hashed, return an error\&.
+250     if (!couldHash)
+251     {
+252         // Reset debug info
+253         context->resetInfo(context->debugInformation);
+254 
+255         // Set other pertinent info
+256         context->debugInformation\&.errName = "-Wempty-ifdef";
+257         return "WEmpty #ifdef directive ignored\&.";
+258     }
+259 
+260     // Look for that definition on the page
+261     for (std::index_t idx = 0; idx < 256; idx++)
+262     {
+263         // We don't care about anything that isn't our hash
+264         if (defines[idx] != macroHash)
+265             continue;
+266 
+267         // Entry found, which means that ifdef turns on\&.
+268         alreadyElsed << true;
+269         shouldEmit << false;
+270         return nullptr;
+271     }
+272 
+273     // Macro does not exist, so ifdef goes off\&.
+274     context->commentDepth = 4;
+275     alreadyElsed << false;
+276     shouldEmit << false;
+277     return nullptr;
+278 }
+.fi
+.SS "BBP::esa::PRAGMA (ifndef)"
+
+.PP
+Definition at line 197 of file Actions\&.cpp\&.
+.PP
+.nf
+198 {
+199     // Hash next word\&.
+200     std::hash_t macroHash = 0;
+201     bool couldHash = context->moveToAndHashNextWord(macroHash, '\n');
+202 
+203     // Then move up one more\&.
+204     context->atPosition++;
+205 
+206     // If the word could not be hashed, return an error\&.
+207     if (!couldHash)
+208     {
+209         // Reset debug info
+210         context->resetInfo(context->debugInformation);
+211 
+212         // Set other pertinent info
+213         context->debugInformation\&.errName = "-Wempty-ifndef";
+214         return "WEmpty #ifndef directive ignored\&.";
+215     }
+216 
+217 
+218 
+219     // Look for that definition on the page
+220     for (std::index_t idx = 0; idx < 256; idx++)
+221     {
+222         // We don't care about anything that isn't our hash
+223         if (defines[idx] != macroHash)
+224             continue;
+225 
+226         // Entry found, which means that ifndef turns off\&.
+227         context->commentDepth = 4;
+228         alreadyElsed << false;
+229         shouldEmit << false;
+230         if (processor\&.beVerbose)
+231             std::printf("Processing #ifndef, hash 0x%08x\&. Nesting at %u\&.\n#ifndef: \e[0;31mStop\e[0;37m\&.\n\n", macroHash, shouldEmit\&.atElement);
+232         return nullptr;
+233     }
+234 
+235     // Macro does not exist, so ifndef stays on, so do nothing
+236     alreadyElsed << false;
+237     shouldEmit << true;
+238     if (processor\&.beVerbose)
+239         std::printf("Processing #ifndef, hash 0x%08x\&. Nesting at %u\&.\n#ifndef: \e[0;32mGo\e[0;37m\&.\n\n", macroHash, shouldEmit\&.atElement);
+240     return nullptr;
+241 }
+.fi
+.PP
+References BBP::esa::esaProcessor::beVerbose, BBP::std::printf(), and processor\&.
+.SS "BBP::esa::PRAGMA (include)"
+
+.PP
+Definition at line 14 of file Actions\&.cpp\&.
+.PP
+.nf
+15 {
+16     // Move back one position
+17     context->atPosition--;
+18 
+19     // Move to the start of the next word, keeping in mind the newline\&.
+20     context->moveToStartOfNextWord(true);
+21 
+22     // Recalculate position
+23     context->calculateDebugPosition();
+24 
+25     // Since file names can appear between '<>' or '""' (but not both), create the following handle
+26     std::Lexer::lex_keywordhandle handles[] = { OPENANGLEBRACKET_HANDLE, CLOSEANGLEBRACKET_HANDLE, DOUBLEQUOTES_HANDLE, DOUBLEQUOTES_HANDLE };
+27 
+28     // Read delimiter information, and update debug information\&.
+29     std::errno_t error = processor\&.ExpectDelimiters(context, 4, handles, true, 1, 1, BACKSLASH_HANDLE, context->keywordStack\&.atElement + 2);
+30     context->debugInformation\&.highlightLength = context->atPosition - index;
+31 
+32     // Switch based on error code
+33     switch (error)
+34     {
+35     case EFAULT: // Somehow a nullpointer got here\&. Abort immediately\&.
+36         context->resetInfo(context->debugInformation);
+37         return "AMemory instability detected\&.";
+38     case EDOM: // Somehow, an odd number ended up as argc\&. Either programmer fault, or stack error\&. Abort immediately\&.
+39         context->resetInfo(context->debugInformation);
+40         return "APossible stack smashing detected\&.";
+41     case EEOF: // Found End Of File before anything was found\&.
+42         context->resetInfo(context->debugInformation);
+43         return "EExpected filename before end of file\&.";
+44     case ENOMSG:// Found End of Line before anything was found\&.
+45         context->resetInfo(context->debugInformation);
+46         return "EExpected filename before end of line\&.";
+47     case ELINEEND: // End of Line found before second delimiter
+48         context->resetInfo(context->debugInformation);
+49         return "EExpected closing delimiter before end of line\&.";
+50     case ENOANO: // Attempted to close delimiter before starting it\&.
+51         context->debugInformation\&.highlightmsg = "NHere";
+52         context->debugInformation\&.highlight = index;
+53         if (processor\&.handle == CLOSEANGLEBRACKET_HANDLE)
+54             return "eExpected '<' before '>'\&.";
+55         return "EExpected '\"' before filename\&.";
+56     case EILSEQ: // Mismatched delimiters
+57         context->debugInformation\&.highlightmsg = "NHere";
+58         context->debugInformation\&.highlight = index;
+59         if (processor\&.handle == CLOSEANGLEBRACKET_HANDLE)
+60             return "eExpected '>' after '<'\&.";
+61         return "EExpected '\"' after '\"'\&.";
+62     case EUNFOCS: // Somehow unfocused?
+63         context->resetInfo(context->debugInformation);
+64         return "AEncountered bug 0x01\&.";
+65     case EOVERFLOW: // More than one delimiter, can only really happen with <
+66         context->debugInformation\&.highlightmsg = "NHere";
+67         context->debugInformation\&.highlight = index;
+68         return "EUnexpected '<' after '<'\&.";
+69     }
+70 
+71     //context->resetInfo(context->debugInformation);
+72     context->debugInformation\&.highlight = processor\&.lastOpener;
+73     context->debugInformation\&.highlightLength = processor\&.firstCloser - processor\&.lastOpener;
+74     context->debugInformation\&.highlightmsg = "NHere";
+75     return processor\&.includeFile(context, index);
+76 }
+.fi
+.PP
+References BACKSLASH_HANDLE, CLOSEANGLEBRACKET_HANDLE, DOUBLEQUOTES_HANDLE, EDOM, EEOF, EFAULT, EILSEQ, ELINEEND, ENOANO, ENOMSG, EOVERFLOW, EUNFOCS, BBP::esa::esaProcessor::ExpectDelimiters(), BBP::esa::esaProcessor::firstCloser, BBP::esa::esaProcessor::handle, BBP::esa::esaProcessor::includeFile(), BBP::esa::esaProcessor::lastOpener, OPENANGLEBRACKET_HANDLE, and processor\&.
+.SS "BBP::esa::PRAGMA (undef)"
+
+.PP
+Definition at line 152 of file Actions\&.cpp\&.
+.PP
+.nf
+153 {
+154     // Hash next word\&.
+155     std::hash_t macroHash = 0;
+156     bool couldHash = context->moveToAndHashNextWord(macroHash, '\n');
+157 
+158     // If the word could not be hashed, return an error\&.
+159     if (!couldHash)
+160     {
+161         // Reset debug info
+162         context->resetInfo(context->debugInformation);
+163 
+164         // Set other pertinent info
+165         context->debugInformation\&.errName = "-Wempty-undefine";
+166         return "WEmpty #undefine directive ignored\&.";
+167     }
+168 
+169     // Otherwise print
+170     if (processor\&.beVerbose)
+171         std::printf("Undefining 0x%08x\n", macroHash);
+172 
+173     // Look for that definition on the page
+174     for (std::index_t idx = 0; idx < 256; idx++)
+175     {
+176         // We don't care about anything that isn't our hash
+177         if (defines[idx] != macroHash)
+178             continue;
+179 
+180         // Entry found, now delete it and be verbose
+181         if (processor\&.beVerbose)
+182             std::printf("Removed hash 0x%08x from %u\&.\n", macroHash, idx);
+183 
+184         defines[idx] = 0;
+185         return nullptr;
+186     }
+187 
+188     // Macro does not exist
+189     context->resetInfo(context->debugInformation);
+190     context->debugInformation\&.errName = "-Wundef";
+191     context->debugInformation\&.highlight = index;
+192     context->debugInformation\&.highlightLength = context->atPosition - index + 1;
+193     context->debugInformation\&.highlightmsg = "N#undef found here";
+194     return "W#undef directive failed: macro does not exist\&.";
+195 }
+.fi
+.PP
+References BBP::esa::esaProcessor::beVerbose, BBP::std::printf(), and processor\&.
+.SS "BBP::esa::TOKEN (backslash)"
+
+.PP
+Definition at line 770 of file Actions\&.cpp\&.
+.PP
+.nf
+771 {
+772     return nullptr;
+773 }
+.fi
+.SS "BBP::esa::TOKEN (caret)"
+
+.PP
+Definition at line 681 of file Actions\&.cpp\&.
+.PP
+.nf
+682 {
+683     // Check if any routines are available
+684     if (processor\&.routineStarts\&.atElement == 0)
+685     {
+686         // Reset info and throw error
+687         context->resetInfo(context->debugInformation);
+688         return "ECannot find address of routine since '^' is not within routine\&.";
+689     }
+690 
+691     // Set argument
+692     processor\&.numericalArgument({ processor\&.routineStarts[processor\&.routineStarts\&.atElement - 1] }, false);
+693 
+694     // If instruction is part of a jmp, jmpr, or jmpc set, flag suffix absolute\&.
+695     if (processor\&.instruction\&.header\&.opcode == userspace::JMP || processor\&.instruction\&.header\&.opcode == userspace::JMPZ || processor\&.instruction\&.header\&.opcode == userspace::JMPC)
+696         processor\&.instruction\&.header\&.suffix |= userspace::absoluteJmp;
+697     return nullptr;
+698 }
+.fi
+.PP
+References BBP::userspace::absoluteJmp, BBP::std::Stack< K >::atElement, BBP::userspace::Instruction::header, BBP::esa::esaProcessor::instruction, BBP::userspace::JMP, BBP::userspace::JMPC, BBP::userspace::JMPZ, BBP::esa::esaProcessor::numericalArgument(), BBP::userspace::Instruction::Head::opcode, processor, BBP::esa::esaProcessor::routineStarts, and BBP::userspace::Instruction::Head::suffix\&.
+.SS "BBP::esa::TOKEN (closeDelimiter)"
+
+.PP
+Definition at line 671 of file Actions\&.cpp\&.
+.PP
+.nf
+672 {
+673     return nullptr;
+674 }
+.fi
+.SS "BBP::esa::TOKEN (colon)"
+
+.PP
+Definition at line 736 of file Actions\&.cpp\&.
+.PP
+.nf
+737 {
+738     // If not defining a instruction, return error
+739     if (!processor\&.lineIsDefiningInstruction)
+740         return "E':' Can only be used when constructing an instruction\&.";
+741 
+742     // Get offset
+743     std::offset_t subscriber = processor\&.calculateAbsoluteArgumentOffset();
+744 
+745     // Check if instruction is routine\&. If so, Add routine start\&. Also flag absolute (Since this measures distance in bytes, not instructions)
+746     if (processor\&.instruction\&.header\&.opcode == userspace::CTRL && processor\&.instruction\&.header\&.suffix == userspace::routine)
+747     {
+748         // Add routine start
+749         processor\&.routineStarts << subscriber;
+750 
+751         // Flag absolute
+752         processor\&.instruction\&.header\&.suffix |= userspace::absolute;
+753     }
+754 
+755     // Check if allowed to add subscribers
+756     if (processor\&.subscribers\&.atElement >= processor\&.subscribers\&.max_elements)
+757         return "EReached the limit of consecutive ':' tokens allowed\&.";
+758 
+759     // Add subscriber to subscribers stack
+760     processor\&.subscribers << subscriber;
+761 
+762     // Increase subscriber count
+763     std::read(&processor\&.routineSubscriberCount, processor\&.routineStarts\&.atElement)++;
+764 
+765     // Set argument
+766     processor\&.numericalArgument({'EMMA'}, false);
+767     return nullptr;
+768 }
+.fi
+.PP
+References BBP::userspace::absolute, BBP::std::Stack< K >::atElement, BBP::esa::esaProcessor::calculateAbsoluteArgumentOffset(), BBP::userspace::CTRL, BBP::userspace::Instruction::header, BBP::esa::esaProcessor::instruction, BBP::esa::esaProcessor::lineIsDefiningInstruction, BBP::std::Stack< K >::max_elements, BBP::esa::esaProcessor::numericalArgument(), BBP::userspace::Instruction::Head::opcode, processor, BBP::userspace::read, BBP::userspace::routine, BBP::esa::esaProcessor::routineStarts, BBP::esa::esaProcessor::routineSubscriberCount, BBP::esa::esaProcessor::subscribers, and BBP::userspace::Instruction::Head::suffix\&.
+.SS "BBP::esa::TOKEN (comma)"
+
+.PP
+Definition at line 676 of file Actions\&.cpp\&.
+.PP
+.nf
+677 {
+678     return nullptr;
+679 }
+.fi
+.SS "BBP::esa::TOKEN (doubleQuote)"
+
+.PP
+Definition at line 702 of file Actions\&.cpp\&.
+.PP
+.nf
+703 {
+704     
+705 
+706     // If inside a string, exit out of the string
+707     if (context->literalDepth)
+708     {
+709         // Exit the string
+710         context->literalDepth = 0;
+711 
+712         // Check if symbol is extern
+713         if (processor\&.symbol\&.subtype & SYMBOL_TYPE::SYMTMOD_EXTERN)
+714             return "ECannot add data to extern symbol";
+715 
+716         // If also defining symbol, add numericals\&.
+717         if (processor\&.lineIsDefiningSymbolDefinition)
+718         {
+719             for (std::index_t i = stringStart; i < context->atPosition - 1; i++)
+720                 processor\&.addNumerical(std::Lexer::numerical_t{ (std::word)context->data\&.data[i] }, false);
+721         }
+722 
+723         return nullptr;
+724     }
+725 
+726     context->literalDepth = context->keywordStack[handle]\&.considerLiteralDepth;
+727     stringStart = context->atPosition;
+728     return nullptr;
+729 }
+.fi
+.PP
+References BBP::esa::esaProcessor::addNumerical(), BBP::Locale::Japanese::i, BBP::esa::esaProcessor::lineIsDefiningSymbolDefinition, processor, stringStart, BBP::std::Lexer::lex_thing::subtype, BBP::esa::esaProcessor::symbol, and SYMTMOD_EXTERN\&.
+.SS "BBP::esa::TOKEN (newline)"
+
+.PP
+Definition at line 482 of file Actions\&.cpp\&.
+.PP
+.nf
+483 {
+484 
+485     // Check if procedure is being defined, and is also marked extern\&. Because if so, emit empty function
+486     if (processor\&.lineIsDefiningProcedure && processor\&.externProcedure)
+487     {
+488         // Emit procedure
+489         std::conststring error = processor\&.emitProcedure();
+490 
+491         // Now reset procedure flags
+492         processor\&.procedureName\&.static_data[0] = 0;
+493         processor\&.procedureHash = 0;
+494         processor\&.startedAt = 0;
+495         processor\&.endedAt = 0;
+496         processor\&.procedureArgumentCount = 0;
+497         processor\&.doneDeclaringProcedure = false;
+498         processor\&.externProcedure = false;
+499 
+500         // Also reset symbol
+501         processor\&.resetSymbol();
+502 
+503         // Just for logging
+504         return error;
+505     }
+506 
+507     // Reset this flag
+508     processor\&.lineIsDefiningProcedure = false;
+509 
+510     // If inside a comment, exit out and continue as normals
+511     if (context->commentDepth == 1)
+512     {
+513         context->commentDepth = 0;
+514         return nullptr;
+515     }
+516 
+517     // If this line was for a symbol definition, reset it here\&.
+518     // Also, if symbol is marked extern and this point is reached, also run it\&. Because this is definately not a procedure then\&.
+519     if (processor\&.lineIsDefiningSymbolDefinition || (processor\&.symbol\&.subtype & SYMBOL_TYPE::SYMTMOD_EXTERN))
+520     {
+521         // Also reset extern procedure flag
+522         processor\&.externProcedure = false;
+523 
+524         processor\&.lineIsDefiningSymbolDefinition = false;
+525         switch (processor\&.buildSymbol())
+526         {
+527         case 0:
+528             return nullptr;
+529         case ENOBUFS:
+530             return "EUnable to register quasi symbol: quasi symbol limit reached\&.";
+531         case EADDRINUSE:
+532             return "EIdentifier already used\&.";
+533         case EBADR:
+534             return "ECannot assign symbol to procedure marked extern\&.";
+535         case 2:
+536             return "NOverriding extern symbol\&.";
+537         default:
+538             return "ECould not export symbol\&.";
+539         }
+540     }
+541 
+542     // If this line was for a instruction definition, reset it here\&.
+543     if (processor\&.lineIsDefiningInstruction)
+544     {
+545         // Emit instruction
+546         processor\&.emitInstruction();
+547 
+548         // We want to clear remains
+549         processor\&.resetInstruction();
+550         
+551         // Stop defining instructions
+552         processor\&.lineIsDefiningInstruction = false;
+553         return nullptr;
+554     }
+555 
+556     return nullptr;
+557 }
+.fi
+.PP
+References BBP::esa::esaProcessor::buildSymbol(), BBP::std::conststring, BBP::esa::esaProcessor::doneDeclaringProcedure, EADDRINUSE, EBADR, BBP::esa::esaProcessor::emitInstruction(), BBP::esa::esaProcessor::emitProcedure(), BBP::esa::esaProcessor::endedAt, ENOBUFS, BBP::esa::esaProcessor::externProcedure, BBP::esa::esaProcessor::lineIsDefiningInstruction, BBP::esa::esaProcessor::lineIsDefiningProcedure, BBP::esa::esaProcessor::lineIsDefiningSymbolDefinition, BBP::esa::esaProcessor::procedureArgumentCount, BBP::esa::esaProcessor::procedureHash, BBP::esa::esaProcessor::procedureName, processor, BBP::esa::esaProcessor::resetInstruction(), BBP::esa::esaProcessor::resetSymbol(), BBP::esa::esaProcessor::startedAt, BBP::std::STATIC_PAGE< T, K >::static_data, BBP::std::Lexer::lex_thing::subtype, BBP::esa::esaProcessor::symbol, and SYMTMOD_EXTERN\&.
+.SS "BBP::esa::TOKEN (openDelimiter)"
+
+.PP
+Definition at line 566 of file Actions\&.cpp\&.
+.PP
+.nf
+567 {
+568 
+569     // Not interested if this keyword is not '('\&.
+570     if (handle != OPENBRACKET_HANDLE)
+571         return nullptr;
+572 
+573 
+574     // Not doing anything with procedures, do this
+575     if (!processor\&.lineIsDefiningProcedure)
+576     {
+577         // Well, we might as well flag quasi symbol
+578         processor\&.lineIsDefiningSymbolDefinition = true;
+579 
+580         // Start of the name is here
+581         processor\&.symbol\&.start = context->atPosition;
+582 
+583         // When in isolation, this means symbol definition\&. Get a hash, and move on\&.
+584         std::hash_t hash = 0;
+585         bool couldHash = context->moveToAndHashThisWord(hash, ')');
+586 
+587         // End of the name is here
+588         processor\&.symbol\&.end = context->atPosition;
+589 
+590         // If the hasher could not hash, return error\&.
+591         if (!couldHash)
+592             return "EInvalid symbol identifier\&.";
+593 
+594         // If the hasher reads 0, it means empty object\&.
+595         if (hash == 0 || hash == 0x1194d79c) // Magic number UwU
+596             return "ESymbol identifier cannot be empty\&.";
+597 
+598         // Move up and recalculate position
+599         context->atPosition++;
+600         context->calculateDebugPosition();
+601 
+602         return processor\&.setHash(hash);
+603     }
+604 
+605     // This must be the procedure identifier if this is the first time this is found
+606     if (std::read(&processor\&.procedureName, 0) == 0)
+607     {
+608         // Get procedure hash
+609         std::word start = context->atPosition;
+610 
+611         // Hash procedure identifier
+612         std::hash_t hash = 0;
+613         bool couldHash = context->moveToAndHashThisWord(hash, ')');
+614 
+615         // End of the name is here
+616         std::word end = context->atPosition;
+617 
+618         // If hashing failed, return error
+619         if (!couldHash)
+620             return "Einvalid procedure Identifier\&.";
+621 
+622         // Otherwise, if hash is empty, return error
+623         if (hash == 0 || hash == 0x1194d79c) // OMG, stop it with the magic numbers daddy ~~
+624             return "EProcedure identifier cannot be empty\&.";
+625 
+626         // Move up one and calculate position again
+627         context->atPosition++;
+628         context->calculateDebugPosition();
+629 
+630         // Set procedure names
+631         processor\&.setProcedureIdentifier(start, end, hash);
+632 
+633         // Return success
+634         return nullptr;
+635     }
+636     else if (!processor\&.doneDeclaringProcedure)
+637     {
+638         // This must be the second argument, I\&.E\&., the size\&.
+639 
+640         // Then read the character, and do something based on it\&.
+641         std::string_element c = std::read(&context->data, context->atPosition);
+642 
+643         // Check if within '0' and '8' (48 and 56)
+644         if (c >= '0' && c <= '8')
+645             processor\&.setProcedureArgCount(c - '0');
+646         else if (c == ')')
+647             return "EExpected a numerical constant between '0' and '8' (inclusive) between '()'\&.";
+648         else
+649             return "EInvalid procedure argument count\&.";
+650 
+651         // Now check for ')' immediately after
+652         context->atPosition++;
+653         context->calculateDebugPosition();
+654 
+655         // Then read the character, and do something based on it\&.
+656         c = std::read(&context->data, context->atPosition);
+657 
+658         if (c == ')')
+659             return nullptr;
+660         return "EExpected ')' immediately after numerical constant\&.";
+661     }
+662     else
+663     {
+664         return "EUnexpected argument supplied during procedure declaration\&.";
+665     }
+666 
+667 
+668     return nullptr;
+669 }
+.fi
+.PP
+References BBP::esa::esaProcessor::doneDeclaringProcedure, BBP::std::Lexer::lex_thing::end, BBP::Locale::Japanese::hash, BBP::esa::esaProcessor::lineIsDefiningProcedure, BBP::esa::esaProcessor::lineIsDefiningSymbolDefinition, OPENBRACKET_HANDLE, BBP::esa::esaProcessor::procedureName, processor, BBP::userspace::read, BBP::esa::esaProcessor::setHash(), BBP::esa::esaProcessor::setProcedureArgCount(), BBP::esa::esaProcessor::setProcedureIdentifier(), BBP::std::Lexer::lex_thing::start, and BBP::esa::esaProcessor::symbol\&.
+.SS "BBP::esa::TOKEN (semicolon)"
+
+.PP
+Definition at line 559 of file Actions\&.cpp\&.
+.PP
+.nf
+560 {
+561     // Set comment depth to 1
+562     context->commentDepth = 1;
+563     return nullptr;
+564 }
+.fi
+.SS "BBP::esa::TOKEN (singleQuote)"
+
+.PP
+Definition at line 731 of file Actions\&.cpp\&.
+.PP
+.nf
+732 {
+733     return nullptr;
+734 }
+.fi
+.SS "BBP::esa::TOKEN (size)"
+
+.PP
+Definition at line 775 of file Actions\&.cpp\&.
+.PP
+.nf
+776 {
+777     switch (handle)
+778     {
+779     case DN_HANDLE:
+780         return processor\&.setSize(4);
+781     case DB_HANDLE:
+782         return processor\&.setSize(8);
+783     case DH_HANDLE:
+784         return processor\&.setSize(16);
+785     case DI_HANDLE:
+786         return processor\&.setSize(20);
+787     case DA_HANDLE:
+788         return processor\&.setSize(24);
+789     case DW_HANDLE:
+790         return processor\&.setSize(32);
+791     }
+792 
+793     // Will select default
+794     return processor\&.setSize(1);
+795 }
+.fi
+.PP
+References DA_HANDLE, DB_HANDLE, DH_HANDLE, DI_HANDLE, DN_HANDLE, DW_HANDLE, processor, and BBP::esa::esaProcessor::setSize()\&.
+.SH "Variable Documentation"
+.PP 
+.SS "const char BBP::esa::flags[23][8]\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= { {true, false, false, false, false, true, 0, 0},
+                                            {true, false, false, false, false, true, 0, 0},
+                                            {false, false, false, true, false, true, 0, 0},
+                                            {false, false, false, false, false, true, 0, 0},
+                                            {false, false, false, false, false, true, 0, 0},
+                                            {false, false, false, false, false, true, 0, 0},
+                                            {false, false, false, false, false, true, 0, 0},
+                                            {false, false, false, false, false, true, 0, 0},
+                                            {false, false, false, false, false, true, 0, 0},
+                                            {false, false, false, false, false, true, 0, 0},
+                                            {false, false, false, false, false, true, 0, 0},
+                                            {false, false, false, false, false, true, 0, 0},
+                                            {false, false, false, false, false, true, 0, 0},
+                                            {false, false, false, false, true, true, 0, 1},
+                                            {false, false, false, false, true, true, 0, 2},
+                                            {false, false, false, false, false, true, 0, 0},
+                                            {false, false, true, false, false, true, 0, 0},
+                                            {false, false, false, false, false, false, 0, 0},
+                                            {false, false, false, false, false, false, 0, 0},
+                                            {false, false, false, false, false, false, 0, 0},
+                                            {false, false, false, false, false, false, 0, 0},
+                                            {false, false, false, false, false, false, 0, 0},
+                                            {false, false, false, false, false, false, 0, 0} }
+.fi
+.PP
+Definition at line 64 of file Processor\&.cpp\&.
+.PP
+Referenced by BBP::std::ELF::ELFBuilder::emitHeader(), and BBP::esa::esaProcessor::setInstruction()\&.
+.SS "const \fBstd::Lexer::lex_action\fP BBP::esa::keywordActions[]\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= { pragma_include, pragma_handler, pragma_define, pragma_undef, pragma_ifndef, pragma_ifdef, pragma_endif, pragma_else,
+                                                                pragma_atomic, pragma_handover, pragma_continue, kw_static, kw_const, kw_virtual, kw_extern, kw_procedure, kw_end, kw_endroutine }
+.fi
+.PP
+Definition at line 39 of file Processor\&.cpp\&.
+.PP
+Referenced by BBP::esa::esaProcessor::esaProcessor()\&.
+.SS "constexpr \fBstd::size_t\fP BBP::esa::keywordCount = 18\fC [static]\fP, \fC [constexpr]\fP"
+
+.PP
+Definition at line 35 of file Processor\&.cpp\&.
+.PP
+Referenced by BBP::esa::esaProcessor::esaProcessor()\&.
+.SS "const char* const BBP::esa::keywords[]\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= { "#include", "#handler", "#define", "#undef", "#ifndef", "#ifdef", "#endif", "#else", "#atomic", "#handover", "#continue",
+                                                "static", "const", "virtual", "extern", "procedure", "end", "@@" }
+.fi
+.PP
+Definition at line 9 of file Processor\&.cpp\&.
+.PP
+Referenced by BBP::esa::esaProcessor::esaProcessor(), BBP::std::Lexer::lex_context::moveToNextKeyword(), and BBP::std::Lexer::lex_context::parseFile()\&.
+.SS "const char* const BBP::esa::mnemonics[]\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {"nil$","push$","pop$","popa$","ret$","call$",
+        "callp$","syscall$",
+        "movb$","movh$","movw$","mova$",
+        "movbh$", "movbw$", "movba$",
+        "movhb$", "movhw$", "movha$",
+        "movwb$", "movwh$", "movwa$",
+        "movab$", "movah$", "movaw$",
+        "inc$","dec$","neg$",
+        "add$","sub$","mul$","div$","mod$","incf$","decf$",
+        "negf$","addf$","subf$","mulf$","divf$","modf$","addff$",
+        "subff$","mulff$","divff$","modff$","addif$","subif$",
+        "mulif$","divif$","modif$","lbs$","rbs$","or$","xor$",
+        "and$","not$","orb$","xorb ","andb$","notb$","lbsip$","rbsip$","orip$",
+        "xorip$","andip$","notip$","orbip$","xorbip$","andbip ","notbip$",
+        "comp$","flag$","routine$","jmp$","jlz$","jgz$","jez$","jlt$",
+        "jgt$","jlzn$","jgzn$","jezn$","jltn$","jgtn$","jmpr$","jlzr$",
+        "jgzr$","jezr$","jltr$","jgtr$","jlznr$","jgznr$","jeznr$",
+        "jltnr$","jgtnr$","page$","pageaw$","pagear$","pagew$",
+        "pager$","palloc$","pfree$","pages$","pagebc$","passign$",
+        "signal$","signalf$","hlt$","hcf$","hbu$"}
+.fi
+.PP
+Definition at line 14 of file Processor\&.cpp\&.
+.SS "const \fBstd::Lexer::lex_action\fP BBP::esa::mnemonicsActions[]\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {mn_nil,mn_stack,mn_stack,mn_stack,mn_ctrl,
+    mn_ctrl,mn_ctrl,mn_ctrl,mn_mem,mn_mem,
+    mn_mem,mn_mem,mn_mem,mn_mem,mn_mem,mn_mem,
+    mn_mem,mn_mem,mn_mem,mn_mem,mn_mem,mn_mem,
+    mn_mem,mn_mem,mn_inc,mn_dec,mn_neg,mn_add,
+    mn_sub,mn_mul,mn_div,mn_mod,mn_inc,mn_dec,
+    mn_neg,mn_add,mn_sub,mn_mul,mn_div,mn_mod,
+    mn_add,mn_sub,mn_mul,mn_div,mn_mod,mn_add,
+    mn_sub,mn_mul,mn_div,mn_mod,mn_lbs,mn_rbs,
+    mn_or,mn_xor,mn_and,mn_not,mn_or,mn_xor,mn_and,
+    mn_not,mn_lbs,mn_rbs,mn_or,mn_xor,mn_and,
+    mn_not,mn_or,mn_xor,mn_and,mn_not,mn_flag,mn_flag,mn_ctrl,
+    mn_jmp,mn_jmpz,mn_jmpz,mn_jmpz,mn_jmpc,mn_jmpc,
+    mn_jmpz,mn_jmpz,mn_jmpz,mn_jmpc,mn_jmpc,mn_jmp,
+    mn_jmpz,mn_jmpz,mn_jmpz,mn_jmpc,mn_jmpc,mn_jmpz,
+    mn_jmpz,mn_jmpz,mn_jmpc,mn_jmpc,mn_page,mn_page,
+    mn_page,mn_page,mn_page,mn_page,mn_page,
+    mn_page,mn_page,mn_page,mn_signal,mn_signal,
+    mn_halt,mn_halt,mn_halt}
+.fi
+.PP
+Definition at line 44 of file Processor\&.cpp\&.
+.SS "constexpr \fBstd::size_t\fP BBP::esa::mnemonicsCount = 110\fC [static]\fP, \fC [constexpr]\fP"
+
+.PP
+Definition at line 37 of file Processor\&.cpp\&.
+.PP
+Referenced by BBP::esa::esaProcessor::esaProcessor()\&.
+.SS "\fBesaProcessor\fP BBP::esa::processor"
+
+.PP
+Definition at line 88 of file Processor\&.cpp\&.
+.PP
+Referenced by _numerical(), _unkown(), ACTION(), BBP::esa::esaProcessor::addReservedIdentifier(), BBP::esa::esaProcessor::buildSymbol(), INSTRUCTION(), PRAGMA(), BBP::esa::esaProcessor::saveIdentifier(), BBP::esa::esaProcessor::setInstruction(), BBP::esa::esaProcessor::setProcedureAddress(), BBP::smile_main(), and TOKEN()\&.
+.SS "const \fBstd::Lexer::lex_action\fP BBP::esa::tokenActions[]\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= { tk_newline, tk_newline, tk_semicolon, tk_openDelimiter, tk_closeDelimiter, tk_comma, tk_openDelimiter, tk_closeDelimiter,
+                                                                tk_openDelimiter, tk_closeDelimiter, tk_caret, tk_openDelimiter, tk_closeDelimiter, tk_doubleQuote, tk_singleQuote, tk_colon, tk_backslash,
+                                                                tk_size, tk_size, tk_size, tk_size, tk_size, tk_size }
+.fi
+.PP
+Definition at line 41 of file Processor\&.cpp\&.
+.SS "constexpr \fBstd::size_t\fP BBP::esa::tokenCount = 23\fC [static]\fP, \fC [constexpr]\fP"
+
+.PP
+Definition at line 36 of file Processor\&.cpp\&.
+.PP
+Referenced by BBP::esa::esaProcessor::esaProcessor()\&.
+.SS "const char* const BBP::esa::tokens[] = { '\\r', '\\n', ';', '(', ')', ',', '[', ']', '{', '}', '^', '<', '>', '\\'', ''', ':', '\\\\', 'dn', 'db', 'dh', 'di', 'da', 'dw' }\fC [static]\fP"
+
+.PP
+Definition at line 12 of file Processor\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

@@ -1,0 +1,1007 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="df/dd8/stdint_8h" kind="file" language="C++">
+    <compoundname>stdint.h</compoundname>
+    <includedby refid="d3/dce/stddef_8h" local="yes">stddef.h</includedby>
+    <includedby refid="d2/d33/Time_8h" local="yes">Time.h</includedby>
+    <includedby refid="da/d39/stdint_8cpp" local="yes">stdint.cpp</includedby>
+    <invincdepgraph>
+      <node id="50">
+        <label>ELFHeader.cpp</label>
+        <link refid="d9/d1d/ELFHeader_8cpp"/>
+      </node>
+      <node id="32">
+        <label>Start.cpp</label>
+        <link refid="d6/d8a/MINGW64_2Start_8cpp"/>
+      </node>
+      <node id="11">
+        <label>Shell.cpp</label>
+        <link refid="df/d6c/Shell_8cpp"/>
+      </node>
+      <node id="3">
+        <label>Memory.h</label>
+        <link refid="de/d5c/Memory_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>Executable.cpp</label>
+        <link refid="d6/dc6/Executable_8cpp"/>
+      </node>
+      <node id="9">
+        <label>Logout.cpp</label>
+        <link refid="dc/d9b/Logout_8cpp"/>
+      </node>
+      <node id="28">
+        <label>Start.cpp</label>
+        <link refid="db/db7/Start_8cpp"/>
+      </node>
+      <node id="86">
+        <label>Memory.cpp</label>
+        <link refid="de/d25/EMULATOR_2Memory_8cpp"/>
+      </node>
+      <node id="85">
+        <label>Memory.cpp</label>
+        <link refid="d8/dcc/Memory_8cpp"/>
+      </node>
+      <node id="74">
+        <label>SegmentBuilder.cpp</label>
+        <link refid="d0/dc2/SegmentBuilder_8cpp"/>
+      </node>
+      <node id="38">
+        <label>Terminal.cpp</label>
+        <link refid="d3/d0d/Terminal_8cpp"/>
+      </node>
+      <node id="14">
+        <label>Actions.cpp</label>
+        <link refid="da/d4c/Actions_8cpp"/>
+      </node>
+      <node id="12">
+        <label>Smile.cpp</label>
+        <link refid="de/dd1/Smile_8cpp"/>
+      </node>
+      <node id="78">
+        <label>Executable.h</label>
+        <link refid="de/da9/Executable_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>Graphics.cpp</label>
+        <link refid="d3/df1/EMULATOR_2Graphics_8cpp"/>
+      </node>
+      <node id="101">
+        <label>stdint.cpp</label>
+        <link refid="da/d39/stdint_8cpp"/>
+      </node>
+      <node id="99">
+        <label>Time.cpp</label>
+        <link refid="d9/df4/MINGW64_2Time_8cpp"/>
+      </node>
+      <node id="21">
+        <label>ELSABackend.h</label>
+        <link refid="d5/dfd/ELSABackend_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>File.cpp</label>
+        <link refid="d6/d5a/env__MINGW64_2File_8cpp"/>
+      </node>
+      <node id="96">
+        <label>Time.h</label>
+        <link refid="d2/d33/Time_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Auxiliary.cpp</label>
+        <link refid="de/dec/Auxiliary_8cpp"/>
+      </node>
+      <node id="33">
+        <label>tterm.cpp</label>
+        <link refid="d0/d7e/MINGW64_2tterm_8cpp"/>
+      </node>
+      <node id="94">
+        <label>Opcodes.h</label>
+        <link refid="d1/d12/Opcodes_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="87">
+        <label>Memory.cpp</label>
+        <link refid="dc/d64/MINGW64_2Memory_8cpp"/>
+      </node>
+      <node id="4">
+        <label>Strings.h</label>
+        <link refid="de/d53/Strings_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="84">
+        <label>Resources.h</label>
+        <link refid="d0/d33/Resources_8h"/>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>Registers.cpp</label>
+        <link refid="d9/de4/Registers_8cpp"/>
+      </node>
+      <node id="92">
+        <label>ELF32.h</label>
+        <link refid="d1/d5d/ELF32_8h"/>
+        <childnode refid="59" relation="include">
+        </childnode>
+      </node>
+      <node id="97">
+        <label>Time.cpp</label>
+        <link refid="d8/d38/Time_8cpp"/>
+      </node>
+      <node id="17">
+        <label>EABI.cpp</label>
+        <link refid="d2/d8c/EABI_8cpp"/>
+      </node>
+      <node id="39">
+        <label>Graphics.cpp</label>
+        <link refid="df/d3f/Graphics_8cpp"/>
+      </node>
+      <node id="41">
+        <label>Graphics.cpp</label>
+        <link refid="d9/db9/MINGW64_2Graphics_8cpp"/>
+      </node>
+      <node id="19">
+        <label>Processor.cpp</label>
+        <link refid="d6/d69/Processor_8cpp"/>
+      </node>
+      <node id="100">
+        <label>Time.cpp</label>
+        <link refid="d1/d81/UBUNTU_2Time_8cpp"/>
+      </node>
+      <node id="72">
+        <label>SectionBuilder.cpp</label>
+        <link refid="d6/d8a/SectionBuilder_8cpp"/>
+      </node>
+      <node id="79">
+        <label>Strings.cpp</label>
+        <link refid="de/d6d/Strings_8cpp"/>
+      </node>
+      <node id="83">
+        <label>Stack.hxx</label>
+        <link refid="db/d61/Stack_8hxx"/>
+        <childnode refid="82" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>File.cpp</label>
+        <link refid="d0/d45/env_2File_8cpp"/>
+      </node>
+      <node id="81">
+        <label>Memory.hxx</label>
+        <link refid="d5/d4e/Memory_8hxx"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>OS.h</label>
+        <link refid="d2/d4f/OS_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>InstructionCycle.cpp</label>
+        <link refid="d5/d95/InstructionCycle_8cpp"/>
+      </node>
+      <node id="7">
+        <label>FileSys.h</label>
+        <link refid="d0/d00/FileSys_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>stdio.cpp</label>
+        <link refid="df/dce/stdio_8cpp"/>
+      </node>
+      <node id="62">
+        <label>RAE.h</label>
+        <link refid="db/d6a/RAE_8h"/>
+        <childnode refid="61" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>Actions.h</label>
+        <link refid="de/db3/Actions_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>tterm.cpp</label>
+        <link refid="d0/d75/UBUNTU_2tterm_8cpp"/>
+      </node>
+      <node id="88">
+        <label>Memory.cpp</label>
+        <link refid="d3/de1/UBUNTU_2Memory_8cpp"/>
+      </node>
+      <node id="31">
+        <label>tterm.cpp</label>
+        <link refid="d0/d6f/EMULATOR_2tterm_8cpp"/>
+      </node>
+      <node id="66">
+        <label>StateMachine.cpp</label>
+        <link refid="d6/d82/StateMachine_8cpp"/>
+      </node>
+      <node id="65">
+        <label>lvalue.cpp</label>
+        <link refid="d4/d56/lvalue_8cpp"/>
+      </node>
+      <node id="18">
+        <label>Frontend.cpp</label>
+        <link refid="d4/d83/Frontend_8cpp"/>
+      </node>
+      <node id="25">
+        <label>Graphics.h</label>
+        <link refid="d2/dd1/Graphics_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>Start.cpp</label>
+        <link refid="d0/d06/EMULATOR_2Start_8cpp"/>
+      </node>
+      <node id="52">
+        <label>Resources.cpp</label>
+        <link refid="db/d83/Resources_8cpp"/>
+      </node>
+      <node id="75">
+        <label>SegmentBuilderGettersSetters.cpp</label>
+        <link refid="db/db5/SegmentBuilderGettersSetters_8cpp"/>
+      </node>
+      <node id="73">
+        <label>SectionBuilderGettersSetters.cpp</label>
+        <link refid="dc/d51/SectionBuilderGettersSetters_8cpp"/>
+      </node>
+      <node id="51">
+        <label>Except.cpp</label>
+        <link refid="d4/df4/Except_8cpp"/>
+      </node>
+      <node id="5">
+        <label>stdio.h</label>
+        <link refid="d6/dd1/stdio_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="90">
+        <label>errno.h</label>
+        <link refid="d8/dc2/errno_8h"/>
+        <childnode refid="80" relation="include">
+        </childnode>
+      </node>
+      <node id="98">
+        <label>Time.cpp</label>
+        <link refid="de/df0/EMULATOR_2Time_8cpp"/>
+      </node>
+      <node id="61">
+        <label>Hyperv.h</label>
+        <link refid="d0/dde/Hyperv_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="89">
+        <label>Registers.h</label>
+        <link refid="d7/d2a/Registers_8h"/>
+        <childnode refid="60" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>Start.cpp</label>
+        <link refid="de/d3d/UBUNTU_2Start_8cpp"/>
+      </node>
+      <node id="93">
+        <label>Instructions.h</label>
+        <link refid="d9/dd5/Instructions_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>ThreadState.cpp</label>
+        <link refid="d8/df1/ThreadState_8cpp"/>
+      </node>
+      <node id="63">
+        <label>StateMachine.h</label>
+        <link refid="da/d78/StateMachine_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Backend.cpp</label>
+        <link refid="d6/d3f/Backend_8cpp"/>
+      </node>
+      <node id="22">
+        <label>Builder.cpp</label>
+        <link refid="d9/d9b/Builder_8cpp"/>
+      </node>
+      <node id="56">
+        <label>rvalue.cpp</label>
+        <link refid="d1/d5d/rvalue_8cpp"/>
+      </node>
+      <node id="91">
+        <label>Signal.h</label>
+        <link refid="d0/def/Signal_8h"/>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>File.cpp</label>
+        <link refid="d3/dce/env__EMULATOR_2File_8cpp"/>
+      </node>
+      <node id="80">
+        <label>Except.h</label>
+        <link refid="dc/d88/Except_8h"/>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>Secondary.cpp</label>
+        <link refid="d1/d38/Secondary_8cpp"/>
+      </node>
+      <node id="37">
+        <label>ECMA35.h</label>
+        <link refid="d5/d22/ECMA35_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Lex.h</label>
+        <link refid="df/d80/Lex_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>tterm.cpp</label>
+        <link refid="d7/d67/tterm_8cpp"/>
+      </node>
+      <node id="6">
+        <label>badapple.cpp</label>
+        <link refid="d7/d40/badapple_8cpp"/>
+      </node>
+      <node id="45">
+        <label>Volume.cpp</label>
+        <link refid="de/d33/Volume_8cpp"/>
+      </node>
+      <node id="42">
+        <label>Graphics.cpp</label>
+        <link refid="d9/d4a/UBUNTU_2Graphics_8cpp"/>
+      </node>
+      <node id="71">
+        <label>ELFHeaderGettersSetters.cpp</label>
+        <link refid="dc/dc2/ELFHeaderGettersSetters_8cpp"/>
+      </node>
+      <node id="24">
+        <label>Lexer.cpp</label>
+        <link refid="d2/d15/Lexer_8cpp"/>
+      </node>
+      <node id="76">
+        <label>SymbolBuilder.cpp</label>
+        <link refid="d6/db7/SymbolBuilder_8cpp"/>
+      </node>
+      <node id="1">
+        <label>stdint.h</label>
+        <link refid="df/dd8/stdint_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+      </node>
+      <node id="95">
+        <label>ELF64.h</label>
+        <link refid="d5/dd1/ELF64_8h"/>
+      </node>
+      <node id="2">
+        <label>stddef.h</label>
+        <link refid="d3/dce/stddef_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>R2D.cpp</label>
+        <link refid="de/db8/R2D_8cpp"/>
+      </node>
+      <node id="43">
+        <label>File.cpp</label>
+        <link refid="d0/ddd/File_2File_8cpp"/>
+      </node>
+      <node id="69">
+        <label>BinaryExecutable.h</label>
+        <link refid="d0/dcf/BinaryExecutable_8h"/>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>File.cpp</label>
+        <link refid="da/d7b/env__UBUNTU_2File_8cpp"/>
+      </node>
+      <node id="10">
+        <label>neofetch.cpp</label>
+        <link refid="d3/da0/neofetch_8cpp"/>
+      </node>
+      <node id="54">
+        <label>BinaryExecutables.cpp</label>
+        <link refid="de/d02/BinaryExecutables_8cpp"/>
+      </node>
+      <node id="77">
+        <label>SymbolBuilderGettersSetters.cpp</label>
+        <link refid="d1/d6c/SymbolBuilderGettersSetters_8cpp"/>
+      </node>
+      <node id="59">
+        <label>ELF.h</label>
+        <link refid="db/de5/ELF_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>Path.cpp</label>
+        <link refid="d5/dbb/Path_8cpp"/>
+      </node>
+      <node id="70">
+        <label>ELF.cpp</label>
+        <link refid="dd/dc2/ELF_8cpp"/>
+      </node>
+      <node id="64">
+        <label>ValueCategories.h</label>
+        <link refid="d8/da7/ValueCategories_8h"/>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>Stack.h</label>
+        <link refid="dc/db6/Stack_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>xvalue.cpp</label>
+        <link refid="d6/db1/xvalue_8cpp"/>
+      </node>
+      <node id="57">
+        <label>StateMachineOpcodes.cpp</label>
+        <link refid="df/d1c/StateMachineOpcodes_8cpp"/>
+      </node>
+      <node id="13">
+        <label>ELSA.h</label>
+        <link refid="df/d71/ELSA_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="d9/d6f/namespaceBBP">BBP</innernamespace>
+    <innernamespace refid="dd/d98/namespaceBBP_1_1std">BBP::std</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>BBP_STDLIB_STDINT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BBP_STDLIB_STDINT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="d9/d6f/namespaceBBP" kindref="compound">BBP</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="d9/d6f/namespaceBBP_1aacc36b18270658f6070e5b806f320587" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1aacc36b18270658f6070e5b806f320587" kindref="member">int8_t</ref>;</highlight></codeline>
+<codeline lineno="8" refid="d9/d6f/namespaceBBP_1aec2f5187841c2cf4ad06aa4ffafc3113" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1aec2f5187841c2cf4ad06aa4ffafc3113" kindref="member">int16_t</ref>;</highlight></codeline>
+<codeline lineno="9" refid="d9/d6f/namespaceBBP_1af4528e833c4e491cf86c4639d01126d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1af4528e833c4e491cf86c4639d01126d6" kindref="member">int32_t</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>USE_32_BITS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="d9/d6f/namespaceBBP_1a5e0dc2e2d410b1c101e586c68a2dfe08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1a5e0dc2e2d410b1c101e586c68a2dfe08" kindref="member">int64_t</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="d9/d6f/namespaceBBP_1aa98865b0e85405234b7b9fdeb9197f03" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1aa98865b0e85405234b7b9fdeb9197f03" kindref="member">uint8_t</ref>;</highlight></codeline>
+<codeline lineno="14" refid="d9/d6f/namespaceBBP_1a32992106adba65fab6a78c6b302aefa9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1a32992106adba65fab6a78c6b302aefa9" kindref="member">uint16_t</ref>;</highlight></codeline>
+<codeline lineno="15" refid="d9/d6f/namespaceBBP_1a3558ab6953f5ed22d4c90a0e747bfc04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1a3558ab6953f5ed22d4c90a0e747bfc04" kindref="member">uint32_t</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>USE_32_BITS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="d9/d6f/namespaceBBP_1a41dae01a2ea5db4f123557f61ce93c89" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="d9/d6f/namespaceBBP_1a41dae01a2ea5db4f123557f61ce93c89" kindref="member">uint64_t</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="d9/d6f/namespaceBBP_1a571f561c1f48aef9d75b3611a3863c01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1a571f561c1f48aef9d75b3611a3863c01" kindref="member">int_least8_t</ref>;</highlight></codeline>
+<codeline lineno="21" refid="d9/d6f/namespaceBBP_1a2c265c9ffa53d3a793c4225cb2c88f9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1a2c265c9ffa53d3a793c4225cb2c88f9c" kindref="member">int_least16_t</ref>;</highlight></codeline>
+<codeline lineno="22" refid="d9/d6f/namespaceBBP_1a20d7a056614abf5dc0171d95b7772ea1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1a20d7a056614abf5dc0171d95b7772ea1" kindref="member">int_least32_t</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>USE_32_BITS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="d9/d6f/namespaceBBP_1a8294b9f29afd78959f1bdeea61548f7f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1a8294b9f29afd78959f1bdeea61548f7f" kindref="member">int_least64_t</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="d9/d6f/namespaceBBP_1acf26943d593127cd731018d0ad5c4fd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1acf26943d593127cd731018d0ad5c4fd9" kindref="member">uint_least8_t</ref>;</highlight></codeline>
+<codeline lineno="27" refid="d9/d6f/namespaceBBP_1a6f7fc8e39fa1a2336f6afd360b2cbf7f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1a6f7fc8e39fa1a2336f6afd360b2cbf7f" kindref="member">uint_least16_t</ref>;</highlight></codeline>
+<codeline lineno="28" refid="d9/d6f/namespaceBBP_1addf07ffb3451fd9bc32bea408bebaf0a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1addf07ffb3451fd9bc32bea408bebaf0a" kindref="member">uint_least32_t</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>USE_32_BITS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="d9/d6f/namespaceBBP_1a9cde77c92fe88bad6271d71814f66732" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="d9/d6f/namespaceBBP_1a9cde77c92fe88bad6271d71814f66732" kindref="member">uint_least64_t</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="d9/d6f/namespaceBBP_1ad6d35ebe3321257445eb4ddc4f81b1ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1ad6d35ebe3321257445eb4ddc4f81b1ce" kindref="member">int_fast8_t</ref>;</highlight></codeline>
+<codeline lineno="34" refid="d9/d6f/namespaceBBP_1a7b66846b38211bfbd4fa7d8d6778b2ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1a7b66846b38211bfbd4fa7d8d6778b2ba" kindref="member">int_fast16_t</ref>;</highlight></codeline>
+<codeline lineno="35" refid="d9/d6f/namespaceBBP_1ad929a05049443dbe1a1799eedbdc13c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1ad929a05049443dbe1a1799eedbdc13c9" kindref="member">int_fast32_t</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>USE_32_BITS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="d9/d6f/namespaceBBP_1a199d7408e4df7977eb173fa92fc49a84" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1a199d7408e4df7977eb173fa92fc49a84" kindref="member">int_fast64_t</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="d9/d6f/namespaceBBP_1a59510e9b7da2f5ad7f45f729f23eb0cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1a59510e9b7da2f5ad7f45f729f23eb0cb" kindref="member">uint_fast8_t</ref>;</highlight></codeline>
+<codeline lineno="40" refid="d9/d6f/namespaceBBP_1aa94f402ba42e2638342ea3f7ae0eaca6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1aa94f402ba42e2638342ea3f7ae0eaca6" kindref="member">uint_fast16_t</ref>;</highlight></codeline>
+<codeline lineno="41" refid="d9/d6f/namespaceBBP_1a169805d5baa544284347b9af1bc7914a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1a169805d5baa544284347b9af1bc7914a" kindref="member">uint_fast32_t</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>USE_32_BITS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="d9/d6f/namespaceBBP_1a971fb1c065e1702be7173d2e71c773a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="d9/d6f/namespaceBBP_1a971fb1c065e1702be7173d2e71c773a3" kindref="member">uint_fast64_t</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="d9/d6f/namespaceBBP" kindref="compound">BBP</ref></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">std</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1a3558ab6953f5ed22d4c90a0e747bfc04" kindref="member">uint32_t</ref><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a0ae9ccd4d792c51369ee76001e4db8a1" kindref="member">decimals</ref>(<ref refid="d9/d6f/namespaceBBP_1a3558ab6953f5ed22d4c90a0e747bfc04" kindref="member">uint32_t</ref><sp/>value);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1aa98865b0e85405234b7b9fdeb9197f03" kindref="member">uint8_t</ref><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a113ed1a5f747f8fa4d0d8b8aaadaea53" kindref="member">getDecimal</ref>(<ref refid="d9/d6f/namespaceBBP_1a3558ab6953f5ed22d4c90a0e747bfc04" kindref="member">uint32_t</ref><sp/>value,<sp/><ref refid="d9/d6f/namespaceBBP_1a3558ab6953f5ed22d4c90a0e747bfc04" kindref="member">uint32_t</ref><sp/>position);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/stdint.h"/>
+  </compounddef>
+</doxygen>

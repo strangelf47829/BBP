@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d9/d95/unionBBP_1_1std_1_1Lexer_1_1numerical__t" kind="union" language="C++" prot="public">
+    <compoundname>BBP::std::Lexer::numerical_t</compoundname>
+    <includes refid="df/d80/Lex_8h" local="no">Lex.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d9/d95/unionBBP_1_1std_1_1Lexer_1_1numerical__t_1a5980c3dbf1e2c6e459383f815c619fa6" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+        <definition>std::word BBP::std::Lexer::numerical_t::i</definition>
+        <argsstring></argsstring>
+        <name>i</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" line="27" column="28" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a162947cc5e869642c242a00f0f9279d3" compoundref="d4/d83/Frontend_8cpp" startline="198" endline="258">BBP::esa::esaProcessor::addNumerical</referencedby>
+        <referencedby refid="d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_1a8a9bd06e1b0bbcf991fb6fce2470c4f7" compoundref="d2/d15/Lexer_8cpp" startline="213" endline="273">BBP::std::Lexer::lex_context::executeSpecialFunction</referencedby>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a8884b186d1988809313a4114f644364e" compoundref="d1/d38/Secondary_8cpp" startline="15" endline="36">BBP::esa::esaProcessor::numericalArgument</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d95/unionBBP_1_1std_1_1Lexer_1_1numerical__t_1a8fd69733b8dc56327d409c1c265093ee" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BBP::std::Lexer::numerical_t::f</definition>
+        <argsstring></argsstring>
+        <name>f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" line="27" column="36" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a162947cc5e869642c242a00f0f9279d3" compoundref="d4/d83/Frontend_8cpp" startline="198" endline="258">BBP::esa::esaProcessor::addNumerical</referencedby>
+        <referencedby refid="d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_1a8a9bd06e1b0bbcf991fb6fce2470c4f7" compoundref="d2/d15/Lexer_8cpp" startline="213" endline="273">BBP::std::Lexer::lex_context::executeSpecialFunction</referencedby>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a8884b186d1988809313a4114f644364e" compoundref="d1/d38/Secondary_8cpp" startline="15" endline="36">BBP::esa::esaProcessor::numericalArgument</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>BBP::std::Lexer::numerical_t</label>
+        <link refid="d9/d95/unionBBP_1_1std_1_1Lexer_1_1numerical__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" line="27" column="18" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" bodystart="27" bodyend="27"/>
+    <listofallmembers>
+      <member refid="d9/d95/unionBBP_1_1std_1_1Lexer_1_1numerical__t_1a8fd69733b8dc56327d409c1c265093ee" prot="public" virt="non-virtual"><scope>BBP::std::Lexer::numerical_t</scope><name>f</name></member>
+      <member refid="d9/d95/unionBBP_1_1std_1_1Lexer_1_1numerical__t_1a5980c3dbf1e2c6e459383f815c619fa6" prot="public" virt="non-virtual"><scope>BBP::std::Lexer::numerical_t</scope><name>i</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

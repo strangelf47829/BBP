@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_18cdd076d3f3946d9c5d41980ec6a3d6" kind="dir">
+    <compoundname>File</compoundname>
+    <innerfile refid="da/d5f/File_2Dir_8cpp">File/Dir.cpp</innerfile>
+    <innerfile refid="d0/ddd/File_2File_8cpp">File/File.cpp</innerfile>
+    <innerfile refid="d5/dbb/Path_8cpp">Path.cpp</innerfile>
+    <innerfile refid="de/d33/Volume_8cpp">Volume.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,139 @@
+\hypertarget{Memory_8h}{}\doxysection{Memory.\+h File Reference}
+\label{Memory_8h}\index{Memory.h@{Memory.h}}
+{\ttfamily \#include \char`\"{}stddef.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Memory.\+hxx\char`\"{}}\newline
+Include dependency graph for Memory.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{d0/db6/Memory_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d56/Memory_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{B\+B\+P\+::std\+::\+P\+A\+G\+E$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structBBP_1_1std_1_1STATIC__PAGE}{B\+B\+P\+::std\+::\+S\+T\+A\+T\+I\+C\+\_\+\+P\+A\+G\+E$<$ T, K $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceBBP}{B\+BP}}
+\item 
+ \mbox{\hyperlink{namespaceBBP_1_1std}{B\+B\+P\+::std}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{Memory_8h_aa147bb9c8bae95d530dbbb3775ed53d8}{S\+T\+A\+T\+I\+C\+\_\+\+S\+T\+A\+CK}}(type,  identifier)
+\item 
+\#define \mbox{\hyperlink{Memory_8h_adf8e546bc7bf378118dc7056ac521a87}{S\+T\+A\+T\+I\+C\+\_\+\+S\+T\+R\+S\+T\+A\+CK}}(identifier)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceBBP_1_1std_aa63573041786d49b7cdb2eec8a921a6a}{B\+B\+P\+::std\+::write}} (P\+A\+GE$<$ T $>$ $\ast$page, T \&data, index\+\_\+t index)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceBBP_1_1std_a2e0d9dd75951297f7cc4e669cef73f60}{B\+B\+P\+::std\+::write\+\_\+r}} (P\+A\+GE$<$ T $>$ $\ast$page, mem\+\_\+t \&data, index\+\_\+t index)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceBBP_1_1std_a3562de634247bfcc9588d254036740ea}{B\+B\+P\+::std\+::write\+\_\+a}} (P\+A\+GE$<$ T $>$ $\ast$page, T $\ast$data, index\+\_\+t index, size\+\_\+t amount)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceBBP_1_1std_ae076402880e631cbec39c0992950a8c7}{B\+B\+P\+::std\+::write\+\_\+ar}} (P\+A\+GE$<$ T $>$ $\ast$page, mem\+\_\+t $\ast$data, index\+\_\+t index, size\+\_\+t amount)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\+\_\+\+\_\+\+U\+N\+S\+A\+F\+E\+\_\+\+\_\+}}() \mbox{\hyperlink{namespaceBBP_1_1std_aec86c0de6003c2b0905913f03182bb8f}{B\+B\+P\+::std\+::write}} (P\+A\+GE$<$ T $>$ $\ast$page, T \&data, index\+\_\+t index)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\+\_\+\+\_\+\+U\+N\+S\+A\+F\+E\+\_\+\+\_\+}}() \mbox{\hyperlink{namespaceBBP_1_1std_a3ff78e34c4b69dd3b84f1b0e85929eed}{B\+B\+P\+::std\+::write\+\_\+a}} (P\+A\+GE$<$ T $>$ $\ast$page, T $\ast$data, index\+\_\+t index, size\+\_\+t amount)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\+\_\+\+\_\+\+U\+N\+S\+A\+F\+E\+\_\+\+\_\+}}() \mbox{\hyperlink{namespaceBBP_1_1std_aef6f89a132d0099259cd556e92e0b6d7}{B\+B\+P\+::std\+::write\+\_\+r}} (P\+A\+GE$<$ T $>$ $\ast$page, mem\+\_\+t \&data, index\+\_\+t index)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \& \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{B\+B\+P\+::std\+::read}} (P\+A\+GE$<$ T $>$ $\ast$page, index\+\_\+t index)
+\item 
+{\footnotesize template$<$typename T $>$ }\\mem\+\_\+t \& \mbox{\hyperlink{namespaceBBP_1_1std_a66f9280bf6b4b7d1dded6365f427fff4}{B\+B\+P\+::std\+::read\+\_\+r}} (P\+A\+GE$<$ T $>$ $\ast$page, index\+\_\+t index)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ \mbox{\hyperlink{namespaceBBP_1_1std_a55693c4a04d73e619277c4eb973f2745}{B\+B\+P\+::std\+::read\+\_\+a}} (P\+A\+GE$<$ T $>$ $\ast$page, index\+\_\+t index)
+\item 
+{\footnotesize template$<$typename T $>$ }\\mem\+\_\+t $\ast$ \mbox{\hyperlink{namespaceBBP_1_1std_ab8c934d79ee954a6a8221d364ce872a8}{B\+B\+P\+::std\+::read\+\_\+ar}} (P\+A\+GE$<$ T $>$ $\ast$page, index\+\_\+t index)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \&\mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\+\_\+\+\_\+\+U\+N\+S\+A\+F\+E\+\_\+\+\_\+}}() \mbox{\hyperlink{namespaceBBP_1_1std_a4bdc1e2ce29d9587732039fabc0f718f}{B\+B\+P\+::std\+::read}} (P\+A\+GE$<$ T $>$ $\ast$page, index\+\_\+t index)
+\item 
+{\footnotesize template$<$typename T $>$ }\\mem\+\_\+t \&\mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\+\_\+\+\_\+\+U\+N\+S\+A\+F\+E\+\_\+\+\_\+}}() \mbox{\hyperlink{namespaceBBP_1_1std_ad92c6d01b6640102ea89383b5df61aff}{B\+B\+P\+::std\+::read\+\_\+r}} (P\+A\+GE$<$ T $>$ $\ast$page, index\+\_\+t index)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$\mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\+\_\+\+\_\+\+U\+N\+S\+A\+F\+E\+\_\+\+\_\+}}() \mbox{\hyperlink{namespaceBBP_1_1std_a25581ca338da3b0e6e5cbf48fa717dd2}{B\+B\+P\+::std\+::read\+\_\+a}} (P\+A\+GE$<$ T $>$ $\ast$page, index\+\_\+t index)
+\item 
+{\footnotesize template$<$typename T $>$ }\\mem\+\_\+t $\ast$\mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\+\_\+\+\_\+\+U\+N\+S\+A\+F\+E\+\_\+\+\_\+}}() \mbox{\hyperlink{namespaceBBP_1_1std_a22fb324c9d7b1982ab75f408915abf2a}{B\+B\+P\+::std\+::read\+\_\+ar}} (P\+A\+GE$<$ T $>$ $\ast$page, index\+\_\+t index)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::\+P\+A\+GE$<$ T $>$ \& \mbox{\hyperlink{namespaceBBP_1_1std_a370f972c44b9f597cdda3e119899f60f}{B\+B\+P\+::std\+::last}} (std\+::\+P\+A\+GE$<$ T $>$ \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::\+P\+A\+GE$<$ T $>$ \& \mbox{\hyperlink{namespaceBBP_1_1std_a3cd82d1dfa78c6a8ec6826b4f5331b70}{B\+B\+P\+::std\+::first}} (std\+::\+P\+A\+GE$<$ T $>$ \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\size\+\_\+t \mbox{\hyperlink{namespaceBBP_1_1std_a3f8c5c3d25a021fbc386bafabc41a719}{B\+B\+P\+::std\+::seqlen}} (P\+A\+GE$<$ T $>$ \&page)
+\item 
+{\footnotesize template$<$typename T $>$ }\\size\+\_\+t \mbox{\hyperlink{namespaceBBP_1_1std_ab6bc6f6ef6058398a8e0b6ec7543fb54}{B\+B\+P\+::std\+::seqlen\+\_\+r}} (P\+A\+GE$<$ T $>$ \&page)
+\item 
+{\footnotesize template$<$typename T $>$ }\\size\+\_\+t \mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\+\_\+\+\_\+\+U\+N\+S\+A\+F\+E\+\_\+\+\_\+}}() \mbox{\hyperlink{namespaceBBP_1_1std_af9fc9bcb25cd8b1d02fc58b9b6c29c62}{B\+B\+P\+::std\+::seqlen}} (P\+A\+GE$<$ T $>$ \&page)
+\item 
+{\footnotesize template$<$typename T $>$ }\\size\+\_\+t \mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\+\_\+\+\_\+\+U\+N\+S\+A\+F\+E\+\_\+\+\_\+}}() \mbox{\hyperlink{namespaceBBP_1_1std_a962ae3f1f49e26e1e9ffce4ae5ab5f95}{B\+B\+P\+::std\+::seqlen\+\_\+r}} (P\+A\+GE$<$ T $>$ \&page)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceBBP_1_1std_a997d77887946462f3e071f11465abfae}{B\+B\+P\+::std\+::memcpy}} (P\+A\+GE$<$ T $>$ \&src, P\+A\+GE$<$ T $>$ \&dst, size\+\_\+t amount)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceBBP_1_1std_a803d7789d9729ba4d3125bde7f8d4bf4}{B\+B\+P\+::std\+::memcpy}} (P\+A\+GE$<$ T $>$ \&src, P\+A\+GE$<$ T $>$ \&dst)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{namespaceBBP_1_1std_aa47ae0042177e85ffd7712f2c1fac728}{B\+B\+P\+::std\+::memcmp}} (P\+A\+GE$<$ T $>$ \&src, P\+A\+GE$<$ T $>$ \&dst)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr word \mbox{\hyperlink{namespaceBBP_1_1std_a790bf7c69d24a27ebb26dfd83a8980fd}{B\+B\+P\+::std\+::max\+\_\+page\+\_\+elements}} = 10000
+\item 
+constexpr word \mbox{\hyperlink{namespaceBBP_1_1std_a0e164b2acad5f48e177e8ef6d467dc01}{B\+B\+P\+::std\+::max\+\_\+page\+\_\+static\+\_\+size}} = 10000
+\item 
+constexpr word \mbox{\hyperlink{namespaceBBP_1_1std_ad5dc3e293be7174368ac9706fee7b792}{B\+B\+P\+::std\+::max\+\_\+page\+\_\+pointer\+\_\+size}} = max\+\_\+page\+\_\+elements
+\item 
+constexpr word \mbox{\hyperlink{namespaceBBP_1_1std_a88153a92afd9022ff65ac450e1aa56be}{B\+B\+P\+::std\+::max\+\_\+page\+\_\+sequence\+\_\+length}} = 64
+\item 
+constexpr word \mbox{\hyperlink{namespaceBBP_1_1std_acb3b1a28212da3a9d2c10ef447ac0e28}{B\+B\+P\+::std\+::max\+\_\+lpage\+\_\+static\+\_\+size}} = 0x2000
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{Memory_8h_aa147bb9c8bae95d530dbbb3775ed53d8}\label{Memory_8h_aa147bb9c8bae95d530dbbb3775ed53d8}} 
+\index{Memory.h@{Memory.h}!STATIC\_STACK@{STATIC\_STACK}}
+\index{STATIC\_STACK@{STATIC\_STACK}!Memory.h@{Memory.h}}
+\doxysubsubsection{\texorpdfstring{STATIC\_STACK}{STATIC\_STACK}}
+{\footnotesize\ttfamily \#define S\+T\+A\+T\+I\+C\+\_\+\+S\+T\+A\+CK(\begin{DoxyParamCaption}\item[{}]{type,  }\item[{}]{identifier }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{static} \mbox{\hyperlink{structBBP_1_1std_1_1STATIC__PAGE}{BBP::std::STATIC\_PAGE<type>}} identifier\#\#\mbox{\hyperlink{namespaceBBP_1_1userspace_af865efb4e239132478b2f72e99fdd691a6e50810a4eaad4ef38ade05f38e8a163}{PAGE}};\(\backslash\)}
+\DoxyCodeLine{BBP::std::Stack<type> identifier(\&identifier\#\#\mbox{\hyperlink{namespaceBBP_1_1userspace_af865efb4e239132478b2f72e99fdd691a6e50810a4eaad4ef38ade05f38e8a163}{PAGE}});}
+
+\end{DoxyCode}
+
+
+Definition at line 6 of file Memory.\+h.
+
+\mbox{\Hypertarget{Memory_8h_adf8e546bc7bf378118dc7056ac521a87}\label{Memory_8h_adf8e546bc7bf378118dc7056ac521a87}} 
+\index{Memory.h@{Memory.h}!STATIC\_STRSTACK@{STATIC\_STRSTACK}}
+\index{STATIC\_STRSTACK@{STATIC\_STRSTACK}!Memory.h@{Memory.h}}
+\doxysubsubsection{\texorpdfstring{STATIC\_STRSTACK}{STATIC\_STRSTACK}}
+{\footnotesize\ttfamily \#define S\+T\+A\+T\+I\+C\+\_\+\+S\+T\+R\+S\+T\+A\+CK(\begin{DoxyParamCaption}\item[{}]{identifier }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{static} \mbox{\hyperlink{structBBP_1_1std_1_1STATIC__PAGE}{BBP::std::static\_string}} identifier\#\#\mbox{\hyperlink{namespaceBBP_1_1userspace_af865efb4e239132478b2f72e99fdd691a6e50810a4eaad4ef38ade05f38e8a163}{PAGE}};\(\backslash\)}
+\DoxyCodeLine{static \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{BBP::std::Stack<BBP::std::string\_element>}} identifier(\&identifier\#\#\mbox{\hyperlink{namespaceBBP_1_1userspace_af865efb4e239132478b2f72e99fdd691a6e50810a4eaad4ef38ade05f38e8a163}{PAGE}});}
+
+\end{DoxyCode}
+
+
+Definition at line 9 of file Memory.\+h.
+

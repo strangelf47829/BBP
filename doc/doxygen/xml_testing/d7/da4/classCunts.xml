@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d7/da4/classCunts" kind="class" language="C++" prot="public">
+    <compoundname>Cunts</compoundname>
+    <includes refid="de/d23/StressRelief_8h" local="no">StressRelief.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="d7/da4/classCunts_1a4ac9b7a4801141c49bb5a225f52247b0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Cunts::allOfYou</definition>
+        <argsstring>()</argsstring>
+        <name>allOfYou</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StressRelief.h" line="14" column="20" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StressRelief.h" bodystart="14" bodyend="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Cunts</label>
+        <link refid="d7/da4/classCunts"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StressRelief.h" line="12" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StressRelief.h" bodystart="11" bodyend="16"/>
+    <listofallmembers>
+      <member refid="d7/da4/classCunts_1a4ac9b7a4801141c49bb5a225f52247b0" prot="public" virt="non-virtual"><scope>Cunts</scope><name>allOfYou</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,64 @@
+.TH "BBP::userspace::Instruction::Head" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BBP::userspace::Instruction::Head
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Instructions\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBstd::byte\fP \fBprefix\fP"
+.br
+.ti -1c
+.RI "\fBstd::byte\fP \fBopcode\fP"
+.br
+.ti -1c
+.RI "\fBstd::byte\fP \fBsuffix\fP"
+.br
+.ti -1c
+.RI "\fBstd::nibble\fP \fBflags\fP"
+.br
+.ti -1c
+.RI "\fBstd::nibble\fP \fBargs\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 14 of file Instructions\&.h\&.
+.SH "Field Documentation"
+.PP 
+.SS "\fBstd::nibble\fP BBP::userspace::Instruction::Head::args"
+
+.PP
+Definition at line 23 of file Instructions\&.h\&.
+.PP
+Referenced by BBP::esa::esaProcessor::resetInstruction()\&.
+.SS "\fBstd::nibble\fP BBP::userspace::Instruction::Head::flags"
+
+.PP
+Definition at line 22 of file Instructions\&.h\&.
+.SS "\fBstd::byte\fP BBP::userspace::Instruction::Head::opcode"
+
+.PP
+Definition at line 18 of file Instructions\&.h\&.
+.PP
+Referenced by BBP::esa::TOKEN()\&.
+.SS "\fBstd::byte\fP BBP::userspace::Instruction::Head::prefix"
+
+.PP
+Definition at line 17 of file Instructions\&.h\&.
+.SS "\fBstd::byte\fP BBP::userspace::Instruction::Head::suffix"
+
+.PP
+Definition at line 19 of file Instructions\&.h\&.
+.PP
+Referenced by BBP::esa::TOKEN()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

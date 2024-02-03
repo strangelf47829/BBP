@@ -1,0 +1,1926 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dc/da1/namespaceBBP_1_1std_1_1R2D" kind="namespace" language="C++">
+    <compoundname>BBP::std::R2D</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a4231d3561bf9510a91b882bfefad4434" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref></type>
+        <definition>RGBA_t BBP::std::R2D::convertUCHARtoINT</definition>
+        <argsstring>(chan_t r, chan_t g, chan_t b, chan_t a)</argsstring>
+        <name>convertUCHARtoINT</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="96" column="8" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="37" bodyend="41" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="96" declcolumn="8"/>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a" compoundref="d4/d54/Locale_8h" startline="65">BBP::Locale::Japanese::a</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1a86c94964f34d454bdbd36473722cfb1ea268eb33701686501168a16e9875bf901" compoundref="d1/d12/Opcodes_8h" startline="49">BBP::userspace::ret</references>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a19a4a225e19ac4264c3ba92046f9904c" compoundref="de/db8/R2D_8cpp" startline="220" endline="225">background</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a985d2f37aa59f400c93963bafdc25e54" compoundref="de/db8/R2D_8cpp" startline="94" endline="101">fill</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acc6674c3e336f1e429b0bc23f9955ca6" compoundref="de/db8/R2D_8cpp" startline="244" endline="249">Hrule</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a950bda48471d587efcad3dff57541550" compoundref="de/db8/R2D_8cpp" startline="57" endline="63">stroke</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a3f3e793215cc7ab1073d7169dd042c9c" compoundref="de/db8/R2D_8cpp" startline="251" endline="256">Vrule</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1aac72e826c4be633a25255aa72d7d4d92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::convertINTtoUCHAR</definition>
+        <argsstring>(chan_t *r, chan_t *g, chan_t *b, RGBA_t rgb)</argsstring>
+        <name>convertINTtoUCHAR</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref></type>
+          <declname>rgb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="97" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="42" bodyend="47" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="97" declcolumn="6"/>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a4b123bdf7236d4ede422aa3090daf914" compoundref="de/db8/R2D_8cpp" startline="111" endline="116">fill</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a0ec7d85b617fb5dbafb2827c174f7d85" compoundref="de/db8/R2D_8cpp" startline="72" endline="76">stroke</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a824b0886efd3dfa13b6448b8b86c6a07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::convertINTtoUCHAR</definition>
+        <argsstring>(chan_t *r, chan_t *g, chan_t *b, chan_t *a, RGBA_t rgba)</argsstring>
+        <name>convertINTtoUCHAR</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref></type>
+          <declname>rgba</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="98" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="48" bodyend="54" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="98" declcolumn="6"/>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a" compoundref="d4/d54/Locale_8h" startline="65">BBP::Locale::Japanese::a</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1abd452b23f01af75984864049dd13670b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::newWindow</definition>
+        <argsstring>(window *, pos_t width, pos_t height, chan_t r, chan_t g, chan_t b)</argsstring>
+        <name>newWindow</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="100" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="130" bodyend="157" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="100" declcolumn="6"/>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ab9b99c1461c6a8dfd2b29b9b4385289e" compoundref="d2/dd1/Graphics_8h" startline="41">BBP::std::window::backBuffer</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a19a4a225e19ac4264c3ba92046f9904c" compoundref="de/db8/R2D_8cpp" startline="220" endline="225">background</references>
+        <references refid="d6/d73/classBBP_1_1std_1_1ResourceManager_1a2feb265bae9a30994a2a4a4f69306329" compoundref="db/d83/Resources_8cpp" startline="26" endline="42">BBP::std::ResourceManager::calloc</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="d6/d73/classBBP_1_1std_1_1ResourceManager_1a88b2740fa8c5b5e30e6ef08cb8c7d883" compoundref="db/d83/Resources_8cpp" startline="57" endline="72">BBP::std::ResourceManager::free</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1a3868ca4815a37a5aa822eb9c6dd3d91c" compoundref="d2/dd1/Graphics_8h" startline="44">BBP::std::window::height</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a2f7b7b3936492dde3cceacc3e74f5cc3" compoundref="de/db8/R2D_8cpp" startline="33">BBP::std::vmem</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ac9dc99ea7caf78da1c83e3fa1c7219aa" compoundref="d2/dd1/Graphics_8h" startline="43">BBP::std::window::width</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1acbbf7a74f366ba7e08f6bf9bb11707be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::newWindow</definition>
+        <argsstring>(window *, chan_t r, chan_t g, chan_t b)</argsstring>
+        <name>newWindow</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="101" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="159" bodyend="165" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="101" declcolumn="6"/>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a19a4a225e19ac4264c3ba92046f9904c" compoundref="de/db8/R2D_8cpp" startline="220" endline="225">background</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a19a4a225e19ac4264c3ba92046f9904c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::background</definition>
+        <argsstring>(window *, chan_t r, chan_t g, chan_t b)</argsstring>
+        <name>background</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="103" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="220" bodyend="225" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="103" declcolumn="6"/>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ab9b99c1461c6a8dfd2b29b9b4385289e" compoundref="d2/dd1/Graphics_8h" startline="41">BBP::std::window::backBuffer</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a4231d3561bf9510a91b882bfefad4434" compoundref="de/db8/R2D_8cpp" startline="37" endline="41">convertUCHARtoINT</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1a3868ca4815a37a5aa822eb9c6dd3d91c" compoundref="d2/dd1/Graphics_8h" startline="44">BBP::std::window::height</references>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eaa077f260b0319da866c90d59a5454ee7" compoundref="d4/d54/Locale_8h" startline="150">BBP::Locale::Japanese::n</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ac9dc99ea7caf78da1c83e3fa1c7219aa" compoundref="d2/dd1/Graphics_8h" startline="43">BBP::std::window::width</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1aa63573041786d49b7cdb2eec8a921a6a">BBP::std::write</references>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1abd452b23f01af75984864049dd13670b" compoundref="de/db8/R2D_8cpp" startline="130" endline="157">newWindow</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a2643b9e013a1bc6c016bb960a1cca9c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::background</definition>
+        <argsstring>(window *, chan_t r, chan_t g, chan_t b, chan_t a)</argsstring>
+        <name>background</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="104" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="226" bodyend="231" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="104" declcolumn="6"/>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a" compoundref="d4/d54/Locale_8h" startline="65">BBP::Locale::Japanese::a</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ab9b99c1461c6a8dfd2b29b9b4385289e" compoundref="d2/dd1/Graphics_8h" startline="41">BBP::std::window::backBuffer</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a4231d3561bf9510a91b882bfefad4434" compoundref="de/db8/R2D_8cpp" startline="37" endline="41">convertUCHARtoINT</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1a3868ca4815a37a5aa822eb9c6dd3d91c" compoundref="d2/dd1/Graphics_8h" startline="44">BBP::std::window::height</references>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eaa077f260b0319da866c90d59a5454ee7" compoundref="d4/d54/Locale_8h" startline="150">BBP::Locale::Japanese::n</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ac9dc99ea7caf78da1c83e3fa1c7219aa" compoundref="d2/dd1/Graphics_8h" startline="43">BBP::std::window::width</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a5bf3befdcd6e139d3f01319eafaa5182" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::background</definition>
+        <argsstring>(window *, RGBA_t rgb)</argsstring>
+        <name>background</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref></type>
+          <declname>rgb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="105" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="232" bodyend="236" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="105" declcolumn="6"/>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ab9b99c1461c6a8dfd2b29b9b4385289e" compoundref="d2/dd1/Graphics_8h" startline="41">BBP::std::window::backBuffer</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1a3868ca4815a37a5aa822eb9c6dd3d91c" compoundref="d2/dd1/Graphics_8h" startline="44">BBP::std::window::height</references>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eaa077f260b0319da866c90d59a5454ee7" compoundref="d4/d54/Locale_8h" startline="150">BBP::Locale::Japanese::n</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ac9dc99ea7caf78da1c83e3fa1c7219aa" compoundref="d2/dd1/Graphics_8h" startline="43">BBP::std::window::width</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1af99098285fa0f0c5ff74c4bc7f027c03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::background</definition>
+        <argsstring>(window *, RGBA_t rgb, chan_t a)</argsstring>
+        <name>background</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref></type>
+          <declname>rgb</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="106" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="237" bodyend="242" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="106" declcolumn="6"/>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a" compoundref="d4/d54/Locale_8h" startline="65">BBP::Locale::Japanese::a</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ab9b99c1461c6a8dfd2b29b9b4385289e" compoundref="d2/dd1/Graphics_8h" startline="41">BBP::std::window::backBuffer</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1a3868ca4815a37a5aa822eb9c6dd3d91c" compoundref="d2/dd1/Graphics_8h" startline="44">BBP::std::window::height</references>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eaa077f260b0319da866c90d59a5454ee7" compoundref="d4/d54/Locale_8h" startline="150">BBP::Locale::Japanese::n</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ac9dc99ea7caf78da1c83e3fa1c7219aa" compoundref="d2/dd1/Graphics_8h" startline="43">BBP::std::window::width</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a950bda48471d587efcad3dff57541550" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::stroke</definition>
+        <argsstring>(window *, chan_t r, chan_t g, chan_t b)</argsstring>
+        <name>stroke</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="108" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="57" bodyend="63" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="108" declcolumn="6"/>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a8a050a17731358934a17e04deeeb996e" compoundref="d2/dd1/Graphics_8h" startline="35">BBP::std::colour::A</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1ac69073fa61911139d17da5785b266bb1" compoundref="d2/dd1/Graphics_8h" startline="34">BBP::std::colour::B</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a4231d3561bf9510a91b882bfefad4434" compoundref="de/db8/R2D_8cpp" startline="37" endline="41">convertUCHARtoINT</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a17ab02cc13e1f6543a463ad27c77d2b6" compoundref="d2/dd1/Graphics_8h" startline="33">BBP::std::colour::G</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a266b18a4d7f867e04a130a0dfdd459a1" compoundref="d2/dd1/Graphics_8h" startline="32">BBP::std::colour::R</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1ace320712be2e6308522ee50474d89692" compoundref="d2/dd1/Graphics_8h" startline="36">BBP::std::colour::RGBA</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ae891d56662a9dde0747fd94989242e87" compoundref="d2/dd1/Graphics_8h" startline="50">BBP::std::window::Stroke</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1aa6f49be4bd366a94554e88978bcbde17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::stroke</definition>
+        <argsstring>(window *, chan_t r, chan_t g, chan_t b, chan_t a)</argsstring>
+        <name>stroke</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="109" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="64" bodyend="71" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="109" declcolumn="6"/>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a8a050a17731358934a17e04deeeb996e" compoundref="d2/dd1/Graphics_8h" startline="35">BBP::std::colour::A</references>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a" compoundref="d4/d54/Locale_8h" startline="65">BBP::Locale::Japanese::a</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1ac69073fa61911139d17da5785b266bb1" compoundref="d2/dd1/Graphics_8h" startline="34">BBP::std::colour::B</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a4231d3561bf9510a91b882bfefad4434" compoundref="de/db8/R2D_8cpp" startline="37" endline="41">convertUCHARtoINT</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a17ab02cc13e1f6543a463ad27c77d2b6" compoundref="d2/dd1/Graphics_8h" startline="33">BBP::std::colour::G</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a266b18a4d7f867e04a130a0dfdd459a1" compoundref="d2/dd1/Graphics_8h" startline="32">BBP::std::colour::R</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1ace320712be2e6308522ee50474d89692" compoundref="d2/dd1/Graphics_8h" startline="36">BBP::std::colour::RGBA</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ae891d56662a9dde0747fd94989242e87" compoundref="d2/dd1/Graphics_8h" startline="50">BBP::std::window::Stroke</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a0ec7d85b617fb5dbafb2827c174f7d85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::stroke</definition>
+        <argsstring>(window *, RGBA_t rgb)</argsstring>
+        <name>stroke</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref></type>
+          <declname>rgb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="110" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="72" bodyend="76" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="110" declcolumn="6"/>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1ac69073fa61911139d17da5785b266bb1" compoundref="d2/dd1/Graphics_8h" startline="34">BBP::std::colour::B</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1aac72e826c4be633a25255aa72d7d4d92" compoundref="de/db8/R2D_8cpp" startline="42" endline="47">convertINTtoUCHAR</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a17ab02cc13e1f6543a463ad27c77d2b6" compoundref="d2/dd1/Graphics_8h" startline="33">BBP::std::colour::G</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a266b18a4d7f867e04a130a0dfdd459a1" compoundref="d2/dd1/Graphics_8h" startline="32">BBP::std::colour::R</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1ace320712be2e6308522ee50474d89692" compoundref="d2/dd1/Graphics_8h" startline="36">BBP::std::colour::RGBA</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ae891d56662a9dde0747fd94989242e87" compoundref="d2/dd1/Graphics_8h" startline="50">BBP::std::window::Stroke</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1ab3600d30e0b5f513d18db465c999179b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::stroke</definition>
+        <argsstring>(window *, RGBA_t rgb, chan_t a)</argsstring>
+        <name>stroke</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref></type>
+          <declname>rgb</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="111" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="77" bodyend="82" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="111" declcolumn="6"/>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a8a050a17731358934a17e04deeeb996e" compoundref="d2/dd1/Graphics_8h" startline="35">BBP::std::colour::A</references>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a" compoundref="d4/d54/Locale_8h" startline="65">BBP::Locale::Japanese::a</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1ac69073fa61911139d17da5785b266bb1" compoundref="d2/dd1/Graphics_8h" startline="34">BBP::std::colour::B</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1aac72e826c4be633a25255aa72d7d4d92" compoundref="de/db8/R2D_8cpp" startline="42" endline="47">convertINTtoUCHAR</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a4231d3561bf9510a91b882bfefad4434" compoundref="de/db8/R2D_8cpp" startline="37" endline="41">convertUCHARtoINT</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a17ab02cc13e1f6543a463ad27c77d2b6" compoundref="d2/dd1/Graphics_8h" startline="33">BBP::std::colour::G</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a266b18a4d7f867e04a130a0dfdd459a1" compoundref="d2/dd1/Graphics_8h" startline="32">BBP::std::colour::R</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1ace320712be2e6308522ee50474d89692" compoundref="d2/dd1/Graphics_8h" startline="36">BBP::std::colour::RGBA</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ae891d56662a9dde0747fd94989242e87" compoundref="d2/dd1/Graphics_8h" startline="50">BBP::std::window::Stroke</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a02dc9d6f0c3b105012cd73160bb7e50e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::strokeWeight</definition>
+        <argsstring>(window *, word weight)</argsstring>
+        <name>strokeWeight</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref></type>
+          <declname>weight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="112" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="89" bodyend="92" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="112" declcolumn="6"/>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1a0d65c4f879076590dc4a83641f98e53d" compoundref="d2/dd1/Graphics_8h" startline="57">BBP::std::window::strokeWeight</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a86b47f725f748320350d45c25e232bad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::noStroke</definition>
+        <argsstring>(window *)</argsstring>
+        <name>noStroke</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="113" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="84" bodyend="87" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="113" declcolumn="6"/>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1a61c94b6a97022ae687417d89f265f675" compoundref="d2/dd1/Graphics_8h" startline="54">BBP::std::window::doStroke</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a985d2f37aa59f400c93963bafdc25e54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::fill</definition>
+        <argsstring>(window *, chan_t r, chan_t g, chan_t b)</argsstring>
+        <name>fill</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="115" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="94" bodyend="101" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="115" declcolumn="6"/>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a8a050a17731358934a17e04deeeb996e" compoundref="d2/dd1/Graphics_8h" startline="35">BBP::std::colour::A</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1ac69073fa61911139d17da5785b266bb1" compoundref="d2/dd1/Graphics_8h" startline="34">BBP::std::colour::B</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a4231d3561bf9510a91b882bfefad4434" compoundref="de/db8/R2D_8cpp" startline="37" endline="41">convertUCHARtoINT</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1aa626e4a375c5d08ffef4e295ca3105eb" compoundref="d2/dd1/Graphics_8h" startline="55">BBP::std::window::doFill</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1a0e5b85ff032dd08e07add7a5db71e71d" compoundref="d2/dd1/Graphics_8h" startline="51">BBP::std::window::Fill</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a17ab02cc13e1f6543a463ad27c77d2b6" compoundref="d2/dd1/Graphics_8h" startline="33">BBP::std::colour::G</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a266b18a4d7f867e04a130a0dfdd459a1" compoundref="d2/dd1/Graphics_8h" startline="32">BBP::std::colour::R</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1ace320712be2e6308522ee50474d89692" compoundref="d2/dd1/Graphics_8h" startline="36">BBP::std::colour::RGBA</references>
+        <referencedby refid="d9/d6f/namespaceBBP_1a2f249970c78eb045d841a355fb07ca46" compoundref="dd/d40/Boot_8cpp" startline="17" endline="35">BBP::boot_main</referencedby>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1ace14a8680f46b3c05954e4d1f03ab1fe" compoundref="d6/dc6/Executable_8cpp" startline="14" endline="118">BBP::std::execute</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1ad64af62ecd5b637ffee0390f9ac1c09f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::fill</definition>
+        <argsstring>(window *, chan_t r, chan_t g, chan_t b, chan_t a)</argsstring>
+        <name>fill</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="116" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="102" bodyend="110" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="116" declcolumn="6"/>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a8a050a17731358934a17e04deeeb996e" compoundref="d2/dd1/Graphics_8h" startline="35">BBP::std::colour::A</references>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a" compoundref="d4/d54/Locale_8h" startline="65">BBP::Locale::Japanese::a</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1ac69073fa61911139d17da5785b266bb1" compoundref="d2/dd1/Graphics_8h" startline="34">BBP::std::colour::B</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a4231d3561bf9510a91b882bfefad4434" compoundref="de/db8/R2D_8cpp" startline="37" endline="41">convertUCHARtoINT</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1aa626e4a375c5d08ffef4e295ca3105eb" compoundref="d2/dd1/Graphics_8h" startline="55">BBP::std::window::doFill</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1a0e5b85ff032dd08e07add7a5db71e71d" compoundref="d2/dd1/Graphics_8h" startline="51">BBP::std::window::Fill</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a17ab02cc13e1f6543a463ad27c77d2b6" compoundref="d2/dd1/Graphics_8h" startline="33">BBP::std::colour::G</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a266b18a4d7f867e04a130a0dfdd459a1" compoundref="d2/dd1/Graphics_8h" startline="32">BBP::std::colour::R</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1ace320712be2e6308522ee50474d89692" compoundref="d2/dd1/Graphics_8h" startline="36">BBP::std::colour::RGBA</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a4b123bdf7236d4ede422aa3090daf914" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::fill</definition>
+        <argsstring>(window *, RGBA_t rgb)</argsstring>
+        <name>fill</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref></type>
+          <declname>rgb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="117" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="111" bodyend="116" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="117" declcolumn="6"/>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1ac69073fa61911139d17da5785b266bb1" compoundref="d2/dd1/Graphics_8h" startline="34">BBP::std::colour::B</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1aac72e826c4be633a25255aa72d7d4d92" compoundref="de/db8/R2D_8cpp" startline="42" endline="47">convertINTtoUCHAR</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1aa626e4a375c5d08ffef4e295ca3105eb" compoundref="d2/dd1/Graphics_8h" startline="55">BBP::std::window::doFill</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1a0e5b85ff032dd08e07add7a5db71e71d" compoundref="d2/dd1/Graphics_8h" startline="51">BBP::std::window::Fill</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a17ab02cc13e1f6543a463ad27c77d2b6" compoundref="d2/dd1/Graphics_8h" startline="33">BBP::std::colour::G</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a266b18a4d7f867e04a130a0dfdd459a1" compoundref="d2/dd1/Graphics_8h" startline="32">BBP::std::colour::R</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1ace320712be2e6308522ee50474d89692" compoundref="d2/dd1/Graphics_8h" startline="36">BBP::std::colour::RGBA</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a460ff575be19227dc1efe7a800ad5b16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::fill</definition>
+        <argsstring>(window *, RGBA_t rgb, chan_t a)</argsstring>
+        <name>fill</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref></type>
+          <declname>rgb</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="118" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="117" bodyend="123" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="118" declcolumn="6"/>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a8a050a17731358934a17e04deeeb996e" compoundref="d2/dd1/Graphics_8h" startline="35">BBP::std::colour::A</references>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a" compoundref="d4/d54/Locale_8h" startline="65">BBP::Locale::Japanese::a</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1ac69073fa61911139d17da5785b266bb1" compoundref="d2/dd1/Graphics_8h" startline="34">BBP::std::colour::B</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1aac72e826c4be633a25255aa72d7d4d92" compoundref="de/db8/R2D_8cpp" startline="42" endline="47">convertINTtoUCHAR</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a4231d3561bf9510a91b882bfefad4434" compoundref="de/db8/R2D_8cpp" startline="37" endline="41">convertUCHARtoINT</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1aa626e4a375c5d08ffef4e295ca3105eb" compoundref="d2/dd1/Graphics_8h" startline="55">BBP::std::window::doFill</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1a0e5b85ff032dd08e07add7a5db71e71d" compoundref="d2/dd1/Graphics_8h" startline="51">BBP::std::window::Fill</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a17ab02cc13e1f6543a463ad27c77d2b6" compoundref="d2/dd1/Graphics_8h" startline="33">BBP::std::colour::G</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a266b18a4d7f867e04a130a0dfdd459a1" compoundref="d2/dd1/Graphics_8h" startline="32">BBP::std::colour::R</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1ace320712be2e6308522ee50474d89692" compoundref="d2/dd1/Graphics_8h" startline="36">BBP::std::colour::RGBA</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a637020510b9c2870fbe68e29a6d34a11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::noFill</definition>
+        <argsstring>(window *)</argsstring>
+        <name>noFill</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="119" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="125" bodyend="128" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="119" declcolumn="6"/>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1aa626e4a375c5d08ffef4e295ca3105eb" compoundref="d2/dd1/Graphics_8h" startline="55">BBP::std::window::doFill</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a9c63903bb92e27bf2c719641dda3ee98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::Line</definition>
+        <argsstring>(window *, int x1, int y1, int x2, int y2)</argsstring>
+        <name>Line</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="121" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="330" bodyend="384" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="121" declcolumn="6"/>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a47a9ae70757f2bb15bcae0d6fb9eaf7f" compoundref="de/db8/R2D_8cpp" startline="294" endline="298">BBP::std::absolute</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1aebc8a39aad9128808dcf6ac855719481" compoundref="de/db8/R2D_8cpp" startline="301" endline="304">BBP::std::iPartOfNumber</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acc11e125c7028e2c4834c7577a853818" compoundref="de/db8/R2D_8cpp" startline="457" endline="460">setPixel</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a11456392cec6b2a0ba2c507dc01c6305" compoundref="de/db8/R2D_8cpp" startline="286" endline="291">BBP::std::swap</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1acc6674c3e336f1e429b0bc23f9955ca6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::Hrule</definition>
+        <argsstring>(window *, pos_t x1, pos_t x2, pos_t y)</argsstring>
+        <name>Hrule</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="122" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="244" bodyend="249" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="122" declcolumn="6"/>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a8a050a17731358934a17e04deeeb996e" compoundref="d2/dd1/Graphics_8h" startline="35">BBP::std::colour::A</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1ac69073fa61911139d17da5785b266bb1" compoundref="d2/dd1/Graphics_8h" startline="34">BBP::std::colour::B</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ab9b99c1461c6a8dfd2b29b9b4385289e" compoundref="d2/dd1/Graphics_8h" startline="41">BBP::std::window::backBuffer</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a4231d3561bf9510a91b882bfefad4434" compoundref="de/db8/R2D_8cpp" startline="37" endline="41">convertUCHARtoINT</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a17ab02cc13e1f6543a463ad27c77d2b6" compoundref="d2/dd1/Graphics_8h" startline="33">BBP::std::colour::G</references>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" compoundref="d4/d54/Locale_8h" startline="67">BBP::Locale::Japanese::i</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a266b18a4d7f867e04a130a0dfdd459a1" compoundref="d2/dd1/Graphics_8h" startline="32">BBP::std::colour::R</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ae891d56662a9dde0747fd94989242e87" compoundref="d2/dd1/Graphics_8h" startline="50">BBP::std::window::Stroke</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ac9dc99ea7caf78da1c83e3fa1c7219aa" compoundref="d2/dd1/Graphics_8h" startline="43">BBP::std::window::width</references>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acea93c05ea4bbf9b38158ac0682a74cd" compoundref="de/db8/R2D_8cpp" startline="395" endline="399">Box</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a59fe3c5f2e87d457a935f884456549cd" compoundref="de/db8/R2D_8cpp" startline="401" endline="408">Frame</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a3f3e793215cc7ab1073d7169dd042c9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::Vrule</definition>
+        <argsstring>(window *, pos_t y1, pos_t y2, pos_t x)</argsstring>
+        <name>Vrule</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y2</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="123" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="251" bodyend="256" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="123" declcolumn="6"/>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a8a050a17731358934a17e04deeeb996e" compoundref="d2/dd1/Graphics_8h" startline="35">BBP::std::colour::A</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1ac69073fa61911139d17da5785b266bb1" compoundref="d2/dd1/Graphics_8h" startline="34">BBP::std::colour::B</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ab9b99c1461c6a8dfd2b29b9b4385289e" compoundref="d2/dd1/Graphics_8h" startline="41">BBP::std::window::backBuffer</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a4231d3561bf9510a91b882bfefad4434" compoundref="de/db8/R2D_8cpp" startline="37" endline="41">convertUCHARtoINT</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a17ab02cc13e1f6543a463ad27c77d2b6" compoundref="d2/dd1/Graphics_8h" startline="33">BBP::std::colour::G</references>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" compoundref="d4/d54/Locale_8h" startline="67">BBP::Locale::Japanese::i</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a266b18a4d7f867e04a130a0dfdd459a1" compoundref="d2/dd1/Graphics_8h" startline="32">BBP::std::colour::R</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ae891d56662a9dde0747fd94989242e87" compoundref="d2/dd1/Graphics_8h" startline="50">BBP::std::window::Stroke</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ac9dc99ea7caf78da1c83e3fa1c7219aa" compoundref="d2/dd1/Graphics_8h" startline="43">BBP::std::window::width</references>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a59fe3c5f2e87d457a935f884456549cd" compoundref="de/db8/R2D_8cpp" startline="401" endline="408">Frame</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a053faa8cfc098525fe8e670a4f9001bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::Line</definition>
+        <argsstring>(window *, int x1, int y1, int x2, int y2, chan_t r, chan_t g, chan_t b)</argsstring>
+        <name>Line</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y2</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="125" column="6" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="125" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a7781a618863a538d28ba8b6a824d19c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::Hrule</definition>
+        <argsstring>(window *, pos_t x1, pos_t x2, pos_t y, chan_t r, chan_t g, chan_t b)</argsstring>
+        <name>Hrule</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="126" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="258" bodyend="263" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="126" declcolumn="6"/>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ab9b99c1461c6a8dfd2b29b9b4385289e" compoundref="d2/dd1/Graphics_8h" startline="41">BBP::std::window::backBuffer</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a4231d3561bf9510a91b882bfefad4434" compoundref="de/db8/R2D_8cpp" startline="37" endline="41">convertUCHARtoINT</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" compoundref="d4/d54/Locale_8h" startline="67">BBP::Locale::Japanese::i</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ac9dc99ea7caf78da1c83e3fa1c7219aa" compoundref="d2/dd1/Graphics_8h" startline="43">BBP::std::window::width</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1ab511446f8db444431dbd58e715cbb0f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::Vrule</definition>
+        <argsstring>(window *, pos_t y1, pos_t y2, pos_t x, chan_t r, chan_t g, chan_t b)</argsstring>
+        <name>Vrule</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y2</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="127" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="265" bodyend="270" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="127" declcolumn="6"/>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ab9b99c1461c6a8dfd2b29b9b4385289e" compoundref="d2/dd1/Graphics_8h" startline="41">BBP::std::window::backBuffer</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a4231d3561bf9510a91b882bfefad4434" compoundref="de/db8/R2D_8cpp" startline="37" endline="41">convertUCHARtoINT</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" compoundref="d4/d54/Locale_8h" startline="67">BBP::Locale::Japanese::i</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ac9dc99ea7caf78da1c83e3fa1c7219aa" compoundref="d2/dd1/Graphics_8h" startline="43">BBP::std::window::width</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a81789d80537dca24ebb9d9454b9984f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::Line</definition>
+        <argsstring>(window *, int x1, int y1, int x2, int y2, RGBA_t rgb)</argsstring>
+        <name>Line</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y2</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref></type>
+          <declname>rgb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="129" column="6" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="129" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1ad125f29de7379a9edef7f618dbf91936" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::Hrule</definition>
+        <argsstring>(window *, pos_t x1, pos_t x2, pos_t y, RGBA_t rgb)</argsstring>
+        <name>Hrule</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref></type>
+          <declname>rgb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="130" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="272" bodyend="276" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="130" declcolumn="6"/>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ab9b99c1461c6a8dfd2b29b9b4385289e" compoundref="d2/dd1/Graphics_8h" startline="41">BBP::std::window::backBuffer</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" compoundref="d4/d54/Locale_8h" startline="67">BBP::Locale::Japanese::i</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ac9dc99ea7caf78da1c83e3fa1c7219aa" compoundref="d2/dd1/Graphics_8h" startline="43">BBP::std::window::width</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a528fd9eab653541da2b1e7b39a4caa62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::Vrule</definition>
+        <argsstring>(window *, pos_t y1, pos_t y2, pos_t x, RGBA_t rgb)</argsstring>
+        <name>Vrule</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y2</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref></type>
+          <declname>rgb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="131" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="278" bodyend="282" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="131" declcolumn="6"/>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ab9b99c1461c6a8dfd2b29b9b4385289e" compoundref="d2/dd1/Graphics_8h" startline="41">BBP::std::window::backBuffer</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" compoundref="d4/d54/Locale_8h" startline="67">BBP::Locale::Japanese::i</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ac9dc99ea7caf78da1c83e3fa1c7219aa" compoundref="d2/dd1/Graphics_8h" startline="43">BBP::std::window::width</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a6d561f750415d55352addcd1286ee41f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::Rect</definition>
+        <argsstring>(window *, pos_t x, pos_t y, pos_t w, pos_t h)</argsstring>
+        <name>Rect</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="133" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="386" bodyend="393" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="133" declcolumn="6"/>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acea93c05ea4bbf9b38158ac0682a74cd" compoundref="de/db8/R2D_8cpp" startline="395" endline="399">Box</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1aa626e4a375c5d08ffef4e295ca3105eb" compoundref="d2/dd1/Graphics_8h" startline="55">BBP::std::window::doFill</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1a61c94b6a97022ae687417d89f265f675" compoundref="d2/dd1/Graphics_8h" startline="54">BBP::std::window::doStroke</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a59fe3c5f2e87d457a935f884456549cd" compoundref="de/db8/R2D_8cpp" startline="401" endline="408">Frame</references>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" compoundref="d4/d54/Locale_8h" startline="67">BBP::Locale::Japanese::i</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1a0d65c4f879076590dc4a83641f98e53d" compoundref="d2/dd1/Graphics_8h" startline="57">BBP::std::window::strokeWeight</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1acea93c05ea4bbf9b38158ac0682a74cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::Box</definition>
+        <argsstring>(window *, pos_t x, pos_t y, pos_t w, pos_t h)</argsstring>
+        <name>Box</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="134" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="395" bodyend="399" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="134" declcolumn="6"/>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1ac69073fa61911139d17da5785b266bb1" compoundref="d2/dd1/Graphics_8h" startline="34">BBP::std::colour::B</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1a0e5b85ff032dd08e07add7a5db71e71d" compoundref="d2/dd1/Graphics_8h" startline="51">BBP::std::window::Fill</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a17ab02cc13e1f6543a463ad27c77d2b6" compoundref="d2/dd1/Graphics_8h" startline="33">BBP::std::colour::G</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acc6674c3e336f1e429b0bc23f9955ca6" compoundref="de/db8/R2D_8cpp" startline="244" endline="249">Hrule</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1a266b18a4d7f867e04a130a0dfdd459a1" compoundref="d2/dd1/Graphics_8h" startline="32">BBP::std::colour::R</references>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a6d561f750415d55352addcd1286ee41f" compoundref="de/db8/R2D_8cpp" startline="386" endline="393">Rect</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a1ff2b5345c0f2577b34cc21b096abb33" compoundref="de/db8/R2D_8cpp" startline="462" endline="465">setPixel</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1af810971cb418624f05a53e32e7aeee00" compoundref="de/db8/R2D_8cpp" startline="467" endline="470">setPixelAligned</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a59fe3c5f2e87d457a935f884456549cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::Frame</definition>
+        <argsstring>(window *, pos_t x, pos_t y, pos_t w, pos_t h)</argsstring>
+        <name>Frame</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="135" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="401" bodyend="408" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="135" declcolumn="6"/>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acc6674c3e336f1e429b0bc23f9955ca6" compoundref="de/db8/R2D_8cpp" startline="244" endline="249">Hrule</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a3f3e793215cc7ab1073d7169dd042c9c" compoundref="de/db8/R2D_8cpp" startline="251" endline="256">Vrule</references>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a6d561f750415d55352addcd1286ee41f" compoundref="de/db8/R2D_8cpp" startline="386" endline="393">Rect</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1ab48857f9d44795eef84f06c8b10626ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::RectPixelMask</definition>
+        <argsstring>(window *, pos_t x, pos_t y, mask_t mask)</argsstring>
+        <name>RectPixelMask</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref></type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="137" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="410" bodyend="416" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="137" declcolumn="6"/>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acc11e125c7028e2c4834c7577a853818" compoundref="de/db8/R2D_8cpp" startline="457" endline="460">setPixel</references>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1aa40574bb9ba2fcd8a63d1a0438d78aa3" compoundref="de/db8/R2D_8cpp" startline="512" endline="516">PrintCharacterAt</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a8d82b791dfb06d26ff05ec27e451bc23" compoundref="de/db8/R2D_8cpp" startline="434" endline="438">RectPixelMask</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1ae1d88714e45ace0dcf915ffbad2e550e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::RectPixelMask</definition>
+        <argsstring>(window *, pos_t x, pos_t y, word size, mask_t mask)</argsstring>
+        <name>RectPixelMask</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref></type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="138" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="418" bodyend="424" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="138" declcolumn="6"/>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acc11e125c7028e2c4834c7577a853818" compoundref="de/db8/R2D_8cpp" startline="457" endline="460">setPixel</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a04471602a24e37f097d5223afa97a068" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::RectPixelMaskAligned</definition>
+        <argsstring>(window *, pos_t x, pos_t y, word size, mask_t mask)</argsstring>
+        <name>RectPixelMaskAligned</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref></type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="139" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="426" bodyend="432" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="139" declcolumn="6"/>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1af810971cb418624f05a53e32e7aeee00" compoundref="de/db8/R2D_8cpp" startline="467" endline="470">setPixelAligned</references>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a7fa5f557411a59c6f600b3407f96868c" compoundref="de/db8/R2D_8cpp" startline="446" endline="450">RectPixelMaskAligned</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a8d82b791dfb06d26ff05ec27e451bc23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::RectPixelMask</definition>
+        <argsstring>(window *, pos_t x, pos_t y, mask_t *maskv, word maskc)</argsstring>
+        <name>RectPixelMask</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref> *</type>
+          <declname>maskv</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref></type>
+          <declname>maskc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="141" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="434" bodyend="438" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="141" declcolumn="6"/>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" compoundref="d4/d54/Locale_8h" startline="67">BBP::Locale::Japanese::i</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1ab48857f9d44795eef84f06c8b10626ed" compoundref="de/db8/R2D_8cpp" startline="410" endline="416">RectPixelMask</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a1737251aa761a987132194242bfd19b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::RectPixelMask</definition>
+        <argsstring>(window *, pos_t x, pos_t y, word size, mask_t *maskv, word maskc)</argsstring>
+        <name>RectPixelMask</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref> *</type>
+          <declname>maskv</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref></type>
+          <declname>maskc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="142" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="440" bodyend="444" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="142" declcolumn="6"/>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" compoundref="d4/d54/Locale_8h" startline="67">BBP::Locale::Japanese::i</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1ab48857f9d44795eef84f06c8b10626ed" compoundref="de/db8/R2D_8cpp" startline="410" endline="416">RectPixelMask</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a7fa5f557411a59c6f600b3407f96868c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::RectPixelMaskAligned</definition>
+        <argsstring>(window *, pos_t x, pos_t y, word size, mask_t *maskv, word maskc)</argsstring>
+        <name>RectPixelMaskAligned</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref> *</type>
+          <declname>maskv</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref></type>
+          <declname>maskc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="143" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="446" bodyend="450" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="143" declcolumn="6"/>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" compoundref="d4/d54/Locale_8h" startline="67">BBP::Locale::Japanese::i</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a04471602a24e37f097d5223afa97a068" compoundref="de/db8/R2D_8cpp" startline="426" endline="432">RectPixelMaskAligned</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1aaa5e3978968fc3b485e6425d0a0f6f41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref></type>
+        <definition>RGBA_t BBP::std::R2D::readPixel</definition>
+        <argsstring>(window *, pos_t x, pos_t y)</argsstring>
+        <name>readPixel</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="145" column="8" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="452" bodyend="455" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="145" declcolumn="8"/>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ab9b99c1461c6a8dfd2b29b9b4385289e" compoundref="d2/dd1/Graphics_8h" startline="41">BBP::std::window::backBuffer</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ac9dc99ea7caf78da1c83e3fa1c7219aa" compoundref="d2/dd1/Graphics_8h" startline="43">BBP::std::window::width</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1acc11e125c7028e2c4834c7577a853818" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::setPixel</definition>
+        <argsstring>(window *, pos_t x, pos_t y)</argsstring>
+        <name>setPixel</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="147" column="13" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="457" bodyend="460" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="147" declcolumn="13"/>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ab9b99c1461c6a8dfd2b29b9b4385289e" compoundref="d2/dd1/Graphics_8h" startline="41">BBP::std::window::backBuffer</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="de/d9c/structBBP_1_1std_1_1colour_1ace320712be2e6308522ee50474d89692" compoundref="d2/dd1/Graphics_8h" startline="36">BBP::std::colour::RGBA</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ae891d56662a9dde0747fd94989242e87" compoundref="d2/dd1/Graphics_8h" startline="50">BBP::std::window::Stroke</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ac9dc99ea7caf78da1c83e3fa1c7219aa" compoundref="d2/dd1/Graphics_8h" startline="43">BBP::std::window::width</references>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a9c63903bb92e27bf2c719641dda3ee98" compoundref="de/db8/R2D_8cpp" startline="330" endline="384">Line</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a1a6b1725d55164c1157ff766baceaed9" compoundref="de/db8/R2D_8cpp" startline="472" endline="477">PixelMask</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1ab48857f9d44795eef84f06c8b10626ed" compoundref="de/db8/R2D_8cpp" startline="410" endline="416">RectPixelMask</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a1ff2b5345c0f2577b34cc21b096abb33" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::setPixel</definition>
+        <argsstring>(window *, pos_t x, pos_t y, word size)</argsstring>
+        <name>setPixel</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="148" column="13" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="462" bodyend="465" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="148" declcolumn="13"/>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acea93c05ea4bbf9b38158ac0682a74cd" compoundref="de/db8/R2D_8cpp" startline="395" endline="399">Box</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1af810971cb418624f05a53e32e7aeee00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::setPixelAligned</definition>
+        <argsstring>(window *, pos_t x, pos_t y, word size)</argsstring>
+        <name>setPixelAligned</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="149" column="13" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="467" bodyend="470" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="149" declcolumn="13"/>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acea93c05ea4bbf9b38158ac0682a74cd" compoundref="de/db8/R2D_8cpp" startline="395" endline="399">Box</references>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a1104662a1c8fcf0a0bc9cc9973f6e189" compoundref="de/db8/R2D_8cpp" startline="486" endline="491">PixelMaskAligned</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a04471602a24e37f097d5223afa97a068" compoundref="de/db8/R2D_8cpp" startline="426" endline="432">RectPixelMaskAligned</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a1a6b1725d55164c1157ff766baceaed9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::PixelMask</definition>
+        <argsstring>(window *, pos_t x, pos_t y, mask_t mask)</argsstring>
+        <name>PixelMask</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref></type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="151" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="472" bodyend="477" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="151" declcolumn="6"/>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" compoundref="d4/d54/Locale_8h" startline="67">BBP::Locale::Japanese::i</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acc11e125c7028e2c4834c7577a853818" compoundref="de/db8/R2D_8cpp" startline="457" endline="460">setPixel</references>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a7770f2686230f89508e5b3b542a87cbd" compoundref="de/db8/R2D_8cpp" startline="493" endline="497">PixelMask</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1ab41ab6dcb4a81af7d3bd78e26283160b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::PixelMask</definition>
+        <argsstring>(window *, pos_t x, pos_t y, word size, mask_t mask)</argsstring>
+        <name>PixelMask</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref></type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="152" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="479" bodyend="484" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="152" declcolumn="6"/>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" compoundref="d4/d54/Locale_8h" startline="67">BBP::Locale::Japanese::i</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acc11e125c7028e2c4834c7577a853818" compoundref="de/db8/R2D_8cpp" startline="457" endline="460">setPixel</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a1104662a1c8fcf0a0bc9cc9973f6e189" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::PixelMaskAligned</definition>
+        <argsstring>(window *, pos_t x, pos_t y, word size, mask_t mask)</argsstring>
+        <name>PixelMaskAligned</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref></type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="153" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="486" bodyend="491" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="153" declcolumn="6"/>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" compoundref="d4/d54/Locale_8h" startline="67">BBP::Locale::Japanese::i</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1af810971cb418624f05a53e32e7aeee00" compoundref="de/db8/R2D_8cpp" startline="467" endline="470">setPixelAligned</references>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1ac218dc81a8b49971c849d52244d745e0" compoundref="de/db8/R2D_8cpp" startline="505" endline="509">PixelMaskAligned</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a7770f2686230f89508e5b3b542a87cbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::PixelMask</definition>
+        <argsstring>(window *, pos_t x, pos_t y, mask_t *maskv, word maskc)</argsstring>
+        <name>PixelMask</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref> *</type>
+          <declname>maskv</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref></type>
+          <declname>maskc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="155" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="493" bodyend="497" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="155" declcolumn="6"/>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" compoundref="d4/d54/Locale_8h" startline="67">BBP::Locale::Japanese::i</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a1a6b1725d55164c1157ff766baceaed9" compoundref="de/db8/R2D_8cpp" startline="472" endline="477">PixelMask</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a7d648c5e94e07105fa045257e3440239" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::PixelMask</definition>
+        <argsstring>(window *, pos_t x, pos_t y, word size, mask_t *maskv, word maskc)</argsstring>
+        <name>PixelMask</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref> *</type>
+          <declname>maskv</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref></type>
+          <declname>maskc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="156" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="499" bodyend="503" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="156" declcolumn="6"/>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" compoundref="d4/d54/Locale_8h" startline="67">BBP::Locale::Japanese::i</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a1a6b1725d55164c1157ff766baceaed9" compoundref="de/db8/R2D_8cpp" startline="472" endline="477">PixelMask</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1ac218dc81a8b49971c849d52244d745e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::PixelMaskAligned</definition>
+        <argsstring>(window *, pos_t x, pos_t y, word size, mask_t *maskv, word maskc)</argsstring>
+        <name>PixelMaskAligned</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref> *</type>
+          <declname>maskv</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref></type>
+          <declname>maskc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="157" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="505" bodyend="509" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="157" declcolumn="6"/>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" compoundref="d4/d54/Locale_8h" startline="67">BBP::Locale::Japanese::i</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a1104662a1c8fcf0a0bc9cc9973f6e189" compoundref="de/db8/R2D_8cpp" startline="486" endline="491">PixelMaskAligned</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1aa40574bb9ba2fcd8a63d1a0438d78aa3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::PrintCharacterAt</definition>
+        <argsstring>(window *, pos_t x, pos_t y, ustring_element ch)</argsstring>
+        <name>PrintCharacterAt</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a93ee4e8e0be4fe0fbad19f4b385cd356" kindref="member">ustring_element</ref></type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="159" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="512" bodyend="516" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="159" declcolumn="6"/>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ae3069a84e0d48568f95671b228a8f558" compoundref="d2/dd1/Graphics_8h" startline="63">BBP::std::window::fontMapping</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1ab48857f9d44795eef84f06c8b10626ed" compoundref="de/db8/R2D_8cpp" startline="410" endline="416">RectPixelMask</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1a5b0bda00440c7ba035e0c3c8c1451564" compoundref="d2/dd1/Graphics_8h" startline="59">BBP::std::window::typeFace</references>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1ada5f0bdbe4d4bd6f1a3780235a34225a" compoundref="de/db8/R2D_8cpp" startline="523" endline="540">print</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a212aad050ebf4b7a7883add3b6aee666" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::PrintCharacterAt</definition>
+        <argsstring>(window *, pos_t x, pos_t y, ustring_element ch, word size)</argsstring>
+        <name>PrintCharacterAt</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a93ee4e8e0be4fe0fbad19f4b385cd356" kindref="member">ustring_element</ref></type>
+          <declname>ch</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="160" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="518" bodyend="521" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="160" declcolumn="6"/>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ae3069a84e0d48568f95671b228a8f558" compoundref="d2/dd1/Graphics_8h" startline="63">BBP::std::window::fontMapping</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1ab48857f9d44795eef84f06c8b10626ed" compoundref="de/db8/R2D_8cpp" startline="410" endline="416">RectPixelMask</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1a5b0bda00440c7ba035e0c3c8c1451564" compoundref="d2/dd1/Graphics_8h" startline="59">BBP::std::window::typeFace</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1ada5f0bdbe4d4bd6f1a3780235a34225a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::print</definition>
+        <argsstring>(window *, ustring_element ch)</argsstring>
+        <name>print</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a93ee4e8e0be4fe0fbad19f4b385cd356" kindref="member">ustring_element</ref></type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="162" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="523" bodyend="540" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="162" declcolumn="6"/>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1acc76fa8da50f61b313daf273759d41f6" compoundref="d2/dd1/Graphics_8h" startline="71">BBP::std::window::coloumn</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1af92a6abc4ffbc23afaa6515186dfd2a4" compoundref="d2/dd1/Graphics_8h" startline="68">BBP::std::window::cursorPosX</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1aacf390d25ee553ec491d72271440f6de" compoundref="d2/dd1/Graphics_8h" startline="69">BBP::std::window::cursorPosY</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1a7b1763f76820bdf7523a92187c575c4a" compoundref="d2/dd1/Graphics_8h" startline="65">BBP::std::window::fontSize</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1a4620071899508871297f6960ee6c3b27" compoundref="d2/dd1/Graphics_8h" startline="66">BBP::std::window::fontSpacing</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1a2d995208b35a2c6291dd86d372fb4e71" compoundref="d2/dd1/Graphics_8h" startline="72">BBP::std::window::line</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1aa40574bb9ba2fcd8a63d1a0438d78aa3" compoundref="de/db8/R2D_8cpp" startline="512" endline="516">PrintCharacterAt</references>
+        <referencedby refid="d9/d6f/namespaceBBP_1a2f249970c78eb045d841a355fb07ca46" compoundref="dd/d40/Boot_8cpp" startline="17" endline="35">BBP::boot_main</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1aefed8c396629f69d9389151834573442" compoundref="de/db8/R2D_8cpp" startline="552" endline="560">print</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1a794dd38ff79d1ca1ed6036ff9e3cce03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::print</definition>
+        <argsstring>(window *, ustring_element *str)</argsstring>
+        <name>print</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a93ee4e8e0be4fe0fbad19f4b385cd356" kindref="member">ustring_element</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="163" column="6" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="163" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1aefed8c396629f69d9389151834573442" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::print</definition>
+        <argsstring>(window *, conststring str)</argsstring>
+        <name>print</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">conststring</ref></type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="164" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="552" bodyend="560" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="164" declcolumn="6"/>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1ada5f0bdbe4d4bd6f1a3780235a34225a" compoundref="de/db8/R2D_8cpp" startline="523" endline="540">print</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1ae3931b29ff84c5eb3643fd9cba7b1205" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::print</definition>
+        <argsstring>(window *, mem_t *str, word str_c)</argsstring>
+        <name>print</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae05c88ad8c36bd02dd1fd949e8b5cab2" kindref="member">mem_t</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref></type>
+          <declname>str_c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="165" column="6" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="165" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1ad2871cbf4bfaae6435058137d35c8119" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::setCursorPos</definition>
+        <argsstring>(window *, pos_t x, pos_t y)</argsstring>
+        <name>setCursorPos</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref></type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="166" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="569" bodyend="575" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="166" declcolumn="6"/>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1acc76fa8da50f61b313daf273759d41f6" compoundref="d2/dd1/Graphics_8h" startline="71">BBP::std::window::coloumn</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1af92a6abc4ffbc23afaa6515186dfd2a4" compoundref="d2/dd1/Graphics_8h" startline="68">BBP::std::window::cursorPosX</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1aacf390d25ee553ec491d72271440f6de" compoundref="d2/dd1/Graphics_8h" startline="69">BBP::std::window::cursorPosY</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1a2d995208b35a2c6291dd86d372fb4e71" compoundref="d2/dd1/Graphics_8h" startline="72">BBP::std::window::line</references>
+        <referencedby refid="d9/d6f/namespaceBBP_1a2f249970c78eb045d841a355fb07ca46" compoundref="dd/d40/Boot_8cpp" startline="17" endline="35">BBP::boot_main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/namespaceBBP_1_1std_1_1R2D_1aec7ebe885d0c8a1b5bf5b98b4d08a4ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::R2D::GetFontFromFile</definition>
+        <argsstring>(window *, std::PATH &amp;)</argsstring>
+        <name>GetFontFromFile</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type><ref refid="d8/dea/classBBP_1_1std_1_1PATH" kindref="compound">std::PATH</ref> &amp;</type>
+          <defname>path</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="169" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Graphics/R2D.cpp" bodystart="167" bodyend="217" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="169" declcolumn="6"/>
+        <references refid="d4/dbd/classBBP_1_1std_1_1FILE_1ae42065d3c2135f0bd24a3402c7a85921" compoundref="d9/d63/File_8cpp" startline="168" endline="171">BBP::std::FILE::b</references>
+        <references refid="d6/d73/classBBP_1_1std_1_1ResourceManager_1a2feb265bae9a30994a2a4a4f69306329" compoundref="db/d83/Resources_8cpp" startline="26" endline="42">BBP::std::ResourceManager::calloc</references>
+        <references refid="d4/dbd/classBBP_1_1std_1_1FILE_1a0a06d09de567928faea10565289627c6" compoundref="d9/d63/File_8cpp" startline="146" endline="159">BBP::std::FILE::close</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a3b5c962d781f42d8dc36949061c308ab" compoundref="de/d5c/Memory_8h" startline="35">BBP::std::PAGE&lt; T &gt;::dataSize</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ae3069a84e0d48568f95671b228a8f558" compoundref="d2/dd1/Graphics_8h" startline="63">BBP::std::window::fontMapping</references>
+        <references refid="d6/d73/classBBP_1_1std_1_1ResourceManager_1a88b2740fa8c5b5e30e6ef08cb8c7d883" compoundref="db/d83/Resources_8cpp" startline="57" endline="72">BBP::std::ResourceManager::free</references>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" compoundref="d4/d54/Locale_8h" startline="67">BBP::Locale::Japanese::i</references>
+        <references refid="de/d21/classBBP_1_1std_1_1Stack_1aaacd32840edd56a62471a2aedbbe85dc" compoundref="dc/db6/Stack_8h" startline="64">BBP::std::Stack&lt; K &gt;::page</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a55693c4a04d73e619277c4eb973f2745">BBP::std::read_a</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1ab8c934d79ee954a6a8221d364ce872a8">BBP::std::read_ar</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1a5b0bda00440c7ba035e0c3c8c1451564" compoundref="d2/dd1/Graphics_8h" startline="59">BBP::std::window::typeFace</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a2f7b7b3936492dde3cceacc3e74f5cc3" compoundref="de/db8/R2D_8cpp" startline="33">BBP::std::vmem</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="95" column="1"/>
+  </compounddef>
+</doxygen>

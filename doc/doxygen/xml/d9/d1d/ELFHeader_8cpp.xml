@@ -1,0 +1,606 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d9/d1d/ELFHeader_8cpp" kind="file" language="C++">
+    <compoundname>ELFHeader.cpp</compoundname>
+    <includes refid="db/de5/ELF_8h" local="yes">../include/ELF.h</includes>
+    <includes refid="de/d23/StressRelief_8h" local="yes">../include/StressRelief.h</includes>
+    <includes refid="d6/dd1/stdio_8h" local="yes">../include/stdio.h</includes>
+    <includes refid="de/d53/Strings_8h" local="yes">../include/Strings.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>ELFHeader.cpp</label>
+        <link refid="d9/d1d/ELFHeader_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Memory.h</label>
+        <link refid="de/d5c/Memory_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>../include/StressRelief.h</label>
+        <link refid="de/d23/StressRelief_8h"/>
+      </node>
+      <node id="9">
+        <label>Strings.h</label>
+        <link refid="de/d53/Strings_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Resources.h</label>
+        <link refid="d0/d33/Resources_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>ELF32.h</label>
+        <link refid="d1/d5d/ELF32_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Stack.hxx</label>
+        <link refid="db/d61/Stack_8hxx"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Memory.hxx</label>
+        <link refid="d5/d4e/Memory_8hxx"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>../include/stdio.h</label>
+        <link refid="d6/dd1/stdio_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>errno.h</label>
+        <link refid="d8/dc2/errno_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Signal.h</label>
+        <link refid="d0/def/Signal_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Except.h</label>
+        <link refid="dc/d88/Except_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+        <link refid="df/dd8/stdint_8h"/>
+      </node>
+      <node id="4">
+        <label>stddef.h</label>
+        <link refid="d3/dce/stddef_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../include/ELF.h</label>
+        <link refid="db/de5/ELF_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Stack.h</label>
+        <link refid="dc/db6/Stack_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;../include/ELF.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/StressRelief.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/stdio.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/Strings.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a43e89d15168860841898bdaa41f63928" refkind="member"><highlight class="normal"><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a43e89d15168860841898bdaa41f63928" kindref="member">BBP::std::ELF::ELFBuilder::ELFBuilder</ref>(<ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager" kindref="compound">BBP::std::ResourceManager</ref><sp/>*res,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref><sp/>segCount,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref><sp/>secCount,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref><sp/>symCount)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>allocator(res),</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>file(<ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">PAGE</ref>&lt;<ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">string_element</ref>&gt;(52<sp/>+<sp/>segCount<sp/>*<sp/><ref refid="d1/d5d/ELF32_8h_1a60330cdd16e8de9bb3e58b5924e02a22" kindref="member">ELF_SEGMENT_HEADERSIZE</ref><sp/>+<sp/>secCount<sp/>*<sp/><ref refid="d1/d5d/ELF32_8h_1ac8ef5e709bb72df9e18de114dbe71ba7" kindref="member">ELF_SECTION_HEADERSIZE</ref>,<sp/>(std::<ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">string_element</ref><sp/>*)res-&gt;calloc(52<sp/>+<sp/>segCount<sp/>*<sp/><ref refid="d1/d5d/ELF32_8h_1a60330cdd16e8de9bb3e58b5924e02a22" kindref="member">ELF_SEGMENT_HEADERSIZE</ref><sp/>+<sp/>secCount<sp/>*<sp/><ref refid="d1/d5d/ELF32_8h_1ac8ef5e709bb72df9e18de114dbe71ba7" kindref="member">ELF_SECTION_HEADERSIZE</ref>,<sp/>sizeof(std::<ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">string_element</ref>)))),</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>Endian(false),</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>segments(<ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">Stack</ref>&lt;<ref refid="d8/d33/classBBP_1_1std_1_1ELF_1_1SegmentBuilder" kindref="compound">SegmentBuilder</ref>&gt;(&amp;segPages,<sp/>segCount)),</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>sections(<ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">Stack</ref>&lt;<ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">SectionBuilder</ref>&gt;(&amp;secPages,<sp/>secCount)),</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>symbols(<ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">Stack</ref>&lt;<ref refid="d3/db3/classBBP_1_1std_1_1ELF_1_1SymbolBuilder" kindref="compound">SymbolBuilder</ref>&gt;(&amp;symPages,<sp/>symCount)),</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>symbolCount(symCount),</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>segPages(<ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">PAGE</ref>&lt;<ref refid="d8/d33/classBBP_1_1std_1_1ELF_1_1SegmentBuilder" kindref="compound">SegmentBuilder</ref>&gt;(segCount,<sp/>(<ref refid="d8/d33/classBBP_1_1std_1_1ELF_1_1SegmentBuilder" kindref="compound">SegmentBuilder</ref><sp/>*)res-&gt;calloc(segCount,<sp/>sizeof(<ref refid="d8/d33/classBBP_1_1std_1_1ELF_1_1SegmentBuilder" kindref="compound">SegmentBuilder</ref>)))),</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>secPages(<ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">PAGE</ref>&lt;<ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">SectionBuilder</ref>&gt;(secCount,<sp/>(<ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">SectionBuilder</ref><sp/>*)res-&gt;calloc(secCount,<sp/>sizeof(<ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">SectionBuilder</ref>)))),</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>symPages(<ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">PAGE</ref>&lt;<ref refid="d3/db3/classBBP_1_1std_1_1ELF_1_1SymbolBuilder" kindref="compound">SymbolBuilder</ref>&gt;(symCount,<sp/>(<ref refid="d3/db3/classBBP_1_1std_1_1ELF_1_1SymbolBuilder" kindref="compound">SymbolBuilder</ref><sp/>*)res-&gt;calloc(symCount,<sp/>sizeof(<ref refid="d3/db3/classBBP_1_1std_1_1ELF_1_1SymbolBuilder" kindref="compound">SymbolBuilder</ref>)))),</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>isMemUnique(true),</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>hashBucketCount(4),</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>hashChainCount(symCount)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">index_t</ref><sp/>index<sp/>=<sp/>0;<sp/>index<sp/>&lt;<sp/>segCount;<sp/>index++)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ac6d3e73a576cff32f9ff187656ecaef0" kindref="member">segments</ref>[index]<sp/>=<sp/><ref refid="d8/d33/classBBP_1_1std_1_1ELF_1_1SegmentBuilder" kindref="compound">ELF::SegmentBuilder</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>0);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ac6d3e73a576cff32f9ff187656ecaef0" kindref="member">segments</ref>[index].elf<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">index_t</ref><sp/>index<sp/>=<sp/>0;<sp/>index<sp/>&lt;<sp/>secCount;<sp/>index++)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a9f9dc28f8c51086b115740db8935ab1c" kindref="member">sections</ref>[index]<sp/>=<sp/><ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">ELF::SectionBuilder</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>0);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a9f9dc28f8c51086b115740db8935ab1c" kindref="member">sections</ref>[index].elf<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">index_t</ref><sp/>index<sp/>=<sp/>0;<sp/>index<sp/>&lt;<sp/>symCount;<sp/>index++)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ac14d27bbc9d00c51a66e002dcbcfee74" kindref="member">symbols</ref>[index]<sp/>=<sp/><ref refid="d3/db3/classBBP_1_1std_1_1ELF_1_1SymbolBuilder" kindref="compound">ELF::SymbolBuilder</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>0);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ac14d27bbc9d00c51a66e002dcbcfee74" kindref="member">symbols</ref>[index].elf<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a3f5be41608ef64c87d0c48cdaab4b6f8" kindref="member">phnum</ref>(segCount);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a00013d07c04c5454c55732f076b6b205" kindref="member">shnum</ref>(secCount);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a9be7c78361492e5f615263fac98a6fe8" refkind="member"><highlight class="normal"><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a43e89d15168860841898bdaa41f63928" kindref="member">BBP::std::ELF::ELFBuilder::ELFBuilder</ref>(<ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">BBP::std::PAGE&lt;string_element&gt;</ref><sp/>*_file,<sp/><ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager" kindref="compound">BBP::std::ResourceManager</ref><sp/>*res)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>allocator(res),</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>file(<ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">PAGE</ref>&lt;<ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">string_element</ref>&gt;(0,<sp/>nullptr)),</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>Endian(false),</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>segments(<ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">Stack</ref>&lt;<ref refid="d8/d33/classBBP_1_1std_1_1ELF_1_1SegmentBuilder" kindref="compound">SegmentBuilder</ref>&gt;(&amp;segPages,<sp/>0)),</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>sections(<ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">Stack</ref>&lt;<ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">SectionBuilder</ref>&gt;(&amp;secPages,<sp/>0)),</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>symbols(<ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">Stack</ref>&lt;<ref refid="d3/db3/classBBP_1_1std_1_1ELF_1_1SymbolBuilder" kindref="compound">SymbolBuilder</ref>&gt;(&amp;symPages,<sp/>0)),</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>symbolCount(0),</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>segPages(<ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">PAGE</ref>&lt;<ref refid="d8/d33/classBBP_1_1std_1_1ELF_1_1SegmentBuilder" kindref="compound">SegmentBuilder</ref>&gt;()),</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>secPages(<ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">PAGE</ref>&lt;<ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">SectionBuilder</ref>&gt;()),</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>symPages(<ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">PAGE</ref>&lt;<ref refid="d3/db3/classBBP_1_1std_1_1ELF_1_1SymbolBuilder" kindref="compound">SymbolBuilder</ref>&gt;()),</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>isMemUnique(false),</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>hashBucketCount(4),</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>hashChainCount(0)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>file<sp/>is<sp/>not<sp/>nullptr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_file<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a750ba4c285e0788e84722a30a776b913" kindref="member">std::exception</ref>(</highlight><highlight class="stringliteral">&quot;Invalid<sp/>file&quot;</highlight><highlight class="normal">,<sp/><ref refid="d8/dc2/errno_8h_1a03e689f378f643d16ea7537918528a48" kindref="member">ENOENT</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>resource<sp/>allocator<sp/>is<sp/>nullptr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(res<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a750ba4c285e0788e84722a30a776b913" kindref="member">std::exception</ref>(</highlight><highlight class="stringliteral">&quot;Invalid<sp/>resource<sp/>allocator&quot;</highlight><highlight class="normal">,<sp/><ref refid="d8/dc2/errno_8h_1a03e689f378f643d16ea7537918528a48" kindref="member">ENOENT</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>file<sp/>size<sp/>is<sp/>at<sp/>least<sp/>52<sp/>bytes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a3f8c5c3d25a021fbc386bafabc41a719" kindref="member">std::seqlen</ref>(*_file)<sp/>&lt;<sp/>52)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a750ba4c285e0788e84722a30a776b913" kindref="member">std::exception</ref>(</highlight><highlight class="stringliteral">&quot;File<sp/>is<sp/>not<sp/>ELF<sp/>file:<sp/>too<sp/>small.&quot;</highlight><highlight class="normal">,<sp/><ref refid="d8/dc2/errno_8h_1a0030614bc864d1b24eaedd71585acc27" kindref="member">ENODATA</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ae617b962ff1bbb33b4436c0131fc9266" kindref="member">file</ref><sp/>=<sp/><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::PAGE&lt;std::string_element&gt;</ref>(_file-&gt;<ref refid="df/ddc/structBBP_1_1std_1_1PAGE_1a3b5c962d781f42d8dc36949061c308ab" kindref="member">dataSize</ref>,<sp/>_file-&gt;<ref refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" kindref="member">data</ref>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>magic</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref><sp/>magic<sp/>=<sp/>(<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a83d5af2fc078db5b80fdd88e3c9820cf" kindref="member">ident</ref>(0)<sp/>&lt;&lt;<sp/>24)<sp/>|<sp/>(<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a83d5af2fc078db5b80fdd88e3c9820cf" kindref="member">ident</ref>(1)<sp/>&lt;&lt;<sp/>16)<sp/>|<sp/>(<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a83d5af2fc078db5b80fdd88e3c9820cf" kindref="member">ident</ref>(2)<sp/>&lt;&lt;<sp/>8)<sp/>|<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a83d5af2fc078db5b80fdd88e3c9820cf" kindref="member">ident</ref>(3);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Validate<sp/>magic</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(magic<sp/>!=<sp/>0x7f454c46)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a750ba4c285e0788e84722a30a776b913" kindref="member">std::exception</ref>(</highlight><highlight class="stringliteral">&quot;File<sp/>is<sp/>not<sp/>ELF<sp/>file:<sp/>wrong<sp/>magic&quot;</highlight><highlight class="normal">,<sp/><ref refid="d8/dc2/errno_8h_1a0030614bc864d1b24eaedd71585acc27" kindref="member">ENODATA</ref>);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>phnum<sp/>and<sp/>shnum<sp/>count</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref><sp/>sectionCount<sp/>=<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a00013d07c04c5454c55732f076b6b205" kindref="member">shnum</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref><sp/>segmentCount<sp/>=<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a3f5be41608ef64c87d0c48cdaab4b6f8" kindref="member">phnum</ref>();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>resources</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a3936d655703cbbf961a3c91ea9ca2c23" kindref="member">secPages</ref><sp/>=<sp/><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::PAGE&lt;SectionBuilder&gt;</ref>(sectionCount,<sp/>(<ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">SectionBuilder</ref><sp/>*)res-&gt;<ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager_1a2feb265bae9a30994a2a4a4f69306329" kindref="member">calloc</ref>(sectionCount,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">SectionBuilder</ref>)));</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a704bcf7f63ac507eadbe8077ad3d9b81" kindref="member">segPages</ref><sp/>=<sp/><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::PAGE&lt;SegmentBuilder&gt;</ref>(segmentCount,<sp/>(<ref refid="d8/d33/classBBP_1_1std_1_1ELF_1_1SegmentBuilder" kindref="compound">SegmentBuilder</ref><sp/>*)res-&gt;<ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager_1a2feb265bae9a30994a2a4a4f69306329" kindref="member">calloc</ref>(segmentCount,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="d8/d33/classBBP_1_1std_1_1ELF_1_1SegmentBuilder" kindref="compound">SegmentBuilder</ref>)));</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>And<sp/>assign<sp/>stacks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a9f9dc28f8c51086b115740db8935ab1c" kindref="member">sections</ref><sp/>=<sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;SectionBuilder&gt;</ref>(&amp;<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a3936d655703cbbf961a3c91ea9ca2c23" kindref="member">secPages</ref>,<sp/>sectionCount);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ac6d3e73a576cff32f9ff187656ecaef0" kindref="member">segments</ref><sp/>=<sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;SegmentBuilder&gt;</ref>(&amp;<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a704bcf7f63ac507eadbe8077ad3d9b81" kindref="member">segPages</ref>,<sp/>segmentCount);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>offsets<sp/>of<sp/>program<sp/>and<sp/>section<sp/>headers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aba0804f0534bca779731a6e8f2d3b123" kindref="member">std::offset_t</ref><sp/>sectionOffsets<sp/>=<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a5604c352d9c887660d677ff048e13153" kindref="member">shoff</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aba0804f0534bca779731a6e8f2d3b123" kindref="member">std::offset_t</ref><sp/>segmentOffsets<sp/>=<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a831146e80b722eacb7767a22507da6b5" kindref="member">phoff</ref>();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>also<sp/>get<sp/>size<sp/>of<sp/>program<sp/>and<sp/>section<sp/>headers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref><sp/>sectionSize<sp/>=<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1abbc0f11da49eb83a92059c2ff412e49d" kindref="member">shentsize</ref>();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref><sp/>segmentSize<sp/>=<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1acac63e64243d4126380dc890683bfa66" kindref="member">phentsize</ref>();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>initialize<sp/>them</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">index_t</ref><sp/>index<sp/>=<sp/>0;<sp/>index<sp/>&lt;<sp/>segmentCount;<sp/>index++)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ac6d3e73a576cff32f9ff187656ecaef0" kindref="member">segments</ref>[index]<sp/>=<sp/><ref refid="d8/d33/classBBP_1_1std_1_1ELF_1_1SegmentBuilder" kindref="compound">ELF::SegmentBuilder</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>segmentOffsets<sp/>+<sp/>index<sp/>*<sp/>segmentSize);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ac6d3e73a576cff32f9ff187656ecaef0" kindref="member">segments</ref>[index].elf<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">index_t</ref><sp/>index<sp/>=<sp/>0;<sp/>index<sp/>&lt;<sp/>sectionCount;<sp/>index++)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a9f9dc28f8c51086b115740db8935ab1c" kindref="member">sections</ref>[index]<sp/>=<sp/><ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">ELF::SectionBuilder</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>sectionOffsets<sp/>+<sp/>index<sp/>*<sp/>sectionSize);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a9f9dc28f8c51086b115740db8935ab1c" kindref="member">sections</ref>[index].elf<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now,<sp/>each<sp/>section<sp/>should<sp/>now<sp/>be<sp/>initialized.<sp/>Find<sp/>the<sp/>string<sp/>tab.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a0629a89db0399e852c6726c6600795d6" kindref="member">shstrtab</ref><sp/>=<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a627eb7c3bd51fe7629ae609c52382a67" kindref="member">shstrndx</ref>();</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>strings<sp/>are<sp/>invalid,<sp/>return<sp/>error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a0629a89db0399e852c6726c6600795d6" kindref="member">shstrtab</ref><sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a750ba4c285e0788e84722a30a776b913" kindref="member">std::exception</ref>(</highlight><highlight class="stringliteral">&quot;No<sp/>string<sp/>table<sp/>present&quot;</highlight><highlight class="normal">,<sp/><ref refid="d8/dc2/errno_8h_1a0030614bc864d1b24eaedd71585acc27" kindref="member">ENODATA</ref>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>string<sp/>table<sp/>type<sp/>is<sp/>not<sp/>string<sp/>table,<sp/>throw<sp/>error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a12735ee34e3b65b362dd1fd9706a9ed8" kindref="member">_shstrtab</ref>().<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1afc691ed888793002bc1eeac36be461c5" kindref="member">type</ref>()<sp/>!=<sp/><ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1a51a6b198fd2a120ee37463cdbaa45b48a290e05e6531740de9b07ed2c11550ac2" kindref="member">std::ELF::SHT_STRTAB</ref>)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a750ba4c285e0788e84722a30a776b913" kindref="member">std::exception</ref>(</highlight><highlight class="stringliteral">&quot;Invalid<sp/>string<sp/>table<sp/>type&quot;</highlight><highlight class="normal">,<sp/><ref refid="d8/dc2/errno_8h_1a2d1678d5a7cc8ce499643f3b8957def4" kindref="member">EINVAL</ref>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Try<sp/>to<sp/>parse<sp/>each<sp/>string<sp/>stuff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref><sp/>index<sp/>=<sp/>0;<sp/>index<sp/>&lt;<sp/>sectionCount;<sp/>index++)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a95c149a6e963e567bd059eb11aef4ac8" kindref="member">std::c_string</ref><sp/>sectionName<sp/>=<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ae617b962ff1bbb33b4436c0131fc9266" kindref="member">file</ref>.<ref refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" kindref="member">data</ref><sp/>+<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a9f9dc28f8c51086b115740db8935ab1c" kindref="member">sections</ref>[<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a0629a89db0399e852c6726c6600795d6" kindref="member">shstrtab</ref>].offset()<sp/>+<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a9f9dc28f8c51086b115740db8935ab1c" kindref="member">sections</ref>[index].name();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Hash<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ad29f433a1c033a551d50291e7d3f50b4" kindref="member">std::hash_t</ref><sp/>nameHash<sp/>=<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a53a0c211ad7056be924a561f9ebc8739" kindref="member">std::strhsh</ref>(sectionName);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Switch<sp/>based<sp/>on<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(nameHash)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0x12b9abd7:<sp/></highlight><highlight class="comment">/*.text*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a3d4049523af5cef1844ce1d92b8d5414" kindref="member">text</ref><sp/>=<sp/>index;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0x04079010:<sp/></highlight><highlight class="comment">/*.rel.text*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ab9cbecdf8c4a6159e84df72f814906d5" kindref="member">rel_text</ref><sp/>=<sp/>index;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0x3a311d7d:<sp/></highlight><highlight class="comment">/*.dynsym*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a38f3fb8344f14fe1e928af16f2baf723" kindref="member">handlers</ref><sp/>=<sp/>index;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0x3a280aa7:<sp/></highlight><highlight class="comment">/*.dynstr*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a2cdbd9bc5fb53659d02999625b150bc8" kindref="member">dynstr</ref><sp/>=<sp/>index;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0x11ac0ad4:<sp/></highlight><highlight class="comment">/*.data*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a69cc1b0e7a7de988cec8ce6a9a4a2759" kindref="member">data</ref><sp/>=<sp/>index;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0x2d1158c8:<sp/></highlight><highlight class="comment">/*.rodata*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a1e8b3ca1e4b51d9f5c5d56d2b475ec79" kindref="member">rodata</ref><sp/>=<sp/>index;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0x119dc248:<sp/></highlight><highlight class="comment">/*.bss*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1abf286d2ad23ad84a1376b242a43e632d" kindref="member">bss</ref><sp/>=<sp/>index;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0x0ea7e788:<sp/></highlight><highlight class="comment">/*.data1*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a520e6924efc99b5d4c168d494f70e798" kindref="member">data1</ref><sp/>=<sp/>index;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0x119e283e:<sp/></highlight><highlight class="comment">/*.got*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1abcc65ffb72a4f21c9f6cc9bcb7b08758" kindref="member">got</ref><sp/>=<sp/>index;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0x0700b1c6:<sp/></highlight><highlight class="comment">/*.symtab*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a7c33186c18d8285364edc182a7f08ea8" kindref="member">symtab</ref><sp/>=<sp/>index;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0x0eb7addf:<sp/></highlight><highlight class="comment">/*.shstrtab*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a0629a89db0399e852c6726c6600795d6" kindref="member">shstrtab</ref><sp/>=<sp/>index;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0x0702e4dc:<sp/></highlight><highlight class="comment">/*.strtab*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1adfc3d5972777343f0feabfdf09f0c70b" kindref="member">strtab</ref><sp/>=<sp/>index;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0x0ed1cab6:<sp/></highlight><highlight class="comment">/*.hashtab*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1adf0cf7f8b769d24f1b9d01d5f0e16249" kindref="member">hashtab</ref><sp/>=<sp/>index;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>symbols<sp/>exist,<sp/>check<sp/>how<sp/>many<sp/>exist</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Early<sp/>return<sp/>ignored<sp/>since<sp/>more<sp/>conditions<sp/>may<sp/>be<sp/>added<sp/>later.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a7c33186c18d8285364edc182a7f08ea8" kindref="member">symtab</ref>)</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>count<sp/>by<sp/>dividing<sp/>size<sp/>by<sp/>entsize</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1afd53f05b8a749e95f61a08366c6b7cb6" kindref="member">symbolCount</ref><sp/>=<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a31a22107739bdef64b4d15d1dc3e0631" kindref="member">_symtab</ref>().<ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a7d844f38bc48a69c8dcc758b882eef1a" kindref="member">size</ref>()<sp/>/<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a31a22107739bdef64b4d15d1dc3e0631" kindref="member">_symtab</ref>().<ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a41ae947e4efee075dd62539798623cbb" kindref="member">entsize</ref>();</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>empty<sp/>symbols</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref><sp/>index<sp/>=<sp/>0;<sp/>index<sp/>&lt;<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1afd53f05b8a749e95f61a08366c6b7cb6" kindref="member">symbolCount</ref>;<sp/>index++)</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>symbol<sp/>builder</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/db3/classBBP_1_1std_1_1ELF_1_1SymbolBuilder" kindref="compound">SymbolBuilder</ref><sp/>sym(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a31a22107739bdef64b4d15d1dc3e0631" kindref="member">_symtab</ref>().offset()<sp/>+<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a31a22107739bdef64b4d15d1dc3e0631" kindref="member">_symtab</ref>().entsize()<sp/>*<sp/>index);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a95c149a6e963e567bd059eb11aef4ac8" kindref="member">std::c_string</ref><sp/>symName<sp/>=<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ae617b962ff1bbb33b4436c0131fc9266" kindref="member">file</ref>.<ref refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" kindref="member">data</ref><sp/>+<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a9f9dc28f8c51086b115740db8935ab1c" kindref="member">sections</ref>[<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a31a22107739bdef64b4d15d1dc3e0631" kindref="member">_symtab</ref>().<ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a713d1ebbab93c72f9ebec24435fa9e79" kindref="member">link</ref>()].offset()<sp/>+<sp/>sym.<ref refid="d3/db3/classBBP_1_1std_1_1ELF_1_1SymbolBuilder_1a8e9d1d5d80ea571abf002bf196533f48" kindref="member">name</ref>();</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Symbol<sp/>is<sp/>wasted<sp/>if<sp/>index<sp/>is<sp/>0<sp/>and<sp/>name<sp/>is<sp/>0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sym.<ref refid="d3/db3/classBBP_1_1std_1_1ELF_1_1SymbolBuilder_1ae1648cc733b1bb94efed548a1ee58d65" kindref="member">info</ref>()<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>sym.<ref refid="d3/db3/classBBP_1_1std_1_1ELF_1_1SymbolBuilder_1a8e9d1d5d80ea571abf002bf196533f48" kindref="member">name</ref>()<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1afd53f05b8a749e95f61a08366c6b7cb6" kindref="member">symbolCount</ref>--;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>page<sp/>and<sp/>stack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a3802d96278d620f7e52d3be3893ab6e4" kindref="member">symPages</ref><sp/>=<sp/><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::PAGE&lt;SymbolBuilder&gt;</ref>(<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1afd53f05b8a749e95f61a08366c6b7cb6" kindref="member">symbolCount</ref>,<sp/>(<ref refid="d3/db3/classBBP_1_1std_1_1ELF_1_1SymbolBuilder" kindref="compound">SymbolBuilder</ref><sp/>*)res-&gt;<ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager_1a2feb265bae9a30994a2a4a4f69306329" kindref="member">calloc</ref>(<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1afd53f05b8a749e95f61a08366c6b7cb6" kindref="member">symbolCount</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="d3/db3/classBBP_1_1std_1_1ELF_1_1SymbolBuilder" kindref="compound">SymbolBuilder</ref>)));</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ac14d27bbc9d00c51a66e002dcbcfee74" kindref="member">symbols</ref><sp/>=<sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;SymbolBuilder&gt;</ref>(&amp;<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a3802d96278d620f7e52d3be3893ab6e4" kindref="member">symPages</ref>,<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1afd53f05b8a749e95f61a08366c6b7cb6" kindref="member">symbolCount</ref>);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Assign<sp/>stuff<sp/>now</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref><sp/>index<sp/>=<sp/>0;<sp/>index<sp/>&lt;<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1afd53f05b8a749e95f61a08366c6b7cb6" kindref="member">symbolCount</ref>;<sp/>index++)</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ac14d27bbc9d00c51a66e002dcbcfee74" kindref="member">symbols</ref>[index]<sp/>=<sp/><ref refid="d3/db3/classBBP_1_1std_1_1ELF_1_1SymbolBuilder" kindref="compound">SymbolBuilder</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a31a22107739bdef64b4d15d1dc3e0631" kindref="member">_symtab</ref>().offset()<sp/>+<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a31a22107739bdef64b4d15d1dc3e0631" kindref="member">_symtab</ref>().entsize()<sp/>*<sp/>index);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Save<sp/>data<sp/>if<sp/>it<sp/>has<sp/>any.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ac14d27bbc9d00c51a66e002dcbcfee74" kindref="member">symbols</ref>[index].info()<sp/>==<sp/>0<sp/>&amp;&amp;<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ac14d27bbc9d00c51a66e002dcbcfee74" kindref="member">symbols</ref>[index].name()<sp/>==<sp/>0)<sp/>&amp;&amp;<sp/>index<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ac14d27bbc9d00c51a66e002dcbcfee74" kindref="member">symbols</ref>[index].data<sp/>=<sp/><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::PAGE&lt;std::string_element&gt;</ref>(<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ac14d27bbc9d00c51a66e002dcbcfee74" kindref="member">symbols</ref>[index].size(),<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ae617b962ff1bbb33b4436c0131fc9266" kindref="member">file</ref>.<ref refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" kindref="member">data</ref><sp/>+<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a9f9dc28f8c51086b115740db8935ab1c" kindref="member">sections</ref>[<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ac14d27bbc9d00c51a66e002dcbcfee74" kindref="member">symbols</ref>[index].shndx()].offset()<sp/>+<sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ac14d27bbc9d00c51a66e002dcbcfee74" kindref="member">symbols</ref>[index].value());</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>that&apos;s<sp/>basically<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Dispose<sp/>of<sp/>everything</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222" refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a0e05c3b97f4227c9924841c5e170ae82" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a0e05c3b97f4227c9924841c5e170ae82" kindref="member">BBP::std::ELF::ELFBuilder::close</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="223"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>segments.atElement<sp/>=<sp/>segments.max_elements;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>sections.atElement<sp/>=<sp/>sections.max_elements;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>symbols.atElement<sp/>=<sp/>symbols.max_elements;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>segments.foreach([](<ref refid="d8/d33/classBBP_1_1std_1_1ELF_1_1SegmentBuilder" kindref="compound">SegmentBuilder</ref><sp/>&amp;segment)<sp/>{<sp/>segment.<ref refid="d8/d33/classBBP_1_1std_1_1ELF_1_1SegmentBuilder_1a1fb2cb860513ff4521f8bb295ebc78c1" kindref="member">close</ref>();<sp/>});</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>sections.foreach([](<ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">SectionBuilder</ref><sp/>&amp;section)<sp/>{<sp/>section.<ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a3a50373a9ed12789a1b9411e290e3921" kindref="member">close</ref>();<sp/>});</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>symbols.foreach([](<ref refid="d3/db3/classBBP_1_1std_1_1ELF_1_1SymbolBuilder" kindref="compound">SymbolBuilder</ref><sp/>&amp;symbol)<sp/>{<sp/>symbol.<ref refid="d3/db3/classBBP_1_1std_1_1ELF_1_1SymbolBuilder_1af712bf5deb743173585e23792d1cbd56" kindref="member">close</ref>();<sp/>});</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Loop<sp/>over<sp/>until<sp/>no<sp/>more</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::PAGE&lt;std::ELF::SegmentBuilder&gt;</ref><sp/>*segmentptr<sp/>=<sp/>segments.page;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::PAGE&lt;std::ELF::SectionBuilder&gt;</ref><sp/>*sectionptr<sp/>=<sp/>sections.page;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::PAGE&lt;std::ELF::SymbolBuilder&gt;</ref><sp/>*symbolptr<sp/>=<sp/>symbols.page;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::PAGE&lt;std::ELF::SegmentBuilder&gt;</ref><sp/>*tmp<sp/>=<sp/>segmentptr-&gt;<ref refid="df/ddc/structBBP_1_1std_1_1PAGE_1a8d21ebf8bb4b9485b67e17698ff1f890" kindref="member">nextPage</ref>;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>allocator-&gt;free(segmentptr-&gt;<ref refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" kindref="member">data</ref>);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>segmentptr<sp/>=<sp/>tmp;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(segmentptr);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::PAGE&lt;std::ELF::SectionBuilder&gt;</ref><sp/>*tmp<sp/>=<sp/>sectionptr-&gt;<ref refid="df/ddc/structBBP_1_1std_1_1PAGE_1a8d21ebf8bb4b9485b67e17698ff1f890" kindref="member">nextPage</ref>;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>allocator-&gt;free(sectionptr-&gt;<ref refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" kindref="member">data</ref>);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sectionptr<sp/>=<sp/>tmp;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(sectionptr);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::PAGE&lt;std::ELF::SymbolBuilder&gt;</ref><sp/>*tmp<sp/>=<sp/>symbolptr-&gt;<ref refid="df/ddc/structBBP_1_1std_1_1PAGE_1a8d21ebf8bb4b9485b67e17698ff1f890" kindref="member">nextPage</ref>;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>allocator-&gt;free(symbolptr-&gt;<ref refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" kindref="member">data</ref>);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>symbolptr<sp/>=<sp/>tmp;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(symbolptr);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//allocator-&gt;free(segments.page-&gt;data);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//allocator-&gt;free(sections.page-&gt;data);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//allocator-&gt;free(symbols.page-&gt;data);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isMemUnique)</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>allocator-&gt;free(file.data);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268" refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a12735ee34e3b65b362dd1fd9706a9ed8" refkind="member"><highlight class="normal"><ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">BBP::std::ELF::SectionBuilder</ref><sp/>&amp;<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a12735ee34e3b65b362dd1fd9706a9ed8" kindref="member">BBP::std::ELF::ELFBuilder::_shstrtab</ref>()</highlight></codeline>
+<codeline lineno="269"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sections[shstrtab];</highlight></codeline>
+<codeline lineno="271"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="272" refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a9b48ce0ef49c4d8d57f76d7fe4dc4396" refkind="member"><highlight class="normal"><ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">BBP::std::ELF::SectionBuilder</ref><sp/>&amp;<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a9b48ce0ef49c4d8d57f76d7fe4dc4396" kindref="member">BBP::std::ELF::ELFBuilder::_strtab</ref>()</highlight></codeline>
+<codeline lineno="273"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sections[strtab];</highlight></codeline>
+<codeline lineno="275"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="276" refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a31a22107739bdef64b4d15d1dc3e0631" refkind="member"><highlight class="normal"><ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">BBP::std::ELF::SectionBuilder</ref><sp/>&amp;<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a31a22107739bdef64b4d15d1dc3e0631" kindref="member">BBP::std::ELF::ELFBuilder::_symtab</ref>()</highlight></codeline>
+<codeline lineno="277"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sections[symtab];</highlight></codeline>
+<codeline lineno="279"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="280" refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a53ef555f140b10e2602ab6294f1b86ce" refkind="member"><highlight class="normal"><ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">BBP::std::ELF::SectionBuilder</ref><sp/>&amp;<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a53ef555f140b10e2602ab6294f1b86ce" kindref="member">BBP::std::ELF::ELFBuilder::_bss</ref>()</highlight></codeline>
+<codeline lineno="281"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sections[bss];</highlight></codeline>
+<codeline lineno="283"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="284" refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a3beab7bb87d920c53d7fba804a0a249f" refkind="member"><highlight class="normal"><ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">BBP::std::ELF::SectionBuilder</ref><sp/>&amp;<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a3beab7bb87d920c53d7fba804a0a249f" kindref="member">BBP::std::ELF::ELFBuilder::_data</ref>()</highlight></codeline>
+<codeline lineno="285"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sections[data];</highlight></codeline>
+<codeline lineno="287"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="288" refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a1d1eb3ed3441f048ea5a7dd08a6fabb2" refkind="member"><highlight class="normal"><ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">BBP::std::ELF::SectionBuilder</ref><sp/>&amp;<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a1d1eb3ed3441f048ea5a7dd08a6fabb2" kindref="member">BBP::std::ELF::ELFBuilder::_data1</ref>()</highlight></codeline>
+<codeline lineno="289"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sections[data1];</highlight></codeline>
+<codeline lineno="291"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="292" refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a3dfe41527bb3d2d84ab781a692d21be0" refkind="member"><highlight class="normal"><ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">BBP::std::ELF::SectionBuilder</ref><sp/>&amp;<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a3dfe41527bb3d2d84ab781a692d21be0" kindref="member">BBP::std::ELF::ELFBuilder::_dynstr</ref>()</highlight></codeline>
+<codeline lineno="293"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sections[dynstr];</highlight></codeline>
+<codeline lineno="295"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="296" refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a04ab74b1cfb335e500a9dcd5b1afa146" refkind="member"><highlight class="normal"><ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">BBP::std::ELF::SectionBuilder</ref><sp/>&amp;<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a04ab74b1cfb335e500a9dcd5b1afa146" kindref="member">BBP::std::ELF::ELFBuilder::_handlers</ref>()</highlight></codeline>
+<codeline lineno="297"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sections[handlers];</highlight></codeline>
+<codeline lineno="299"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="300" refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1aae2a0bbce157185291013f4899f559e9" refkind="member"><highlight class="normal"><ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">BBP::std::ELF::SectionBuilder</ref><sp/>&amp;<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1aae2a0bbce157185291013f4899f559e9" kindref="member">BBP::std::ELF::ELFBuilder::_rodata</ref>()</highlight></codeline>
+<codeline lineno="301"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sections[rodata];</highlight></codeline>
+<codeline lineno="303"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="304" refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1adc14a63e3f5657a734feaa610ad50216" refkind="member"><highlight class="normal"><ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">BBP::std::ELF::SectionBuilder</ref><sp/>&amp;<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1adc14a63e3f5657a734feaa610ad50216" kindref="member">BBP::std::ELF::ELFBuilder::_got</ref>()</highlight></codeline>
+<codeline lineno="305"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sections[got];</highlight></codeline>
+<codeline lineno="307"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="308" refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a8c38d3dca6f1c6cc0e820878992e121f" refkind="member"><highlight class="normal"><ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">BBP::std::ELF::SectionBuilder</ref><sp/>&amp;<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a8c38d3dca6f1c6cc0e820878992e121f" kindref="member">BBP::std::ELF::ELFBuilder::_text</ref>()</highlight></codeline>
+<codeline lineno="309"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sections[text];</highlight></codeline>
+<codeline lineno="311"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="312" refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ac089ac691a004ddee45dab37e4e7ed61" refkind="member"><highlight class="normal"><ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">BBP::std::ELF::SectionBuilder</ref><sp/>&amp;<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ac089ac691a004ddee45dab37e4e7ed61" kindref="member">BBP::std::ELF::ELFBuilder::_rel_text</ref>()</highlight></codeline>
+<codeline lineno="313"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sections[rel_text];</highlight></codeline>
+<codeline lineno="315"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="316" refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a7c8909371e0da769be98915fcfd27e76" refkind="member"><highlight class="normal"><ref refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kindref="compound">BBP::std::ELF::SectionBuilder</ref><sp/>&amp;<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a7c8909371e0da769be98915fcfd27e76" kindref="member">BBP::std::ELF::ELFBuilder::_hashtab</ref>()</highlight></codeline>
+<codeline lineno="317"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sections[hashtab];</highlight></codeline>
+<codeline lineno="319"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321" refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1af7708be2d563034de2361e84eacdb48d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1af7708be2d563034de2361e84eacdb48d" kindref="member">BBP::std::ELF::ELFBuilder::formStandard</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref><sp/>textSize,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref><sp/>dataSize,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref><sp/>rodataSize,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref><sp/>bssSize)</highlight></codeline>
+<codeline lineno="322"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Emit<sp/>headers<sp/>so<sp/>we<sp/>can<sp/>actually<sp/>modify<sp/>them</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/>emitHeader();</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Define<sp/>the<sp/>different<sp/>sections<sp/>indicies</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/>handlers<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>text<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>got<sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/>dynstr<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/>data<sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>bss<sp/>=<sp/>6;</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/>data1<sp/>=<sp/>7;</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/>rodata<sp/>=<sp/>8;</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/>rel_text<sp/>=<sp/>9;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/>symtab<sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/>shstrtab<sp/>=<sp/>11;</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/>strtab<sp/>=<sp/>12;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/>hashtab<sp/>=<sp/>13;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>set<sp/>types</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[text].type(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1a51a6b198fd2a120ee37463cdbaa45b48a778dbcfc401c43cbf111a1719a04ff1c" kindref="member">SHT_PROGBITS</ref>);</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[rel_text].type(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1a51a6b198fd2a120ee37463cdbaa45b48af3d4415e121b5ffd4990fc7550576d75" kindref="member">SHT_REL</ref>);</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[handlers].type(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1a51a6b198fd2a120ee37463cdbaa45b48a778dbcfc401c43cbf111a1719a04ff1c" kindref="member">SHT_PROGBITS</ref>);</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[dynstr].type(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1a51a6b198fd2a120ee37463cdbaa45b48a290e05e6531740de9b07ed2c11550ac2" kindref="member">SHT_STRTAB</ref>);</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[data].type(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1a51a6b198fd2a120ee37463cdbaa45b48a778dbcfc401c43cbf111a1719a04ff1c" kindref="member">SHT_PROGBITS</ref>);</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[rodata].type(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1a51a6b198fd2a120ee37463cdbaa45b48a778dbcfc401c43cbf111a1719a04ff1c" kindref="member">SHT_PROGBITS</ref>);</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[bss].type(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1a51a6b198fd2a120ee37463cdbaa45b48a704294eb254f6ad7bde906c231eea8ab" kindref="member">SHT_NOBITS</ref>);</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[data1].type(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1a51a6b198fd2a120ee37463cdbaa45b48a778dbcfc401c43cbf111a1719a04ff1c" kindref="member">SHT_PROGBITS</ref>);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[got].type(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1a51a6b198fd2a120ee37463cdbaa45b48a778dbcfc401c43cbf111a1719a04ff1c" kindref="member">SHT_PROGBITS</ref>);</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[symtab].type(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1a51a6b198fd2a120ee37463cdbaa45b48aaa86c347bf73cac82e1bfc20da7e29db" kindref="member">SHT_SYMTAB</ref>);</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[strtab].type(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1a51a6b198fd2a120ee37463cdbaa45b48a290e05e6531740de9b07ed2c11550ac2" kindref="member">SHT_STRTAB</ref>);</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[shstrtab].type(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1a51a6b198fd2a120ee37463cdbaa45b48a290e05e6531740de9b07ed2c11550ac2" kindref="member">SHT_STRTAB</ref>);</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[hashtab].type(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1a51a6b198fd2a120ee37463cdbaa45b48af1b80c3be687215bc997fdee18206730" kindref="member">SHT_HASH</ref>);</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>ent<sp/>sizes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[symtab].entsize(<ref refid="d1/d5d/ELF32_8h_1a5b0f690e568185bdf1273b1c1de3c67a" kindref="member">ELF_SYMBOL_ENTRYSIZE</ref>);</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[rel_text].entsize(8);</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>names</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[shstrtab].Append(128);</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[shstrtab].stack++;</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[text].name(sections[shstrtab].stack.atElement);</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[shstrtab].stack<sp/>&lt;&lt;=<sp/></highlight><highlight class="stringliteral">&quot;.text&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[rel_text].name(sections[shstrtab].stack.atElement);</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[shstrtab].stack<sp/>&lt;&lt;=<sp/></highlight><highlight class="stringliteral">&quot;.rel.text&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[handlers].name(sections[shstrtab].stack.atElement);</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[shstrtab].stack<sp/>&lt;&lt;=<sp/></highlight><highlight class="stringliteral">&quot;.handlers&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[dynstr].name(sections[shstrtab].stack.atElement);</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[shstrtab].stack<sp/>&lt;&lt;=<sp/></highlight><highlight class="stringliteral">&quot;.dynstr&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[data].name(sections[shstrtab].stack.atElement);</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[shstrtab].stack<sp/>&lt;&lt;=<sp/></highlight><highlight class="stringliteral">&quot;.data&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[rodata].name(sections[shstrtab].stack.atElement);</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[shstrtab].stack<sp/>&lt;&lt;=<sp/></highlight><highlight class="stringliteral">&quot;.rodata&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[bss].name(sections[shstrtab].stack.atElement);</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[shstrtab].stack<sp/>&lt;&lt;=<sp/></highlight><highlight class="stringliteral">&quot;.bss&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[data1].name(sections[shstrtab].stack.atElement);</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[shstrtab].stack<sp/>&lt;&lt;=<sp/></highlight><highlight class="stringliteral">&quot;.data1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[got].name(sections[shstrtab].stack.atElement);</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[shstrtab].stack<sp/>&lt;&lt;=<sp/></highlight><highlight class="stringliteral">&quot;.got&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[symtab].name(sections[shstrtab].stack.atElement);</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[shstrtab].stack<sp/>&lt;&lt;=<sp/></highlight><highlight class="stringliteral">&quot;.symtab&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[strtab].name(sections[shstrtab].stack.atElement);</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[shstrtab].stack<sp/>&lt;&lt;=<sp/></highlight><highlight class="stringliteral">&quot;.strtab&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[shstrtab].name(sections[shstrtab].stack.atElement);</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[shstrtab].stack<sp/>&lt;&lt;=<sp/></highlight><highlight class="stringliteral">&quot;.shstrtab&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[hashtab].name(sections[shstrtab].stack.atElement);</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[shstrtab].stack<sp/>&lt;&lt;=<sp/></highlight><highlight class="stringliteral">&quot;.hashtab&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/>shstrndx(shstrtab);</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>link<sp/>and<sp/>info<sp/>fields</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[rel_text].link(symtab);</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[rel_text].info(text);</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[symtab].link(strtab);</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[symtab].info(symbolCount);</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[hashtab].link(symtab);</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d7/dad/classIHate_1ae155f0a76ad61eb3b8d175661a9d6f49" kindref="member">IHate::Myself</ref>();</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>symbols</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[symtab].Append(symbolCount<sp/>*<sp/><ref refid="d1/d5d/ELF32_8h_1a5b0f690e568185bdf1273b1c1de3c67a" kindref="member">ELF_SYMBOL_ENTRYSIZE</ref>);</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[handlers].Append(255);</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[dynstr].Append(1024);</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[strtab].Append(1024);</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>symbol<sp/>entry<sp/>flags</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">index_t</ref><sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" kindref="member">i</ref><sp/>=<sp/>0;<sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" kindref="member">i</ref><sp/>&lt;<sp/>symbolCount;<sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" kindref="member">i</ref>++)</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>symbols[<ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" kindref="member">i</ref>].header.bytes<sp/>=<sp/><ref refid="d1/d5d/ELF32_8h_1a5b0f690e568185bdf1273b1c1de3c67a" kindref="member">ELF_SYMBOL_ENTRYSIZE</ref>;</highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>symbols[<ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" kindref="member">i</ref>].header.data<sp/>=<sp/>sections[symtab].data.data<sp/>+<sp/><ref refid="d1/d5d/ELF32_8h_1a5b0f690e568185bdf1273b1c1de3c67a" kindref="member">ELF_SYMBOL_ENTRYSIZE</ref><sp/>*<sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" kindref="member">i</ref>;</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"></highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>Append<sp/>data<sp/>sizes<sp/>and<sp/>so</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[text].Append(textSize);</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[data].Append(dataSize);</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[rodata].Append(rodataSize);</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[bss].Append(bssSize);</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"></highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>set<sp/>hashtab<sp/>ready.<sp/>Size<sp/>has<sp/>to<sp/>be<sp/>multiplied<sp/>by<sp/>sizeof(word)<sp/>/<sp/>sizeof(byte)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[hashtab].Append((hashBucketCount<sp/>+<sp/>hashChainCount<sp/>+<sp/>2)<sp/>*<sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref>)<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="dd/d98/namespaceBBP_1_1std_1a4926ba934876e4a1028b9abb47edbc56" kindref="member">std::byte</ref>)));</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[hashtab].stack<sp/>&lt;&lt;<sp/>hashBucketCount;</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[hashtab].stack<sp/>&lt;&lt;<sp/>hashChainCount;</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"></highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>want<sp/>.text<sp/>sections<sp/>to<sp/>be<sp/>executable,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[handlers].flags(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1ae2a664d64638a27e0ab1bcffc6109fc3a8f0ed67b27aab60eef8c6408ab3402c7" kindref="member">std::ELF::Executable</ref>);</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[text].flags(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1ae2a664d64638a27e0ab1bcffc6109fc3a8f0ed67b27aab60eef8c6408ab3402c7" kindref="member">std::ELF::Executable</ref>);</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[got].flags(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1ae2a664d64638a27e0ab1bcffc6109fc3a8f0ed67b27aab60eef8c6408ab3402c7" kindref="member">std::ELF::Executable</ref>);</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"></highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>also<sp/>want<sp/>.data<sp/>and<sp/>.bss<sp/>to<sp/>be<sp/>allocated<sp/>and<sp/>writeable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[bss].flags(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1ae2a664d64638a27e0ab1bcffc6109fc3a196960cec1430f9427663844e0a636c5" kindref="member">std::ELF::Allocator</ref><sp/>|<sp/><ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1ae2a664d64638a27e0ab1bcffc6109fc3a6c6b2a297c57c60885d1867d21db072f" kindref="member">std::ELF::Writeable</ref>);</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[data].flags(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1ae2a664d64638a27e0ab1bcffc6109fc3a196960cec1430f9427663844e0a636c5" kindref="member">std::ELF::Allocator</ref><sp/>|<sp/><ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1ae2a664d64638a27e0ab1bcffc6109fc3a6c6b2a297c57c60885d1867d21db072f" kindref="member">std::ELF::Writeable</ref>);</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[data1].flags(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1ae2a664d64638a27e0ab1bcffc6109fc3a196960cec1430f9427663844e0a636c5" kindref="member">std::ELF::Allocator</ref><sp/>|<sp/><ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1ae2a664d64638a27e0ab1bcffc6109fc3a6c6b2a297c57c60885d1867d21db072f" kindref="member">std::ELF::Writeable</ref>);</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"></highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>want<sp/>rodata<sp/>to<sp/>be<sp/>allocateable,<sp/>but<sp/>not<sp/>writeable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[rodata].flags(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1ae2a664d64638a27e0ab1bcffc6109fc3a196960cec1430f9427663844e0a636c5" kindref="member">std::ELF::Allocator</ref>);</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"></highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>segment<sp/>indicies</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/>textSegment<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/>handlerSegment<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/>gotSegment<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/>dataSegment<sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/>bssSegment<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/>rodataSegment<sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"></highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>segment<sp/>types</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/>segments[textSegment].type(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09" kindref="member">std::ELF::PT_LOAD</ref>);</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/>segments[handlerSegment].type(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09" kindref="member">std::ELF::PT_LOAD</ref>);</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/>segments[gotSegment].type(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09" kindref="member">std::ELF::PT_LOAD</ref>);</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/>segments[dataSegment].type(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09" kindref="member">std::ELF::PT_LOAD</ref>);</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/>segments[bssSegment].type(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09" kindref="member">std::ELF::PT_LOAD</ref>);</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/>segments[rodataSegment].type(<ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09" kindref="member">std::ELF::PT_LOAD</ref>);</highlight></codeline>
+<codeline lineno="454"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"></highlight></codeline>
+<codeline lineno="456" refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a036a64649877e44e7e4958f508ce034f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a036a64649877e44e7e4958f508ce034f" kindref="member">BBP::std::ELF::ELFBuilder::renameSymbol</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref><sp/>symb,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">std::conststring</ref><sp/>name)</highlight></codeline>
+<codeline lineno="457"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(symb<sp/>&gt;=<sp/>symbolCount)</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a750ba4c285e0788e84722a30a776b913" kindref="member">std::exception</ref>(</highlight><highlight class="stringliteral">&quot;Symbol<sp/>out<sp/>of<sp/>range.&quot;</highlight><highlight class="normal">,<sp/><ref refid="d8/dc2/errno_8h_1aa1591a4f3a86360108de5b9ba34980ca" kindref="member">ERANGE</ref>);</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[strtab].stack++;</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/>symbols[symb].name(sections[strtab].stack.atElement);</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/>sections[strtab].stack<sp/>&lt;&lt;=<sp/>name;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="463"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/ELFHeader.cpp"/>
+  </compounddef>
+</doxygen>

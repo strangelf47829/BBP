@@ -1,0 +1,314 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d7/d67/tterm_8cpp" kind="file" language="C++">
+    <compoundname>tterm.cpp</compoundname>
+    <includes refid="d6/dd1/stdio_8h" local="yes">../include/stdio.h</includes>
+    <includes refid="d2/dd1/Graphics_8h" local="yes">../include/Graphics.h</includes>
+    <includes refid="d2/d4f/OS_8h" local="yes">../include/OS.h</includes>
+    <includes local="yes">../../build/include/SDL.h</includes>
+    <includes local="no">cstdio</includes>
+    <includes local="no">thread</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">fcntl.h</includes>
+    <includes local="no">Windows.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>Memory.h</label>
+        <link refid="de/d5c/Memory_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Strings.h</label>
+        <link refid="de/d53/Strings_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Resources.h</label>
+        <link refid="d0/d33/Resources_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>Windows.h</label>
+      </node>
+      <node id="21">
+        <label>fcntl.h</label>
+      </node>
+      <node id="11">
+        <label>Stack.hxx</label>
+        <link refid="db/d61/Stack_8hxx"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Memory.hxx</label>
+        <link refid="d5/d4e/Memory_8hxx"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>../include/OS.h</label>
+        <link refid="d2/d4f/OS_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>FileSys.h</label>
+        <link refid="d0/d00/FileSys_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>tterm.cpp</label>
+        <link refid="d7/d67/tterm_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>../include/Graphics.h</label>
+        <link refid="d2/dd1/Graphics_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../include/stdio.h</label>
+        <link refid="d6/dd1/stdio_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>errno.h</label>
+        <link refid="d8/dc2/errno_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>cstdio</label>
+      </node>
+      <node id="12">
+        <label>Signal.h</label>
+        <link refid="d0/def/Signal_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Except.h</label>
+        <link refid="dc/d88/Except_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>iostream</label>
+      </node>
+      <node id="17">
+        <label>../../build/include/SDL.h</label>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+        <link refid="df/dd8/stdint_8h"/>
+      </node>
+      <node id="5">
+        <label>stddef.h</label>
+        <link refid="d3/dce/stddef_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>thread</label>
+      </node>
+      <node id="10">
+        <label>Stack.h</label>
+        <link refid="dc/db6/Stack_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d7/d67/tterm_8cpp_1ad260f4564dd02146b8dd402b966a0007" prot="public" static="no" mutable="no">
+        <type>HANDLE</type>
+        <definition>HANDLE serialHandle</definition>
+        <argsstring></argsstring>
+        <name>serialHandle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_EMULATOR/tterm.cpp" line="56" column="8" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_EMULATOR/tterm.cpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d67/tterm_8cpp_1aec806dcd05c5f854b5b85e79b67df94d" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>volatile bool writeSomething</definition>
+        <argsstring></argsstring>
+        <name>writeSomething</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_EMULATOR/tterm.cpp" line="57" column="15" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_EMULATOR/tterm.cpp" bodystart="57" bodyend="-1"/>
+        <referencedby refid="d7/d67/tterm_8cpp_1a6f762346f9b3ee9e4887d897b256eb80" compoundref="d7/d67/tterm_8cpp" startline="85" endline="152">inputThread</referencedby>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1aacd39619cb9601c160fd4df069d49ee9" compoundref="d7/d67/tterm_8cpp" startline="62" endline="80">BBP::std::print_to_terminal</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d67/tterm_8cpp_1a8c702f252e54444019297f4e1cbb0623" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a95c149a6e963e567bd059eb11aef4ac8" kindref="member">BBP::std::c_string</ref></type>
+        <definition>volatile BBP::std::c_string outputstr</definition>
+        <argsstring></argsstring>
+        <name>outputstr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_EMULATOR/tterm.cpp" line="58" column="29" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_EMULATOR/tterm.cpp" bodystart="58" bodyend="-1"/>
+        <referencedby refid="d7/d67/tterm_8cpp_1a6f762346f9b3ee9e4887d897b256eb80" compoundref="d7/d67/tterm_8cpp" startline="85" endline="152">inputThread</referencedby>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1aacd39619cb9601c160fd4df069d49ee9" compoundref="d7/d67/tterm_8cpp" startline="62" endline="80">BBP::std::print_to_terminal</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d67/tterm_8cpp_1a81f8d0ed934695b7e9aa57cac0e5c07f" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">BBP::std::size_t</ref></type>
+        <definition>volatile BBP::std::size_t outputstrlen</definition>
+        <argsstring></argsstring>
+        <name>outputstrlen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_EMULATOR/tterm.cpp" line="59" column="27" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_EMULATOR/tterm.cpp" bodystart="59" bodyend="-1"/>
+        <referencedby refid="d7/d67/tterm_8cpp_1a6f762346f9b3ee9e4887d897b256eb80" compoundref="d7/d67/tterm_8cpp" startline="85" endline="152">inputThread</referencedby>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1aacd39619cb9601c160fd4df069d49ee9" compoundref="d7/d67/tterm_8cpp" startline="62" endline="80">BBP::std::print_to_terminal</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d67/tterm_8cpp_1a7edad9a2d03fb1868407492bb99ea2fc" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>volatile bool written</definition>
+        <argsstring></argsstring>
+        <name>written</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_EMULATOR/tterm.cpp" line="60" column="15" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_EMULATOR/tterm.cpp" bodystart="60" bodyend="-1"/>
+        <referencedby refid="d7/d67/tterm_8cpp_1a6f762346f9b3ee9e4887d897b256eb80" compoundref="d7/d67/tterm_8cpp" startline="85" endline="152">inputThread</referencedby>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1aacd39619cb9601c160fd4df069d49ee9" compoundref="d7/d67/tterm_8cpp" startline="62" endline="80">BBP::std::print_to_terminal</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d67/tterm_8cpp_1acf12fd02d718d8c4907145316b1063aa" prot="public" static="no" mutable="no">
+        <type>SDL_Thread *</type>
+        <definition>SDL_Thread* thr</definition>
+        <argsstring></argsstring>
+        <name>thr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_EMULATOR/tterm.cpp" line="82" column="12" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_EMULATOR/tterm.cpp" bodystart="82" bodyend="-1"/>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1afd8f9cf4a159c7b6d0c6e82da35f2561" compoundref="d7/d67/tterm_8cpp" startline="154" endline="159">BBP::std::captureInput</referencedby>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1a8ac22bbb922d0cc3f48d445afed09351" compoundref="d7/d67/tterm_8cpp" startline="161" endline="166">BBP::std::stopCapturingInput</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d67/tterm_8cpp_1ae1fd54bdbfbc12c29816883afaa80969" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>volatile bool listenForInput</definition>
+        <argsstring></argsstring>
+        <name>listenForInput</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_EMULATOR/tterm.cpp" line="83" column="15" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_EMULATOR/tterm.cpp" bodystart="83" bodyend="-1"/>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1afd8f9cf4a159c7b6d0c6e82da35f2561" compoundref="d7/d67/tterm_8cpp" startline="154" endline="159">BBP::std::captureInput</referencedby>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1a205f9c52fb5cea0f3c8a6fcc3c81b286" compoundref="d7/d67/tterm_8cpp" startline="168" endline="179">BBP::std::getC</referencedby>
+        <referencedby refid="d7/d67/tterm_8cpp_1a6f762346f9b3ee9e4887d897b256eb80" compoundref="d7/d67/tterm_8cpp" startline="85" endline="152">inputThread</referencedby>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1a8ac22bbb922d0cc3f48d445afed09351" compoundref="d7/d67/tterm_8cpp" startline="161" endline="166">BBP::std::stopCapturingInput</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d7/d67/tterm_8cpp_1a6f762346f9b3ee9e4887d897b256eb80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int inputThread</definition>
+        <argsstring>(void *data)</argsstring>
+        <name>inputThread</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_EMULATOR/tterm.cpp" line="85" column="5" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_EMULATOR/tterm.cpp" bodystart="85" bodyend="152"/>
+        <references refid="d7/d67/tterm_8cpp_1ae1fd54bdbfbc12c29816883afaa80969" compoundref="d7/d67/tterm_8cpp" startline="83">listenForInput</references>
+        <references refid="d7/d67/tterm_8cpp_1a8c702f252e54444019297f4e1cbb0623" compoundref="d7/d67/tterm_8cpp" startline="58">outputstr</references>
+        <references refid="d7/d67/tterm_8cpp_1a81f8d0ed934695b7e9aa57cac0e5c07f" compoundref="d7/d67/tterm_8cpp" startline="59">outputstrlen</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a0e604b25e277316ba6a6d604812bbee3">BBP::std::STDIN</references>
+        <references refid="d7/d67/tterm_8cpp_1aec806dcd05c5f854b5b85e79b67df94d" compoundref="d7/d67/tterm_8cpp" startline="57">writeSomething</references>
+        <references refid="d7/d67/tterm_8cpp_1a7edad9a2d03fb1868407492bb99ea2fc" compoundref="d7/d67/tterm_8cpp" startline="60">written</references>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1afd8f9cf4a159c7b6d0c6e82da35f2561" compoundref="d7/d67/tterm_8cpp" startline="154" endline="159">BBP::std::captureInput</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_EMULATOR/tterm.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="db/d39/System_8h" kind="file" language="C++">
+    <compoundname>System.h</compoundname>
+    <includedby refid="d7/d40/badapple_8cpp" local="yes">badapple.cpp</includedby>
+    <includedby refid="d3/da0/neofetch_8cpp" local="yes">neofetch.cpp</includedby>
+    <includedby refid="df/d6c/Shell_8cpp" local="yes">Shell.cpp</includedby>
+    <includedby refid="de/dd1/Smile_8cpp" local="yes">Smile.cpp</includedby>
+    <invincdepgraph>
+      <node id="4">
+        <label>Shell.cpp</label>
+        <link refid="df/d6c/Shell_8cpp"/>
+      </node>
+      <node id="5">
+        <label>Smile.cpp</label>
+        <link refid="de/dd1/Smile_8cpp"/>
+      </node>
+      <node id="2">
+        <label>badapple.cpp</label>
+        <link refid="d7/d40/badapple_8cpp"/>
+      </node>
+      <node id="3">
+        <label>neofetch.cpp</label>
+        <link refid="d3/da0/neofetch_8cpp"/>
+      </node>
+      <node id="1">
+        <label>System.h</label>
+        <link refid="db/d39/System_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="db/d39/System_8h_1a8bfbbf31b7d3c07215440d18a064b7f4" prot="public" static="no">
+        <name>USER</name>
+        <initializer>&quot;Shell&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/System.h" line="4" column="9" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/System.h" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="db/d39/System_8h_1a63ebf0552e7b4b8f37af87147904ffce" prot="public" static="no">
+        <name>HOSTNAME</name>
+        <initializer>&quot;Strangelf@BBP&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/System.h" line="5" column="9" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/System.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="db/d39/System_8h_1a3324dbb5e25daac23e988901bb085447" prot="public" static="no">
+        <name>OS</name>
+        <initializer>&quot;BB607 Hosted environment&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/System.h" line="6" column="9" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/System.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="db/d39/System_8h_1ac4e52c1bd876037cd22e859f38fd5d27" prot="public" static="no">
+        <name>KERNEL</name>
+        <initializer>&quot;1.0.0-BBP_PCID&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/System.h" line="7" column="9" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/System.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="db/d39/System_8h_1a0db8a9b5ad5a66e4adc36d0ba68735c8" prot="public" static="no">
+        <name>SHELL</name>
+        <initializer>&quot;TSauce&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/System.h" line="8" column="9" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/System.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="db/d39/System_8h_1a5250b667cb28dd60b71e6e04e23eac37" prot="public" static="no">
+        <name>TERMINAL</name>
+        <initializer>&quot;SDL&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/System.h" line="9" column="9" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/System.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="db/d39/System_8h_1ad703205f9a4d4bb6af9c25257c23ce6d" prot="public" static="no">
+        <name>CPU</name>
+        <initializer>&quot;Intel i7&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/System.h" line="10" column="9" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/System.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/System.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,183 @@
+.TH "BBP::std::ELF::SectionHeader" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BBP::std::ELF::SectionHeader
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ELF32\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBstd::word\fP \fBsh_name\fP = 0"
+.br
+.RI "Name of section (as offset in member e_shstrndx of ELFHEADER) "
+.ti -1c
+.RI "\fBstd::word\fP \fBsh_type\fP = 0"
+.br
+.RI "Type of this section\&. "
+.ti -1c
+.RI "\fBstd::word\fP \fBsh_flags\fP = 0"
+.br
+.RI "Flags\&. 0x1 - Writeable, 0x2 - part of the sections that are loaded into memory, 0x4 - executable\&. "
+.ti -1c
+.RI "\fBstd::address_t\fP \fBsh_addr\fP = 0"
+.br
+.RI "? "
+.ti -1c
+.RI "\fBstd::offset_t\fP \fBsh_offset\fP = 0"
+.br
+.RI "The offset relative to the beginning of the file where this segment is\&. "
+.ti -1c
+.RI "\fBstd::word\fP \fBsh_size\fP = 0"
+.br
+.RI "How large this section is in the file\&. "
+.ti -1c
+.RI "\fBstd::word\fP \fBsh_link\fP = 0"
+.br
+.RI "Allows for linking? (If sh_type is 'SHT_SYMTAB', this is where you would store the index of the string table pointing to the strings) "
+.ti -1c
+.RI "\fBstd::word\fP \fBsh_info\fP = 0"
+.br
+.RI "Info? "
+.ti -1c
+.RI "\fBstd::word\fP \fBsh_addralign\fP = 0"
+.br
+.RI "? "
+.ti -1c
+.RI "\fBstd::word\fP \fBsh_entsize\fP = 0"
+.br
+.RI "Size of each entry? "
+.ti -1c
+.RI "\fBstd::dword\fP \fBsh_flags\fP = 0"
+.br
+.RI "Flags\&. 0x1 - Writeable, 0x2 - part of the sections that are loaded into memory, 0x4 - executable\&. "
+.ti -1c
+.RI "\fBstd::dword\fP \fBsh_addr\fP = 0"
+.br
+.RI "? "
+.ti -1c
+.RI "\fBstd::dword\fP \fBsh_offset\fP = 0"
+.br
+.RI "The offset relative to the beginning of the file where this segment is\&. "
+.ti -1c
+.RI "\fBstd::dword\fP \fBsh_size\fP = 0"
+.br
+.RI "How large this section is in the file\&. "
+.ti -1c
+.RI "\fBstd::dword\fP \fBsh_addralign\fP = 0"
+.br
+.RI "? "
+.ti -1c
+.RI "\fBstd::dword\fP \fBsh_entsize\fP = 0"
+.br
+.RI "Size of each entry? "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 193 of file ELF32\&.h\&.
+.SH "Field Documentation"
+.PP 
+.SS "\fBstd::dword\fP BBP::std::ELF::SectionHeader::sh_addr = 0"
+
+.PP
+? 
+.PP
+Definition at line 176 of file ELF64\&.h\&.
+.SS "\fBstd::address_t\fP BBP::std::ELF::SectionHeader::sh_addr = 0"
+
+.PP
+? 
+.PP
+Definition at line 197 of file ELF32\&.h\&.
+.SS "\fBstd::dword\fP BBP::std::ELF::SectionHeader::sh_addralign = 0"
+
+.PP
+? 
+.PP
+Definition at line 181 of file ELF64\&.h\&.
+.SS "\fBstd::word\fP BBP::std::ELF::SectionHeader::sh_addralign = 0"
+
+.PP
+? 
+.PP
+Definition at line 202 of file ELF32\&.h\&.
+.SS "\fBstd::dword\fP BBP::std::ELF::SectionHeader::sh_entsize = 0"
+
+.PP
+Size of each entry? 
+.PP
+Definition at line 182 of file ELF64\&.h\&.
+.SS "\fBstd::word\fP BBP::std::ELF::SectionHeader::sh_entsize = 0"
+
+.PP
+Size of each entry? 
+.PP
+Definition at line 203 of file ELF32\&.h\&.
+.SS "\fBstd::dword\fP BBP::std::ELF::SectionHeader::sh_flags = 0"
+
+.PP
+Flags\&. 0x1 - Writeable, 0x2 - part of the sections that are loaded into memory, 0x4 - executable\&. 
+.PP
+Definition at line 175 of file ELF64\&.h\&.
+.SS "\fBstd::word\fP BBP::std::ELF::SectionHeader::sh_flags = 0"
+
+.PP
+Flags\&. 0x1 - Writeable, 0x2 - part of the sections that are loaded into memory, 0x4 - executable\&. 
+.PP
+Definition at line 196 of file ELF32\&.h\&.
+.SS "\fBstd::word\fP BBP::std::ELF::SectionHeader::sh_info = 0"
+
+.PP
+Info? 
+.PP
+Definition at line 201 of file ELF32\&.h\&.
+.SS "\fBstd::word\fP BBP::std::ELF::SectionHeader::sh_link = 0"
+
+.PP
+Allows for linking? (If sh_type is 'SHT_SYMTAB', this is where you would store the index of the string table pointing to the strings) 
+.PP
+Definition at line 200 of file ELF32\&.h\&.
+.SS "\fBstd::word\fP BBP::std::ELF::SectionHeader::sh_name = 0"
+
+.PP
+Name of section (as offset in member e_shstrndx of ELFHEADER) 
+.PP
+Definition at line 194 of file ELF32\&.h\&.
+.SS "\fBstd::dword\fP BBP::std::ELF::SectionHeader::sh_offset = 0"
+
+.PP
+The offset relative to the beginning of the file where this segment is\&. 
+.PP
+Definition at line 177 of file ELF64\&.h\&.
+.SS "\fBstd::offset_t\fP BBP::std::ELF::SectionHeader::sh_offset = 0"
+
+.PP
+The offset relative to the beginning of the file where this segment is\&. 
+.PP
+Definition at line 198 of file ELF32\&.h\&.
+.SS "\fBstd::dword\fP BBP::std::ELF::SectionHeader::sh_size = 0"
+
+.PP
+How large this section is in the file\&. 
+.PP
+Definition at line 178 of file ELF64\&.h\&.
+.SS "\fBstd::word\fP BBP::std::ELF::SectionHeader::sh_size = 0"
+
+.PP
+How large this section is in the file\&. 
+.PP
+Definition at line 199 of file ELF32\&.h\&.
+.SS "\fBstd::word\fP BBP::std::ELF::SectionHeader::sh_type = 0"
+
+.PP
+Type of this section\&. 
+.PP
+Definition at line 195 of file ELF32\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

@@ -1,0 +1,91 @@
+.TH "BBP::userspace::Instruction::Arg" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BBP::userspace::Instruction::Arg
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Instructions\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBstd::word\fP \fBdata\fP"
+.br
+.ti -1c
+.RI "bool \fBreferenced\fP"
+.br
+.ti -1c
+.RI "bool \fBdereferenced\fP"
+.br
+.ti -1c
+.RI "\fBstd::nibble\fP \fBoffset\fP"
+.br
+.ti -1c
+.RI "\fBstd::crumb\fP \fBtrailerCount\fP"
+.br
+.ti -1c
+.RI "\fBstd::word\fP \fBtrailers\fP [4]"
+.br
+.ti -1c
+.RI "bool \fBisLiteralArg\fP"
+.br
+.ti -1c
+.RI "bool \fBanyvalue\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 27 of file Instructions\&.h\&.
+.SH "Field Documentation"
+.PP 
+.SS "bool BBP::userspace::Instruction::Arg::anyvalue"
+
+.PP
+Definition at line 46 of file Instructions\&.h\&.
+.SS "\fBstd::word\fP BBP::userspace::Instruction::Arg::data"
+
+.PP
+Definition at line 30 of file Instructions\&.h\&.
+.PP
+Referenced by BBP::esa::esaProcessor::setArg()\&.
+.SS "bool BBP::userspace::Instruction::Arg::dereferenced"
+
+.PP
+Definition at line 34 of file Instructions\&.h\&.
+.PP
+Referenced by BBP::esa::esaProcessor::setArg()\&.
+.SS "bool BBP::userspace::Instruction::Arg::isLiteralArg"
+
+.PP
+Definition at line 43 of file Instructions\&.h\&.
+.PP
+Referenced by BBP::esa::esaProcessor::setArg()\&.
+.SS "\fBstd::nibble\fP BBP::userspace::Instruction::Arg::offset"
+
+.PP
+Definition at line 36 of file Instructions\&.h\&.
+.PP
+Referenced by BBP::esa::esaProcessor::setArg()\&.
+.SS "bool BBP::userspace::Instruction::Arg::referenced"
+
+.PP
+Definition at line 33 of file Instructions\&.h\&.
+.PP
+Referenced by BBP::esa::esaProcessor::setArg()\&.
+.SS "\fBstd::crumb\fP BBP::userspace::Instruction::Arg::trailerCount"
+
+.PP
+Definition at line 37 of file Instructions\&.h\&.
+.SS "\fBstd::word\fP BBP::userspace::Instruction::Arg::trailers[4]"
+
+.PP
+Definition at line 40 of file Instructions\&.h\&.
+.PP
+Referenced by BBP::esa::esaProcessor::setArg()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

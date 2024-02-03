@@ -1,0 +1,347 @@
+\hypertarget{classBBP_1_1userspace_1_1HyperVisor}{}\doxysection{B\+BP\+::userspace\+::Hyper\+Visor Class Reference}
+\label{classBBP_1_1userspace_1_1HyperVisor}\index{BBP::userspace::HyperVisor@{BBP::userspace::HyperVisor}}
+
+
+{\ttfamily \#include $<$Hyperv.\+h$>$}
+
+
+
+Collaboration diagram for B\+BP\+::userspace\+::Hyper\+Visor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d07/classBBP_1_1userspace_1_1HyperVisor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1userspace_ada35073b18ce8a7b788f5bd62ffd477d}{pid\+\_\+t}} \mbox{\hyperlink{classBBP_1_1userspace_1_1HyperVisor_a700fe3adfc4bee534fb242852eaf74d0}{allocate\+Thread}} ()
+\item 
+\mbox{\hyperlink{structBBP_1_1userspace_1_1Thread}{userspace\+::\+Thread}} $\ast$ \mbox{\hyperlink{classBBP_1_1userspace_1_1HyperVisor_ad9a896aeb26e67c14605bc5885d4338a}{spawn\+Thread}} (\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1ELFBuilder}{std\+::\+E\+L\+F\+::\+E\+L\+F\+Builder}} \&binary, \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager}{std\+::\+Resource\+Manager}} $\ast$allocator)
+\item 
+void \mbox{\hyperlink{classBBP_1_1userspace_1_1HyperVisor_a1b80807f61133aed0d6cad53f74330c7}{destroy\+Thread}} (\mbox{\hyperlink{namespaceBBP_1_1userspace_ada35073b18ce8a7b788f5bd62ffd477d}{userspace\+::pid\+\_\+t}} pid)
+\item 
+void \mbox{\hyperlink{classBBP_1_1userspace_1_1HyperVisor_acf57271f473cebb9e24e3afbd9b21e6b}{Fetch\+Active\+Thread\+Instruction}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std\+::size\+\_\+t}} \mbox{\hyperlink{classBBP_1_1userspace_1_1HyperVisor_aafbfe5628b61bda24d4f6e86455c6fb4}{active\+Thread\+Count}} = 0
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} \mbox{\hyperlink{classBBP_1_1userspace_1_1HyperVisor_adb775465cf5dc74bcb411a5969ebddd8}{active\+Thread}} = 0
+\item 
+\mbox{\hyperlink{structBBP_1_1std_1_1STATIC__PAGE}{std\+::\+S\+T\+A\+T\+I\+C\+\_\+\+P\+A\+GE}}$<$ \mbox{\hyperlink{structBBP_1_1userspace_1_1Thread}{Thread}}, \mbox{\hyperlink{classBBP_1_1userspace_1_1HyperVisor_a572509d057f0f9af086655c9ae0fef73}{thread\+Count}} $>$ \mbox{\hyperlink{classBBP_1_1userspace_1_1HyperVisor_a3cf04c5636244f4eb89c24496b8f709b}{threads}}
+\item 
+\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable}{Binary\+Executable}} \mbox{\hyperlink{classBBP_1_1userspace_1_1HyperVisor_a5c21ea8a3ad0e9a201f0770b70870e5d}{sharedlib}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr \mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std\+::size\+\_\+t}} \mbox{\hyperlink{classBBP_1_1userspace_1_1HyperVisor_a572509d057f0f9af086655c9ae0fef73}{thread\+Count}} = 16
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 14 of file Hyperv.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1HyperVisor_a700fe3adfc4bee534fb242852eaf74d0}\label{classBBP_1_1userspace_1_1HyperVisor_a700fe3adfc4bee534fb242852eaf74d0}} 
+\index{BBP::userspace::HyperVisor@{BBP::userspace::HyperVisor}!allocateThread@{allocateThread}}
+\index{allocateThread@{allocateThread}!BBP::userspace::HyperVisor@{BBP::userspace::HyperVisor}}
+\doxysubsubsection{\texorpdfstring{allocateThread()}{allocateThread()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1userspace_ada35073b18ce8a7b788f5bd62ffd477d}{B\+B\+P\+::userspace\+::pid\+\_\+t}} B\+B\+P\+::userspace\+::\+Hyper\+Visor\+::allocate\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 4 of file Thread\+State.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{7 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1HyperVisor_a1b80807f61133aed0d6cad53f74330c7}\label{classBBP_1_1userspace_1_1HyperVisor_a1b80807f61133aed0d6cad53f74330c7}} 
+\index{BBP::userspace::HyperVisor@{BBP::userspace::HyperVisor}!destroyThread@{destroyThread}}
+\index{destroyThread@{destroyThread}!BBP::userspace::HyperVisor@{BBP::userspace::HyperVisor}}
+\doxysubsubsection{\texorpdfstring{destroyThread()}{destroyThread()}}
+{\footnotesize\ttfamily void B\+B\+P\+::userspace\+::\+Hyper\+Visor\+::destroy\+Thread (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1userspace_ada35073b18ce8a7b788f5bd62ffd477d}{userspace\+::pid\+\_\+t}}}]{pid }\end{DoxyParamCaption})}
+
+
+
+Definition at line 33 of file Thread\+State.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34 \{}
+\DoxyCodeLine{35     \textcolor{comment}{// Get thread}}
+\DoxyCodeLine{36     userspace::Thread *t = \&\mbox{\hyperlink{classBBP_1_1userspace_1_1HyperVisor_a3cf04c5636244f4eb89c24496b8f709b}{threads}}.static\_data[pid];}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{comment}{// Unload executable}}
+\DoxyCodeLine{39     t-\/>executable.unloadExecutable();}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{comment}{// Free up TLS}}
+\DoxyCodeLine{42     t-\/>allocator-\/>free(t-\/>TLS.data);}
+\DoxyCodeLine{43     t-\/>TLS = std::PAGE<std::string\_element>(0, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{comment}{// Set inactive}}
+\DoxyCodeLine{46     t-\/>active = \textcolor{keyword}{false};}
+\DoxyCodeLine{47 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d9c/classBBP_1_1userspace_1_1HyperVisor_a1b80807f61133aed0d6cad53f74330c7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d9c/classBBP_1_1userspace_1_1HyperVisor_a1b80807f61133aed0d6cad53f74330c7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1HyperVisor_acf57271f473cebb9e24e3afbd9b21e6b}\label{classBBP_1_1userspace_1_1HyperVisor_acf57271f473cebb9e24e3afbd9b21e6b}} 
+\index{BBP::userspace::HyperVisor@{BBP::userspace::HyperVisor}!FetchActiveThreadInstruction@{FetchActiveThreadInstruction}}
+\index{FetchActiveThreadInstruction@{FetchActiveThreadInstruction}!BBP::userspace::HyperVisor@{BBP::userspace::HyperVisor}}
+\doxysubsubsection{\texorpdfstring{FetchActiveThreadInstruction()}{FetchActiveThreadInstruction()}}
+{\footnotesize\ttfamily void B\+B\+P\+::userspace\+::\+Hyper\+Visor\+::\+Fetch\+Active\+Thread\+Instruction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file Instruction\+Cycle.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8     \textcolor{comment}{// Check if active thread is within bounds}}
+\DoxyCodeLine{9     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1userspace_1_1HyperVisor_adb775465cf5dc74bcb411a5969ebddd8}{activeThread}} >= \mbox{\hyperlink{classBBP_1_1userspace_1_1HyperVisor_a572509d057f0f9af086655c9ae0fef73}{threadCount}})}
+\DoxyCodeLine{10     \{}
+\DoxyCodeLine{11         \textcolor{comment}{// Signal Processor fault}}
+\DoxyCodeLine{12         \mbox{\hyperlink{Signal_8h_a82e69d819748cab5933309bba1999f7c}{\_\_SIGNAL\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_a11c4192c4c4747dbbd9300b0bc2db5d7}{SIGINV}});}
+\DoxyCodeLine{13     \}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \textcolor{comment}{// Get active thread}}
+\DoxyCodeLine{16     Thread *currentThread = \&\mbox{\hyperlink{classBBP_1_1userspace_1_1HyperVisor_a3cf04c5636244f4eb89c24496b8f709b}{threads}}.static\_data[\mbox{\hyperlink{classBBP_1_1userspace_1_1HyperVisor_adb775465cf5dc74bcb411a5969ebddd8}{activeThread}}];}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     \textcolor{comment}{// If thread is inactive, raise signal}}
+\DoxyCodeLine{19     \textcolor{keywordflow}{if} (currentThread-\/>active == \textcolor{keyword}{false})}
+\DoxyCodeLine{20     \{}
+\DoxyCodeLine{21         \mbox{\hyperlink{Signal_8h_a82e69d819748cab5933309bba1999f7c}{\_\_SIGNAL\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_af139a9b42bd35d198ce80ed26f7d2efe}{SIGTHREXP}});}
+\DoxyCodeLine{22     \}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \textcolor{comment}{// Read program counter (eip) and convert from virtual memory to physical memory}}
+\DoxyCodeLine{25     \mbox{\hyperlink{namespaceBBP_1_1std_ae104641b17c021a901add93f7bc5d808}{std::word}} programCounter = currentThread-\/>executable.virtualToPhysical(\mbox{\hyperlink{namespaceBBP_1_1userspace_a484d19b0d23141290394e25753c95bfb}{readRegister}}(currentThread-\/>eip));}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{comment}{// Clear instruction}}
+\DoxyCodeLine{28     currentThread-\/>instruction = userspace::Instruction();}
+\DoxyCodeLine{29     }
+\DoxyCodeLine{30     \textcolor{keywordflow}{try}}
+\DoxyCodeLine{31     \{}
+\DoxyCodeLine{32         \textcolor{comment}{// Decode word}}
+\DoxyCodeLine{33         currentThread-\/>instruction.header.prefix = \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}}(\&currentThread-\/>executable.BinaryData, programCounter + 0);}
+\DoxyCodeLine{34         currentThread-\/>instruction.header.opcode = \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}}(\&currentThread-\/>executable.BinaryData, programCounter + 1);}
+\DoxyCodeLine{35         currentThread-\/>instruction.header.suffix = \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}}(\&currentThread-\/>executable.BinaryData, programCounter + 2);}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37         \textcolor{comment}{// Decode last eight bits}}
+\DoxyCodeLine{38         \mbox{\hyperlink{namespaceBBP_1_1std_a4926ba934876e4a1028b9abb47edbc56}{std::byte}} flagsAndArgs = \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}}(\&currentThread-\/>executable.BinaryData, programCounter + 3);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40         currentThread-\/>instruction.header.args = flagsAndArgs \& 0x0F;}
+\DoxyCodeLine{41         currentThread-\/>instruction.header.flags = (flagsAndArgs \& 0xF0) >> 4;}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43         \textcolor{comment}{// Now for arguments.}}
+\DoxyCodeLine{44         \mbox{\hyperlink{namespaceBBP_1_1std_ae104641b17c021a901add93f7bc5d808}{std::word}} executableIndex = programCounter + 4;}
+\DoxyCodeLine{45         \textcolor{keywordflow}{for} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} argumentIndex = 0; argumentIndex < currentThread-\/>instruction.header.args; argumentIndex++)}
+\DoxyCodeLine{46         \{}
+\DoxyCodeLine{47             \textcolor{comment}{// Decide if argument is a literal}}
+\DoxyCodeLine{48             \textcolor{keywordtype}{bool} isLiteral = !(currentThread-\/>instruction.header.prefix \& (1 << argumentIndex));}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50             \textcolor{comment}{// Decode word}}
+\DoxyCodeLine{51             \mbox{\hyperlink{namespaceBBP_1_1std_ae104641b17c021a901add93f7bc5d808}{std::word}} decoded = 0;}
+\DoxyCodeLine{52             decoded |= \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}}(\&currentThread-\/>executable.BinaryData, executableIndex + 0) << 24;}
+\DoxyCodeLine{53             decoded |= \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}}(\&currentThread-\/>executable.BinaryData, executableIndex + 1) << 16;}
+\DoxyCodeLine{54             decoded |= \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}}(\&currentThread-\/>executable.BinaryData, executableIndex + 2) <<  8;}
+\DoxyCodeLine{55             decoded |= \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}}(\&currentThread-\/>executable.BinaryData, executableIndex + 3) <<  0;}
+\DoxyCodeLine{56             executableIndex += 4;}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58             \textcolor{comment}{// If literal, set argument and stop}}
+\DoxyCodeLine{59             \textcolor{keywordflow}{if} (isLiteral)}
+\DoxyCodeLine{60             \{}
+\DoxyCodeLine{61                 currentThread-\/>instruction.args[argumentIndex].data = decoded;}
+\DoxyCodeLine{62                 currentThread-\/>instruction.args[argumentIndex].isLiteralArg = \textcolor{keyword}{true};}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64                 \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{65             \}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67             \textcolor{comment}{// Get decoded or referenced }}
+\DoxyCodeLine{68             currentThread-\/>instruction.args[argumentIndex].referenced   = !!((decoded >> 24) \& 0b10000000);}
+\DoxyCodeLine{69             currentThread-\/>instruction.args[argumentIndex].dereferenced = !!((decoded >> 24) \& 0b01000000);}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71             \textcolor{comment}{// Next, get offset and trailer count}}
+\DoxyCodeLine{72             currentThread-\/>instruction.args[argumentIndex].offset = ((decoded >> 24) \& 0b00111100) >> 2;}
+\DoxyCodeLine{73             currentThread-\/>instruction.args[argumentIndex].trailerCount = ((decoded >> 24) \& 0b0000011);}
+\DoxyCodeLine{74             }
+\DoxyCodeLine{75             \textcolor{comment}{// Save 20 bits of decoded into args}}
+\DoxyCodeLine{76             currentThread-\/>instruction.args[argumentIndex].data = decoded \& 0xfffff;}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78             \textcolor{comment}{// Now decode trailers}}
+\DoxyCodeLine{79             \textcolor{keywordflow}{for} (\mbox{\hyperlink{namespaceBBP_1_1std_a46765daa6b14b3e45c22ad4071efdff1}{std::nibble}} trailerIndex = 0; trailerIndex < currentThread-\/>instruction.args[argumentIndex].trailerCount \&\& trailerIndex < 4; trailerIndex++)}
+\DoxyCodeLine{80             \{}
+\DoxyCodeLine{81                 \textcolor{comment}{// Decode next word}}
+\DoxyCodeLine{82                 decoded = 0;}
+\DoxyCodeLine{83                 decoded |= \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}}(\&currentThread-\/>executable.BinaryData, executableIndex + 0) << 24;}
+\DoxyCodeLine{84                 decoded |= \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}}(\&currentThread-\/>executable.BinaryData, executableIndex + 1) << 16;}
+\DoxyCodeLine{85                 decoded |= \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}}(\&currentThread-\/>executable.BinaryData, executableIndex + 2) << 8;}
+\DoxyCodeLine{86                 decoded |= \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}}(\&currentThread-\/>executable.BinaryData, executableIndex + 3) << 0;}
+\DoxyCodeLine{87                 executableIndex += 4;}
+\DoxyCodeLine{88                 }
+\DoxyCodeLine{89                 \textcolor{comment}{// Save}}
+\DoxyCodeLine{90                 currentThread-\/>instruction.args[argumentIndex].trailers[trailerIndex] = decoded;}
+\DoxyCodeLine{91             \}}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93         \}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95         \textcolor{comment}{// Now that the instruction has been decoded, set eip to executableIndex}}
+\DoxyCodeLine{96         \mbox{\hyperlink{namespaceBBP_1_1userspace_a9122f01317e629b0ae11a837667f1224}{setRegister}}(currentThread-\/>eip, currentThread-\/>executable.physicalToVirtual(executableIndex));}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98     \}}
+\DoxyCodeLine{99     \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} std::except \&\mbox{\hyperlink{namespaceBBP_1_1Locale_1_1Japanese_a02c028a34a00f11967f61a67255e0e6eaa942c2da6dc667c4a5a36a37034d3a72}{e}})}
+\DoxyCodeLine{100     \{}
+\DoxyCodeLine{101         \textcolor{comment}{// Doesn't really matter what happens, just signal fault}}
+\DoxyCodeLine{102         \mbox{\hyperlink{Signal_8h_a82e69d819748cab5933309bba1999f7c}{\_\_SIGNAL\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_af139a9b42bd35d198ce80ed26f7d2efe}{SIGTHREXP}});}
+\DoxyCodeLine{103     \}}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d9c/classBBP_1_1userspace_1_1HyperVisor_acf57271f473cebb9e24e3afbd9b21e6b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1HyperVisor_ad9a896aeb26e67c14605bc5885d4338a}\label{classBBP_1_1userspace_1_1HyperVisor_ad9a896aeb26e67c14605bc5885d4338a}} 
+\index{BBP::userspace::HyperVisor@{BBP::userspace::HyperVisor}!spawnThread@{spawnThread}}
+\index{spawnThread@{spawnThread}!BBP::userspace::HyperVisor@{BBP::userspace::HyperVisor}}
+\doxysubsubsection{\texorpdfstring{spawnThread()}{spawnThread()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structBBP_1_1userspace_1_1Thread}{B\+B\+P\+::userspace\+::\+Thread}} $\ast$ B\+B\+P\+::userspace\+::\+Hyper\+Visor\+::spawn\+Thread (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1ELFBuilder}{std\+::\+E\+L\+F\+::\+E\+L\+F\+Builder}} \&}]{binary,  }\item[{\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager}{std\+::\+Resource\+Manager}} $\ast$}]{allocator }\end{DoxyParamCaption})}
+
+
+
+Definition at line 9 of file Thread\+State.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11     \textcolor{comment}{// Get next available PID}}
+\DoxyCodeLine{12     \mbox{\hyperlink{namespaceBBP_1_1userspace_ada35073b18ce8a7b788f5bd62ffd477d}{pid\_t}} threadPID = \mbox{\hyperlink{classBBP_1_1userspace_1_1HyperVisor_a700fe3adfc4bee534fb242852eaf74d0}{allocateThread}}();}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     \textcolor{comment}{// Get thread}}
+\DoxyCodeLine{15     userspace::Thread *t = \&\mbox{\hyperlink{classBBP_1_1userspace_1_1HyperVisor_a3cf04c5636244f4eb89c24496b8f709b}{threads}}.static\_data[threadPID];}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{comment}{// Set active}}
+\DoxyCodeLine{18     t-\/>active = \textcolor{keyword}{true};}
+\DoxyCodeLine{19     \mbox{\hyperlink{classBBP_1_1userspace_1_1HyperVisor_adb775465cf5dc74bcb411a5969ebddd8}{activeThread}} = threadPID;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{comment}{// Set page}}
+\DoxyCodeLine{22     t-\/>executable.loadExecutable(binary, allocator);}
+\DoxyCodeLine{23     t-\/>executable.createTLS(t-\/>TLS);}
+\DoxyCodeLine{24     t-\/>allocator = allocator;}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{comment}{// Set eip}}
+\DoxyCodeLine{27     \mbox{\hyperlink{namespaceBBP_1_1userspace_a9122f01317e629b0ae11a837667f1224}{userspace::setRegister}}(t-\/>eip, binary.entry());}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \textcolor{comment}{// Return thread}}
+\DoxyCodeLine{30     \textcolor{keywordflow}{return} t;}
+\DoxyCodeLine{31 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d9c/classBBP_1_1userspace_1_1HyperVisor_ad9a896aeb26e67c14605bc5885d4338a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d9c/classBBP_1_1userspace_1_1HyperVisor_ad9a896aeb26e67c14605bc5885d4338a_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1HyperVisor_adb775465cf5dc74bcb411a5969ebddd8}\label{classBBP_1_1userspace_1_1HyperVisor_adb775465cf5dc74bcb411a5969ebddd8}} 
+\index{BBP::userspace::HyperVisor@{BBP::userspace::HyperVisor}!activeThread@{activeThread}}
+\index{activeThread@{activeThread}!BBP::userspace::HyperVisor@{BBP::userspace::HyperVisor}}
+\doxysubsubsection{\texorpdfstring{activeThread}{activeThread}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} B\+B\+P\+::userspace\+::\+Hyper\+Visor\+::active\+Thread = 0}
+
+
+
+Definition at line 20 of file Hyperv.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1HyperVisor_aafbfe5628b61bda24d4f6e86455c6fb4}\label{classBBP_1_1userspace_1_1HyperVisor_aafbfe5628b61bda24d4f6e86455c6fb4}} 
+\index{BBP::userspace::HyperVisor@{BBP::userspace::HyperVisor}!activeThreadCount@{activeThreadCount}}
+\index{activeThreadCount@{activeThreadCount}!BBP::userspace::HyperVisor@{BBP::userspace::HyperVisor}}
+\doxysubsubsection{\texorpdfstring{activeThreadCount}{activeThreadCount}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std\+::size\+\_\+t}} B\+B\+P\+::userspace\+::\+Hyper\+Visor\+::active\+Thread\+Count = 0}
+
+
+
+Definition at line 19 of file Hyperv.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1HyperVisor_a5c21ea8a3ad0e9a201f0770b70870e5d}\label{classBBP_1_1userspace_1_1HyperVisor_a5c21ea8a3ad0e9a201f0770b70870e5d}} 
+\index{BBP::userspace::HyperVisor@{BBP::userspace::HyperVisor}!sharedlib@{sharedlib}}
+\index{sharedlib@{sharedlib}!BBP::userspace::HyperVisor@{BBP::userspace::HyperVisor}}
+\doxysubsubsection{\texorpdfstring{sharedlib}{sharedlib}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable}{Binary\+Executable}} B\+B\+P\+::userspace\+::\+Hyper\+Visor\+::sharedlib}
+
+
+
+Definition at line 26 of file Hyperv.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1HyperVisor_a572509d057f0f9af086655c9ae0fef73}\label{classBBP_1_1userspace_1_1HyperVisor_a572509d057f0f9af086655c9ae0fef73}} 
+\index{BBP::userspace::HyperVisor@{BBP::userspace::HyperVisor}!threadCount@{threadCount}}
+\index{threadCount@{threadCount}!BBP::userspace::HyperVisor@{BBP::userspace::HyperVisor}}
+\doxysubsubsection{\texorpdfstring{threadCount}{threadCount}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std\+::size\+\_\+t}} B\+B\+P\+::userspace\+::\+Hyper\+Visor\+::thread\+Count = 16\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 18 of file Hyperv.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1HyperVisor_a3cf04c5636244f4eb89c24496b8f709b}\label{classBBP_1_1userspace_1_1HyperVisor_a3cf04c5636244f4eb89c24496b8f709b}} 
+\index{BBP::userspace::HyperVisor@{BBP::userspace::HyperVisor}!threads@{threads}}
+\index{threads@{threads}!BBP::userspace::HyperVisor@{BBP::userspace::HyperVisor}}
+\doxysubsubsection{\texorpdfstring{threads}{threads}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structBBP_1_1std_1_1STATIC__PAGE}{std\+::\+S\+T\+A\+T\+I\+C\+\_\+\+P\+A\+GE}}$<$\mbox{\hyperlink{structBBP_1_1userspace_1_1Thread}{Thread}}, \mbox{\hyperlink{classBBP_1_1userspace_1_1HyperVisor_a572509d057f0f9af086655c9ae0fef73}{thread\+Count}}$>$ B\+B\+P\+::userspace\+::\+Hyper\+Visor\+::threads}
+
+
+
+Definition at line 23 of file Hyperv.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Hyperv_8h}{Hyperv.\+h}}\item 
+\mbox{\hyperlink{InstructionCycle_8cpp}{Instruction\+Cycle.\+cpp}}\item 
+\mbox{\hyperlink{ThreadState_8cpp}{Thread\+State.\+cpp}}\end{DoxyCompactItemize}

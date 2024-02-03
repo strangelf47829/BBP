@@ -1,0 +1,492 @@
+.TH "BBP::std::PATH" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BBP::std::PATH
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <FileSys\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBstd::c_string\fP \fBpathName\fP ()"
+.br
+.ti -1c
+.RI "\fBstd::c_string\fP \fBfileName\fP ()"
+.br
+.ti -1c
+.RI "\fBstd::c_string\fP \fBrelName\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisRelativeToRoot\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisDefinedFromRoot\fP ()"
+.br
+.ti -1c
+.RI "\fBPATH\fP & \fBmakeAbsolutePath\fP (\fBPATH\fP *currentPath)"
+.br
+.ti -1c
+.RI "\fBPATH\fP & \fBresolveAbsolutes\fP ()"
+.br
+.ti -1c
+.RI "void \fBmakeRelative\fP (\fBPATH\fP &reference, \fBPATH\fP &dir)"
+.br
+.ti -1c
+.RI "\fBPATH\fP (\fBVOLUME\fP *, \fBstd::string\fP &path)"
+.br
+.ti -1c
+.RI "\fBPATH\fP (\fBVOLUME\fP *, \fBstd::conststring\fP path)"
+.br
+.ti -1c
+.RI "\fBPATH\fP (\fBstd::string\fP &path)"
+.br
+.ti -1c
+.RI "\fBPATH\fP (\fBstd::conststring\fP path)"
+.br
+.ti -1c
+.RI "\fBPATH\fP (\fBstd::PATH\fP &)"
+.br
+.ti -1c
+.RI "\fBPATH\fP ()"
+.br
+.ti -1c
+.RI "\fB~PATH\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPATH\fP & \fBgetFileAndPaths\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBstd::static_string\fP< \fBmax_path_length\fP > \fB_path\fP"
+.br
+.ti -1c
+.RI "\fBstd::static_string\fP< \fBmax_path_length\fP > \fBrawPath\fP"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBfileNameStartIndex\fP"
+.br
+.ti -1c
+.RI "\fBstd::ResourceManager\fP * \fBallocator\fP"
+.br
+.ti -1c
+.RI "\fBVOLUME\fP * \fBVolume\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 40 of file FileSys\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "BBP::std::PATH::PATH (\fBstd::VOLUME\fP * v, \fBstd::string\fP & path)"
+
+.PP
+Definition at line 16 of file Path\&.cpp\&.
+.PP
+.nf
+17     : PATH(v, str\&.data) {}
+.fi
+.SS "BBP::std::PATH::PATH (\fBstd::VOLUME\fP * v, \fBstd::conststring\fP path)"
+
+.PP
+Definition at line 19 of file Path\&.cpp\&.
+.PP
+.nf
+20     : fileNameStartIndex(0), allocator(BBP::std::activemem), Volume(v)
+21 {
+22 
+23     // Get string sizes
+24     std::size_t pathlength = std::strlen(str);
+25 
+26     // Copy string into rawPath
+27     std::strcpy(&rawPath, str);
+28 
+29     // Then prepare _path
+30     this->getFileAndPaths();
+31 
+32 }
+.fi
+.PP
+References getFileAndPaths(), rawPath, BBP::std::strcpy(), and BBP::std::strlen()\&.
+.SS "BBP::std::PATH::PATH (\fBstd::string\fP & path)"
+
+.PP
+Definition at line 8 of file Path\&.cpp\&.
+.PP
+.nf
+9     : PATH(BBP::std::primaryVolume, str)
+10 {}
+.fi
+.SS "BBP::std::PATH::PATH (\fBstd::conststring\fP path)"
+
+.PP
+Definition at line 12 of file Path\&.cpp\&.
+.PP
+.nf
+13     : PATH(BBP::std::primaryVolume, str)
+14 {}
+.fi
+.SS "BBP::std::PATH::PATH (\fBstd::PATH\fP & path)"
+
+.PP
+Definition at line 34 of file Path\&.cpp\&.
+.PP
+.nf
+35     : PATH((std::conststring)path\&.relName())
+36 {
+37 
+38 }
+.fi
+.SS "BBP::std::PATH::PATH ()"
+
+.PP
+Definition at line 4 of file Path\&.cpp\&.
+.PP
+.nf
+5     : Volume(nullptr), allocator(nullptr), fileNameStartIndex(0)
+6 {
+7 }
+.fi
+.SS "BBP::std::PATH::~PATH ()"
+
+.PP
+Definition at line 40 of file Path\&.cpp\&.
+.PP
+.nf
+41 {
+42     
+43 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBBBP::std::c_string\fP BBP::std::PATH::fileName ()"
+
+.PP
+Definition at line 45 of file Path\&.cpp\&.
+.PP
+.nf
+46 {
+47     // Move to somewhere else?
+48     _path\&.data = _path\&.static_data;
+49 
+50     return std::read_a(&_path, fileNameStartIndex + 2);
+51 }
+.fi
+.PP
+References BBP::std::read_a()\&.
+.PP
+Referenced by BBP::esa::esaProcessor::includeFile(), and BBP::std::Lexer::lex_context::parseFile()\&.
+.SS "\fBBBP::std::PATH\fP & BBP::std::PATH::getFileAndPaths ()\fC [private]\fP"
+
+.PP
+Definition at line 93 of file Path\&.cpp\&.
+.PP
+.nf
+94 {
+95     // Get length of rawPath, and create copy
+96     std::size_t rawPathLength = std::strlen(rawPath);
+97     char nul = '\0';
+98 
+99     // Copy over string
+100     for (index_t index = 0; index < rawPathLength; index++)
+101     {
+102         char c = __UNSAFE__(read)(&rawPath, index);
+103 
+104         if (c == '/')
+105             this->fileNameStartIndex = index;
+106         __UNSAFE__(write)(&_path, c, index);
+107     }
+108 
+109     if (fileNameStartIndex)
+110     {
+111         // Then seperate last FILLME
+112         for (index_t index = fileNameStartIndex; index < rawPathLength; index++)
+113             __UNSAFE__(write)(&_path, __UNSAFE__(read)(&rawPath, index), index + 1);
+114         __UNSAFE__(write)(&_path, nul, fileNameStartIndex + 1);
+115     }
+116     else
+117     {
+118         for (index_t index = fileNameStartIndex; index < rawPathLength; index++)
+119             __UNSAFE__(write)(&_path, __UNSAFE__(read)(&rawPath, index), index + 2);
+120         __UNSAFE__(write)(&_path, nul, 0);
+121     }
+122 
+123     return *this;
+124 }
+.fi
+.PP
+References __UNSAFE__, BBP::std::read(), BBP::std::strlen(), and BBP::std::write()\&.
+.PP
+Referenced by PATH()\&.
+.SS "bool BBP::std::PATH::isDefinedFromRoot ()"
+
+.PP
+Definition at line 74 of file Path\&.cpp\&.
+.PP
+.nf
+75 {
+76     // Check if char is '/'
+77     if (this->Volume == nullptr)
+78         return false;
+79 
+80     // Check if volume is not the same as \&.\&.
+81     std::size_t VolPathLength = std::strlen(this->Volume->volumePath\&.relName());
+82     for (std::index_t idx = 0; idx < VolPathLength; idx++)
+83     {
+84         char c1 = this->Volume->volumePath\&.relName()[idx];
+85         char c2 = __UNSAFE__(std::read)(&rawPath, idx);
+86 
+87         if (c1 != c2)
+88             return false;
+89     }
+90     return true;
+91 }
+.fi
+.PP
+References __UNSAFE__, BBP::std::read(), and BBP::std::strlen()\&.
+.SS "bool BBP::std::PATH::isRelativeToRoot ()"
+
+.PP
+Definition at line 66 of file Path\&.cpp\&.
+.PP
+.nf
+67 {
+68     // Get first character
+69     char first = __UNSAFE__(std::read)(&rawPath, 0);
+70 
+71     return first == '/';
+72 }
+.fi
+.PP
+References __UNSAFE__, BBP::std::first(), and BBP::std::read()\&.
+.PP
+Referenced by makeRelative()\&.
+.SS "\fBBBP::std::PATH\fP & BBP::std::PATH::makeAbsolutePath (\fBstd::PATH\fP * currentDir)"
+
+.PP
+Definition at line 126 of file Path\&.cpp\&.
+.PP
+.nf
+127 {
+128     if (!isDefinedFromRoot())
+129     {
+130         // Check if dir is relative to root
+131         bool isRelToRootDir = isRelativeToRoot();
+132 
+133         // Declare strings used to calculate absolute path
+134         std::c_string relativeTo;
+135         std::c_string activeDirectory = rawPath\&.data;
+136 
+137         // Check if this path is relative or absolute
+138         if (isRelToRootDir)
+139         {
+140             if (Volume == nullptr)
+141                 throw std::exception("ERR_UNDEF_VOL", EFAULT);
+142             relativeTo = Volume->volumePath\&.rawPath\&.data;
+143         }
+144         else
+145         {
+146             if (currentDir == nullptr)
+147                 throw std::exception("ERR_UNDEF_DIR", ENOENT);
+148             relativeTo = currentDir->rawPath\&.data;
+149         }
+150 
+151         // Create buffers
+152         std::static_string<2 * std::max_path_length> result;
+153 
+154         // Calculate path lengths
+155         std::size_t relativeToLength = std::strlen(relativeTo);
+156         std::size_t activeDirectoryLength = std::strlen(activeDirectory);
+157 
+158         // If paths are larger than \&.\&.\&.
+159         if (relativeToLength + activeDirectoryLength + 1 > std::max_page_elements)
+160         {
+161             allocator->free(result\&.data);
+162             throw std::exception("REL_DIR_TOOLONG", ENAMETOOLONG);
+163         }
+164 
+165         // Buffer whatever
+166         if (isRelToRootDir)
+167             std::sprintf(result\&.data, "%s%s", relativeTo, activeDirectory + 1);
+168         else
+169             std::sprintf(result\&.data, "%s%s", relativeTo, activeDirectory);
+170 
+171         // Copy result stuff into rawData
+172         std::strcpy(&rawPath, result\&.data);
+173     }
+174 
+175     // Resolve paths
+176     return resolveAbsolutes();;
+177 }
+.fi
+.PP
+References BBP::std::PAGE< T >::data, EFAULT, ENAMETOOLONG, ENOENT, BBP::std::exception(), BBP::std::max_page_elements, rawPath, BBP::std::sprintf(), BBP::std::strcpy(), and BBP::std::strlen()\&.
+.PP
+Referenced by BBP::std::FileNode::FileNode(), BBP::std::FILE::getINodeIndex(), BBP::esa::esaProcessor::includeFromPath(), makeRelative(), and BBP::shell()\&.
+.SS "void BBP::std::PATH::makeRelative (\fBPATH\fP & reference, \fBPATH\fP & dir)"
+
+.PP
+Definition at line 252 of file Path\&.cpp\&.
+.PP
+.nf
+253 {
+254     if (!dir\&.isRelativeToRoot())
+255     {
+256         
+257         dir\&.makeAbsolutePath(&reference);
+258 
+259         if (reference\&.isRelativeToRoot())
+260             dir\&.makeAbsolutePath(nullptr);
+261     }
+262 
+263 }
+.fi
+.PP
+References isRelativeToRoot(), and makeAbsolutePath()\&.
+.SS "\fBBBP::std::c_string\fP BBP::std::PATH::pathName ()"
+
+.PP
+Definition at line 53 of file Path\&.cpp\&.
+.PP
+.nf
+54 {
+55     return std::read_a(&_path, 0);
+56 }
+.fi
+.PP
+References BBP::std::read_a()\&.
+.PP
+Referenced by BBP::esa::esaProcessor::includeFile(), and BBP::std::Lexer::lex_context::translateUnit()\&.
+.SS "\fBBBP::std::c_string\fP BBP::std::PATH::relName ()"
+
+.PP
+Definition at line 58 of file Path\&.cpp\&.
+.PP
+.nf
+59 {
+60     // Move to somewhere else?
+61     rawPath\&.data = rawPath\&.static_data;
+62 
+63     return rawPath\&.data;
+64 }
+.fi
+.PP
+Referenced by BBP::std::FileNode::FileNode(), BBP::std::FILE::getINodeIndex(), BBP::esa::esaProcessor::includeFile(), BBP::esa::esaProcessor::includeFromPath(), BBP::esa::esaProcessor::translate(), and BBP::std::Lexer::lex_context::translateUnit()\&.
+.SS "\fBBBP::std::PATH\fP & BBP::std::PATH::resolveAbsolutes ()"
+
+.PP
+Definition at line 179 of file Path\&.cpp\&.
+.PP
+.nf
+180 {
+181     // Get rawPath length
+182     std::size_t rawPathLength = std::strlen(rawPath);
+183 
+184     // Stack to 
+185     std::PAGE<index_t> separatorPage(64, (std::index_t *)allocator->calloc(64, sizeof(std::index_t)));
+186     std::Stack<index_t> separatorStack(&separatorPage, 64);
+187 
+188     for (index_t index = 0; index < rawPathLength - 1; index++)
+189     {
+190         // Get current and next character
+191         char c = __UNSAFE__(read)(&rawPath, index);
+192         char nextC = __UNSAFE__(read)(&rawPath, index + 1);
+193         char nextnextC = __UNSAFE__(read)(&rawPath, index + 2);
+194 
+195         // If next character is null, break out of loop
+196         if (nextC == '\0')
+197             break;
+198 
+199         // If this character is a '/', do some things based on next character
+200         if (c == '/')
+201         {
+202             // If next character is '/', just move everything left by one
+203             if (nextC == '/')
+204             {
+205                 for (index_t i = index; i < rawPathLength; i++)
+206                     __UNSAFE__(write)(&rawPath, __UNSAFE__(read)(&rawPath, i + 1), i);
+207                 index--;
+208             }
+209             else // Otherwise 
+210             {
+211                 separatorStack << index;
+212             }
+213             continue;
+214         }
+215 
+216         // If this character is a '\&.', do some things based on next character
+217         if (c == '\&.')
+218         {
+219             // If next character is a '/', just move everything left by two
+220             if (nextC == '/')
+221             {
+222                 for (index_t i = index; i < rawPathLength; i++)
+223                     __UNSAFE__(write)(&rawPath, __UNSAFE__(read)(&rawPath, i + 2), i);
+224                 index--;
+225             }
+226             else if (nextC == '\&.' && nextnextC == '/')
+227             {
+228                 // Read last two '/''s from stack
+229                 index_t from, to;
+230                 separatorStack >> to >> from;
+231 
+232                 // Looping
+233                 for (index_t idx = 0; idx + to + 2 < rawPathLength; idx++)
+234                     __UNSAFE__(write)(&rawPath, __UNSAFE__(read)(&rawPath, idx + to + 4), idx + from + 1);
+235 
+236                 // Move back to 'from'
+237                 index = from - 1;
+238             }
+239 
+240             continue;
+241         }
+242         
+243     }
+244 
+245     // Deallocate separatorPage data
+246     allocator->free(separatorPage\&.data);
+247 
+248     // Mirror edited stuff into \&.\&.\&.
+249     return getFileAndPaths();
+250 }
+.fi
+.PP
+References __UNSAFE__, BBP::std::PAGE< T >::data, BBP::Locale::Japanese::i, BBP::std::read(), BBP::std::strlen(), BBP::Locale::Japanese::to, and BBP::std::write()\&.
+.SH "Field Documentation"
+.PP 
+.SS "\fBstd::static_string\fP<\fBmax_path_length\fP> BBP::std::PATH::_path\fC [private]\fP"
+
+.PP
+Definition at line 69 of file FileSys\&.h\&.
+.SS "\fBstd::ResourceManager\fP* BBP::std::PATH::allocator\fC [private]\fP"
+
+.PP
+Definition at line 78 of file FileSys\&.h\&.
+.SS "\fBstd::index_t\fP BBP::std::PATH::fileNameStartIndex\fC [private]\fP"
+
+.PP
+Definition at line 75 of file FileSys\&.h\&.
+.SS "\fBstd::static_string\fP<\fBmax_path_length\fP> BBP::std::PATH::rawPath\fC [private]\fP"
+
+.PP
+Definition at line 72 of file FileSys\&.h\&.
+.PP
+Referenced by makeAbsolutePath(), and PATH()\&.
+.SS "\fBVOLUME\fP* BBP::std::PATH::Volume\fC [private]\fP"
+
+.PP
+Definition at line 81 of file FileSys\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

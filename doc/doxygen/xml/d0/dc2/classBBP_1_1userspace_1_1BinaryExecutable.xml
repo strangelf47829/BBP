@@ -1,0 +1,609 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable" kind="class" language="C++" prot="public">
+    <compoundname>BBP::userspace::BinaryExecutable</compoundname>
+    <includes refid="d0/dcf/BinaryExecutable_8h" local="no">BinaryExecutable.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a7aea680298a0a52637bb8d96bd56e50d" prot="private" static="no" mutable="no">
+        <type><ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager" kindref="compound">std::ResourceManager</ref> *</type>
+        <definition>std::ResourceManager* BBP::userspace::BinaryExecutable::allocator</definition>
+        <argsstring></argsstring>
+        <name>allocator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" line="41" column="22" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a2eea354e4d1578fe320884a693aaaea6" compoundref="de/d02/BinaryExecutables_8cpp" startline="4" endline="88">loadExecutable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ae215ff73f42ca9f57046c5d3ef5a8476" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BBP::userspace::BinaryExecutable::allocated</definition>
+        <argsstring></argsstring>
+        <name>allocated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" line="44" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a2eea354e4d1578fe320884a693aaaea6" compoundref="de/d02/BinaryExecutables_8cpp" startline="4" endline="88">loadExecutable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ae4efaa5ede25b5ff9ada504ca5f87f6f" prot="private" static="no" mutable="no">
+        <type><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::PAGE</ref>&lt; <ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">std::string_element</ref> &gt;</type>
+        <definition>std::PAGE&lt;std::string_element&gt; BBP::userspace::BinaryExecutable::TLSData</definition>
+        <argsstring></argsstring>
+        <name>TLSData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" line="47" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" bodystart="47" bodyend="-1"/>
+        <referencedby refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a2eea354e4d1578fe320884a693aaaea6" compoundref="de/d02/BinaryExecutables_8cpp" startline="4" endline="88">loadExecutable</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ab75ab6cf2c312ecb34fe62562936ce67" prot="public" static="no" mutable="no">
+        <type><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::PAGE</ref>&lt; <ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">std::string_element</ref> &gt;</type>
+        <definition>std::PAGE&lt;std::string_element&gt; BBP::userspace::BinaryExecutable::BinaryData</definition>
+        <argsstring></argsstring>
+        <name>BinaryData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" line="52" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a2eea354e4d1578fe320884a693aaaea6" compoundref="de/d02/BinaryExecutables_8cpp" startline="4" endline="88">loadExecutable</referencedby>
+        <referencedby refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1acf57271f473cebb9e24e3afbd9b21e6b" compoundref="d5/d95/InstructionCycle_8cpp" startline="6" endline="106">BBP::userspace::HyperVisor::FetchActiveThreadInstruction</referencedby>
+        <referencedby refid="d8/d04/classBBP_1_1userspace_1_1lvalue_1a613afac910aadefe91088ae6764ee035" compoundref="d4/d56/lvalue_8cpp" startline="368" endline="389">BBP::userspace::lvalue::resolve</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a069910ce9f3d2bdf7580e55eec85c62f" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref></type>
+        <definition>std::size_t BBP::userspace::BinaryExecutable::totalSize</definition>
+        <argsstring></argsstring>
+        <name>totalSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" line="53" column="13" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" bodystart="53" bodyend="-1"/>
+        <referencedby refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a2eea354e4d1578fe320884a693aaaea6" compoundref="de/d02/BinaryExecutables_8cpp" startline="4" endline="88">loadExecutable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a4e9ead370dc435afc1dabb9a0e800dd9" prot="public" static="no" mutable="no">
+        <type><ref refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE" kindref="compound">std::STATIC_PAGE</ref>&lt; <ref refid="d3/de6/structBBP_1_1userspace_1_1MemoryRegion" kindref="compound">MemoryRegion</ref>, 8 &gt;</type>
+        <definition>std::STATIC_PAGE&lt;MemoryRegion, 8&gt; BBP::userspace::BinaryExecutable::mapping</definition>
+        <argsstring></argsstring>
+        <name>mapping</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" line="56" column="18" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" bodystart="56" bodyend="-1"/>
+        <referencedby refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a2eea354e4d1578fe320884a693aaaea6" compoundref="de/d02/BinaryExecutables_8cpp" startline="4" endline="88">loadExecutable</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1aa7c08493ef5b210b84ff067a5b6aeae2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref></type>
+        <definition>BBP::std::index_t BBP::userspace::BinaryExecutable::findIndexOfVirtualMemory</definition>
+        <argsstring>(std::address_t)</argsstring>
+        <name>findIndexOfVirtualMemory</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref></type>
+          <defname>address</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" line="37" column="14" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/BinaryExecutables.cpp" bodystart="194" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1aec6ae6967b1f32362e7d4cc563cfab67" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref></type>
+        <definition>BBP::std::index_t BBP::userspace::BinaryExecutable::findIndexOfPhysicalMemory</definition>
+        <argsstring>(std::address_t)</argsstring>
+        <name>findIndexOfPhysicalMemory</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref></type>
+          <defname>address</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" line="38" column="14" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/BinaryExecutables.cpp" bodystart="216" bodyend="236"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a2eea354e4d1578fe320884a693aaaea6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::BinaryExecutable::loadExecutable</definition>
+        <argsstring>(std::ELF::ELFBuilder &amp;data, std::ResourceManager *allocator)</argsstring>
+        <name>loadExecutable</name>
+        <param>
+          <type><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder" kindref="compound">std::ELF::ELFBuilder</ref> &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager" kindref="compound">std::ResourceManager</ref> *</type>
+          <declname>allocator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" line="59" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/BinaryExecutables.cpp" bodystart="4" bodyend="88"/>
+        <references refid="d3/dce/stddef_8h_1abe45653ace4e77c9ae4612de5535ff1d" compoundref="d3/dce/stddef_8h" startline="6">__UNSAFE__</references>
+        <references refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ae215ff73f42ca9f57046c5d3ef5a8476" compoundref="d0/dcf/BinaryExecutable_8h" startline="44">allocated</references>
+        <references refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a7aea680298a0a52637bb8d96bd56e50d" compoundref="d0/dcf/BinaryExecutable_8h" startline="41">allocator</references>
+        <references refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ab75ab6cf2c312ecb34fe62562936ce67" compoundref="d0/dcf/BinaryExecutable_8h" startline="52">BinaryData</references>
+        <references refid="d6/d73/classBBP_1_1std_1_1ResourceManager_1a2feb265bae9a30994a2a4a4f69306329" compoundref="db/d83/Resources_8cpp" startline="26" endline="42">BBP::std::ResourceManager::calloc</references>
+        <references refid="d8/dc2/errno_8h_1a0030614bc864d1b24eaedd71585acc27" compoundref="d8/dc2/errno_8h" startline="71">ENODATA</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a750ba4c285e0788e84722a30a776b913" compoundref="d4/df4/Except_8cpp" startline="7" endline="18">BBP::std::exception</references>
+        <references refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ae617b962ff1bbb33b4436c0131fc9266" compoundref="db/de5/ELF_8h" startline="33">BBP::std::ELF::ELFBuilder::file</references>
+        <references refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a4e9ead370dc435afc1dabb9a0e800dd9" compoundref="d0/dcf/BinaryExecutable_8h" startline="56">mapping</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a8d21ebf8bb4b9485b67e17698ff1f890" compoundref="de/d5c/Memory_8h" startline="39">BBP::std::PAGE&lt; T &gt;::nextPage</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1ae3ed5c6be788a903036a151ac69cd2d9" compoundref="de/d5c/Memory_8h" startline="38">BBP::std::PAGE&lt; T &gt;::prevPage</references>
+        <references refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09" compoundref="d1/d5d/ELF32_8h" startline="117">BBP::std::ELF::PT_LOAD</references>
+        <references refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1ac724b0f41a81caa3f2950886d087dee9aa41f51d27471b57de855a2c37a3d11cb" compoundref="d1/d5d/ELF32_8h" startline="123">BBP::std::ELF::PT_TLS</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a1d232f50fc4e569e79449970f1b4bb9e">BBP::std::read</references>
+        <references refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ac6d3e73a576cff32f9ff187656ecaef0" compoundref="db/de5/ELF_8h" startline="39">BBP::std::ELF::ELFBuilder::segments</references>
+        <references refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ae4efaa5ede25b5ff9ada504ca5f87f6f" compoundref="d0/dcf/BinaryExecutable_8h" startline="47">TLSData</references>
+        <references refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a069910ce9f3d2bdf7580e55eec85c62f" compoundref="d0/dcf/BinaryExecutable_8h" startline="53">totalSize</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1aa63573041786d49b7cdb2eec8a921a6a">BBP::std::write</references>
+        <referencedby refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1ad9a896aeb26e67c14605bc5885d4338a" compoundref="d8/df1/ThreadState_8cpp" startline="9" endline="31">BBP::userspace::HyperVisor::spawnThread</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a9d5e6d71b96e1ace8d45c87dedeab11f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::BinaryExecutable::unloadExecutable</definition>
+        <argsstring>()</argsstring>
+        <name>unloadExecutable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" line="62" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/BinaryExecutables.cpp" bodystart="90" bodyend="111"/>
+        <referencedby refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1a1b80807f61133aed0d6cad53f74330c7" compoundref="d8/df1/ThreadState_8cpp" startline="33" endline="47">BBP::userspace::HyperVisor::destroyThread</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a96eb4539fc4f247710a8c1effabea87e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref></type>
+        <definition>BBP::std::address_t BBP::userspace::BinaryExecutable::virtualToPhysical</definition>
+        <argsstring>(std::address_t)</argsstring>
+        <name>virtualToPhysical</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref></type>
+          <defname>address</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" line="65" column="16" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/BinaryExecutables.cpp" bodystart="150" bodyend="170"/>
+        <references refid="d0/def/Signal_8h_1a82e69d819748cab5933309bba1999f7c" compoundref="d0/def/Signal_8h" startline="9">__SIGNAL__</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a8b214d5bdfe950ea0efc262c569ff9ef" compoundref="d0/def/Signal_8h" startline="29">BBP::std::SIGSEGV</references>
+        <referencedby refid="d8/d04/classBBP_1_1userspace_1_1lvalue_1a8148d4fec076833a89cc9d3ff6758c92" compoundref="d4/d56/lvalue_8cpp" startline="51" endline="366">BBP::userspace::lvalue::dereference</referencedby>
+        <referencedby refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1acf57271f473cebb9e24e3afbd9b21e6b" compoundref="d5/d95/InstructionCycle_8cpp" startline="6" endline="106">BBP::userspace::HyperVisor::FetchActiveThreadInstruction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1af46ca1c3ec18196e50f62e7bda446b6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref></type>
+        <definition>BBP::std::address_t BBP::userspace::BinaryExecutable::physicalToVirtual</definition>
+        <argsstring>(std::address_t)</argsstring>
+        <name>physicalToVirtual</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref></type>
+          <defname>address</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" line="66" column="16" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/BinaryExecutables.cpp" bodystart="172" bodyend="192"/>
+        <references refid="d0/def/Signal_8h_1a82e69d819748cab5933309bba1999f7c" compoundref="d0/def/Signal_8h" startline="9">__SIGNAL__</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a8b214d5bdfe950ea0efc262c569ff9ef" compoundref="d0/def/Signal_8h" startline="29">BBP::std::SIGSEGV</references>
+        <referencedby refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1acf57271f473cebb9e24e3afbd9b21e6b" compoundref="d5/d95/InstructionCycle_8cpp" startline="6" endline="106">BBP::userspace::HyperVisor::FetchActiveThreadInstruction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a2b295eba81c58863f4657eb94f0e2156" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref></type>
+        <definition>BBP::std::address_t BBP::userspace::BinaryExecutable::virtualToPhysical</definition>
+        <argsstring>(std::address_t, std::index_t)</argsstring>
+        <name>virtualToPhysical</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref></type>
+          <defname>address</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref></type>
+          <defname>cached</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" line="69" column="16" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/BinaryExecutables.cpp" bodystart="114" bodyend="130"/>
+        <references refid="d8/dc2/errno_8h_1a556612e55358838192165684c971a44f" compoundref="d8/dc2/errno_8h" startline="109">EADDRNOTAVAIL</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a750ba4c285e0788e84722a30a776b913" compoundref="d4/df4/Except_8cpp" startline="7" endline="18">BBP::std::exception</references>
+      </memberdef>
+      <memberdef kind="function" id="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ac2eba49b57e0aa11e970173e097fccb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref></type>
+        <definition>BBP::std::address_t BBP::userspace::BinaryExecutable::physicalToVirtual</definition>
+        <argsstring>(std::address_t, std::index_t)</argsstring>
+        <name>physicalToVirtual</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref></type>
+          <defname>address</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref></type>
+          <defname>cached</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" line="70" column="16" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/BinaryExecutables.cpp" bodystart="132" bodyend="148"/>
+        <references refid="d8/dc2/errno_8h_1a556612e55358838192165684c971a44f" compoundref="d8/dc2/errno_8h" startline="109">EADDRNOTAVAIL</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a750ba4c285e0788e84722a30a776b913" compoundref="d4/df4/Except_8cpp" startline="7" endline="18">BBP::std::exception</references>
+      </memberdef>
+      <memberdef kind="function" id="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1af9382501257bd31fb11126a44007d18c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::BinaryExecutable::createTLS</definition>
+        <argsstring>(std::PAGE&lt; std::string_element &gt; &amp;)</argsstring>
+        <name>createTLS</name>
+        <param>
+          <type><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::PAGE</ref>&lt; <ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">std::string_element</ref> &gt; &amp;</type>
+          <defname>page</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" line="73" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/BinaryExecutables.cpp" bodystart="240" bodyend="251"/>
+        <references refid="d8/dc2/errno_8h_1a0030614bc864d1b24eaedd71585acc27" compoundref="d8/dc2/errno_8h" startline="71">ENODATA</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a750ba4c285e0788e84722a30a776b913" compoundref="d4/df4/Except_8cpp" startline="7" endline="18">BBP::std::exception</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a997d77887946462f3e071f11465abfae">BBP::std::memcpy</references>
+        <referencedby refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1ad9a896aeb26e67c14605bc5885d4338a" compoundref="d8/df1/ThreadState_8cpp" startline="9" endline="31">BBP::userspace::HyperVisor::spawnThread</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a28be13bcd4204fcd3f95601b6c82a51b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::BinaryExecutable::loadTLS</definition>
+        <argsstring>(std::PAGE&lt; std::string_element &gt; &amp;)</argsstring>
+        <name>loadTLS</name>
+        <param>
+          <type><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::PAGE</ref>&lt; <ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">std::string_element</ref> &gt; &amp;</type>
+          <defname>page</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" line="74" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/BinaryExecutables.cpp" bodystart="254" bodyend="263"/>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a8d21ebf8bb4b9485b67e17698ff1f890" compoundref="de/d5c/Memory_8h" startline="39">BBP::std::PAGE&lt; T &gt;::nextPage</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1ae3ed5c6be788a903036a151ac69cd2d9" compoundref="de/d5c/Memory_8h" startline="38">BBP::std::PAGE&lt; T &gt;::prevPage</references>
+      </memberdef>
+      <memberdef kind="function" id="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a8e2d0b0de64b559b165176370cb37ec0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::BinaryExecutable::unloadTLS</definition>
+        <argsstring>(std::PAGE&lt; std::string_element &gt; &amp;)</argsstring>
+        <name>unloadTLS</name>
+        <param>
+          <type><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::PAGE</ref>&lt; <ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">std::string_element</ref> &gt; &amp;</type>
+          <defname>page</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" line="75" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/BinaryExecutables.cpp" bodystart="266" bodyend="275"/>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a8d21ebf8bb4b9485b67e17698ff1f890" compoundref="de/d5c/Memory_8h" startline="39">BBP::std::PAGE&lt; T &gt;::nextPage</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1ae3ed5c6be788a903036a151ac69cd2d9" compoundref="de/d5c/Memory_8h" startline="38">BBP::std::PAGE&lt; T &gt;::prevPage</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="14">
+        <label>void * *</label>
+      </node>
+      <node id="21">
+        <label>BBP::std::STATIC_PAGE&lt; BBP::userspace::MemoryRegion, 8 &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="template-instance">
+          <edgelabel>&lt; BBP::userspace::MemoryRegion, 8 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>T</label>
+      </node>
+      <node id="16">
+        <label>void *</label>
+      </node>
+      <node id="11">
+        <label>BBP::std::ResourceManager</label>
+        <link refid="d6/d73/classBBP_1_1std_1_1ResourceManager"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-allocations</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>-invalidAllocationIndex</edgelabel>
+          <edgelabel>-invalidObjectIndex</edgelabel>
+          <edgelabel>-nextObjectAvailable</edgelabel>
+          <edgelabel>-nextAllocationAvailable</edgelabel>
+          <edgelabel>+totalAllocations</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>-objects</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>word</label>
+      </node>
+      <node id="6">
+        <label>mem_t *</label>
+      </node>
+      <node id="8">
+        <label>PAGE&lt; T &gt; *</label>
+      </node>
+      <node id="22">
+        <label>BBP::std::PAGE&lt; BBP::userspace::MemoryRegion &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; BBP::userspace::MemoryRegion &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BBP::std::PAGE&lt; std::string_element &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; std::string_element &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>BBP::std::AbstractGCEntry</label>
+        <link refid="d7/def/structBBP_1_1std_1_1AbstractGCEntry"/>
+      </node>
+      <node id="3">
+        <label>anonymous:+@1</label>
+      </node>
+      <node id="15">
+        <label>unsigned int</label>
+      </node>
+      <node id="17">
+        <label>BBP::std::STATIC_PAGE&lt; T, K &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+      </node>
+      <node id="23">
+        <label>BBP::userspace::MemoryRegion</label>
+        <link refid="d3/de6/structBBP_1_1userspace_1_1MemoryRegion"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+writeable</edgelabel>
+          <edgelabel>+allocated</edgelabel>
+          <edgelabel>+executable</edgelabel>
+          <edgelabel>+readable</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+virtualMemoryHead</edgelabel>
+          <edgelabel>+size</edgelabel>
+          <edgelabel>+physicalMemoryHead</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>string_element *</label>
+      </node>
+      <node id="12">
+        <label>BBP::std::STATIC_PAGE&lt; void *, max_allocations &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="template-instance">
+          <edgelabel>&lt; void *, max_allocations &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>BBP::std::PAGE&lt; BBP::std::AbstractGCEntry * &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; BBP::std::AbstractGCEntry * &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>BBP::userspace::BinaryExecutable</label>
+        <link refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+BinaryData</edgelabel>
+          <edgelabel>-TLSData</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-allocated</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-allocator</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>+mapping</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+totalSize</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>bool</label>
+      </node>
+      <node id="13">
+        <label>BBP::std::PAGE&lt; void * &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; void * &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>BBP::std::PAGE&lt; T &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>BBP::std::STATIC_PAGE&lt; BBP::std::AbstractGCEntry *, max_objects &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="19" relation="public-inheritance">
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="template-instance">
+          <edgelabel>&lt; BBP::std::AbstractGCEntry *, max_objects &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" line="34" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h" bodystart="33" bodyend="77"/>
+    <listofallmembers>
+      <member refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ae215ff73f42ca9f57046c5d3ef5a8476" prot="private" virt="non-virtual"><scope>BBP::userspace::BinaryExecutable</scope><name>allocated</name></member>
+      <member refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a7aea680298a0a52637bb8d96bd56e50d" prot="private" virt="non-virtual"><scope>BBP::userspace::BinaryExecutable</scope><name>allocator</name></member>
+      <member refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ab75ab6cf2c312ecb34fe62562936ce67" prot="public" virt="non-virtual"><scope>BBP::userspace::BinaryExecutable</scope><name>BinaryData</name></member>
+      <member refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1af9382501257bd31fb11126a44007d18c" prot="public" virt="non-virtual"><scope>BBP::userspace::BinaryExecutable</scope><name>createTLS</name></member>
+      <member refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1aec6ae6967b1f32362e7d4cc563cfab67" prot="private" virt="non-virtual"><scope>BBP::userspace::BinaryExecutable</scope><name>findIndexOfPhysicalMemory</name></member>
+      <member refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1aa7c08493ef5b210b84ff067a5b6aeae2" prot="private" virt="non-virtual"><scope>BBP::userspace::BinaryExecutable</scope><name>findIndexOfVirtualMemory</name></member>
+      <member refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a2eea354e4d1578fe320884a693aaaea6" prot="public" virt="non-virtual"><scope>BBP::userspace::BinaryExecutable</scope><name>loadExecutable</name></member>
+      <member refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a28be13bcd4204fcd3f95601b6c82a51b" prot="public" virt="non-virtual"><scope>BBP::userspace::BinaryExecutable</scope><name>loadTLS</name></member>
+      <member refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a4e9ead370dc435afc1dabb9a0e800dd9" prot="public" virt="non-virtual"><scope>BBP::userspace::BinaryExecutable</scope><name>mapping</name></member>
+      <member refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1af46ca1c3ec18196e50f62e7bda446b6b" prot="public" virt="non-virtual"><scope>BBP::userspace::BinaryExecutable</scope><name>physicalToVirtual</name></member>
+      <member refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ac2eba49b57e0aa11e970173e097fccb7" prot="public" virt="non-virtual"><scope>BBP::userspace::BinaryExecutable</scope><name>physicalToVirtual</name></member>
+      <member refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ae4efaa5ede25b5ff9ada504ca5f87f6f" prot="private" virt="non-virtual"><scope>BBP::userspace::BinaryExecutable</scope><name>TLSData</name></member>
+      <member refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a069910ce9f3d2bdf7580e55eec85c62f" prot="public" virt="non-virtual"><scope>BBP::userspace::BinaryExecutable</scope><name>totalSize</name></member>
+      <member refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a9d5e6d71b96e1ace8d45c87dedeab11f" prot="public" virt="non-virtual"><scope>BBP::userspace::BinaryExecutable</scope><name>unloadExecutable</name></member>
+      <member refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a8e2d0b0de64b559b165176370cb37ec0" prot="public" virt="non-virtual"><scope>BBP::userspace::BinaryExecutable</scope><name>unloadTLS</name></member>
+      <member refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a96eb4539fc4f247710a8c1effabea87e" prot="public" virt="non-virtual"><scope>BBP::userspace::BinaryExecutable</scope><name>virtualToPhysical</name></member>
+      <member refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a2b295eba81c58863f4657eb94f0e2156" prot="public" virt="non-virtual"><scope>BBP::userspace::BinaryExecutable</scope><name>virtualToPhysical</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

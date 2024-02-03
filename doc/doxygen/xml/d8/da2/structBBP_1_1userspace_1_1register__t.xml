@@ -1,0 +1,693 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d8/da2/structBBP_1_1userspace_1_1register__t" kind="struct" language="C++" prot="public">
+    <compoundname>BBP::userspace::register_t</compoundname>
+    <includes refid="d7/d2a/Registers_8h" local="no">Registers.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d8/da2/structBBP_1_1userspace_1_1register__t_1a5591468f8565bdef31babe2d6fa1ca84" prot="public" static="no" mutable="no">
+        <type><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3c" kindref="member">registerSize</ref></type>
+        <definition>registerSize BBP::userspace::register_t::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Registers.h" line="25" column="14" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Registers.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="de/dfe/namespaceBBP_1_1userspace_1a9122f01317e629b0ae11a837667f1224" compoundref="d9/de4/Registers_8cpp" startline="7" endline="74">BBP::userspace::setRegister</referencedby>
+        <referencedby refid="de/dfe/namespaceBBP_1_1userspace_1a484d19b0d23141290394e25753c95bfb" compoundref="d9/de4/Registers_8cpp" startline="76" endline="105">BBP::userspace::readRegister</referencedby>
+        <referencedby refid="d8/da2/structBBP_1_1userspace_1_1register__t_1a829a6ca1c1ed5c99d3e3d42e14f29764" compoundref="d9/de4/Registers_8cpp" startline="107" endline="129">register_t</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/da2/structBBP_1_1userspace_1_1register__t_1abbf8e21ef7efcb0882de8fdc609626e4" prot="public" static="no" mutable="no">
+        <type><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread" kindref="compound">userspace::Thread</ref> *</type>
+        <definition>userspace::Thread* BBP::userspace::register_t::owner</definition>
+        <argsstring></argsstring>
+        <name>owner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Registers.h" line="28" column="19" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Registers.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="de/dfe/namespaceBBP_1_1userspace_1a9122f01317e629b0ae11a837667f1224" compoundref="d9/de4/Registers_8cpp" startline="7" endline="74">BBP::userspace::setRegister</referencedby>
+        <referencedby refid="de/dfe/namespaceBBP_1_1userspace_1a484d19b0d23141290394e25753c95bfb" compoundref="d9/de4/Registers_8cpp" startline="76" endline="105">BBP::userspace::readRegister</referencedby>
+        <referencedby refid="d8/da2/structBBP_1_1userspace_1_1register__t_1a829a6ca1c1ed5c99d3e3d42e14f29764" compoundref="d9/de4/Registers_8cpp" startline="107" endline="129">register_t</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/da2/structBBP_1_1userspace_1_1register__t_1aae5f70874c2b030259e42d24b60554db" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref></type>
+        <definition>std::index_t BBP::userspace::register_t::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Registers.h" line="29" column="14" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Registers.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="de/dfe/namespaceBBP_1_1userspace_1a9122f01317e629b0ae11a837667f1224" compoundref="d9/de4/Registers_8cpp" startline="7" endline="74">BBP::userspace::setRegister</referencedby>
+        <referencedby refid="de/dfe/namespaceBBP_1_1userspace_1a484d19b0d23141290394e25753c95bfb" compoundref="d9/de4/Registers_8cpp" startline="76" endline="105">BBP::userspace::readRegister</referencedby>
+        <referencedby refid="d8/da2/structBBP_1_1userspace_1_1register__t_1a829a6ca1c1ed5c99d3e3d42e14f29764" compoundref="d9/de4/Registers_8cpp" startline="107" endline="129">register_t</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/da2/structBBP_1_1userspace_1_1register__t_1a6c7e000052c2563898621669ee113248" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1aba0804f0534bca779731a6e8f2d3b123" kindref="member">std::offset_t</ref></type>
+        <definition>std::offset_t BBP::userspace::register_t::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Registers.h" line="30" column="15" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Registers.h" bodystart="30" bodyend="-1"/>
+        <referencedby refid="de/dfe/namespaceBBP_1_1userspace_1a9122f01317e629b0ae11a837667f1224" compoundref="d9/de4/Registers_8cpp" startline="7" endline="74">BBP::userspace::setRegister</referencedby>
+        <referencedby refid="de/dfe/namespaceBBP_1_1userspace_1a484d19b0d23141290394e25753c95bfb" compoundref="d9/de4/Registers_8cpp" startline="76" endline="105">BBP::userspace::readRegister</referencedby>
+        <referencedby refid="d8/da2/structBBP_1_1userspace_1_1register__t_1a829a6ca1c1ed5c99d3e3d42e14f29764" compoundref="d9/de4/Registers_8cpp" startline="107" endline="129">register_t</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d8/da2/structBBP_1_1userspace_1_1register__t_1ac44e63efe89cfc185abcb1a217e178a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BBP::userspace::register_t::register_t</definition>
+        <argsstring>()=delete</argsstring>
+        <name>register_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Registers.h" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da2/structBBP_1_1userspace_1_1register__t_1a183f28d8e60bedc98e6a28573f8f604a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BBP::userspace::register_t::register_t</definition>
+        <argsstring>(register_t &amp;)=delete</argsstring>
+        <name>register_t</name>
+        <param>
+          <type><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Registers.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da2/structBBP_1_1userspace_1_1register__t_1afbab4a606c01ea685c998c758ec9f1ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BBP::userspace::register_t::register_t</definition>
+        <argsstring>(register_t &amp;&amp;)=delete</argsstring>
+        <name>register_t</name>
+        <param>
+          <type><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Registers.h" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da2/structBBP_1_1userspace_1_1register__t_1a829a6ca1c1ed5c99d3e3d42e14f29764" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BBP::userspace::register_t::register_t</definition>
+        <argsstring>(Thread &amp;thread, std::index_t index_, std::offset_t offset_, registerSize size_)</argsstring>
+        <name>register_t</name>
+        <param>
+          <type><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread" kindref="compound">Thread</ref> &amp;</type>
+          <declname>thread</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref></type>
+          <declname>index_</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aba0804f0534bca779731a6e8f2d3b123" kindref="member">std::offset_t</ref></type>
+          <declname>offset_</declname>
+        </param>
+        <param>
+          <type><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3c" kindref="member">registerSize</ref></type>
+          <declname>size_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Registers.h" line="36" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/Registers.cpp" bodystart="107" bodyend="129"/>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a34a405792bd6c28ec010833acc6ee2f2" compoundref="de/d5c/Memory_8h" startline="36">BBP::std::PAGE&lt; T &gt;::bytes</references>
+        <references refid="d8/dc2/errno_8h_1aa1591a4f3a86360108de5b9ba34980ca" compoundref="d8/dc2/errno_8h" startline="46">ERANGE</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a750ba4c285e0788e84722a30a776b913" compoundref="d4/df4/Except_8cpp" startline="7" endline="18">BBP::std::exception</references>
+        <references refid="d8/da2/structBBP_1_1userspace_1_1register__t_1aae5f70874c2b030259e42d24b60554db" compoundref="d7/d2a/Registers_8h" startline="29">index</references>
+        <references refid="d8/da2/structBBP_1_1userspace_1_1register__t_1a6c7e000052c2563898621669ee113248" compoundref="d7/d2a/Registers_8h" startline="30">offset</references>
+        <references refid="d8/da2/structBBP_1_1userspace_1_1register__t_1abbf8e21ef7efcb0882de8fdc609626e4" compoundref="d7/d2a/Registers_8h" startline="28">owner</references>
+        <references refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ab68a4a9cab34d2ae41e973f114343b69" compoundref="dd/d0e/Threading_8h" startline="34">BBP::userspace::Thread::registerData</references>
+        <references refid="d8/da2/structBBP_1_1userspace_1_1register__t_1a5591468f8565bdef31babe2d6fa1ca84" compoundref="d7/d2a/Registers_8h" startline="25">size</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1aa63573041786d49b7cdb2eec8a921a6a">BBP::std::write</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>BBP::userspace::Thread</label>
+        <link refid="d5/d8b/structBBP_1_1userspace_1_1Thread"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+argumentPage</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+registerData</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>+instruction</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+generalStackSize</edgelabel>
+          <edgelabel>+argumentStackSize</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>+generalStack</edgelabel>
+          <edgelabel>+argumentStack</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>+TLS</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>+active</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>+allocator</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="usage">
+          <edgelabel>+executable</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>+dl</edgelabel>
+          <edgelabel>+cl</edgelabel>
+          <edgelabel>+six</edgelabel>
+          <edgelabel>+bl</edgelabel>
+          <edgelabel>+tix</edgelabel>
+          <edgelabel>+sih</edgelabel>
+          <edgelabel>+al</edgelabel>
+          <edgelabel>+ht</edgelabel>
+          <edgelabel>+dix</edgelabel>
+          <edgelabel>+tp</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="43" relation="usage">
+          <edgelabel>+generalPage</edgelabel>
+        </childnode>
+        <childnode refid="44" relation="usage">
+          <edgelabel>+registerCount</edgelabel>
+        </childnode>
+      </node>
+      <node id="44">
+        <label>size_t</label>
+      </node>
+      <node id="16">
+        <label>byte *</label>
+      </node>
+      <node id="34">
+        <label>void * *</label>
+      </node>
+      <node id="40">
+        <label>BBP::std::STATIC_PAGE&lt; BBP::userspace::MemoryRegion, 8 &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="41" relation="public-inheritance">
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="template-instance">
+          <edgelabel>&lt; BBP::userspace::MemoryRegion, 8 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>T</label>
+      </node>
+      <node id="35">
+        <label>void *</label>
+      </node>
+      <node id="14">
+        <label>BBP::std::STATIC_PAGE&lt; std::byte, registerCount *4 &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="template-instance">
+          <edgelabel>&lt; std::byte, registerCount *4 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="31">
+        <label>BBP::std::ResourceManager</label>
+        <link refid="d6/d73/classBBP_1_1std_1_1ResourceManager"/>
+        <childnode refid="32" relation="usage">
+          <edgelabel>-allocations</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>-invalidAllocationIndex</edgelabel>
+          <edgelabel>-invalidObjectIndex</edgelabel>
+          <edgelabel>-nextObjectAvailable</edgelabel>
+          <edgelabel>-nextAllocationAvailable</edgelabel>
+          <edgelabel>+totalAllocations</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>-objects</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>word</label>
+      </node>
+      <node id="9">
+        <label>mem_t *</label>
+      </node>
+      <node id="27">
+        <label>BBP::std::PAGE&lt; K &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="28" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="template-instance">
+          <edgelabel>&lt; K &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>PAGE&lt; T &gt; *</label>
+      </node>
+      <node id="43">
+        <label>BBP::std::STATIC_PAGE&lt; std::word, generalStackSize &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="template-instance">
+          <edgelabel>&lt; std::word, generalStackSize &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>BBP::userspace::Instruction</label>
+        <link refid="d0/dfc/structBBP_1_1userspace_1_1Instruction"/>
+        <childnode refid="19" relation="usage">
+          <edgelabel>+args</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>+header</edgelabel>
+        </childnode>
+      </node>
+      <node id="41">
+        <label>BBP::std::PAGE&lt; BBP::userspace::MemoryRegion &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="41" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="template-instance">
+          <edgelabel>&lt; BBP::userspace::MemoryRegion &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="23">
+        <label>BBP::userspace::Instruction::Head</label>
+        <link refid="d5/d1c/structBBP_1_1userspace_1_1Instruction_1_1Head"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>+args</edgelabel>
+          <edgelabel>+flags</edgelabel>
+          <edgelabel>+suffix</edgelabel>
+          <edgelabel>+opcode</edgelabel>
+          <edgelabel>+prefix</edgelabel>
+        </childnode>
+      </node>
+      <node id="29">
+        <label>BBP::std::PAGE&lt; std::string_element &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="template-instance">
+          <edgelabel>&lt; std::string_element &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>BBP::std::PAGE&lt; std::byte &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="template-instance">
+          <edgelabel>&lt; std::byte &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="38">
+        <label>BBP::std::AbstractGCEntry</label>
+        <link refid="d7/def/structBBP_1_1std_1_1AbstractGCEntry"/>
+      </node>
+      <node id="7">
+        <label>anonymous:+@1</label>
+      </node>
+      <node id="22">
+        <label>unsigned int</label>
+      </node>
+      <node id="13">
+        <label>BBP::std::STATIC_PAGE&lt; T, K &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>byte</label>
+      </node>
+      <node id="42">
+        <label>BBP::userspace::MemoryRegion</label>
+        <link refid="d3/de6/structBBP_1_1userspace_1_1MemoryRegion"/>
+        <childnode refid="21" relation="usage">
+          <edgelabel>+writeable</edgelabel>
+          <edgelabel>+allocated</edgelabel>
+          <edgelabel>+executable</edgelabel>
+          <edgelabel>+readable</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+virtualMemoryHead</edgelabel>
+          <edgelabel>+size</edgelabel>
+          <edgelabel>+physicalMemoryHead</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>BBP::std::STATIC_PAGE&lt; std::word, argumentStackSize &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="template-instance">
+          <edgelabel>&lt; std::word, argumentStackSize &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>string_element *</label>
+      </node>
+      <node id="32">
+        <label>BBP::std::STATIC_PAGE&lt; void *, max_allocations &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="template-instance">
+          <edgelabel>&lt; void *, max_allocations &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>uint8_t</label>
+      </node>
+      <node id="28">
+        <label>K *</label>
+      </node>
+      <node id="2">
+        <label>registerSize</label>
+      </node>
+      <node id="37">
+        <label>BBP::std::PAGE&lt; BBP::std::AbstractGCEntry * &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="38" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="template-instance">
+          <edgelabel>&lt; BBP::std::AbstractGCEntry * &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="26">
+        <label>BBP::std::Stack&lt; K &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="25" relation="usage">
+          <edgelabel>+readFrom</edgelabel>
+          <edgelabel>+writeTo</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+atElement</edgelabel>
+          <edgelabel>+max_elements</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>+page</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>BBP::userspace::Instruction::Arg</label>
+        <link refid="d5/d9e/structBBP_1_1userspace_1_1Instruction_1_1Arg"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>+trailerCount</edgelabel>
+          <edgelabel>+offset</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>+anyvalue</edgelabel>
+          <edgelabel>+dereferenced</edgelabel>
+          <edgelabel>+referenced</edgelabel>
+          <edgelabel>+isLiteralArg</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>+data</edgelabel>
+          <edgelabel>+trailers</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>BBP::userspace::register_t</label>
+        <link refid="d8/da2/structBBP_1_1userspace_1_1register__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+size</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+index</edgelabel>
+          <edgelabel>+offset</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+owner</edgelabel>
+        </childnode>
+      </node>
+      <node id="24">
+        <label>BBP::std::Stack&lt; std::word &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+page</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>+readFrom</edgelabel>
+          <edgelabel>+writeTo</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+atElement</edgelabel>
+          <edgelabel>+max_elements</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="template-instance">
+          <edgelabel>&lt; std::word &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="39">
+        <label>BBP::userspace::BinaryExecutable</label>
+        <link refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable"/>
+        <childnode refid="29" relation="usage">
+          <edgelabel>+BinaryData</edgelabel>
+          <edgelabel>-TLSData</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>-allocated</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>-allocator</edgelabel>
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>+mapping</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+totalSize</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>word *</label>
+      </node>
+      <node id="21">
+        <label>bool</label>
+      </node>
+      <node id="33">
+        <label>BBP::std::PAGE&lt; void * &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="34" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="template-instance">
+          <edgelabel>&lt; void * &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="25">
+        <label>void(*)(Stack&lt; K &gt; *)</label>
+      </node>
+      <node id="10">
+        <label>BBP::std::PAGE&lt; T &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+      </node>
+      <node id="36">
+        <label>BBP::std::STATIC_PAGE&lt; BBP::std::AbstractGCEntry *, max_objects &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="37" relation="public-inheritance">
+        </childnode>
+        <childnode refid="38" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="template-instance">
+          <edgelabel>&lt; BBP::std::AbstractGCEntry *, max_objects &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>BBP::std::PAGE&lt; std::word &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="template-instance">
+          <edgelabel>&lt; std::word &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Registers.h" line="23" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Registers.h" bodystart="22" bodyend="38"/>
+    <listofallmembers>
+      <member refid="d8/da2/structBBP_1_1userspace_1_1register__t_1aae5f70874c2b030259e42d24b60554db" prot="public" virt="non-virtual"><scope>BBP::userspace::register_t</scope><name>index</name></member>
+      <member refid="d8/da2/structBBP_1_1userspace_1_1register__t_1a6c7e000052c2563898621669ee113248" prot="public" virt="non-virtual"><scope>BBP::userspace::register_t</scope><name>offset</name></member>
+      <member refid="d8/da2/structBBP_1_1userspace_1_1register__t_1abbf8e21ef7efcb0882de8fdc609626e4" prot="public" virt="non-virtual"><scope>BBP::userspace::register_t</scope><name>owner</name></member>
+      <member refid="d8/da2/structBBP_1_1userspace_1_1register__t_1ac44e63efe89cfc185abcb1a217e178a1" prot="public" virt="non-virtual"><scope>BBP::userspace::register_t</scope><name>register_t</name></member>
+      <member refid="d8/da2/structBBP_1_1userspace_1_1register__t_1a183f28d8e60bedc98e6a28573f8f604a" prot="public" virt="non-virtual"><scope>BBP::userspace::register_t</scope><name>register_t</name></member>
+      <member refid="d8/da2/structBBP_1_1userspace_1_1register__t_1afbab4a606c01ea685c998c758ec9f1ed" prot="public" virt="non-virtual"><scope>BBP::userspace::register_t</scope><name>register_t</name></member>
+      <member refid="d8/da2/structBBP_1_1userspace_1_1register__t_1a829a6ca1c1ed5c99d3e3d42e14f29764" prot="public" virt="non-virtual"><scope>BBP::userspace::register_t</scope><name>register_t</name></member>
+      <member refid="d8/da2/structBBP_1_1userspace_1_1register__t_1a5591468f8565bdef31babe2d6fa1ca84" prot="public" virt="non-virtual"><scope>BBP::userspace::register_t</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

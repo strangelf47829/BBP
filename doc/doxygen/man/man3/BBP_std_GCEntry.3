@@ -1,0 +1,111 @@
+.TH "BBP::std::GCEntry< T >" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BBP::std::GCEntry< T >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Resources\&.h>\fP
+.PP
+Inherits \fBBBP::std::AbstractGCEntry\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fB~GCEntry\fP ()"
+.br
+.ti -1c
+.RI "void \fBmarkDeleted\fP ()"
+.br
+.ti -1c
+.RI "void \fB_delete\fP ()"
+.br
+.ti -1c
+.RI "void * \fBgetRawPtr\fP ()"
+.br
+.in -1c
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "T * \fBptr\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename T>
+.br
+class BBP::std::GCEntry< T >"
+
+.PP
+Definition at line 29 of file Resources\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename T > virtual \fBBBP::std::GCEntry\fP< T >::~\fBGCEntry\fP ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 33 of file Resources\&.h\&.
+.PP
+.nf
+34             {
+35             }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T > void \fBBBP::std::GCEntry\fP< T >::_delete ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBBBP::std::AbstractGCEntry\fP\&.
+.PP
+Definition at line 40 of file Resources\&.h\&.
+.PP
+.nf
+41             {
+42                 delete(ptr);
+43             }
+.fi
+.PP
+References BBP::std::GCEntry< T >::ptr\&.
+.SS "template<typename T > void* \fBBBP::std::GCEntry\fP< T >::getRawPtr ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBBBP::std::AbstractGCEntry\fP\&.
+.PP
+Definition at line 44 of file Resources\&.h\&.
+.PP
+.nf
+45             {
+46                 return (void *)ptr;
+47             }
+.fi
+.PP
+References BBP::std::GCEntry< T >::ptr\&.
+.SS "template<typename T > void \fBBBP::std::GCEntry\fP< T >::markDeleted ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBBBP::std::AbstractGCEntry\fP\&.
+.PP
+Definition at line 36 of file Resources\&.h\&.
+.PP
+.nf
+37             {
+38                 ptr = nullptr;
+39             }
+.fi
+.PP
+References BBP::std::GCEntry< T >::ptr\&.
+.SH "Field Documentation"
+.PP 
+.SS "template<typename T > T* \fBBBP::std::GCEntry\fP< T >::ptr"
+
+.PP
+Definition at line 32 of file Resources\&.h\&.
+.PP
+Referenced by BBP::std::GCEntry< T >::_delete(), BBP::std::ResourceManager::add_object(), BBP::std::GCEntry< T >::getRawPtr(), and BBP::std::GCEntry< T >::markDeleted()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

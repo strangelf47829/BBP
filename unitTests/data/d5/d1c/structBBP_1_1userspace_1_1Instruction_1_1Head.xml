@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d5/d1c/structBBP_1_1userspace_1_1Instruction_1_1Head" kind="struct" language="C++" prot="public">
+    <compoundname>BBP::userspace::Instruction::Head</compoundname>
+    <includes refid="d9/dd5/Instructions_8h" local="no">Instructions.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d5/d1c/structBBP_1_1userspace_1_1Instruction_1_1Head_1a0bb1d184e52ccdf12ddb47b65fafc4c7" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a4926ba934876e4a1028b9abb47edbc56" kindref="member">std::byte</ref></type>
+        <definition>std::byte BBP::userspace::Instruction::Head::prefix</definition>
+        <argsstring></argsstring>
+        <name>prefix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Instructions.h" line="17" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Instructions.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d1c/structBBP_1_1userspace_1_1Instruction_1_1Head_1a695669ed5bfd6e8699476e909941f8c7" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a4926ba934876e4a1028b9abb47edbc56" kindref="member">std::byte</ref></type>
+        <definition>std::byte BBP::userspace::Instruction::Head::opcode</definition>
+        <argsstring></argsstring>
+        <name>opcode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Instructions.h" line="18" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Instructions.h" bodystart="18" bodyend="-1"/>
+        <referencedby refid="df/d72/namespaceBBP_1_1esa_1a82381333342e731dfb93f09c84b51132" compoundref="da/d4c/Actions_8cpp" startline="681" endline="698">BBP::esa::TOKEN</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d1c/structBBP_1_1userspace_1_1Instruction_1_1Head_1ab6d9fd98bf36bf6c5faeafc675f80222" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a4926ba934876e4a1028b9abb47edbc56" kindref="member">std::byte</ref></type>
+        <definition>std::byte BBP::userspace::Instruction::Head::suffix</definition>
+        <argsstring></argsstring>
+        <name>suffix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Instructions.h" line="19" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Instructions.h" bodystart="19" bodyend="-1"/>
+        <referencedby refid="df/d72/namespaceBBP_1_1esa_1a82381333342e731dfb93f09c84b51132" compoundref="da/d4c/Actions_8cpp" startline="681" endline="698">BBP::esa::TOKEN</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d1c/structBBP_1_1userspace_1_1Instruction_1_1Head_1a2d3ce068e27485c1f2ba558983ca9326" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a46765daa6b14b3e45c22ad4071efdff1" kindref="member">std::nibble</ref></type>
+        <definition>std::nibble BBP::userspace::Instruction::Head::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Instructions.h" line="22" column="13" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Instructions.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d1c/structBBP_1_1userspace_1_1Instruction_1_1Head_1a604e826856053f3385806b67f88b2aa8" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a46765daa6b14b3e45c22ad4071efdff1" kindref="member">std::nibble</ref></type>
+        <definition>std::nibble BBP::userspace::Instruction::Head::args</definition>
+        <argsstring></argsstring>
+        <name>args</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Instructions.h" line="23" column="13" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Instructions.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a9c87a4c904394702ed260d02a3cca938" compoundref="d4/d83/Frontend_8cpp" startline="448" endline="459">BBP::esa::esaProcessor::resetInstruction</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>BBP::userspace::Instruction::Head</label>
+        <link refid="d5/d1c/structBBP_1_1userspace_1_1Instruction_1_1Head"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Instructions.h" line="15" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Instructions.h" bodystart="14" bodyend="24"/>
+    <listofallmembers>
+      <member refid="d5/d1c/structBBP_1_1userspace_1_1Instruction_1_1Head_1a604e826856053f3385806b67f88b2aa8" prot="public" virt="non-virtual"><scope>BBP::userspace::Instruction::Head</scope><name>args</name></member>
+      <member refid="d5/d1c/structBBP_1_1userspace_1_1Instruction_1_1Head_1a2d3ce068e27485c1f2ba558983ca9326" prot="public" virt="non-virtual"><scope>BBP::userspace::Instruction::Head</scope><name>flags</name></member>
+      <member refid="d5/d1c/structBBP_1_1userspace_1_1Instruction_1_1Head_1a695669ed5bfd6e8699476e909941f8c7" prot="public" virt="non-virtual"><scope>BBP::userspace::Instruction::Head</scope><name>opcode</name></member>
+      <member refid="d5/d1c/structBBP_1_1userspace_1_1Instruction_1_1Head_1a0bb1d184e52ccdf12ddb47b65fafc4c7" prot="public" virt="non-virtual"><scope>BBP::userspace::Instruction::Head</scope><name>prefix</name></member>
+      <member refid="d5/d1c/structBBP_1_1userspace_1_1Instruction_1_1Head_1ab6d9fd98bf36bf6c5faeafc675f80222" prot="public" virt="non-virtual"><scope>BBP::userspace::Instruction::Head</scope><name>suffix</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

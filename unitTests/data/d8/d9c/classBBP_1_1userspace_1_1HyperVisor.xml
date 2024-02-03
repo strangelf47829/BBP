@@ -1,0 +1,448 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d8/d9c/classBBP_1_1userspace_1_1HyperVisor" kind="class" language="C++" prot="public">
+    <compoundname>BBP::userspace::HyperVisor</compoundname>
+    <includes refid="d0/dde/Hyperv_8h" local="no">Hyperv.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1a572509d057f0f9af086655c9ae0fef73" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr <ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref></type>
+        <definition>constexpr std::size_t BBP::userspace::HyperVisor::threadCount</definition>
+        <argsstring></argsstring>
+        <name>threadCount</name>
+        <initializer>= 16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Hyperv.h" line="17" column="30" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Hyperv.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1aafbfe5628b61bda24d4f6e86455c6fb4" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref></type>
+        <definition>std::size_t BBP::userspace::HyperVisor::activeThreadCount</definition>
+        <argsstring></argsstring>
+        <name>activeThreadCount</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Hyperv.h" line="18" column="13" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Hyperv.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1adb775465cf5dc74bcb411a5969ebddd8" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref></type>
+        <definition>std::index_t BBP::userspace::HyperVisor::activeThread</definition>
+        <argsstring></argsstring>
+        <name>activeThread</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Hyperv.h" line="19" column="14" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Hyperv.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1a3cf04c5636244f4eb89c24496b8f709b" prot="public" static="no" mutable="no">
+        <type><ref refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE" kindref="compound">std::STATIC_PAGE</ref>&lt; <ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread" kindref="compound">Thread</ref>, <ref refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1a572509d057f0f9af086655c9ae0fef73" kindref="member">threadCount</ref> &gt;</type>
+        <definition>std::STATIC_PAGE&lt;Thread, threadCount&gt; BBP::userspace::HyperVisor::threads</definition>
+        <argsstring></argsstring>
+        <name>threads</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Hyperv.h" line="22" column="18" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Hyperv.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1a6831390e156741edac407f0a63f5e80f" prot="public" static="no" mutable="no">
+        <type><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder" kindref="compound">std::ELF::ELFBuilder</ref></type>
+        <definition>std::ELF::ELFBuilder BBP::userspace::HyperVisor::sharedlib</definition>
+        <argsstring></argsstring>
+        <name>sharedlib</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Hyperv.h" line="25" column="22" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Hyperv.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="26">
+        <label>BBP::userspace::Thread</label>
+        <link refid="d5/d8b/structBBP_1_1userspace_1_1Thread"/>
+        <childnode refid="27" relation="usage">
+          <edgelabel>+registerData</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>+allocatedData</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>+executable</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>+dl</edgelabel>
+          <edgelabel>+cl</edgelabel>
+          <edgelabel>+six</edgelabel>
+          <edgelabel>+bl</edgelabel>
+          <edgelabel>+tix</edgelabel>
+          <edgelabel>+sih</edgelabel>
+          <edgelabel>+al</edgelabel>
+          <edgelabel>+ht</edgelabel>
+          <edgelabel>+dix</edgelabel>
+          <edgelabel>+tp</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="27">
+        <label>BBP::std::STATIC_PAGE&lt; std::byte, registerCount *4 &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="28" relation="public-inheritance">
+        </childnode>
+        <childnode refid="20" relation="template-instance">
+          <edgelabel>&lt; std::byte, registerCount *4 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>BBP::std::ResourceManager</label>
+        <link refid="d6/d73/classBBP_1_1std_1_1ResourceManager"/>
+        <childnode refid="18" relation="usage">
+          <edgelabel>-allocations</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>-objects</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>BBP::std::ELF::SegmentBuilder</label>
+        <link refid="d8/d33/classBBP_1_1std_1_1ELF_1_1SegmentBuilder"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+stack</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+elf</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+data</edgelabel>
+          <edgelabel>+header</edgelabel>
+        </childnode>
+      </node>
+      <node id="24">
+        <label>BBP::std::STATIC_PAGE&lt; BBP::userspace::Thread, threadCount &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="template-instance">
+          <edgelabel>&lt; BBP::userspace::Thread, threadCount &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>BBP::std::PAGE&lt; K &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="template-instance">
+          <edgelabel>&lt; K &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="29">
+        <label>BBP::std::PAGE&lt; std::string_element &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="29" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="template-instance">
+          <edgelabel>&lt; std::string_element &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="28">
+        <label>BBP::std::PAGE&lt; std::byte &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="28" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="template-instance">
+          <edgelabel>&lt; std::byte &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="23">
+        <label>BBP::std::AbstractGCEntry</label>
+        <link refid="d7/def/structBBP_1_1std_1_1AbstractGCEntry"/>
+      </node>
+      <node id="12">
+        <label>BBP::std::PAGE&lt; BBP::std::ELF::SectionBuilder &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="template-instance">
+          <edgelabel>&lt; BBP::std::ELF::SectionBuilder &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>BBP::std::PAGE&lt; string_element &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="template-instance">
+          <edgelabel>&lt; string_element &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>BBP::std::STATIC_PAGE&lt; T, K &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>BBP::std::Stack&lt; string_element &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+page</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="template-instance">
+          <edgelabel>&lt; string_element &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>BBP::std::ELF::SectionBuilder</label>
+        <link refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+stack</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+elf</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+data</edgelabel>
+          <edgelabel>+header</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>BBP::std::Stack&lt; BBP::std::ELF::SectionBuilder &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+page</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="template-instance">
+          <edgelabel>&lt; BBP::std::ELF::SectionBuilder &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>BBP::std::STATIC_PAGE&lt; void *, max_allocations &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="19" relation="public-inheritance">
+        </childnode>
+        <childnode refid="20" relation="template-instance">
+          <edgelabel>&lt; void *, max_allocations &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>BBP::userspace::HyperVisor</label>
+        <link refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+sharedlib</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>+threads</edgelabel>
+        </childnode>
+      </node>
+      <node id="22">
+        <label>BBP::std::PAGE&lt; BBP::std::AbstractGCEntry * &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="23" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="template-instance">
+          <edgelabel>&lt; BBP::std::AbstractGCEntry * &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BBP::std::Stack&lt; BBP::std::ELF::SegmentBuilder &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+page</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="template-instance">
+          <edgelabel>&lt; BBP::std::ELF::SegmentBuilder &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>BBP::std::PAGE&lt; BBP::std::ELF::SymbolBuilder &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="template-instance">
+          <edgelabel>&lt; BBP::std::ELF::SymbolBuilder &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>BBP::std::Stack&lt; K &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+page</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BBP::std::ELF::ELFBuilder</label>
+        <link refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+segments</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-segPages</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+sections</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-symPages</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>+symbols</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>+allocator</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-secPages</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+file</edgelabel>
+        </childnode>
+      </node>
+      <node id="31">
+        <label>BBP::userspace::register_t</label>
+        <link refid="d8/da2/structBBP_1_1userspace_1_1register__t"/>
+        <childnode refid="26" relation="usage">
+          <edgelabel>+owner</edgelabel>
+        </childnode>
+      </node>
+      <node id="25">
+        <label>BBP::std::PAGE&lt; BBP::userspace::Thread &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="26" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="template-instance">
+          <edgelabel>&lt; BBP::userspace::Thread &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>BBP::std::Stack&lt; BBP::std::ELF::SymbolBuilder &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+page</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="template-instance">
+          <edgelabel>&lt; BBP::std::ELF::SymbolBuilder &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>BBP::userspace::BinaryExecutable</label>
+        <link refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable"/>
+      </node>
+      <node id="19">
+        <label>BBP::std::PAGE&lt; void * &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="19" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="template-instance">
+          <edgelabel>&lt; void * &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>BBP::std::PAGE&lt; T &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+      </node>
+      <node id="4">
+        <label>BBP::std::PAGE&lt; BBP::std::ELF::SegmentBuilder &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="template-instance">
+          <edgelabel>&lt; BBP::std::ELF::SegmentBuilder &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>BBP::std::ELF::SymbolBuilder</label>
+        <link refid="d3/db3/classBBP_1_1std_1_1ELF_1_1SymbolBuilder"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+stack</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+elf</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+data</edgelabel>
+          <edgelabel>+header</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>BBP::std::STATIC_PAGE&lt; BBP::std::AbstractGCEntry *, max_objects &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="template-instance">
+          <edgelabel>&lt; BBP::std::AbstractGCEntry *, max_objects &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Hyperv.h" line="14" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Hyperv.h" bodystart="13" bodyend="35"/>
+    <listofallmembers>
+      <member refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1adb775465cf5dc74bcb411a5969ebddd8" prot="public" virt="non-virtual"><scope>BBP::userspace::HyperVisor</scope><name>activeThread</name></member>
+      <member refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1aafbfe5628b61bda24d4f6e86455c6fb4" prot="public" virt="non-virtual"><scope>BBP::userspace::HyperVisor</scope><name>activeThreadCount</name></member>
+      <member refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1a6831390e156741edac407f0a63f5e80f" prot="public" virt="non-virtual"><scope>BBP::userspace::HyperVisor</scope><name>sharedlib</name></member>
+      <member refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1a572509d057f0f9af086655c9ae0fef73" prot="public" virt="non-virtual"><scope>BBP::userspace::HyperVisor</scope><name>threadCount</name></member>
+      <member refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1a3cf04c5636244f4eb89c24496b8f709b" prot="public" virt="non-virtual"><scope>BBP::userspace::HyperVisor</scope><name>threads</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

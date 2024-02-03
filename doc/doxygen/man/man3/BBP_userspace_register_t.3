@@ -1,0 +1,77 @@
+.TH "BBP::userspace::register_t" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BBP::userspace::register_t
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Registers\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBregister_t\fP ()=delete"
+.br
+.ti -1c
+.RI "\fBregister_t\fP (\fBregister_t\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBregister_t\fP (\fBregister_t\fP &&)=delete"
+.br
+.ti -1c
+.RI "\fBregister_t\fP (\fBThread\fP &thread, \fBstd::index_t\fP index_, \fBstd::offset_t\fP offset_, \fBregisterSize\fP size_)"
+.br
+.in -1c
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBregisterSize\fP \fBsize\fP"
+.br
+.ti -1c
+.RI "\fBuserspace::Thread\fP * \fBowner\fP"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBindex\fP"
+.br
+.ti -1c
+.RI "\fBstd::offset_t\fP \fBoffset\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 22 of file Registers\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "BBP::userspace::register_t::register_t ()\fC [delete]\fP"
+
+.SS "BBP::userspace::register_t::register_t (\fBregister_t\fP &)\fC [delete]\fP"
+
+.SS "BBP::userspace::register_t::register_t (\fBregister_t\fP &&)\fC [delete]\fP"
+
+.SS "BBP::userspace::register_t::register_t (\fBThread\fP & thread, \fBstd::index_t\fP index_, \fBstd::offset_t\fP offset_, \fBregisterSize\fP size_)"
+
+.SH "Field Documentation"
+.PP 
+.SS "\fBstd::index_t\fP BBP::userspace::register_t::index"
+
+.PP
+Definition at line 29 of file Registers\&.h\&.
+.SS "\fBstd::offset_t\fP BBP::userspace::register_t::offset"
+
+.PP
+Definition at line 30 of file Registers\&.h\&.
+.SS "\fBuserspace::Thread\fP* BBP::userspace::register_t::owner"
+
+.PP
+Definition at line 28 of file Registers\&.h\&.
+.SS "\fBregisterSize\fP BBP::userspace::register_t::size"
+
+.PP
+Definition at line 25 of file Registers\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

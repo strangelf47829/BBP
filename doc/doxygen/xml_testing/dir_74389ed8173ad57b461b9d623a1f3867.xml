@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_74389ed8173ad57b461b9d623a1f3867" kind="dir">
+    <compoundname>Source</compoundname>
+    <innerdir refid="dir_56246d454ba80b3f030b336496bc3f7b">Applications</innerdir>
+    <innerdir refid="dir_3664804b86f56e00e4cf3e2691470c9a">ELF</innerdir>
+    <innerdir refid="dir_02f20e74b6faf671af0b5e2c9d9ae482">ELSA</innerdir>
+    <innerdir refid="dir_18cdd076d3f3946d9c5d41980ec6a3d6">File</innerdir>
+    <innerdir refid="dir_f40ad9b8929dc461cf57247ad0f896ed">Graphics</innerdir>
+    <innerdir refid="dir_bbb90e3ef9167a594ae33323139a2595">include</innerdir>
+    <innerdir refid="dir_0ba391dc57482de2d4750f7585b09728">Parser</innerdir>
+    <innerdir refid="dir_a979c4c59979a69e7b589578e5929947">stdlib</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/"/>
+  </compounddef>
+</doxygen>

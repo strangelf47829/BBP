@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="de/d23/StressRelief_8h" kind="file" language="C++">
+    <compoundname>StressRelief.h</compoundname>
+    <includedby refid="d9/d1d/ELFHeader_8cpp" local="yes">ELFHeader.cpp</includedby>
+    <includedby refid="d9/d9b/Builder_8cpp" local="yes">Builder.cpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>ELFHeader.cpp</label>
+        <link refid="d9/d1d/ELFHeader_8cpp"/>
+      </node>
+      <node id="1">
+        <label>StressRelief.h</label>
+        <link refid="de/d23/StressRelief_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Builder.cpp</label>
+        <link refid="d9/d9b/Builder_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d4/db8/classWhy" prot="public">Why</innerclass>
+    <innerclass refid="d7/da4/classCunts" prot="public">Cunts</innerclass>
+    <innerclass refid="df/d24/classGoto" prot="public">Goto</innerclass>
+    <innerclass refid="d7/dad/classIHate" prot="public">IHate</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="de/d23/StressRelief_8h_1a6b9697e03dc6310858d59b849bc0a8f1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void FUCKYOU</definition>
+        <argsstring>()</argsstring>
+        <name>FUCKYOU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StressRelief.h" line="36" column="20" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StressRelief.h" bodystart="36" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StressRelief.h"/>
+  </compounddef>
+</doxygen>

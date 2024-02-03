@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d1/da1/classBBP_1_1userspace_1_1rvalue" kind="class" language="C++" prot="public">
+    <compoundname>BBP::userspace::rvalue</compoundname>
+    <basecompoundref refid="d4/d87/classBBP_1_1userspace_1_1pvalue" prot="public" virt="virtual">BBP::userspace::pvalue</basecompoundref>
+    <derivedcompoundref refid="dc/d6d/classBBP_1_1userspace_1_1xvalue" prot="private" virt="non-virtual">BBP::userspace::xvalue</derivedcompoundref>
+    <includes refid="d8/da7/ValueCategories_8h" local="no">ValueCategories.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="d1/da1/classBBP_1_1userspace_1_1rvalue_1a3e0a04a8492f1119a633a0f06863cea8" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BBP::userspace::rvalue::hiho</definition>
+        <argsstring></argsstring>
+        <name>hiho</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ValueCategories.h" line="25" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ValueCategories.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d1/da1/classBBP_1_1userspace_1_1rvalue_1a4c3e343c68fa8babb020b4b7a7b2f561" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BBP::userspace::rvalue::rvalue</definition>
+        <argsstring>()</argsstring>
+        <name>rvalue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ValueCategories.h" line="27" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/rvalue.cpp" bodystart="7" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/da1/classBBP_1_1userspace_1_1rvalue_1a21dbd2a11af7fe2f9d3032c7a39b6881" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BBP::userspace::rvalue::rvalue</definition>
+        <argsstring>(userspace::StateMachine &amp;state, userspace::Instruction::Arg &amp;)</argsstring>
+        <name>rvalue</name>
+        <param>
+          <type><ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">userspace::StateMachine</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="d5/d9e/structBBP_1_1userspace_1_1Instruction_1_1Arg" kindref="compound">userspace::Instruction::Arg</ref> &amp;</type>
+          <defname>arg</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ValueCategories.h" line="28" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/rvalue.cpp" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/da1/classBBP_1_1userspace_1_1rvalue_1a369fbfacc243cf5c91f253b6e961765b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::rvalue::dereference</definition>
+        <argsstring>(userspace::StateMachine &amp;state, std::address_t)</argsstring>
+        <name>dereference</name>
+        <reimplements refid="d4/d87/classBBP_1_1userspace_1_1pvalue_1a76d1fe37965aa866f92e8683c767d57c">dereference</reimplements>
+        <reimplementedby refid="dc/d6d/classBBP_1_1userspace_1_1xvalue_1a07cbbdfeddb7d414dbe5987a55bbf83f">dereference</reimplementedby>
+        <param>
+          <type><ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">userspace::StateMachine</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref></type>
+          <defname>lvalueFor</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ValueCategories.h" line="31" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/rvalue.cpp" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/da1/classBBP_1_1userspace_1_1rvalue_1adc7299c2a7bf5238ccb70ad414d0fda6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::rvalue::reference</definition>
+        <argsstring>(userspace::StateMachine &amp;state, pvalue &amp;)</argsstring>
+        <name>reference</name>
+        <param>
+          <type><ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">userspace::StateMachine</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="d4/d87/classBBP_1_1userspace_1_1pvalue" kindref="compound">pvalue</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ValueCategories.h" line="32" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/rvalue.cpp" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/da1/classBBP_1_1userspace_1_1rvalue_1a23fefd203bb4a17be52d0b4c51672b8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+        <definition>BBP::std::word BBP::userspace::rvalue::resolve</definition>
+        <argsstring>(userspace::StateMachine &amp;state)</argsstring>
+        <name>resolve</name>
+        <reimplements refid="d4/d87/classBBP_1_1userspace_1_1pvalue_1ab92bee3a8f6bc51e5b461b0c13c87bfd">resolve</reimplements>
+        <reimplementedby refid="dc/d6d/classBBP_1_1userspace_1_1xvalue_1a684b5ded4d4fc02eb6bf8e44fa380550">resolve</reimplementedby>
+        <param>
+          <type><ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">userspace::StateMachine</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ValueCategories.h" line="35" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/rvalue.cpp" bodystart="27" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>BBP::userspace::xvalue</label>
+        <link refid="dc/d6d/classBBP_1_1userspace_1_1xvalue"/>
+        <childnode refid="1" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BBP::userspace::pvalue</label>
+        <link refid="d4/d87/classBBP_1_1userspace_1_1pvalue"/>
+      </node>
+      <node id="1">
+        <label>BBP::userspace::rvalue</label>
+        <link refid="d1/da1/classBBP_1_1userspace_1_1rvalue"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>bool</label>
+      </node>
+      <node id="2">
+        <label>BBP::userspace::pvalue</label>
+        <link refid="d4/d87/classBBP_1_1userspace_1_1pvalue"/>
+      </node>
+      <node id="1">
+        <label>BBP::userspace::rvalue</label>
+        <link refid="d1/da1/classBBP_1_1userspace_1_1rvalue"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#hiho</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ValueCategories.h" line="23" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ValueCategories.h" bodystart="22" bodyend="36"/>
+    <listofallmembers>
+      <member refid="d1/da1/classBBP_1_1userspace_1_1rvalue_1a369fbfacc243cf5c91f253b6e961765b" prot="public" virt="virtual"><scope>BBP::userspace::rvalue</scope><name>dereference</name></member>
+      <member refid="d1/da1/classBBP_1_1userspace_1_1rvalue_1a3e0a04a8492f1119a633a0f06863cea8" prot="protected" virt="non-virtual"><scope>BBP::userspace::rvalue</scope><name>hiho</name></member>
+      <member refid="d1/da1/classBBP_1_1userspace_1_1rvalue_1adc7299c2a7bf5238ccb70ad414d0fda6" prot="public" virt="non-virtual"><scope>BBP::userspace::rvalue</scope><name>reference</name></member>
+      <member refid="d1/da1/classBBP_1_1userspace_1_1rvalue_1a23fefd203bb4a17be52d0b4c51672b8c" prot="public" virt="virtual"><scope>BBP::userspace::rvalue</scope><name>resolve</name></member>
+      <member refid="d1/da1/classBBP_1_1userspace_1_1rvalue_1a4c3e343c68fa8babb020b4b7a7b2f561" prot="public" virt="non-virtual"><scope>BBP::userspace::rvalue</scope><name>rvalue</name></member>
+      <member refid="d1/da1/classBBP_1_1userspace_1_1rvalue_1a21dbd2a11af7fe2f9d3032c7a39b6881" prot="public" virt="non-virtual"><scope>BBP::userspace::rvalue</scope><name>rvalue</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

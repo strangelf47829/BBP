@@ -1,0 +1,68 @@
+.TH "Resources.h" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Resources.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Memory\&.h'\fP
+.br
+\fC#include 'Stack\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBBBP::std::AbstractGCEntry\fP"
+.br
+.ti -1c
+.RI "class \fBBBP::std::GCEntry< T >\fP"
+.br
+.ti -1c
+.RI "class \fBBBP::std::ResourceManager\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBBBP\fP"
+.br
+.ti -1c
+.RI " \fBBBP::std\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBBBP::std::ext_free\fP (void *)"
+.br
+.ti -1c
+.RI "void * \fBBBP::std::ext_malloc\fP (std::size_t)"
+.br
+.ti -1c
+.RI "void * \fBBBP::std::ext_calloc\fP (std::size_t, std::size_t)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "static constexpr size_t \fBBBP::std::max_objects\fP = 1000"
+.br
+.ti -1c
+.RI "static constexpr size_t \fBBBP::std::max_allocations\fP = 1000"
+.br
+.ti -1c
+.RI "ResourceManager \fBBBP::std::progmem\fP"
+.br
+.ti -1c
+.RI "ResourceManager * \fBBBP::std::activemem\fP"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

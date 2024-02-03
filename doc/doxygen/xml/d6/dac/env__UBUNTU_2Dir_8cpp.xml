@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d6/dac/env__UBUNTU_2Dir_8cpp" kind="file" language="C++">
+    <compoundname>env_UBUNTU/Dir.cpp</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">#include<sp/>&quot;../include/FileSys.h&quot;</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">#include<sp/>&quot;../include/stdio.h&quot;</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">#define<sp/>_HAS_CXX17</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">#include<sp/>&lt;filesystem&gt;</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">#include<sp/>&lt;cstdio&gt;</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">BBP::std::DIRECTORY<sp/>&amp;BBP::std::DIRECTORY::info()</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>Get<sp/>the<sp/>iterator<sp/>for<sp/>the<sp/>directory</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/><sp/>auto<sp/>iterator<sp/>=<sp/>::std::filesystem::directory_iterator(std::read_a(&amp;this-&gt;DirectoryDescriptor.path,<sp/>0));</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>Count<sp/>the<sp/>amount<sp/>of<sp/>files</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/>this-&gt;DirectoryDescriptor.fileCount<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/><sp/>this-&gt;DirectoryDescriptor.directoryCount<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/>for<sp/>(auto<sp/>&amp;p<sp/>:<sp/>iterator)</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(p.is_directory())</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;DirectoryDescriptor.directoryCount++;</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;DirectoryDescriptor.fileCount++;</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"></highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>Create<sp/>the<sp/>file<sp/>and<sp/>directory<sp/>pages</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/><sp/>this-&gt;DirectoryDescriptor.files<sp/>=<sp/>std::PAGE&lt;std::FILE&gt;(this-&gt;DirectoryDescriptor.fileCount,<sp/>(std::FILE<sp/>*)std::progmem.calloc(this-&gt;DirectoryDescriptor.fileCount,<sp/>sizeof(std::FILE)));</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/><sp/><sp/><sp/>this-&gt;DirectoryDescriptor.directories<sp/>=<sp/>std::PAGE&lt;std::DIRECTORY&gt;(this-&gt;DirectoryDescriptor.directoryCount,<sp/>(std::DIRECTORY<sp/>*)std::progmem.calloc(this-&gt;DirectoryDescriptor.directoryCount,<sp/>sizeof(std::DIRECTORY)));</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"></highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>Re-assign<sp/>the<sp/>iterator</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/><sp/><sp/><sp/>iterator<sp/>=<sp/>::std::filesystem::directory_iterator(std::read_a(&amp;this-&gt;DirectoryDescriptor.path,<sp/>0));</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"></highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>Then<sp/>load<sp/>the<sp/>files</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/><sp/><sp/><sp/>std::size_t<sp/>file_index<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/><sp/><sp/><sp/>std::size_t<sp/>dir_index<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/><sp/><sp/><sp/>for<sp/>(auto<sp/>&amp;p<sp/>:<sp/>iterator)</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(p.is_directory())</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;DirectoryDescriptor.directories.data[dir_index].hold((char<sp/>*)p.path().c_str());</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;DirectoryDescriptor.directories.data[dir_index++].parent<sp/>=<sp/>this;</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;DirectoryDescriptor.files.data[file_index++].hold((char<sp/>*)p.path().c_str());</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"></highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>Set<sp/>populated<sp/>flag<sp/>to<sp/>true</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/><sp/><sp/><sp/>is_populated<sp/>=<sp/>true;</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"></highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/><sp/><sp/><sp/>return<sp/>*this;</highlight></codeline>
+<codeline lineno="49"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"></highlight></codeline>
+<codeline lineno="51"><highlight class="comment">BBP::std::DIRECTORY<sp/>&amp;BBP::std::DIRECTORY::navigate(std::conststring<sp/>_path)</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>Get<sp/>target<sp/>directory</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/><sp/><sp/><sp/>::std::filesystem::path<sp/>tgt(this-&gt;DirectoryDescriptor.path.data);</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/><sp/>tgt.operator+=(&quot;/&quot;)<sp/>+=<sp/>_path;</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/><sp/>std::conststring<sp/>path<sp/>=<sp/>(std::conststring)<sp/>tgt.c_str();</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"></highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>Loop<sp/>over<sp/>each<sp/>directory<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/><sp/><sp/><sp/>for<sp/>(std::index_t<sp/>index<sp/>=<sp/>0;<sp/>index<sp/>&lt;<sp/>this-&gt;DirectoryDescriptor.directoryCount;<sp/>index++)</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Get<sp/>path<sp/>name</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>str<sp/>=<sp/>std::read(&amp;this-&gt;DirectoryDescriptor.directories,<sp/>index).DirectoryDescriptor.path;</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"></highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Compare<sp/>path<sp/>names</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool<sp/>match<sp/>=<sp/>std::strcmp(&amp;str,<sp/>path);</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"></highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(!match)</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>continue;</highlight></codeline>
+<codeline lineno="69"><highlight class="comment"></highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>this-&gt;DirectoryDescriptor.directories.data[index];</highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"></highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/><sp/><sp/><sp/>std::STDOUT<sp/>&lt;&lt;<sp/>&quot;Could<sp/>not<sp/>find<sp/>directory<sp/>\&quot;&quot;<sp/>&lt;&lt;<sp/>path<sp/>&lt;&lt;<sp/>&quot;\&quot;.&quot;<sp/>&lt;&lt;=<sp/>std::endl;</highlight></codeline>
+<codeline lineno="74"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="75"><highlight class="comment"></highlight></codeline>
+<codeline lineno="76"><highlight class="comment">BBP::std::FILE<sp/>&amp;BBP::std::DIRECTORY::file(std::conststring<sp/>fileName)</highlight></codeline>
+<codeline lineno="77"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>Get<sp/>target<sp/>file</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/><sp/><sp/><sp/>::std::filesystem::path<sp/>tgt(this-&gt;DirectoryDescriptor.path.data);</highlight></codeline>
+<codeline lineno="80"><highlight class="comment"><sp/><sp/><sp/><sp/>tgt.operator+=(&quot;/&quot;)<sp/>+=<sp/>fileName;</highlight></codeline>
+<codeline lineno="81"><highlight class="comment"><sp/><sp/><sp/><sp/>std::conststring<sp/>path<sp/>=<sp/>(std::conststring)tgt.c_str();</highlight></codeline>
+<codeline lineno="82"><highlight class="comment"></highlight></codeline>
+<codeline lineno="83"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>Loop<sp/>over<sp/>each<sp/>file<sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/><sp/><sp/><sp/>for<sp/>(std::index_t<sp/>index<sp/>=<sp/>0;<sp/>index<sp/>&lt;<sp/>this-&gt;DirectoryDescriptor.fileCount;<sp/>index++)</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Get<sp/>path<sp/>name</highlight></codeline>
+<codeline lineno="87"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>str<sp/>=<sp/>std::read(&amp;this-&gt;DirectoryDescriptor.files,<sp/>index).FileDescriptor.fileName;</highlight></codeline>
+<codeline lineno="88"><highlight class="comment"></highlight></codeline>
+<codeline lineno="89"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;Str:<sp/>%s\n&quot;,<sp/>str.data);</highlight></codeline>
+<codeline lineno="90"><highlight class="comment"></highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Compare<sp/>path<sp/>names</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool<sp/>match<sp/>=<sp/>std::strcmp(&amp;str,<sp/>path);</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"></highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(!match)</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>continue;</highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>this-&gt;DirectoryDescriptor.files.data[index];</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="comment"></highlight></codeline>
+<codeline lineno="99"><highlight class="comment"><sp/><sp/><sp/><sp/>std::STDOUT<sp/>&lt;&lt;<sp/>&quot;Could<sp/>not<sp/>find<sp/>directory<sp/>\&quot;&quot;<sp/>&lt;&lt;<sp/>path<sp/>&lt;&lt;<sp/>&quot;\&quot;.&quot;<sp/>&lt;&lt;=<sp/>std::endl;</highlight></codeline>
+<codeline lineno="100"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="101"><highlight class="comment">*/</highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_UBUNTU/Dir.cpp"/>
+  </compounddef>
+</doxygen>

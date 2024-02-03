@@ -1,0 +1,2672 @@
+.TH "BBP::esa::esaProcessor" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BBP::esa::esaProcessor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ELSA\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBesaProcessor\fP ()"
+.br
+.ti -1c
+.RI "\fBstd::errno_t\fP \fBtranslate\fP (\fBstd::PATH\fP &, \fBstd::PATH\fP &)"
+.br
+.ti -1c
+.RI "\fBstd::conststring\fP \fBunkown\fP (\fBstd::index_t\fP from, \fBstd::index_t\fP to)"
+.br
+.ti -1c
+.RI "\fBstd::conststring\fP \fBresolve\fP (\fBstd::index_t\fP from, \fBstd::index_t\fP to)"
+.br
+.ti -1c
+.RI "\fBstd::conststring\fP \fBnumerical\fP (\fBstd::Lexer::numerical_t\fP numerical, bool isFloat)"
+.br
+.ti -1c
+.RI "\fBstd::conststring\fP \fBnumericalArgument\fP (\fBstd::Lexer::numerical_t\fP \fBnumerical\fP, bool isFloat)"
+.br
+.ti -1c
+.RI "void \fBreserveRegisters\fP ()"
+.br
+.ti -1c
+.RI "void \fBemitRelocation\fP (\fBstd::index_t\fP)"
+.br
+.ti -1c
+.RI "\fBstd::word\fP \fBcalculateArgumentOffset\fP ()"
+.br
+.ti -1c
+.RI "\fBstd::word\fP \fBcalculateAbsoluteArgumentOffset\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddReservedIdentifier\fP (\fBstd::conststring\fP, \fBuserspace::Instruction::Arg\fP)"
+.br
+.ti -1c
+.RI "\fBstd::conststring\fP \fBmarkVirtual\fP ()"
+.br
+.ti -1c
+.RI "\fBstd::conststring\fP \fBmarkExtern\fP ()"
+.br
+.ti -1c
+.RI "\fBstd::conststring\fP \fBmarkConst\fP ()"
+.br
+.ti -1c
+.RI "\fBstd::conststring\fP \fBmarkStatic\fP ()"
+.br
+.ti -1c
+.RI "\fBstd::conststring\fP \fBsetHash\fP (\fBstd::hash_t\fP)"
+.br
+.ti -1c
+.RI "\fBstd::conststring\fP \fBsetSize\fP (\fBstd::size_t\fP)"
+.br
+.ti -1c
+.RI "void \fBaddWord\fP (\fBstd::word\fP)"
+.br
+.ti -1c
+.RI "void \fBaddHalfword\fP (\fBstd::halfword\fP)"
+.br
+.ti -1c
+.RI "void \fBaddByte\fP (\fBstd::byte\fP)"
+.br
+.ti -1c
+.RI "\fBstd::conststring\fP \fBaddNumerical\fP (\fBstd::Lexer::numerical_t\fP, bool)"
+.br
+.ti -1c
+.RI "void \fBresetSymbol\fP ()"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBlookupSymbol\fP (\fBstd::index_t\fP, \fBstd::index_t\fP, \fBstd::word\fP *, \fBstd::hash_t\fP &)"
+.br
+.ti -1c
+.RI "void \fBsetInstruction\fP (\fBuserspace::OPCODES\fP, \fBstd::byte\fP, \fBstd::nibble\fP \fBflags\fP, \fBstd::nibble\fP args)"
+.br
+.ti -1c
+.RI "void \fBexpectLiteral\fP (\fBstd::byte\fP n)"
+.br
+.ti -1c
+.RI "void \fBexpectAddress\fP (\fBstd::byte\fP n)"
+.br
+.ti -1c
+.RI "void \fBexpectAny\fP (\fBstd::byte\fP n)"
+.br
+.ti -1c
+.RI "void \fBsurpressArgCountWarning\fP (\fBstd::byte\fP n)"
+.br
+.ti -1c
+.RI "void \fBsurpressArgCountWarning\fP ()"
+.br
+.ti -1c
+.RI "\fBstd::conststring\fP \fBsetArg\fP (\fBuserspace::Instruction::Arg\fP &arg)"
+.br
+.ti -1c
+.RI "\fBstd::conststring\fP \fBsetReference\fP (\fBstd::word\fP address, \fBstd::word\fP page)"
+.br
+.ti -1c
+.RI "\fBstd::conststring\fP \fBsetDereference\fP (\fBstd::word\fP address, \fBstd::word\fP, \fBstd::byte\fP count)"
+.br
+.ti -1c
+.RI "void \fBlogInstruction\fP ()"
+.br
+.ti -1c
+.RI "void \fBresetInstruction\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetProcedureAddress\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetProcedureIdentifier\fP (\fBstd::index_t\fP, \fBstd::index_t\fP, \fBstd::hash_t\fP)"
+.br
+.ti -1c
+.RI "void \fBsetProcedureArgCount\fP (\fBstd::byte\fP)"
+.br
+.ti -1c
+.RI "void \fBsetupBackend\fP (\fBstd::conststring\fP, \fBstd::size_t\fP, \fBstd::size_t\fP, \fBstd::size_t\fP)"
+.br
+.ti -1c
+.RI "void \fBsaveAndClose\fP ()"
+.br
+.ti -1c
+.RI "void \fBdiscardAndClose\fP ()"
+.br
+.ti -1c
+.RI "\fBstd::errno_t\fP \fBbuildSymbol\fP ()"
+.br
+.ti -1c
+.RI "\fBstd::conststring\fP \fBemitProcedure\fP ()"
+.br
+.ti -1c
+.RI "\fBstd::conststring\fP \fBemitInstruction\fP ()"
+.br
+.ti -1c
+.RI "void \fBsaveIdentifier\fP (\fBstd::index_t\fP start, \fBstd::index_t\fP end)"
+.br
+.ti -1c
+.RI "\fBstd::hash_t\fP \fBhashIdentifier\fP (\fBBBP::esa::dataEntry\fP &)"
+.br
+.ti -1c
+.RI "\fBBBP::std::conststring\fP \fBmangleSymbolIdentifier\fP (\fBBBP::esa::dataEntry\fP &entry)"
+.br
+.ti -1c
+.RI "\fBstd::errno_t\fP \fBExpectDelimiters\fP (\fBstd::Lexer::lex_context\fP *, \fBstd::index_t\fP argc, \fBstd::Lexer::lex_keywordhandle\fP const argv[], bool singleLine, \fBstd::index_t\fP min, \fBstd::index_t\fP maxDepth, \fBstd::Lexer::lex_keywordhandle\fP escape, \fBstd::Lexer::lex_keywordhandle\fP stop)"
+.br
+.ti -1c
+.RI "\fBstd::conststring\fP \fBincludeFile\fP (\fBstd::Lexer::lex_context\fP *, \fBstd::index_t\fP)"
+.br
+.ti -1c
+.RI "bool \fBincludeFromPath\fP (\fBstd::FILE\fP &, \fBstd::PATH\fP &, \fBstd::Stack\fP< \fBstd::string_element\fP > &, \fBstd::PATH\fP &out)"
+.br
+.in -1c
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBstd::Lexer::lex_context\fP \fBesaParser\fP"
+.br
+.ti -1c
+.RI "\fBstd::Lexer::lex_thing\fP \fBsymbol\fP"
+.br
+.ti -1c
+.RI "\fBstd::STATIC_PAGE\fP< \fBstd::byte\fP, 512 > \fBsymbolDataPage\fP"
+.br
+.ti -1c
+.RI "\fBstd::Stack\fP< \fBstd::byte\fP > \fBsymbolDataByte\fP"
+.br
+.ti -1c
+.RI "\fBstd::PAGE\fP< \fBstd::halfword\fP > \fBsymbolDataPageHalfword\fP"
+.br
+.ti -1c
+.RI "\fBstd::Stack\fP< \fBstd::halfword\fP > \fBsymbolDataHalfword\fP"
+.br
+.ti -1c
+.RI "\fBstd::PAGE\fP< \fBstd::word\fP > \fBsymbolDataPageWord\fP"
+.br
+.ti -1c
+.RI "\fBstd::Stack\fP< \fBstd::word\fP > \fBsymbolDataWord\fP"
+.br
+.ti -1c
+.RI "\fBuserspace::Instruction\fP \fBinstruction\fP"
+.br
+.ti -1c
+.RI "\fBstd::byte\fP \fBatArgument\fP"
+.br
+.ti -1c
+.RI "bool \fBsurpress\fP [8]"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBstartedAt\fP"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBendedAt\fP"
+.br
+.ti -1c
+.RI "\fBstd::hash_t\fP \fBprocedureHash\fP"
+.br
+.ti -1c
+.RI "\fBstd::STATIC_PAGE\fP< \fBstd::string_element\fP, 100 > \fBprocedureName\fP"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBprocedureNameStart\fP"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBprocedureNameEnd\fP"
+.br
+.ti -1c
+.RI "\fBstd::byte\fP \fBprocedureArgumentCount\fP"
+.br
+.ti -1c
+.RI "bool \fBdoneDeclaringProcedure\fP"
+.br
+.ti -1c
+.RI "bool \fBexternProcedure\fP"
+.br
+.ti -1c
+.RI "\fBstd::STATIC_PAGE\fP< \fBstd::hash_t\fP, 256 > \fBreservedIdentifiers\fP"
+.br
+.ti -1c
+.RI "\fBstd::STATIC_PAGE\fP< \fBuserspace::Instruction::Arg\fP, 256 > \fBreservedIdentifiersValues\fP"
+.br
+.ti -1c
+.RI "\fBstd::STATIC_PAGE\fP< \fBstd::hash_t\fP, 256 > \fBquasiSymbols\fP"
+.br
+.ti -1c
+.RI "\fBstd::STATIC_PAGE\fP< \fBstd::word\fP, 256 > \fBquasiSymbolValues\fP"
+.br
+.ti -1c
+.RI "\fBesa::BinaryApplication\fP * \fBapplication\fP"
+.br
+.ti -1c
+.RI "\fBstd::STATIC_PAGE\fP< \fBstd::index_t\fP, 32 > \fBroutineStartsPage\fP"
+.br
+.ti -1c
+.RI "\fBstd::STATIC_PAGE\fP< \fBstd::index_t\fP, 32 > \fBroutineSubscriberCount\fP"
+.br
+.ti -1c
+.RI "\fBstd::Stack\fP< \fBstd::index_t\fP > \fBroutineStarts\fP"
+.br
+.ti -1c
+.RI "\fBstd::STATIC_PAGE\fP< \fBstd::index_t\fP, 128 > \fBsubscribersPage\fP"
+.br
+.ti -1c
+.RI "\fBstd::Stack\fP< \fBstd::index_t\fP > \fBsubscribers\fP"
+.br
+.ti -1c
+.RI "bool \fBbeVerbose\fP"
+.br
+.ti -1c
+.RI "\fBstd::Lexer::lex_keywordhandle\fP \fBhandle\fP"
+.br
+.ti -1c
+.RI "\fBstd::Lexer::lex_keywordhandle\fP \fBlastOpener\fP"
+.br
+.ti -1c
+.RI "\fBstd::Lexer::lex_keywordhandle\fP \fBfirstCloser\fP"
+.br
+.ti -1c
+.RI "\fBstd::STATIC_PAGE\fP< \fBstd::Lexer::lex_keywordhandle\fP, 32 > \fBdelimiterPage\fP"
+.br
+.ti -1c
+.RI "\fBstd::Stack\fP< \fBstd::Lexer::lex_keywordhandle\fP > \fBdelimiterStack\fP"
+.br
+.ti -1c
+.RI "\fBstd::word\fP \fBdelimiterDepth\fP = 0"
+.br
+.ti -1c
+.RI "bool \fBlineIsDefiningSymbolDefinition\fP"
+.br
+.ti -1c
+.RI "bool \fBlineIsDefiningInstruction\fP"
+.br
+.ti -1c
+.RI "bool \fBlineIsDefiningProcedure\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 14 of file ELSA\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "BBP::esa::esaProcessor::esaProcessor ()"
+
+.PP
+Definition at line 92 of file Processor\&.cpp\&.
+.PP
+.nf
+93     : symbolDataByte(&symbolDataPage, 512),
+94     symbolDataPageHalfword(256, (std::halfword *)symbolDataPage\&.data),
+95     symbolDataHalfword(&symbolDataPageHalfword, 256),
+96     symbolDataPageWord(128, (std::word *)symbolDataPage\&.data),
+97     symbolDataWord(&symbolDataPageWord, 128),
+98     application(nullptr),
+99     delimiterStack(&delimiterPage, 32),
+100     routineStarts(&routineStartsPage, routineStartsPage\&.dataSize),
+101     subscribers(&subscribersPage, subscribersPage\&.dataSize)
+102 {
+103     // Initialize keyword count to \&.
+104     esaParser\&.keywordStack\&.atElement = keywordCount + tokenCount + mnemonicsCount;
+105 
+106     // Read all keywords into parser
+107     for (unsigned int k = 0; k < keywordCount; k++)
+108         esaParser\&.keywordStack[k] = { keywords[k], std::strlen(keywords[k]), 0, keywordActions[k], false, false, false, false, false, false, 0, 0 };
+109 
+110     // Read instructions into parser
+111     for (unsigned int k = 0; k < mnemonicsCount; k++)
+112         esaParser\&.keywordStack[k + keywordCount + tokenCount] = { mnemonics[k], std::strlen(mnemonics[k]), 0, mnemonicsActions[k], false, false, false, false, false, false, 0, 0 };
+113 
+114     // Read tokens into parser
+115     for (unsigned int k = 0; k < tokenCount; k++)
+116         esaParser\&.keywordStack[k + keywordCount] = { tokens[k], std::strlen(tokens[k]), 0, tokenActions[k],
+117                                                                     (bool)flags[k][0], (bool)flags[k][1], (bool)flags[k][2], (bool)flags[k][3], (bool)flags[k][4], (bool)flags[k][5], flags[k][6], flags[k][7] };
+118 
+119     // Manually set some stuff
+120     esaParser\&.keywordStack[ELSE_HANDLE]\&.considerCommentDepth = 4;
+121     esaParser\&.keywordStack[ENDIF_HANDLE]\&.considerCommentDepth = 4;
+122 
+123     esaParser\&.abort = false;
+124 
+125     // Initialize system paths
+126     esaParser\&.syspaths <<= "/usr/include/";
+127     esaParser\&.syspaths <<= "/usr/local/include/";
+128 
+129     // Set debug information
+130     esaParser\&.debugInformation\&.procedure\&.data = procedureName\&.static_data;
+131     esaParser\&.debugInformation\&.procedure\&.dataSize = procedureName\&.dataSize;
+132 
+133     // Add reserved identifier
+134     reserveRegisters();
+135 }
+.fi
+.PP
+References esaParser, BBP::esa::keywordActions, BBP::esa::keywordCount, BBP::esa::keywords, BBP::std::Lexer::lex_context::keywordStack, BBP::esa::mnemonicsCount, BBP::std::strlen(), and BBP::esa::tokenCount\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void BBP::esa::esaProcessor::addByte (\fBstd::byte\fP w)"
+
+.PP
+Definition at line 191 of file Frontend\&.cpp\&.
+.PP
+.nf
+192 {
+193     symbolDataWord++;
+194     symbolDataHalfword++;
+195     symbolDataByte << w;
+196 }
+.fi
+.SS "void BBP::esa::esaProcessor::addHalfword (\fBstd::halfword\fP w)"
+
+.PP
+Definition at line 184 of file Frontend\&.cpp\&.
+.PP
+.nf
+185 {
+186     symbolDataWord++;
+187     symbolDataHalfword << w;
+188     symbolDataByte\&.atElement += 2;
+189 }
+.fi
+.SS "\fBBBP::std::conststring\fP BBP::esa::esaProcessor::addNumerical (\fBstd::Lexer::numerical_t\fP numerical, bool isFloat)"
+
+.PP
+Definition at line 198 of file Frontend\&.cpp\&.
+.PP
+.nf
+199 {
+200     // Check if symbol is extern
+201     if (symbol\&.subtype & SYMBOL_TYPE::SYMTMOD_EXTERN)
+202         return "ECannot add data to extern symbol";
+203 
+204     // If no size specified, default to nil
+205     if (!(symbol\&.subtype & 0b111111100000))
+206         setSize(0);
+207     
+208     // If is quasi symbol or virtual, return error if multi-byte
+209     if ((symbol\&.subtype & SYMTSZ_NIL) && symbolDataByte\&.atElement >= 4)
+210         return "EQuasi symbols cannot be a multi word sequence\&. (Default size specifier is 32 bit, maybe you forgot a 'db'?)";
+211 
+212     // If we want to add a float, always do a 32bit word\&.
+213     if (isFloat)
+214     {
+215         // Just add the word
+216         std::word intermediate = *((std::word *)&numerical\&.f);
+217         addWord(intermediate);
+218 
+219         // If it is a 32bit variable, do nothing\&.
+220         if (symbol\&.subtype & (SYMTSZ_DW))
+221             return nullptr;
+222 
+223         // Else, log warning\&.
+224         esaParser\&.debugInformation\&.errName = "-Wfloat-size-mismatch";
+225         return "WFloat in non-32bit size sequence\&.";
+226     }
+227 
+228     // Add based on size
+229     esaParser\&.debugInformation\&.errName = "-Wtruncated-literal";
+230     switch (symbol\&.subtype & 0b111111100000)
+231     {
+232     case SYMTSZ_DN:
+233     case SYMTSZ_DB:
+234         addByte(numerical\&.i);
+235         if (numerical\&.i > 0xFFFF)
+236             return "WTruncated 32 bit literal to 8 bits\&.";
+237         else if (numerical\&.i > 0xFF)
+238             return "WTruncated 16 bit literal to 8 bits\&.";
+239         break;
+240     case SYMTSZ_DH:
+241         addHalfword(numerical\&.i);
+242         if (numerical\&.i > 0xFFFF)
+243             return "WTruncated 32 bit literal to 8 bits\&.";
+244         break;
+245     case SYMTSZ_DA:
+246     case SYMTSZ_DW:
+247     case SYMTSZ_DI:
+248         addWord(numerical\&.i);
+249         break;
+250     case SYMTSZ_NIL:
+251         addWord(numerical\&.i);
+252         break;
+253     }
+254 
+255     // Do nothing
+256     esaParser\&.debugInformation\&.errName = nullptr;
+257     return nullptr;
+258 }
+.fi
+.PP
+References BBP::std::Lexer::numerical_t::f, BBP::std::Lexer::numerical_t::i, BBP::esa::SYMTMOD_EXTERN, BBP::esa::SYMTSZ_DA, BBP::esa::SYMTSZ_DB, BBP::esa::SYMTSZ_DH, BBP::esa::SYMTSZ_DI, BBP::esa::SYMTSZ_DN, BBP::esa::SYMTSZ_DW, and BBP::esa::SYMTSZ_NIL\&.
+.PP
+Referenced by numerical(), and BBP::esa::TOKEN()\&.
+.SS "void BBP::esa::esaProcessor::addReservedIdentifier (\fBstd::conststring\fP identifier, \fBuserspace::Instruction::Arg\fP data)"
+
+.PP
+Definition at line 493 of file Frontend\&.cpp\&.
+.PP
+.nf
+494 {
+495     // Check for nullptr
+496     if (identifier == nullptr)
+497         throw std::exception("Cannot add nullptr identifier\&.", EDOM);
+498 
+499     // Hash string
+500     std::hash_t identifierHash = 0;
+501     std::size_t identifierSize = std::strlen(identifier);
+502 
+503     // Calculate hash
+504     for (std::index_t index = 0; index < identifierSize; index++)
+505     {
+506         // Get character
+507         std::string_element c = identifier[index];
+508 
+509         // Operate on character
+510         identifierHash = (identifierHash * 33) + c;
+511     }
+512 
+513     // Look for identifier
+514     for (std::index_t identifierIndex = 0; identifierIndex < processor\&.reservedIdentifiers\&.dataSize; identifierIndex++)
+515     {
+516         // Get value
+517         std::hash_t storedValue = std::read(&processor\&.reservedIdentifiers, identifierIndex);
+518 
+519         // If non-zero, continue
+520         if (storedValue)
+521             continue;
+522 
+523         // Save data
+524         std::write(&processor\&.reservedIdentifiers, identifierHash, identifierIndex);
+525         std::write(&processor\&.reservedIdentifiersValues, data, identifierIndex);
+526 
+527         // Return
+528         return;
+529     }
+530 
+531     throw std::exception("No free reserved identifiers\&.", ENOBUFS);
+532 }
+.fi
+.PP
+References BBP::std::PAGE< T >::dataSize, EDOM, ENOBUFS, BBP::std::exception(), BBP::esa::processor, BBP::std::read(), reservedIdentifiers, reservedIdentifiersValues, BBP::std::strlen(), and BBP::std::write()\&.
+.SS "void BBP::esa::esaProcessor::addWord (\fBstd::word\fP w)"
+
+.PP
+Definition at line 177 of file Frontend\&.cpp\&.
+.PP
+.nf
+178 {
+179     symbolDataWord << w;
+180     symbolDataHalfword\&.atElement += 2;
+181     symbolDataByte\&.atElement += 4;
+182 }
+.fi
+.SS "\fBBBP::std::errno_t\fP BBP::esa::esaProcessor::buildSymbol ()"
+
+.PP
+Definition at line 90 of file Backend\&.cpp\&.
+.PP
+.nf
+91 {
+92 
+93     // Look for already existing symbol
+94     std::hash_t hash = 0;
+95     std::word byteSize = 0;
+96     std::index_t existingSymbol = lookupSymbol(symbol\&.start, symbol\&.end, &byteSize, hash);
+97     bool symbolExists = existingSymbol != 0;
+98 
+99     // if symbol exists and is not 'extern'
+100     if (symbolExists && application->builder\&.symbols[existingSymbol]\&.shndx())
+101         return EADDRINUSE;
+102 
+103     // if symbol exists, is marked 'extern', but is a procedure,
+104     if (symbolExists && application->builder\&.symbols[existingSymbol]\&.info() & std::ELF::SYM_FUNC)
+105         return EBADR; // Cannot do that
+106 
+107     // Declare entry
+108     dataEntry entry = dataEntry(nullptr, 0, std::ELF::SYM_OBJECT | std::ELF::SYM_GLOBAL);
+109     
+110     // If entry is extern, just mangle and set to section 0\&.
+111     if (symbol\&.subtype & SYMTMOD_EXTERN)
+112     {
+113         // Create empty entry
+114         entry = dataEntry(nullptr, 0, std::ELF::SYM_OBJECT | std::ELF::SYM_GLOBAL);
+115 
+116         // Emit
+117         application->emitSymbol(0, entry, mangleSymbolIdentifier(entry), hashIdentifier(entry), existingSymbol);
+118 
+119         // Return
+120         resetSymbol();
+121         return 0;
+122     }
+123 
+124     // Do rules based on flags set
+125     // If access is 'static'
+126     if (symbol\&.subtype & SYMTACC_STATIC)
+127     {
+128         // Is it const?
+129         std::index_t section = (symbol\&.subtype & SYMTMOD_CONST) ? application->builder\&.rodata : application->builder\&.data;
+130 
+131         // Emit and return
+132         entry = dataEntry((std::conststring)symbolDataWord\&.page->data, symbolDataByte\&.atElement, std::ELF::SYM_OBJECT | std::ELF::SYM_GLOBAL);
+133         application->emitSymbol(section, entry, mangleSymbolIdentifier(entry), hashIdentifier(entry), existingSymbol);
+134 
+135         // Return
+136         resetSymbol();
+137         return 0;
+138     }
+139     else if (symbol\&.subtype & SYMTACC_VIRTUAL) // Are we virtual?
+140     {
+141         // Are we also marked constant?
+142         if (symbol\&.subtype & SYMTMOD_STATIC)
+143         {
+144             // Create another entry
+145             std::size_t size = application->builder\&.sections[application->builder\&.bss]\&.stack\&.atElement;
+146             dataEntry staticEntry = dataEntry((std::conststring)&size, 4, std::ELF::SYM_LOCAL);
+147 
+148             // Are we also const?
+149             std::index_t section = (symbol\&.subtype & SYMTMOD_CONST) ? application->builder\&.rodata : application->builder\&.data;
+150 
+151             // Add data to \&.bss (\&.bss gets removed later)
+152             entry = dataEntry((std::conststring)symbolDataWord\&.page->data, symbolDataByte\&.atElement, std::ELF::SYM_OBJECT | std::ELF::SYM_GLOBAL);
+153             application->emitSymbol(application->builder\&.bss, entry, mangleSymbolIdentifier(entry), hashIdentifier(entry), existingSymbol);
+154 
+155             // Emit static symbol
+156             application->emitSymbol(section, staticEntry, mangleSymbolIdentifier(staticEntry), hashIdentifier(staticEntry), existingSymbol);
+157 
+158             // Return 
+159             resetSymbol();
+160             return 0;
+161         }
+162         else
+163         {
+164             // Not virtual, just do it normally then\&.
+165             // Add data to \&.bss (\&.bss gets removed later)
+166             entry = dataEntry((std::conststring)symbolDataWord\&.page->data, symbolDataByte\&.atElement, std::ELF::SYM_OBJECT | std::ELF::SYM_GLOBAL);
+167             
+168             // Emit
+169             application->emitSymbol(application->builder\&.bss, entry, mangleSymbolIdentifier(entry), hashIdentifier(entry), existingSymbol);
+170 
+171             // Return 
+172             resetSymbol();
+173             return 0;
+174         }
+175     }
+176 
+177     // Quasi symbol cannot be exported\&.
+178     // Find empty quasi symbol spot
+179     std::index_t emptyQuasi = 0;
+180     for (; emptyQuasi < processor\&.quasiSymbols\&.dataSize; emptyQuasi++)
+181     {
+182         // Get value
+183         std::hash_t value = std::read(&processor\&.quasiSymbols, emptyQuasi);
+184 
+185         // If value is 0, break out\&.
+186         if (value != 0)
+187             continue;
+188 
+189         // Do nothing
+190         break;
+191     }
+192 
+193     // Check for error condition
+194     if (emptyQuasi == processor\&.quasiSymbols\&.dataSize)
+195         return ENOBUFS;
+196 
+197     // Calculate hash
+198     std::hash_t quasiHash = hashIdentifier(entry);
+199 
+200     // Set hash to that, then set value
+201     std::write(&processor\&.quasiSymbols, quasiHash, emptyQuasi);
+202     std::write(&processor\&.quasiSymbolValues, symbolDataWord[0], emptyQuasi);
+203 
+204     // Reset symbol
+205     resetSymbol();
+206 
+207     return 0;
+208 }
+.fi
+.PP
+References BBP::std::conststring, BBP::std::PAGE< T >::dataSize, EADDRINUSE, EBADR, ENOBUFS, BBP::Locale::Japanese::hash, BBP::esa::processor, quasiSymbols, quasiSymbolValues, BBP::std::read(), BBP::std::ELF::SYM_FUNC, BBP::std::ELF::SYM_GLOBAL, BBP::std::ELF::SYM_LOCAL, BBP::std::ELF::SYM_OBJECT, BBP::esa::SYMTACC_STATIC, BBP::esa::SYMTACC_VIRTUAL, BBP::esa::SYMTMOD_CONST, BBP::esa::SYMTMOD_EXTERN, BBP::esa::SYMTMOD_STATIC, and BBP::std::write()\&.
+.PP
+Referenced by BBP::esa::TOKEN()\&.
+.SS "\fBBBP::std::word\fP BBP::esa::esaProcessor::calculateAbsoluteArgumentOffset ()"
+
+.PP
+Definition at line 356 of file Auxiliary\&.cpp\&.
+.PP
+.nf
+357 {
+358     std::word offset = 1;
+359     for (std::word index = 0; index < atArgument; index++)
+360         offset += instruction\&.args[index]\&.trailerCount + 1;
+361 
+362     offset *= 4;
+363     return offset + application->builder\&.sections[application->builder\&.text]\&.stack\&.atElement;
+364 }
+.fi
+.PP
+Referenced by BBP::esa::TOKEN()\&.
+.SS "\fBBBP::std::word\fP BBP::esa::esaProcessor::calculateArgumentOffset ()"
+
+.PP
+Definition at line 346 of file Auxiliary\&.cpp\&.
+.PP
+.nf
+347 {
+348     std::word offset = 1;
+349     for (std::word index = 0; index < atArgument; index++)
+350         offset += instruction\&.args[index]\&.trailerCount + 1;
+351 
+352     offset *= 4;
+353     return offset;
+354 }
+.fi
+.SS "void BBP::esa::esaProcessor::discardAndClose ()"
+
+.PP
+Definition at line 66 of file Backend\&.cpp\&.
+.PP
+.nf
+67 {
+68     application->close();
+69 
+70     std::activemem->_delete(application);
+71     application = nullptr;
+72 }
+.fi
+.PP
+References BBP::std::ResourceManager::_delete(), and BBP::std::activemem\&.
+.SS "\fBBBP::std::conststring\fP BBP::esa::esaProcessor::emitInstruction ()"
+
+.PP
+Definition at line 291 of file Backend\&.cpp\&.
+.PP
+.nf
+292 {
+293     // Check if right amount of arguments is reached\&.
+294     bool hasRightArguments = atArgument == instruction\&.header\&.args || surpress[atArgument];
+295     instruction\&.header\&.args = atArgument;
+296 
+297     // Check if there is room to do so
+298     // Worst case scenario: 1+8+4*8 = 41 words for an instruction\&.
+299     if (application->builder\&._text()\&.stack\&.atElement + 41 >= application->builder\&._text()\&.stack\&.max_elements)
+300     {
+301         std::word extendBy = (application->builder\&._text()\&.stack\&.atElement + 41 + 128 < application->builder\&._text()\&.stack\&.max_elements) ? 128 : (application->builder\&._text()\&.stack\&.atElement + 41 + 128 - application->builder\&._text()\&.stack\&.max_elements);
+302         application->builder\&._text()\&.Extend(extendBy);
+303     }
+304     
+305     // Emit header
+306     application->builder\&._text()\&.stack << instruction\&.header\&.prefix;
+307     application->builder\&._text()\&.stack << instruction\&.header\&.opcode;
+308     application->builder\&._text()\&.stack << instruction\&.header\&.suffix;
+309     application->builder\&._text()\&.stack << (((instruction\&.header\&.flags & 0xF) << 4) | (instruction\&.header\&.args & 0xF));
+310 
+311     // Emit Arguments
+312     for (std::byte arg = 0; arg < instruction\&.header\&.args; arg++)
+313     {
+314         // If literal value,
+315         if (instruction\&.args[arg]\&.isLiteralArg)
+316         {
+317             // Just emit that and continue\&.
+318             application->builder\&._text()\&.stack << ((instruction\&.args[arg]\&.data >> 24) & 0xFF);
+319             application->builder\&._text()\&.stack << ((instruction\&.args[arg]\&.data >> 16) & 0xFF);
+320             application->builder\&._text()\&.stack << ((instruction\&.args[arg]\&.data >> 8) & 0xFF);
+321             application->builder\&._text()\&.stack << ((instruction\&.args[arg]\&.data >> 0) & 0xFF);
+322         }
+323         else
+324         {
+325 
+326             application->builder\&._text()\&.stack << (((instruction\&.args[arg]\&.referenced << 8) | (instruction\&.args[arg]\&.dereferenced << 7) |
+327                 ((instruction\&.args[arg]\&.offset & 0xF) << 2) | (instruction\&.args[arg]\&.trailerCount & 0x7)));
+328 
+329             application->builder\&._text()\&.stack << ((instruction\&.args[arg]\&.data >> 16) & 0b11111111);
+330             application->builder\&._text()\&.stack << ((instruction\&.args[arg]\&.data >> 8) & 0xFF);
+331             application->builder\&._text()\&.stack << ((instruction\&.args[arg]\&.data >> 0) & 0xFF);
+332 
+333         }
+334 
+335         // Then emit trailers
+336         for (std::byte trailer = 0; trailer < instruction\&.args[arg]\&.trailerCount; trailer++)
+337         {
+338             application->builder\&._text()\&.stack << ((instruction\&.args[arg]\&.trailers[trailer] >> 24) & 0xFF);
+339             application->builder\&._text()\&.stack << ((instruction\&.args[arg]\&.trailers[trailer] >> 16) & 0xFF);
+340             application->builder\&._text()\&.stack << ((instruction\&.args[arg]\&.trailers[trailer] >> 8) & 0xFF);
+341             application->builder\&._text()\&.stack << ((instruction\&.args[arg]\&.trailers[trailer] >> 0) & 0xFF);
+342 
+343         }
+344     }
+345 
+346     if (hasRightArguments)
+347         return nullptr;
+348 
+349     esaParser\&.debugInformation\&.errName = "-Wmismatched-arg-count";
+350     return "WAmount of arguments supplied does not match the amount of arguments expected\&.";
+351 }
+.fi
+.PP
+Referenced by BBP::esa::TOKEN()\&.
+.SS "\fBBBP::std::conststring\fP BBP::esa::esaProcessor::emitProcedure ()"
+
+.PP
+Definition at line 210 of file Backend\&.cpp\&.
+.PP
+.nf
+211 {
+212     // Before doing anything, emit a 'ret 0'
+213     setInstruction(userspace::CTRL, userspace::ret, 0, 1);
+214     expectLiteral(0);
+215     numericalArgument({ 0 }, false);
+216     emitInstruction();
+217     resetInstruction();
+218 
+219     // Create procedure\&.
+220     dataEntry procedure(nullptr, 0, std::ELF::SYM_FUNC | std::ELF::SYM_GLOBAL);
+221     
+222     // Define symbol
+223     symbol = std::Lexer::lex_thing{ &esaParser, startedAt, endedAt, nullptr, esa::PROCEDURE_T, procedureArgumentCount, procedureHash };
+224 
+225     // Mangle procedure name
+226     application->mangle(procedureName\&.static_data, symbol, procedure);
+227 
+228     // Hash identifier
+229     std::hash_t hash = 0;
+230 
+231     for (std::index_t index = 0; index < procedureName\&.dataSize; index++)
+232     {
+233         // Get character
+234         std::string_element c = procedureName\&.static_data[index];
+235 
+236         // If c is 0, break out of loop\&.
+237         if (c == 0)
+238             break;
+239 
+240         // Operate on the hash
+241         hash = (hash * 33) + c;
+242     }
+243 
+244 
+245     // Yeah yeah extraction whatever idc right now
+246     // Check for symbol memory uniqueness, since an overwrite could loose data
+247     if (application->builder\&.symbols[procedure\&.symbol]\&.isMemUnique)
+248         throw std::exception("Symbol overwrite looses unique data\&.", EADDRINUSE);
+249 
+250     // Check if procedure already exists
+251     std::hash_t hasher = 0;
+252     std::word byteSize = 0;
+253     std::index_t existingSymbol = lookupSymbol(procedureNameStart, procedureNameEnd, &byteSize, hasher);
+254     bool symbolExists = existingSymbol != 0;
+255 
+256     // if symbol exists and is not 'extern'
+257     if (symbolExists && application->builder\&.symbols[existingSymbol]\&.shndx())
+258         return "EProcedure name already in use\&.";
+259 
+260     // if symbol exists, is marked 'extern', but is a procedure,
+261     if (symbolExists && !(application->builder\&.symbols[existingSymbol]\&.info() & std::ELF::SYM_FUNC))
+262         return "ECannot do that\&."; // Cannot do that
+263 
+264     // If exists, override
+265     if (symbolExists)
+266         application->addSymbol(procedure, application->mangledPage\&.static_data, existingSymbol);
+267     else
+268     {
+269         // If symbol has reached max, extend symbols
+270         if (application->builder\&.symbols\&.atElement >= application->builder\&.symbolCount)
+271             application->appendSymbols(6);
+272 
+273         application->addSymbol(procedure, application->mangledPage\&.static_data);
+274     }
+275 
+276     // Then also update the remaining values
+277     application->builder\&.symbols[procedure\&.symbol]\&.shndx(externProcedure ? 0 : application->builder\&.text);
+278     application->builder\&.symbols[procedure\&.symbol]\&.value(externProcedure ? 0 : startedAt);
+279     application->builder\&.symbols[procedure\&.symbol]\&.size(externProcedure ? 0 : (endedAt - startedAt));
+280 
+281     // Emit symbol hash\&.
+282     bool couldHash = application->emitSymbolHash(hash, procedure\&.symbol);
+283 
+284     if (!couldHash)
+285         std::printf("ELF Builder: Failed to hash symbol\n");
+286 
+287     return nullptr;
+288 
+289 }
+.fi
+.PP
+References BBP::userspace::CTRL, EADDRINUSE, BBP::std::exception(), BBP::Locale::Japanese::hash, BBP::std::printf(), BBP::esa::PROCEDURE_T, BBP::userspace::ret, BBP::std::ELF::SYM_FUNC, BBP::std::ELF::SYM_GLOBAL, and BBP::esa::dataEntry::symbol\&.
+.PP
+Referenced by BBP::esa::ACTION(), and BBP::esa::TOKEN()\&.
+.SS "void BBP::esa::esaProcessor::emitRelocation (\fBstd::index_t\fP symbolIndex)"
+
+.PP
+Definition at line 74 of file Backend\&.cpp\&.
+.PP
+.nf
+75 {
+76     // Calculate offset of instruction from \&.text (in words)
+77     std::word offset = calculateArgumentOffset();
+78 
+79     // Create data entry
+80     std::ELF::RelEntry rel_entry;
+81     rel_entry\&.r_offset = application->builder\&._text()\&.stack\&.atElement + offset;
+82     rel_entry\&.r_info = symbolIndex << 8 | 1;
+83 
+84     std::word rel_data[2] = { rel_entry\&.r_offset, rel_entry\&.r_info };
+85 
+86     dataEntry entry((char *)rel_data, 8, 0);
+87     application->addDataToSection(application->builder\&.rel_text, entry);
+88 }
+.fi
+.PP
+References BBP::std::ELF::RelEntry::r_info, and BBP::std::ELF::RelEntry::r_offset\&.
+.SS "void BBP::esa::esaProcessor::expectAddress (\fBstd::byte\fP n)"
+
+.PP
+Definition at line 366 of file Frontend\&.cpp\&.
+.PP
+.nf
+367 {
+368     // Reset prefix
+369     instruction\&.header\&.prefix |= (0x1 << n);
+370 
+371     // Reset flags
+372     instruction\&.args[n]\&.isLiteralArg = false;
+373     instruction\&.args[n]\&.anyvalue = false;
+374 }
+.fi
+.PP
+References BBP::Locale::Japanese::n\&.
+.PP
+Referenced by BBP::esa::INSTRUCTION()\&.
+.SS "void BBP::esa::esaProcessor::expectAny (\fBstd::byte\fP n)"
+
+.PP
+Definition at line 376 of file Frontend\&.cpp\&.
+.PP
+.nf
+377 {
+378     // Only this needs to be set
+379     instruction\&.args[n]\&.anyvalue = true;
+380 }
+.fi
+.PP
+References BBP::Locale::Japanese::n\&.
+.PP
+Referenced by BBP::esa::INSTRUCTION()\&.
+.SS "\fBBBP::std::errno_t\fP BBP::esa::esaProcessor::ExpectDelimiters (\fBstd::Lexer::lex_context\fP * context, \fBstd::index_t\fP argc, \fBstd::Lexer::lex_keywordhandle\fP const argv[], bool singleLine, \fBstd::index_t\fP min, \fBstd::index_t\fP maxDepth, \fBstd::Lexer::lex_keywordhandle\fP escape, \fBstd::Lexer::lex_keywordhandle\fP stop)"
+
+.PP
+Definition at line 5 of file Auxiliary\&.cpp\&.
+.PP
+.nf
+6 {
+7     // Check if context is valid
+8     if (context == nullptr)
+9         return EFAULT; // Bad context address\&.
+10 
+11     // If argc is not 0, check if argv is not null
+12     if (argc != 0 && argv == nullptr)
+13         return EFAULT; // Bad argv address\&.
+14 
+15     // If argc is not a multiple of 2, throw error
+16     if (argc % 2 != 0)
+17         return EDOM; // EDOM because odd numbers are not within the domain of this function
+18 
+19     // Reset delimiter stack
+20     delimiterStack\&.atElement = 0;
+21 
+22     // Reset depth
+23     delimiterDepth = 0;
+24 
+25     // Save index of here
+26     std::index_t start = context->atPosition;
+27     context->debugInformation\&.highlight = start;
+28 
+29     // This variable stores the 'depth' of the delimiter
+30     std::word depth = 0;
+31 
+32     // Although possible through the stack alone, allocating a new variable optimizes the read time and thus the speed of this function\&.
+33     std::Lexer::lex_keywordhandle lastIndex = argc; // Initializing this to 'argc' tells the algorithm to ignore this value\&.
+34 
+35     // If true, the depth is increasing\&. Otherwise, decreasing\&.
+36     bool isAscending = true;
+37 
+38     // If false, the minimum amount of things hasn't been reached yet\&.
+39     bool hasReachedMinimum = min == 0;
+40 
+41     do
+42     {
+43         // Get handle to next keyword
+44         handle = context->moveToNextKeyword();
+45 
+46         // Update delimiter depth
+47         delimiterDepth = (delimiterDepth < depth) ? depth : delimiterDepth;
+48 
+49         // If handle is EOF, return error
+50         if (handle == context->keywordStack\&.atElement)
+51             return EEOF;
+52 
+53         // Get keyword
+54         std::Lexer::lex_keyword *keyword = &context->keywordStack[handle];
+55 
+56         // If handle is new line or stop, and delimiter stack is not balanced, and expected within one line, return error
+57         if ((context->isNewLine(keyword->word[0]) || handle == stop) && depth && (singleLine || handle == stop))
+58             return ELINEEND;
+59 
+60         // Otherwise, if we have reached 'stop' normally, just break out\&.
+61         if (handle == stop && depth == 0)
+62             break;
+63 
+64         // Aux variables
+65         bool isIncluded = false;
+66         std::index_t index = 0;
+67 
+68         // Check if delimiter is included in argv
+69         for (; index < argc; index++)
+70         {
+71             if (argv[index] != handle)
+72                 continue;
+73             isIncluded = true;
+74             break;
+75         }
+76 
+77         // If handle is escape, and also less than EOF, advance one position and then skip\&.
+78         if (handle == escape && handle != context->keywordStack\&.atElement)
+79         {
+80             context->atPosition++;
+81             continue;
+82         }
+83         
+84         // If not included, just skip
+85         if (!isIncluded)
+86             continue;
+87 
+88         // The first check checks to see if the handle matches the closing delimiter of the last found delimiter
+89         if (index == lastIndex + 1)
+90         {
+91             // This delimiter is the closing delimiter to the last found delimiter\&.
+92             // Decrease the depth by 1, and retrieve the last index from stack\&.
+93             depth--;
+94             
+95             // If there is depth (I\&.E\&., there is still a closing delimiter needed)
+96             if (depth)
+97             {
+98                 for (std::index_t i = 0; i < argc; i++)
+99                 {
+100                     if (argv[i] != delimiterStack[depth - 1])
+101                         continue;
+102                     lastIndex = i;
+103                     break;
+104                 }
+105             }
+106 
+107             // Since this must be first closer, set index here
+108             if (isAscending)
+109                 firstCloser = context->atPosition - keyword->length;
+110 
+111             // Set flag to descending
+112             isAscending = false;
+113 
+114             // Then add the handle to the stack
+115             delimiterStack << handle;
+116             continue;
+117         }
+118 
+119         // Set last index to this
+120         lastIndex = index;
+121 
+122         // If true, this handle is for an opening keyword\&.
+123         bool isOpening = (index % 2 == 0);
+124 
+125         // If is opening and ascending, overwrite previous last opener
+126         if (isOpening && isAscending)
+127             lastOpener = context->atPosition;
+128 
+129         // If is not opening but still ascending, its about to close\&. Write once to firstCloser
+130         if (!isOpening && isAscending)
+131             firstCloser = context->atPosition - keyword->length;
+132 
+133         // If not opening, the sequence must be descending\&.
+134         isAscending &= isOpening;
+135 
+136         // If the handle is closing, and the depth is 0, return error\&.\&.
+137         if (!isOpening && depth == 0)
+138             return ENOANO; // No anode (because closing delimiters are cathodes)\&.
+139 
+140         // If the handle is closing, and is not the expected type, return error\&.\&.
+141         if (!isOpening && lastIndex > argc - 1)
+142             return EILSEQ; // Illegal sequence of delimiters\&.
+143 
+144         // If the handle is opening, and the sequence is descending, return error\&.
+145         if (isOpening && !isAscending)
+146             return EUNFOCS; // Try again, but with the other function\&.
+147 
+148         // Increase depth by one\&.
+149         depth++;
+150         hasReachedMinimum |= depth >= min;
+151 
+152         // If opening, check for max depth\&. If would cause overflow, return error\&.
+153         if (isOpening && depth > maxDepth)
+154             return EOVERFLOW;
+155 
+156         // Move handle to stack
+157         delimiterStack << handle;
+158 
+159 
+160     } while (depth);
+161 
+162     // If minimum has not been reached, return error
+163     if (!hasReachedMinimum)
+164         return ENOMSG; // Nothing was found, so no message\&.
+165 
+166     // If done successfully, congrats! My algorithm worked! Good job me :)
+167     return ENONE;
+168 }
+.fi
+.PP
+References BBP::std::Stack< K >::atElement, BBP::std::Lexer::lex_context::atPosition, BBP::std::Lexer::lex_context::debugInformation, delimiterDepth, delimiterStack, EDOM, EEOF, EFAULT, EILSEQ, ELINEEND, ENOANO, ENOMSG, ENONE, EOVERFLOW, EUNFOCS, firstCloser, handle, BBP::std::Lexer::lex_debugInfo::highlight, BBP::Locale::Japanese::i, BBP::std::Lexer::lex_context::isNewLine(), BBP::std::Lexer::lex_context::keywordStack, lastOpener, BBP::std::Lexer::lex_keyword::length, BBP::std::Lexer::lex_context::moveToNextKeyword(), and BBP::std::Lexer::lex_keyword::word\&.
+.PP
+Referenced by BBP::esa::PRAGMA()\&.
+.SS "void BBP::esa::esaProcessor::expectLiteral (\fBstd::byte\fP n)"
+
+.PP
+Definition at line 356 of file Frontend\&.cpp\&.
+.PP
+.nf
+357 {
+358     // Reset prefix
+359     instruction\&.header\&.prefix &= ~(0x1 << n);
+360 
+361     // Reset flags
+362     instruction\&.args[n]\&.isLiteralArg = true;
+363     instruction\&.args[n]\&.anyvalue = false;
+364 }
+.fi
+.PP
+References BBP::Locale::Japanese::n\&.
+.PP
+Referenced by BBP::esa::INSTRUCTION()\&.
+.SS "\fBBBP::std::hash_t\fP BBP::esa::esaProcessor::hashIdentifier (\fBBBP::esa::dataEntry\fP & entry)"
+
+.PP
+Definition at line 26 of file Backend\&.cpp\&.
+.PP
+.nf
+27 {
+28     // Save the identifier
+29     saveIdentifier(symbol\&.start, symbol\&.end);
+30 
+31     // Define hash number 'h'
+32     std::hash_t hash = 0;
+33 
+34     for (std::index_t index = 0; index < Identifier\&.dataSize; index++)
+35     {
+36         // Get character
+37         std::string_element c = Identifier\&.static_data[index];
+38 
+39         // If c is 0, break out of loop\&.
+40         if (c == 0)
+41             break;
+42 
+43         // Operate on the hash
+44         hash = (hash * 33) + c;
+45     }
+46 
+47     // Return hash
+48     return hash;
+49 }
+.fi
+.PP
+References BBP::Locale::Japanese::hash, and Identifier\&.
+.SS "\fBBBP::std::conststring\fP BBP::esa::esaProcessor::includeFile (\fBstd::Lexer::lex_context\fP * context, \fBstd::index_t\fP idx)"
+
+.PP
+Definition at line 242 of file Auxiliary\&.cpp\&.
+.PP
+.nf
+243 {
+244 
+245     // allocate a page for path
+246     std::static_string<std::max_path_length> requestedPath = std::static_string<std::max_path_length>();
+247 
+248     // Then write into requestedPath, the file requested
+249     char nul = '\0';
+250     for (std::index_t index = lastOpener, k = 0; index < firstCloser; index++, k++)
+251         __UNSAFE__(std::write)(&requestedPath, __UNSAFE__(std::read)(&context->data, index), k);
+252     __UNSAFE__(std::write)(&requestedPath, nul, firstCloser - lastOpener);
+253 
+254     // Now that we know which file we want to include, we can do this
+255     std::FILE file;
+256     std::PATH imported;
+257     std::PATH filename(requestedPath);
+258     bool opened = false;
+259 
+260     // Choose which paths to search based on delimiter used
+261     switch (delimiterStack[0])
+262     {
+263     case DOUBLEQUOTES_HANDLE:
+264         opened = includeFromPath(file, filename, context->usrpaths, imported);
+265         break;
+266     case OPENANGLEBRACKET_HANDLE:
+267         opened = includeFromPath(file, filename, context->syspaths, imported);
+268         break;
+269     }
+270 
+271     if (opened)
+272     {
+273 
+274         // Start including file if verbose flag is set
+275         if (beVerbose)
+276             std::printf("Including file: '%s'\n\n", imported\&.relName());
+277 
+278         // Ensure null termination\&. Don't know why I need to do this\&. Shouldn't this be done somewhere else already anyway?
+279         imported\&.fileName()[std::strlen(requestedPath)] = 0;
+280 
+281         // Save old file name
+282         std::static_string<128> oldFileName;
+283         std::memcpy(context->activeFile, oldFileName, 128);
+284 
+285         // Save old file data
+286         std::string oldString(context->data);
+287         std::size_t oldLength = context->dataSize;
+288 
+289         // Save debug information
+290         std::Lexer::lex_debugInfo oldInfo(context->debugInformation);
+291 
+292         // Add the included path into the usr path
+293         context->usrpaths <<= imported\&.pathName();
+294 
+295         // Wipe all the debug data before and after parsing
+296         context->resetInfo(context->debugInformation);
+297 
+298         // Keep track of comment and literal depth
+299         char commentD = context->commentDepth;
+300         char literalD = context->literalDepth;
+301         std::index_t posNow = context->atPosition;
+302         context->commentDepth = 0;
+303         context->literalDepth = 0;
+304 
+305         // Start parsing second file
+306         context->parseFile(imported);
+307 
+308         // Close the file since we are done with it\&.
+309         file\&.close();
+310 
+311         // Restore comment and literal depths
+312         context->atPosition = posNow;
+313         context->literalDepth = literalD;
+314         context->commentDepth = commentD;
+315 
+316         // Wipe all the debug data before and after parsing
+317         context->resetInfo(context->debugInformation);
+318 
+319         // Remove that path again\&. Since 'requestedPath' is not needed anymore, just get rid of it\&.
+320         context->usrpaths >>= &requestedPath\&.data;
+321 
+322         // Restore debug information
+323         context->debugInformation = oldInfo;
+324 
+325         // Restore old file data
+326         context->data = oldString;
+327         context->dataSize = oldLength;
+328 
+329         // Restore old file name
+330         std::memcpy(oldFileName, context->activeFile, 128);
+331 
+332         if (beVerbose)
+333             std::printf("File '%s' done\&. Returning to: '%s'\&.\n", imported\&.relName(), context->activeFile\&.data);
+334 
+335         context->resetInfo(context->debugInformation);
+336         return nullptr;
+337     }
+338 
+339     context->debugInformation\&.highlight = idx;
+340     context->debugInformation\&.highlightLength = firstCloser - idx + 1;
+341     context->debugInformation\&.highlightmsg = "NIncluded here";
+342     return "ENo such file or directory\&.";
+343 }
+.fi
+.PP
+References __UNSAFE__, BBP::std::Lexer::lex_context::activeFile, BBP::std::Lexer::lex_context::atPosition, BBP::std::FILE::close(), BBP::std::Lexer::lex_context::commentDepth, BBP::std::PAGE< T >::data, BBP::std::Lexer::lex_context::data, BBP::std::Lexer::lex_context::dataSize, BBP::std::Lexer::lex_context::debugInformation, DOUBLEQUOTES_HANDLE, BBP::std::PATH::fileName(), BBP::std::Lexer::lex_debugInfo::highlight, BBP::std::Lexer::lex_debugInfo::highlightLength, BBP::std::Lexer::lex_debugInfo::highlightmsg, BBP::std::Lexer::lex_context::literalDepth, BBP::std::memcpy(), OPENANGLEBRACKET_HANDLE, BBP::std::Lexer::lex_context::parseFile(), BBP::std::PATH::pathName(), BBP::std::printf(), BBP::std::read(), BBP::std::PATH::relName(), BBP::std::Lexer::lex_context::resetInfo(), BBP::std::strlen(), BBP::std::Lexer::lex_context::syspaths, BBP::std::Lexer::lex_context::usrpaths, and BBP::std::write()\&.
+.PP
+Referenced by BBP::esa::PRAGMA()\&.
+.SS "bool BBP::esa::esaProcessor::includeFromPath (\fBstd::FILE\fP & file, \fBstd::PATH\fP & filename, \fBstd::Stack\fP< \fBstd::string_element\fP > & dirs, \fBstd::PATH\fP & out)"
+
+.PP
+Definition at line 170 of file Auxiliary\&.cpp\&.
+.PP
+.nf
+171 {
+172     // Save stack state
+173     std::index_t oldPointer = dirs\&.atElement;
+174 
+175     // Create char to write indicies to\&.
+176     char *path = 0;
+177 
+178     // If a file is found, this will be set to true\&.
+179     bool exists = false;
+180 
+181     // Continue for all paths
+182     while (dirs\&.atElement)
+183     {
+184         // Read next path into 'path'
+185         dirs >>= &path;
+186 
+187         // Then create path from stored string\&.
+188         std::PATH searchIn(BBP::std::primaryVolume, path);
+189 
+190         // Make searchIn relative to physical root\&.
+191         searchIn\&.makeAbsolutePath(nullptr);
+192 
+193         // Create path which will eventually become the fullpath\&.
+194         std::PATH rel(filename);
+195 
+196         // Make the file relative to searchin\&.
+197         rel\&.makeAbsolutePath(&searchIn);
+198 
+199         if (beVerbose)
+200             std::printf("Searching directory: %s \&.\&.\&. ", rel\&.relName());
+201 
+202         try
+203         {
+204             // Try to open file\&. If it does not exist, an exception is thrown\&.
+205             file = std::FILE(rel);
+206 
+207             // If this point is reached, file opened succesfully\&.
+208             exists = true;
+209 
+210             // Also write to out
+211             out = rel;
+212 
+213             // Print message
+214             if (beVerbose)
+215                 std::printf("\e[0;32mExists\e[0;37m\&.\n");
+216 
+217             // File exists, exit from loop
+218             break;
+219         }
+220         catch (std::except &e)
+221         {
+222             // File does not exist
+223             if (beVerbose)
+224             {
+225                 if (e\&.code)
+226                     std::printf("\e[0;31mFile does not exist\e[0;37m\n");
+227                 else
+228                     std::printf("\e[0;91mError reading file:\e[0;37m %u\n", e\&.code);
+229             }
+230         }
+231 
+232     }
+233 
+234     // Restore stack state
+235     dirs\&.atElement = oldPointer;
+236 
+237     return exists;
+238 }
+.fi
+.PP
+References BBP::std::Stack< K >::atElement, BBP::Locale::Japanese::e, BBP::std::PATH::makeAbsolutePath(), BBP::std::primaryVolume, BBP::std::printf(), and BBP::std::PATH::relName()\&.
+.SS "void BBP::esa::esaProcessor::logInstruction ()"
+
+.PP
+Definition at line 272 of file Frontend\&.cpp\&.
+.PP
+.nf
+273 {
+274     // Print header
+275     std::printf("Instruction: 0x%02x (0x%02x), %u args\&.\n", instruction\&.header\&.opcode, instruction\&.header\&.suffix, instruction\&.header\&.args);
+276     
+277     for (std::byte i = 0; i < instruction\&.header\&.args; i++)
+278     {
+279         // Print argument number
+280         std::printf("\tArg %u:\t", i);
+281 
+282         // Print argument type
+283         if (!((instruction\&.header\&.prefix >> i) & 1))
+284         {
+285             std::printf("(Literal):\t0x%08x\n", instruction\&.args[i]\&.data);
+286             continue;
+287         }
+288         else
+289             std::printf("(Reference)\t");
+290 
+291         // Check for referenced or dereferenced
+292         if (instruction\&.args[i]\&.dereferenced)
+293             std::printf("*");
+294         
+295         if (instruction\&.args[i]\&.referenced)
+296             std::printf("&");
+297 
+298         if (instruction\&.args[i]\&.dereferenced && instruction\&.args[i]\&.referenced)
+299             std::printf("\e[0;31mILLEGAL\e[0;37m");
+300 
+301         std::printf("\t");
+302 
+303         switch (instruction\&.args[i]\&.offset)
+304         {
+305         case 0b00: // Starts at beginning of this instance
+306             std::printf("Rel: Instance\t");
+307             break;
+308 
+309         case 0b01: // Starts at beginning of whole chain
+310             std::printf("Rel: Chain\t");
+311             break;
+312 
+313         case 0b10: // Starts at beginning of shared user memory
+314             std::printf("Rel: User\t");
+315             break;
+316 
+317         case 0b11: // Starts at beginning of shared system memory
+318             std::printf("Rel: System\t");
+319             break;
+320         }
+321 
+322         std::printf("Page: 0x%01x\t", instruction\&.args[i]\&.data >> 20);
+323         std::printf("Address: 0x%05x\n", instruction\&.args[i]\&.data & 0x4ff);
+324 
+325         std::printf("\t\tTrailers: %u\n", instruction\&.args[i]\&.trailerCount);
+326 
+327         for (std::byte k = 0; k < instruction\&.args[i]\&.trailerCount; k++)
+328             std::printf("\t\tTrailer %u: 0x%08x\n", k, instruction\&.args[i]\&.trailers[k]);
+329 
+330         std::printf("\n");
+331 
+332 
+333     }
+334 
+335 }
+.fi
+.PP
+References BBP::Locale::Japanese::i, and BBP::std::printf()\&.
+.SS "\fBBBP::std::index_t\fP BBP::esa::esaProcessor::lookupSymbol (\fBstd::index_t\fP from, \fBstd::index_t\fP to, \fBstd::word\fP * byteSize, \fBstd::hash_t\fP & hash)"
+
+.PP
+Definition at line 47 of file Secondary\&.cpp\&.
+.PP
+.nf
+48 {
+49     // Calculate hash
+50     for (std::index_t index = from; index < to; index++)
+51     {
+52         // Get character
+53         std::string_element c = std::read(&esaParser\&.data, index);
+54 
+55         // Operate on character
+56         hash = (hash * 33) + c;
+57     }
+58 
+59     // Create page for 32 bit sized values
+60     std::PAGE<std::word> hashTable(2 + application->builder\&.hashBucketCount + application->builder\&.hashChainCount, (std::word *)application->builder\&.sections[application->builder\&.hashtab]\&.data\&.data);
+61 
+62     // Get bucket
+63     std::word bucket = hash % application->builder\&.hashBucketCount;
+64 
+65     // Check what is at bucket
+66     std::word bucketValue = std::read(&hashTable, 2 + bucket);
+67 
+68     // If value is 0, return invalid
+69     if (bucketValue == 0)
+70     {
+71         return 0;
+72     }
+73     else
+74     {
+75         // Move elsewhere later, idc right now\&.
+76         // Walk through each symbol table
+77         char *c = &application->builder\&._strtab()\&.stack[application->builder\&.symbols[bucketValue]\&.name()] + 2;
+78 
+79         // Get string size
+80         std::size_t nameSize = 0;
+81         std::word radix = 1;
+82 
+83         for (; *c; c++)
+84         {
+85             // Get numerical
+86             std::byte numeral = esaParser\&.isDecimalNumeral(*c);
+87 
+88             if (numeral == 0)
+89                 break;
+90 
+91             // Update length
+92             nameSize += (numeral - 10) * radix;
+93             radix *= 10;
+94         }
+95 
+96         for (std::index_t character = 0; character < nameSize; character++)
+97         {
+98             // Get each character to be able to check later
+99             std::string_element c1 = std::read(&esaParser\&.data, from + character);
+100             std::string_element c2 = *(c + character);
+101 
+102             // Compare characters
+103             if (c1 != c2)
+104                 goto start_chain;
+105 
+106         }
+107 
+108         // Get bytesize
+109         c += nameSize + 1;
+110         *byteSize = 0;
+111         radix = 1;
+112 
+113         for (; *c; c++)
+114         {
+115             // Get numerical
+116             std::byte numeral = esaParser\&.isDecimalNumeral(*c);
+117 
+118             if (numeral == 0)
+119                 break;
+120 
+121             // Update length
+122             *byteSize += (numeral - 10) * radix;
+123             radix *= 10;
+124         }
+125 
+126         return bucketValue;
+127 
+128     start_chain:
+129         radix = radix;
+130     }
+131 
+132     // Read chain value
+133     for (std::index_t chainIndex = std::read(&hashTable, 2 + bucket); chainIndex < application->builder\&.hashChainCount; chainIndex++)
+134     {
+135         // Read value at chain
+136         std::word chainValue = std::read(&hashTable, 2 + application->builder\&.hashBucketCount + chainIndex);
+137 
+138         // If chain has no value, return invalid
+139         if (chainValue == 0)
+140             return 0;
+141 
+142         // Walk through each symbol table
+143         char *c = &application->builder\&._strtab()\&.stack[application->builder\&.symbols[chainValue]\&.name()] + 2;
+144 
+145         // Get string size
+146         std::size_t nameSize = 0;
+147         std::word radix = 1;
+148 
+149         for (; *c; c++)
+150         {
+151             // Get numerical
+152             std::byte numeral = esaParser\&.isDecimalNumeral(*c);
+153 
+154             if (numeral == 0)
+155                 break;
+156 
+157             // Update length
+158             nameSize += (numeral - 10) * radix;
+159             radix *= 10;
+160         }
+161 
+162         for (std::index_t character = 0; character < nameSize; character++)
+163         {
+164             // Get each character to be able to check later
+165             std::string_element c1 = std::read(&esaParser\&.data, from + character);
+166             std::string_element c2 = *(c + character);
+167 
+168             // Compare characters
+169             if (c1 != c2)
+170                 goto next_chain;
+171 
+172         }
+173 
+174         // Get bytesize
+175         c += nameSize + 1;
+176         *byteSize = 0;
+177         radix = 1;
+178 
+179         for (; *c; c++)
+180         {
+181             // Get numerical
+182             std::byte numeral = esaParser\&.isDecimalNumeral(*c);
+183 
+184             if (numeral == 0)
+185                 break;
+186 
+187             // Update length
+188             *byteSize += (numeral - 10) * radix;
+189             radix *= 10;
+190         }
+191 
+192         return chainValue;
+193     next_chain:
+194         continue;
+195     }
+196 
+197 
+198 
+199 
+200     return 0;
+201 }
+.fi
+.PP
+References BBP::Locale::Japanese::hash, BBP::std::read(), and BBP::Locale::Japanese::to\&.
+.SS "\fBBBP::std::conststring\fP BBP::esa::esaProcessor::mangleSymbolIdentifier (\fBBBP::esa::dataEntry\fP & entry)"
+
+.PP
+Definition at line 14 of file Backend\&.cpp\&.
+.PP
+.nf
+15 {
+16     // Save the identifier
+17     saveIdentifier(symbol\&.start, symbol\&.end);
+18 
+19     // Then mangle
+20     application->mangle(Identifier\&.static_data, symbol, entry);
+21 
+22     // Return mangled name
+23     return application->mangledPage\&.static_data;
+24 }
+.fi
+.PP
+References Identifier\&.
+.SS "\fBBBP::std::conststring\fP BBP::esa::esaProcessor::markConst ()"
+
+.PP
+Definition at line 4 of file Frontend\&.cpp\&.
+.PP
+.nf
+5 {
+6     // Check if symbol is extern
+7     if (symbol\&.subtype & SYMBOL_TYPE::SYMTMOD_EXTERN)
+8         return "EIllegal 'const': symbol marked extern\&.";
+9 
+10     // If the size for this symbol has already been defined, return error
+11     if (this->symbol\&.subtype & 0b111111100000)
+12         return "EIllegal 'const' after size definition";
+13     // If the symbol has already been hashed, return error
+14     if (this->symbol\&.hash)
+15         return "E'Const' modifier must come before identifier\&.";
+16 
+17     // Check that this is not the access type
+18     if (!lineIsDefiningSymbolDefinition)
+19         return "eModifier 'const' is not a valid access type\&.";
+20 
+21     // Check that symbol isn't already marked const
+22     if (this->symbol\&.subtype & SYMBOL_TYPE::SYMTMOD_CONST)
+23         return "eDuplicate 'const' modifier\&.";
+24 
+25     this->symbol\&.subtype |= SYMBOL_TYPE::SYMTMOD_CONST;
+26 
+27     return nullptr;
+28 }
+.fi
+.PP
+References BBP::std::Lexer::lex_thing::hash, lineIsDefiningSymbolDefinition, BBP::std::Lexer::lex_thing::subtype, symbol, BBP::esa::SYMTMOD_CONST, and BBP::esa::SYMTMOD_EXTERN\&.
+.PP
+Referenced by BBP::esa::ACTION()\&.
+.SS "\fBBBP::std::conststring\fP BBP::esa::esaProcessor::markExtern ()"
+
+.PP
+Definition at line 56 of file Frontend\&.cpp\&.
+.PP
+.nf
+57 {
+58     // Check if symbol is not already marked extern
+59     if (symbol\&.subtype & SYMBOL_TYPE::SYMTMOD_EXTERN)
+60         return "ERemove excess extern\&.";
+61 
+62     // Check if extern comes after name
+63     if (symbol\&.hash)
+64         return "E'Extern' keyword must come before identifier\&.";
+65 
+66     // Check if subtype is anything at all
+67     if (symbol\&.subtype)
+68         return "E'Extern' keyword may not be used with 'Static', 'Virtual', or 'const'\&.";
+69 
+70     // Mark symbol extern
+71     symbol\&.subtype = SYMBOL_TYPE::SYMTMOD_EXTERN;
+72 
+73     // Mark function extern, just in case
+74     externProcedure = true;
+75 
+76     return nullptr;
+77 }
+.fi
+.PP
+References BBP::esa::SYMTMOD_EXTERN\&.
+.PP
+Referenced by BBP::esa::ACTION()\&.
+.SS "\fBBBP::std::conststring\fP BBP::esa::esaProcessor::markStatic ()"
+
+.PP
+Definition at line 79 of file Frontend\&.cpp\&.
+.PP
+.nf
+80 {
+81     // Check if symbol is extern
+82     if (symbol\&.subtype & SYMBOL_TYPE::SYMTMOD_EXTERN)
+83         return "EIllegal 'static': symbol marked extern\&.";
+84 
+85     // If the size for this symbol has already been defined, return error
+86     if (symbol\&.subtype & 0b111111100000)
+87         return "EIllegal 'static' after size definition";
+88 
+89     // If the symbol has already been hashed, return error
+90     if (symbol\&.hash && symbol\&.subtype & SYMBOL_TYPE::SYMTACC_STATIC)
+91         return "E'Static' modifier must come before identifier\&.";
+92     else if (symbol\&.hash)
+93         return "E'Static' keyword must come before identifier\&.";
+94 
+95     // If this is used as a modifier, check if it is right after virtual
+96     if (lineIsDefiningSymbolDefinition && (symbol\&.subtype & SYMBOL_TYPE::SYMTMOD_CONST || symbol\&.subtype & SYMBOL_TYPE::SYMTMOD_EXTERN))
+97         return "E'Static' modifier must come after 'virtual'\&. Modifier ignored\&.";
+98 
+99     // Check if it isn't already used
+100     if (lineIsDefiningSymbolDefinition && symbol\&.subtype & SYMBOL_TYPE::SYMTACC_STATIC)
+101         return "ECannot use modifier 'static' on 'static' symbol access type\&. Modifier ignored\&.";
+102 
+103     if (lineIsDefiningSymbolDefinition && symbol\&.subtype & SYMBOL_TYPE::SYMTMOD_STATIC)
+104         return "eDuplicate 'static' modifier\&.";
+105 
+106     // Static modifier legal\&.
+107     if (lineIsDefiningSymbolDefinition)
+108         symbol\&.subtype |= SYMBOL_TYPE::SYMTMOD_STATIC;
+109     else
+110         symbol\&.subtype = SYMBOL_TYPE::SYMTACC_STATIC;
+111     lineIsDefiningSymbolDefinition = true;
+112 
+113     return nullptr;
+114 }
+.fi
+.PP
+References BBP::esa::SYMTACC_STATIC, BBP::esa::SYMTMOD_CONST, BBP::esa::SYMTMOD_EXTERN, and BBP::esa::SYMTMOD_STATIC\&.
+.PP
+Referenced by BBP::esa::ACTION()\&.
+.SS "\fBBBP::std::conststring\fP BBP::esa::esaProcessor::markVirtual ()"
+
+.PP
+Definition at line 30 of file Frontend\&.cpp\&.
+.PP
+.nf
+31 {
+32     // Check if symbol is extern
+33     if (symbol\&.subtype & SYMBOL_TYPE::SYMTMOD_EXTERN)
+34         return "EIllegal 'virtual': symbol marked extern\&.";
+35 
+36     // If the size for this symbol has already been defined, return error
+37     if (this->symbol\&.subtype & 0b111111100000)
+38         return "EIllegal 'virtual' after size definition";
+39 
+40     // If the symbol has already been hashed, return error
+41     if (this->symbol\&.hash)
+42         return "E'Virtual' keyword must come before identifier\&.";
+43 
+44     // Not a modifier, so if called and line is already being defined it means that the line is illegal
+45     if (lineIsDefiningSymbolDefinition)
+46         return "eMisplaced 'virtual': virtual is not modifier\&.";
+47     lineIsDefiningSymbolDefinition = true;
+48     // Otherwise, flag can be set
+49 
+50     // Since that pretty much eliminates any other case, just set this, and return with success\&.
+51     this->symbol\&.subtype = SYMBOL_TYPE::SYMTACC_VIRTUAL;
+52 
+53     return nullptr;
+54 }
+.fi
+.PP
+References BBP::esa::SYMTACC_VIRTUAL, and BBP::esa::SYMTMOD_EXTERN\&.
+.PP
+Referenced by BBP::esa::ACTION()\&.
+.SS "\fBBBP::std::conststring\fP BBP::esa::esaProcessor::numerical (\fBstd::Lexer::numerical_t\fP numerical, bool isFloat)"
+
+.PP
+Definition at line 6 of file Secondary\&.cpp\&.
+.PP
+.nf
+7 {
+8     // If line is defining whatever, don't do anything
+9     if (lineIsDefiningProcedure)
+10         return nullptr;
+11 
+12     return addNumerical(numerical, isFloat);
+13 }
+.fi
+.PP
+References addNumerical(), and lineIsDefiningProcedure\&.
+.PP
+Referenced by _numerical()\&.
+.SS "\fBBBP::std::conststring\fP BBP::esa::esaProcessor::numericalArgument (\fBstd::Lexer::numerical_t\fP numerical, bool isFloat)"
+
+.PP
+Definition at line 15 of file Secondary\&.cpp\&.
+.PP
+.nf
+16 {
+17     // Check if correct thing is expected
+18     bool expectsLiteral = instruction\&.args[atArgument]\&.isLiteralArg || instruction\&.args[atArgument]\&.anyvalue;
+19 
+20     // Now set to non-literal
+21     expectLiteral(atArgument);
+22 
+23     // Get intermediate and write
+24     std::word intermediate = isFloat ? (*((std::word*)&numerical\&.f)) : numerical\&.i;
+25     instruction\&.args[atArgument]\&.data = intermediate;
+26 
+27     // Move up argument
+28     atArgument++;
+29 
+30     // If literal was not expected, return warning
+31     if (expectsLiteral)
+32         return nullptr;
+33 
+34     esaParser\&.debugInformation\&.errName = "-WUnexpected-arg-type";
+35     return "WDid not expect supplied argument to be numerical literal\&.";
+36 }
+.fi
+.PP
+References BBP::std::Lexer::numerical_t::f, and BBP::std::Lexer::numerical_t::i\&.
+.PP
+Referenced by _numerical(), and BBP::esa::TOKEN()\&.
+.SS "void BBP::esa::esaProcessor::reserveRegisters ()"
+
+.PP
+Definition at line 93 of file EABI\&.cpp\&.
+.PP
+.nf
+94 {
+95     addReservedIdentifier("eax", { 1, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+96     addReservedIdentifier("ax",  { 1 | userspace::LOHW, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+97     addReservedIdentifier("ah",  { 1 | userspace::LOHW | userspace::HIBY, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+98     addReservedIdentifier("al",  { 1 | userspace::LOHW | userspace::LOBY, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+99 
+100     addReservedIdentifier("ecx", { 2, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+101     addReservedIdentifier("cx",  { 2 | userspace::LOHW, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+102     addReservedIdentifier("ch",  { 2 | userspace::LOHW | userspace::HIBY, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+103     addReservedIdentifier("cl",  { 2 | userspace::LOHW | userspace::LOBY, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+104 
+105     addReservedIdentifier("edx", { 3, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+106     addReservedIdentifier("dx",  { 3 | userspace::LOHW, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+107     addReservedIdentifier("dh",  { 3 | userspace::LOHW | userspace::HIBY, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+108     addReservedIdentifier("dl",  { 3 | userspace::LOHW | userspace::LOBY, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+109 
+110     addReservedIdentifier("ebx", { 4, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+111     addReservedIdentifier("bx",  { 4 | userspace::LOHW, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+112     addReservedIdentifier("bh",  { 4 | userspace::LOHW | userspace::HIBY, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+113     addReservedIdentifier("bl",  { 4 | userspace::LOHW | userspace::LOBY, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+114 
+115     addReservedIdentifier("esi", { 5, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+116     addReservedIdentifier("six", { 5 | userspace::LOHW, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+117     addReservedIdentifier("sih", { 5 | userspace::LOHW | userspace::HIBY, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+118     addReservedIdentifier("sil", { 5 | userspace::LOHW | userspace::LOBY, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+119 
+120     addReservedIdentifier("edi", { 6, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+121     addReservedIdentifier("dix", { 6 | userspace::LOHW, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+122     addReservedIdentifier("dih", { 6 | userspace::LOHW | userspace::HIBY, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+123     addReservedIdentifier("dil", { 6 | userspace::LOHW | userspace::LOBY, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+124 
+125     addReservedIdentifier("tix", { 7, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+126     addReservedIdentifier("st", { 7 | userspace::HIHW, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+127     addReservedIdentifier("ob", { 7 | userspace::HIHW | userspace::HIBY, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+128     addReservedIdentifier("tb", { 7 | userspace::HIHW | userspace::LOBY, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+129     addReservedIdentifier("ct", { 7 | userspace::LOHW, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+130     addReservedIdentifier("pp", { 7 | userspace::LOHW | userspace::HIBY, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+131     addReservedIdentifier("tp", { 7 | userspace::LOHW | userspace::LOBY, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+132 
+133     addReservedIdentifier("ssx", { 8, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+134     addReservedIdentifier("hv", { 8 | userspace::HIHW, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+135     addReservedIdentifier("ho", { 8 | userspace::HIHW | userspace::HIBY, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+136     addReservedIdentifier("ht", { 8 | userspace::HIHW | userspace::LOBY, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+137     addReservedIdentifier("ss", { 8 | userspace::LOHW, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+138     addReservedIdentifier("cs", { 8 | userspace::LOHW | userspace::HIBY, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+139     addReservedIdentifier("sf", { 8 | userspace::LOHW | userspace::LOBY, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+140 
+141     addReservedIdentifier("sui", { 9, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+142     addReservedIdentifier("asi", { 9 | userspace::HIHW, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+143     addReservedIdentifier("gsi", { 9 | userspace::LOHW, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+144 
+145     addReservedIdentifier("eip", { 10, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+146     addReservedIdentifier("ip", { 10 | userspace::LOHW, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+147     addReservedIdentifier("ih", { 10 | userspace::LOHW | userspace::HIBY, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+148     addReservedIdentifier("il", { 10 | userspace::LOHW | userspace::LOBY, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+149 
+150     addReservedIdentifier("sip", { 11, false, true, 0, 1, {1, 0, 0, 0}, false, false });
+151 }
+.fi
+.PP
+References BBP::userspace::HIBY, BBP::userspace::HIHW, BBP::userspace::LOBY, and BBP::userspace::LOHW\&.
+.SS "void BBP::esa::esaProcessor::resetInstruction ()"
+
+.PP
+Definition at line 448 of file Frontend\&.cpp\&.
+.PP
+.nf
+449 {
+450     // Clear head
+451     instruction\&.header = userspace::Instruction::Head{ 0, 0, 0, 0, 0 };
+452 
+453     // Clear arguments
+454     for (std::byte i = 0; i < 8; i++)
+455         instruction\&.args[i] = userspace::Instruction::Arg{ 0, false, false, 0, 0, {0, 0, 0, 0}, false, false };
+456 
+457     // Now reset to argument 0
+458     atArgument = 0;
+459 }
+.fi
+.PP
+References BBP::userspace::Instruction::Head::args, and BBP::Locale::Japanese::i\&.
+.PP
+Referenced by BBP::esa::TOKEN()\&.
+.SS "void BBP::esa::esaProcessor::resetSymbol ()"
+
+.PP
+Definition at line 260 of file Frontend\&.cpp\&.
+.PP
+.nf
+261 {
+262     // Reset flags
+263     symbol\&.hash = 0;
+264     symbol\&.subtype = 0;
+265     lineIsDefiningSymbolDefinition = false;
+266     symbolDataByte\&.atElement = 0;
+267     symbolDataHalfword\&.atElement = 0;
+268     symbolDataWord\&.atElement = 0;
+269 
+270 }
+.fi
+.PP
+Referenced by BBP::esa::TOKEN()\&.
+.SS "\fBBBP::std::conststring\fP BBP::esa::esaProcessor::resolve (\fBstd::index_t\fP from, \fBstd::index_t\fP to)"
+
+.PP
+Definition at line 203 of file Secondary\&.cpp\&.
+.PP
+.nf
+204 {
+205     // Since file names can appear between '<>' or '""' (but not both), create the following handle
+206     std::Lexer::lex_keywordhandle handles[] = { OPENANGLEBRACKET_HANDLE, CLOSEANGLEBRACKET_HANDLE, OPENCURLBRACKET_HANDLE, CLOSECURLBRACKET_HANDLE, OPENSQBRACKET_HANDLE, CLOSESQBRACKET_HANDLE };
+207 
+208     // Store position information
+209     std::index_t position = esaParser\&.atPosition;
+210 
+211     // Move to beginning of word
+212     esaParser\&.atPosition--;
+213     esaParser\&.moveToStartOfThisWord(true);
+214     esaParser\&.atPosition--;
+215 
+216     // Now save start
+217     std::index_t start = esaParser\&.atPosition++;
+218 
+219     // Get delimiters
+220     esaParser\&.inhibitSpecialFunctions = true;
+221     std::errno_t error = ExpectDelimiters(&esaParser, 6, handles, true, 0, 32, BACKSLASH_HANDLE, COMMA_HANDLE);
+222     esaParser\&.inhibitSpecialFunctions = false;
+223 
+224     // Restore position
+225     esaParser\&.atPosition = position;
+226 
+227     switch (error)
+228     {
+229     case EFAULT: // Somehow a nullpointer got here\&. Abort immediately\&.
+230         atArgument++;
+231         return "AEFAULT";
+232     case EDOM: // Somehow, an odd number ended up as argc\&. Either programmer fault, or stack error\&. Abort immediately\&.
+233         atArgument++;
+234         return "AEDOM";
+235     case EEOF: // Found End Of File before anything was found\&.
+236         atArgument++;
+237         return "EEOF";
+238     case ENOMSG:// Found End of Line before anything was found\&.
+239         atArgument++;
+240         return "ENOMSG";
+241     case ELINEEND: // End of Line found before second delimiter
+242         atArgument++;
+243         return "ELINEEND";
+244     case ENOANO: // Attempted to close delimiter before starting it\&.
+245         atArgument++;
+246         return "EENOANO";
+247     case EILSEQ: // Mismatched delimiters
+248         atArgument++;
+249         return "EILSEQ";
+250     case EUNFOCS: // Somehow unfocused?
+251         atArgument++;
+252         return "AUNFOCS";
+253     case EOVERFLOW: // More than one delimiter, can only really happen with <
+254         atArgument++;
+255         return "EOVERFLOW";
+256     }
+257 
+258     std::halfword referenceDepth = 0;
+259     std::halfword dereferenceDepth = 0;
+260     std::word sizeDepth = 0;
+261 
+262     // Parse out delimiters
+263     for (std::index_t i = 0; i < delimiterDepth; i++)
+264     {
+265         switch (delimiterStack[i])
+266         {
+267         case OPENSQBRACKET_HANDLE:
+268             dereferenceDepth++;
+269             break;
+270         case OPENCURLBRACKET_HANDLE:
+271             referenceDepth++;
+272             break;
+273         case OPENANGLEBRACKET_HANDLE:
+274             sizeDepth++;
+275 
+276         }
+277     }
+278 
+279     // Check if the request is legal
+280     if (sizeDepth && (referenceDepth || dereferenceDepth))
+281         return "ECannot do that";
+282 
+283     // Look for symbol
+284     std::hash_t hash = 0;
+285     std::word byteSize = 0;
+286     std::index_t symbol = lookupSymbol(delimiterDepth ? lastOpener : (start + 1), delimiterDepth ? firstCloser : (position - 1), &byteSize, hash);
+287 
+288     // If symbol is 0, try to resolve quasi or reserved\&.
+289     if (symbol == 0)
+290     {
+291 
+292         // Check if value is quasi symbol
+293         for (std::index_t quasiSymbol = 0; quasiSymbol < quasiSymbols\&.dataSize; quasiSymbol++)
+294         {
+295             // Get value
+296             std::hash_t quasiHash = std::read(&quasiSymbols, quasiSymbol);
+297 
+298             // If hash is not equal to hash, skip this part
+299             if (quasiHash != hash)
+300                 continue;
+301 
+302             // Symbol is quasi symbol\&. Get value
+303             std::word quasiValue = std::read(&quasiSymbolValues, quasiSymbol);
+304 
+305             // Check if the user is trying to reference or dereference symbol
+306             if (referenceDepth || dereferenceDepth)
+307             {
+308                 esaParser\&.debugInformation\&.errName = nullptr;
+309                 return "ECannot reference or dereference quasi symbol";
+310             }
+311 
+312             // Check if the user is trying to obtain size info
+313             if (sizeDepth)
+314             {
+315                 // Check if size depth is higher than 2
+316                 if (sizeDepth > 2)
+317                 {
+318                     esaParser\&.debugInformation\&.errName = nullptr;
+319                     return "EInvalid size request: Must be '<<>>' or '<>'\&.";
+320                 }
+321 
+322                 if (sizeDepth == 1)
+323                     return numericalArgument({ 4 }, false);
+324                 return numericalArgument({ 32 }, false);
+325 
+326             }
+327 
+328             return numericalArgument({ quasiValue }, false);
+329         }
+330 
+331         for (std::index_t reservedIndex = 0; reservedIndex < reservedIdentifiers\&.dataSize; reservedIndex++)
+332         {
+333             // Get value
+334             std::hash_t reservedHash = std::read(&reservedIdentifiers, reservedIndex);
+335 
+336             // Skip if not what we are looking for
+337             if (reservedHash != hash)
+338                 continue;
+339 
+340             // Check if depth requested
+341             if (sizeDepth)
+342             {
+343                 // Save numerical error based on thingy
+344                 std::conststring numericalError = nullptr;
+345                 if (sizeDepth == 2)
+346                     numericalError = numericalArgument({ 4 }, false);
+347                 else if (sizeDepth == 1)
+348                     numericalError = numericalArgument({ 32 }, false);
+349                 else
+350                     return "EInvalid size request: Must be '<<>>' or '<>'\&.";
+351 
+352                 esaParser\&.debugInformation\&.errName = "-WUnsupported-size-collapse";
+353                 return "WSize request is not yet supported for registers\&. Defaulting to 4 bytes\&.";
+354             }
+355 
+356             // Get argument
+357             userspace::Instruction::Arg argument = std::read(&reservedIdentifiersValues, reservedIndex);
+358 
+359             // Check if referenced
+360             if (referenceDepth == 1)
+361                 argument\&.referenced = true;
+362             else if (referenceDepth)
+363                 return "ECannot reference a reference\&.";
+364             else
+365                 argument\&.trailers[0] += dereferenceDepth;
+366 
+367             // Now emit data
+368             return setArg(argument);
+369         }
+370 
+371         esaParser\&.resetInfo(esaParser\&.debugInformation);
+372         esaParser\&.debugInformation\&.highlight = start + 1;
+373         esaParser\&.debugInformation\&.highlightLength = position - start - 2;
+374         esaParser\&.debugInformation\&.highlightmsg = "NHere:";
+375         esaParser\&.calculateDebugPosition();
+376 
+377         atArgument++;
+378         return "ELinker error: Cannot find reference for a given identifier\&.";
+379     }
+380 
+381     std::address_t value = application->builder\&.symbols[symbol]\&.value();
+382     std::word atPage = application->builder\&.symbols[symbol]\&.shndx();
+383 
+384     // Check if page is 0
+385     if (atPage == 0)
+386     {
+387 
+388     }
+389 
+390     // If looking for size
+391     if (sizeDepth)
+392     {
+393         // Check if symbol is extern
+394         if (atPage == 0)
+395             return "ECannot resolve sizes for extern symbols\&.";
+396 
+397         // Check if request is legal
+398         if (sizeDepth > 2)
+399             return "ECannot resolve more than 2 size layers\&.";
+400 
+401         // Do action based on depth\&. FIX: What am I trying to do here?
+402         if (sizeDepth == 1)
+403             return numericalArgument({ byteSize }, false);
+404         return numericalArgument({ byteSize * 8 }, false);
+405     }
+406 
+407     // Check if reference was expected
+408     bool expectedReference = !instruction\&.args[atArgument]\&.isLiteralArg || instruction\&.args[atArgument]\&.anyvalue;
+409     esaParser\&.debugInformation\&.errName = "-WUnexpected-arg-type";
+410 
+411     // Get total referenced
+412     BBP::int32_t totalRefDepth = dereferenceDepth - referenceDepth;
+413 
+414     // Check if page is 0
+415     // TODO: Move to different function
+416     if (atPage == 0)
+417         emitRelocation(symbol);
+418 
+419     // Check if request is legal
+420     if (totalRefDepth < -1)
+421         return "ECannot reference a value more than once\&.";
+422 
+423     // If totalRefDepth is -1, emit symbol
+424     if (totalRefDepth == -1)
+425         return setReference(value, 1);
+426     
+427     // Otherwise, just emit dereferenced\&.
+428     return setDereference(value, atPage, totalRefDepth + 1);
+429 }
+.fi
+.PP
+References BBP::userspace::argument, BACKSLASH_HANDLE, CLOSEANGLEBRACKET_HANDLE, CLOSECURLBRACKET_HANDLE, CLOSESQBRACKET_HANDLE, COMMA_HANDLE, BBP::std::conststring, EDOM, EEOF, EFAULT, EILSEQ, ELINEEND, ENOANO, ENOMSG, EOVERFLOW, EUNFOCS, BBP::Locale::Japanese::hash, BBP::Locale::Japanese::i, OPENANGLEBRACKET_HANDLE, OPENCURLBRACKET_HANDLE, OPENSQBRACKET_HANDLE, and BBP::std::read()\&.
+.PP
+Referenced by _unkown()\&.
+.SS "void BBP::esa::esaProcessor::saveAndClose ()"
+
+.PP
+Definition at line 57 of file Backend\&.cpp\&.
+.PP
+.nf
+58 {
+59     application->save();
+60     application->close();
+61 
+62     std::activemem->_delete(application);
+63     application = nullptr;
+64 }
+.fi
+.PP
+References BBP::std::ResourceManager::_delete(), and BBP::std::activemem\&.
+.SS "void BBP::esa::esaProcessor::saveIdentifier (\fBstd::index_t\fP start, \fBstd::index_t\fP end)"
+
+.PP
+Definition at line 7 of file Backend\&.cpp\&.
+.PP
+.nf
+8 {
+9     for (BBP::std::index_t idx = start, n = 0; idx < end; idx++, n++)
+10         Identifier\&.static_data[n] = BBP::esa::processor\&.esaParser\&.data\&.data[idx];
+11     Identifier\&.static_data[end - start] = 0;
+12 }
+.fi
+.PP
+References BBP::std::PAGE< T >::data, BBP::std::Lexer::lex_context::data, esaParser, Identifier, BBP::Locale::Japanese::n, and BBP::esa::processor\&.
+.SS "\fBBBP::std::conststring\fP BBP::esa::esaProcessor::setArg (\fBuserspace::Instruction::Arg\fP & arg)"
+
+.PP
+Definition at line 433 of file Frontend\&.cpp\&.
+.PP
+.nf
+434 {
+435     // If arg is literal, do this
+436     if (arg\&.isLiteralArg)
+437         return numericalArgument({ arg\&.data }, false);
+438 
+439     // Otherwise, do the following
+440     if (arg\&.referenced)
+441         return setReference(arg\&.data, arg\&.offset);
+442     else if (arg\&.dereferenced)
+443         return setDereference(arg\&.data, arg\&.offset, arg\&.trailers[0]);
+444 
+445     return "ECannot add argument that is of no type\&.";
+446 }
+.fi
+.PP
+References BBP::userspace::Instruction::Arg::data, BBP::userspace::Instruction::Arg::dereferenced, BBP::userspace::Instruction::Arg::isLiteralArg, BBP::userspace::Instruction::Arg::offset, BBP::userspace::Instruction::Arg::referenced, and BBP::userspace::Instruction::Arg::trailers\&.
+.SS "\fBBBP::std::conststring\fP BBP::esa::esaProcessor::setDereference (\fBstd::word\fP address, \fBstd::word\fP page, \fBstd::byte\fP count)"
+
+.PP
+Definition at line 412 of file Frontend\&.cpp\&.
+.PP
+.nf
+413 {
+414     // Save value
+415     bool expectedReference = !instruction\&.args[atArgument]\&.isLiteralArg || instruction\&.args[atArgument]\&.anyvalue;
+416 
+417     // Turn this argument into address
+418     expectAddress(atArgument);
+419 
+420     // Set instruction info
+421     instruction\&.args[atArgument]\&.dereferenced = true;
+422     instruction\&.args[atArgument]\&.trailerCount = 1;
+423     instruction\&.args[atArgument]\&.trailers[0] = count;
+424     instruction\&.args[atArgument]\&.data = (page << 20 | address);
+425 
+426     // Increment argument counter and return warning if needed
+427     atArgument++;
+428     if (!expectedReference)
+429         return "WDid not expect supplied argument to be address\&.";
+430     return nullptr;
+431 }
+.fi
+.SS "\fBBBP::std::conststring\fP BBP::esa::esaProcessor::setHash (\fBstd::hash_t\fP hash)"
+
+.PP
+Definition at line 116 of file Frontend\&.cpp\&.
+.PP
+.nf
+117 {
+118     // Cannot hash if: Hash already exists
+119     // Symbol has already been hashed
+120 
+121     // Check if the symbol doesn't already have a hash
+122     if (symbol\&.hash)
+123         return "EIgnoring misplaced identifier\&.";
+124 
+125     symbol\&.hash = hash;
+126 
+127     return nullptr;
+128 }
+.fi
+.PP
+References BBP::Locale::Japanese::hash\&.
+.PP
+Referenced by BBP::esa::TOKEN()\&.
+.SS "void BBP::esa::esaProcessor::setInstruction (\fBuserspace::OPCODES\fP opcode, \fBstd::byte\fP suffix, \fBstd::nibble\fP flags, \fBstd::nibble\fP args)"
+
+.PP
+Definition at line 337 of file Frontend\&.cpp\&.
+.PP
+.nf
+338 {
+339     // Set flags
+340     processor\&.lineIsDefiningSymbolDefinition = false;
+341     processor\&.lineIsDefiningProcedure = false;
+342     processor\&.lineIsDefiningInstruction = true;
+343 
+344     instruction\&.header\&.prefix = suffix;
+345     instruction\&.header\&.opcode = opcode;
+346 
+347     instruction\&.header\&.flags = flags;
+348     instruction\&.header\&.args = args;
+349 
+350     // Set suffix
+351     instruction\&.header\&.suffix = suffix;
+352 
+353 }
+.fi
+.PP
+References BBP::esa::flags, lineIsDefiningInstruction, lineIsDefiningProcedure, lineIsDefiningSymbolDefinition, and BBP::esa::processor\&.
+.PP
+Referenced by BBP::esa::INSTRUCTION()\&.
+.SS "void BBP::esa::esaProcessor::setProcedureAddress ()"
+
+.PP
+Definition at line 461 of file Frontend\&.cpp\&.
+.PP
+.nf
+462 {
+463     startedAt = processor\&.application->builder\&._text()\&.stack\&.atElement;
+464 }
+.fi
+.PP
+References BBP::std::ELF::ELFBuilder::_text(), application, BBP::std::Stack< K >::atElement, BBP::esa::BinaryApplication::builder, BBP::esa::processor, and BBP::std::ELF::SectionBuilder::stack\&.
+.PP
+Referenced by BBP::esa::ACTION()\&.
+.SS "void BBP::esa::esaProcessor::setProcedureArgCount (\fBstd::byte\fP count)"
+
+.PP
+Definition at line 487 of file Frontend\&.cpp\&.
+.PP
+.nf
+488 {
+489     procedureArgumentCount = count;
+490     doneDeclaringProcedure = true;
+491 }
+.fi
+.PP
+Referenced by BBP::esa::TOKEN()\&.
+.SS "void BBP::esa::esaProcessor::setProcedureIdentifier (\fBstd::index_t\fP start, \fBstd::index_t\fP end, \fBstd::hash_t\fP hash)"
+
+.PP
+Definition at line 466 of file Frontend\&.cpp\&.
+.PP
+.nf
+467 {
+468     // Iterate over the text
+469     for (std::index_t index = start, i = 0; index < end; index++, i++)
+470     {
+471         // Write into procedure name the procedure
+472         std::write(&procedureName, std::read(&esaParser\&.data, index), i);
+473     }
+474 
+475     // Then write terminating null
+476     std::string_element nil = 0;
+477     std::write(&procedureName, nil, end - start);
+478 
+479     // Then write hash
+480     procedureHash = hash;
+481 
+482     // And set approriate names
+483     procedureNameStart = start;
+484     procedureNameEnd = end;
+485 }
+.fi
+.PP
+References BBP::Locale::Japanese::hash, BBP::Locale::Japanese::i, BBP::Locale::Japanese::nil, BBP::std::read(), and BBP::std::write()\&.
+.PP
+Referenced by BBP::esa::TOKEN()\&.
+.SS "\fBBBP::std::conststring\fP BBP::esa::esaProcessor::setReference (\fBstd::word\fP address, \fBstd::word\fP page)"
+
+.PP
+Definition at line 393 of file Frontend\&.cpp\&.
+.PP
+.nf
+394 {
+395     // Save value
+396     bool expectedReference = !instruction\&.args[atArgument]\&.isLiteralArg || instruction\&.args[atArgument]\&.anyvalue;
+397 
+398     // Turn this argument into address
+399     expectAddress(atArgument);
+400 
+401     // Set instruction info
+402     instruction\&.args[atArgument]\&.referenced = true;
+403     instruction\&.args[atArgument]\&.data = (page << 20 | address);
+404 
+405     // Increment argument counter and return warning if needed
+406     atArgument++;
+407     if (!expectedReference)
+408         return "WDid not expect supplied argument to be address\&.";
+409     return nullptr;
+410 }
+.fi
+.SS "\fBBBP::std::conststring\fP BBP::esa::esaProcessor::setSize (\fBstd::size_t\fP size)"
+
+.PP
+Definition at line 130 of file Frontend\&.cpp\&.
+.PP
+.nf
+131 {
+132     // Return error if size already defined
+133     if (symbol\&.subtype & 0b111111100000)
+134     {
+135         esaParser\&.debugInformation\&.errName = "-Wsize-redefinition-unsupported";
+136         return "WSize already defined: ignored size directive\&.";
+137     }
+138 
+139     switch (size)
+140     {
+141     case 0: // No size
+142         symbol\&.subtype |= SYMBOL_TYPE::SYMTSZ_NIL;
+143         break;
+144     case 4: // Nibble
+145         symbol\&.subtype |= SYMBOL_TYPE::SYMTSZ_DN;
+146         break;
+147     case 8: // Byte
+148         symbol\&.subtype |= SYMBOL_TYPE::SYMTSZ_DB;
+149         break;
+150     case 16: // Half word
+151         symbol\&.subtype |= SYMBOL_TYPE::SYMTSZ_DH;
+152         break;
+153     case 20: // Index
+154         symbol\&.subtype |= SYMBOL_TYPE::SYMTSZ_DI;
+155         break;
+156     case 24: // Address
+157         symbol\&.subtype |= SYMBOL_TYPE::SYMTSZ_DA;
+158         break;
+159     case 32: // Word
+160         symbol\&.subtype |= SYMBOL_TYPE::SYMTSZ_DW;
+161         break;
+162     default: // Unkown
+163         symbol\&.subtype |= SYMBOL_TYPE::SYMTSZ_DW;
+164         esaParser\&.debugInformation\&.errName = "-Wunkown-size";
+165         return "WUnkown size, defaulting to 32 bits\&.";
+166     }
+167 
+168     // If this comes at a time where a symbol isn't defined, return error
+169     if (!lineIsDefiningSymbolDefinition)
+170     {
+171         esaParser\&.debugInformation\&.errName = "-Wanonymous-size-declaration";
+172         return "WSize declaration for anonymous symbols will be ignored\&.";
+173     }
+174 
+175 }
+.fi
+.PP
+References BBP::esa::SYMTSZ_DA, BBP::esa::SYMTSZ_DB, BBP::esa::SYMTSZ_DH, BBP::esa::SYMTSZ_DI, BBP::esa::SYMTSZ_DN, BBP::esa::SYMTSZ_DW, and BBP::esa::SYMTSZ_NIL\&.
+.PP
+Referenced by BBP::esa::TOKEN()\&.
+.SS "void BBP::esa::esaProcessor::setupBackend (\fBstd::conststring\fP str, \fBstd::size_t\fP seg, \fBstd::size_t\fP sec, \fBstd::size_t\fP sym)"
+
+.PP
+Definition at line 51 of file Backend\&.cpp\&.
+.PP
+.nf
+52 {
+53     application = std::activemem->add_object(new BinaryApplication(str, seg, sec, sym));
+54     application->setSource(esaParser\&.activeFile\&.static_data);
+55 }
+.fi
+.PP
+References BBP::std::activemem, and BBP::std::ResourceManager::add_object()\&.
+.SS "void BBP::esa::esaProcessor::surpressArgCountWarning ()"
+
+.PP
+Definition at line 387 of file Frontend\&.cpp\&.
+.PP
+.nf
+388 {
+389     for (std::byte n = 0; n < 8; n++)
+390         surpress[n] = true;
+391 }
+.fi
+.PP
+References BBP::Locale::Japanese::n\&.
+.SS "void BBP::esa::esaProcessor::surpressArgCountWarning (\fBstd::byte\fP n)"
+
+.PP
+Definition at line 382 of file Frontend\&.cpp\&.
+.PP
+.nf
+383 {
+384     surpress[n] = true;
+385 }
+.fi
+.PP
+References BBP::Locale::Japanese::n\&.
+.PP
+Referenced by BBP::esa::INSTRUCTION()\&.
+.SS "\fBBBP::std::errno_t\fP BBP::esa::esaProcessor::translate (\fBstd::PATH\fP & path, \fBstd::PATH\fP & dst)"
+
+.PP
+Definition at line 152 of file Processor\&.cpp\&.
+.PP
+.nf
+153 {
+154     esaParser\&.onUnkown = _unkown;
+155     esaParser\&.onNumericalLiteral = _numerical;
+156 
+157     setupBackend(dst\&.relName(), 0, 0, 6);
+158     esaParser\&.translateUnit(path);
+159     
+160     if (esaParser\&.illformed || esaParser\&.abort)
+161         discardAndClose();
+162     else
+163         saveAndClose();
+164 
+165     return 0;
+166 }
+.fi
+.PP
+References _numerical(), _unkown(), and BBP::std::PATH::relName()\&.
+.PP
+Referenced by BBP::smile_main()\&.
+.SS "\fBBBP::std::conststring\fP BBP::esa::esaProcessor::unkown (\fBstd::index_t\fP from, \fBstd::index_t\fP to)"
+
+.PP
+Definition at line 38 of file Secondary\&.cpp\&.
+.PP
+.nf
+39 {
+40     esaParser\&.debugInformation\&.highlight = lastspace;
+41     esaParser\&.debugInformation\&.highlightLength = at - lastspace;
+42     esaParser\&.debugInformation\&.highlightmsg = "NHere";
+43 
+44     return "EUnrecognized character sequence\&.";
+45 }
+.fi
+.PP
+References BBP::Locale::Japanese::at\&.
+.PP
+Referenced by _unkown()\&.
+.SH "Field Documentation"
+.PP 
+.SS "\fBesa::BinaryApplication\fP* BBP::esa::esaProcessor::application"
+
+.PP
+Definition at line 102 of file ELSA\&.h\&.
+.PP
+Referenced by BBP::esa::ACTION(), and setProcedureAddress()\&.
+.SS "\fBstd::byte\fP BBP::esa::esaProcessor::atArgument"
+
+.PP
+Definition at line 48 of file ELSA\&.h\&.
+.SS "bool BBP::esa::esaProcessor::beVerbose"
+
+.PP
+Definition at line 131 of file ELSA\&.h\&.
+.PP
+Referenced by BBP::esa::PRAGMA()\&.
+.SS "\fBstd::word\fP BBP::esa::esaProcessor::delimiterDepth = 0"
+
+.PP
+Definition at line 139 of file ELSA\&.h\&.
+.PP
+Referenced by ExpectDelimiters()\&.
+.SS "\fBstd::STATIC_PAGE\fP<\fBstd::Lexer::lex_keywordhandle\fP, 32> BBP::esa::esaProcessor::delimiterPage"
+
+.PP
+Definition at line 137 of file ELSA\&.h\&.
+.SS "\fBstd::Stack\fP<\fBstd::Lexer::lex_keywordhandle\fP> BBP::esa::esaProcessor::delimiterStack"
+
+.PP
+Definition at line 138 of file ELSA\&.h\&.
+.PP
+Referenced by ExpectDelimiters()\&.
+.SS "bool BBP::esa::esaProcessor::doneDeclaringProcedure"
+
+.PP
+Definition at line 59 of file ELSA\&.h\&.
+.PP
+Referenced by BBP::esa::ACTION(), and BBP::esa::TOKEN()\&.
+.SS "\fBstd::index_t\fP BBP::esa::esaProcessor::endedAt"
+
+.PP
+Definition at line 53 of file ELSA\&.h\&.
+.PP
+Referenced by BBP::esa::ACTION(), and BBP::esa::TOKEN()\&.
+.SS "\fBstd::Lexer::lex_context\fP BBP::esa::esaProcessor::esaParser"
+
+.PP
+Definition at line 19 of file ELSA\&.h\&.
+.PP
+Referenced by esaProcessor(), BBP::esa::INSTRUCTION(), and saveIdentifier()\&.
+.SS "bool BBP::esa::esaProcessor::externProcedure"
+
+.PP
+Definition at line 60 of file ELSA\&.h\&.
+.PP
+Referenced by BBP::esa::ACTION(), and BBP::esa::TOKEN()\&.
+.SS "\fBstd::Lexer::lex_keywordhandle\fP BBP::esa::esaProcessor::firstCloser"
+
+.PP
+Definition at line 136 of file ELSA\&.h\&.
+.PP
+Referenced by ExpectDelimiters(), and BBP::esa::PRAGMA()\&.
+.SS "\fBstd::Lexer::lex_keywordhandle\fP BBP::esa::esaProcessor::handle"
+
+.PP
+Definition at line 134 of file ELSA\&.h\&.
+.PP
+Referenced by ExpectDelimiters(), and BBP::esa::PRAGMA()\&.
+.SS "\fBuserspace::Instruction\fP BBP::esa::esaProcessor::instruction"
+
+.PP
+Definition at line 47 of file ELSA\&.h\&.
+.PP
+Referenced by BBP::esa::TOKEN()\&.
+.SS "\fBstd::Lexer::lex_keywordhandle\fP BBP::esa::esaProcessor::lastOpener"
+
+.PP
+Definition at line 135 of file ELSA\&.h\&.
+.PP
+Referenced by ExpectDelimiters(), and BBP::esa::PRAGMA()\&.
+.SS "bool BBP::esa::esaProcessor::lineIsDefiningInstruction"
+
+.PP
+Definition at line 142 of file ELSA\&.h\&.
+.PP
+Referenced by BBP::esa::ACTION(), setInstruction(), and BBP::esa::TOKEN()\&.
+.SS "bool BBP::esa::esaProcessor::lineIsDefiningProcedure"
+
+.PP
+Definition at line 143 of file ELSA\&.h\&.
+.PP
+Referenced by BBP::esa::ACTION(), numerical(), setInstruction(), and BBP::esa::TOKEN()\&.
+.SS "bool BBP::esa::esaProcessor::lineIsDefiningSymbolDefinition"
+
+.PP
+Definition at line 141 of file ELSA\&.h\&.
+.PP
+Referenced by BBP::esa::ACTION(), markConst(), setInstruction(), and BBP::esa::TOKEN()\&.
+.SS "\fBstd::byte\fP BBP::esa::esaProcessor::procedureArgumentCount"
+
+.PP
+Definition at line 58 of file ELSA\&.h\&.
+.PP
+Referenced by BBP::esa::ACTION(), and BBP::esa::TOKEN()\&.
+.SS "\fBstd::hash_t\fP BBP::esa::esaProcessor::procedureHash"
+
+.PP
+Definition at line 54 of file ELSA\&.h\&.
+.PP
+Referenced by BBP::esa::ACTION(), and BBP::esa::TOKEN()\&.
+.SS "\fBstd::STATIC_PAGE\fP<\fBstd::string_element\fP, 100> BBP::esa::esaProcessor::procedureName"
+
+.PP
+Definition at line 55 of file ELSA\&.h\&.
+.PP
+Referenced by BBP::esa::ACTION(), and BBP::esa::TOKEN()\&.
+.SS "\fBstd::index_t\fP BBP::esa::esaProcessor::procedureNameEnd"
+
+.PP
+Definition at line 57 of file ELSA\&.h\&.
+.SS "\fBstd::index_t\fP BBP::esa::esaProcessor::procedureNameStart"
+
+.PP
+Definition at line 56 of file ELSA\&.h\&.
+.SS "\fBstd::STATIC_PAGE\fP<\fBstd::hash_t\fP, 256> BBP::esa::esaProcessor::quasiSymbols"
+
+.PP
+Definition at line 65 of file ELSA\&.h\&.
+.PP
+Referenced by buildSymbol()\&.
+.SS "\fBstd::STATIC_PAGE\fP<\fBstd::word\fP, 256> BBP::esa::esaProcessor::quasiSymbolValues"
+
+.PP
+Definition at line 66 of file ELSA\&.h\&.
+.PP
+Referenced by buildSymbol()\&.
+.SS "\fBstd::STATIC_PAGE\fP<\fBstd::hash_t\fP, 256> BBP::esa::esaProcessor::reservedIdentifiers"
+
+.PP
+Definition at line 63 of file ELSA\&.h\&.
+.PP
+Referenced by addReservedIdentifier()\&.
+.SS "\fBstd::STATIC_PAGE\fP<\fBuserspace::Instruction::Arg\fP, 256> BBP::esa::esaProcessor::reservedIdentifiersValues"
+
+.PP
+Definition at line 64 of file ELSA\&.h\&.
+.PP
+Referenced by addReservedIdentifier()\&.
+.SS "\fBstd::Stack\fP<\fBstd::index_t\fP> BBP::esa::esaProcessor::routineStarts"
+
+.PP
+Definition at line 111 of file ELSA\&.h\&.
+.PP
+Referenced by BBP::esa::ACTION(), and BBP::esa::TOKEN()\&.
+.SS "\fBstd::STATIC_PAGE\fP<\fBstd::index_t\fP, 32> BBP::esa::esaProcessor::routineStartsPage"
+
+.PP
+Definition at line 109 of file ELSA\&.h\&.
+.SS "\fBstd::STATIC_PAGE\fP<\fBstd::index_t\fP, 32> BBP::esa::esaProcessor::routineSubscriberCount"
+
+.PP
+Definition at line 110 of file ELSA\&.h\&.
+.PP
+Referenced by BBP::esa::ACTION(), and BBP::esa::TOKEN()\&.
+.SS "\fBstd::index_t\fP BBP::esa::esaProcessor::startedAt"
+
+.PP
+Definition at line 52 of file ELSA\&.h\&.
+.PP
+Referenced by BBP::esa::ACTION(), and BBP::esa::TOKEN()\&.
+.SS "\fBstd::Stack\fP<\fBstd::index_t\fP> BBP::esa::esaProcessor::subscribers"
+
+.PP
+Definition at line 113 of file ELSA\&.h\&.
+.PP
+Referenced by BBP::esa::ACTION(), and BBP::esa::TOKEN()\&.
+.SS "\fBstd::STATIC_PAGE\fP<\fBstd::index_t\fP, 128> BBP::esa::esaProcessor::subscribersPage"
+
+.PP
+Definition at line 112 of file ELSA\&.h\&.
+.SS "bool BBP::esa::esaProcessor::surpress[8]"
+
+.PP
+Definition at line 49 of file ELSA\&.h\&.
+.PP
+Referenced by BBP::esa::INSTRUCTION()\&.
+.SS "\fBstd::Lexer::lex_thing\fP BBP::esa::esaProcessor::symbol"
+
+.PP
+Definition at line 38 of file ELSA\&.h\&.
+.PP
+Referenced by markConst(), and BBP::esa::TOKEN()\&.
+.SS "\fBstd::Stack\fP<\fBstd::byte\fP> BBP::esa::esaProcessor::symbolDataByte"
+
+.PP
+Definition at line 40 of file ELSA\&.h\&.
+.SS "\fBstd::Stack\fP<\fBstd::halfword\fP> BBP::esa::esaProcessor::symbolDataHalfword"
+
+.PP
+Definition at line 42 of file ELSA\&.h\&.
+.SS "\fBstd::STATIC_PAGE\fP<\fBstd::byte\fP, 512> BBP::esa::esaProcessor::symbolDataPage"
+
+.PP
+Definition at line 39 of file ELSA\&.h\&.
+.SS "\fBstd::PAGE\fP<\fBstd::halfword\fP> BBP::esa::esaProcessor::symbolDataPageHalfword"
+
+.PP
+Definition at line 41 of file ELSA\&.h\&.
+.SS "\fBstd::PAGE\fP<\fBstd::word\fP> BBP::esa::esaProcessor::symbolDataPageWord"
+
+.PP
+Definition at line 43 of file ELSA\&.h\&.
+.SS "\fBstd::Stack\fP<\fBstd::word\fP> BBP::esa::esaProcessor::symbolDataWord"
+
+.PP
+Definition at line 44 of file ELSA\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

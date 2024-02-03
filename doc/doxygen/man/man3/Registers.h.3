@@ -1,0 +1,50 @@
+.TH "Registers.h" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Registers.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stddef\&.h'\fP
+.br
+\fC#include 'Memory\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBBBP::userspace::register_t\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBBBP\fP"
+.br
+.ti -1c
+.RI " \fBBBP::userspace\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBBBP::userspace::registerSize\fP : std::byte { \fBBBP::userspace::eightBit\fP = 1, \fBBBP::userspace::sixteenBit\fP = 2, \fBBBP::userspace::thirtyTwoBit\fP = 4, \fBBBP::userspace::addressSize\fP = 8 }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBBBP::userspace::setRegister\fP (register_t &reg, std::word w)"
+.br
+.ti -1c
+.RI "std::word \fBBBP::userspace::readRegister\fP (register_t &reg)"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

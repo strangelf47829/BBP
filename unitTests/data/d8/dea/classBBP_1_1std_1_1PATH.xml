@@ -1,0 +1,522 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d8/dea/classBBP_1_1std_1_1PATH" kind="class" language="C++" prot="public">
+    <compoundname>BBP::std::PATH</compoundname>
+    <includes refid="d0/d00/FileSys_8h" local="no">FileSys.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d8/dea/classBBP_1_1std_1_1PATH_1a8e658e9d31e41cb8eea1c0f80670ddf7" prot="private" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa628d4212b7e43b58f01273f47ecf4c6" kindref="member">std::static_string</ref>&lt; <ref refid="dd/d98/namespaceBBP_1_1std_1aadf8a9a9117bc2bf65d5bdbdcf2cc6e4" kindref="member">max_path_length</ref> &gt;</type>
+        <definition>std::static_string&lt;max_path_length&gt; BBP::std::PATH::_path</definition>
+        <argsstring></argsstring>
+        <name>_path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="69" column="20" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/dea/classBBP_1_1std_1_1PATH_1a7596f289076295a19e185430606feb88" prot="private" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa628d4212b7e43b58f01273f47ecf4c6" kindref="member">std::static_string</ref>&lt; <ref refid="dd/d98/namespaceBBP_1_1std_1aadf8a9a9117bc2bf65d5bdbdcf2cc6e4" kindref="member">max_path_length</ref> &gt;</type>
+        <definition>std::static_string&lt;max_path_length&gt; BBP::std::PATH::rawPath</definition>
+        <argsstring></argsstring>
+        <name>rawPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="72" column="20" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" bodystart="72" bodyend="-1"/>
+        <referencedby refid="d8/dea/classBBP_1_1std_1_1PATH_1a80a557105fdce73fd255af94f5c33e1d" compoundref="d5/dbb/Path_8cpp" startline="126" endline="177">makeAbsolutePath</referencedby>
+        <referencedby refid="d8/dea/classBBP_1_1std_1_1PATH_1a3676d207fab538041564beb4e3207bef" compoundref="d5/dbb/Path_8cpp" startline="19" endline="32">PATH</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/dea/classBBP_1_1std_1_1PATH_1ab8eb9d1e0f4777e55b34c239e213b303" prot="private" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref></type>
+        <definition>std::index_t BBP::std::PATH::fileNameStartIndex</definition>
+        <argsstring></argsstring>
+        <name>fileNameStartIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="75" column="14" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/dea/classBBP_1_1std_1_1PATH_1a8cb5ba58da83c62f18a1f1f85e2e3602" prot="private" static="no" mutable="no">
+        <type><ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager" kindref="compound">std::ResourceManager</ref> *</type>
+        <definition>std::ResourceManager* BBP::std::PATH::allocator</definition>
+        <argsstring></argsstring>
+        <name>allocator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="78" column="22" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/dea/classBBP_1_1std_1_1PATH_1a83c1b1eccf2858af9fbc691aa5132540" prot="private" static="no" mutable="no">
+        <type><ref refid="dd/d40/classBBP_1_1std_1_1VOLUME" kindref="compound">VOLUME</ref> *</type>
+        <definition>VOLUME* BBP::std::PATH::Volume</definition>
+        <argsstring></argsstring>
+        <name>Volume</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="81" column="8" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d8/dea/classBBP_1_1std_1_1PATH_1a64794a4662ea993081c426afc9313da4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a95c149a6e963e567bd059eb11aef4ac8" kindref="member">std::c_string</ref></type>
+        <definition>BBP::std::c_string BBP::std::PATH::pathName</definition>
+        <argsstring>()</argsstring>
+        <name>pathName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="44" column="15" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/Path.cpp" bodystart="53" bodyend="56"/>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a55693c4a04d73e619277c4eb973f2745">BBP::std::read_a</references>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1af184289074f27f191666564995b2c6d8" compoundref="de/dec/Auxiliary_8cpp" startline="242" endline="343">BBP::esa::esaProcessor::includeFile</referencedby>
+        <referencedby refid="d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_1a4395935c27b686c8c04bd1234f595685" compoundref="d2/d15/Lexer_8cpp" startline="5" endline="23">BBP::std::Lexer::lex_context::translateUnit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d8/dea/classBBP_1_1std_1_1PATH_1a5d44eef11d4945f22dddf9096bd1a261" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a95c149a6e963e567bd059eb11aef4ac8" kindref="member">std::c_string</ref></type>
+        <definition>BBP::std::c_string BBP::std::PATH::fileName</definition>
+        <argsstring>()</argsstring>
+        <name>fileName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="45" column="15" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/Path.cpp" bodystart="45" bodyend="51"/>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a55693c4a04d73e619277c4eb973f2745">BBP::std::read_a</references>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1af184289074f27f191666564995b2c6d8" compoundref="de/dec/Auxiliary_8cpp" startline="242" endline="343">BBP::esa::esaProcessor::includeFile</referencedby>
+        <referencedby refid="d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_1aec4c5d7614d9bdcd3575f4d0c9b52312" compoundref="d2/d15/Lexer_8cpp" startline="25" endline="56">BBP::std::Lexer::lex_context::parseFile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d8/dea/classBBP_1_1std_1_1PATH_1a57ccb35da441b837888a28f111999d37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a95c149a6e963e567bd059eb11aef4ac8" kindref="member">std::c_string</ref></type>
+        <definition>BBP::std::c_string BBP::std::PATH::relName</definition>
+        <argsstring>()</argsstring>
+        <name>relName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="47" column="15" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/Path.cpp" bodystart="58" bodyend="64"/>
+        <referencedby refid="dc/d3b/structBBP_1_1std_1_1FileNode_1adb6991c5ed4b950d5adcc7f721a70c54" compoundref="d0/d00/FileSys_8h" startline="176" endline="184">BBP::std::FileNode::FileNode</referencedby>
+        <referencedby refid="d4/dbd/classBBP_1_1std_1_1FILE_1a785a13b9aac16963608a19e872ee3dc9" compoundref="d9/d63/File_8cpp" startline="29" endline="53">BBP::std::FILE::getINodeIndex</referencedby>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1af184289074f27f191666564995b2c6d8" compoundref="de/dec/Auxiliary_8cpp" startline="242" endline="343">BBP::esa::esaProcessor::includeFile</referencedby>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a32d036e0f72c2f867f4b83b8d5f9a351" compoundref="de/dec/Auxiliary_8cpp" startline="170" endline="238">BBP::esa::esaProcessor::includeFromPath</referencedby>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a63f090f895980cdf3c56e9f52e5d6a63" compoundref="d6/d69/Processor_8cpp" startline="152" endline="166">BBP::esa::esaProcessor::translate</referencedby>
+        <referencedby refid="d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_1a4395935c27b686c8c04bd1234f595685" compoundref="d2/d15/Lexer_8cpp" startline="5" endline="23">BBP::std::Lexer::lex_context::translateUnit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d8/dea/classBBP_1_1std_1_1PATH_1ad2fa2cf7f674261f8f9f1734934d2988" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BBP::std::PATH::isRelativeToRoot</definition>
+        <argsstring>()</argsstring>
+        <name>isRelativeToRoot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="49" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/Path.cpp" bodystart="66" bodyend="72"/>
+        <references refid="d3/dce/stddef_8h_1abe45653ace4e77c9ae4612de5535ff1d" compoundref="d3/dce/stddef_8h" startline="6">__UNSAFE__</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a3cd82d1dfa78c6a8ec6826b4f5331b70">BBP::std::first</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a1d232f50fc4e569e79449970f1b4bb9e">BBP::std::read</references>
+        <referencedby refid="d8/dea/classBBP_1_1std_1_1PATH_1a1fc770b82ae642ebd21b73db32241745" compoundref="d5/dbb/Path_8cpp" startline="252" endline="263">makeRelative</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d8/dea/classBBP_1_1std_1_1PATH_1a521e2ca53abe192a2d2cca989f9d1923" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BBP::std::PATH::isDefinedFromRoot</definition>
+        <argsstring>()</argsstring>
+        <name>isDefinedFromRoot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="50" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/Path.cpp" bodystart="74" bodyend="91"/>
+        <references refid="d3/dce/stddef_8h_1abe45653ace4e77c9ae4612de5535ff1d" compoundref="d3/dce/stddef_8h" startline="6">__UNSAFE__</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a1d232f50fc4e569e79449970f1b4bb9e">BBP::std::read</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a05512e3a63e13122046db97314f58591">BBP::std::strlen</references>
+      </memberdef>
+      <memberdef kind="function" id="d8/dea/classBBP_1_1std_1_1PATH_1a80a557105fdce73fd255af94f5c33e1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/dea/classBBP_1_1std_1_1PATH" kindref="compound">PATH</ref> &amp;</type>
+        <definition>BBP::std::PATH &amp; BBP::std::PATH::makeAbsolutePath</definition>
+        <argsstring>(PATH *currentPath)</argsstring>
+        <name>makeAbsolutePath</name>
+        <param>
+          <type><ref refid="d8/dea/classBBP_1_1std_1_1PATH" kindref="compound">PATH</ref> *</type>
+          <declname>currentPath</declname>
+          <defname>currentDir</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="52" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/Path.cpp" bodystart="126" bodyend="177"/>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="d8/dc2/errno_8h_1a3f317946e043623f9d6b93dbf60e6316" compoundref="d8/dc2/errno_8h" startline="26">EFAULT</references>
+        <references refid="d8/dc2/errno_8h_1a41d5ab3a8a05f9c5eab536c9cfba305b" compoundref="d8/dc2/errno_8h" startline="48">ENAMETOOLONG</references>
+        <references refid="d8/dc2/errno_8h_1a03e689f378f643d16ea7537918528a48" compoundref="d8/dc2/errno_8h" startline="14">ENOENT</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a750ba4c285e0788e84722a30a776b913" compoundref="d4/df4/Except_8cpp" startline="7" endline="18">BBP::std::exception</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a790bf7c69d24a27ebb26dfd83a8980fd" compoundref="de/d5c/Memory_8h" startline="18">BBP::std::max_page_elements</references>
+        <references refid="d8/dea/classBBP_1_1std_1_1PATH_1a7596f289076295a19e185430606feb88" compoundref="d0/d00/FileSys_8h" startline="72">rawPath</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a5fda7007803371f4c5e6050dc0625420">BBP::std::sprintf</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1ad340be18a81465c75a58f55b151fbd85" compoundref="de/d6d/Strings_8cpp" startline="104" endline="108">BBP::std::strcpy</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a05512e3a63e13122046db97314f58591">BBP::std::strlen</references>
+        <referencedby refid="dc/d3b/structBBP_1_1std_1_1FileNode_1adb6991c5ed4b950d5adcc7f721a70c54" compoundref="d0/d00/FileSys_8h" startline="176" endline="184">BBP::std::FileNode::FileNode</referencedby>
+        <referencedby refid="d4/dbd/classBBP_1_1std_1_1FILE_1a785a13b9aac16963608a19e872ee3dc9" compoundref="d9/d63/File_8cpp" startline="29" endline="53">BBP::std::FILE::getINodeIndex</referencedby>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a32d036e0f72c2f867f4b83b8d5f9a351" compoundref="de/dec/Auxiliary_8cpp" startline="170" endline="238">BBP::esa::esaProcessor::includeFromPath</referencedby>
+        <referencedby refid="d8/dea/classBBP_1_1std_1_1PATH_1a1fc770b82ae642ebd21b73db32241745" compoundref="d5/dbb/Path_8cpp" startline="252" endline="263">makeRelative</referencedby>
+        <referencedby refid="d9/d6f/namespaceBBP_1ac0a46562b554fd736c409bf2c645c9ba" compoundref="df/d6c/Shell_8cpp" startline="18" endline="93">BBP::shell</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d8/dea/classBBP_1_1std_1_1PATH_1a634c986ae803f84b7796a7802cc995b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/dea/classBBP_1_1std_1_1PATH" kindref="compound">PATH</ref> &amp;</type>
+        <definition>BBP::std::PATH &amp; BBP::std::PATH::resolveAbsolutes</definition>
+        <argsstring>()</argsstring>
+        <name>resolveAbsolutes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="53" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/Path.cpp" bodystart="179" bodyend="250"/>
+        <references refid="d3/dce/stddef_8h_1abe45653ace4e77c9ae4612de5535ff1d" compoundref="d3/dce/stddef_8h" startline="6">__UNSAFE__</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" compoundref="d4/d54/Locale_8h" startline="67">BBP::Locale::Japanese::i</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a1d232f50fc4e569e79449970f1b4bb9e">BBP::std::read</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a05512e3a63e13122046db97314f58591">BBP::std::strlen</references>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea11fa7c1430d2163f97611f3b123269d4" compoundref="d4/d54/Locale_8h" startline="99">BBP::Locale::Japanese::to</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1aa63573041786d49b7cdb2eec8a921a6a">BBP::std::write</references>
+      </memberdef>
+      <memberdef kind="function" id="d8/dea/classBBP_1_1std_1_1PATH_1a1fc770b82ae642ebd21b73db32241745" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::PATH::makeRelative</definition>
+        <argsstring>(PATH &amp;reference, PATH &amp;dir)</argsstring>
+        <name>makeRelative</name>
+        <param>
+          <type><ref refid="d8/dea/classBBP_1_1std_1_1PATH" kindref="compound">PATH</ref> &amp;</type>
+          <declname>reference</declname>
+        </param>
+        <param>
+          <type><ref refid="d8/dea/classBBP_1_1std_1_1PATH" kindref="compound">PATH</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="55" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/Path.cpp" bodystart="252" bodyend="263"/>
+        <references refid="d8/dea/classBBP_1_1std_1_1PATH_1ad2fa2cf7f674261f8f9f1734934d2988" compoundref="d5/dbb/Path_8cpp" startline="66" endline="72">isRelativeToRoot</references>
+        <references refid="d8/dea/classBBP_1_1std_1_1PATH_1a80a557105fdce73fd255af94f5c33e1d" compoundref="d5/dbb/Path_8cpp" startline="126" endline="177">makeAbsolutePath</references>
+      </memberdef>
+      <memberdef kind="function" id="d8/dea/classBBP_1_1std_1_1PATH_1a7b86cf222fccb3d7ce34b9a332864107" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BBP::std::PATH::PATH</definition>
+        <argsstring>(VOLUME *, std::string &amp;path)</argsstring>
+        <name>PATH</name>
+        <param>
+          <type><ref refid="dd/d40/classBBP_1_1std_1_1VOLUME" kindref="compound">VOLUME</ref> *</type>
+          <defname>v</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1afb582024987be6020cff7542cd771ae7" kindref="member">std::string</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="57" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/Path.cpp" bodystart="16" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dea/classBBP_1_1std_1_1PATH_1a3676d207fab538041564beb4e3207bef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BBP::std::PATH::PATH</definition>
+        <argsstring>(VOLUME *, std::conststring path)</argsstring>
+        <name>PATH</name>
+        <param>
+          <type><ref refid="dd/d40/classBBP_1_1std_1_1VOLUME" kindref="compound">VOLUME</ref> *</type>
+          <defname>v</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">std::conststring</ref></type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="58" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/Path.cpp" bodystart="19" bodyend="32"/>
+        <references refid="d8/dea/classBBP_1_1std_1_1PATH_1a331dec6c0bac5fef3047b741cb21abbf" compoundref="d5/dbb/Path_8cpp" startline="93" endline="124">getFileAndPaths</references>
+        <references refid="d8/dea/classBBP_1_1std_1_1PATH_1a7596f289076295a19e185430606feb88" compoundref="d0/d00/FileSys_8h" startline="72">rawPath</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1ad340be18a81465c75a58f55b151fbd85" compoundref="de/d6d/Strings_8cpp" startline="104" endline="108">BBP::std::strcpy</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a05512e3a63e13122046db97314f58591">BBP::std::strlen</references>
+      </memberdef>
+      <memberdef kind="function" id="d8/dea/classBBP_1_1std_1_1PATH_1a6d5148da60dd768608c959a8c96716f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BBP::std::PATH::PATH</definition>
+        <argsstring>(std::string &amp;path)</argsstring>
+        <name>PATH</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1afb582024987be6020cff7542cd771ae7" kindref="member">std::string</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="59" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/Path.cpp" bodystart="8" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dea/classBBP_1_1std_1_1PATH_1ae853efeb6cc5a12a355146d55c4a04dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BBP::std::PATH::PATH</definition>
+        <argsstring>(std::conststring path)</argsstring>
+        <name>PATH</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">std::conststring</ref></type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="60" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/Path.cpp" bodystart="12" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dea/classBBP_1_1std_1_1PATH_1a2bb4c06acd7fd61e78dfb6e1d99d9ca1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BBP::std::PATH::PATH</definition>
+        <argsstring>(std::PATH &amp;)</argsstring>
+        <name>PATH</name>
+        <param>
+          <type><ref refid="d8/dea/classBBP_1_1std_1_1PATH" kindref="compound">std::PATH</ref> &amp;</type>
+          <defname>path</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="61" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/Path.cpp" bodystart="34" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dea/classBBP_1_1std_1_1PATH_1af170b4167adb7df6a60d0fe4d35f42d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BBP::std::PATH::PATH</definition>
+        <argsstring>()</argsstring>
+        <name>PATH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="62" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/Path.cpp" bodystart="4" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dea/classBBP_1_1std_1_1PATH_1a3ca2b7912314e3d2d235c4a6b744c46f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BBP::std::PATH::~PATH</definition>
+        <argsstring>()</argsstring>
+        <name>~PATH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="64" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/Path.cpp" bodystart="40" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d8/dea/classBBP_1_1std_1_1PATH_1a331dec6c0bac5fef3047b741cb21abbf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/dea/classBBP_1_1std_1_1PATH" kindref="compound">PATH</ref> &amp;</type>
+        <definition>BBP::std::PATH &amp; BBP::std::PATH::getFileAndPaths</definition>
+        <argsstring>()</argsstring>
+        <name>getFileAndPaths</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="83" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/Path.cpp" bodystart="93" bodyend="124"/>
+        <references refid="d3/dce/stddef_8h_1abe45653ace4e77c9ae4612de5535ff1d" compoundref="d3/dce/stddef_8h" startline="6">__UNSAFE__</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a1d232f50fc4e569e79449970f1b4bb9e">BBP::std::read</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a05512e3a63e13122046db97314f58591">BBP::std::strlen</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1aa63573041786d49b7cdb2eec8a921a6a">BBP::std::write</references>
+        <referencedby refid="d8/dea/classBBP_1_1std_1_1PATH_1a3676d207fab538041564beb4e3207bef" compoundref="d5/dbb/Path_8cpp" startline="19" endline="32">PATH</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6">
+        <label>BBP::std::VOLUME</label>
+        <link refid="dd/d40/classBBP_1_1std_1_1VOLUME"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>+volumePath</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>BBP::std::ResourceManager</label>
+        <link refid="d6/d73/classBBP_1_1std_1_1ResourceManager"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-allocations</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-objects</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>BBP::std::AbstractGCEntry</label>
+        <link refid="d7/def/structBBP_1_1std_1_1AbstractGCEntry"/>
+      </node>
+      <node id="5">
+        <label>BBP::std::STATIC_PAGE&lt; T, K &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>BBP::std::PATH</label>
+        <link refid="d8/dea/classBBP_1_1std_1_1PATH"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-_path</edgelabel>
+          <edgelabel>-rawPath</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-Volume</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-allocator</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>BBP::std::STATIC_PAGE&lt; void *, max_allocations &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; void *, max_allocations &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BBP::std::PAGE&lt; max_path_length &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; max_path_length &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>BBP::std::PAGE&lt; BBP::std::AbstractGCEntry * &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; BBP::std::AbstractGCEntry * &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>BBP::std::PAGE&lt; void * &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; void * &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>BBP::std::PAGE&lt; T &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+      </node>
+      <node id="10">
+        <label>BBP::std::STATIC_PAGE&lt; BBP::std::AbstractGCEntry *, max_objects &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; BBP::std::AbstractGCEntry *, max_objects &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BBP::std::STATIC_PAGE&lt; max_path_length &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; max_path_length &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="41" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" bodystart="40" bodyend="85"/>
+    <listofallmembers>
+      <member refid="d8/dea/classBBP_1_1std_1_1PATH_1a8e658e9d31e41cb8eea1c0f80670ddf7" prot="private" virt="non-virtual"><scope>BBP::std::PATH</scope><name>_path</name></member>
+      <member refid="d8/dea/classBBP_1_1std_1_1PATH_1a8cb5ba58da83c62f18a1f1f85e2e3602" prot="private" virt="non-virtual"><scope>BBP::std::PATH</scope><name>allocator</name></member>
+      <member refid="d8/dea/classBBP_1_1std_1_1PATH_1a5d44eef11d4945f22dddf9096bd1a261" prot="public" virt="non-virtual"><scope>BBP::std::PATH</scope><name>fileName</name></member>
+      <member refid="d8/dea/classBBP_1_1std_1_1PATH_1ab8eb9d1e0f4777e55b34c239e213b303" prot="private" virt="non-virtual"><scope>BBP::std::PATH</scope><name>fileNameStartIndex</name></member>
+      <member refid="d8/dea/classBBP_1_1std_1_1PATH_1a331dec6c0bac5fef3047b741cb21abbf" prot="private" virt="non-virtual"><scope>BBP::std::PATH</scope><name>getFileAndPaths</name></member>
+      <member refid="d8/dea/classBBP_1_1std_1_1PATH_1a521e2ca53abe192a2d2cca989f9d1923" prot="public" virt="non-virtual"><scope>BBP::std::PATH</scope><name>isDefinedFromRoot</name></member>
+      <member refid="d8/dea/classBBP_1_1std_1_1PATH_1ad2fa2cf7f674261f8f9f1734934d2988" prot="public" virt="non-virtual"><scope>BBP::std::PATH</scope><name>isRelativeToRoot</name></member>
+      <member refid="d8/dea/classBBP_1_1std_1_1PATH_1a80a557105fdce73fd255af94f5c33e1d" prot="public" virt="non-virtual"><scope>BBP::std::PATH</scope><name>makeAbsolutePath</name></member>
+      <member refid="d8/dea/classBBP_1_1std_1_1PATH_1a1fc770b82ae642ebd21b73db32241745" prot="public" virt="non-virtual"><scope>BBP::std::PATH</scope><name>makeRelative</name></member>
+      <member refid="d8/dea/classBBP_1_1std_1_1PATH_1a7b86cf222fccb3d7ce34b9a332864107" prot="public" virt="non-virtual"><scope>BBP::std::PATH</scope><name>PATH</name></member>
+      <member refid="d8/dea/classBBP_1_1std_1_1PATH_1a3676d207fab538041564beb4e3207bef" prot="public" virt="non-virtual"><scope>BBP::std::PATH</scope><name>PATH</name></member>
+      <member refid="d8/dea/classBBP_1_1std_1_1PATH_1a6d5148da60dd768608c959a8c96716f8" prot="public" virt="non-virtual"><scope>BBP::std::PATH</scope><name>PATH</name></member>
+      <member refid="d8/dea/classBBP_1_1std_1_1PATH_1ae853efeb6cc5a12a355146d55c4a04dd" prot="public" virt="non-virtual"><scope>BBP::std::PATH</scope><name>PATH</name></member>
+      <member refid="d8/dea/classBBP_1_1std_1_1PATH_1a2bb4c06acd7fd61e78dfb6e1d99d9ca1" prot="public" virt="non-virtual"><scope>BBP::std::PATH</scope><name>PATH</name></member>
+      <member refid="d8/dea/classBBP_1_1std_1_1PATH_1af170b4167adb7df6a60d0fe4d35f42d8" prot="public" virt="non-virtual"><scope>BBP::std::PATH</scope><name>PATH</name></member>
+      <member refid="d8/dea/classBBP_1_1std_1_1PATH_1a64794a4662ea993081c426afc9313da4" prot="public" virt="non-virtual"><scope>BBP::std::PATH</scope><name>pathName</name></member>
+      <member refid="d8/dea/classBBP_1_1std_1_1PATH_1a7596f289076295a19e185430606feb88" prot="private" virt="non-virtual"><scope>BBP::std::PATH</scope><name>rawPath</name></member>
+      <member refid="d8/dea/classBBP_1_1std_1_1PATH_1a57ccb35da441b837888a28f111999d37" prot="public" virt="non-virtual"><scope>BBP::std::PATH</scope><name>relName</name></member>
+      <member refid="d8/dea/classBBP_1_1std_1_1PATH_1a634c986ae803f84b7796a7802cc995b3" prot="public" virt="non-virtual"><scope>BBP::std::PATH</scope><name>resolveAbsolutes</name></member>
+      <member refid="d8/dea/classBBP_1_1std_1_1PATH_1a83c1b1eccf2858af9fbc691aa5132540" prot="private" virt="non-virtual"><scope>BBP::std::PATH</scope><name>Volume</name></member>
+      <member refid="d8/dea/classBBP_1_1std_1_1PATH_1a3ca2b7912314e3d2d235c4a6b744c46f" prot="public" virt="non-virtual"><scope>BBP::std::PATH</scope><name>~PATH</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

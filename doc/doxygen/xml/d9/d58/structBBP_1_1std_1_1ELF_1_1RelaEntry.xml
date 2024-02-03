@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d9/d58/structBBP_1_1std_1_1ELF_1_1RelaEntry" kind="struct" language="C++" prot="public">
+    <compoundname>BBP::std::ELF::RelaEntry</compoundname>
+    <includes refid="d1/d5d/ELF32_8h" local="no">ELF32.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d9/d58/structBBP_1_1std_1_1ELF_1_1RelaEntry_1a946a912c375ccbc0381ef3345f509f43" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref></type>
+        <definition>std::address_t BBP::std::ELF::RelaEntry::r_offset</definition>
+        <argsstring></argsstring>
+        <name>r_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" line="227" column="15" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d58/structBBP_1_1std_1_1ELF_1_1RelaEntry_1a495227f8d0c4ffe918121388fb7c31a7" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+        <definition>std::word BBP::std::ELF::RelaEntry::r_info</definition>
+        <argsstring></argsstring>
+        <name>r_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" line="228" column="10" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d58/structBBP_1_1std_1_1ELF_1_1RelaEntry_1ac8608bfa1a6fc4bdfb75440a13dbdbad" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a8adbd1d0e37ca1d674470ea445a255a3" kindref="member">std::halfword</ref></type>
+        <definition>std::halfword BBP::std::ELF::RelaEntry::r_addend</definition>
+        <argsstring></argsstring>
+        <name>r_addend</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" line="229" column="14" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d58/structBBP_1_1std_1_1ELF_1_1RelaEntry_1a1b58048e00204a94ba1a73926f9bf5b0" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a0a3e77ef427182bf2ac13459c7fdf8a5" kindref="member">std::dword</ref></type>
+        <definition>std::dword BBP::std::ELF::RelaEntry::r_offset</definition>
+        <argsstring></argsstring>
+        <name>r_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF64.h" line="200" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF64.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d58/structBBP_1_1std_1_1ELF_1_1RelaEntry_1abb35b87b7dc3060f579e3f59967ec5bd" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a0a3e77ef427182bf2ac13459c7fdf8a5" kindref="member">std::dword</ref></type>
+        <definition>std::dword BBP::std::ELF::RelaEntry::r_info</definition>
+        <argsstring></argsstring>
+        <name>r_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF64.h" line="201" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF64.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d58/structBBP_1_1std_1_1ELF_1_1RelaEntry_1a7d0bb9978552003b2a8b28d72268a10a" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a0a3e77ef427182bf2ac13459c7fdf8a5" kindref="member">std::dword</ref></type>
+        <definition>std::dword BBP::std::ELF::RelaEntry::r_addend</definition>
+        <argsstring></argsstring>
+        <name>r_addend</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF64.h" line="202" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF64.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>uint64_t</label>
+      </node>
+      <node id="4">
+        <label>unsigned int</label>
+      </node>
+      <node id="3">
+        <label>uint16_t</label>
+      </node>
+      <node id="1">
+        <label>BBP::std::ELF::RelaEntry</label>
+        <link refid="d9/d58/structBBP_1_1std_1_1ELF_1_1RelaEntry"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+r_addend</edgelabel>
+          <edgelabel>+r_info</edgelabel>
+          <edgelabel>+r_offset</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+r_addend</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+r_info</edgelabel>
+          <edgelabel>+r_offset</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" line="226" column="15" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" bodystart="226" bodyend="230"/>
+    <listofallmembers>
+      <member refid="d9/d58/structBBP_1_1std_1_1ELF_1_1RelaEntry_1ac8608bfa1a6fc4bdfb75440a13dbdbad" prot="public" virt="non-virtual"><scope>BBP::std::ELF::RelaEntry</scope><name>r_addend</name></member>
+      <member refid="d9/d58/structBBP_1_1std_1_1ELF_1_1RelaEntry_1a7d0bb9978552003b2a8b28d72268a10a" prot="public" virt="non-virtual"><scope>BBP::std::ELF::RelaEntry</scope><name>r_addend</name></member>
+      <member refid="d9/d58/structBBP_1_1std_1_1ELF_1_1RelaEntry_1a495227f8d0c4ffe918121388fb7c31a7" prot="public" virt="non-virtual"><scope>BBP::std::ELF::RelaEntry</scope><name>r_info</name></member>
+      <member refid="d9/d58/structBBP_1_1std_1_1ELF_1_1RelaEntry_1abb35b87b7dc3060f579e3f59967ec5bd" prot="public" virt="non-virtual"><scope>BBP::std::ELF::RelaEntry</scope><name>r_info</name></member>
+      <member refid="d9/d58/structBBP_1_1std_1_1ELF_1_1RelaEntry_1a946a912c375ccbc0381ef3345f509f43" prot="public" virt="non-virtual"><scope>BBP::std::ELF::RelaEntry</scope><name>r_offset</name></member>
+      <member refid="d9/d58/structBBP_1_1std_1_1ELF_1_1RelaEntry_1a1b58048e00204a94ba1a73926f9bf5b0" prot="public" virt="non-virtual"><scope>BBP::std::ELF::RelaEntry</scope><name>r_offset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

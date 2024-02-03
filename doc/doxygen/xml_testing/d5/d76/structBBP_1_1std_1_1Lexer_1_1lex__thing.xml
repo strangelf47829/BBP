@@ -1,0 +1,309 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d5/d76/structBBP_1_1std_1_1Lexer_1_1lex__thing" kind="struct" language="C++" prot="public">
+    <compoundname>BBP::std::Lexer::lex_thing</compoundname>
+    <includes refid="df/d80/Lex_8h" local="no">Lex.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d5/d76/structBBP_1_1std_1_1Lexer_1_1lex__thing_1ade93f6ccd06c258d449671448f282a37" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context" kindref="compound">lex_context</ref> *</type>
+        <definition>lex_context* BBP::std::Lexer::lex_thing::context</definition>
+        <argsstring></argsstring>
+        <name>context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" line="55" column="13" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d76/structBBP_1_1std_1_1Lexer_1_1lex__thing_1aeba33d92323d17705f0ebf8e0420c1e0" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">index_t</ref></type>
+        <definition>index_t BBP::std::Lexer::lex_thing::start</definition>
+        <argsstring></argsstring>
+        <name>start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" line="58" column="9" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" bodystart="58" bodyend="-1"/>
+        <referencedby refid="df/d72/namespaceBBP_1_1esa_1a54588e10bc829ad5d640e64e1356d3ce" compoundref="da/d4c/Actions_8cpp" startline="566" endline="669">BBP::esa::TOKEN</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d76/structBBP_1_1std_1_1Lexer_1_1lex__thing_1a14190c2a752bbdde073cf8c62bf3362e" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">index_t</ref></type>
+        <definition>index_t BBP::std::Lexer::lex_thing::end</definition>
+        <argsstring></argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" line="59" column="9" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" bodystart="59" bodyend="-1"/>
+        <referencedby refid="df/d72/namespaceBBP_1_1esa_1a54588e10bc829ad5d640e64e1356d3ce" compoundref="da/d4c/Actions_8cpp" startline="566" endline="669">BBP::esa::TOKEN</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d76/structBBP_1_1std_1_1Lexer_1_1lex__thing_1ad793b08d71550efeefc426b7078a18a6" prot="public" static="no" mutable="no">
+        <type><ref refid="d5/d76/structBBP_1_1std_1_1Lexer_1_1lex__thing" kindref="compound">lex_thing</ref> *</type>
+        <definition>lex_thing* BBP::std::Lexer::lex_thing::insideOf</definition>
+        <argsstring></argsstring>
+        <name>insideOf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" line="62" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d76/structBBP_1_1std_1_1Lexer_1_1lex__thing_1a3f8235ffaa37dfc1e186a80800fa16d5" prot="public" static="no" mutable="no">
+        <type><ref refid="d2/d65/namespaceBBP_1_1std_1_1Lexer_1a0919309b6b3d20eb4cc50dad9e959613" kindref="member">lex_type</ref></type>
+        <definition>lex_type BBP::std::Lexer::lex_thing::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" line="65" column="10" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d76/structBBP_1_1std_1_1Lexer_1_1lex__thing_1ad483aec6eef1df5ba0d7d692fa1c03bf" prot="public" static="no" mutable="no">
+        <type><ref refid="d2/d65/namespaceBBP_1_1std_1_1Lexer_1a7972d8a1a2243d0b19691b5040b39379" kindref="member">lex_specialty</ref></type>
+        <definition>lex_specialty BBP::std::Lexer::lex_thing::subtype</definition>
+        <argsstring></argsstring>
+        <name>subtype</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" line="68" column="15" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" bodystart="68" bodyend="-1"/>
+        <referencedby refid="d0/dbe/classBBP_1_1esa_1_1BinaryApplication_1a1937e2e6c48c065edd37d61fc2c6f812" compoundref="d2/d8c/EABI_8cpp" startline="5" endline="91">BBP::esa::BinaryApplication::mangle</referencedby>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1adff4e819106da5ac0f0c71b0f50c866a" compoundref="d4/d83/Frontend_8cpp" startline="4" endline="28">BBP::esa::esaProcessor::markConst</referencedby>
+        <referencedby refid="df/d72/namespaceBBP_1_1esa_1ac55c91862e5f70653b813af5c314dea7" compoundref="da/d4c/Actions_8cpp" startline="482" endline="557">BBP::esa::TOKEN</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d76/structBBP_1_1std_1_1Lexer_1_1lex__thing_1a27383683b1b16b0685347a862e8d86d2" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1ad29f433a1c033a551d50291e7d3f50b4" kindref="member">hash_t</ref></type>
+        <definition>hash_t BBP::std::Lexer::lex_thing::hash</definition>
+        <argsstring></argsstring>
+        <name>hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" line="71" column="8" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" bodystart="71" bodyend="-1"/>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1adff4e819106da5ac0f0c71b0f50c866a" compoundref="d4/d83/Frontend_8cpp" startline="4" endline="28">BBP::esa::esaProcessor::markConst</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="15">
+        <label>BBP::std::Stack&lt; std::string_element &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+page</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="template-instance">
+          <edgelabel>&lt; std::string_element &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BBP::std::STATIC_PAGE&lt; 128 &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; 128 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>BBP::std::Lexer::lex_keyword</label>
+        <link refid="d3/d91/structBBP_1_1std_1_1Lexer_1_1lex__keyword"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+action</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>BBP::std::PAGE&lt; K &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; K &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>BBP::std::PAGE&lt; BBP::std::Lexer::lex_keyword &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; BBP::std::Lexer::lex_keyword &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>BBP::std::PAGE&lt; std::string_element &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; std::string_element &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>BBP::std::PAGE&lt; string_element &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="18" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; string_element &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>BBP::std::STATIC_PAGE&lt; T, K &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>BBP::std::STATIC_PAGE&lt; 1024 &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; 1024 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>BBP::std::Lexer::lex_thing</label>
+        <link refid="d5/d76/structBBP_1_1std_1_1Lexer_1_1lex__thing"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+context</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>+insideOf</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>BBP::std::Stack&lt; K &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+page</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>BBP::std::PAGE&lt; 1024 &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="17" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; 1024 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>BBP::std::PAGE&lt; 128 &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; 128 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>BBP::std::Lexer::lex_debugInfo</label>
+        <link refid="db/dca/structBBP_1_1std_1_1Lexer_1_1lex__debugInfo"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+procedure</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>BBP::std::STATIC_PAGE&lt; BBP::std::Lexer::lex_keyword, 256 &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; BBP::std::Lexer::lex_keyword, 256 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BBP::std::Lexer::lex_context</label>
+        <link refid="d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+activeFile</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+debugInformation</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+keywordStack</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+keywords</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>+usrpaths</edgelabel>
+          <edgelabel>+syspaths</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>+usrpathPage</edgelabel>
+          <edgelabel>+syspathPage</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>BBP::std::PAGE&lt; T &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+      </node>
+      <node id="9">
+        <label>BBP::std::Stack&lt; BBP::std::Lexer::lex_keyword &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+page</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="template-instance">
+          <edgelabel>&lt; BBP::std::Lexer::lex_keyword &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" line="53" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" bodystart="52" bodyend="72"/>
+    <listofallmembers>
+      <member refid="d5/d76/structBBP_1_1std_1_1Lexer_1_1lex__thing_1ade93f6ccd06c258d449671448f282a37" prot="public" virt="non-virtual"><scope>BBP::std::Lexer::lex_thing</scope><name>context</name></member>
+      <member refid="d5/d76/structBBP_1_1std_1_1Lexer_1_1lex__thing_1a14190c2a752bbdde073cf8c62bf3362e" prot="public" virt="non-virtual"><scope>BBP::std::Lexer::lex_thing</scope><name>end</name></member>
+      <member refid="d5/d76/structBBP_1_1std_1_1Lexer_1_1lex__thing_1a27383683b1b16b0685347a862e8d86d2" prot="public" virt="non-virtual"><scope>BBP::std::Lexer::lex_thing</scope><name>hash</name></member>
+      <member refid="d5/d76/structBBP_1_1std_1_1Lexer_1_1lex__thing_1ad793b08d71550efeefc426b7078a18a6" prot="public" virt="non-virtual"><scope>BBP::std::Lexer::lex_thing</scope><name>insideOf</name></member>
+      <member refid="d5/d76/structBBP_1_1std_1_1Lexer_1_1lex__thing_1aeba33d92323d17705f0ebf8e0420c1e0" prot="public" virt="non-virtual"><scope>BBP::std::Lexer::lex_thing</scope><name>start</name></member>
+      <member refid="d5/d76/structBBP_1_1std_1_1Lexer_1_1lex__thing_1ad483aec6eef1df5ba0d7d692fa1c03bf" prot="public" virt="non-virtual"><scope>BBP::std::Lexer::lex_thing</scope><name>subtype</name></member>
+      <member refid="d5/d76/structBBP_1_1std_1_1Lexer_1_1lex__thing_1a3f8235ffaa37dfc1e186a80800fa16d5" prot="public" virt="non-virtual"><scope>BBP::std::Lexer::lex_thing</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

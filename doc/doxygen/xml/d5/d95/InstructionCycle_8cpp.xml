@@ -1,0 +1,361 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d5/d95/InstructionCycle_8cpp" kind="file" language="C++">
+    <compoundname>InstructionCycle.cpp</compoundname>
+    <includes refid="dd/d0e/Threading_8h" local="yes">../include/Threading.h</includes>
+    <includes refid="d3/dce/stddef_8h" local="yes">../include/stddef.h</includes>
+    <includes refid="d0/dde/Hyperv_8h" local="yes">../include/Hyperv.h</includes>
+    <includes refid="d6/dd1/stdio_8h" local="yes">../include/stdio.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>Memory.h</label>
+        <link refid="de/d5c/Memory_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../include/Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Strings.h</label>
+        <link refid="de/d53/Strings_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Resources.h</label>
+        <link refid="d0/d33/Resources_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>ELF32.h</label>
+        <link refid="d1/d5d/ELF32_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Stack.hxx</label>
+        <link refid="db/d61/Stack_8hxx"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Memory.hxx</label>
+        <link refid="d5/d4e/Memory_8hxx"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>InstructionCycle.cpp</label>
+        <link refid="d5/d95/InstructionCycle_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>RAE.h</label>
+        <link refid="db/d6a/RAE_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>../include/stdio.h</label>
+        <link refid="d6/dd1/stdio_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>errno.h</label>
+        <link refid="d8/dc2/errno_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>../include/Hyperv.h</label>
+        <link refid="d0/dde/Hyperv_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Registers.h</label>
+        <link refid="d7/d2a/Registers_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>Instructions.h</label>
+        <link refid="d9/dd5/Instructions_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Signal.h</label>
+        <link refid="d0/def/Signal_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Except.h</label>
+        <link refid="dc/d88/Except_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+        <link refid="df/dd8/stdint_8h"/>
+      </node>
+      <node id="5">
+        <label>stddef.h</label>
+        <link refid="d3/dce/stddef_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>BinaryExecutable.h</label>
+        <link refid="d0/dcf/BinaryExecutable_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ELF.h</label>
+        <link refid="db/de5/ELF_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Stack.h</label>
+        <link refid="dc/db6/Stack_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;../include/Threading.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/stddef.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/Hyperv.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/stdio.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1acf57271f473cebb9e24e3afbd9b21e6b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1acf57271f473cebb9e24e3afbd9b21e6b" kindref="member">BBP::userspace::HyperVisor::FetchActiveThreadInstruction</ref>()</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>active<sp/>thread<sp/>is<sp/>within<sp/>bounds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1adb775465cf5dc74bcb411a5969ebddd8" kindref="member">activeThread</ref><sp/>&gt;=<sp/><ref refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1a572509d057f0f9af086655c9ae0fef73" kindref="member">threadCount</ref>)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Signal<sp/>Processor<sp/>fault</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d0/def/Signal_8h_1a82e69d819748cab5933309bba1999f7c" kindref="member">__SIGNAL__</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1a11c4192c4c4747dbbd9300b0bc2db5d7" kindref="member">SIGINV</ref>);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>active<sp/>thread</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread" kindref="compound">Thread</ref><sp/>*currentThread<sp/>=<sp/>&amp;<ref refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1a3cf04c5636244f4eb89c24496b8f709b" kindref="member">threads</ref>.static_data[<ref refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1adb775465cf5dc74bcb411a5969ebddd8" kindref="member">activeThread</ref>];</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>thread<sp/>is<sp/>inactive,<sp/>raise<sp/>signal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a8aed65eed4cf774feb635b04e3aceaad" kindref="member">active</ref><sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d0/def/Signal_8h_1a82e69d819748cab5933309bba1999f7c" kindref="member">__SIGNAL__</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1af139a9b42bd35d198ce80ed26f7d2efe" kindref="member">SIGTHREXP</ref>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>program<sp/>counter<sp/>(eip)<sp/>and<sp/>convert<sp/>from<sp/>virtual<sp/>memory<sp/>to<sp/>physical<sp/>memory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref><sp/>programCounter<sp/>=<sp/>currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1abb9f013e6a43d9115398c80089cc51cc" kindref="member">executable</ref>.<ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a96eb4539fc4f247710a8c1effabea87e" kindref="member">virtualToPhysical</ref>(<ref refid="de/dfe/namespaceBBP_1_1userspace_1a484d19b0d23141290394e25753c95bfb" kindref="member">readRegister</ref>(currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a9c9b4ca599f0708782fb29a88d1bffcc" kindref="member">eip</ref>));</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>instruction</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1aa25d65c649d9afaab483456e6ab9455f" kindref="member">instruction</ref><sp/>=<sp/><ref refid="d0/dfc/structBBP_1_1userspace_1_1Instruction" kindref="compound">userspace::Instruction</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Decode<sp/>word</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1aa25d65c649d9afaab483456e6ab9455f" kindref="member">instruction</ref>.<ref refid="d0/dfc/structBBP_1_1userspace_1_1Instruction_1a850a333d4ee4fa1a045aa229414ec5e6" kindref="member">header</ref>.<ref refid="d5/d1c/structBBP_1_1userspace_1_1Instruction_1_1Head_1a0bb1d184e52ccdf12ddb47b65fafc4c7" kindref="member">prefix</ref><sp/>=<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a1d232f50fc4e569e79449970f1b4bb9e" kindref="member">std::read</ref>(&amp;currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1abb9f013e6a43d9115398c80089cc51cc" kindref="member">executable</ref>.<ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ab75ab6cf2c312ecb34fe62562936ce67" kindref="member">BinaryData</ref>,<sp/>programCounter<sp/>+<sp/>0);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1aa25d65c649d9afaab483456e6ab9455f" kindref="member">instruction</ref>.<ref refid="d0/dfc/structBBP_1_1userspace_1_1Instruction_1a850a333d4ee4fa1a045aa229414ec5e6" kindref="member">header</ref>.<ref refid="d5/d1c/structBBP_1_1userspace_1_1Instruction_1_1Head_1a695669ed5bfd6e8699476e909941f8c7" kindref="member">opcode</ref><sp/>=<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a1d232f50fc4e569e79449970f1b4bb9e" kindref="member">std::read</ref>(&amp;currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1abb9f013e6a43d9115398c80089cc51cc" kindref="member">executable</ref>.<ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ab75ab6cf2c312ecb34fe62562936ce67" kindref="member">BinaryData</ref>,<sp/>programCounter<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1aa25d65c649d9afaab483456e6ab9455f" kindref="member">instruction</ref>.<ref refid="d0/dfc/structBBP_1_1userspace_1_1Instruction_1a850a333d4ee4fa1a045aa229414ec5e6" kindref="member">header</ref>.<ref refid="d5/d1c/structBBP_1_1userspace_1_1Instruction_1_1Head_1ab6d9fd98bf36bf6c5faeafc675f80222" kindref="member">suffix</ref><sp/>=<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a1d232f50fc4e569e79449970f1b4bb9e" kindref="member">std::read</ref>(&amp;currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1abb9f013e6a43d9115398c80089cc51cc" kindref="member">executable</ref>.<ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ab75ab6cf2c312ecb34fe62562936ce67" kindref="member">BinaryData</ref>,<sp/>programCounter<sp/>+<sp/>2);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Decode<sp/>last<sp/>eight<sp/>bits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a4926ba934876e4a1028b9abb47edbc56" kindref="member">std::byte</ref><sp/>flagsAndArgs<sp/>=<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a1d232f50fc4e569e79449970f1b4bb9e" kindref="member">std::read</ref>(&amp;currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1abb9f013e6a43d9115398c80089cc51cc" kindref="member">executable</ref>.<ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ab75ab6cf2c312ecb34fe62562936ce67" kindref="member">BinaryData</ref>,<sp/>programCounter<sp/>+<sp/>3);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1aa25d65c649d9afaab483456e6ab9455f" kindref="member">instruction</ref>.<ref refid="d0/dfc/structBBP_1_1userspace_1_1Instruction_1a850a333d4ee4fa1a045aa229414ec5e6" kindref="member">header</ref>.<ref refid="d5/d1c/structBBP_1_1userspace_1_1Instruction_1_1Head_1a604e826856053f3385806b67f88b2aa8" kindref="member">args</ref><sp/>=<sp/>flagsAndArgs<sp/>&amp;<sp/>0x0F;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1aa25d65c649d9afaab483456e6ab9455f" kindref="member">instruction</ref>.<ref refid="d0/dfc/structBBP_1_1userspace_1_1Instruction_1a850a333d4ee4fa1a045aa229414ec5e6" kindref="member">header</ref>.<ref refid="d5/d1c/structBBP_1_1userspace_1_1Instruction_1_1Head_1a2d3ce068e27485c1f2ba558983ca9326" kindref="member">flags</ref><sp/>=<sp/>(flagsAndArgs<sp/>&amp;<sp/>0xF0)<sp/>&gt;&gt;<sp/>4;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>for<sp/>arguments.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref><sp/>executableIndex<sp/>=<sp/>programCounter<sp/>+<sp/>4;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref><sp/>argumentIndex<sp/>=<sp/>0;<sp/>argumentIndex<sp/>&lt;<sp/>currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1aa25d65c649d9afaab483456e6ab9455f" kindref="member">instruction</ref>.<ref refid="d0/dfc/structBBP_1_1userspace_1_1Instruction_1a850a333d4ee4fa1a045aa229414ec5e6" kindref="member">header</ref>.<ref refid="d5/d1c/structBBP_1_1userspace_1_1Instruction_1_1Head_1a604e826856053f3385806b67f88b2aa8" kindref="member">args</ref>;<sp/>argumentIndex++)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Decide<sp/>if<sp/>argument<sp/>is<sp/>a<sp/>literal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isLiteral<sp/>=<sp/>!(currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1aa25d65c649d9afaab483456e6ab9455f" kindref="member">instruction</ref>.<ref refid="d0/dfc/structBBP_1_1userspace_1_1Instruction_1a850a333d4ee4fa1a045aa229414ec5e6" kindref="member">header</ref>.<ref refid="d5/d1c/structBBP_1_1userspace_1_1Instruction_1_1Head_1a0bb1d184e52ccdf12ddb47b65fafc4c7" kindref="member">prefix</ref><sp/>&amp;<sp/>(1<sp/>&lt;&lt;<sp/>argumentIndex));</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Decode<sp/>word</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref><sp/>decoded<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>decoded<sp/>|=<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a1d232f50fc4e569e79449970f1b4bb9e" kindref="member">std::read</ref>(&amp;currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1abb9f013e6a43d9115398c80089cc51cc" kindref="member">executable</ref>.<ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ab75ab6cf2c312ecb34fe62562936ce67" kindref="member">BinaryData</ref>,<sp/>executableIndex<sp/>+<sp/>0)<sp/>&lt;&lt;<sp/>24;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>decoded<sp/>|=<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a1d232f50fc4e569e79449970f1b4bb9e" kindref="member">std::read</ref>(&amp;currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1abb9f013e6a43d9115398c80089cc51cc" kindref="member">executable</ref>.<ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ab75ab6cf2c312ecb34fe62562936ce67" kindref="member">BinaryData</ref>,<sp/>executableIndex<sp/>+<sp/>1)<sp/>&lt;&lt;<sp/>16;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>decoded<sp/>|=<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a1d232f50fc4e569e79449970f1b4bb9e" kindref="member">std::read</ref>(&amp;currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1abb9f013e6a43d9115398c80089cc51cc" kindref="member">executable</ref>.<ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ab75ab6cf2c312ecb34fe62562936ce67" kindref="member">BinaryData</ref>,<sp/>executableIndex<sp/>+<sp/>2)<sp/>&lt;&lt;<sp/><sp/>8;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>decoded<sp/>|=<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a1d232f50fc4e569e79449970f1b4bb9e" kindref="member">std::read</ref>(&amp;currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1abb9f013e6a43d9115398c80089cc51cc" kindref="member">executable</ref>.<ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ab75ab6cf2c312ecb34fe62562936ce67" kindref="member">BinaryData</ref>,<sp/>executableIndex<sp/>+<sp/>3)<sp/>&lt;&lt;<sp/><sp/>0;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>executableIndex<sp/>+=<sp/>4;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>literal,<sp/>set<sp/>argument<sp/>and<sp/>stop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isLiteral)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1aa25d65c649d9afaab483456e6ab9455f" kindref="member">instruction</ref>.<ref refid="d0/dfc/structBBP_1_1userspace_1_1Instruction_1ade5b8528d12d8a4bc6e68c530e46832e" kindref="member">args</ref>[argumentIndex].<ref refid="d5/d9e/structBBP_1_1userspace_1_1Instruction_1_1Arg_1a65c669132d3694858349e0351adc684c" kindref="member">data</ref><sp/>=<sp/>decoded;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1aa25d65c649d9afaab483456e6ab9455f" kindref="member">instruction</ref>.<ref refid="d0/dfc/structBBP_1_1userspace_1_1Instruction_1ade5b8528d12d8a4bc6e68c530e46832e" kindref="member">args</ref>[argumentIndex].<ref refid="d5/d9e/structBBP_1_1userspace_1_1Instruction_1_1Arg_1a3c9244fbcf23af61dbb1d479fcd2db12" kindref="member">isLiteralArg</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>decoded<sp/>or<sp/>referenced<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1aa25d65c649d9afaab483456e6ab9455f" kindref="member">instruction</ref>.<ref refid="d0/dfc/structBBP_1_1userspace_1_1Instruction_1ade5b8528d12d8a4bc6e68c530e46832e" kindref="member">args</ref>[argumentIndex].<ref refid="d5/d9e/structBBP_1_1userspace_1_1Instruction_1_1Arg_1ac9cd5bfb02e10c26a7f528a9e9740256" kindref="member">referenced</ref><sp/><sp/><sp/>=<sp/>!!((decoded<sp/>&gt;&gt;<sp/>24)<sp/>&amp;<sp/>0b10000000);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1aa25d65c649d9afaab483456e6ab9455f" kindref="member">instruction</ref>.<ref refid="d0/dfc/structBBP_1_1userspace_1_1Instruction_1ade5b8528d12d8a4bc6e68c530e46832e" kindref="member">args</ref>[argumentIndex].<ref refid="d5/d9e/structBBP_1_1userspace_1_1Instruction_1_1Arg_1a6edde24cd9781cfb5540586bbf7f643a" kindref="member">dereferenced</ref><sp/>=<sp/>!!((decoded<sp/>&gt;&gt;<sp/>24)<sp/>&amp;<sp/>0b01000000);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Next,<sp/>get<sp/>offset<sp/>and<sp/>trailer<sp/>count</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1aa25d65c649d9afaab483456e6ab9455f" kindref="member">instruction</ref>.<ref refid="d0/dfc/structBBP_1_1userspace_1_1Instruction_1ade5b8528d12d8a4bc6e68c530e46832e" kindref="member">args</ref>[argumentIndex].<ref refid="d5/d9e/structBBP_1_1userspace_1_1Instruction_1_1Arg_1a18b4c5807235dd8aa1c560d3749827cb" kindref="member">offset</ref><sp/>=<sp/>((decoded<sp/>&gt;&gt;<sp/>24)<sp/>&amp;<sp/>0b00111100)<sp/>&gt;&gt;<sp/>2;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1aa25d65c649d9afaab483456e6ab9455f" kindref="member">instruction</ref>.<ref refid="d0/dfc/structBBP_1_1userspace_1_1Instruction_1ade5b8528d12d8a4bc6e68c530e46832e" kindref="member">args</ref>[argumentIndex].<ref refid="d5/d9e/structBBP_1_1userspace_1_1Instruction_1_1Arg_1a9a714513ad5761be5a569722a49fe46a" kindref="member">trailerCount</ref><sp/>=<sp/>((decoded<sp/>&gt;&gt;<sp/>24)<sp/>&amp;<sp/>0b0000011);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Save<sp/>20<sp/>bits<sp/>of<sp/>decoded<sp/>into<sp/>args</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1aa25d65c649d9afaab483456e6ab9455f" kindref="member">instruction</ref>.<ref refid="d0/dfc/structBBP_1_1userspace_1_1Instruction_1ade5b8528d12d8a4bc6e68c530e46832e" kindref="member">args</ref>[argumentIndex].<ref refid="d5/d9e/structBBP_1_1userspace_1_1Instruction_1_1Arg_1a65c669132d3694858349e0351adc684c" kindref="member">data</ref><sp/>=<sp/>decoded<sp/>&amp;<sp/>0xfffff;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>decode<sp/>trailers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a46765daa6b14b3e45c22ad4071efdff1" kindref="member">std::nibble</ref><sp/>trailerIndex<sp/>=<sp/>0;<sp/>trailerIndex<sp/>&lt;<sp/>currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1aa25d65c649d9afaab483456e6ab9455f" kindref="member">instruction</ref>.<ref refid="d0/dfc/structBBP_1_1userspace_1_1Instruction_1ade5b8528d12d8a4bc6e68c530e46832e" kindref="member">args</ref>[argumentIndex].<ref refid="d5/d9e/structBBP_1_1userspace_1_1Instruction_1_1Arg_1a9a714513ad5761be5a569722a49fe46a" kindref="member">trailerCount</ref><sp/>&amp;&amp;<sp/>trailerIndex<sp/>&lt;<sp/>4;<sp/>trailerIndex++)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Decode<sp/>next<sp/>word</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>decoded<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>decoded<sp/>|=<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a1d232f50fc4e569e79449970f1b4bb9e" kindref="member">std::read</ref>(&amp;currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1abb9f013e6a43d9115398c80089cc51cc" kindref="member">executable</ref>.<ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ab75ab6cf2c312ecb34fe62562936ce67" kindref="member">BinaryData</ref>,<sp/>executableIndex<sp/>+<sp/>0)<sp/>&lt;&lt;<sp/>24;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>decoded<sp/>|=<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a1d232f50fc4e569e79449970f1b4bb9e" kindref="member">std::read</ref>(&amp;currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1abb9f013e6a43d9115398c80089cc51cc" kindref="member">executable</ref>.<ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ab75ab6cf2c312ecb34fe62562936ce67" kindref="member">BinaryData</ref>,<sp/>executableIndex<sp/>+<sp/>1)<sp/>&lt;&lt;<sp/>16;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>decoded<sp/>|=<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a1d232f50fc4e569e79449970f1b4bb9e" kindref="member">std::read</ref>(&amp;currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1abb9f013e6a43d9115398c80089cc51cc" kindref="member">executable</ref>.<ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ab75ab6cf2c312ecb34fe62562936ce67" kindref="member">BinaryData</ref>,<sp/>executableIndex<sp/>+<sp/>2)<sp/>&lt;&lt;<sp/>8;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>decoded<sp/>|=<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a1d232f50fc4e569e79449970f1b4bb9e" kindref="member">std::read</ref>(&amp;currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1abb9f013e6a43d9115398c80089cc51cc" kindref="member">executable</ref>.<ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ab75ab6cf2c312ecb34fe62562936ce67" kindref="member">BinaryData</ref>,<sp/>executableIndex<sp/>+<sp/>3)<sp/>&lt;&lt;<sp/>0;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>executableIndex<sp/>+=<sp/>4;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Save</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1aa25d65c649d9afaab483456e6ab9455f" kindref="member">instruction</ref>.<ref refid="d0/dfc/structBBP_1_1userspace_1_1Instruction_1ade5b8528d12d8a4bc6e68c530e46832e" kindref="member">args</ref>[argumentIndex].<ref refid="d5/d9e/structBBP_1_1userspace_1_1Instruction_1_1Arg_1a22ae6c2cd5ccaa4c641f3e98344d81dc" kindref="member">trailers</ref>[trailerIndex]<sp/>=<sp/>decoded;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>that<sp/>the<sp/>instruction<sp/>has<sp/>been<sp/>decoded,<sp/>set<sp/>eip<sp/>to<sp/>executableIndex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a9122f01317e629b0ae11a837667f1224" kindref="member">setRegister</ref>(currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a9c9b4ca599f0708782fb29a88d1bffcc" kindref="member">eip</ref>,<sp/>currentThread-&gt;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1abb9f013e6a43d9115398c80089cc51cc" kindref="member">executable</ref>.<ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1af46ca1c3ec18196e50f62e7bda446b6b" kindref="member">physicalToVirtual</ref>(executableIndex));</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::except<sp/>&amp;<ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eaa942c2da6dc667c4a5a36a37034d3a72" kindref="member">e</ref>)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Doesn&apos;t<sp/>really<sp/>matter<sp/>what<sp/>happens,<sp/>just<sp/>signal<sp/>fault</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d0/def/Signal_8h_1a82e69d819748cab5933309bba1999f7c" kindref="member">__SIGNAL__</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1af139a9b42bd35d198ce80ed26f7d2efe" kindref="member">SIGTHREXP</ref>);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1aa15f2f907088e626d6d6fa1d0da01eb9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1aa15f2f907088e626d6d6fa1d0da01eb9" kindref="member">BBP::userspace::Thread::LogInstruction</ref>()</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print<sp/>header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">std::printf</ref>(</highlight><highlight class="stringliteral">&quot;Instruction:<sp/>0x%02x<sp/>(0x%02x),<sp/>%u<sp/>args.\n&quot;</highlight><highlight class="normal">,<sp/>instruction.header.opcode,<sp/>instruction.header.suffix,<sp/>instruction.header.args);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a4926ba934876e4a1028b9abb47edbc56" kindref="member">std::byte</ref><sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" kindref="member">i</ref><sp/>=<sp/>0;<sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" kindref="member">i</ref><sp/>&lt;<sp/>instruction.header.args;<sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" kindref="member">i</ref>++)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print<sp/>argument<sp/>number</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">std::printf</ref>(</highlight><highlight class="stringliteral">&quot;\tArg<sp/>%u:\t&quot;</highlight><highlight class="normal">,<sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" kindref="member">i</ref>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print<sp/>argument<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!((instruction.header.prefix<sp/>&gt;&gt;<sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" kindref="member">i</ref>)<sp/>&amp;<sp/>1))</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">std::printf</ref>(</highlight><highlight class="stringliteral">&quot;(Literal):\t0x%08x\n&quot;</highlight><highlight class="normal">,<sp/>instruction.args[<ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" kindref="member">i</ref>].data);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">std::printf</ref>(</highlight><highlight class="stringliteral">&quot;(Reference)\t&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>for<sp/>referenced<sp/>or<sp/>dereferenced</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(instruction.args[<ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" kindref="member">i</ref>].dereferenced)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">std::printf</ref>(</highlight><highlight class="stringliteral">&quot;*&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(instruction.args[<ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" kindref="member">i</ref>].referenced)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">std::printf</ref>(</highlight><highlight class="stringliteral">&quot;&amp;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(instruction.args[<ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" kindref="member">i</ref>].dereferenced<sp/>&amp;&amp;<sp/>instruction.args[<ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" kindref="member">i</ref>].referenced)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">std::printf</ref>(</highlight><highlight class="stringliteral">&quot;\e[0;31mILLEGAL\e[0;37m&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">std::printf</ref>(</highlight><highlight class="stringliteral">&quot;\t&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(instruction.args[<ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" kindref="member">i</ref>].offset)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0b00:<sp/></highlight><highlight class="comment">//<sp/>Starts<sp/>at<sp/>beginning<sp/>of<sp/>this<sp/>instance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">std::printf</ref>(</highlight><highlight class="stringliteral">&quot;Rel:<sp/>Instance\t&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0b01:<sp/></highlight><highlight class="comment">//<sp/>Starts<sp/>at<sp/>beginning<sp/>of<sp/>whole<sp/>chain</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">std::printf</ref>(</highlight><highlight class="stringliteral">&quot;Rel:<sp/>Chain\t&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0b10:<sp/></highlight><highlight class="comment">//<sp/>Starts<sp/>at<sp/>beginning<sp/>of<sp/>shared<sp/>user<sp/>memory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">std::printf</ref>(</highlight><highlight class="stringliteral">&quot;Rel:<sp/>User\t&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0b11:<sp/></highlight><highlight class="comment">//<sp/>Starts<sp/>at<sp/>beginning<sp/>of<sp/>shared<sp/>system<sp/>memory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">std::printf</ref>(</highlight><highlight class="stringliteral">&quot;Rel:<sp/>System\t&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">std::printf</ref>(</highlight><highlight class="stringliteral">&quot;Data:<sp/>0x%05x\t&quot;</highlight><highlight class="normal">,<sp/>instruction.args[<ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" kindref="member">i</ref>].data);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">std::printf</ref>(</highlight><highlight class="stringliteral">&quot;Page:<sp/>0x%01x\t&quot;</highlight><highlight class="normal">,<sp/>instruction.args[<ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" kindref="member">i</ref>].data<sp/>&gt;&gt;<sp/>16);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">std::printf</ref>(</highlight><highlight class="stringliteral">&quot;Address:<sp/>0x%05x\n&quot;</highlight><highlight class="normal">,<sp/>instruction.args[<ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" kindref="member">i</ref>].data<sp/>&amp;<sp/>0xFFFF);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">std::printf</ref>(</highlight><highlight class="stringliteral">&quot;\t\tTrailers:<sp/>%u\n&quot;</highlight><highlight class="normal">,<sp/>instruction.args[<ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" kindref="member">i</ref>].trailerCount);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a4926ba934876e4a1028b9abb47edbc56" kindref="member">std::byte</ref><sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/>instruction.args[<ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" kindref="member">i</ref>].trailerCount;<sp/>k++)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">std::printf</ref>(</highlight><highlight class="stringliteral">&quot;\t\tTrailer<sp/>%u:<sp/>0x%08x\n&quot;</highlight><highlight class="normal">,<sp/>k,<sp/>instruction.args[<ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" kindref="member">i</ref>].trailers[k]);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">std::printf</ref>(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/InstructionCycle.cpp"/>
+  </compounddef>
+</doxygen>

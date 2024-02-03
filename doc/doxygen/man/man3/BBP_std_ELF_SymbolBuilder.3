@@ -1,0 +1,265 @@
+.TH "BBP::std::ELF::SymbolBuilder" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BBP::std::ELF::SymbolBuilder
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ELF\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBstd::word\fP \fBname\fP (void)"
+.br
+.ti -1c
+.RI "void \fBname\fP (\fBstd::word\fP)"
+.br
+.ti -1c
+.RI "\fBstd::address_t\fP \fBvalue\fP (void)"
+.br
+.ti -1c
+.RI "void \fBvalue\fP (\fBstd::address_t\fP)"
+.br
+.ti -1c
+.RI "\fBstd::word\fP \fBsize\fP (void)"
+.br
+.ti -1c
+.RI "void \fBsize\fP (\fBstd::word\fP)"
+.br
+.ti -1c
+.RI "\fBstd::byte\fP \fBinfo\fP (void)"
+.br
+.ti -1c
+.RI "void \fBinfo\fP (\fBstd::byte\fP)"
+.br
+.ti -1c
+.RI "\fBstd::byte\fP \fBother\fP (void)"
+.br
+.ti -1c
+.RI "void \fBother\fP (\fBstd::byte\fP)"
+.br
+.ti -1c
+.RI "\fBstd::halfword\fP \fBshndx\fP (void)"
+.br
+.ti -1c
+.RI "void \fBshndx\fP (\fBstd::halfword\fP)"
+.br
+.ti -1c
+.RI "void \fBclose\fP ()"
+.br
+.ti -1c
+.RI "\fBSymbolBuilder\fP (\fBELFBuilder\fP *, \fBstd::offset_t\fP)"
+.br
+.ti -1c
+.RI "\fBSymbolBuilder\fP (\fBELFBuilder\fP *, \fBstring_element\fP *, \fBstd::size_t\fP)"
+.br
+.in -1c
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBPAGE\fP< \fBstring_element\fP > \fBheader\fP"
+.br
+.ti -1c
+.RI "\fBStack\fP< \fBstring_element\fP > \fBstack\fP"
+.br
+.ti -1c
+.RI "\fBPAGE\fP< \fBstring_element\fP > \fBdata\fP"
+.br
+.ti -1c
+.RI "\fBELFBuilder\fP * \fBelf\fP"
+.br
+.ti -1c
+.RI "bool \fBisMemUnique\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 152 of file ELF\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "BBP::std::ELF::SymbolBuilder::SymbolBuilder (\fBELFBuilder\fP * elf, \fBstd::offset_t\fP offset)"
+
+.PP
+Definition at line 70 of file SymbolBuilderGettersSetters\&.cpp\&.
+.PP
+.nf
+71     : header(PAGE<string_element>(ELF_SYMBOL_ENTRYSIZE, elf->file\&.data + offset)),
+72     stack(&data, 0),
+73     data(PAGE<string_element>()),
+74     elf(elf),
+75     isMemUnique(false) {}
+.fi
+.SS "BBP::std::ELF::SymbolBuilder::SymbolBuilder (\fBELFBuilder\fP *, \fBstring_element\fP *, \fBstd::size_t\fP)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void BBP::std::ELF::SymbolBuilder::close ()"
+
+.PP
+Definition at line 4 of file SymbolBuilder\&.cpp\&.
+.PP
+.nf
+5 {
+6 
+7 }
+.fi
+.PP
+Referenced by BBP::std::ELF::ELFBuilder::close()\&.
+.SS "void BBP::std::ELF::SymbolBuilder::info (\fBstd::byte\fP value)"
+
+.PP
+Definition at line 87 of file SymbolBuilderGettersSetters\&.cpp\&.
+.PP
+.nf
+87 { writeByte(this, value, ELF_SYMBOL_INFOOFFSET); }
+.fi
+.PP
+References ELF_SYMBOL_INFOOFFSET, and writeByte()\&.
+.SS "\fBBBP::std::byte\fP BBP::std::ELF::SymbolBuilder::info (void)"
+
+.PP
+Definition at line 86 of file SymbolBuilderGettersSetters\&.cpp\&.
+.PP
+.nf
+86 { return readByte(this, ELF_SYMBOL_INFOOFFSET); }
+.fi
+.PP
+References ELF_SYMBOL_INFOOFFSET, and readByte()\&.
+.PP
+Referenced by BBP::std::ELF::ELFBuilder::ELFBuilder()\&.
+.SS "void BBP::std::ELF::SymbolBuilder::name (\fBstd::word\fP value)"
+
+.PP
+Definition at line 78 of file SymbolBuilderGettersSetters\&.cpp\&.
+.PP
+.nf
+78 { writeWord(this, value, ELF_SYMBOL_NAMEOFFSET); }
+.fi
+.PP
+References ELF_SYMBOL_NAMEOFFSET, and writeWord()\&.
+.SS "\fBBBP::std::word\fP BBP::std::ELF::SymbolBuilder::name (void)"
+
+.PP
+Definition at line 77 of file SymbolBuilderGettersSetters\&.cpp\&.
+.PP
+.nf
+77 { return readWord(this, ELF_SYMBOL_NAMEOFFSET); }
+.fi
+.PP
+References ELF_SYMBOL_NAMEOFFSET, and readWord()\&.
+.PP
+Referenced by BBP::std::ELF::ELFBuilder::ELFBuilder()\&.
+.SS "void BBP::std::ELF::SymbolBuilder::other (\fBstd::byte\fP value)"
+
+.PP
+Definition at line 90 of file SymbolBuilderGettersSetters\&.cpp\&.
+.PP
+.nf
+90 { writeByte(this, value, ELF_SYMBOL_OTHEROFFSET); }
+.fi
+.PP
+References ELF_SYMBOL_OTHEROFFSET, and writeByte()\&.
+.SS "\fBBBP::std::byte\fP BBP::std::ELF::SymbolBuilder::other (void)"
+
+.PP
+Definition at line 89 of file SymbolBuilderGettersSetters\&.cpp\&.
+.PP
+.nf
+89 { return readByte(this, ELF_SYMBOL_OTHEROFFSET); }
+.fi
+.PP
+References ELF_SYMBOL_OTHEROFFSET, and readByte()\&.
+.SS "void BBP::std::ELF::SymbolBuilder::shndx (\fBstd::halfword\fP value)"
+
+.PP
+Definition at line 93 of file SymbolBuilderGettersSetters\&.cpp\&.
+.PP
+.nf
+93 { writeHalfWord(this, value, ELF_SYMBOL_SHNDXOFFSET); }
+.fi
+.PP
+References ELF_SYMBOL_SHNDXOFFSET, and writeHalfWord()\&.
+.SS "\fBBBP::std::halfword\fP BBP::std::ELF::SymbolBuilder::shndx (void)"
+
+.PP
+Definition at line 92 of file SymbolBuilderGettersSetters\&.cpp\&.
+.PP
+.nf
+92 { return readHalfWord(this, ELF_SYMBOL_SHNDXOFFSET); }
+.fi
+.PP
+References ELF_SYMBOL_SHNDXOFFSET, and readHalfWord()\&.
+.SS "void BBP::std::ELF::SymbolBuilder::size (\fBstd::word\fP value)"
+
+.PP
+Definition at line 84 of file SymbolBuilderGettersSetters\&.cpp\&.
+.PP
+.nf
+84 { writeWord(this, value, ELF_SYMBOL_SIZEOFFSET); }
+.fi
+.PP
+References ELF_SYMBOL_SIZEOFFSET, and writeWord()\&.
+.SS "\fBBBP::std::word\fP BBP::std::ELF::SymbolBuilder::size (void)"
+
+.PP
+Definition at line 83 of file SymbolBuilderGettersSetters\&.cpp\&.
+.PP
+.nf
+83 { return readWord(this, ELF_SYMBOL_SIZEOFFSET); }
+.fi
+.PP
+References ELF_SYMBOL_SIZEOFFSET, and readWord()\&.
+.SS "void BBP::std::ELF::SymbolBuilder::value (\fBstd::address_t\fP value)"
+
+.PP
+Definition at line 81 of file SymbolBuilderGettersSetters\&.cpp\&.
+.PP
+.nf
+81 { writeWord(this, value, ELF_SYMBOL_VALUEOFFSET); }
+.fi
+.PP
+References ELF_SYMBOL_VALUEOFFSET, and writeWord()\&.
+.SS "\fBBBP::std::word\fP BBP::std::ELF::SymbolBuilder::value (void)"
+
+.PP
+Definition at line 80 of file SymbolBuilderGettersSetters\&.cpp\&.
+.PP
+.nf
+80 { return readWord(this, ELF_SYMBOL_VALUEOFFSET); }
+.fi
+.PP
+References ELF_SYMBOL_VALUEOFFSET, and readWord()\&.
+.SH "Field Documentation"
+.PP 
+.SS "\fBPAGE\fP<\fBstring_element\fP> BBP::std::ELF::SymbolBuilder::data"
+
+.PP
+Definition at line 176 of file ELF\&.h\&.
+.SS "\fBELFBuilder\fP* BBP::std::ELF::SymbolBuilder::elf"
+
+.PP
+Definition at line 181 of file ELF\&.h\&.
+.PP
+Referenced by readHalfWord(), readWord(), writeHalfWord(), and writeWord()\&.
+.SS "\fBPAGE\fP<\fBstring_element\fP> BBP::std::ELF::SymbolBuilder::header"
+
+.PP
+Definition at line 174 of file ELF\&.h\&.
+.PP
+Referenced by readByte(), readHalfWord(), readWord(), writeByte(), writeHalfWord(), and writeWord()\&.
+.SS "bool BBP::std::ELF::SymbolBuilder::isMemUnique"
+
+.PP
+Definition at line 183 of file ELF\&.h\&.
+.SS "\fBStack\fP<\fBstring_element\fP> BBP::std::ELF::SymbolBuilder::stack"
+
+.PP
+Definition at line 175 of file ELF\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

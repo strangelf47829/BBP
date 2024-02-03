@@ -1,101 +1,84 @@
-# Makefile to build and install ring 0
+#########################################
+#  Module make utility                  #
+#                                       #
+#########################################
+#  Module: ELF                          #
 
-# == CHANGE THE SETTINGS BELOW TO SUIT THE ENVIRONMENT ==
+# =========== Platform
+PLAT= generic
 
-PLAT= x86
+# =========== Module target details
+MODULE= ELF
+MODULE_SRC= ELF.cpp ELFHeader.cpp SectionBuilder.cpp SegmentBuilder.cpp SymbolBuilder.cpp ELFHeaderGettersSetters.cpp SectionBuilderGettersSetters.cpp SegmentBuilderGettersSetters.cpp SymbolBuilderGettersSetters.cpp
 
-# Where to install
-INSTALL_TOP= ../..
-INSTALL_BIN= $(INSTALL_TOP)/Build/bin
-INSTALL_INC= $(INSTALL_TOP)/Build/include
-INSTALL_LIB= $(INSTALL_TOP)/Build/lib
+# ========
+# END OF MODULE SETTINGS.
+# ========
 
+# =========== Platform specific stuff
 CC= gcc
 CXX= g++
-
-CFLAGS= $(SYSCFLAGS) $(MYCFLAGS) $(EXT_CFLAGS)
-CXXFLAGS= $(SYSCXFLAGS) $(MYCXFLAGS) $(EXT_CXFLAGS)
-
-LDFLAGS= $(SYSLDFLAGS) $(MYLDFLAGS)
-LIBS= $(SYSLIBS) $(MYLIBS)
-
-AR= ar rcu
+AR= ar
 RANLIB= ranlib
 
-SYSCFLAGS=-c
-SYSCXFLAGS=-c
+# =========== Compiler / Linker flags
+CFLAGS= $(SYSCFLAGS) $(EXTCFLAGS)
+CXXFLAGS= $(SYSCXXFLAGS) $(EXTCXXFLAGS)
+ARFLAGS= $(SYSARFLAGS) $(EXTARFLAGS)
+LDFLAGS= $(SYSLDFLAGS) $(EXTLDFLAGS)
+
+# =========== Module specific flags
+SYSCFLAGS= -c
+SYSCXXFLAGS= -c -Wall -Wextra -fdiagnostics-show-option
+SYSARFLAGS= rc
 SYSLDFLAGS=
-SYSLIBS=
 
-INCDIR= ../include/
+# =========== Platform specific flags
+EXTCFLAGS=
+EXTCXXFLAGS=
+EXTARFLAGS=
+EXTLDFLAGS=
 
-MYCFLAGS= -I$(INCDIR) -I$(INSTALL_INC)/
-MYCXFLAGS= -I$(INCDIR) -I$(INSTALL_INC)/
-MYLDFLAGS=
-MYLIBS=
+# ========
+# END OF MODULE CONFIGURATION.
+# ========
+MODULE_O= $(patsubst %.cpp,%.o,$(MODULE_SRC))
+MODULE_A= lib$(MODULE).a
 
-EXT_CFLAGS=
-EXT_CXFLAGS=
+default: generic
 
-# == END OF USER SETTINGS ==
-
-PLATS= x86 micro stdgnu x86Debug
-
-LIB_A= LibELF.a
-
-CORE_O= ELFBuilder.o ELFReader.o
-LIB_O= ELFRepair.o ELFEmitter.o $(EXT_O)
-EXT_O=
-BASE_O= $(CORE_O) $(LIB_O)
-
-ALL_O= $(BASE_O)
-ALL_A= $(ALL_O) $(LIB_A)
-ALL_H= $(INCDIR)ELF32.h $(INCDIR)ELFUtils.h $(INCDIR)ELFBuilder.h $(INCDIR)ELFEmitter.h $(INCDIR)ELFReader.h $(INCDIR)ELFRepair.h
+$(MODULE_A): $(MODULE_O)
+	@echo
+	$(AR) $(ARFLAGS) $@ $(MODULE_O)
+	@echo "+=======================+"
+	@echo "|=+= Module Compiled =+=|"
+	@echo "+=======================+"
 
 
-# Targets start here
-ALL= all
+%.o: %.cpp
+	@$(CXX) $^ -o $@ $(CXXFLAGS)
+	@echo "        $(MODULE) +=+ Compiling $^..."
 
-default: $(PLAT)
+%.log:
+	@echo
+	@echo ===========================
+	@echo Compiling module $(MODULE)
+	@echo "        Platform: $(PLAT)"
+	@echo "        Source files: $(MODULE_SRC)"
+	@echo ===========================
+	@echo
+	@rm -f *.log
+	@rm -f *.a *.o
+	@echo "Hehe" >> $@
+	@make $(PLAT) --no-print-directory
+	@echo 
 
-all: $(ALL_A)
+generic: $(MODULE).$(PLAT).log $(MODULE_A)
 
-o: $(ALL_O)
 
-a: $(ALL_A)
 
-$(LIB_A): $(KERNEL_O) $(KERNEL_A)
-	$(AR) $@ $(ALL_O)
-	cp $(LIB_A) $(INSTALL_BIN)/$(LIB_A)
-	cp $(LIB_A) ../lib/$(LIB_A)
 
 clean:
-	rm -rf $(ALL_A) $(wildcard *.o)
-clean_all:
-	rm -rf $(ALL_T) $(ALL_O) $(INSTALL_BIN)/* $(INSTALL_LIB)/* $(INSTALL_INC)/*
-
-generic: all
-
-x86:
-	$(MAKE) $(ALL) CC="x86_64-w64-mingw32-gcc" CXX="x86_64-w64-mingw32-g++"
-
-x86Debug:
-	$(MAKE) $(ALL) CC="gcc" CXX="g++" SYSCXFLAGS="-g" SYSCFLAGS="-g"
-#	$(MAKE) $(ALL) CC="x86_64-w64-mingw32-gcc" CXX="x86_64-w64-mingw32-g++"
-
-nostdlib:
-	$(MAKE) $(ALL) SYSCFLAGS="-nostdlib" SYSCXFLAGS="-nostdlib"
-
-freestanding:
-	$(MAKE) $(ALL) SYSCFLAGS="-nostdlib -ffreestanding" SYSCXFLAGS="-nostdlib -ffreestanding"
-
-arm:
-	$(MAKE) $(ALL) SYSCFLAGS="-nostdlib -ffreestanding -DSTM_32" SYSCXFLAGS="-nostdlib -ffreestanding -DSTM_32" CC="arm-none-eabi-gcc" CXX="arm-none-eabi-g++"
-
-
-
-# Make rules
-ELFBuilder.o: ELFBuilder.cpp
-ELFEmitter.o: ELFEmitter.cpp
-ELFReader.o: ELFReader.cpp
-ELFRepair.o: ELFRepair.cpp
+	@echo Cleaning files for module $(MODULE)...
+	@rm -f *.a *.o *.log
+	@echo Done!

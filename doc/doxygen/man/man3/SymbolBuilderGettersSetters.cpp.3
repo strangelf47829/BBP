@@ -1,0 +1,164 @@
+.TH "SymbolBuilderGettersSetters.cpp" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SymbolBuilderGettersSetters.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '\&.\&./include/ELF\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBBP::std::byte\fP \fBreadByte\fP (\fBBBP::std::ELF::SymbolBuilder\fP *sym, \fBBBP::std::offset_t\fP offset)"
+.br
+.ti -1c
+.RI "void \fBwriteByte\fP (\fBBBP::std::ELF::SymbolBuilder\fP *sym, \fBBBP::std::byte\fP byte, \fBBBP::std::offset_t\fP offset)"
+.br
+.ti -1c
+.RI "\fBBBP::std::halfword\fP \fBreadHalfWord\fP (\fBBBP::std::ELF::SymbolBuilder\fP *sym, \fBBBP::std::offset_t\fP offset)"
+.br
+.ti -1c
+.RI "void \fBwriteHalfWord\fP (\fBBBP::std::ELF::SymbolBuilder\fP *sym, \fBBBP::std::halfword\fP halfword, \fBBBP::std::offset_t\fP offset)"
+.br
+.ti -1c
+.RI "\fBBBP::std::word\fP \fBreadWord\fP (\fBBBP::std::ELF::SymbolBuilder\fP *sym, \fBBBP::std::offset_t\fP offset)"
+.br
+.ti -1c
+.RI "void \fBwriteWord\fP (\fBBBP::std::ELF::SymbolBuilder\fP *sym, \fBBBP::std::word\fP word, \fBBBP::std::offset_t\fP offset)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBBBP::std::byte\fP readByte (\fBBBP::std::ELF::SymbolBuilder\fP * sym, \fBBBP::std::offset_t\fP offset)"
+
+.PP
+Definition at line 3 of file SymbolBuilderGettersSetters\&.cpp\&.
+.PP
+.nf
+4 {
+5     return sym->header\&.data[offset];
+6 }
+.fi
+.PP
+References BBP::std::PAGE< T >::data, and BBP::std::ELF::SymbolBuilder::header\&.
+.PP
+Referenced by BBP::std::ELF::SymbolBuilder::info(), and BBP::std::ELF::SymbolBuilder::other()\&.
+.SS "\fBBBP::std::halfword\fP readHalfWord (\fBBBP::std::ELF::SymbolBuilder\fP * sym, \fBBBP::std::offset_t\fP offset)"
+
+.PP
+Definition at line 11 of file SymbolBuilderGettersSetters\&.cpp\&.
+.PP
+.nf
+12 {
+13     BBP::std::byte a = sym->header\&.data[offset];
+14     BBP::std::byte b = sym->header\&.data[offset + 1];
+15 
+16     if (!sym->elf->Endian)
+17         return a | (b << 8);
+18     return b | (a << 8);
+19 }
+.fi
+.PP
+References BBP::Locale::Japanese::a, BBP::std::PAGE< T >::data, BBP::std::ELF::SymbolBuilder::elf, BBP::std::ELF::ELFBuilder::Endian, and BBP::std::ELF::SymbolBuilder::header\&.
+.PP
+Referenced by BBP::std::ELF::SymbolBuilder::shndx()\&.
+.SS "\fBBBP::std::word\fP readWord (\fBBBP::std::ELF::SymbolBuilder\fP * sym, \fBBBP::std::offset_t\fP offset)"
+
+.PP
+Definition at line 36 of file SymbolBuilderGettersSetters\&.cpp\&.
+.PP
+.nf
+37 {
+38     BBP::std::byte a = sym->header\&.data[offset];
+39     BBP::std::byte b = sym->header\&.data[offset + 1];
+40     BBP::std::byte c = sym->header\&.data[offset + 2];
+41     BBP::std::byte d = sym->header\&.data[offset + 3];
+42 
+43     if (!sym->elf->Endian)
+44         return a | (b << 8) | (c << 16) | (d << 24);
+45     return d | (c << 8) | (b << 16) | (a << 24);
+46 }
+.fi
+.PP
+References BBP::Locale::Japanese::a, BBP::std::PAGE< T >::data, BBP::std::ELF::SymbolBuilder::elf, BBP::std::ELF::ELFBuilder::Endian, and BBP::std::ELF::SymbolBuilder::header\&.
+.PP
+Referenced by BBP::std::ELF::SymbolBuilder::name(), BBP::std::ELF::SymbolBuilder::size(), and BBP::std::ELF::SymbolBuilder::value()\&.
+.SS "void writeByte (\fBBBP::std::ELF::SymbolBuilder\fP * sym, \fBBBP::std::byte\fP byte, \fBBBP::std::offset_t\fP offset)"
+
+.PP
+Definition at line 7 of file SymbolBuilderGettersSetters\&.cpp\&.
+.PP
+.nf
+8 {
+9     sym->header\&.data[offset] = byte;
+10 }
+.fi
+.PP
+References BBP::std::PAGE< T >::data, and BBP::std::ELF::SymbolBuilder::header\&.
+.PP
+Referenced by BBP::std::ELF::SymbolBuilder::info(), and BBP::std::ELF::SymbolBuilder::other()\&.
+.SS "void writeHalfWord (\fBBBP::std::ELF::SymbolBuilder\fP * sym, \fBBBP::std::halfword\fP halfword, \fBBBP::std::offset_t\fP offset)"
+
+.PP
+Definition at line 20 of file SymbolBuilderGettersSetters\&.cpp\&.
+.PP
+.nf
+21 {
+22     BBP::std::byte a = (halfword >> 0) & 0xFF;
+23     BBP::std::byte b = (halfword >> 8) & 0xFF;
+24 
+25     if (!sym->elf->Endian)
+26     {
+27         sym->header\&.data[offset] = a;
+28         sym->header\&.data[offset + 1] = b;
+29     }
+30     else
+31     {
+32         sym->header\&.data[offset] = b;
+33         sym->header\&.data[offset + 1] = a;
+34     }
+35 }
+.fi
+.PP
+References BBP::Locale::Japanese::a, BBP::std::PAGE< T >::data, BBP::std::ELF::SymbolBuilder::elf, BBP::std::ELF::ELFBuilder::Endian, and BBP::std::ELF::SymbolBuilder::header\&.
+.PP
+Referenced by BBP::std::ELF::SymbolBuilder::shndx()\&.
+.SS "void writeWord (\fBBBP::std::ELF::SymbolBuilder\fP * sym, \fBBBP::std::word\fP word, \fBBBP::std::offset_t\fP offset)"
+
+.PP
+Definition at line 47 of file SymbolBuilderGettersSetters\&.cpp\&.
+.PP
+.nf
+48 {
+49     BBP::std::byte a = (word >> 0) & 0xFF;
+50     BBP::std::byte b = (word >> 8) & 0xFF;
+51     BBP::std::byte c = (word >> 16) & 0xFF;
+52     BBP::std::byte d = (word >> 24) & 0xFF;
+53 
+54     if (!sym->elf->Endian)
+55     {
+56         sym->header\&.data[offset] = a;
+57         sym->header\&.data[offset + 1] = b;
+58         sym->header\&.data[offset + 2] = c;
+59         sym->header\&.data[offset + 3] = d;
+60     }
+61     else
+62     {
+63         sym->header\&.data[offset] = d;
+64         sym->header\&.data[offset + 1] = c;
+65         sym->header\&.data[offset + 2] = b;
+66         sym->header\&.data[offset + 3] = a;
+67     }
+68 }
+.fi
+.PP
+References BBP::Locale::Japanese::a, BBP::std::PAGE< T >::data, BBP::std::ELF::SymbolBuilder::elf, BBP::std::ELF::ELFBuilder::Endian, and BBP::std::ELF::SymbolBuilder::header\&.
+.PP
+Referenced by BBP::std::ELF::SymbolBuilder::name(), BBP::std::ELF::SymbolBuilder::size(), and BBP::std::ELF::SymbolBuilder::value()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

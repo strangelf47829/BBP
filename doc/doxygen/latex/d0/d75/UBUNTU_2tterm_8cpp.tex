@@ -1,0 +1,204 @@
+\hypertarget{UBUNTU_2tterm_8cpp}{}\doxysection{tterm.\+cpp File Reference}
+\label{UBUNTU_2tterm_8cpp}\index{tterm.cpp@{tterm.cpp}}
+{\ttfamily \#include \char`\"{}../include/stdio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/\+Graphics.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$termios.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+Include dependency graph for U\+B\+U\+N\+T\+U/tterm.cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/df4/UBUNTU_2tterm_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{UBUNTU_2tterm_8cpp_a95904e81df90190556cc51eeebee0e86}{save\+Terminal\+State}} ()
+\item 
+void \mbox{\hyperlink{UBUNTU_2tterm_8cpp_af94f8f9b1816ac2983f3872159754794}{restore\+Terminal\+State}} ()
+\item 
+void \mbox{\hyperlink{UBUNTU_2tterm_8cpp_a56a383d48ccecf8ac4171e229902a698}{user\+Input\+\_\+thread}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_aa628d4212b7e43b58f01273f47ecf4c6}{B\+B\+P\+::std\+::static\+\_\+string}}$<$ \mbox{\hyperlink{namespaceBBP_1_1std_a790bf7c69d24a27ebb26dfd83a8980fd}{B\+B\+P\+::std\+::max\+\_\+page\+\_\+elements}} $>$ \mbox{\hyperlink{UBUNTU_2tterm_8cpp_a036394fc10cca88bc82fae1c50b6afec}{printfbuff}}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_aa628d4212b7e43b58f01273f47ecf4c6}{B\+B\+P\+::std\+::static\+\_\+string}}$<$ \mbox{\hyperlink{namespaceBBP_1_1std_a790bf7c69d24a27ebb26dfd83a8980fd}{B\+B\+P\+::std\+::max\+\_\+page\+\_\+elements}} $>$ \mbox{\hyperlink{UBUNTU_2tterm_8cpp_a78c725c1915e216311ae284d3f9b43d8}{sprintfbuff}}
+\item 
+\+::std\+::thread \mbox{\hyperlink{UBUNTU_2tterm_8cpp_af99406ae1cee4d1f7f5c4ce05d401005}{inp\+Thread}}
+\item 
+volatile bool \mbox{\hyperlink{UBUNTU_2tterm_8cpp_a6e81895f1054b6e1db8b12e9a91f7d76}{capture\+User\+Input}} = false
+\item 
+struct termios \mbox{\hyperlink{UBUNTU_2tterm_8cpp_ac202057a8bed4e3c46bd968ad096a491}{original\+Termios}}
+\item 
+struct termios \mbox{\hyperlink{UBUNTU_2tterm_8cpp_a30e0a472670f67d69466bc6babccca6d}{raw\+Termios}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{UBUNTU_2tterm_8cpp_af94f8f9b1816ac2983f3872159754794}\label{UBUNTU_2tterm_8cpp_af94f8f9b1816ac2983f3872159754794}} 
+\index{UBUNTU/tterm.cpp@{UBUNTU/tterm.cpp}!restoreTerminalState@{restoreTerminalState}}
+\index{restoreTerminalState@{restoreTerminalState}!UBUNTU/tterm.cpp@{UBUNTU/tterm.cpp}}
+\doxysubsubsection{\texorpdfstring{restoreTerminalState()}{restoreTerminalState()}}
+{\footnotesize\ttfamily void restore\+Terminal\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 89 of file U\+B\+U\+N\+T\+U/tterm.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{90 \{}
+\DoxyCodeLine{91     \textcolor{comment}{// Reset the terminal to its original state}}
+\DoxyCodeLine{92     tcsetattr(STDIN\_FILENO, TCSANOW, \&\mbox{\hyperlink{UBUNTU_2tterm_8cpp_ac202057a8bed4e3c46bd968ad096a491}{originalTermios}});}
+\DoxyCodeLine{93 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{d0/d75/UBUNTU_2tterm_8cpp_af94f8f9b1816ac2983f3872159754794_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{UBUNTU_2tterm_8cpp_a95904e81df90190556cc51eeebee0e86}\label{UBUNTU_2tterm_8cpp_a95904e81df90190556cc51eeebee0e86}} 
+\index{UBUNTU/tterm.cpp@{UBUNTU/tterm.cpp}!saveTerminalState@{saveTerminalState}}
+\index{saveTerminalState@{saveTerminalState}!UBUNTU/tterm.cpp@{UBUNTU/tterm.cpp}}
+\doxysubsubsection{\texorpdfstring{saveTerminalState()}{saveTerminalState()}}
+{\footnotesize\ttfamily void save\+Terminal\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 74 of file U\+B\+U\+N\+T\+U/tterm.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{75 \{}
+\DoxyCodeLine{76     }
+\DoxyCodeLine{77     \textcolor{comment}{// Save the current terminal settings}}
+\DoxyCodeLine{78     tcgetattr(STDIN\_FILENO, \&\mbox{\hyperlink{UBUNTU_2tterm_8cpp_ac202057a8bed4e3c46bd968ad096a491}{originalTermios}});}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80     \textcolor{comment}{// Set the terminal to raw mode}}
+\DoxyCodeLine{81     \mbox{\hyperlink{UBUNTU_2tterm_8cpp_a30e0a472670f67d69466bc6babccca6d}{rawTermios}} = \mbox{\hyperlink{UBUNTU_2tterm_8cpp_ac202057a8bed4e3c46bd968ad096a491}{originalTermios}};}
+\DoxyCodeLine{82     \mbox{\hyperlink{UBUNTU_2tterm_8cpp_a30e0a472670f67d69466bc6babccca6d}{rawTermios}}.c\_lflag \&= \string~(ICANON | ECHO);}
+\DoxyCodeLine{83     tcsetattr(STDIN\_FILENO, TCSANOW, \&\mbox{\hyperlink{UBUNTU_2tterm_8cpp_a30e0a472670f67d69466bc6babccca6d}{rawTermios}});}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85     \textcolor{comment}{// Set non-\/blocking mode for stdin}}
+\DoxyCodeLine{86     fcntl(STDIN\_FILENO, F\_SETFL, fcntl(STDIN\_FILENO, F\_GETFL) | O\_NONBLOCK);}
+\DoxyCodeLine{87 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{UBUNTU_2tterm_8cpp_a56a383d48ccecf8ac4171e229902a698}\label{UBUNTU_2tterm_8cpp_a56a383d48ccecf8ac4171e229902a698}} 
+\index{UBUNTU/tterm.cpp@{UBUNTU/tterm.cpp}!userInput\_thread@{userInput\_thread}}
+\index{userInput\_thread@{userInput\_thread}!UBUNTU/tterm.cpp@{UBUNTU/tterm.cpp}}
+\doxysubsubsection{\texorpdfstring{userInput\_thread()}{userInput\_thread()}}
+{\footnotesize\ttfamily void user\+Input\+\_\+thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 95 of file U\+B\+U\+N\+T\+U/tterm.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{96 \{}
+\DoxyCodeLine{97     \textcolor{keywordtype}{char} c = 0;}
+\DoxyCodeLine{98     \textcolor{keywordflow}{while} (\mbox{\hyperlink{UBUNTU_2tterm_8cpp_a6e81895f1054b6e1db8b12e9a91f7d76}{captureUserInput}})}
+\DoxyCodeLine{99     \{}
+\DoxyCodeLine{100         c = 0;}
+\DoxyCodeLine{101         \mbox{\hyperlink{namespaceBBP_1_1userspace_a61a881cf9970daa1511345a803c18049a021cd4115ae18e6da8708aaf8dfbe942}{read}}(STDIN\_FILENO, \&c, 1);}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{UBUNTU_2tterm_8cpp_a6e81895f1054b6e1db8b12e9a91f7d76}{captureUserInput}})}
+\DoxyCodeLine{104             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106         \textcolor{keywordflow}{if} (c == 0)}
+\DoxyCodeLine{107             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109         \textcolor{keywordflow}{if} (c == 0x10)}
+\DoxyCodeLine{110         \{}
+\DoxyCodeLine{111             \mbox{\hyperlink{UBUNTU_2tterm_8cpp_af94f8f9b1816ac2983f3872159754794}{restoreTerminalState}}();}
+\DoxyCodeLine{112             \mbox{\hyperlink{namespaceBBP_1_1std_aa4dc45e65f9885f143b9d0f63882214d}{std::exit}}(-\/999);}
+\DoxyCodeLine{113         \}}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115         \mbox{\hyperlink{namespaceBBP_1_1std_a0e604b25e277316ba6a6d604812bbee3}{BBP::std::STDIN}} << c;}
+\DoxyCodeLine{116     \}}
+\DoxyCodeLine{117 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d75/UBUNTU_2tterm_8cpp_a56a383d48ccecf8ac4171e229902a698_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{UBUNTU_2tterm_8cpp_a6e81895f1054b6e1db8b12e9a91f7d76}\label{UBUNTU_2tterm_8cpp_a6e81895f1054b6e1db8b12e9a91f7d76}} 
+\index{UBUNTU/tterm.cpp@{UBUNTU/tterm.cpp}!captureUserInput@{captureUserInput}}
+\index{captureUserInput@{captureUserInput}!UBUNTU/tterm.cpp@{UBUNTU/tterm.cpp}}
+\doxysubsubsection{\texorpdfstring{captureUserInput}{captureUserInput}}
+{\footnotesize\ttfamily volatile bool capture\+User\+Input = false}
+
+
+
+Definition at line 70 of file U\+B\+U\+N\+T\+U/tterm.\+cpp.
+
+\mbox{\Hypertarget{UBUNTU_2tterm_8cpp_af99406ae1cee4d1f7f5c4ce05d401005}\label{UBUNTU_2tterm_8cpp_af99406ae1cee4d1f7f5c4ce05d401005}} 
+\index{UBUNTU/tterm.cpp@{UBUNTU/tterm.cpp}!inpThread@{inpThread}}
+\index{inpThread@{inpThread}!UBUNTU/tterm.cpp@{UBUNTU/tterm.cpp}}
+\doxysubsubsection{\texorpdfstring{inpThread}{inpThread}}
+{\footnotesize\ttfamily \+::std\+::thread inp\+Thread}
+
+
+
+Definition at line 69 of file U\+B\+U\+N\+T\+U/tterm.\+cpp.
+
+\mbox{\Hypertarget{UBUNTU_2tterm_8cpp_ac202057a8bed4e3c46bd968ad096a491}\label{UBUNTU_2tterm_8cpp_ac202057a8bed4e3c46bd968ad096a491}} 
+\index{UBUNTU/tterm.cpp@{UBUNTU/tterm.cpp}!originalTermios@{originalTermios}}
+\index{originalTermios@{originalTermios}!UBUNTU/tterm.cpp@{UBUNTU/tterm.cpp}}
+\doxysubsubsection{\texorpdfstring{originalTermios}{originalTermios}}
+{\footnotesize\ttfamily struct termios original\+Termios}
+
+
+
+Definition at line 71 of file U\+B\+U\+N\+T\+U/tterm.\+cpp.
+
+\mbox{\Hypertarget{UBUNTU_2tterm_8cpp_a036394fc10cca88bc82fae1c50b6afec}\label{UBUNTU_2tterm_8cpp_a036394fc10cca88bc82fae1c50b6afec}} 
+\index{UBUNTU/tterm.cpp@{UBUNTU/tterm.cpp}!printfbuff@{printfbuff}}
+\index{printfbuff@{printfbuff}!UBUNTU/tterm.cpp@{UBUNTU/tterm.cpp}}
+\doxysubsubsection{\texorpdfstring{printfbuff}{printfbuff}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_aa628d4212b7e43b58f01273f47ecf4c6}{B\+B\+P\+::std\+::static\+\_\+string}}$<$\mbox{\hyperlink{namespaceBBP_1_1std_a790bf7c69d24a27ebb26dfd83a8980fd}{B\+B\+P\+::std\+::max\+\_\+page\+\_\+elements}}$>$ printfbuff}
+
+
+
+Definition at line 13 of file U\+B\+U\+N\+T\+U/tterm.\+cpp.
+
+\mbox{\Hypertarget{UBUNTU_2tterm_8cpp_a30e0a472670f67d69466bc6babccca6d}\label{UBUNTU_2tterm_8cpp_a30e0a472670f67d69466bc6babccca6d}} 
+\index{UBUNTU/tterm.cpp@{UBUNTU/tterm.cpp}!rawTermios@{rawTermios}}
+\index{rawTermios@{rawTermios}!UBUNTU/tterm.cpp@{UBUNTU/tterm.cpp}}
+\doxysubsubsection{\texorpdfstring{rawTermios}{rawTermios}}
+{\footnotesize\ttfamily struct termios raw\+Termios}
+
+
+
+Definition at line 72 of file U\+B\+U\+N\+T\+U/tterm.\+cpp.
+
+\mbox{\Hypertarget{UBUNTU_2tterm_8cpp_a78c725c1915e216311ae284d3f9b43d8}\label{UBUNTU_2tterm_8cpp_a78c725c1915e216311ae284d3f9b43d8}} 
+\index{UBUNTU/tterm.cpp@{UBUNTU/tterm.cpp}!sprintfbuff@{sprintfbuff}}
+\index{sprintfbuff@{sprintfbuff}!UBUNTU/tterm.cpp@{UBUNTU/tterm.cpp}}
+\doxysubsubsection{\texorpdfstring{sprintfbuff}{sprintfbuff}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_aa628d4212b7e43b58f01273f47ecf4c6}{B\+B\+P\+::std\+::static\+\_\+string}}$<$\mbox{\hyperlink{namespaceBBP_1_1std_a790bf7c69d24a27ebb26dfd83a8980fd}{B\+B\+P\+::std\+::max\+\_\+page\+\_\+elements}}$>$ sprintfbuff}
+
+
+
+Definition at line 14 of file U\+B\+U\+N\+T\+U/tterm.\+cpp.
+

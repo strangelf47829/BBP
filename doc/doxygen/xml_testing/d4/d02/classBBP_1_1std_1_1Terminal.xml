@@ -1,0 +1,425 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d4/d02/classBBP_1_1std_1_1Terminal" kind="class" language="C++" prot="public">
+    <compoundname>BBP::std::Terminal</compoundname>
+    <includes refid="d5/d22/ECMA35_8h" local="no">ECMA35.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d4/d02/classBBP_1_1std_1_1Terminal_1a74f62d9e98e09f8eba5fb761e5995794" prot="public" static="no" mutable="no">
+        <type><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack</ref>&lt; <ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">std::string_element</ref> &gt;</type>
+        <definition>std::Stack&lt;std::string_element&gt; BBP::std::Terminal::out</definition>
+        <argsstring></argsstring>
+        <name>out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" line="31" column="12" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d02/classBBP_1_1std_1_1Terminal_1a4278e80f0ca14b7f3dd8f98bffd4cc30" prot="public" static="no" mutable="no">
+        <type><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack</ref>&lt; <ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">std::string_element</ref> &gt;</type>
+        <definition>std::Stack&lt;std::string_element&gt; BBP::std::Terminal::in</definition>
+        <argsstring></argsstring>
+        <name>in</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" line="32" column="12" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d02/classBBP_1_1std_1_1Terminal_1a0da22d74fdc40b27155ecf56fb8a9f0b" prot="public" static="no" mutable="no">
+        <type><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack</ref>&lt; <ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">std::string_element</ref> &gt;</type>
+        <definition>std::Stack&lt;std::string_element&gt; BBP::std::Terminal::err</definition>
+        <argsstring></argsstring>
+        <name>err</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" line="33" column="12" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d02/classBBP_1_1std_1_1Terminal_1a450c16f553145fabc2325044899f683d" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BBP::std::Terminal::usesGUI</definition>
+        <argsstring></argsstring>
+        <name>usesGUI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" line="36" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d02/classBBP_1_1std_1_1Terminal_1aa6bbe1cda2ec1c5493edb5d75aad8427" prot="public" static="no" mutable="no">
+        <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+        <definition>window* BBP::std::Terminal::GUI</definition>
+        <argsstring></argsstring>
+        <name>GUI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" line="37" column="8" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d4/d02/classBBP_1_1std_1_1Terminal_1aef9d19ed4efe384795cdd1c6ce75e50b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BBP::std::Terminal::Terminal</definition>
+        <argsstring>()</argsstring>
+        <name>Terminal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" line="17" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d02/classBBP_1_1std_1_1Terminal_1a4c94304c680d045497fe7e1de89a2c31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BBP::std::Terminal::Terminal</definition>
+        <argsstring>(window *)</argsstring>
+        <name>Terminal</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" line="18" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d02/classBBP_1_1std_1_1Terminal_1a02579427026c4684fb7838d91e148afa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d4/d02/classBBP_1_1std_1_1Terminal" kindref="compound">Terminal</ref> &amp;</type>
+        <definition>Terminal&amp; BBP::std::Terminal::put</definition>
+        <argsstring>(string_element)</argsstring>
+        <name>put</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">string_element</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" line="21" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d02/classBBP_1_1std_1_1Terminal_1a5ea9ecadde81346f5786d367e677ae2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d4/d02/classBBP_1_1std_1_1Terminal" kindref="compound">Terminal</ref> &amp;</type>
+        <definition>Terminal&amp; BBP::std::Terminal::puts</definition>
+        <argsstring>(string &amp;)</argsstring>
+        <name>puts</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1afb582024987be6020cff7542cd771ae7" kindref="member">string</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" line="24" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d02/classBBP_1_1std_1_1Terminal_1ac00bd7f2fc5f33e1fd50fc3a2dcfc31b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d4/d02/classBBP_1_1std_1_1Terminal" kindref="compound">Terminal</ref> &amp;</type>
+        <definition>Terminal&amp; BBP::std::Terminal::puts</definition>
+        <argsstring>(conststring)</argsstring>
+        <name>puts</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">conststring</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" line="25" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d02/classBBP_1_1std_1_1Terminal_1a53258537b7040cea3944a242d46c9172" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d4/d02/classBBP_1_1std_1_1Terminal" kindref="compound">Terminal</ref> &amp;</type>
+        <definition>Terminal&amp; BBP::std::Terminal::puts</definition>
+        <argsstring>(c_string)</argsstring>
+        <name>puts</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a95c149a6e963e567bd059eb11aef4ac8" kindref="member">c_string</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" line="26" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d02/classBBP_1_1std_1_1Terminal_1a143ed81bfa058390bcd441459ba8dc42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d4/d02/classBBP_1_1std_1_1Terminal" kindref="compound">Terminal</ref> &amp;</type>
+        <definition>Terminal&amp; BBP::std::Terminal::Bell</definition>
+        <argsstring>()</argsstring>
+        <name>Bell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" line="40" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d02/classBBP_1_1std_1_1Terminal_1a5dddb8b252983ca3998771baa288af45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d4/d02/classBBP_1_1std_1_1Terminal" kindref="compound">Terminal</ref> &amp;</type>
+        <definition>Terminal&amp; BBP::std::Terminal::Backspace</definition>
+        <argsstring>()</argsstring>
+        <name>Backspace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" line="41" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d02/classBBP_1_1std_1_1Terminal_1a151ed736b2b48d48b77b20d557f2fee9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d4/d02/classBBP_1_1std_1_1Terminal" kindref="compound">Terminal</ref> &amp;</type>
+        <definition>Terminal&amp; BBP::std::Terminal::Tab</definition>
+        <argsstring>()</argsstring>
+        <name>Tab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" line="42" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d02/classBBP_1_1std_1_1Terminal_1acd69c256af9df6a94156f4c43e8303b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d4/d02/classBBP_1_1std_1_1Terminal" kindref="compound">Terminal</ref> &amp;</type>
+        <definition>Terminal&amp; BBP::std::Terminal::LineFeed</definition>
+        <argsstring>()</argsstring>
+        <name>LineFeed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" line="43" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d02/classBBP_1_1std_1_1Terminal_1af3e642a2d0e14022beea695258d77098" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d4/d02/classBBP_1_1std_1_1Terminal" kindref="compound">Terminal</ref> &amp;</type>
+        <definition>Terminal&amp; BBP::std::Terminal::FormFeed</definition>
+        <argsstring>()</argsstring>
+        <name>FormFeed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" line="44" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d02/classBBP_1_1std_1_1Terminal_1a92614a62aabc900f1008ad43c6bc0f37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d4/d02/classBBP_1_1std_1_1Terminal" kindref="compound">Terminal</ref> &amp;</type>
+        <definition>Terminal&amp; BBP::std::Terminal::CarriageReturn</definition>
+        <argsstring>()</argsstring>
+        <name>CarriageReturn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" line="45" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d02/classBBP_1_1std_1_1Terminal_1ad62cf6b0a9d0b52d59a024579a1881a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d4/d02/classBBP_1_1std_1_1Terminal" kindref="compound">Terminal</ref> &amp;</type>
+        <definition>Terminal&amp; BBP::std::Terminal::Escape</definition>
+        <argsstring>()</argsstring>
+        <name>Escape</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" line="46" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d02/classBBP_1_1std_1_1Terminal_1a265ccb98cdda847d3593c7548be4e003" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d4/d02/classBBP_1_1std_1_1Terminal" kindref="compound">Terminal</ref> &amp;</type>
+        <definition>Terminal&amp; BBP::std::Terminal::SS2</definition>
+        <argsstring>()</argsstring>
+        <name>SS2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" line="49" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d02/classBBP_1_1std_1_1Terminal_1ae906e4f38f4914f577b3b8eb0cbec589" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d4/d02/classBBP_1_1std_1_1Terminal" kindref="compound">Terminal</ref> &amp;</type>
+        <definition>Terminal&amp; BBP::std::Terminal::SS3</definition>
+        <argsstring>()</argsstring>
+        <name>SS3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" line="50" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="8">
+        <label>BBP::std::Stack&lt; std::string_element &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+page</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="template-instance">
+          <edgelabel>&lt; std::string_element &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>BBP::std::PAGE&lt; K &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; K &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>BBP::std::PAGE&lt; std::string_element &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; std::string_element &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>BBP::std::PAGE&lt; RGBA_t &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; RGBA_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>BBP::std::PAGE&lt; string_element &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; string_element &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BBP::std::window</label>
+        <link refid="db/d2b/structBBP_1_1std_1_1window"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+typeFace</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+Chroma</edgelabel>
+          <edgelabel>+Stroke</edgelabel>
+          <edgelabel>+Fill</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+backBuffer</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+charMapping</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BBP::std::PAGE&lt; mask_t &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; mask_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>BBP::std::Terminal</label>
+        <link refid="d4/d02/classBBP_1_1std_1_1Terminal"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+GUI</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+err</edgelabel>
+          <edgelabel>+in</edgelabel>
+          <edgelabel>+out</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>BBP::std::Stack&lt; K &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+page</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>BBP::std::colour</label>
+        <link refid="de/d9c/structBBP_1_1std_1_1colour"/>
+      </node>
+      <node id="4">
+        <label>BBP::std::PAGE&lt; T &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" line="13" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ECMA35.h" bodystart="12" bodyend="52"/>
+    <listofallmembers>
+      <member refid="d4/d02/classBBP_1_1std_1_1Terminal_1a5dddb8b252983ca3998771baa288af45" prot="public" virt="non-virtual"><scope>BBP::std::Terminal</scope><name>Backspace</name></member>
+      <member refid="d4/d02/classBBP_1_1std_1_1Terminal_1a143ed81bfa058390bcd441459ba8dc42" prot="public" virt="non-virtual"><scope>BBP::std::Terminal</scope><name>Bell</name></member>
+      <member refid="d4/d02/classBBP_1_1std_1_1Terminal_1a92614a62aabc900f1008ad43c6bc0f37" prot="public" virt="non-virtual"><scope>BBP::std::Terminal</scope><name>CarriageReturn</name></member>
+      <member refid="d4/d02/classBBP_1_1std_1_1Terminal_1a0da22d74fdc40b27155ecf56fb8a9f0b" prot="public" virt="non-virtual"><scope>BBP::std::Terminal</scope><name>err</name></member>
+      <member refid="d4/d02/classBBP_1_1std_1_1Terminal_1ad62cf6b0a9d0b52d59a024579a1881a2" prot="public" virt="non-virtual"><scope>BBP::std::Terminal</scope><name>Escape</name></member>
+      <member refid="d4/d02/classBBP_1_1std_1_1Terminal_1af3e642a2d0e14022beea695258d77098" prot="public" virt="non-virtual"><scope>BBP::std::Terminal</scope><name>FormFeed</name></member>
+      <member refid="d4/d02/classBBP_1_1std_1_1Terminal_1aa6bbe1cda2ec1c5493edb5d75aad8427" prot="public" virt="non-virtual"><scope>BBP::std::Terminal</scope><name>GUI</name></member>
+      <member refid="d4/d02/classBBP_1_1std_1_1Terminal_1a4278e80f0ca14b7f3dd8f98bffd4cc30" prot="public" virt="non-virtual"><scope>BBP::std::Terminal</scope><name>in</name></member>
+      <member refid="d4/d02/classBBP_1_1std_1_1Terminal_1acd69c256af9df6a94156f4c43e8303b2" prot="public" virt="non-virtual"><scope>BBP::std::Terminal</scope><name>LineFeed</name></member>
+      <member refid="d4/d02/classBBP_1_1std_1_1Terminal_1a74f62d9e98e09f8eba5fb761e5995794" prot="public" virt="non-virtual"><scope>BBP::std::Terminal</scope><name>out</name></member>
+      <member refid="d4/d02/classBBP_1_1std_1_1Terminal_1a02579427026c4684fb7838d91e148afa" prot="public" virt="non-virtual"><scope>BBP::std::Terminal</scope><name>put</name></member>
+      <member refid="d4/d02/classBBP_1_1std_1_1Terminal_1a5ea9ecadde81346f5786d367e677ae2a" prot="public" virt="non-virtual"><scope>BBP::std::Terminal</scope><name>puts</name></member>
+      <member refid="d4/d02/classBBP_1_1std_1_1Terminal_1ac00bd7f2fc5f33e1fd50fc3a2dcfc31b" prot="public" virt="non-virtual"><scope>BBP::std::Terminal</scope><name>puts</name></member>
+      <member refid="d4/d02/classBBP_1_1std_1_1Terminal_1a53258537b7040cea3944a242d46c9172" prot="public" virt="non-virtual"><scope>BBP::std::Terminal</scope><name>puts</name></member>
+      <member refid="d4/d02/classBBP_1_1std_1_1Terminal_1a265ccb98cdda847d3593c7548be4e003" prot="public" virt="non-virtual"><scope>BBP::std::Terminal</scope><name>SS2</name></member>
+      <member refid="d4/d02/classBBP_1_1std_1_1Terminal_1ae906e4f38f4914f577b3b8eb0cbec589" prot="public" virt="non-virtual"><scope>BBP::std::Terminal</scope><name>SS3</name></member>
+      <member refid="d4/d02/classBBP_1_1std_1_1Terminal_1a151ed736b2b48d48b77b20d557f2fee9" prot="public" virt="non-virtual"><scope>BBP::std::Terminal</scope><name>Tab</name></member>
+      <member refid="d4/d02/classBBP_1_1std_1_1Terminal_1aef9d19ed4efe384795cdd1c6ce75e50b" prot="public" virt="non-virtual"><scope>BBP::std::Terminal</scope><name>Terminal</name></member>
+      <member refid="d4/d02/classBBP_1_1std_1_1Terminal_1a4c94304c680d045497fe7e1de89a2c31" prot="public" virt="non-virtual"><scope>BBP::std::Terminal</scope><name>Terminal</name></member>
+      <member refid="d4/d02/classBBP_1_1std_1_1Terminal_1a450c16f553145fabc2325044899f683d" prot="public" virt="non-virtual"><scope>BBP::std::Terminal</scope><name>usesGUI</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

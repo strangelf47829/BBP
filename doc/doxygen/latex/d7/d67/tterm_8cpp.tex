@@ -1,0 +1,96 @@
+\hypertarget{tterm_8cpp}{}\doxysection{tterm.\+cpp File Reference}
+\label{tterm_8cpp}\index{tterm.cpp@{tterm.cpp}}
+{\ttfamily \#include \char`\"{}../include/stdio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/\+Graphics.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../build/include/\+S\+D\+L.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+Include dependency graph for tterm.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d83/tterm_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{tterm_8cpp_a6f762346f9b3ee9e4887d897b256eb80}{input\+Thread}} (void $\ast$data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+S\+D\+L\+\_\+\+Thread $\ast$ \mbox{\hyperlink{tterm_8cpp_acf12fd02d718d8c4907145316b1063aa}{thr}}
+\item 
+volatile bool \mbox{\hyperlink{tterm_8cpp_ae1fd54bdbfbc12c29816883afaa80969}{listen\+For\+Input}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{tterm_8cpp_a6f762346f9b3ee9e4887d897b256eb80}\label{tterm_8cpp_a6f762346f9b3ee9e4887d897b256eb80}} 
+\index{tterm.cpp@{tterm.cpp}!inputThread@{inputThread}}
+\index{inputThread@{inputThread}!tterm.cpp@{tterm.cpp}}
+\doxysubsubsection{\texorpdfstring{inputThread()}{inputThread()}}
+{\footnotesize\ttfamily int input\+Thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file tterm.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39 \{}
+\DoxyCodeLine{40     SDL\_Event event;}
+\DoxyCodeLine{41     \textcolor{keywordflow}{while} (\mbox{\hyperlink{tterm_8cpp_ae1fd54bdbfbc12c29816883afaa80969}{listenForInput}}) \{}
+\DoxyCodeLine{42         \textcolor{keywordflow}{while} (SDL\_PollEvent(\&event)) \{}
+\DoxyCodeLine{43             \mbox{\hyperlink{namespaceBBP_1_1std_a8d46784954bec3eed0277416001174a5}{::std::printf}}(\textcolor{stringliteral}{"Hello!"});}
+\DoxyCodeLine{44             \textcolor{keywordflow}{if} (event.type == SDL\_KEYDOWN) \{}
+\DoxyCodeLine{45                 SDL\_Keycode keyCode = \textcolor{keyword}{event}.key.keysym.sym;}
+\DoxyCodeLine{46                 \mbox{\hyperlink{namespaceBBP_1_1std_a0e604b25e277316ba6a6d604812bbee3}{BBP::std::STDIN}} << (char)keyCode;}
+\DoxyCodeLine{47             \}}
+\DoxyCodeLine{48         \}}
+\DoxyCodeLine{49     \}}
+\DoxyCodeLine{50     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{51 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d67/tterm_8cpp_a6f762346f9b3ee9e4887d897b256eb80_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d67/tterm_8cpp_a6f762346f9b3ee9e4887d897b256eb80_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{tterm_8cpp_ae1fd54bdbfbc12c29816883afaa80969}\label{tterm_8cpp_ae1fd54bdbfbc12c29816883afaa80969}} 
+\index{tterm.cpp@{tterm.cpp}!listenForInput@{listenForInput}}
+\index{listenForInput@{listenForInput}!tterm.cpp@{tterm.cpp}}
+\doxysubsubsection{\texorpdfstring{listenForInput}{listenForInput}}
+{\footnotesize\ttfamily volatile bool listen\+For\+Input = false}
+
+
+
+Definition at line 36 of file tterm.\+cpp.
+
+\mbox{\Hypertarget{tterm_8cpp_acf12fd02d718d8c4907145316b1063aa}\label{tterm_8cpp_acf12fd02d718d8c4907145316b1063aa}} 
+\index{tterm.cpp@{tterm.cpp}!thr@{thr}}
+\index{thr@{thr}!tterm.cpp@{tterm.cpp}}
+\doxysubsubsection{\texorpdfstring{thr}{thr}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Thread$\ast$ thr}
+
+
+
+Definition at line 35 of file tterm.\+cpp.
+

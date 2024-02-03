@@ -1,0 +1,85 @@
+# Makefile to build and install BBP stdlib
+
+# == CHANGE THE SETTINGS BELOW TO SUIT THE ENVIRONMENT ==
+
+PLAT= arm
+
+# Where to install
+CC= gcc
+CXX= g++
+
+CFLAGS= $(SYSCFLAGS) $(MYCFLAGS) $(EXT_CFLAGS)
+CXXFLAGS= $(SYSCXFLAGS) $(MYCXFLAGS) $(EXT_CXFLAGS)
+
+LDFLAGS= $(SYSLDFLAGS) $(MYLDFLAGS)
+LIBS= $(SYSLIBS) $(MYLIBS)
+
+AR= $(CXX)
+RANLIB= ranlib
+
+SYSCFLAGS= -c -fPIC
+SYSCXFLAGS= -c -fPIC
+SYSLDFLAGS=
+SYSLIBS=
+
+INCDIR= ../include/
+
+MYCFLAGS= -I$(INCDIR) -I$(INSTALL_INC)/
+MYCXFLAGS= -I$(INCDIR) -I$(INSTALL_INC)/
+MYLDFLAGS=
+MYLIBS=
+
+EXT_CFLAGS=
+EXT_CXFLAGS=
+
+# == END OF USER SETTINGS ==
+
+PLATS= x86 micro stdgnu x86Debug
+
+LIB_A= lib.a
+
+ALL_O= Except.o Resources.o stdint.o stdio.o Strings.o
+ALL_A= $(ALL_O) $(LIB_A)
+
+# Targets start here
+ALL= all
+
+default: $(PLAT)
+
+all: $(ALL_A)
+
+o: $(ALL_O)
+
+a: $(ALL_A)
+
+$(LIB_A): $(ALL_O)
+	$(AR) -shared $(ALL_O) -o $@
+
+clean:
+	rm -rf $(ALL_A) $(wildcard *.o)
+
+generic: all
+
+x86:
+	$(MAKE) $(ALL) EXT_CXFLAGS="-nostdlib -ffreestanding -fpic" CC="gcc" CXX="g++"
+
+x86Debug:
+	$(MAKE) $(ALL) CC="gcc" CXX="g++" SYSCXFLAGS="-g" SYSCFLAGS="-g"
+
+nostdlib:
+	$(MAKE) $(ALL) SYSCFLAGS="-nostdlib" SYSCXFLAGS="-nostdlib"
+
+freestanding:
+	$(MAKE) $(ALL) EXTCFLAGS="-nostdlib -ffreestanding" EXTCXFLAGS="-nostdlib -ffreestanding"
+
+arm:
+	$(MAKE) $(ALL) SYSCXFLAGS="-nostdlib -ffreestanding -fpic" CC="arm-none-eabi-gcc" CXX="arm-none-eabi-g++"
+
+
+
+# Make rules
+Except.o: Except.cpp
+Resources.o: Resources.cpp
+stdint.o: stdint.cpp
+stdio.o: stdio.cpp
+Strings.o: Strings.cpp

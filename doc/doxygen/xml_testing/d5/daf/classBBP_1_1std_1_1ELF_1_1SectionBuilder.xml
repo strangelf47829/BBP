@@ -1,0 +1,865 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder" kind="class" language="C++" prot="public">
+    <compoundname>BBP::std::ELF::SectionBuilder</compoundname>
+    <includes refid="db/de5/ELF_8h" local="no">ELF.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a294b606391c5c5e5b282e091f56b5ecf" prot="public" static="no" mutable="no">
+        <type><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">PAGE</ref>&lt; <ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">string_element</ref> &gt;</type>
+        <definition>PAGE&lt;string_element&gt; BBP::std::ELF::SectionBuilder::header</definition>
+        <argsstring></argsstring>
+        <name>header</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="233" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" bodystart="233" bodyend="-1"/>
+        <referencedby refid="dc/d51/SectionBuilderGettersSetters_8cpp_1aecd1a7f983edbf869d01a4be7b55e5e0" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="3" endline="13">readWord</referencedby>
+        <referencedby refid="dc/d51/SectionBuilderGettersSetters_8cpp_1a2f1117d73b25ec87d35be21d06469a7b" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="14" endline="35">writeWord</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1ac60eea5b80611d7aa335aa44210aa032" prot="public" static="no" mutable="no">
+        <type><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">Stack</ref>&lt; <ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">string_element</ref> &gt;</type>
+        <definition>Stack&lt;string_element&gt; BBP::std::ELF::SectionBuilder::stack</definition>
+        <argsstring></argsstring>
+        <name>stack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="234" column="7" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" bodystart="234" bodyend="-1"/>
+        <referencedby refid="df/d72/namespaceBBP_1_1esa_1a12036e29fe89ed5f33db3ef83bed0099" compoundref="da/d4c/Actions_8cpp" startline="410" endline="443">BBP::esa::ACTION</referencedby>
+        <referencedby refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a5db7526e463f6505a4e2ce93f005ced0" compoundref="d6/d8a/SectionBuilder_8cpp" startline="3" endline="35">Append</referencedby>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1aa57aff72c2c8ab0a35bd8a4bffd32d01" compoundref="d4/d83/Frontend_8cpp" startline="461" endline="464">BBP::esa::esaProcessor::setProcedureAddress</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a90ad162c6a6f16d01efe7f28e655a9af" prot="public" static="no" mutable="no">
+        <type><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">PAGE</ref>&lt; <ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">string_element</ref> &gt;</type>
+        <definition>PAGE&lt;string_element&gt; BBP::std::ELF::SectionBuilder::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="235" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" bodystart="235" bodyend="-1"/>
+        <referencedby refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a5db7526e463f6505a4e2ce93f005ced0" compoundref="d6/d8a/SectionBuilder_8cpp" startline="3" endline="35">Append</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a2bf5b44041db3ce3c72db47249cf2a1a" prot="public" static="no" mutable="no">
+        <type><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder" kindref="compound">ELFBuilder</ref> *</type>
+        <definition>ELFBuilder* BBP::std::ELF::SectionBuilder::elf</definition>
+        <argsstring></argsstring>
+        <name>elf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="242" column="12" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" bodystart="242" bodyend="-1"/>
+        <referencedby refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a5db7526e463f6505a4e2ce93f005ced0" compoundref="d6/d8a/SectionBuilder_8cpp" startline="3" endline="35">Append</referencedby>
+        <referencedby refid="dc/d51/SectionBuilderGettersSetters_8cpp_1aecd1a7f983edbf869d01a4be7b55e5e0" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="3" endline="13">readWord</referencedby>
+        <referencedby refid="dc/d51/SectionBuilderGettersSetters_8cpp_1a2f1117d73b25ec87d35be21d06469a7b" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="14" endline="35">writeWord</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a9b31949fb2f8a0b6e40f328ff59fa65f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BBP::std::ELF::SectionBuilder::isMemUnique</definition>
+        <argsstring></argsstring>
+        <name>isMemUnique</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="243" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" bodystart="243" bodyend="-1"/>
+        <referencedby refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a5db7526e463f6505a4e2ce93f005ced0" compoundref="d6/d8a/SectionBuilder_8cpp" startline="3" endline="35">Append</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1afd861ea6f3072596321fc0b09bbef3b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+        <definition>BBP::std::word BBP::std::ELF::SectionBuilder::name</definition>
+        <argsstring>(void)</argsstring>
+        <name>name</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="203" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilderGettersSetters.cpp" bodystart="44" bodyend="44"/>
+        <references refid="d1/d5d/ELF32_8h_1a879a901485681592f8c903ba3b6355d1" compoundref="d1/d5d/ELF32_8h" startline="54">ELF_SECTION_NAMEOFFSET</references>
+        <references refid="dc/d51/SectionBuilderGettersSetters_8cpp_1aecd1a7f983edbf869d01a4be7b55e5e0" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="3" endline="13">readWord</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1ac0b12cb6b3c24ed5bfc55e2edb3fd6c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::ELF::SectionBuilder::name</definition>
+        <argsstring>(std::word)</argsstring>
+        <name>name</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+          <defname>value</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="204" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilderGettersSetters.cpp" bodystart="45" bodyend="45"/>
+        <references refid="d1/d5d/ELF32_8h_1a879a901485681592f8c903ba3b6355d1" compoundref="d1/d5d/ELF32_8h" startline="54">ELF_SECTION_NAMEOFFSET</references>
+        <references refid="dc/d51/SectionBuilderGettersSetters_8cpp_1a2f1117d73b25ec87d35be21d06469a7b" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="14" endline="35">writeWord</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1ad6af22d6c389baf470062336cef24b0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+        <definition>BBP::std::word BBP::std::ELF::SectionBuilder::type</definition>
+        <argsstring>(void)</argsstring>
+        <name>type</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="206" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilderGettersSetters.cpp" bodystart="47" bodyend="47"/>
+        <references refid="d1/d5d/ELF32_8h_1a467fa29b90011cab390b5d6ebf02ed6a" compoundref="d1/d5d/ELF32_8h" startline="56">ELF_SECTION_TYPEOFFSET</references>
+        <references refid="dc/d51/SectionBuilderGettersSetters_8cpp_1aecd1a7f983edbf869d01a4be7b55e5e0" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="3" endline="13">readWord</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1ae744ea48e567886384c1f147d9d56d0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::ELF::SectionBuilder::type</definition>
+        <argsstring>(std::word)</argsstring>
+        <name>type</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+          <defname>value</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="207" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilderGettersSetters.cpp" bodystart="48" bodyend="48"/>
+        <references refid="d1/d5d/ELF32_8h_1a467fa29b90011cab390b5d6ebf02ed6a" compoundref="d1/d5d/ELF32_8h" startline="56">ELF_SECTION_TYPEOFFSET</references>
+        <references refid="dc/d51/SectionBuilderGettersSetters_8cpp_1a2f1117d73b25ec87d35be21d06469a7b" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="14" endline="35">writeWord</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1ae9a18e03fb57f60625330fc369062d3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+        <definition>BBP::std::word BBP::std::ELF::SectionBuilder::flags</definition>
+        <argsstring>(void)</argsstring>
+        <name>flags</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="209" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilderGettersSetters.cpp" bodystart="50" bodyend="50"/>
+        <references refid="d1/d5d/ELF32_8h_1a97f163768f5380ba386231edb88e2d19" compoundref="d1/d5d/ELF32_8h" startline="58">ELF_SECTION_FLAGSOFFSET</references>
+        <references refid="dc/d51/SectionBuilderGettersSetters_8cpp_1aecd1a7f983edbf869d01a4be7b55e5e0" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="3" endline="13">readWord</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1aec5c6d26fb9cc967a5aede63de3644eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::ELF::SectionBuilder::flags</definition>
+        <argsstring>(std::word)</argsstring>
+        <name>flags</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+          <defname>value</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="210" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilderGettersSetters.cpp" bodystart="51" bodyend="51"/>
+        <references refid="d1/d5d/ELF32_8h_1a97f163768f5380ba386231edb88e2d19" compoundref="d1/d5d/ELF32_8h" startline="58">ELF_SECTION_FLAGSOFFSET</references>
+        <references refid="dc/d51/SectionBuilderGettersSetters_8cpp_1a2f1117d73b25ec87d35be21d06469a7b" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="14" endline="35">writeWord</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1ad0b7806f625427f8bbb9912966d9999f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref></type>
+        <definition>BBP::std::address_t BBP::std::ELF::SectionBuilder::addr</definition>
+        <argsstring>(void)</argsstring>
+        <name>addr</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="212" column="16" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilderGettersSetters.cpp" bodystart="53" bodyend="53"/>
+        <references refid="d1/d5d/ELF32_8h_1a6dee5a0aa1b16155b19ea57fa908497f" compoundref="d1/d5d/ELF32_8h" startline="60">ELF_SECTION_ADDROFFSET</references>
+        <references refid="dc/d51/SectionBuilderGettersSetters_8cpp_1aecd1a7f983edbf869d01a4be7b55e5e0" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="3" endline="13">readWord</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1aad44b295751752a779673de479e0e53f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::ELF::SectionBuilder::addr</definition>
+        <argsstring>(std::address_t)</argsstring>
+        <name>addr</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref></type>
+          <defname>value</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="213" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilderGettersSetters.cpp" bodystart="54" bodyend="54"/>
+        <references refid="d1/d5d/ELF32_8h_1a6dee5a0aa1b16155b19ea57fa908497f" compoundref="d1/d5d/ELF32_8h" startline="60">ELF_SECTION_ADDROFFSET</references>
+        <references refid="dc/d51/SectionBuilderGettersSetters_8cpp_1a2f1117d73b25ec87d35be21d06469a7b" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="14" endline="35">writeWord</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a7785e10735bd7b9b109baf768f7e09c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1aba0804f0534bca779731a6e8f2d3b123" kindref="member">std::offset_t</ref></type>
+        <definition>BBP::std::offset_t BBP::std::ELF::SectionBuilder::offset</definition>
+        <argsstring>(void)</argsstring>
+        <name>offset</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="215" column="15" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilderGettersSetters.cpp" bodystart="56" bodyend="56"/>
+        <references refid="d1/d5d/ELF32_8h_1a4061d5e5b7be7346d81e7cf601f263a6" compoundref="d1/d5d/ELF32_8h" startline="62">ELF_SECTION_OFFSETOFFSET</references>
+        <references refid="dc/d51/SectionBuilderGettersSetters_8cpp_1aecd1a7f983edbf869d01a4be7b55e5e0" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="3" endline="13">readWord</references>
+        <referencedby refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a5db7526e463f6505a4e2ce93f005ced0" compoundref="d6/d8a/SectionBuilder_8cpp" startline="3" endline="35">Append</referencedby>
+        <referencedby refid="d9/d6f/namespaceBBP_1a0ba2e2ff83f9f917f9811058a5d02a0b" compoundref="de/dd1/Smile_8cpp" startline="21" endline="306">BBP::smile_main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a6258733021d82342d3fae0fb36be91d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::ELF::SectionBuilder::offset</definition>
+        <argsstring>(std::offset_t)</argsstring>
+        <name>offset</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aba0804f0534bca779731a6e8f2d3b123" kindref="member">std::offset_t</ref></type>
+          <defname>value</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="216" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilderGettersSetters.cpp" bodystart="57" bodyend="57"/>
+        <references refid="d1/d5d/ELF32_8h_1a4061d5e5b7be7346d81e7cf601f263a6" compoundref="d1/d5d/ELF32_8h" startline="62">ELF_SECTION_OFFSETOFFSET</references>
+        <references refid="dc/d51/SectionBuilderGettersSetters_8cpp_1a2f1117d73b25ec87d35be21d06469a7b" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="14" endline="35">writeWord</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a7d844f38bc48a69c8dcc758b882eef1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+        <definition>BBP::std::word BBP::std::ELF::SectionBuilder::size</definition>
+        <argsstring>(void)</argsstring>
+        <name>size</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="218" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilderGettersSetters.cpp" bodystart="59" bodyend="59"/>
+        <references refid="d1/d5d/ELF32_8h_1af189d5344a5cf6fb6a12ccb83463ea5d" compoundref="d1/d5d/ELF32_8h" startline="64">ELF_SECTION_SIZEOFFSET</references>
+        <references refid="dc/d51/SectionBuilderGettersSetters_8cpp_1aecd1a7f983edbf869d01a4be7b55e5e0" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="3" endline="13">readWord</references>
+        <referencedby refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a5db7526e463f6505a4e2ce93f005ced0" compoundref="d6/d8a/SectionBuilder_8cpp" startline="3" endline="35">Append</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a9be7c78361492e5f615263fac98a6fe8" compoundref="d9/d1d/ELFHeader_8cpp" startline="42" endline="218">BBP::std::ELF::ELFBuilder::ELFBuilder</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a578f4e352f6bc66d70f4a237ea6fecb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::ELF::SectionBuilder::size</definition>
+        <argsstring>(std::word)</argsstring>
+        <name>size</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+          <defname>value</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="219" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilderGettersSetters.cpp" bodystart="60" bodyend="60"/>
+        <references refid="d1/d5d/ELF32_8h_1af189d5344a5cf6fb6a12ccb83463ea5d" compoundref="d1/d5d/ELF32_8h" startline="64">ELF_SECTION_SIZEOFFSET</references>
+        <references refid="dc/d51/SectionBuilderGettersSetters_8cpp_1a2f1117d73b25ec87d35be21d06469a7b" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="14" endline="35">writeWord</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a713d1ebbab93c72f9ebec24435fa9e79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+        <definition>BBP::std::word BBP::std::ELF::SectionBuilder::link</definition>
+        <argsstring>(void)</argsstring>
+        <name>link</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="221" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilderGettersSetters.cpp" bodystart="62" bodyend="62"/>
+        <references refid="d1/d5d/ELF32_8h_1ae71e23f667a5159c09392344036c2fbf" compoundref="d1/d5d/ELF32_8h" startline="66">ELF_SECTION_LINKOFFSET</references>
+        <references refid="dc/d51/SectionBuilderGettersSetters_8cpp_1aecd1a7f983edbf869d01a4be7b55e5e0" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="3" endline="13">readWord</references>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a9be7c78361492e5f615263fac98a6fe8" compoundref="d9/d1d/ELFHeader_8cpp" startline="42" endline="218">BBP::std::ELF::ELFBuilder::ELFBuilder</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1ab0583136069a6dc98f4e93d320ed8241" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::ELF::SectionBuilder::link</definition>
+        <argsstring>(std::word)</argsstring>
+        <name>link</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+          <defname>value</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="222" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilderGettersSetters.cpp" bodystart="63" bodyend="63"/>
+        <references refid="d1/d5d/ELF32_8h_1ae71e23f667a5159c09392344036c2fbf" compoundref="d1/d5d/ELF32_8h" startline="66">ELF_SECTION_LINKOFFSET</references>
+        <references refid="dc/d51/SectionBuilderGettersSetters_8cpp_1a2f1117d73b25ec87d35be21d06469a7b" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="14" endline="35">writeWord</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1ad3cab01fa80fde43b34df44e3f5eaf11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+        <definition>BBP::std::word BBP::std::ELF::SectionBuilder::info</definition>
+        <argsstring>(void)</argsstring>
+        <name>info</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="224" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilderGettersSetters.cpp" bodystart="65" bodyend="65"/>
+        <references refid="d1/d5d/ELF32_8h_1a5c91d59336909bb7a95346a549d1742b" compoundref="d1/d5d/ELF32_8h" startline="68">ELF_SECTION_INFOOFFSET</references>
+        <references refid="dc/d51/SectionBuilderGettersSetters_8cpp_1aecd1a7f983edbf869d01a4be7b55e5e0" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="3" endline="13">readWord</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a773ac4778b140aef9847c6d6d6ffc9f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::ELF::SectionBuilder::info</definition>
+        <argsstring>(std::word)</argsstring>
+        <name>info</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+          <defname>value</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="225" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilderGettersSetters.cpp" bodystart="66" bodyend="66"/>
+        <references refid="d1/d5d/ELF32_8h_1a5c91d59336909bb7a95346a549d1742b" compoundref="d1/d5d/ELF32_8h" startline="68">ELF_SECTION_INFOOFFSET</references>
+        <references refid="dc/d51/SectionBuilderGettersSetters_8cpp_1a2f1117d73b25ec87d35be21d06469a7b" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="14" endline="35">writeWord</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1acfcb20ab0fbe2c9501ca7469ac87e75b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+        <definition>BBP::std::word BBP::std::ELF::SectionBuilder::addralign</definition>
+        <argsstring>(void)</argsstring>
+        <name>addralign</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="227" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilderGettersSetters.cpp" bodystart="68" bodyend="68"/>
+        <references refid="d1/d5d/ELF32_8h_1aa72c9a2cd62ea016bba0a1fb8378f6e7" compoundref="d1/d5d/ELF32_8h" startline="70">ELF_SECTION_ADDRALIGNOFFSET</references>
+        <references refid="dc/d51/SectionBuilderGettersSetters_8cpp_1aecd1a7f983edbf869d01a4be7b55e5e0" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="3" endline="13">readWord</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1abeac8b241b7c5dcc7d356f6aff2464fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::ELF::SectionBuilder::addralign</definition>
+        <argsstring>(std::word)</argsstring>
+        <name>addralign</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+          <defname>value</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="228" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilderGettersSetters.cpp" bodystart="69" bodyend="69"/>
+        <references refid="d1/d5d/ELF32_8h_1aa72c9a2cd62ea016bba0a1fb8378f6e7" compoundref="d1/d5d/ELF32_8h" startline="70">ELF_SECTION_ADDRALIGNOFFSET</references>
+        <references refid="dc/d51/SectionBuilderGettersSetters_8cpp_1a2f1117d73b25ec87d35be21d06469a7b" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="14" endline="35">writeWord</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a41ae947e4efee075dd62539798623cbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+        <definition>BBP::std::word BBP::std::ELF::SectionBuilder::entsize</definition>
+        <argsstring>(void)</argsstring>
+        <name>entsize</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="230" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilderGettersSetters.cpp" bodystart="71" bodyend="71"/>
+        <references refid="d1/d5d/ELF32_8h_1a8a08d50b24194d835334c88d1fcc55a9" compoundref="d1/d5d/ELF32_8h" startline="72">ELF_SECTION_ENTSIZEOFFSET</references>
+        <references refid="dc/d51/SectionBuilderGettersSetters_8cpp_1aecd1a7f983edbf869d01a4be7b55e5e0" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="3" endline="13">readWord</references>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a9be7c78361492e5f615263fac98a6fe8" compoundref="d9/d1d/ELFHeader_8cpp" startline="42" endline="218">BBP::std::ELF::ELFBuilder::ELFBuilder</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a9b6c85b2800234c429d93323cab99d5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::ELF::SectionBuilder::entsize</definition>
+        <argsstring>(std::word)</argsstring>
+        <name>entsize</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+          <defname>value</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="231" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilderGettersSetters.cpp" bodystart="72" bodyend="72"/>
+        <references refid="d1/d5d/ELF32_8h_1a8a08d50b24194d835334c88d1fcc55a9" compoundref="d1/d5d/ELF32_8h" startline="72">ELF_SECTION_ENTSIZEOFFSET</references>
+        <references refid="dc/d51/SectionBuilderGettersSetters_8cpp_1a2f1117d73b25ec87d35be21d06469a7b" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="14" endline="35">writeWord</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a5db7526e463f6505a4e2ce93f005ced0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::ELF::SectionBuilder::Append</definition>
+        <argsstring>(std::size_t)</argsstring>
+        <name>Append</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref></type>
+          <defname>size</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="237" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilder.cpp" bodystart="3" bodyend="35"/>
+        <references refid="d0/def/Signal_8h_1a82e69d819748cab5933309bba1999f7c" compoundref="d0/def/Signal_8h" startline="9">__SIGNAL__</references>
+        <references refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a4fe482a030ea03542f9e36c2f680b3ca" compoundref="db/de5/ELF_8h" startline="30">BBP::std::ELF::ELFBuilder::allocator</references>
+        <references refid="d6/d73/classBBP_1_1std_1_1ResourceManager_1a2feb265bae9a30994a2a4a4f69306329" compoundref="db/d83/Resources_8cpp" startline="26" endline="42">BBP::std::ResourceManager::calloc</references>
+        <references refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a90ad162c6a6f16d01efe7f28e655a9af" compoundref="db/de5/ELF_8h" startline="235">data</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a3b5c962d781f42d8dc36949061c308ab" compoundref="de/d5c/Memory_8h" startline="35">BBP::std::PAGE&lt; T &gt;::dataSize</references>
+        <references refid="d8/dc2/errno_8h_1aa4ccb54aa806de3e41a8515f06db85d4" compoundref="d8/dc2/errno_8h" startline="124">EALREADY</references>
+        <references refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a2bf5b44041db3ce3c72db47249cf2a1a" compoundref="db/de5/ELF_8h" startline="242">elf</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a750ba4c285e0788e84722a30a776b913" compoundref="d4/df4/Except_8cpp" startline="7" endline="18">BBP::std::exception</references>
+        <references refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ae617b962ff1bbb33b4436c0131fc9266" compoundref="db/de5/ELF_8h" startline="33">BBP::std::ELF::ELFBuilder::file</references>
+        <references refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a9b31949fb2f8a0b6e40f328ff59fa65f" compoundref="db/de5/ELF_8h" startline="243">isMemUnique</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a370f972c44b9f597cdda3e119899f60f">BBP::std::last</references>
+        <references refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a7785e10735bd7b9b109baf768f7e09c0" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="56" endline="56">offset</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a3f8c5c3d25a021fbc386bafabc41a719">BBP::std::seqlen</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a8b214d5bdfe950ea0efc262c569ff9ef" compoundref="d0/def/Signal_8h" startline="29">BBP::std::SIGSEGV</references>
+        <references refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a7d844f38bc48a69c8dcc758b882eef1a" compoundref="dc/d51/SectionBuilderGettersSetters_8cpp" startline="59" endline="59">size</references>
+        <references refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1ac60eea5b80611d7aa335aa44210aa032" compoundref="db/de5/ELF_8h" startline="234">stack</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1ae3969c8df1ff25a9f0385f9e1e123f06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::ELF::SectionBuilder::Extend</definition>
+        <argsstring>(std::size_t)</argsstring>
+        <name>Extend</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref></type>
+          <defname>size</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="238" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilder.cpp" bodystart="37" bodyend="57"/>
+        <references refid="d0/def/Signal_8h_1a82e69d819748cab5933309bba1999f7c" compoundref="d0/def/Signal_8h" startline="9">__SIGNAL__</references>
+        <references refid="d8/dc2/errno_8h_1a556612e55358838192165684c971a44f" compoundref="d8/dc2/errno_8h" startline="109">EADDRNOTAVAIL</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a750ba4c285e0788e84722a30a776b913" compoundref="d4/df4/Except_8cpp" startline="7" endline="18">BBP::std::exception</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a8b214d5bdfe950ea0efc262c569ff9ef" compoundref="d0/def/Signal_8h" startline="29">BBP::std::SIGSEGV</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a3a50373a9ed12789a1b9411e290e3921" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::ELF::SectionBuilder::close</definition>
+        <argsstring>()</argsstring>
+        <name>close</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="239" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilder.cpp" bodystart="59" bodyend="70"/>
+        <references refid="d0/def/Signal_8h_1a82e69d819748cab5933309bba1999f7c" compoundref="d0/def/Signal_8h" startline="9">__SIGNAL__</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a8b214d5bdfe950ea0efc262c569ff9ef" compoundref="d0/def/Signal_8h" startline="29">BBP::std::SIGSEGV</references>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a0e05c3b97f4227c9924841c5e170ae82" compoundref="d9/d1d/ELFHeader_8cpp" startline="222" endline="266">BBP::std::ELF::ELFBuilder::close</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a9708cb7df4cb8ec958275920d88cdece" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BBP::std::ELF::SectionBuilder::SectionBuilder</definition>
+        <argsstring>(ELFBuilder *, std::offset_t)</argsstring>
+        <name>SectionBuilder</name>
+        <param>
+          <type><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder" kindref="compound">ELFBuilder</ref> *</type>
+          <defname>elf</defname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aba0804f0534bca779731a6e8f2d3b123" kindref="member">std::offset_t</ref></type>
+          <defname>offset</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="245" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/SectionBuilderGettersSetters.cpp" bodystart="37" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1aa5aad5f45c0a8fef3045a51a6ab4b013" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BBP::std::ELF::SectionBuilder::SectionBuilder</definition>
+        <argsstring>(ELFBuilder *, string_element *, std::size_t)</argsstring>
+        <name>SectionBuilder</name>
+        <param>
+          <type><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder" kindref="compound">ELFBuilder</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">string_element</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="246" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="16">
+        <label>BBP::std::ResourceManager</label>
+        <link refid="d6/d73/classBBP_1_1std_1_1ResourceManager"/>
+        <childnode refid="17" relation="usage">
+          <edgelabel>-allocations</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>-objects</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>BBP::std::ELF::SegmentBuilder</label>
+        <link refid="d8/d33/classBBP_1_1std_1_1ELF_1_1SegmentBuilder"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+stack</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+elf</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+data</edgelabel>
+          <edgelabel>+header</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>BBP::std::PAGE&lt; K &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; K &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="22">
+        <label>BBP::std::AbstractGCEntry</label>
+        <link refid="d7/def/structBBP_1_1std_1_1AbstractGCEntry"/>
+      </node>
+      <node id="12">
+        <label>BBP::std::PAGE&lt; BBP::std::ELF::SectionBuilder &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; BBP::std::ELF::SectionBuilder &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BBP::std::PAGE&lt; string_element &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; string_element &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>BBP::std::STATIC_PAGE&lt; T, K &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BBP::std::Stack&lt; string_element &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+page</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; string_element &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>BBP::std::ELF::SectionBuilder</label>
+        <link refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+stack</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+elf</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+data</edgelabel>
+          <edgelabel>+header</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>BBP::std::Stack&lt; BBP::std::ELF::SectionBuilder &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+page</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; BBP::std::ELF::SectionBuilder &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>BBP::std::STATIC_PAGE&lt; void *, max_allocations &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+        <childnode refid="19" relation="template-instance">
+          <edgelabel>&lt; void *, max_allocations &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>BBP::std::PAGE&lt; BBP::std::AbstractGCEntry * &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="22" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; BBP::std::AbstractGCEntry * &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>BBP::std::Stack&lt; BBP::std::ELF::SegmentBuilder &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+page</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; BBP::std::ELF::SegmentBuilder &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>BBP::std::PAGE&lt; BBP::std::ELF::SymbolBuilder &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; BBP::std::ELF::SymbolBuilder &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>BBP::std::Stack&lt; K &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+page</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>BBP::std::ELF::ELFBuilder</label>
+        <link refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+segments</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-segPages</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+sections</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-symPages</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>+symbols</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>+allocator</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-secPages</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+file</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>BBP::std::Stack&lt; BBP::std::ELF::SymbolBuilder &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+page</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; BBP::std::ELF::SymbolBuilder &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>BBP::std::PAGE&lt; void * &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="18" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; void * &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>BBP::std::PAGE&lt; T &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+      </node>
+      <node id="9">
+        <label>BBP::std::PAGE&lt; BBP::std::ELF::SegmentBuilder &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; BBP::std::ELF::SegmentBuilder &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>BBP::std::ELF::SymbolBuilder</label>
+        <link refid="d3/db3/classBBP_1_1std_1_1ELF_1_1SymbolBuilder"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+stack</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+elf</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+data</edgelabel>
+          <edgelabel>+header</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>BBP::std::STATIC_PAGE&lt; BBP::std::AbstractGCEntry *, max_objects &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="21" relation="public-inheritance">
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="template-instance">
+          <edgelabel>&lt; BBP::std::AbstractGCEntry *, max_objects &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" line="200" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF.h" bodystart="199" bodyend="255"/>
+    <listofallmembers>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1ad0b7806f625427f8bbb9912966d9999f" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>addr</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1aad44b295751752a779673de479e0e53f" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>addr</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1acfcb20ab0fbe2c9501ca7469ac87e75b" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>addralign</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1abeac8b241b7c5dcc7d356f6aff2464fa" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>addralign</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a5db7526e463f6505a4e2ce93f005ced0" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>Append</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a3a50373a9ed12789a1b9411e290e3921" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>close</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a90ad162c6a6f16d01efe7f28e655a9af" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>data</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a2bf5b44041db3ce3c72db47249cf2a1a" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>elf</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a41ae947e4efee075dd62539798623cbb" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>entsize</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a9b6c85b2800234c429d93323cab99d5c" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>entsize</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1ae3969c8df1ff25a9f0385f9e1e123f06" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>Extend</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1ae9a18e03fb57f60625330fc369062d3a" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>flags</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1aec5c6d26fb9cc967a5aede63de3644eb" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>flags</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a294b606391c5c5e5b282e091f56b5ecf" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>header</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1ad3cab01fa80fde43b34df44e3f5eaf11" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>info</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a773ac4778b140aef9847c6d6d6ffc9f2" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>info</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a9b31949fb2f8a0b6e40f328ff59fa65f" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>isMemUnique</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a713d1ebbab93c72f9ebec24435fa9e79" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>link</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1ab0583136069a6dc98f4e93d320ed8241" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>link</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1afd861ea6f3072596321fc0b09bbef3b0" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>name</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1ac0b12cb6b3c24ed5bfc55e2edb3fd6c3" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>name</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a7785e10735bd7b9b109baf768f7e09c0" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>offset</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a6258733021d82342d3fae0fb36be91d8" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>offset</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a9708cb7df4cb8ec958275920d88cdece" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>SectionBuilder</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1aa5aad5f45c0a8fef3045a51a6ab4b013" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>SectionBuilder</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a7d844f38bc48a69c8dcc758b882eef1a" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>size</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a578f4e352f6bc66d70f4a237ea6fecb8" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>size</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1ac60eea5b80611d7aa335aa44210aa032" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>stack</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1ad6af22d6c389baf470062336cef24b0f" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>type</name></member>
+      <member refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1ae744ea48e567886384c1f147d9d56d0c" prot="public" virt="non-virtual"><scope>BBP::std::ELF::SectionBuilder</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

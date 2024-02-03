@@ -1,0 +1,292 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d3/d99/structBBP_1_1std_1_1DirectoryNode" kind="struct" language="C++" prot="public">
+    <compoundname>BBP::std::DirectoryNode</compoundname>
+    <includes refid="d0/d00/FileSys_8h" local="no">FileSys.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d3/d99/structBBP_1_1std_1_1DirectoryNode_1a069ce4b1293d7adee2b5190b5c9469e3" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d40/classBBP_1_1std_1_1VOLUME" kindref="compound">VOLUME</ref> *</type>
+        <definition>VOLUME* BBP::std::DirectoryNode::volume</definition>
+        <argsstring></argsstring>
+        <name>volume</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="247" column="8" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d99/structBBP_1_1std_1_1DirectoryNode_1a2013b1627a4b7f0a1c3143a0aec4ae39" prot="public" static="no" mutable="no">
+        <type><ref refid="d8/dea/classBBP_1_1std_1_1PATH" kindref="compound">PATH</ref></type>
+        <definition>PATH BBP::std::DirectoryNode::path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="250" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d99/structBBP_1_1std_1_1DirectoryNode_1a41ee26909aa24d3d23d6f63adc2e286d" prot="public" static="no" mutable="no">
+        <type><ref refid="da/d20/classBBP_1_1std_1_1DIRECTORY" kindref="compound">DIRECTORY</ref> *</type>
+        <definition>DIRECTORY* BBP::std::DirectoryNode::parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="253" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d99/structBBP_1_1std_1_1DirectoryNode_1a11b2fc1010c5d56efce4111d3eb5f20a" prot="public" static="no" mutable="no">
+        <type><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack</ref>&lt; <ref refid="da/d20/classBBP_1_1std_1_1DIRECTORY" kindref="compound">DIRECTORY</ref> &gt;</type>
+        <definition>std::Stack&lt;DIRECTORY&gt; BBP::std::DirectoryNode::subDirectories</definition>
+        <argsstring></argsstring>
+        <name>subDirectories</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="254" column="12" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d99/structBBP_1_1std_1_1DirectoryNode_1aa8a189ff126d19a7e9d2bd6ea1170adf" prot="public" static="no" mutable="no">
+        <type><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack</ref>&lt; <ref refid="d4/dbd/classBBP_1_1std_1_1FILE" kindref="compound">FILE</ref> &gt;</type>
+        <definition>std::Stack&lt;FILE&gt; BBP::std::DirectoryNode::files</definition>
+        <argsstring></argsstring>
+        <name>files</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="257" column="12" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="8">
+        <label>BBP::std::Stack&lt; BBP::std::FILE &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+page</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; BBP::std::FILE &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>BBP::std::VOLUME</label>
+        <link refid="dd/d40/classBBP_1_1std_1_1VOLUME"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+volumePath</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>BBP::std::ResourceManager</label>
+        <link refid="d6/d73/classBBP_1_1std_1_1ResourceManager"/>
+        <childnode refid="17" relation="usage">
+          <edgelabel>-allocations</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>-objects</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>BBP::std::PAGE&lt; K &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; K &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>BBP::std::DIRECTORY</label>
+        <link refid="da/d20/classBBP_1_1std_1_1DIRECTORY"/>
+      </node>
+      <node id="21">
+        <label>BBP::std::AbstractGCEntry</label>
+        <link refid="d7/def/structBBP_1_1std_1_1AbstractGCEntry"/>
+      </node>
+      <node id="2">
+        <label>BBP::std::Stack&lt; BBP::std::DIRECTORY &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+page</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; BBP::std::DIRECTORY &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>BBP::std::STATIC_PAGE&lt; T, K &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>BBP::std::PATH</label>
+        <link refid="d8/dea/classBBP_1_1std_1_1PATH"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-_path</edgelabel>
+          <edgelabel>-rawPath</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-Volume</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-allocator</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>BBP::std::STATIC_PAGE&lt; void *, max_allocations &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+        <childnode refid="15" relation="template-instance">
+          <edgelabel>&lt; void *, max_allocations &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BBP::std::PAGE&lt; BBP::std::DIRECTORY &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; BBP::std::DIRECTORY &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>BBP::std::PAGE&lt; max_path_length &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; max_path_length &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>BBP::std::PAGE&lt; BBP::std::FILE &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; BBP::std::FILE &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>BBP::std::PAGE&lt; BBP::std::AbstractGCEntry * &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="21" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; BBP::std::AbstractGCEntry * &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>BBP::std::Stack&lt; K &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+page</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>BBP::std::PAGE&lt; void * &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="18" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; void * &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>BBP::std::PAGE&lt; T &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+      </node>
+      <node id="19">
+        <label>BBP::std::STATIC_PAGE&lt; BBP::std::AbstractGCEntry *, max_objects &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="template-instance">
+          <edgelabel>&lt; BBP::std::AbstractGCEntry *, max_objects &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>BBP::std::STATIC_PAGE&lt; max_path_length &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+        <childnode refid="15" relation="template-instance">
+          <edgelabel>&lt; max_path_length &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>BBP::std::DirectoryNode</label>
+        <link refid="d3/d99/structBBP_1_1std_1_1DirectoryNode"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+subDirectories</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+files</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+volume</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+path</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+parent</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>BBP::std::FILE</label>
+        <link refid="d4/dbd/classBBP_1_1std_1_1FILE"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="245" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" bodystart="244" bodyend="258"/>
+    <listofallmembers>
+      <member refid="d3/d99/structBBP_1_1std_1_1DirectoryNode_1aa8a189ff126d19a7e9d2bd6ea1170adf" prot="public" virt="non-virtual"><scope>BBP::std::DirectoryNode</scope><name>files</name></member>
+      <member refid="d3/d99/structBBP_1_1std_1_1DirectoryNode_1a41ee26909aa24d3d23d6f63adc2e286d" prot="public" virt="non-virtual"><scope>BBP::std::DirectoryNode</scope><name>parent</name></member>
+      <member refid="d3/d99/structBBP_1_1std_1_1DirectoryNode_1a2013b1627a4b7f0a1c3143a0aec4ae39" prot="public" virt="non-virtual"><scope>BBP::std::DirectoryNode</scope><name>path</name></member>
+      <member refid="d3/d99/structBBP_1_1std_1_1DirectoryNode_1a11b2fc1010c5d56efce4111d3eb5f20a" prot="public" virt="non-virtual"><scope>BBP::std::DirectoryNode</scope><name>subDirectories</name></member>
+      <member refid="d3/d99/structBBP_1_1std_1_1DirectoryNode_1a069ce4b1293d7adee2b5190b5c9469e3" prot="public" virt="non-virtual"><scope>BBP::std::DirectoryNode</scope><name>volume</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

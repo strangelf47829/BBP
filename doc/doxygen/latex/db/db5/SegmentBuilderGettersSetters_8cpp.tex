@@ -1,0 +1,93 @@
+\hypertarget{SegmentBuilderGettersSetters_8cpp}{}\doxysection{Segment\+Builder\+Getters\+Setters.\+cpp File Reference}
+\label{SegmentBuilderGettersSetters_8cpp}\index{SegmentBuilderGettersSetters.cpp@{SegmentBuilderGettersSetters.cpp}}
+{\ttfamily \#include \char`\"{}../include/\+E\+L\+F.\+h\char`\"{}}\newline
+Include dependency graph for Segment\+Builder\+Getters\+Setters.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{de/dc8/SegmentBuilderGettersSetters_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_ae104641b17c021a901add93f7bc5d808}{B\+B\+P\+::std\+::word}} \mbox{\hyperlink{SegmentBuilderGettersSetters_8cpp_af2f866c74e2272870ac09970cedd5738}{read\+Word}} (\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1SegmentBuilder}{B\+B\+P\+::std\+::\+E\+L\+F\+::\+Segment\+Builder}} $\ast$seg, \mbox{\hyperlink{namespaceBBP_1_1std_aba0804f0534bca779731a6e8f2d3b123}{B\+B\+P\+::std\+::offset\+\_\+t}} offset)
+\item 
+void \mbox{\hyperlink{SegmentBuilderGettersSetters_8cpp_ae36c2d7af1b802ba05bcdf08bd49857f}{write\+Word}} (\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1SegmentBuilder}{B\+B\+P\+::std\+::\+E\+L\+F\+::\+Segment\+Builder}} $\ast$seg, \mbox{\hyperlink{namespaceBBP_1_1std_ae104641b17c021a901add93f7bc5d808}{B\+B\+P\+::std\+::word}} word, \mbox{\hyperlink{namespaceBBP_1_1std_aba0804f0534bca779731a6e8f2d3b123}{B\+B\+P\+::std\+::offset\+\_\+t}} offset)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{SegmentBuilderGettersSetters_8cpp_af2f866c74e2272870ac09970cedd5738}\label{SegmentBuilderGettersSetters_8cpp_af2f866c74e2272870ac09970cedd5738}} 
+\index{SegmentBuilderGettersSetters.cpp@{SegmentBuilderGettersSetters.cpp}!readWord@{readWord}}
+\index{readWord@{readWord}!SegmentBuilderGettersSetters.cpp@{SegmentBuilderGettersSetters.cpp}}
+\doxysubsubsection{\texorpdfstring{readWord()}{readWord()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_ae104641b17c021a901add93f7bc5d808}{B\+B\+P\+::std\+::word}} read\+Word (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1SegmentBuilder}{B\+B\+P\+::std\+::\+E\+L\+F\+::\+Segment\+Builder}} $\ast$}]{seg,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_aba0804f0534bca779731a6e8f2d3b123}{B\+B\+P\+::std\+::offset\+\_\+t}}}]{offset }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file Segment\+Builder\+Getters\+Setters.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4 \{}
+\DoxyCodeLine{5     \mbox{\hyperlink{namespaceBBP_1_1std_a4926ba934876e4a1028b9abb47edbc56}{BBP::std::byte}} \mbox{\hyperlink{namespaceBBP_1_1Locale_1_1Japanese_a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a}{a}} = seg-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1SegmentBuilder_ae7c8d396d75bdaf17a59396b9495c911}{header}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a02cc2cb6b1940e10fb3b4defba203ac6}{data}}[offset];}
+\DoxyCodeLine{6     \mbox{\hyperlink{namespaceBBP_1_1std_a4926ba934876e4a1028b9abb47edbc56}{BBP::std::byte}} \mbox{\hyperlink{Graphics_8cpp_a148e3876077787926724625411d6e7a9}{b}} = seg-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1SegmentBuilder_ae7c8d396d75bdaf17a59396b9495c911}{header}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a02cc2cb6b1940e10fb3b4defba203ac6}{data}}[offset + 1];}
+\DoxyCodeLine{7     \mbox{\hyperlink{namespaceBBP_1_1std_a4926ba934876e4a1028b9abb47edbc56}{BBP::std::byte}} c = seg-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1SegmentBuilder_ae7c8d396d75bdaf17a59396b9495c911}{header}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a02cc2cb6b1940e10fb3b4defba203ac6}{data}}[offset + 2];}
+\DoxyCodeLine{8     \mbox{\hyperlink{namespaceBBP_1_1std_a4926ba934876e4a1028b9abb47edbc56}{BBP::std::byte}} d = seg-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1SegmentBuilder_ae7c8d396d75bdaf17a59396b9495c911}{header}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a02cc2cb6b1940e10fb3b4defba203ac6}{data}}[offset + 3];}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10     \textcolor{keywordflow}{if} (!seg-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1SegmentBuilder_a179a55ddbd012adaea9285db57515cb7}{elf}}-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1ELFBuilder_a663656de6f599bbaaecd7851c922cb2c}{Endian}})}
+\DoxyCodeLine{11         \textcolor{keywordflow}{return} \mbox{\hyperlink{namespaceBBP_1_1Locale_1_1Japanese_a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a}{a}} | (\mbox{\hyperlink{Graphics_8cpp_a148e3876077787926724625411d6e7a9}{b}} << 8) | (c << 16) | (d << 24);}
+\DoxyCodeLine{12     \textcolor{keywordflow}{return} d | (c << 8) | (\mbox{\hyperlink{Graphics_8cpp_a148e3876077787926724625411d6e7a9}{b}} << 16) | (\mbox{\hyperlink{namespaceBBP_1_1Locale_1_1Japanese_a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a}{a}} << 24);}
+\DoxyCodeLine{13 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/db5/SegmentBuilderGettersSetters_8cpp_af2f866c74e2272870ac09970cedd5738_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{SegmentBuilderGettersSetters_8cpp_ae36c2d7af1b802ba05bcdf08bd49857f}\label{SegmentBuilderGettersSetters_8cpp_ae36c2d7af1b802ba05bcdf08bd49857f}} 
+\index{SegmentBuilderGettersSetters.cpp@{SegmentBuilderGettersSetters.cpp}!writeWord@{writeWord}}
+\index{writeWord@{writeWord}!SegmentBuilderGettersSetters.cpp@{SegmentBuilderGettersSetters.cpp}}
+\doxysubsubsection{\texorpdfstring{writeWord()}{writeWord()}}
+{\footnotesize\ttfamily void write\+Word (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1SegmentBuilder}{B\+B\+P\+::std\+::\+E\+L\+F\+::\+Segment\+Builder}} $\ast$}]{seg,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_ae104641b17c021a901add93f7bc5d808}{B\+B\+P\+::std\+::word}}}]{word,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_aba0804f0534bca779731a6e8f2d3b123}{B\+B\+P\+::std\+::offset\+\_\+t}}}]{offset }\end{DoxyParamCaption})}
+
+
+
+Definition at line 14 of file Segment\+Builder\+Getters\+Setters.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16     \mbox{\hyperlink{namespaceBBP_1_1std_a4926ba934876e4a1028b9abb47edbc56}{BBP::std::byte}} \mbox{\hyperlink{namespaceBBP_1_1Locale_1_1Japanese_a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a}{a}} = (\mbox{\hyperlink{namespaceBBP_1_1std_ae104641b17c021a901add93f7bc5d808}{word}} >> 0) \& 0xFF;}
+\DoxyCodeLine{17     \mbox{\hyperlink{namespaceBBP_1_1std_a4926ba934876e4a1028b9abb47edbc56}{BBP::std::byte}} \mbox{\hyperlink{Graphics_8cpp_a148e3876077787926724625411d6e7a9}{b}} = (\mbox{\hyperlink{namespaceBBP_1_1std_ae104641b17c021a901add93f7bc5d808}{word}} >> 8) \& 0xFF;}
+\DoxyCodeLine{18     \mbox{\hyperlink{namespaceBBP_1_1std_a4926ba934876e4a1028b9abb47edbc56}{BBP::std::byte}} c = (\mbox{\hyperlink{namespaceBBP_1_1std_ae104641b17c021a901add93f7bc5d808}{word}} >> 16) \& 0xFF;}
+\DoxyCodeLine{19     \mbox{\hyperlink{namespaceBBP_1_1std_a4926ba934876e4a1028b9abb47edbc56}{BBP::std::byte}} d = (\mbox{\hyperlink{namespaceBBP_1_1std_ae104641b17c021a901add93f7bc5d808}{word}} >> 24) \& 0xFF;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{keywordflow}{if} (!seg-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1SegmentBuilder_a179a55ddbd012adaea9285db57515cb7}{elf}}-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1ELFBuilder_a663656de6f599bbaaecd7851c922cb2c}{Endian}})}
+\DoxyCodeLine{22     \{}
+\DoxyCodeLine{23         seg-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1SegmentBuilder_ae7c8d396d75bdaf17a59396b9495c911}{header}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a02cc2cb6b1940e10fb3b4defba203ac6}{data}}[offset] = \mbox{\hyperlink{namespaceBBP_1_1Locale_1_1Japanese_a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a}{a}};}
+\DoxyCodeLine{24         seg-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1SegmentBuilder_ae7c8d396d75bdaf17a59396b9495c911}{header}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a02cc2cb6b1940e10fb3b4defba203ac6}{data}}[offset + 1] = \mbox{\hyperlink{Graphics_8cpp_a148e3876077787926724625411d6e7a9}{b}};}
+\DoxyCodeLine{25         seg-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1SegmentBuilder_ae7c8d396d75bdaf17a59396b9495c911}{header}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a02cc2cb6b1940e10fb3b4defba203ac6}{data}}[offset + 2] = c;}
+\DoxyCodeLine{26         seg-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1SegmentBuilder_ae7c8d396d75bdaf17a59396b9495c911}{header}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a02cc2cb6b1940e10fb3b4defba203ac6}{data}}[offset + 3] = d;}
+\DoxyCodeLine{27     \}}
+\DoxyCodeLine{28     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{29     \{}
+\DoxyCodeLine{30         seg-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1SegmentBuilder_ae7c8d396d75bdaf17a59396b9495c911}{header}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a02cc2cb6b1940e10fb3b4defba203ac6}{data}}[offset] = d;}
+\DoxyCodeLine{31         seg-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1SegmentBuilder_ae7c8d396d75bdaf17a59396b9495c911}{header}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a02cc2cb6b1940e10fb3b4defba203ac6}{data}}[offset + 1] = c;}
+\DoxyCodeLine{32         seg-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1SegmentBuilder_ae7c8d396d75bdaf17a59396b9495c911}{header}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a02cc2cb6b1940e10fb3b4defba203ac6}{data}}[offset + 2] = \mbox{\hyperlink{Graphics_8cpp_a148e3876077787926724625411d6e7a9}{b}};}
+\DoxyCodeLine{33         seg-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1SegmentBuilder_ae7c8d396d75bdaf17a59396b9495c911}{header}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a02cc2cb6b1940e10fb3b4defba203ac6}{data}}[offset + 3] = \mbox{\hyperlink{namespaceBBP_1_1Locale_1_1Japanese_a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a}{a}};}
+\DoxyCodeLine{34     \}}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{db/db5/SegmentBuilderGettersSetters_8cpp_ae36c2d7af1b802ba05bcdf08bd49857f_icgraph}
+\end{center}
+\end{figure}

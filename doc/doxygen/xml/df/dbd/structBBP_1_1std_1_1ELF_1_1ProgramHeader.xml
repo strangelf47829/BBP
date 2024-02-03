@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="df/dbd/structBBP_1_1std_1_1ELF_1_1ProgramHeader" kind="struct" language="C++" prot="public">
+    <compoundname>BBP::std::ELF::ProgramHeader</compoundname>
+    <includes refid="d1/d5d/ELF32_8h" local="no">ELF32.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="df/dbd/structBBP_1_1std_1_1ELF_1_1ProgramHeader_1a5d69c4c28e96bf09850e817a357020fe" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+        <definition>std::word BBP::std::ELF::ProgramHeader::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>The type of this program header. See P_TYPE. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" line="183" column="10" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/dbd/structBBP_1_1std_1_1ELF_1_1ProgramHeader_1ac88e64e9a8ae9b751aaf5df26f024c5a" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1aba0804f0534bca779731a6e8f2d3b123" kindref="member">std::offset_t</ref></type>
+        <definition>std::offset_t BBP::std::ELF::ProgramHeader::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Specifies where the contents of this header is in the file (relative to File start) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" line="184" column="14" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/dbd/structBBP_1_1std_1_1ELF_1_1ProgramHeader_1a6aea84729c6785861b298f5018845a75" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref></type>
+        <definition>std::address_t BBP::std::ELF::ProgramHeader::vaddr</definition>
+        <argsstring></argsstring>
+        <name>vaddr</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Where in virtual memory this segment should be loaded. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" line="185" column="15" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/dbd/structBBP_1_1std_1_1ELF_1_1ProgramHeader_1a19b56dbb33225f1eac530a57cfbd12a3" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref></type>
+        <definition>std::address_t BBP::std::ELF::ProgramHeader::paddr</definition>
+        <argsstring></argsstring>
+        <name>paddr</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Where in physical memory this segment should be loaded. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" line="186" column="15" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/dbd/structBBP_1_1std_1_1ELF_1_1ProgramHeader_1a135bc854aef454fc4790473810f6a949" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+        <definition>std::word BBP::std::ELF::ProgramHeader::filesz</definition>
+        <argsstring></argsstring>
+        <name>filesz</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Size of the segment in the file. If 0, the segment is defined exclusively by the header. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" line="187" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/dbd/structBBP_1_1std_1_1ELF_1_1ProgramHeader_1ae1b1e793ffa740440090ce625441524c" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+        <definition>std::word BBP::std::ELF::ProgramHeader::memsz</definition>
+        <argsstring></argsstring>
+        <name>memsz</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Size of the segment in memory. If greater than the size in file, the extra bytes will be initialized as 0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" line="188" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/dbd/structBBP_1_1std_1_1ELF_1_1ProgramHeader_1adcc6e8f9a10b78791af5539fa6cb056a" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+        <definition>std::word BBP::std::ELF::ProgramHeader::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Flags. PF_X - <ref refid="d5/d10/structBBP_1_1std_1_1Executable" kindref="compound">Executable</ref>, PF_W - Writeable, PF_R - Readable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" line="189" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/dbd/structBBP_1_1std_1_1ELF_1_1ProgramHeader_1a7361f04d388dcc045de09236a7e11d97" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+        <definition>std::word BBP::std::ELF::ProgramHeader::align</definition>
+        <argsstring></argsstring>
+        <name>align</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>0x1000 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" line="190" column="10" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>unsigned int</label>
+      </node>
+      <node id="1">
+        <label>BBP::std::ELF::ProgramHeader</label>
+        <link refid="df/dbd/structBBP_1_1std_1_1ELF_1_1ProgramHeader"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+paddr</edgelabel>
+          <edgelabel>+type</edgelabel>
+          <edgelabel>+align</edgelabel>
+          <edgelabel>+vaddr</edgelabel>
+          <edgelabel>+flags</edgelabel>
+          <edgelabel>+offset</edgelabel>
+          <edgelabel>+memsz</edgelabel>
+          <edgelabel>+filesz</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" line="182" column="15" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" bodystart="182" bodyend="191"/>
+    <listofallmembers>
+      <member refid="df/dbd/structBBP_1_1std_1_1ELF_1_1ProgramHeader_1a7361f04d388dcc045de09236a7e11d97" prot="public" virt="non-virtual"><scope>BBP::std::ELF::ProgramHeader</scope><name>align</name></member>
+      <member refid="df/dbd/structBBP_1_1std_1_1ELF_1_1ProgramHeader_1a135bc854aef454fc4790473810f6a949" prot="public" virt="non-virtual"><scope>BBP::std::ELF::ProgramHeader</scope><name>filesz</name></member>
+      <member refid="df/dbd/structBBP_1_1std_1_1ELF_1_1ProgramHeader_1adcc6e8f9a10b78791af5539fa6cb056a" prot="public" virt="non-virtual"><scope>BBP::std::ELF::ProgramHeader</scope><name>flags</name></member>
+      <member refid="df/dbd/structBBP_1_1std_1_1ELF_1_1ProgramHeader_1ae1b1e793ffa740440090ce625441524c" prot="public" virt="non-virtual"><scope>BBP::std::ELF::ProgramHeader</scope><name>memsz</name></member>
+      <member refid="df/dbd/structBBP_1_1std_1_1ELF_1_1ProgramHeader_1ac88e64e9a8ae9b751aaf5df26f024c5a" prot="public" virt="non-virtual"><scope>BBP::std::ELF::ProgramHeader</scope><name>offset</name></member>
+      <member refid="df/dbd/structBBP_1_1std_1_1ELF_1_1ProgramHeader_1a19b56dbb33225f1eac530a57cfbd12a3" prot="public" virt="non-virtual"><scope>BBP::std::ELF::ProgramHeader</scope><name>paddr</name></member>
+      <member refid="df/dbd/structBBP_1_1std_1_1ELF_1_1ProgramHeader_1a5d69c4c28e96bf09850e817a357020fe" prot="public" virt="non-virtual"><scope>BBP::std::ELF::ProgramHeader</scope><name>type</name></member>
+      <member refid="df/dbd/structBBP_1_1std_1_1ELF_1_1ProgramHeader_1a6aea84729c6785861b298f5018845a75" prot="public" virt="non-virtual"><scope>BBP::std::ELF::ProgramHeader</scope><name>vaddr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,110 @@
+.TH "Processor.cpp" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Processor.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '\&.\&./include/ELSA\&.h'\fP
+.br
+\fC#include '\&.\&./include/ELSABackend\&.h'\fP
+.br
+\fC#include 'Actions\&.h'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBBBP\fP"
+.br
+.ti -1c
+.RI " \fBBBP::esa\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBBP::std::conststring\fP \fB_unkown\fP (\fBBBP::std::index_t\fP from, \fBBBP::std::index_t\fP to)"
+.br
+.ti -1c
+.RI "\fBBBP::std::conststring\fP \fB_numerical\fP (\fBBBP::std::Lexer::numerical_t\fP numerical, bool isFloat)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "static const char *const \fBBBP::esa::keywords\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBBBP::esa::tokens\fP [] = { '\\r', '\\n', ';', '(', ')', ',', '[', ']', '{', '}', '^', '<', '>', '\\'', ''', ':', '\\\\', 'dn', 'db', 'dh', 'di', 'da', 'dw' }"
+.br
+.ti -1c
+.RI "static const char *const \fBBBP::esa::mnemonics\fP []"
+.br
+.ti -1c
+.RI "static constexpr std::size_t \fBBBP::esa::keywordCount\fP = 18"
+.br
+.ti -1c
+.RI "static constexpr std::size_t \fBBBP::esa::tokenCount\fP = 23"
+.br
+.ti -1c
+.RI "static constexpr std::size_t \fBBBP::esa::mnemonicsCount\fP = 110"
+.br
+.ti -1c
+.RI "static const std::Lexer::lex_action \fBBBP::esa::keywordActions\fP []"
+.br
+.ti -1c
+.RI "static const std::Lexer::lex_action \fBBBP::esa::tokenActions\fP []"
+.br
+.ti -1c
+.RI "static const std::Lexer::lex_action \fBBBP::esa::mnemonicsActions\fP []"
+.br
+.ti -1c
+.RI "static const char \fBBBP::esa::flags\fP [23][8]"
+.br
+.ti -1c
+.RI "esaProcessor \fBBBP::esa::processor\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBBBP::std::conststring\fP _numerical (\fBBBP::std::Lexer::numerical_t\fP numerical, bool isFloat)"
+
+.PP
+Definition at line 145 of file Processor\&.cpp\&.
+.PP
+.nf
+146 {
+147     if (!BBP::esa::processor\&.lineIsDefiningInstruction)
+148         return BBP::esa::processor\&.numerical(numerical, isFloat);
+149     return BBP::esa::processor\&.numericalArgument(numerical, isFloat);
+150 }
+.fi
+.PP
+References BBP::esa::esaProcessor::numerical(), BBP::esa::esaProcessor::numericalArgument(), and BBP::esa::processor\&.
+.PP
+Referenced by BBP::esa::esaProcessor::translate()\&.
+.SS "\fBBBP::std::conststring\fP _unkown (\fBBBP::std::index_t\fP from, \fBBBP::std::index_t\fP to)"
+
+.PP
+Definition at line 137 of file Processor\&.cpp\&.
+.PP
+.nf
+138 {
+139     // If not defining an instruction, do this
+140     if (!BBP::esa::processor\&.lineIsDefiningInstruction)
+141         return BBP::esa::processor\&.unkown(from, to);
+142     return BBP::esa::processor\&.resolve(from, to);
+143 }
+.fi
+.PP
+References BBP::esa::processor, BBP::esa::esaProcessor::resolve(), BBP::Locale::Japanese::to, and BBP::esa::esaProcessor::unkown()\&.
+.PP
+Referenced by BBP::esa::esaProcessor::translate()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

@@ -1,0 +1,481 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d2/dd1/Graphics_8h" kind="file" language="C++">
+    <compoundname>Graphics.h</compoundname>
+    <includes refid="de/d5c/Memory_8h" local="yes">Memory.h</includes>
+    <includes refid="d0/d33/Resources_8h" local="yes">Resources.h</includes>
+    <includes refid="d0/d00/FileSys_8h" local="yes">FileSys.h</includes>
+    <includedby refid="d7/d40/badapple_8cpp" local="yes">badapple.cpp</includedby>
+    <includedby refid="df/d6c/Shell_8cpp" local="yes">Shell.cpp</includedby>
+    <includedby refid="d2/d4f/OS_8h" local="yes">OS.h</includedby>
+    <includedby refid="de/dd1/Smile_8cpp" local="yes">Smile.cpp</includedby>
+    <includedby refid="de/db8/R2D_8cpp" local="yes">R2D.cpp</includedby>
+    <includedby refid="d5/d22/ECMA35_8h" local="yes">ECMA35.h</includedby>
+    <includedby refid="d6/dc6/Executable_8cpp" local="yes">Executable.cpp</includedby>
+    <includedby refid="df/d3f/Graphics_8cpp" local="yes">Graphics.cpp</includedby>
+    <includedby refid="db/db7/Start_8cpp" local="yes">Start.cpp</includedby>
+    <includedby refid="d7/d67/tterm_8cpp" local="yes">tterm.cpp</includedby>
+    <includedby refid="d3/df1/EMULATOR_2Graphics_8cpp" local="yes">Graphics.cpp</includedby>
+    <includedby refid="d0/d06/EMULATOR_2Start_8cpp" local="yes">Start.cpp</includedby>
+    <includedby refid="d0/d6f/EMULATOR_2tterm_8cpp" local="yes">tterm.cpp</includedby>
+    <includedby refid="d9/db9/MINGW64_2Graphics_8cpp" local="yes">Graphics.cpp</includedby>
+    <includedby refid="d6/d8a/MINGW64_2Start_8cpp" local="yes">Start.cpp</includedby>
+    <includedby refid="d0/d7e/MINGW64_2tterm_8cpp" local="yes">tterm.cpp</includedby>
+    <includedby refid="d9/d4a/UBUNTU_2Graphics_8cpp" local="yes">Graphics.cpp</includedby>
+    <includedby refid="de/d3d/UBUNTU_2Start_8cpp" local="yes">Start.cpp</includedby>
+    <includedby refid="d0/d75/UBUNTU_2tterm_8cpp" local="yes">tterm.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>Memory.h</label>
+        <link refid="de/d5c/Memory_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Strings.h</label>
+        <link refid="de/d53/Strings_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Resources.h</label>
+        <link refid="d0/d33/Resources_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Stack.hxx</label>
+        <link refid="db/d61/Stack_8hxx"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Memory.hxx</label>
+        <link refid="d5/d4e/Memory_8hxx"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>FileSys.h</label>
+        <link refid="d0/d00/FileSys_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Graphics.h</label>
+        <link refid="d2/dd1/Graphics_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>stdio.h</label>
+        <link refid="d6/dd1/stdio_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>errno.h</label>
+        <link refid="d8/dc2/errno_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Signal.h</label>
+        <link refid="d0/def/Signal_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Except.h</label>
+        <link refid="dc/d88/Except_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+        <link refid="df/dd8/stdint_8h"/>
+      </node>
+      <node id="3">
+        <label>stddef.h</label>
+        <link refid="d3/dce/stddef_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Stack.h</label>
+        <link refid="dc/db6/Stack_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="11">
+        <label>Start.cpp</label>
+        <link refid="d6/d8a/MINGW64_2Start_8cpp"/>
+      </node>
+      <node id="3">
+        <label>Shell.cpp</label>
+        <link refid="df/d6c/Shell_8cpp"/>
+      </node>
+      <node id="6">
+        <label>Executable.cpp</label>
+        <link refid="d6/dc6/Executable_8cpp"/>
+      </node>
+      <node id="7">
+        <label>Start.cpp</label>
+        <link refid="db/db7/Start_8cpp"/>
+      </node>
+      <node id="17">
+        <label>Terminal.cpp</label>
+        <link refid="d3/d0d/Terminal_8cpp"/>
+      </node>
+      <node id="5">
+        <label>Smile.cpp</label>
+        <link refid="de/dd1/Smile_8cpp"/>
+      </node>
+      <node id="19">
+        <label>Graphics.cpp</label>
+        <link refid="d3/df1/EMULATOR_2Graphics_8cpp"/>
+      </node>
+      <node id="12">
+        <label>tterm.cpp</label>
+        <link refid="d0/d7e/MINGW64_2tterm_8cpp"/>
+      </node>
+      <node id="18">
+        <label>Graphics.cpp</label>
+        <link refid="df/d3f/Graphics_8cpp"/>
+      </node>
+      <node id="20">
+        <label>Graphics.cpp</label>
+        <link refid="d9/db9/MINGW64_2Graphics_8cpp"/>
+      </node>
+      <node id="4">
+        <label>OS.h</label>
+        <link refid="d2/d4f/OS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>tterm.cpp</label>
+        <link refid="d0/d75/UBUNTU_2tterm_8cpp"/>
+      </node>
+      <node id="10">
+        <label>tterm.cpp</label>
+        <link refid="d0/d6f/EMULATOR_2tterm_8cpp"/>
+      </node>
+      <node id="1">
+        <label>Graphics.h</label>
+        <link refid="d2/dd1/Graphics_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Start.cpp</label>
+        <link refid="d0/d06/EMULATOR_2Start_8cpp"/>
+      </node>
+      <node id="13">
+        <label>Start.cpp</label>
+        <link refid="de/d3d/UBUNTU_2Start_8cpp"/>
+      </node>
+      <node id="16">
+        <label>ECMA35.h</label>
+        <link refid="d5/d22/ECMA35_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>tterm.cpp</label>
+        <link refid="d7/d67/tterm_8cpp"/>
+      </node>
+      <node id="2">
+        <label>badapple.cpp</label>
+        <link refid="d7/d40/badapple_8cpp"/>
+      </node>
+      <node id="21">
+        <label>Graphics.cpp</label>
+        <link refid="d9/d4a/UBUNTU_2Graphics_8cpp"/>
+      </node>
+      <node id="15">
+        <label>R2D.cpp</label>
+        <link refid="de/db8/R2D_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="de/d9c/structBBP_1_1std_1_1colour" prot="public">BBP::std::colour</innerclass>
+    <innerclass refid="db/d2b/structBBP_1_1std_1_1window" prot="public">BBP::std::window</innerclass>
+    <innernamespace refid="d9/d6f/namespaceBBP">BBP</innernamespace>
+    <innernamespace refid="dd/d98/namespaceBBP_1_1std">BBP::std</innernamespace>
+    <innernamespace refid="d9/db7/namespaceBBP_1_1std_1_1Driver">BBP::std::Driver</innernamespace>
+    <innernamespace refid="dc/da1/namespaceBBP_1_1std_1_1R2D">BBP::std::R2D</innernamespace>
+    <innernamespace refid="dc/d99/namespaceBBP_1_1std_1_1R3D">BBP::std::R3D</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>BBP_STDLIB_GRAPHICS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BBP_STDLIB_GRAPHICS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="de/d5c/Memory_8h" kindref="compound">Memory.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d0/d33/Resources_8h" kindref="compound">Resources.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d0/d00/FileSys_8h" kindref="compound">FileSys.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="d9/d6f/namespaceBBP" kindref="compound">BBP</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">std</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>ResourceManager<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a2f7b7b3936492dde3cceacc3e74f5cc3" kindref="member">vmem</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>type<sp/>for<sp/>a<sp/>whole<sp/>colour.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>type<sp/>for<sp/>a<sp/>single<sp/>channel<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>type<sp/>for<sp/>a<sp/>thing<sp/>to<sp/>specify<sp/>position<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>type<sp/>used<sp/>to<sp/>signify<sp/>a<sp/>mask<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Global<sp/>flag<sp/>to<sp/>check<sp/>if<sp/>graphics<sp/>are<sp/>initialized<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a0d9f6105cb70d5bbf4ea7a9c5f317b18" kindref="member">gINIT</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30" refid="de/d9c/structBBP_1_1std_1_1colour" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="de/d9c/structBBP_1_1std_1_1colour" kindref="compound">colour</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32" refid="de/d9c/structBBP_1_1std_1_1colour_1a266b18a4d7f867e04a130a0dfdd459a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="de/d9c/structBBP_1_1std_1_1colour_1a266b18a4d7f867e04a130a0dfdd459a1" kindref="member">R</ref><sp/>=<sp/>0xFF;</highlight></codeline>
+<codeline lineno="33" refid="de/d9c/structBBP_1_1std_1_1colour_1a17ab02cc13e1f6543a463ad27c77d2b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="de/d9c/structBBP_1_1std_1_1colour_1a17ab02cc13e1f6543a463ad27c77d2b6" kindref="member">G</ref><sp/>=<sp/>0xFF;</highlight></codeline>
+<codeline lineno="34" refid="de/d9c/structBBP_1_1std_1_1colour_1ac69073fa61911139d17da5785b266bb1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="de/d9c/structBBP_1_1std_1_1colour_1ac69073fa61911139d17da5785b266bb1" kindref="member">B</ref><sp/>=<sp/>0xFF;</highlight></codeline>
+<codeline lineno="35" refid="de/d9c/structBBP_1_1std_1_1colour_1a8a050a17731358934a17e04deeeb996e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="de/d9c/structBBP_1_1std_1_1colour_1a8a050a17731358934a17e04deeeb996e" kindref="member">A</ref><sp/>=<sp/>0xFF;</highlight></codeline>
+<codeline lineno="36" refid="de/d9c/structBBP_1_1std_1_1colour_1ace320712be2e6308522ee50474d89692" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref><sp/><ref refid="de/d9c/structBBP_1_1std_1_1colour_1ace320712be2e6308522ee50474d89692" kindref="member">RGBA</ref><sp/>=<sp/>0xFFFFFFFF;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="db/d2b/structBBP_1_1std_1_1window" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41" refid="db/d2b/structBBP_1_1std_1_1window_1ab9b99c1461c6a8dfd2b29b9b4385289e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">PAGE&lt;RGBA_t&gt;</ref><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1ab9b99c1461c6a8dfd2b29b9b4385289e" kindref="member">backBuffer</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="db/d2b/structBBP_1_1std_1_1window_1ac9dc99ea7caf78da1c83e3fa1c7219aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1ac9dc99ea7caf78da1c83e3fa1c7219aa" kindref="member">width</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="44" refid="db/d2b/structBBP_1_1std_1_1window_1a3868ca4815a37a5aa822eb9c6dd3d91c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1a3868ca4815a37a5aa822eb9c6dd3d91c" kindref="member">height</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="db/d2b/structBBP_1_1std_1_1window_1a2e7001af636de4e777cbde6c3dc988ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1a2e7001af636de4e777cbde6c3dc988ca" kindref="member">xPos</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="47" refid="db/d2b/structBBP_1_1std_1_1window_1afa1b435a139018dd919057b3b2c4028f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1afa1b435a139018dd919057b3b2c4028f" kindref="member">yPos</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="48" refid="db/d2b/structBBP_1_1std_1_1window_1a7165291fd4f828f3544718283ec2e9cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1a7165291fd4f828f3544718283ec2e9cc" kindref="member">zPos</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="db/d2b/structBBP_1_1std_1_1window_1ae891d56662a9dde0747fd94989242e87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d9c/structBBP_1_1std_1_1colour" kindref="compound">colour</ref><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1ae891d56662a9dde0747fd94989242e87" kindref="member">Stroke</ref><sp/>=<sp/><ref refid="de/d9c/structBBP_1_1std_1_1colour" kindref="compound">colour</ref>();</highlight></codeline>
+<codeline lineno="51" refid="db/d2b/structBBP_1_1std_1_1window_1a0e5b85ff032dd08e07add7a5db71e71d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d9c/structBBP_1_1std_1_1colour" kindref="compound">colour</ref><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1a0e5b85ff032dd08e07add7a5db71e71d" kindref="member">Fill</ref><sp/>=<sp/><ref refid="de/d9c/structBBP_1_1std_1_1colour" kindref="compound">colour</ref>();</highlight></codeline>
+<codeline lineno="52" refid="db/d2b/structBBP_1_1std_1_1window_1a302c775e4a274bbc827379ba03590b2f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d9c/structBBP_1_1std_1_1colour" kindref="compound">colour</ref><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1a302c775e4a274bbc827379ba03590b2f" kindref="member">Chroma</ref><sp/>=<sp/><ref refid="de/d9c/structBBP_1_1std_1_1colour" kindref="compound">colour</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="db/d2b/structBBP_1_1std_1_1window_1a61c94b6a97022ae687417d89f265f675" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1a61c94b6a97022ae687417d89f265f675" kindref="member">doStroke</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55" refid="db/d2b/structBBP_1_1std_1_1window_1aa626e4a375c5d08ffef4e295ca3105eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1aa626e4a375c5d08ffef4e295ca3105eb" kindref="member">doFill</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="db/d2b/structBBP_1_1std_1_1window_1a0d65c4f879076590dc4a83641f98e53d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1a0d65c4f879076590dc4a83641f98e53d" kindref="member">strokeWeight</ref><sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="db/d2b/structBBP_1_1std_1_1window_1a5b0bda00440c7ba035e0c3c8c1451564" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">PAGE&lt;mask_t&gt;</ref><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1a5b0bda00440c7ba035e0c3c8c1451564" kindref="member">typeFace</ref>;</highlight></codeline>
+<codeline lineno="60" refid="db/d2b/structBBP_1_1std_1_1window_1aeedd4e4eca1ebecb1548aa0d0c07f53b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1aeedd4e4eca1ebecb1548aa0d0c07f53b" kindref="member">fontCount</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="db/d2b/structBBP_1_1std_1_1window_1a48ca5be2191c0b7fcb43da7528e10451" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">PAGE&lt;string_element&gt;</ref><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1a48ca5be2191c0b7fcb43da7528e10451" kindref="member">charMapping</ref>;</highlight></codeline>
+<codeline lineno="63" refid="db/d2b/structBBP_1_1std_1_1window_1ae3069a84e0d48568f95671b228a8f558" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">string_element</ref><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1ae3069a84e0d48568f95671b228a8f558" kindref="member">fontMapping</ref>[256];</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="db/d2b/structBBP_1_1std_1_1window_1a7b1763f76820bdf7523a92187c575c4a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1a7b1763f76820bdf7523a92187c575c4a" kindref="member">fontSize</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="66" refid="db/d2b/structBBP_1_1std_1_1window_1a4620071899508871297f6960ee6c3b27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1a4620071899508871297f6960ee6c3b27" kindref="member">fontSpacing</ref><sp/>=<sp/>8;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="db/d2b/structBBP_1_1std_1_1window_1af92a6abc4ffbc23afaa6515186dfd2a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1af92a6abc4ffbc23afaa6515186dfd2a4" kindref="member">cursorPosX</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="69" refid="db/d2b/structBBP_1_1std_1_1window_1aacf390d25ee553ec491d72271440f6de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1aacf390d25ee553ec491d72271440f6de" kindref="member">cursorPosY</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="db/d2b/structBBP_1_1std_1_1window_1acc76fa8da50f61b313daf273759d41f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1acc76fa8da50f61b313daf273759d41f6" kindref="member">coloumn</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="72" refid="db/d2b/structBBP_1_1std_1_1window_1a2d995208b35a2c6291dd86d372fb4e71" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1a2d995208b35a2c6291dd86d372fb4e71" kindref="member">line</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="db/d2b/structBBP_1_1std_1_1window_1a859802536a4494ac9d71e44d3ea47565" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1a859802536a4494ac9d71e44d3ea47565" kindref="member">window</ref>()</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1ac9dc99ea7caf78da1c83e3fa1c7219aa" kindref="member">width</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1a3868ca4815a37a5aa822eb9c6dd3d91c" kindref="member">height</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1a2e7001af636de4e777cbde6c3dc988ca" kindref="member">xPos</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1afa1b435a139018dd919057b3b2c4028f" kindref="member">yPos</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="db/d2b/structBBP_1_1std_1_1window_1a7165291fd4f828f3544718283ec2e9cc" kindref="member">zPos</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="d9/db7/namespaceBBP_1_1std_1_1Driver" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Driver</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d9/db7/namespaceBBP_1_1std_1_1Driver_1af890afe53347748ccc3240bab4225a98" kindref="member">drawWindow</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db7/namespaceBBP_1_1std_1_1Driver_1affc18526448cf9c01bfb96ffd83aed81" kindref="member">initializeGraphics</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d9/db7/namespaceBBP_1_1std_1_1Driver_1afdd73d9627318511baf99a3392dd0b7e" kindref="member">destructGraphics</ref>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="dc/da1/namespaceBBP_1_1std_1_1R2D" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">R2D</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a4231d3561bf9510a91b882bfefad4434" kindref="member">convertUCHARtoINT</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1acab531abaa74a7e664e3986f2522b33a" kindref="member">r</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a71867e609034d4dbd6d0ad8d84540e59" kindref="member">g</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a148e3876077787926724625411d6e7a9" kindref="member">b</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a" kindref="member">a</ref>);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1aac72e826c4be633a25255aa72d7d4d92" kindref="member">convertINTtoUCHAR</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/>*<ref refid="df/d3f/Graphics_8cpp_1acab531abaa74a7e664e3986f2522b33a" kindref="member">r</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/>*<ref refid="df/d3f/Graphics_8cpp_1a71867e609034d4dbd6d0ad8d84540e59" kindref="member">g</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/>*<ref refid="df/d3f/Graphics_8cpp_1a148e3876077787926724625411d6e7a9" kindref="member">b</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref><sp/>rgb);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1aac72e826c4be633a25255aa72d7d4d92" kindref="member">convertINTtoUCHAR</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/>*<ref refid="df/d3f/Graphics_8cpp_1acab531abaa74a7e664e3986f2522b33a" kindref="member">r</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/>*<ref refid="df/d3f/Graphics_8cpp_1a71867e609034d4dbd6d0ad8d84540e59" kindref="member">g</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/>*<ref refid="df/d3f/Graphics_8cpp_1a148e3876077787926724625411d6e7a9" kindref="member">b</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/>*<ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a" kindref="member">a</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref><sp/>rgba);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1abd452b23f01af75984864049dd13670b" kindref="member">newWindow</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>width,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>height,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1acab531abaa74a7e664e3986f2522b33a" kindref="member">r</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a71867e609034d4dbd6d0ad8d84540e59" kindref="member">g</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a148e3876077787926724625411d6e7a9" kindref="member">b</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1abd452b23f01af75984864049dd13670b" kindref="member">newWindow</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1acab531abaa74a7e664e3986f2522b33a" kindref="member">r</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a71867e609034d4dbd6d0ad8d84540e59" kindref="member">g</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a148e3876077787926724625411d6e7a9" kindref="member">b</ref>);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a19a4a225e19ac4264c3ba92046f9904c" kindref="member">background</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1acab531abaa74a7e664e3986f2522b33a" kindref="member">r</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a71867e609034d4dbd6d0ad8d84540e59" kindref="member">g</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a148e3876077787926724625411d6e7a9" kindref="member">b</ref>);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a19a4a225e19ac4264c3ba92046f9904c" kindref="member">background</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1acab531abaa74a7e664e3986f2522b33a" kindref="member">r</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a71867e609034d4dbd6d0ad8d84540e59" kindref="member">g</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a148e3876077787926724625411d6e7a9" kindref="member">b</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a" kindref="member">a</ref>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a19a4a225e19ac4264c3ba92046f9904c" kindref="member">background</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref><sp/>rgb);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a19a4a225e19ac4264c3ba92046f9904c" kindref="member">background</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref><sp/>rgb,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a" kindref="member">a</ref>);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a950bda48471d587efcad3dff57541550" kindref="member">stroke</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1acab531abaa74a7e664e3986f2522b33a" kindref="member">r</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a71867e609034d4dbd6d0ad8d84540e59" kindref="member">g</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a148e3876077787926724625411d6e7a9" kindref="member">b</ref>);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a950bda48471d587efcad3dff57541550" kindref="member">stroke</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1acab531abaa74a7e664e3986f2522b33a" kindref="member">r</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a71867e609034d4dbd6d0ad8d84540e59" kindref="member">g</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a148e3876077787926724625411d6e7a9" kindref="member">b</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a" kindref="member">a</ref>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a950bda48471d587efcad3dff57541550" kindref="member">stroke</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref><sp/>rgb);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a950bda48471d587efcad3dff57541550" kindref="member">stroke</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref><sp/>rgb,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a" kindref="member">a</ref>);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a02dc9d6f0c3b105012cd73160bb7e50e" kindref="member">strokeWeight</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref><sp/>weight);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a86b47f725f748320350d45c25e232bad" kindref="member">noStroke</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a985d2f37aa59f400c93963bafdc25e54" kindref="member">fill</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1acab531abaa74a7e664e3986f2522b33a" kindref="member">r</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a71867e609034d4dbd6d0ad8d84540e59" kindref="member">g</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a148e3876077787926724625411d6e7a9" kindref="member">b</ref>);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a985d2f37aa59f400c93963bafdc25e54" kindref="member">fill</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1acab531abaa74a7e664e3986f2522b33a" kindref="member">r</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a71867e609034d4dbd6d0ad8d84540e59" kindref="member">g</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a148e3876077787926724625411d6e7a9" kindref="member">b</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a" kindref="member">a</ref>);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a985d2f37aa59f400c93963bafdc25e54" kindref="member">fill</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref><sp/>rgb);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a985d2f37aa59f400c93963bafdc25e54" kindref="member">fill</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref><sp/>rgb,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a" kindref="member">a</ref>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a637020510b9c2870fbe68e29a6d34a11" kindref="member">noFill</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a9c63903bb92e27bf2c719641dda3ee98" kindref="member">Line</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y2);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acc6674c3e336f1e429b0bc23f9955ca6" kindref="member">Hrule</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x1,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x2,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a3f3e793215cc7ab1073d7169dd042c9c" kindref="member">Vrule</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y1,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y2,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a9c63903bb92e27bf2c719641dda3ee98" kindref="member">Line</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y2,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1acab531abaa74a7e664e3986f2522b33a" kindref="member">r</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a71867e609034d4dbd6d0ad8d84540e59" kindref="member">g</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a148e3876077787926724625411d6e7a9" kindref="member">b</ref>);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acc6674c3e336f1e429b0bc23f9955ca6" kindref="member">Hrule</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x1,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x2,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1acab531abaa74a7e664e3986f2522b33a" kindref="member">r</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a71867e609034d4dbd6d0ad8d84540e59" kindref="member">g</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a148e3876077787926724625411d6e7a9" kindref="member">b</ref>);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a3f3e793215cc7ab1073d7169dd042c9c" kindref="member">Vrule</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y1,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y2,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1acab531abaa74a7e664e3986f2522b33a" kindref="member">r</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a71867e609034d4dbd6d0ad8d84540e59" kindref="member">g</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref><sp/><ref refid="df/d3f/Graphics_8cpp_1a148e3876077787926724625411d6e7a9" kindref="member">b</ref>);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a9c63903bb92e27bf2c719641dda3ee98" kindref="member">Line</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y2,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref><sp/>rgb);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acc6674c3e336f1e429b0bc23f9955ca6" kindref="member">Hrule</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x1,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x2,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref><sp/>rgb);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a3f3e793215cc7ab1073d7169dd042c9c" kindref="member">Vrule</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y1,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y2,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref><sp/>rgb);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a6d561f750415d55352addcd1286ee41f" kindref="member">Rect</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>w,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>h);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acea93c05ea4bbf9b38158ac0682a74cd" kindref="member">Box</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>w,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>h);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a59fe3c5f2e87d457a935f884456549cd" kindref="member">Frame</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>w,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>h);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1ab48857f9d44795eef84f06c8b10626ed" kindref="member">RectPixelMask</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref><sp/>mask);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1ab48857f9d44795eef84f06c8b10626ed" kindref="member">RectPixelMask</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref><sp/>size,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref><sp/>mask);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a04471602a24e37f097d5223afa97a068" kindref="member">RectPixelMaskAligned</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref><sp/>size,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref><sp/>mask);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1ab48857f9d44795eef84f06c8b10626ed" kindref="member">RectPixelMask</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref><sp/>*maskv,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref><sp/>maskc);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1ab48857f9d44795eef84f06c8b10626ed" kindref="member">RectPixelMask</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref><sp/>size,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref><sp/>*maskv,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref><sp/>maskc);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a04471602a24e37f097d5223afa97a068" kindref="member">RectPixelMaskAligned</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref><sp/>size,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref><sp/>*maskv,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref><sp/>maskc);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1aaa5e3978968fc3b485e6425d0a0f6f41" kindref="member">readPixel</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acc11e125c7028e2c4834c7577a853818" kindref="member">setPixel</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acc11e125c7028e2c4834c7577a853818" kindref="member">setPixel</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref><sp/>size);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1af810971cb418624f05a53e32e7aeee00" kindref="member">setPixelAligned</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref><sp/>size);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a1a6b1725d55164c1157ff766baceaed9" kindref="member">PixelMask</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref><sp/>mask);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a1a6b1725d55164c1157ff766baceaed9" kindref="member">PixelMask</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref><sp/>size,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref><sp/>mask);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a1104662a1c8fcf0a0bc9cc9973f6e189" kindref="member">PixelMaskAligned</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref><sp/>size,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref><sp/>mask);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a1a6b1725d55164c1157ff766baceaed9" kindref="member">PixelMask</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref><sp/>*maskv,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref><sp/>maskc);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a1a6b1725d55164c1157ff766baceaed9" kindref="member">PixelMask</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref><sp/>size,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref><sp/>*maskv,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref><sp/>maskc);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a1104662a1c8fcf0a0bc9cc9973f6e189" kindref="member">PixelMaskAligned</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref><sp/>size,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab270998092cd15d6eecdb78c6ad9ef13" kindref="member">mask_t</ref><sp/>*maskv,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref><sp/>maskc);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1aa40574bb9ba2fcd8a63d1a0438d78aa3" kindref="member">PrintCharacterAt</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a93ee4e8e0be4fe0fbad19f4b385cd356" kindref="member">ustring_element</ref><sp/>ch);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1aa40574bb9ba2fcd8a63d1a0438d78aa3" kindref="member">PrintCharacterAt</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a93ee4e8e0be4fe0fbad19f4b385cd356" kindref="member">ustring_element</ref><sp/>ch,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref><sp/>size);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1ada5f0bdbe4d4bd6f1a3780235a34225a" kindref="member">print</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a93ee4e8e0be4fe0fbad19f4b385cd356" kindref="member">ustring_element</ref><sp/>ch);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1ada5f0bdbe4d4bd6f1a3780235a34225a" kindref="member">print</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a93ee4e8e0be4fe0fbad19f4b385cd356" kindref="member">ustring_element</ref><sp/>*str);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1ada5f0bdbe4d4bd6f1a3780235a34225a" kindref="member">print</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">conststring</ref><sp/>str);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1ada5f0bdbe4d4bd6f1a3780235a34225a" kindref="member">print</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae05c88ad8c36bd02dd1fd949e8b5cab2" kindref="member">mem_t</ref><sp/>*str,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref><sp/>str_c);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1ad2871cbf4bfaae6435058137d35c8119" kindref="member">setCursorPos</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>x,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">pos_t</ref><sp/>y);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1aec7ebe885d0c8a1b5bf5b98b4d08a4ef" kindref="member">GetFontFromFile</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref><sp/>*,<sp/><ref refid="d8/dea/classBBP_1_1std_1_1PATH" kindref="compound">std::PATH</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="dc/d99/namespaceBBP_1_1std_1_1R3D" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">R3D</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Implement</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h"/>
+  </compounddef>
+</doxygen>

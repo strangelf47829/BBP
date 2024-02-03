@@ -1,0 +1,1090 @@
+\hypertarget{namespaceBBP_1_1std_1_1ELF}{}\doxysection{B\+BP\+::std\+::E\+LF Namespace Reference}
+\label{namespaceBBP_1_1std_1_1ELF}\index{BBP::std::ELF@{BBP::std::ELF}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1ELFBuilder}{E\+L\+F\+Builder}}
+\item 
+struct \mbox{\hyperlink{structBBP_1_1std_1_1ELF_1_1ElfHeader}{Elf\+Header}}
+\item 
+struct \mbox{\hyperlink{structBBP_1_1std_1_1ELF_1_1ProgramHeader}{Program\+Header}}
+\item 
+struct \mbox{\hyperlink{structBBP_1_1std_1_1ELF_1_1RelaEntry}{Rela\+Entry}}
+\item 
+struct \mbox{\hyperlink{structBBP_1_1std_1_1ELF_1_1RelEntry}{Rel\+Entry}}
+\item 
+class \mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1SectionBuilder}{Section\+Builder}}
+\item 
+struct \mbox{\hyperlink{structBBP_1_1std_1_1ELF_1_1SectionHeader}{Section\+Header}}
+\item 
+class \mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1SegmentBuilder}{Segment\+Builder}}
+\item 
+class \mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1SymbolBuilder}{Symbol\+Builder}}
+\item 
+struct \mbox{\hyperlink{structBBP_1_1std_1_1ELF_1_1SymbolEntry}{Symbol\+Entry}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820}{E\+\_\+\+T\+Y\+PE}} \{ \newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a7da1cb18914368f9d2819bdb70a7bd4e}{E\+T\+\_\+\+N\+O\+NE}} = 0, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a441b54ac6c27a685ff1c7ffd95d9e590}{E\+T\+\_\+\+R\+EL}} = 1, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3e8cc4472fc22fc9792f1edce8544c9e}{E\+T\+\_\+\+E\+X\+EC}} = 2, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3a145172b09fb073c33347312fdbce26}{E\+T\+\_\+\+D\+YN}} = 3, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a56c9e829cd2c22148b38ace7223c9996}{E\+T\+\_\+\+C\+O\+RE}} = 4, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a7da1cb18914368f9d2819bdb70a7bd4e}{E\+T\+\_\+\+N\+O\+NE}} = 0, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a441b54ac6c27a685ff1c7ffd95d9e590}{E\+T\+\_\+\+R\+EL}} = 1, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3e8cc4472fc22fc9792f1edce8544c9e}{E\+T\+\_\+\+E\+X\+EC}} = 2, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3a145172b09fb073c33347312fdbce26}{E\+T\+\_\+\+D\+YN}} = 3, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a56c9e829cd2c22148b38ace7223c9996}{E\+T\+\_\+\+C\+O\+RE}} = 4
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626c}{E\+\_\+\+M\+A\+C\+H\+I\+NE}} \{ \newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca261a096f2b8783ad83ecb3df5b50f90f}{X86}} = 0x03, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca71fef05cecc50238baa1db212507a27e}{M\+I\+PS}} = 0x08, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cabb821a9ffb2b27809b28ed2953e443b8}{A\+RM}} = 0x28, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626caf42d9749caa23ed7526cd731012979f4}{A\+M\+D64}} = 0x3E, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cab6d565f3d4a8df15b50920b305e97f91}{A\+R\+M\+V8}} = 0x\+B7, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca6f9b80c5c504aed771c50cba333d7dc1}{R\+I\+S\+CV}} = 0x\+F3, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca261a096f2b8783ad83ecb3df5b50f90f}{X86}} = 0x03, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca71fef05cecc50238baa1db212507a27e}{M\+I\+PS}} = 0x08, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cabb821a9ffb2b27809b28ed2953e443b8}{A\+RM}} = 0x28, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626caf42d9749caa23ed7526cd731012979f4}{A\+M\+D64}} = 0x3E, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cab6d565f3d4a8df15b50920b305e97f91}{A\+R\+M\+V8}} = 0x\+B7, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca6f9b80c5c504aed771c50cba333d7dc1}{R\+I\+S\+CV}} = 0x\+F3
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9}{P\+\_\+\+T\+Y\+PE}} \{ \newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a9e8b90fababc25c360b901532d99ef63}{P\+T\+\_\+\+N\+I\+LL}} = 0, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09}{P\+T\+\_\+\+L\+O\+AD}} = 1, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a72cfffff31ed41d807f073aead80dacd}{P\+T\+\_\+\+D\+Y\+N\+A\+M\+IC}} = 2, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a7ae2391af8b60fbacc90c83b53627a58}{P\+T\+\_\+\+I\+N\+T\+E\+RP}} = 3, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a8e805c1e3f00467815fcb7cccccdabd3}{P\+T\+\_\+\+N\+O\+TE}} = 4, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a2818d9e6afdad1cd9c7ed7580bc5737c}{P\+T\+\_\+\+S\+H\+L\+IB}} = 5, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9afb8c2623c48665e2e34cae53b5a848bb}{P\+T\+\_\+\+P\+H\+DR}} = 6, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9aa41f51d27471b57de855a2c37a3d11cb}{P\+T\+\_\+\+T\+LS}} = 7, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a9e8b90fababc25c360b901532d99ef63}{P\+T\+\_\+\+N\+I\+LL}} = 0, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09}{P\+T\+\_\+\+L\+O\+AD}} = 1, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a72cfffff31ed41d807f073aead80dacd}{P\+T\+\_\+\+D\+Y\+N\+A\+M\+IC}} = 2, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a7ae2391af8b60fbacc90c83b53627a58}{P\+T\+\_\+\+I\+N\+T\+E\+RP}} = 3, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a8e805c1e3f00467815fcb7cccccdabd3}{P\+T\+\_\+\+N\+O\+TE}} = 4, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a2818d9e6afdad1cd9c7ed7580bc5737c}{P\+T\+\_\+\+S\+H\+L\+IB}} = 5, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9afb8c2623c48665e2e34cae53b5a848bb}{P\+T\+\_\+\+P\+H\+DR}} = 6, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9aa41f51d27471b57de855a2c37a3d11cb}{P\+T\+\_\+\+T\+LS}} = 7
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48}{S\+H\+\_\+\+T\+Y\+PE}} \{ \newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae90bd4e1bd73dd34ff28efea720ab260}{S\+H\+T\+\_\+\+N\+I\+LL}} = 0, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a778dbcfc401c43cbf111a1719a04ff1c}{S\+H\+T\+\_\+\+P\+R\+O\+G\+B\+I\+TS}} = 1, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aaa86c347bf73cac82e1bfc20da7e29db}{S\+H\+T\+\_\+\+S\+Y\+M\+T\+AB}} = 2, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a290e05e6531740de9b07ed2c11550ac2}{S\+H\+T\+\_\+\+S\+T\+R\+T\+AB}} = 3, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae0bb87cfc98e47c806553f71d45922f6}{S\+H\+T\+\_\+\+R\+E\+LA}} = 4, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af1b80c3be687215bc997fdee18206730}{S\+H\+T\+\_\+\+H\+A\+SH}} = 5, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aff39b631c74f1a35d16d8dd022b89d6e}{S\+H\+T\+\_\+\+D\+Y\+N\+A\+M\+IC}} = 6, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a3cdf6853fb798f6225898486590fca97}{S\+H\+T\+\_\+\+N\+O\+TE}} = 7, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a704294eb254f6ad7bde906c231eea8ab}{S\+H\+T\+\_\+\+N\+O\+B\+I\+TS}} = 8, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af3d4415e121b5ffd4990fc7550576d75}{S\+H\+T\+\_\+\+R\+EL}} = 9, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48afb3d73af956a20af375e363e6a81d7d2}{S\+H\+T\+\_\+\+S\+H\+L\+IB}} = 10, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aa542e2edd59c1e3b68a8c6c2b756a3eb}{S\+H\+T\+\_\+\+D\+Y\+N\+S\+YM}} = 11, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae90bd4e1bd73dd34ff28efea720ab260}{S\+H\+T\+\_\+\+N\+I\+LL}} = 0, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a778dbcfc401c43cbf111a1719a04ff1c}{S\+H\+T\+\_\+\+P\+R\+O\+G\+B\+I\+TS}} = 1, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aaa86c347bf73cac82e1bfc20da7e29db}{S\+H\+T\+\_\+\+S\+Y\+M\+T\+AB}} = 2, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a290e05e6531740de9b07ed2c11550ac2}{S\+H\+T\+\_\+\+S\+T\+R\+T\+AB}} = 3, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae0bb87cfc98e47c806553f71d45922f6}{S\+H\+T\+\_\+\+R\+E\+LA}} = 4, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af1b80c3be687215bc997fdee18206730}{S\+H\+T\+\_\+\+H\+A\+SH}} = 5, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aff39b631c74f1a35d16d8dd022b89d6e}{S\+H\+T\+\_\+\+D\+Y\+N\+A\+M\+IC}} = 6, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a3cdf6853fb798f6225898486590fca97}{S\+H\+T\+\_\+\+N\+O\+TE}} = 7, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a704294eb254f6ad7bde906c231eea8ab}{S\+H\+T\+\_\+\+N\+O\+B\+I\+TS}} = 8, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af3d4415e121b5ffd4990fc7550576d75}{S\+H\+T\+\_\+\+R\+EL}} = 9, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48afb3d73af956a20af375e363e6a81d7d2}{S\+H\+T\+\_\+\+S\+H\+L\+IB}} = 10, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aa542e2edd59c1e3b68a8c6c2b756a3eb}{S\+H\+T\+\_\+\+D\+Y\+N\+S\+YM}} = 11
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9}{S\+Y\+M\+\_\+\+T\+Y\+PE}} \{ \newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a0206bed0377b02ecd352e201fc556542}{S\+Y\+M\+\_\+\+L\+O\+C\+AL}} = 0x00, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9ae80182d891cfff817fbbfaa9429d7cc6}{S\+Y\+M\+\_\+\+G\+L\+O\+B\+AL}} = 0x10, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a6cb1482dd995cbbb447d3c0fd75a43f3}{S\+Y\+M\+\_\+\+W\+E\+AK}} = 0x20, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a08e95de720941ffb6d7c654ef6fb64ab}{S\+Y\+M\+\_\+\+N\+O\+NE}} = 0x00, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a7aa12a5382218596ed2deea05f44fb8a}{S\+Y\+M\+\_\+\+O\+B\+J\+E\+CT}} = 0x01, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a84b9022b3bf9c4cdce3a63a49a2b2d89}{S\+Y\+M\+\_\+\+F\+U\+NC}} = 0x02, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9aa3e54cd689d44f6748a77a9e73c1e5ae}{S\+Y\+M\+\_\+\+S\+E\+C\+T\+I\+ON}} = 0x03, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a279b2c74a119180e34db1d5bbc95efd1}{S\+Y\+M\+\_\+\+F\+I\+LE}} = 0x04, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9ae0a97fc59c3da895e65c9d706afc14c3}{S\+Y\+M\+\_\+\+C\+O\+M\+M\+ON}} = 0x05, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a2187c7afebdf48ee1c0441f97cc7e342}{S\+Y\+M\+\_\+\+T\+LS}} = 0x06, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a8e7979acd0e90c3ea0759ea4c24f1e2c}{S\+Y\+M\+\_\+\+R\+E\+LC}} = 0x08, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a64c472d56598b9804ef64db8986519ed}{S\+Y\+M\+\_\+\+S\+R\+E\+LC}} = 0x09
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463}{S\+H\+N\+\_\+\+N\+DX}} \{ \newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463abf1bf0b4d41df7008a2f7633e56ad2a8}{S\+H\+N\+\_\+\+U\+N\+D\+EF}} = 0x00, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463a66bf6d55d3d361d52dc98848d5f004e6}{S\+H\+N\+\_\+\+B\+E\+F\+O\+RE}} = 0xff00, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463a0a1c5445ce18fa091a7032e8a8d54c37}{S\+H\+N\+\_\+\+A\+F\+T\+ER}} = 0xff01, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463a888ffd9cca82af284a5bcc8315f327ad}{S\+H\+N\+\_\+\+A\+BS}} = 0xfff1, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463a1e6dff362d8fb5a20b28878519426c8e}{S\+H\+N\+\_\+\+C\+O\+M\+M\+ON}} = 0xfff2
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ae2a664d64638a27e0ab1bcffc6109fc3}{Section\+Types}} \+: std\+::byte \{ \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ae2a664d64638a27e0ab1bcffc6109fc3a6c6b2a297c57c60885d1867d21db072f}{Writeable}} = 1, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ae2a664d64638a27e0ab1bcffc6109fc3a196960cec1430f9427663844e0a636c5}{Allocator}} = 2, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ae2a664d64638a27e0ab1bcffc6109fc3a8f0ed67b27aab60eef8c6408ab3402c7}{Executable}} = 4
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820}{E\+\_\+\+T\+Y\+PE}} \{ \newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a7da1cb18914368f9d2819bdb70a7bd4e}{E\+T\+\_\+\+N\+O\+NE}} = 0, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a441b54ac6c27a685ff1c7ffd95d9e590}{E\+T\+\_\+\+R\+EL}} = 1, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3e8cc4472fc22fc9792f1edce8544c9e}{E\+T\+\_\+\+E\+X\+EC}} = 2, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3a145172b09fb073c33347312fdbce26}{E\+T\+\_\+\+D\+YN}} = 3, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a56c9e829cd2c22148b38ace7223c9996}{E\+T\+\_\+\+C\+O\+RE}} = 4, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a7da1cb18914368f9d2819bdb70a7bd4e}{E\+T\+\_\+\+N\+O\+NE}} = 0, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a441b54ac6c27a685ff1c7ffd95d9e590}{E\+T\+\_\+\+R\+EL}} = 1, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3e8cc4472fc22fc9792f1edce8544c9e}{E\+T\+\_\+\+E\+X\+EC}} = 2, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3a145172b09fb073c33347312fdbce26}{E\+T\+\_\+\+D\+YN}} = 3, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a56c9e829cd2c22148b38ace7223c9996}{E\+T\+\_\+\+C\+O\+RE}} = 4
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626c}{E\+\_\+\+M\+A\+C\+H\+I\+NE}} \{ \newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca261a096f2b8783ad83ecb3df5b50f90f}{X86}} = 0x03, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca71fef05cecc50238baa1db212507a27e}{M\+I\+PS}} = 0x08, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cabb821a9ffb2b27809b28ed2953e443b8}{A\+RM}} = 0x28, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626caf42d9749caa23ed7526cd731012979f4}{A\+M\+D64}} = 0x3E, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cab6d565f3d4a8df15b50920b305e97f91}{A\+R\+M\+V8}} = 0x\+B7, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca6f9b80c5c504aed771c50cba333d7dc1}{R\+I\+S\+CV}} = 0x\+F3, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca261a096f2b8783ad83ecb3df5b50f90f}{X86}} = 0x03, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca71fef05cecc50238baa1db212507a27e}{M\+I\+PS}} = 0x08, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cabb821a9ffb2b27809b28ed2953e443b8}{A\+RM}} = 0x28, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626caf42d9749caa23ed7526cd731012979f4}{A\+M\+D64}} = 0x3E, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cab6d565f3d4a8df15b50920b305e97f91}{A\+R\+M\+V8}} = 0x\+B7, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca6f9b80c5c504aed771c50cba333d7dc1}{R\+I\+S\+CV}} = 0x\+F3
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9}{P\+\_\+\+T\+Y\+PE}} \{ \newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a9e8b90fababc25c360b901532d99ef63}{P\+T\+\_\+\+N\+I\+LL}} = 0, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09}{P\+T\+\_\+\+L\+O\+AD}} = 1, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a72cfffff31ed41d807f073aead80dacd}{P\+T\+\_\+\+D\+Y\+N\+A\+M\+IC}} = 2, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a7ae2391af8b60fbacc90c83b53627a58}{P\+T\+\_\+\+I\+N\+T\+E\+RP}} = 3, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a8e805c1e3f00467815fcb7cccccdabd3}{P\+T\+\_\+\+N\+O\+TE}} = 4, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a2818d9e6afdad1cd9c7ed7580bc5737c}{P\+T\+\_\+\+S\+H\+L\+IB}} = 5, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9afb8c2623c48665e2e34cae53b5a848bb}{P\+T\+\_\+\+P\+H\+DR}} = 6, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9aa41f51d27471b57de855a2c37a3d11cb}{P\+T\+\_\+\+T\+LS}} = 7, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a9e8b90fababc25c360b901532d99ef63}{P\+T\+\_\+\+N\+I\+LL}} = 0, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09}{P\+T\+\_\+\+L\+O\+AD}} = 1, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a72cfffff31ed41d807f073aead80dacd}{P\+T\+\_\+\+D\+Y\+N\+A\+M\+IC}} = 2, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a7ae2391af8b60fbacc90c83b53627a58}{P\+T\+\_\+\+I\+N\+T\+E\+RP}} = 3, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a8e805c1e3f00467815fcb7cccccdabd3}{P\+T\+\_\+\+N\+O\+TE}} = 4, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a2818d9e6afdad1cd9c7ed7580bc5737c}{P\+T\+\_\+\+S\+H\+L\+IB}} = 5, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9afb8c2623c48665e2e34cae53b5a848bb}{P\+T\+\_\+\+P\+H\+DR}} = 6, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9aa41f51d27471b57de855a2c37a3d11cb}{P\+T\+\_\+\+T\+LS}} = 7
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48}{S\+H\+\_\+\+T\+Y\+PE}} \{ \newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae90bd4e1bd73dd34ff28efea720ab260}{S\+H\+T\+\_\+\+N\+I\+LL}} = 0, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a778dbcfc401c43cbf111a1719a04ff1c}{S\+H\+T\+\_\+\+P\+R\+O\+G\+B\+I\+TS}} = 1, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aaa86c347bf73cac82e1bfc20da7e29db}{S\+H\+T\+\_\+\+S\+Y\+M\+T\+AB}} = 2, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a290e05e6531740de9b07ed2c11550ac2}{S\+H\+T\+\_\+\+S\+T\+R\+T\+AB}} = 3, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae0bb87cfc98e47c806553f71d45922f6}{S\+H\+T\+\_\+\+R\+E\+LA}} = 4, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af1b80c3be687215bc997fdee18206730}{S\+H\+T\+\_\+\+H\+A\+SH}} = 5, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aff39b631c74f1a35d16d8dd022b89d6e}{S\+H\+T\+\_\+\+D\+Y\+N\+A\+M\+IC}} = 6, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a3cdf6853fb798f6225898486590fca97}{S\+H\+T\+\_\+\+N\+O\+TE}} = 7, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a704294eb254f6ad7bde906c231eea8ab}{S\+H\+T\+\_\+\+N\+O\+B\+I\+TS}} = 8, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af3d4415e121b5ffd4990fc7550576d75}{S\+H\+T\+\_\+\+R\+EL}} = 9, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48afb3d73af956a20af375e363e6a81d7d2}{S\+H\+T\+\_\+\+S\+H\+L\+IB}} = 10, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aa542e2edd59c1e3b68a8c6c2b756a3eb}{S\+H\+T\+\_\+\+D\+Y\+N\+S\+YM}} = 11, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae90bd4e1bd73dd34ff28efea720ab260}{S\+H\+T\+\_\+\+N\+I\+LL}} = 0, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a778dbcfc401c43cbf111a1719a04ff1c}{S\+H\+T\+\_\+\+P\+R\+O\+G\+B\+I\+TS}} = 1, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aaa86c347bf73cac82e1bfc20da7e29db}{S\+H\+T\+\_\+\+S\+Y\+M\+T\+AB}} = 2, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a290e05e6531740de9b07ed2c11550ac2}{S\+H\+T\+\_\+\+S\+T\+R\+T\+AB}} = 3, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae0bb87cfc98e47c806553f71d45922f6}{S\+H\+T\+\_\+\+R\+E\+LA}} = 4, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af1b80c3be687215bc997fdee18206730}{S\+H\+T\+\_\+\+H\+A\+SH}} = 5, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aff39b631c74f1a35d16d8dd022b89d6e}{S\+H\+T\+\_\+\+D\+Y\+N\+A\+M\+IC}} = 6, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a3cdf6853fb798f6225898486590fca97}{S\+H\+T\+\_\+\+N\+O\+TE}} = 7, 
+\newline
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a704294eb254f6ad7bde906c231eea8ab}{S\+H\+T\+\_\+\+N\+O\+B\+I\+TS}} = 8, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af3d4415e121b5ffd4990fc7550576d75}{S\+H\+T\+\_\+\+R\+EL}} = 9, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48afb3d73af956a20af375e363e6a81d7d2}{S\+H\+T\+\_\+\+S\+H\+L\+IB}} = 10, 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aa542e2edd59c1e3b68a8c6c2b756a3eb}{S\+H\+T\+\_\+\+D\+Y\+N\+S\+YM}} = 11
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626c}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626c}} 
+\index{BBP::std::ELF@{BBP::std::ELF}!E\_MACHINE@{E\_MACHINE}}
+\index{E\_MACHINE@{E\_MACHINE}!BBP::std::ELF@{BBP::std::ELF}}
+\doxysubsubsection{\texorpdfstring{E\_MACHINE}{E\_MACHINE}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626c}{B\+B\+P\+::std\+::\+E\+L\+F\+::\+E\+\_\+\+M\+A\+C\+H\+I\+NE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X86@{X86}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!X86@{X86}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca261a096f2b8783ad83ecb3df5b50f90f}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca261a096f2b8783ad83ecb3df5b50f90f}} 
+X86&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MIPS@{MIPS}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!MIPS@{MIPS}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca71fef05cecc50238baa1db212507a27e}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca71fef05cecc50238baa1db212507a27e}} 
+M\+I\+PS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARM@{ARM}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ARM@{ARM}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cabb821a9ffb2b27809b28ed2953e443b8}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cabb821a9ffb2b27809b28ed2953e443b8}} 
+A\+RM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD64@{AMD64}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!AMD64@{AMD64}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626caf42d9749caa23ed7526cd731012979f4}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626caf42d9749caa23ed7526cd731012979f4}} 
+A\+M\+D64&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARMV8@{ARMV8}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ARMV8@{ARMV8}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cab6d565f3d4a8df15b50920b305e97f91}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cab6d565f3d4a8df15b50920b305e97f91}} 
+A\+R\+M\+V8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RISCV@{RISCV}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!RISCV@{RISCV}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca6f9b80c5c504aed771c50cba333d7dc1}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca6f9b80c5c504aed771c50cba333d7dc1}} 
+R\+I\+S\+CV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X86@{X86}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!X86@{X86}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca261a096f2b8783ad83ecb3df5b50f90f}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca261a096f2b8783ad83ecb3df5b50f90f}} 
+X86&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MIPS@{MIPS}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!MIPS@{MIPS}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca71fef05cecc50238baa1db212507a27e}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca71fef05cecc50238baa1db212507a27e}} 
+M\+I\+PS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARM@{ARM}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ARM@{ARM}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cabb821a9ffb2b27809b28ed2953e443b8}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cabb821a9ffb2b27809b28ed2953e443b8}} 
+A\+RM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD64@{AMD64}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!AMD64@{AMD64}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626caf42d9749caa23ed7526cd731012979f4}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626caf42d9749caa23ed7526cd731012979f4}} 
+A\+M\+D64&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARMV8@{ARMV8}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ARMV8@{ARMV8}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cab6d565f3d4a8df15b50920b305e97f91}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cab6d565f3d4a8df15b50920b305e97f91}} 
+A\+R\+M\+V8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RISCV@{RISCV}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!RISCV@{RISCV}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca6f9b80c5c504aed771c50cba333d7dc1}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca6f9b80c5c504aed771c50cba333d7dc1}} 
+R\+I\+S\+CV&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 104 of file E\+L\+F32.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{105             \{}
+\DoxyCodeLine{106                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca261a096f2b8783ad83ecb3df5b50f90f}{X86}} = 0x03,}
+\DoxyCodeLine{107                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca71fef05cecc50238baa1db212507a27e}{MIPS}} = 0x08,}
+\DoxyCodeLine{108                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cabb821a9ffb2b27809b28ed2953e443b8}{ARM}} = 0x28,}
+\DoxyCodeLine{109                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626caf42d9749caa23ed7526cd731012979f4}{AMD64}} = 0x3E,}
+\DoxyCodeLine{110                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cab6d565f3d4a8df15b50920b305e97f91}{ARMV8}} = 0xB7,}
+\DoxyCodeLine{111                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca6f9b80c5c504aed771c50cba333d7dc1}{RISCV}} = 0xF3}
+\DoxyCodeLine{112             \} \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626c}{E\_MACHINE}};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626c}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626c}} 
+\index{BBP::std::ELF@{BBP::std::ELF}!E\_MACHINE@{E\_MACHINE}}
+\index{E\_MACHINE@{E\_MACHINE}!BBP::std::ELF@{BBP::std::ELF}}
+\doxysubsubsection{\texorpdfstring{E\_MACHINE}{E\_MACHINE}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626c}{B\+B\+P\+::std\+::\+E\+L\+F\+::\+E\+\_\+\+M\+A\+C\+H\+I\+NE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X86@{X86}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!X86@{X86}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca261a096f2b8783ad83ecb3df5b50f90f}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca261a096f2b8783ad83ecb3df5b50f90f}} 
+X86&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MIPS@{MIPS}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!MIPS@{MIPS}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca71fef05cecc50238baa1db212507a27e}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca71fef05cecc50238baa1db212507a27e}} 
+M\+I\+PS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARM@{ARM}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ARM@{ARM}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cabb821a9ffb2b27809b28ed2953e443b8}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cabb821a9ffb2b27809b28ed2953e443b8}} 
+A\+RM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD64@{AMD64}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!AMD64@{AMD64}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626caf42d9749caa23ed7526cd731012979f4}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626caf42d9749caa23ed7526cd731012979f4}} 
+A\+M\+D64&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARMV8@{ARMV8}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ARMV8@{ARMV8}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cab6d565f3d4a8df15b50920b305e97f91}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cab6d565f3d4a8df15b50920b305e97f91}} 
+A\+R\+M\+V8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RISCV@{RISCV}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!RISCV@{RISCV}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca6f9b80c5c504aed771c50cba333d7dc1}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca6f9b80c5c504aed771c50cba333d7dc1}} 
+R\+I\+S\+CV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X86@{X86}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!X86@{X86}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca261a096f2b8783ad83ecb3df5b50f90f}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca261a096f2b8783ad83ecb3df5b50f90f}} 
+X86&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MIPS@{MIPS}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!MIPS@{MIPS}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca71fef05cecc50238baa1db212507a27e}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca71fef05cecc50238baa1db212507a27e}} 
+M\+I\+PS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARM@{ARM}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ARM@{ARM}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cabb821a9ffb2b27809b28ed2953e443b8}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cabb821a9ffb2b27809b28ed2953e443b8}} 
+A\+RM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AMD64@{AMD64}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!AMD64@{AMD64}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626caf42d9749caa23ed7526cd731012979f4}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626caf42d9749caa23ed7526cd731012979f4}} 
+A\+M\+D64&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARMV8@{ARMV8}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ARMV8@{ARMV8}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cab6d565f3d4a8df15b50920b305e97f91}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cab6d565f3d4a8df15b50920b305e97f91}} 
+A\+R\+M\+V8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RISCV@{RISCV}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!RISCV@{RISCV}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca6f9b80c5c504aed771c50cba333d7dc1}\label{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca6f9b80c5c504aed771c50cba333d7dc1}} 
+R\+I\+S\+CV&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 106 of file E\+L\+F64.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{107             \{}
+\DoxyCodeLine{108                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca261a096f2b8783ad83ecb3df5b50f90f}{X86}} = 0x03,}
+\DoxyCodeLine{109                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca71fef05cecc50238baa1db212507a27e}{MIPS}} = 0x08,}
+\DoxyCodeLine{110                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cabb821a9ffb2b27809b28ed2953e443b8}{ARM}} = 0x28,}
+\DoxyCodeLine{111                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626caf42d9749caa23ed7526cd731012979f4}{AMD64}} = 0x3E,}
+\DoxyCodeLine{112                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626cab6d565f3d4a8df15b50920b305e97f91}{ARMV8}} = 0xB7,}
+\DoxyCodeLine{113                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626ca6f9b80c5c504aed771c50cba333d7dc1}{RISCV}} = 0xF3}
+\DoxyCodeLine{114             \} \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a97ca9633224704a44955e4be9db4626c}{E\_MACHINE}};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820}\label{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820}} 
+\index{BBP::std::ELF@{BBP::std::ELF}!E\_TYPE@{E\_TYPE}}
+\index{E\_TYPE@{E\_TYPE}!BBP::std::ELF@{BBP::std::ELF}}
+\doxysubsubsection{\texorpdfstring{E\_TYPE}{E\_TYPE}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820}{B\+B\+P\+::std\+::\+E\+L\+F\+::\+E\+\_\+\+T\+Y\+PE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ET\_NONE@{ET\_NONE}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ET\_NONE@{ET\_NONE}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a7da1cb18914368f9d2819bdb70a7bd4e}\label{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a7da1cb18914368f9d2819bdb70a7bd4e}} 
+E\+T\+\_\+\+N\+O\+NE&No File Type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ET\_REL@{ET\_REL}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ET\_REL@{ET\_REL}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a441b54ac6c27a685ff1c7ffd95d9e590}\label{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a441b54ac6c27a685ff1c7ffd95d9e590}} 
+E\+T\+\_\+\+R\+EL&Relocatable file type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ET\_EXEC@{ET\_EXEC}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ET\_EXEC@{ET\_EXEC}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3e8cc4472fc22fc9792f1edce8544c9e}\label{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3e8cc4472fc22fc9792f1edce8544c9e}} 
+E\+T\+\_\+\+E\+X\+EC&\mbox{\hyperlink{structBBP_1_1std_1_1Executable}{Executable}} file type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ET\_DYN@{ET\_DYN}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ET\_DYN@{ET\_DYN}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3a145172b09fb073c33347312fdbce26}\label{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3a145172b09fb073c33347312fdbce26}} 
+E\+T\+\_\+\+D\+YN&Shared Object File. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ET\_CORE@{ET\_CORE}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ET\_CORE@{ET\_CORE}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a56c9e829cd2c22148b38ace7223c9996}\label{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a56c9e829cd2c22148b38ace7223c9996}} 
+E\+T\+\_\+\+C\+O\+RE&Core file type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ET\_NONE@{ET\_NONE}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ET\_NONE@{ET\_NONE}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a7da1cb18914368f9d2819bdb70a7bd4e}\label{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a7da1cb18914368f9d2819bdb70a7bd4e}} 
+E\+T\+\_\+\+N\+O\+NE&No File Type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ET\_REL@{ET\_REL}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ET\_REL@{ET\_REL}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a441b54ac6c27a685ff1c7ffd95d9e590}\label{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a441b54ac6c27a685ff1c7ffd95d9e590}} 
+E\+T\+\_\+\+R\+EL&Relocatable file type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ET\_EXEC@{ET\_EXEC}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ET\_EXEC@{ET\_EXEC}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3e8cc4472fc22fc9792f1edce8544c9e}\label{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3e8cc4472fc22fc9792f1edce8544c9e}} 
+E\+T\+\_\+\+E\+X\+EC&\mbox{\hyperlink{structBBP_1_1std_1_1Executable}{Executable}} file type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ET\_DYN@{ET\_DYN}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ET\_DYN@{ET\_DYN}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3a145172b09fb073c33347312fdbce26}\label{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3a145172b09fb073c33347312fdbce26}} 
+E\+T\+\_\+\+D\+YN&Shared Object File. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ET\_CORE@{ET\_CORE}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ET\_CORE@{ET\_CORE}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a56c9e829cd2c22148b38ace7223c9996}\label{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a56c9e829cd2c22148b38ace7223c9996}} 
+E\+T\+\_\+\+C\+O\+RE&Core file type. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 95 of file E\+L\+F32.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{96             \{}
+\DoxyCodeLine{97                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a7da1cb18914368f9d2819bdb70a7bd4e}{ET\_NONE}} = 0,     }
+\DoxyCodeLine{98                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a441b54ac6c27a685ff1c7ffd95d9e590}{ET\_REL}} = 1,   }
+\DoxyCodeLine{99                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3e8cc4472fc22fc9792f1edce8544c9e}{ET\_EXEC}} = 2,     }
+\DoxyCodeLine{100                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3a145172b09fb073c33347312fdbce26}{ET\_DYN}} = 3,   }
+\DoxyCodeLine{101                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a56c9e829cd2c22148b38ace7223c9996}{ET\_CORE}} = 4  }
+\DoxyCodeLine{102             \} \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820}{E\_TYPE}};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820}\label{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820}} 
+\index{BBP::std::ELF@{BBP::std::ELF}!E\_TYPE@{E\_TYPE}}
+\index{E\_TYPE@{E\_TYPE}!BBP::std::ELF@{BBP::std::ELF}}
+\doxysubsubsection{\texorpdfstring{E\_TYPE}{E\_TYPE}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820}{B\+B\+P\+::std\+::\+E\+L\+F\+::\+E\+\_\+\+T\+Y\+PE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ET\_NONE@{ET\_NONE}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ET\_NONE@{ET\_NONE}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a7da1cb18914368f9d2819bdb70a7bd4e}\label{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a7da1cb18914368f9d2819bdb70a7bd4e}} 
+E\+T\+\_\+\+N\+O\+NE&No File Type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ET\_REL@{ET\_REL}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ET\_REL@{ET\_REL}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a441b54ac6c27a685ff1c7ffd95d9e590}\label{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a441b54ac6c27a685ff1c7ffd95d9e590}} 
+E\+T\+\_\+\+R\+EL&Relocatable file type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ET\_EXEC@{ET\_EXEC}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ET\_EXEC@{ET\_EXEC}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3e8cc4472fc22fc9792f1edce8544c9e}\label{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3e8cc4472fc22fc9792f1edce8544c9e}} 
+E\+T\+\_\+\+E\+X\+EC&\mbox{\hyperlink{structBBP_1_1std_1_1Executable}{Executable}} file type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ET\_DYN@{ET\_DYN}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ET\_DYN@{ET\_DYN}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3a145172b09fb073c33347312fdbce26}\label{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3a145172b09fb073c33347312fdbce26}} 
+E\+T\+\_\+\+D\+YN&Shared Object File. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ET\_CORE@{ET\_CORE}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ET\_CORE@{ET\_CORE}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a56c9e829cd2c22148b38ace7223c9996}\label{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a56c9e829cd2c22148b38ace7223c9996}} 
+E\+T\+\_\+\+C\+O\+RE&Core file type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ET\_NONE@{ET\_NONE}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ET\_NONE@{ET\_NONE}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a7da1cb18914368f9d2819bdb70a7bd4e}\label{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a7da1cb18914368f9d2819bdb70a7bd4e}} 
+E\+T\+\_\+\+N\+O\+NE&No File Type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ET\_REL@{ET\_REL}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ET\_REL@{ET\_REL}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a441b54ac6c27a685ff1c7ffd95d9e590}\label{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a441b54ac6c27a685ff1c7ffd95d9e590}} 
+E\+T\+\_\+\+R\+EL&Relocatable file type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ET\_EXEC@{ET\_EXEC}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ET\_EXEC@{ET\_EXEC}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3e8cc4472fc22fc9792f1edce8544c9e}\label{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3e8cc4472fc22fc9792f1edce8544c9e}} 
+E\+T\+\_\+\+E\+X\+EC&\mbox{\hyperlink{structBBP_1_1std_1_1Executable}{Executable}} file type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ET\_DYN@{ET\_DYN}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ET\_DYN@{ET\_DYN}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3a145172b09fb073c33347312fdbce26}\label{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3a145172b09fb073c33347312fdbce26}} 
+E\+T\+\_\+\+D\+YN&Shared Object File. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ET\_CORE@{ET\_CORE}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!ET\_CORE@{ET\_CORE}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a56c9e829cd2c22148b38ace7223c9996}\label{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a56c9e829cd2c22148b38ace7223c9996}} 
+E\+T\+\_\+\+C\+O\+RE&Core file type. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 97 of file E\+L\+F64.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{98             \{}
+\DoxyCodeLine{99                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a7da1cb18914368f9d2819bdb70a7bd4e}{ET\_NONE}} = 0,     }
+\DoxyCodeLine{100                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a441b54ac6c27a685ff1c7ffd95d9e590}{ET\_REL}} = 1,   }
+\DoxyCodeLine{101                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3e8cc4472fc22fc9792f1edce8544c9e}{ET\_EXEC}} = 2,     }
+\DoxyCodeLine{102                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a3a145172b09fb073c33347312fdbce26}{ET\_DYN}} = 3,   }
+\DoxyCodeLine{103                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820a56c9e829cd2c22148b38ace7223c9996}{ET\_CORE}} = 4  }
+\DoxyCodeLine{104             \} \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a1ea77212bffe36c8ebe168e5fe7b1820}{E\_TYPE}};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9}} 
+\index{BBP::std::ELF@{BBP::std::ELF}!P\_TYPE@{P\_TYPE}}
+\index{P\_TYPE@{P\_TYPE}!BBP::std::ELF@{BBP::std::ELF}}
+\doxysubsubsection{\texorpdfstring{P\_TYPE}{P\_TYPE}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9}{B\+B\+P\+::std\+::\+E\+L\+F\+::\+P\+\_\+\+T\+Y\+PE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_NILL@{PT\_NILL}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_NILL@{PT\_NILL}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a9e8b90fababc25c360b901532d99ef63}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a9e8b90fababc25c360b901532d99ef63}} 
+P\+T\+\_\+\+N\+I\+LL&Place holder. (Disabled) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_LOAD@{PT\_LOAD}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_LOAD@{PT\_LOAD}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09}} 
+P\+T\+\_\+\+L\+O\+AD&Load segment type. This segment will be loaded into memory. Can also be used to create 0 initialized segments by \textquotesingle{}specifying a larger size in memory than is loaded from the file\textquotesingle{}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_DYNAMIC@{PT\_DYNAMIC}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_DYNAMIC@{PT\_DYNAMIC}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a72cfffff31ed41d807f073aead80dacd}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a72cfffff31ed41d807f073aead80dacd}} 
+P\+T\+\_\+\+D\+Y\+N\+A\+M\+IC&Contains information required for dynamically linking binaries. Is interpreted by the OS. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_INTERP@{PT\_INTERP}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_INTERP@{PT\_INTERP}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a7ae2391af8b60fbacc90c83b53627a58}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a7ae2391af8b60fbacc90c83b53627a58}} 
+P\+T\+\_\+\+I\+N\+T\+E\+RP&Specifies the program interpreter required for this dynamic executable. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_NOTE@{PT\_NOTE}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_NOTE@{PT\_NOTE}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a8e805c1e3f00467815fcb7cccccdabd3}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a8e805c1e3f00467815fcb7cccccdabd3}} 
+P\+T\+\_\+\+N\+O\+TE&Aux data for binary. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_SHLIB@{PT\_SHLIB}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_SHLIB@{PT\_SHLIB}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a2818d9e6afdad1cd9c7ed7580bc5737c}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a2818d9e6afdad1cd9c7ed7580bc5737c}} 
+P\+T\+\_\+\+S\+H\+L\+IB&Undefined. Do not use. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_PHDR@{PT\_PHDR}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_PHDR@{PT\_PHDR}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9afb8c2623c48665e2e34cae53b5a848bb}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9afb8c2623c48665e2e34cae53b5a848bb}} 
+P\+T\+\_\+\+P\+H\+DR&Program header table data. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_TLS@{PT\_TLS}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_TLS@{PT\_TLS}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9aa41f51d27471b57de855a2c37a3d11cb}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9aa41f51d27471b57de855a2c37a3d11cb}} 
+P\+T\+\_\+\+T\+LS&Thread local storage. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_NILL@{PT\_NILL}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_NILL@{PT\_NILL}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a9e8b90fababc25c360b901532d99ef63}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a9e8b90fababc25c360b901532d99ef63}} 
+P\+T\+\_\+\+N\+I\+LL&Place holder. (Disabled) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_LOAD@{PT\_LOAD}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_LOAD@{PT\_LOAD}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09}} 
+P\+T\+\_\+\+L\+O\+AD&Load segment type. This segment will be loaded into memory. Can also be used to create 0 initialized segments by \textquotesingle{}specifying a larger size in memory than is loaded from the file\textquotesingle{}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_DYNAMIC@{PT\_DYNAMIC}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_DYNAMIC@{PT\_DYNAMIC}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a72cfffff31ed41d807f073aead80dacd}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a72cfffff31ed41d807f073aead80dacd}} 
+P\+T\+\_\+\+D\+Y\+N\+A\+M\+IC&Contains information required for dynamically linking binaries. Is interpreted by the OS. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_INTERP@{PT\_INTERP}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_INTERP@{PT\_INTERP}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a7ae2391af8b60fbacc90c83b53627a58}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a7ae2391af8b60fbacc90c83b53627a58}} 
+P\+T\+\_\+\+I\+N\+T\+E\+RP&Specifies the program interpreter required for this dynamic executable. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_NOTE@{PT\_NOTE}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_NOTE@{PT\_NOTE}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a8e805c1e3f00467815fcb7cccccdabd3}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a8e805c1e3f00467815fcb7cccccdabd3}} 
+P\+T\+\_\+\+N\+O\+TE&Aux data for binary. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_SHLIB@{PT\_SHLIB}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_SHLIB@{PT\_SHLIB}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a2818d9e6afdad1cd9c7ed7580bc5737c}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a2818d9e6afdad1cd9c7ed7580bc5737c}} 
+P\+T\+\_\+\+S\+H\+L\+IB&Undefined. Do not use. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_PHDR@{PT\_PHDR}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_PHDR@{PT\_PHDR}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9afb8c2623c48665e2e34cae53b5a848bb}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9afb8c2623c48665e2e34cae53b5a848bb}} 
+P\+T\+\_\+\+P\+H\+DR&Program header table data. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_TLS@{PT\_TLS}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_TLS@{PT\_TLS}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9aa41f51d27471b57de855a2c37a3d11cb}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9aa41f51d27471b57de855a2c37a3d11cb}} 
+P\+T\+\_\+\+T\+LS&Thread local storage. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 114 of file E\+L\+F32.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{115             \{}
+\DoxyCodeLine{116                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a9e8b90fababc25c360b901532d99ef63}{PT\_NILL}} = 0,     }
+\DoxyCodeLine{117                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09}{PT\_LOAD}} = 1,     }
+\DoxyCodeLine{118                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a72cfffff31ed41d807f073aead80dacd}{PT\_DYNAMIC}} = 2, }
+\DoxyCodeLine{119                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a7ae2391af8b60fbacc90c83b53627a58}{PT\_INTERP}} = 3,     }
+\DoxyCodeLine{120                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a8e805c1e3f00467815fcb7cccccdabd3}{PT\_NOTE}} = 4,     }
+\DoxyCodeLine{121                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a2818d9e6afdad1cd9c7ed7580bc5737c}{PT\_SHLIB}} = 5,   }
+\DoxyCodeLine{122                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9afb8c2623c48665e2e34cae53b5a848bb}{PT\_PHDR}} = 6,     }
+\DoxyCodeLine{123                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9aa41f51d27471b57de855a2c37a3d11cb}{PT\_TLS}} = 7    }
+\DoxyCodeLine{124             \} \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9}{P\_TYPE}};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9}} 
+\index{BBP::std::ELF@{BBP::std::ELF}!P\_TYPE@{P\_TYPE}}
+\index{P\_TYPE@{P\_TYPE}!BBP::std::ELF@{BBP::std::ELF}}
+\doxysubsubsection{\texorpdfstring{P\_TYPE}{P\_TYPE}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9}{B\+B\+P\+::std\+::\+E\+L\+F\+::\+P\+\_\+\+T\+Y\+PE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_NILL@{PT\_NILL}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_NILL@{PT\_NILL}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a9e8b90fababc25c360b901532d99ef63}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a9e8b90fababc25c360b901532d99ef63}} 
+P\+T\+\_\+\+N\+I\+LL&Place holder. (Disabled) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_LOAD@{PT\_LOAD}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_LOAD@{PT\_LOAD}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09}} 
+P\+T\+\_\+\+L\+O\+AD&Load segment type. This segment will be loaded into memory. Can also be used to create 0 initialized segments by \textquotesingle{}specifying a larger size in memory than is loaded from the file\textquotesingle{}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_DYNAMIC@{PT\_DYNAMIC}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_DYNAMIC@{PT\_DYNAMIC}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a72cfffff31ed41d807f073aead80dacd}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a72cfffff31ed41d807f073aead80dacd}} 
+P\+T\+\_\+\+D\+Y\+N\+A\+M\+IC&Contains information required for dynamically linking binaries. Is interpreted by the OS. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_INTERP@{PT\_INTERP}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_INTERP@{PT\_INTERP}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a7ae2391af8b60fbacc90c83b53627a58}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a7ae2391af8b60fbacc90c83b53627a58}} 
+P\+T\+\_\+\+I\+N\+T\+E\+RP&Specifies the program interpreter required for this dynamic executable. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_NOTE@{PT\_NOTE}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_NOTE@{PT\_NOTE}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a8e805c1e3f00467815fcb7cccccdabd3}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a8e805c1e3f00467815fcb7cccccdabd3}} 
+P\+T\+\_\+\+N\+O\+TE&Aux data for binary. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_SHLIB@{PT\_SHLIB}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_SHLIB@{PT\_SHLIB}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a2818d9e6afdad1cd9c7ed7580bc5737c}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a2818d9e6afdad1cd9c7ed7580bc5737c}} 
+P\+T\+\_\+\+S\+H\+L\+IB&Undefined. Do not use. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_PHDR@{PT\_PHDR}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_PHDR@{PT\_PHDR}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9afb8c2623c48665e2e34cae53b5a848bb}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9afb8c2623c48665e2e34cae53b5a848bb}} 
+P\+T\+\_\+\+P\+H\+DR&Program header table data. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_TLS@{PT\_TLS}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_TLS@{PT\_TLS}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9aa41f51d27471b57de855a2c37a3d11cb}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9aa41f51d27471b57de855a2c37a3d11cb}} 
+P\+T\+\_\+\+T\+LS&Thread local storage. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_NILL@{PT\_NILL}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_NILL@{PT\_NILL}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a9e8b90fababc25c360b901532d99ef63}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a9e8b90fababc25c360b901532d99ef63}} 
+P\+T\+\_\+\+N\+I\+LL&Place holder. (Disabled) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_LOAD@{PT\_LOAD}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_LOAD@{PT\_LOAD}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09}} 
+P\+T\+\_\+\+L\+O\+AD&Load segment type. This segment will be loaded into memory. Can also be used to create 0 initialized segments by \textquotesingle{}specifying a larger size in memory than is loaded from the file\textquotesingle{}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_DYNAMIC@{PT\_DYNAMIC}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_DYNAMIC@{PT\_DYNAMIC}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a72cfffff31ed41d807f073aead80dacd}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a72cfffff31ed41d807f073aead80dacd}} 
+P\+T\+\_\+\+D\+Y\+N\+A\+M\+IC&Contains information required for dynamically linking binaries. Is interpreted by the OS. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_INTERP@{PT\_INTERP}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_INTERP@{PT\_INTERP}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a7ae2391af8b60fbacc90c83b53627a58}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a7ae2391af8b60fbacc90c83b53627a58}} 
+P\+T\+\_\+\+I\+N\+T\+E\+RP&Specifies the program interpreter required for this dynamic executable. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_NOTE@{PT\_NOTE}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_NOTE@{PT\_NOTE}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a8e805c1e3f00467815fcb7cccccdabd3}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a8e805c1e3f00467815fcb7cccccdabd3}} 
+P\+T\+\_\+\+N\+O\+TE&Aux data for binary. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_SHLIB@{PT\_SHLIB}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_SHLIB@{PT\_SHLIB}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a2818d9e6afdad1cd9c7ed7580bc5737c}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a2818d9e6afdad1cd9c7ed7580bc5737c}} 
+P\+T\+\_\+\+S\+H\+L\+IB&Undefined. Do not use. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_PHDR@{PT\_PHDR}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_PHDR@{PT\_PHDR}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9afb8c2623c48665e2e34cae53b5a848bb}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9afb8c2623c48665e2e34cae53b5a848bb}} 
+P\+T\+\_\+\+P\+H\+DR&Program header table data. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PT\_TLS@{PT\_TLS}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!PT\_TLS@{PT\_TLS}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9aa41f51d27471b57de855a2c37a3d11cb}\label{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9aa41f51d27471b57de855a2c37a3d11cb}} 
+P\+T\+\_\+\+T\+LS&Thread local storage. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 116 of file E\+L\+F64.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{117             \{}
+\DoxyCodeLine{118                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a9e8b90fababc25c360b901532d99ef63}{PT\_NILL}} = 0,     }
+\DoxyCodeLine{119                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09}{PT\_LOAD}} = 1,     }
+\DoxyCodeLine{120                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a72cfffff31ed41d807f073aead80dacd}{PT\_DYNAMIC}} = 2, }
+\DoxyCodeLine{121                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a7ae2391af8b60fbacc90c83b53627a58}{PT\_INTERP}} = 3,     }
+\DoxyCodeLine{122                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a8e805c1e3f00467815fcb7cccccdabd3}{PT\_NOTE}} = 4,     }
+\DoxyCodeLine{123                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a2818d9e6afdad1cd9c7ed7580bc5737c}{PT\_SHLIB}} = 5,   }
+\DoxyCodeLine{124                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9afb8c2623c48665e2e34cae53b5a848bb}{PT\_PHDR}} = 6,     }
+\DoxyCodeLine{125                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9aa41f51d27471b57de855a2c37a3d11cb}{PT\_TLS}} = 7    }
+\DoxyCodeLine{126             \} \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9}{P\_TYPE}};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ae2a664d64638a27e0ab1bcffc6109fc3}\label{namespaceBBP_1_1std_1_1ELF_ae2a664d64638a27e0ab1bcffc6109fc3}} 
+\index{BBP::std::ELF@{BBP::std::ELF}!SectionTypes@{SectionTypes}}
+\index{SectionTypes@{SectionTypes}!BBP::std::ELF@{BBP::std::ELF}}
+\doxysubsubsection{\texorpdfstring{SectionTypes}{SectionTypes}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ae2a664d64638a27e0ab1bcffc6109fc3}{B\+B\+P\+::std\+::\+E\+L\+F\+::\+Section\+Types}} \+: \mbox{\hyperlink{namespaceBBP_1_1std_a4926ba934876e4a1028b9abb47edbc56}{std\+::byte}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Writeable@{Writeable}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!Writeable@{Writeable}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ae2a664d64638a27e0ab1bcffc6109fc3a6c6b2a297c57c60885d1867d21db072f}\label{namespaceBBP_1_1std_1_1ELF_ae2a664d64638a27e0ab1bcffc6109fc3a6c6b2a297c57c60885d1867d21db072f}} 
+Writeable&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Allocator@{Allocator}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!Allocator@{Allocator}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ae2a664d64638a27e0ab1bcffc6109fc3a196960cec1430f9427663844e0a636c5}\label{namespaceBBP_1_1std_1_1ELF_ae2a664d64638a27e0ab1bcffc6109fc3a196960cec1430f9427663844e0a636c5}} 
+Allocator&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Executable@{Executable}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!Executable@{Executable}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_ae2a664d64638a27e0ab1bcffc6109fc3a8f0ed67b27aab60eef8c6408ab3402c7}\label{namespaceBBP_1_1std_1_1ELF_ae2a664d64638a27e0ab1bcffc6109fc3a8f0ed67b27aab60eef8c6408ab3402c7}} 
+Executable&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 206 of file E\+L\+F32.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{206                               : \mbox{\hyperlink{namespaceBBP_1_1std_a4926ba934876e4a1028b9abb47edbc56}{std::byte}} \{}
+\DoxyCodeLine{207                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ae2a664d64638a27e0ab1bcffc6109fc3a6c6b2a297c57c60885d1867d21db072f}{Writeable}} = 1,}
+\DoxyCodeLine{208                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ae2a664d64638a27e0ab1bcffc6109fc3a196960cec1430f9427663844e0a636c5}{Allocator}} = 2,}
+\DoxyCodeLine{209                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ae2a664d64638a27e0ab1bcffc6109fc3a8f0ed67b27aab60eef8c6408ab3402c7}{Executable}} = 4}
+\DoxyCodeLine{210             \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48}} 
+\index{BBP::std::ELF@{BBP::std::ELF}!SH\_TYPE@{SH\_TYPE}}
+\index{SH\_TYPE@{SH\_TYPE}!BBP::std::ELF@{BBP::std::ELF}}
+\doxysubsubsection{\texorpdfstring{SH\_TYPE}{SH\_TYPE}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48}{B\+B\+P\+::std\+::\+E\+L\+F\+::\+S\+H\+\_\+\+T\+Y\+PE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_NILL@{SHT\_NILL}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_NILL@{SHT\_NILL}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae90bd4e1bd73dd34ff28efea720ab260}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae90bd4e1bd73dd34ff28efea720ab260}} 
+S\+H\+T\+\_\+\+N\+I\+LL&Inactive section. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_PROGBITS@{SHT\_PROGBITS}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_PROGBITS@{SHT\_PROGBITS}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a778dbcfc401c43cbf111a1719a04ff1c}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a778dbcfc401c43cbf111a1719a04ff1c}} 
+S\+H\+T\+\_\+\+P\+R\+O\+G\+B\+I\+TS&Contains data for the program. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_SYMTAB@{SHT\_SYMTAB}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_SYMTAB@{SHT\_SYMTAB}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aaa86c347bf73cac82e1bfc20da7e29db}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aaa86c347bf73cac82e1bfc20da7e29db}} 
+S\+H\+T\+\_\+\+S\+Y\+M\+T\+AB&Symbol table. List of symbol tables. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_STRTAB@{SHT\_STRTAB}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_STRTAB@{SHT\_STRTAB}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a290e05e6531740de9b07ed2c11550ac2}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a290e05e6531740de9b07ed2c11550ac2}} 
+S\+H\+T\+\_\+\+S\+T\+R\+T\+AB&String table. This is what e\+\_\+shstrndx points to. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_RELA@{SHT\_RELA}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_RELA@{SHT\_RELA}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae0bb87cfc98e47c806553f71d45922f6}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae0bb87cfc98e47c806553f71d45922f6}} 
+S\+H\+T\+\_\+\+R\+E\+LA&Relocation A. Contains information on how to modify sections. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_HASH@{SHT\_HASH}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_HASH@{SHT\_HASH}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af1b80c3be687215bc997fdee18206730}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af1b80c3be687215bc997fdee18206730}} 
+S\+H\+T\+\_\+\+H\+A\+SH&Hash table. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_DYNAMIC@{SHT\_DYNAMIC}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_DYNAMIC@{SHT\_DYNAMIC}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aff39b631c74f1a35d16d8dd022b89d6e}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aff39b631c74f1a35d16d8dd022b89d6e}} 
+S\+H\+T\+\_\+\+D\+Y\+N\+A\+M\+IC&Information required for dynamic linking. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_NOTE@{SHT\_NOTE}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_NOTE@{SHT\_NOTE}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a3cdf6853fb798f6225898486590fca97}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a3cdf6853fb798f6225898486590fca97}} 
+S\+H\+T\+\_\+\+N\+O\+TE&Contains auxiliary info. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_NOBITS@{SHT\_NOBITS}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_NOBITS@{SHT\_NOBITS}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a704294eb254f6ad7bde906c231eea8ab}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a704294eb254f6ad7bde906c231eea8ab}} 
+S\+H\+T\+\_\+\+N\+O\+B\+I\+TS&Section that takes no space in the file. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_REL@{SHT\_REL}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_REL@{SHT\_REL}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af3d4415e121b5ffd4990fc7550576d75}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af3d4415e121b5ffd4990fc7550576d75}} 
+S\+H\+T\+\_\+\+R\+EL&Relocation. Contains information on how to modify sections. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_SHLIB@{SHT\_SHLIB}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_SHLIB@{SHT\_SHLIB}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48afb3d73af956a20af375e363e6a81d7d2}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48afb3d73af956a20af375e363e6a81d7d2}} 
+S\+H\+T\+\_\+\+S\+H\+L\+IB&Reserved, but unused. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_DYNSYM@{SHT\_DYNSYM}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_DYNSYM@{SHT\_DYNSYM}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aa542e2edd59c1e3b68a8c6c2b756a3eb}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aa542e2edd59c1e3b68a8c6c2b756a3eb}} 
+S\+H\+T\+\_\+\+D\+Y\+N\+S\+YM&Symbol table. Used to define external symbols and so. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_NILL@{SHT\_NILL}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_NILL@{SHT\_NILL}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae90bd4e1bd73dd34ff28efea720ab260}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae90bd4e1bd73dd34ff28efea720ab260}} 
+S\+H\+T\+\_\+\+N\+I\+LL&Inactive section. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_PROGBITS@{SHT\_PROGBITS}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_PROGBITS@{SHT\_PROGBITS}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a778dbcfc401c43cbf111a1719a04ff1c}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a778dbcfc401c43cbf111a1719a04ff1c}} 
+S\+H\+T\+\_\+\+P\+R\+O\+G\+B\+I\+TS&Contains data for the program. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_SYMTAB@{SHT\_SYMTAB}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_SYMTAB@{SHT\_SYMTAB}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aaa86c347bf73cac82e1bfc20da7e29db}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aaa86c347bf73cac82e1bfc20da7e29db}} 
+S\+H\+T\+\_\+\+S\+Y\+M\+T\+AB&Symbol table. List of symbol tables. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_STRTAB@{SHT\_STRTAB}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_STRTAB@{SHT\_STRTAB}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a290e05e6531740de9b07ed2c11550ac2}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a290e05e6531740de9b07ed2c11550ac2}} 
+S\+H\+T\+\_\+\+S\+T\+R\+T\+AB&String table. This is what e\+\_\+shstrndx points to. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_RELA@{SHT\_RELA}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_RELA@{SHT\_RELA}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae0bb87cfc98e47c806553f71d45922f6}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae0bb87cfc98e47c806553f71d45922f6}} 
+S\+H\+T\+\_\+\+R\+E\+LA&Relocation A. Contains information on how to modify sections. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_HASH@{SHT\_HASH}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_HASH@{SHT\_HASH}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af1b80c3be687215bc997fdee18206730}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af1b80c3be687215bc997fdee18206730}} 
+S\+H\+T\+\_\+\+H\+A\+SH&Hash table. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_DYNAMIC@{SHT\_DYNAMIC}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_DYNAMIC@{SHT\_DYNAMIC}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aff39b631c74f1a35d16d8dd022b89d6e}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aff39b631c74f1a35d16d8dd022b89d6e}} 
+S\+H\+T\+\_\+\+D\+Y\+N\+A\+M\+IC&Information required for dynamic linking. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_NOTE@{SHT\_NOTE}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_NOTE@{SHT\_NOTE}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a3cdf6853fb798f6225898486590fca97}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a3cdf6853fb798f6225898486590fca97}} 
+S\+H\+T\+\_\+\+N\+O\+TE&Contains auxiliary info. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_NOBITS@{SHT\_NOBITS}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_NOBITS@{SHT\_NOBITS}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a704294eb254f6ad7bde906c231eea8ab}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a704294eb254f6ad7bde906c231eea8ab}} 
+S\+H\+T\+\_\+\+N\+O\+B\+I\+TS&Section that takes no space in the file. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_REL@{SHT\_REL}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_REL@{SHT\_REL}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af3d4415e121b5ffd4990fc7550576d75}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af3d4415e121b5ffd4990fc7550576d75}} 
+S\+H\+T\+\_\+\+R\+EL&Relocation. Contains information on how to modify sections. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_SHLIB@{SHT\_SHLIB}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_SHLIB@{SHT\_SHLIB}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48afb3d73af956a20af375e363e6a81d7d2}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48afb3d73af956a20af375e363e6a81d7d2}} 
+S\+H\+T\+\_\+\+S\+H\+L\+IB&Reserved, but unused. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_DYNSYM@{SHT\_DYNSYM}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_DYNSYM@{SHT\_DYNSYM}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aa542e2edd59c1e3b68a8c6c2b756a3eb}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aa542e2edd59c1e3b68a8c6c2b756a3eb}} 
+S\+H\+T\+\_\+\+D\+Y\+N\+S\+YM&Symbol table. Used to define external symbols and so. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 126 of file E\+L\+F32.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{126                          \{}
+\DoxyCodeLine{127                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae90bd4e1bd73dd34ff28efea720ab260}{SHT\_NILL}} = 0,       }
+\DoxyCodeLine{128                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a778dbcfc401c43cbf111a1719a04ff1c}{SHT\_PROGBITS}} = 1,   }
+\DoxyCodeLine{129                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aaa86c347bf73cac82e1bfc20da7e29db}{SHT\_SYMTAB}} = 2,   }
+\DoxyCodeLine{130                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a290e05e6531740de9b07ed2c11550ac2}{SHT\_STRTAB}} = 3,   }
+\DoxyCodeLine{131                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae0bb87cfc98e47c806553f71d45922f6}{SHT\_RELA}} = 4,       }
+\DoxyCodeLine{132                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af1b80c3be687215bc997fdee18206730}{SHT\_HASH}} = 5,       }
+\DoxyCodeLine{133                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aff39b631c74f1a35d16d8dd022b89d6e}{SHT\_DYNAMIC}} = 6,     }
+\DoxyCodeLine{134                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a3cdf6853fb798f6225898486590fca97}{SHT\_NOTE}} = 7,       }
+\DoxyCodeLine{135                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a704294eb254f6ad7bde906c231eea8ab}{SHT\_NOBITS}} = 8,   }
+\DoxyCodeLine{136                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af3d4415e121b5ffd4990fc7550576d75}{SHT\_REL}} = 9,         }
+\DoxyCodeLine{137                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48afb3d73af956a20af375e363e6a81d7d2}{SHT\_SHLIB}} = 10,    }
+\DoxyCodeLine{138                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aa542e2edd59c1e3b68a8c6c2b756a3eb}{SHT\_DYNSYM}} = 11   }
+\DoxyCodeLine{139             \} \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48}{SH\_TYPE}};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48}} 
+\index{BBP::std::ELF@{BBP::std::ELF}!SH\_TYPE@{SH\_TYPE}}
+\index{SH\_TYPE@{SH\_TYPE}!BBP::std::ELF@{BBP::std::ELF}}
+\doxysubsubsection{\texorpdfstring{SH\_TYPE}{SH\_TYPE}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48}{B\+B\+P\+::std\+::\+E\+L\+F\+::\+S\+H\+\_\+\+T\+Y\+PE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_NILL@{SHT\_NILL}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_NILL@{SHT\_NILL}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae90bd4e1bd73dd34ff28efea720ab260}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae90bd4e1bd73dd34ff28efea720ab260}} 
+S\+H\+T\+\_\+\+N\+I\+LL&Inactive section. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_PROGBITS@{SHT\_PROGBITS}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_PROGBITS@{SHT\_PROGBITS}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a778dbcfc401c43cbf111a1719a04ff1c}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a778dbcfc401c43cbf111a1719a04ff1c}} 
+S\+H\+T\+\_\+\+P\+R\+O\+G\+B\+I\+TS&Contains data for the program. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_SYMTAB@{SHT\_SYMTAB}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_SYMTAB@{SHT\_SYMTAB}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aaa86c347bf73cac82e1bfc20da7e29db}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aaa86c347bf73cac82e1bfc20da7e29db}} 
+S\+H\+T\+\_\+\+S\+Y\+M\+T\+AB&Symbol table. List of symbol tables. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_STRTAB@{SHT\_STRTAB}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_STRTAB@{SHT\_STRTAB}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a290e05e6531740de9b07ed2c11550ac2}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a290e05e6531740de9b07ed2c11550ac2}} 
+S\+H\+T\+\_\+\+S\+T\+R\+T\+AB&String table. This is what e\+\_\+shstrndx points to. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_RELA@{SHT\_RELA}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_RELA@{SHT\_RELA}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae0bb87cfc98e47c806553f71d45922f6}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae0bb87cfc98e47c806553f71d45922f6}} 
+S\+H\+T\+\_\+\+R\+E\+LA&Relocation A. Contains information on how to modify sections. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_HASH@{SHT\_HASH}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_HASH@{SHT\_HASH}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af1b80c3be687215bc997fdee18206730}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af1b80c3be687215bc997fdee18206730}} 
+S\+H\+T\+\_\+\+H\+A\+SH&Hash table. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_DYNAMIC@{SHT\_DYNAMIC}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_DYNAMIC@{SHT\_DYNAMIC}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aff39b631c74f1a35d16d8dd022b89d6e}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aff39b631c74f1a35d16d8dd022b89d6e}} 
+S\+H\+T\+\_\+\+D\+Y\+N\+A\+M\+IC&Information required for dynamic linking. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_NOTE@{SHT\_NOTE}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_NOTE@{SHT\_NOTE}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a3cdf6853fb798f6225898486590fca97}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a3cdf6853fb798f6225898486590fca97}} 
+S\+H\+T\+\_\+\+N\+O\+TE&Contains auxiliary info. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_NOBITS@{SHT\_NOBITS}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_NOBITS@{SHT\_NOBITS}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a704294eb254f6ad7bde906c231eea8ab}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a704294eb254f6ad7bde906c231eea8ab}} 
+S\+H\+T\+\_\+\+N\+O\+B\+I\+TS&Section that takes no space in the file. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_REL@{SHT\_REL}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_REL@{SHT\_REL}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af3d4415e121b5ffd4990fc7550576d75}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af3d4415e121b5ffd4990fc7550576d75}} 
+S\+H\+T\+\_\+\+R\+EL&Relocation. Contains information on how to modify sections. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_SHLIB@{SHT\_SHLIB}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_SHLIB@{SHT\_SHLIB}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48afb3d73af956a20af375e363e6a81d7d2}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48afb3d73af956a20af375e363e6a81d7d2}} 
+S\+H\+T\+\_\+\+S\+H\+L\+IB&Reserved, but unused. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_DYNSYM@{SHT\_DYNSYM}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_DYNSYM@{SHT\_DYNSYM}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aa542e2edd59c1e3b68a8c6c2b756a3eb}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aa542e2edd59c1e3b68a8c6c2b756a3eb}} 
+S\+H\+T\+\_\+\+D\+Y\+N\+S\+YM&Symbol table. Used to define external symbols and so. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_NILL@{SHT\_NILL}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_NILL@{SHT\_NILL}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae90bd4e1bd73dd34ff28efea720ab260}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae90bd4e1bd73dd34ff28efea720ab260}} 
+S\+H\+T\+\_\+\+N\+I\+LL&Inactive section. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_PROGBITS@{SHT\_PROGBITS}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_PROGBITS@{SHT\_PROGBITS}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a778dbcfc401c43cbf111a1719a04ff1c}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a778dbcfc401c43cbf111a1719a04ff1c}} 
+S\+H\+T\+\_\+\+P\+R\+O\+G\+B\+I\+TS&Contains data for the program. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_SYMTAB@{SHT\_SYMTAB}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_SYMTAB@{SHT\_SYMTAB}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aaa86c347bf73cac82e1bfc20da7e29db}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aaa86c347bf73cac82e1bfc20da7e29db}} 
+S\+H\+T\+\_\+\+S\+Y\+M\+T\+AB&Symbol table. List of symbol tables. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_STRTAB@{SHT\_STRTAB}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_STRTAB@{SHT\_STRTAB}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a290e05e6531740de9b07ed2c11550ac2}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a290e05e6531740de9b07ed2c11550ac2}} 
+S\+H\+T\+\_\+\+S\+T\+R\+T\+AB&String table. This is what e\+\_\+shstrndx points to. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_RELA@{SHT\_RELA}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_RELA@{SHT\_RELA}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae0bb87cfc98e47c806553f71d45922f6}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae0bb87cfc98e47c806553f71d45922f6}} 
+S\+H\+T\+\_\+\+R\+E\+LA&Relocation A. Contains information on how to modify sections. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_HASH@{SHT\_HASH}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_HASH@{SHT\_HASH}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af1b80c3be687215bc997fdee18206730}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af1b80c3be687215bc997fdee18206730}} 
+S\+H\+T\+\_\+\+H\+A\+SH&Hash table. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_DYNAMIC@{SHT\_DYNAMIC}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_DYNAMIC@{SHT\_DYNAMIC}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aff39b631c74f1a35d16d8dd022b89d6e}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aff39b631c74f1a35d16d8dd022b89d6e}} 
+S\+H\+T\+\_\+\+D\+Y\+N\+A\+M\+IC&Information required for dynamic linking. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_NOTE@{SHT\_NOTE}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_NOTE@{SHT\_NOTE}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a3cdf6853fb798f6225898486590fca97}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a3cdf6853fb798f6225898486590fca97}} 
+S\+H\+T\+\_\+\+N\+O\+TE&Contains auxiliary info. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_NOBITS@{SHT\_NOBITS}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_NOBITS@{SHT\_NOBITS}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a704294eb254f6ad7bde906c231eea8ab}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a704294eb254f6ad7bde906c231eea8ab}} 
+S\+H\+T\+\_\+\+N\+O\+B\+I\+TS&Section that takes no space in the file. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_REL@{SHT\_REL}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_REL@{SHT\_REL}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af3d4415e121b5ffd4990fc7550576d75}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af3d4415e121b5ffd4990fc7550576d75}} 
+S\+H\+T\+\_\+\+R\+EL&Relocation. Contains information on how to modify sections. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_SHLIB@{SHT\_SHLIB}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_SHLIB@{SHT\_SHLIB}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48afb3d73af956a20af375e363e6a81d7d2}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48afb3d73af956a20af375e363e6a81d7d2}} 
+S\+H\+T\+\_\+\+S\+H\+L\+IB&Reserved, but unused. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHT\_DYNSYM@{SHT\_DYNSYM}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHT\_DYNSYM@{SHT\_DYNSYM}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aa542e2edd59c1e3b68a8c6c2b756a3eb}\label{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aa542e2edd59c1e3b68a8c6c2b756a3eb}} 
+S\+H\+T\+\_\+\+D\+Y\+N\+S\+YM&Symbol table. Used to define external symbols and so. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 128 of file E\+L\+F64.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{128                          \{}
+\DoxyCodeLine{129                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae90bd4e1bd73dd34ff28efea720ab260}{SHT\_NILL}} = 0,       }
+\DoxyCodeLine{130                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a778dbcfc401c43cbf111a1719a04ff1c}{SHT\_PROGBITS}} = 1,   }
+\DoxyCodeLine{131                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aaa86c347bf73cac82e1bfc20da7e29db}{SHT\_SYMTAB}} = 2,   }
+\DoxyCodeLine{132                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a290e05e6531740de9b07ed2c11550ac2}{SHT\_STRTAB}} = 3,   }
+\DoxyCodeLine{133                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48ae0bb87cfc98e47c806553f71d45922f6}{SHT\_RELA}} = 4,       }
+\DoxyCodeLine{134                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af1b80c3be687215bc997fdee18206730}{SHT\_HASH}} = 5,       }
+\DoxyCodeLine{135                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aff39b631c74f1a35d16d8dd022b89d6e}{SHT\_DYNAMIC}} = 6,     }
+\DoxyCodeLine{136                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a3cdf6853fb798f6225898486590fca97}{SHT\_NOTE}} = 7,       }
+\DoxyCodeLine{137                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48a704294eb254f6ad7bde906c231eea8ab}{SHT\_NOBITS}} = 8,   }
+\DoxyCodeLine{138                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48af3d4415e121b5ffd4990fc7550576d75}{SHT\_REL}} = 9,         }
+\DoxyCodeLine{139                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48afb3d73af956a20af375e363e6a81d7d2}{SHT\_SHLIB}} = 10,    }
+\DoxyCodeLine{140                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48aa542e2edd59c1e3b68a8c6c2b756a3eb}{SHT\_DYNSYM}} = 11   }
+\DoxyCodeLine{141             \} \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a51a6b198fd2a120ee37463cdbaa45b48}{SH\_TYPE}};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463}\label{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463}} 
+\index{BBP::std::ELF@{BBP::std::ELF}!SHN\_NDX@{SHN\_NDX}}
+\index{SHN\_NDX@{SHN\_NDX}!BBP::std::ELF@{BBP::std::ELF}}
+\doxysubsubsection{\texorpdfstring{SHN\_NDX}{SHN\_NDX}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463}{B\+B\+P\+::std\+::\+E\+L\+F\+::\+S\+H\+N\+\_\+\+N\+DX}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHN\_UNDEF@{SHN\_UNDEF}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHN\_UNDEF@{SHN\_UNDEF}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463abf1bf0b4d41df7008a2f7633e56ad2a8}\label{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463abf1bf0b4d41df7008a2f7633e56ad2a8}} 
+S\+H\+N\+\_\+\+U\+N\+D\+EF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHN\_BEFORE@{SHN\_BEFORE}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHN\_BEFORE@{SHN\_BEFORE}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463a66bf6d55d3d361d52dc98848d5f004e6}\label{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463a66bf6d55d3d361d52dc98848d5f004e6}} 
+S\+H\+N\+\_\+\+B\+E\+F\+O\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHN\_AFTER@{SHN\_AFTER}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHN\_AFTER@{SHN\_AFTER}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463a0a1c5445ce18fa091a7032e8a8d54c37}\label{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463a0a1c5445ce18fa091a7032e8a8d54c37}} 
+S\+H\+N\+\_\+\+A\+F\+T\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHN\_ABS@{SHN\_ABS}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHN\_ABS@{SHN\_ABS}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463a888ffd9cca82af284a5bcc8315f327ad}\label{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463a888ffd9cca82af284a5bcc8315f327ad}} 
+S\+H\+N\+\_\+\+A\+BS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHN\_COMMON@{SHN\_COMMON}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SHN\_COMMON@{SHN\_COMMON}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463a1e6dff362d8fb5a20b28878519426c8e}\label{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463a1e6dff362d8fb5a20b28878519426c8e}} 
+S\+H\+N\+\_\+\+C\+O\+M\+M\+ON&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 156 of file E\+L\+F32.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{156                          \{}
+\DoxyCodeLine{157                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463abf1bf0b4d41df7008a2f7633e56ad2a8}{SHN\_UNDEF}} = 0x00,}
+\DoxyCodeLine{158                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463a66bf6d55d3d361d52dc98848d5f004e6}{SHN\_BEFORE}} = 0xff00,}
+\DoxyCodeLine{159                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463a0a1c5445ce18fa091a7032e8a8d54c37}{SHN\_AFTER}} = 0xff01,}
+\DoxyCodeLine{160                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463a888ffd9cca82af284a5bcc8315f327ad}{SHN\_ABS}} = 0xfff1,}
+\DoxyCodeLine{161                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463a1e6dff362d8fb5a20b28878519426c8e}{SHN\_COMMON}} = 0xfff2}
+\DoxyCodeLine{162             \} \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_a5f13f53e79754f9d1accab2c6c795463}{SHN\_NDX}};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9}\label{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9}} 
+\index{BBP::std::ELF@{BBP::std::ELF}!SYM\_TYPE@{SYM\_TYPE}}
+\index{SYM\_TYPE@{SYM\_TYPE}!BBP::std::ELF@{BBP::std::ELF}}
+\doxysubsubsection{\texorpdfstring{SYM\_TYPE}{SYM\_TYPE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9}{B\+B\+P\+::std\+::\+E\+L\+F\+::\+S\+Y\+M\+\_\+\+T\+Y\+PE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SYM\_LOCAL@{SYM\_LOCAL}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SYM\_LOCAL@{SYM\_LOCAL}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a0206bed0377b02ecd352e201fc556542}\label{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a0206bed0377b02ecd352e201fc556542}} 
+S\+Y\+M\+\_\+\+L\+O\+C\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SYM\_GLOBAL@{SYM\_GLOBAL}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SYM\_GLOBAL@{SYM\_GLOBAL}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9ae80182d891cfff817fbbfaa9429d7cc6}\label{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9ae80182d891cfff817fbbfaa9429d7cc6}} 
+S\+Y\+M\+\_\+\+G\+L\+O\+B\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SYM\_WEAK@{SYM\_WEAK}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SYM\_WEAK@{SYM\_WEAK}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a6cb1482dd995cbbb447d3c0fd75a43f3}\label{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a6cb1482dd995cbbb447d3c0fd75a43f3}} 
+S\+Y\+M\+\_\+\+W\+E\+AK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SYM\_NONE@{SYM\_NONE}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SYM\_NONE@{SYM\_NONE}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a08e95de720941ffb6d7c654ef6fb64ab}\label{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a08e95de720941ffb6d7c654ef6fb64ab}} 
+S\+Y\+M\+\_\+\+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SYM\_OBJECT@{SYM\_OBJECT}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SYM\_OBJECT@{SYM\_OBJECT}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a7aa12a5382218596ed2deea05f44fb8a}\label{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a7aa12a5382218596ed2deea05f44fb8a}} 
+S\+Y\+M\+\_\+\+O\+B\+J\+E\+CT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SYM\_FUNC@{SYM\_FUNC}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SYM\_FUNC@{SYM\_FUNC}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a84b9022b3bf9c4cdce3a63a49a2b2d89}\label{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a84b9022b3bf9c4cdce3a63a49a2b2d89}} 
+S\+Y\+M\+\_\+\+F\+U\+NC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SYM\_SECTION@{SYM\_SECTION}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SYM\_SECTION@{SYM\_SECTION}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9aa3e54cd689d44f6748a77a9e73c1e5ae}\label{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9aa3e54cd689d44f6748a77a9e73c1e5ae}} 
+S\+Y\+M\+\_\+\+S\+E\+C\+T\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SYM\_FILE@{SYM\_FILE}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SYM\_FILE@{SYM\_FILE}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a279b2c74a119180e34db1d5bbc95efd1}\label{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a279b2c74a119180e34db1d5bbc95efd1}} 
+S\+Y\+M\+\_\+\+F\+I\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SYM\_COMMON@{SYM\_COMMON}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SYM\_COMMON@{SYM\_COMMON}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9ae0a97fc59c3da895e65c9d706afc14c3}\label{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9ae0a97fc59c3da895e65c9d706afc14c3}} 
+S\+Y\+M\+\_\+\+C\+O\+M\+M\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SYM\_TLS@{SYM\_TLS}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SYM\_TLS@{SYM\_TLS}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a2187c7afebdf48ee1c0441f97cc7e342}\label{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a2187c7afebdf48ee1c0441f97cc7e342}} 
+S\+Y\+M\+\_\+\+T\+LS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SYM\_RELC@{SYM\_RELC}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SYM\_RELC@{SYM\_RELC}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a8e7979acd0e90c3ea0759ea4c24f1e2c}\label{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a8e7979acd0e90c3ea0759ea4c24f1e2c}} 
+S\+Y\+M\+\_\+\+R\+E\+LC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SYM\_SRELC@{SYM\_SRELC}!BBP::std::ELF@{BBP::std::ELF}}\index{BBP::std::ELF@{BBP::std::ELF}!SYM\_SRELC@{SYM\_SRELC}}}\mbox{\Hypertarget{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a64c472d56598b9804ef64db8986519ed}\label{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a64c472d56598b9804ef64db8986519ed}} 
+S\+Y\+M\+\_\+\+S\+R\+E\+LC&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 141 of file E\+L\+F32.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{141                          \{}
+\DoxyCodeLine{142                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a0206bed0377b02ecd352e201fc556542}{SYM\_LOCAL}} = 0x00,}
+\DoxyCodeLine{143                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9ae80182d891cfff817fbbfaa9429d7cc6}{SYM\_GLOBAL}} = 0x10,}
+\DoxyCodeLine{144                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a6cb1482dd995cbbb447d3c0fd75a43f3}{SYM\_WEAK}} = 0x20,}
+\DoxyCodeLine{145                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a08e95de720941ffb6d7c654ef6fb64ab}{SYM\_NONE}} = 0x00,}
+\DoxyCodeLine{146                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a7aa12a5382218596ed2deea05f44fb8a}{SYM\_OBJECT}} = 0x01,}
+\DoxyCodeLine{147                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a84b9022b3bf9c4cdce3a63a49a2b2d89}{SYM\_FUNC}} = 0x02,}
+\DoxyCodeLine{148                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9aa3e54cd689d44f6748a77a9e73c1e5ae}{SYM\_SECTION}} = 0x03,}
+\DoxyCodeLine{149                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a279b2c74a119180e34db1d5bbc95efd1}{SYM\_FILE}} = 0x04,}
+\DoxyCodeLine{150                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9ae0a97fc59c3da895e65c9d706afc14c3}{SYM\_COMMON}} = 0x05,}
+\DoxyCodeLine{151                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a2187c7afebdf48ee1c0441f97cc7e342}{SYM\_TLS}} = 0x06,}
+\DoxyCodeLine{152                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a8e7979acd0e90c3ea0759ea4c24f1e2c}{SYM\_RELC}} = 0x08,}
+\DoxyCodeLine{153                 \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9a64c472d56598b9804ef64db8986519ed}{SYM\_SRELC}} = 0x09,}
+\DoxyCodeLine{154             \} \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_acf9d76b83af2bdb55c207716fb6e81d9}{SYM\_TYPE}};}
+
+\end{DoxyCode}

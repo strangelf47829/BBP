@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="df/dce/stdio_8cpp" kind="file" language="C++">
+    <compoundname>stdio.cpp</compoundname>
+    <includes refid="d6/dd1/stdio_8h" local="yes">../include/stdio.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>Memory.h</label>
+        <link refid="de/d5c/Memory_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Strings.h</label>
+        <link refid="de/d53/Strings_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Resources.h</label>
+        <link refid="d0/d33/Resources_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Stack.hxx</label>
+        <link refid="db/d61/Stack_8hxx"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Memory.hxx</label>
+        <link refid="d5/d4e/Memory_8hxx"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>stdio.cpp</label>
+        <link refid="df/dce/stdio_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../include/stdio.h</label>
+        <link refid="d6/dd1/stdio_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>errno.h</label>
+        <link refid="d8/dc2/errno_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Signal.h</label>
+        <link refid="d0/def/Signal_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Except.h</label>
+        <link refid="dc/d88/Except_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+        <link refid="df/dd8/stdint_8h"/>
+      </node>
+      <node id="5">
+        <label>stddef.h</label>
+        <link refid="d3/dce/stddef_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Stack.h</label>
+        <link refid="dc/db6/Stack_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;../include/stdio.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="dd/d98/namespaceBBP_1_1std_1a9e0d7cc02c44463c82fcd2b8e2ccf1aa" refkind="member"><highlight class="normal"><ref refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE" kindref="compound">BBP::std::static_string&lt;509&gt;</ref><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a9e0d7cc02c44463c82fcd2b8e2ccf1aa" kindref="member">BBP::std::str_STDOUT</ref>;</highlight></codeline>
+<codeline lineno="4" refid="dd/d98/namespaceBBP_1_1std_1a85082c20ffced7bafac1648919a3385b" refkind="member"><highlight class="normal"><ref refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE" kindref="compound">BBP::std::static_string&lt;509&gt;</ref><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a85082c20ffced7bafac1648919a3385b" kindref="member">BBP::std::str_STDIN</ref>;</highlight></codeline>
+<codeline lineno="5" refid="dd/d98/namespaceBBP_1_1std_1a5345b90da3f78568ee1424b753f3f8b1" refkind="member"><highlight class="normal"><ref refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE" kindref="compound">BBP::std::static_string&lt;509&gt;</ref><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a5345b90da3f78568ee1424b753f3f8b1" kindref="member">BBP::std::str_STDERR</ref>;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">BBP::std::Stack&lt;BBP::std::string_element&gt;</ref><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a66376ec3b30a50cc25df09f23fdd6733" kindref="member">BBP::std::STDOUT</ref>(&amp;<ref refid="dd/d98/namespaceBBP_1_1std_1a9e0d7cc02c44463c82fcd2b8e2ccf1aa" kindref="member">BBP::std::str_STDOUT</ref>);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">BBP::std::Stack&lt;BBP::std::string_element&gt;</ref><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a0e604b25e277316ba6a6d604812bbee3" kindref="member">BBP::std::STDIN</ref>(&amp;<ref refid="dd/d98/namespaceBBP_1_1std_1a85082c20ffced7bafac1648919a3385b" kindref="member">BBP::std::str_STDIN</ref>);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">BBP::std::Stack&lt;BBP::std::string_element&gt;</ref><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a4eb11df4d80a8a9c26ee099360e6597e" kindref="member">BBP::std::STDERR</ref>(&amp;<ref refid="dd/d98/namespaceBBP_1_1std_1a5345b90da3f78568ee1424b753f3f8b1" kindref="member">BBP::std::str_STDERR</ref>);</highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/stdlib/stdio.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,49 @@
+.TH "ELFHeader.cpp" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ELFHeader.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '\&.\&./include/ELF\&.h'\fP
+.br
+\fC#include '\&.\&./include/StressRelief\&.h'\fP
+.br
+\fC#include '\&.\&./include/stdio\&.h'\fP
+.br
+\fC#include '\&.\&./include/Strings\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGETTER\fP(var)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGETTER\fP (hashtab)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define GETTER(var)"
+\fBValue:\fP
+.PP
+.nf
+BBP::std::ELF::SectionBuilder &BBP::std::ELF::ELFBuilder::_##var () \
+{ return sections[ var ]; }
+.fi
+.PP
+Definition at line 268 of file ELFHeader\&.cpp\&.
+.SH "Function Documentation"
+.PP 
+.SS "GETTER (hashtab)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

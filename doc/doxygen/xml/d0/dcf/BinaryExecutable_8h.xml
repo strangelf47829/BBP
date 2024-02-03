@@ -1,0 +1,331 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d0/dcf/BinaryExecutable_8h" kind="file" language="C++">
+    <compoundname>BinaryExecutable.h</compoundname>
+    <includes refid="db/de5/ELF_8h" local="yes">ELF.h</includes>
+    <includedby refid="dd/d0e/Threading_8h" local="yes">Threading.h</includedby>
+    <includedby refid="de/d02/BinaryExecutables_8cpp" local="yes">BinaryExecutables.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>Memory.h</label>
+        <link refid="de/d5c/Memory_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Strings.h</label>
+        <link refid="de/d53/Strings_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Resources.h</label>
+        <link refid="d0/d33/Resources_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>ELF32.h</label>
+        <link refid="d1/d5d/ELF32_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Stack.hxx</label>
+        <link refid="db/d61/Stack_8hxx"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Memory.hxx</label>
+        <link refid="d5/d4e/Memory_8hxx"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>errno.h</label>
+        <link refid="d8/dc2/errno_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Signal.h</label>
+        <link refid="d0/def/Signal_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Except.h</label>
+        <link refid="dc/d88/Except_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+        <link refid="df/dd8/stdint_8h"/>
+      </node>
+      <node id="4">
+        <label>stddef.h</label>
+        <link refid="d3/dce/stddef_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>BinaryExecutable.h</label>
+        <link refid="d0/dcf/BinaryExecutable_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ELF.h</label>
+        <link refid="db/de5/ELF_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Stack.h</label>
+        <link refid="dc/db6/Stack_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>Smile.cpp</label>
+        <link refid="de/dd1/Smile_8cpp"/>
+      </node>
+      <node id="2">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Registers.cpp</label>
+        <link refid="d9/de4/Registers_8cpp"/>
+      </node>
+      <node id="13">
+        <label>InstructionCycle.cpp</label>
+        <link refid="d5/d95/InstructionCycle_8cpp"/>
+      </node>
+      <node id="5">
+        <label>RAE.h</label>
+        <link refid="db/d6a/RAE_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>StateMachine.cpp</label>
+        <link refid="d6/d82/StateMachine_8cpp"/>
+      </node>
+      <node id="8">
+        <label>lvalue.cpp</label>
+        <link refid="d4/d56/lvalue_8cpp"/>
+      </node>
+      <node id="4">
+        <label>Hyperv.h</label>
+        <link refid="d0/dde/Hyperv_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>ThreadState.cpp</label>
+        <link refid="d8/df1/ThreadState_8cpp"/>
+      </node>
+      <node id="6">
+        <label>StateMachine.h</label>
+        <link refid="da/d78/StateMachine_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>rvalue.cpp</label>
+        <link refid="d1/d5d/rvalue_8cpp"/>
+      </node>
+      <node id="1">
+        <label>BinaryExecutable.h</label>
+        <link refid="d0/dcf/BinaryExecutable_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>BinaryExecutables.cpp</label>
+        <link refid="de/d02/BinaryExecutables_8cpp"/>
+      </node>
+      <node id="7">
+        <label>ValueCategories.h</label>
+        <link refid="d8/da7/ValueCategories_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>xvalue.cpp</label>
+        <link refid="d6/db1/xvalue_8cpp"/>
+      </node>
+      <node id="10">
+        <label>StateMachineOpcodes.cpp</label>
+        <link refid="df/d1c/StateMachineOpcodes_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d3/de6/structBBP_1_1userspace_1_1MemoryRegion" prot="public">BBP::userspace::MemoryRegion</innerclass>
+    <innerclass refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable" prot="public">BBP::userspace::BinaryExecutable</innerclass>
+    <innernamespace refid="d9/d6f/namespaceBBP">BBP</innernamespace>
+    <innernamespace refid="de/dfe/namespaceBBP_1_1userspace">BBP::userspace</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>BBP_LIB_BINARYEXEC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BBP_LIB_BINARYEXEC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>header<sp/>defines<sp/>what<sp/>RAE<sp/>actually<sp/>loads<sp/>into<sp/>memory.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="db/de5/ELF_8h" kindref="compound">ELF.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="d9/d6f/namespaceBBP" kindref="compound">BBP</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10" refid="de/dfe/namespaceBBP_1_1userspace" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">userspace</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Tracks<sp/>what<sp/>memory<sp/>goes<sp/>where</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="d3/de6/structBBP_1_1userspace_1_1MemoryRegion" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d3/de6/structBBP_1_1userspace_1_1MemoryRegion" kindref="compound">MemoryRegion</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Read-write-execute<sp/>permissions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="d3/de6/structBBP_1_1userspace_1_1MemoryRegion_1a1ee1c292ca156461c8bc0a4be45ec786" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d3/de6/structBBP_1_1userspace_1_1MemoryRegion_1a1ee1c292ca156461c8bc0a4be45ec786" kindref="member">readable</ref>;</highlight></codeline>
+<codeline lineno="18" refid="d3/de6/structBBP_1_1userspace_1_1MemoryRegion_1a57aa9ba63a905c8ec50140a7e8e53a3c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d3/de6/structBBP_1_1userspace_1_1MemoryRegion_1a57aa9ba63a905c8ec50140a7e8e53a3c" kindref="member">writeable</ref>;</highlight></codeline>
+<codeline lineno="19" refid="d3/de6/structBBP_1_1userspace_1_1MemoryRegion_1a094ea6b883fb035cf146cd70ade8d266" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d3/de6/structBBP_1_1userspace_1_1MemoryRegion_1a094ea6b883fb035cf146cd70ade8d266" kindref="member">executable</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Virtual<sp/>and<sp/>physical<sp/>memory<sp/>pointer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="d3/de6/structBBP_1_1userspace_1_1MemoryRegion_1a22ea78d37a3c80aff2287d906e521683" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref><sp/><ref refid="d3/de6/structBBP_1_1userspace_1_1MemoryRegion_1a22ea78d37a3c80aff2287d906e521683" kindref="member">virtualMemoryHead</ref>;</highlight></codeline>
+<codeline lineno="23" refid="d3/de6/structBBP_1_1userspace_1_1MemoryRegion_1a15ba90eca12883687eed37870390216f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref><sp/><ref refid="d3/de6/structBBP_1_1userspace_1_1MemoryRegion_1a15ba90eca12883687eed37870390216f" kindref="member">physicalMemoryHead</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Size<sp/>of<sp/>this<sp/>block</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="d3/de6/structBBP_1_1userspace_1_1MemoryRegion_1adf902ce564c9b7720cc500805b0c5cd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref><sp/><ref refid="d3/de6/structBBP_1_1userspace_1_1MemoryRegion_1adf902ce564c9b7720cc500805b0c5cd9" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>allocated</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="d3/de6/structBBP_1_1userspace_1_1MemoryRegion_1ad47f76e2302f1133c7d3380d2e319ca2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d3/de6/structBBP_1_1userspace_1_1MemoryRegion_1ad47f76e2302f1133c7d3380d2e319ca2" kindref="member">allocated</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>generic<sp/>executable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable" kindref="compound">BinaryExecutable</ref></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Functions<sp/>to<sp/>get<sp/>index<sp/>of<sp/>virtual<sp/>page</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref><sp/><ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1aa7c08493ef5b210b84ff067a5b6aeae2" kindref="member">findIndexOfVirtualMemory</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref><sp/><ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1aec6ae6967b1f32362e7d4cc563cfab67" kindref="member">findIndexOfPhysicalMemory</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Where<sp/>this<sp/>binary<sp/>was<sp/>allocated</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a7aea680298a0a52637bb8d96bd56e50d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager" kindref="compound">std::ResourceManager</ref><sp/>*<ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a7aea680298a0a52637bb8d96bd56e50d" kindref="member">allocator</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Is<sp/>anything<sp/>even<sp/>allocated?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ae215ff73f42ca9f57046c5d3ef5a8476" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ae215ff73f42ca9f57046c5d3ef5a8476" kindref="member">allocated</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>copy<sp/>of<sp/>the<sp/>TLS<sp/>Data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ae4efaa5ede25b5ff9ada504ca5f87f6f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::PAGE&lt;std::string_element&gt;</ref><sp/><ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ae4efaa5ede25b5ff9ada504ca5f87f6f" kindref="member">TLSData</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>binary<sp/>file<sp/>as<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ab75ab6cf2c312ecb34fe62562936ce67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::PAGE&lt;std::string_element&gt;</ref><sp/><ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1ab75ab6cf2c312ecb34fe62562936ce67" kindref="member">BinaryData</ref>;</highlight></codeline>
+<codeline lineno="53" refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a069910ce9f3d2bdf7580e55eec85c62f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref><sp/><ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a069910ce9f3d2bdf7580e55eec85c62f" kindref="member">totalSize</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Memory<sp/>mappings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a4e9ead370dc435afc1dabb9a0e800dd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE" kindref="compound">std::STATIC_PAGE&lt;MemoryRegion, 8&gt;</ref><sp/><ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a4e9ead370dc435afc1dabb9a0e800dd9" kindref="member">mapping</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Load<sp/>an<sp/>executable<sp/>into<sp/>memory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a2eea354e4d1578fe320884a693aaaea6" kindref="member">loadExecutable</ref>(<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder" kindref="compound">std::ELF::ELFBuilder</ref><sp/>&amp;data,<sp/><ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager" kindref="compound">std::ResourceManager</ref><sp/>*<ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a7aea680298a0a52637bb8d96bd56e50d" kindref="member">allocator</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Unload<sp/>an<sp/>executable<sp/>from<sp/>memory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a9d5e6d71b96e1ace8d45c87dedeab11f" kindref="member">unloadExecutable</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>a<sp/>mapping<sp/>from<sp/>virtual<sp/>to<sp/>physical<sp/>memory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref><sp/><ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a96eb4539fc4f247710a8c1effabea87e" kindref="member">virtualToPhysical</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref><sp/><ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1af46ca1c3ec18196e50f62e7bda446b6b" kindref="member">physicalToVirtual</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Also<sp/>retrieve<sp/>mapping<sp/>but<sp/>do<sp/>so<sp/>with<sp/>a<sp/>cached<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref><sp/><ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a96eb4539fc4f247710a8c1effabea87e" kindref="member">virtualToPhysical</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref><sp/><ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1af46ca1c3ec18196e50f62e7bda446b6b" kindref="member">physicalToVirtual</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>function<sp/>to<sp/>copy<sp/>over<sp/>TLS<sp/>Data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1af9382501257bd31fb11126a44007d18c" kindref="member">createTLS</ref>(<ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::PAGE&lt;std::string_element&gt;</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a28be13bcd4204fcd3f95601b6c82a51b" kindref="member">loadTLS</ref>(<ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::PAGE&lt;std::string_element&gt;</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a8e2d0b0de64b559b165176370cb37ec0" kindref="member">unloadTLS</ref>(<ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::PAGE&lt;std::string_element&gt;</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/BinaryExecutable.h"/>
+  </compounddef>
+</doxygen>

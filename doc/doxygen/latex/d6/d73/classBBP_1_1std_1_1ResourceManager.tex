@@ -1,0 +1,892 @@
+\hypertarget{classBBP_1_1std_1_1ResourceManager}{}\doxysection{B\+BP\+::std\+::Resource\+Manager Class Reference}
+\label{classBBP_1_1std_1_1ResourceManager}\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+
+
+{\ttfamily \#include $<$Resources.\+h$>$}
+
+
+
+Collaboration diagram for B\+BP\+::std\+::Resource\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d49/classBBP_1_1std_1_1ResourceManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_ad11f669509528a8f69a9175349dc1a2a}{Resource\+Manager}} ()
+\item 
+void $\ast$ \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_ace0746163707cba96792b1ddce1f66e4}{malloc}} (\mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std\+::size\+\_\+t}})
+\item 
+void $\ast$ \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a2feb265bae9a30994a2a4a4f69306329}{calloc}} (\mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std\+::size\+\_\+t}}, \mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std\+::size\+\_\+t}})
+\item 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_aea4091636b0010fa96b46859b119c515}{add\+\_\+object}} (T $\ast$ptr)
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a95a95eb4df0b375dfabfeb5acb58122e}{add\+\_\+alloc}} (void $\ast$)
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a88b2740fa8c5b5e30e6ef08cb8c7d883}{free}} (void $\ast$)
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_ae748d6a1bf87b426245d9c1880a309fa}{mark\+\_\+deleted}} (void $\ast$)
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_aabf2f3fcf4ce22bfeefe3a1496f79c89}{\+\_\+delete}} (void $\ast$)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a9e71b44bf2fa37404996f41b7755bec3}{free\+All}} ()
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a8e0f86cd9da420b4a60eebda495b8309}{delete\+All}} ()
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a1fe4dd3e15724a9b5e2a41ef90075de6}{dealloc}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std\+::size\+\_\+t}} \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_ab00af56608c3ecef9a74ea06122fcf29}{total\+Allocations}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a07be9ae976de3e085f19c938169868d5}{free}} (void $\ast$, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}})
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a468bd26ad9f697a6859f005106152d47}{\+\_\+delete}} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}})
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a71c2205dc92556a9f91266343541168f}{find\+\_\+next\+\_\+empty\+\_\+alloc}} ()
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_ad45816fb0c5611cec2669e670d12106f}{find\+\_\+next\+\_\+empty\+\_\+object}} ()
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a23f4cc602d945b35b1f83e40f354360c}{find\+\_\+\+Alloc\+\_\+pointer}} (void $\ast$)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a4e7d173638f7fb726d4fcdc6294deb81}{find\+\_\+\+Object\+\_\+pointer}} (void $\ast$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a58db25b274e35de1aa8c3f446a7b140a}{invalid\+Allocation\+Index}}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a50226c0a5243a5cc2eb0573f1a1f172e}{next\+Allocation\+Available}}
+\item 
+\mbox{\hyperlink{structBBP_1_1std_1_1STATIC__PAGE}{std\+::\+S\+T\+A\+T\+I\+C\+\_\+\+P\+A\+GE}}$<$ void $\ast$, \mbox{\hyperlink{namespaceBBP_1_1std_a2e983fdaa4146f8a89ad06d0331adb1d}{max\+\_\+allocations}} $>$ \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a8a556d017821d40894d9440c6f171b0e}{allocations}}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_ae7e858273d1d1d86fed9d0575c1072c3}{invalid\+Object\+Index}}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a650d05eb6f6ce478e10edf0afe0fa63d}{next\+Object\+Available}}
+\item 
+\mbox{\hyperlink{structBBP_1_1std_1_1STATIC__PAGE}{std\+::\+S\+T\+A\+T\+I\+C\+\_\+\+P\+A\+GE}}$<$ \mbox{\hyperlink{structBBP_1_1std_1_1AbstractGCEntry}{Abstract\+G\+C\+Entry}} $\ast$, \mbox{\hyperlink{namespaceBBP_1_1std_a27ef098687cf6e4ef3ea65b650b1ef61}{max\+\_\+objects}} $>$ \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}{objects}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 50 of file Resources.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_ad11f669509528a8f69a9175349dc1a2a}\label{classBBP_1_1std_1_1ResourceManager_ad11f669509528a8f69a9175349dc1a2a}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!ResourceManager@{ResourceManager}}
+\index{ResourceManager@{ResourceManager}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{ResourceManager()}{ResourceManager()}}
+{\footnotesize\ttfamily B\+B\+P\+::std\+::\+Resource\+Manager\+::\+Resource\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 329 of file Resources.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{330 \{}
+\DoxyCodeLine{331     \textcolor{comment}{// I should really remove that pesky lvalue restriction..... Oh well, idc}}
+\DoxyCodeLine{332     \textcolor{keywordtype}{void} *nul = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{333     AbstractGCEntry *nul2 = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{334 }
+\DoxyCodeLine{335     \textcolor{comment}{// Zero initialize allocations}}
+\DoxyCodeLine{336     \textcolor{keywordflow}{for} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} t = 0; t < \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a8a556d017821d40894d9440c6f171b0e}{allocations}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a3b5c962d781f42d8dc36949061c308ab}{dataSize}}; t++)}
+\DoxyCodeLine{337         \mbox{\hyperlink{namespaceBBP_1_1std_aa63573041786d49b7cdb2eec8a921a6a}{write}}(\&\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a8a556d017821d40894d9440c6f171b0e}{allocations}}, nul, t);}
+\DoxyCodeLine{338 }
+\DoxyCodeLine{339     \textcolor{comment}{// Zero initialize objects}}
+\DoxyCodeLine{340     \textcolor{keywordflow}{for} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} t = 0; t < \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}{objects}}.dataSize; t++)}
+\DoxyCodeLine{341         \mbox{\hyperlink{namespaceBBP_1_1std_aa63573041786d49b7cdb2eec8a921a6a}{write}}(\&\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}{objects}}, nul2, t);}
+\DoxyCodeLine{342 }
+\DoxyCodeLine{343     \textcolor{comment}{// Set invalid indicies}}
+\DoxyCodeLine{344     this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a58db25b274e35de1aa8c3f446a7b140a}{invalidAllocationIndex}} = \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a8a556d017821d40894d9440c6f171b0e}{allocations}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a3b5c962d781f42d8dc36949061c308ab}{dataSize}};}
+\DoxyCodeLine{345     this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_ae7e858273d1d1d86fed9d0575c1072c3}{invalidObjectIndex}} = \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}{objects}}.dataSize;}
+\DoxyCodeLine{346 }
+\DoxyCodeLine{347     \textcolor{comment}{// Zero-\/init next available things}}
+\DoxyCodeLine{348     this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a50226c0a5243a5cc2eb0573f1a1f172e}{nextAllocationAvailable}} = 0;}
+\DoxyCodeLine{349     this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a650d05eb6f6ce478e10edf0afe0fa63d}{nextObjectAvailable}} = 0;}
+\DoxyCodeLine{350 }
+\DoxyCodeLine{351 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d73/classBBP_1_1std_1_1ResourceManager_ad11f669509528a8f69a9175349dc1a2a_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_a468bd26ad9f697a6859f005106152d47}\label{classBBP_1_1std_1_1ResourceManager_a468bd26ad9f697a6859f005106152d47}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!\_delete@{\_delete}}
+\index{\_delete@{\_delete}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{\_delete()}{\_delete()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Resource\+Manager\+::\+\_\+delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}}}]{ptr\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 125 of file Resources.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{126 \{}
+\DoxyCodeLine{127     \textcolor{comment}{// If index invalid, throw sigsegv signal}}
+\DoxyCodeLine{128     \textcolor{keywordflow}{if} (ptrIndex == this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_ae7e858273d1d1d86fed9d0575c1072c3}{invalidObjectIndex}})}
+\DoxyCodeLine{129     \{}
+\DoxyCodeLine{130         \mbox{\hyperlink{Signal_8h_a82e69d819748cab5933309bba1999f7c}{\_\_SIGNAL\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_a8b214d5bdfe950ea0efc262c569ff9ef}{SIGSEGV}});}
+\DoxyCodeLine{131     \}}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133     \textcolor{comment}{// Pointer exists, so delete it.}}
+\DoxyCodeLine{134     this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}{objects}}.data[ptrIndex]-\/>\_delete();}
+\DoxyCodeLine{135     \textcolor{keyword}{delete}(this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}{objects}}.data[ptrIndex]);}
+\DoxyCodeLine{136     this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}{objects}}.data[ptrIndex] = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{137 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_aabf2f3fcf4ce22bfeefe3a1496f79c89}\label{classBBP_1_1std_1_1ResourceManager_aabf2f3fcf4ce22bfeefe3a1496f79c89}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!\_delete@{\_delete}}
+\index{\_delete@{\_delete}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{\_delete()}{\_delete()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Resource\+Manager\+::\+\_\+delete (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Definition at line 108 of file Resources.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{109 \{}
+\DoxyCodeLine{110     \textcolor{comment}{// Check if pointer is not actually nullptr}}
+\DoxyCodeLine{111     \textcolor{keywordflow}{if} (ptr == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{112     \{}
+\DoxyCodeLine{113         \textcolor{comment}{// Attempting to free nullptr: Do nothing but output something to stderr}}
+\DoxyCodeLine{114         \mbox{\hyperlink{namespaceBBP_1_1std_a4eb11df4d80a8a9c26ee099360e6597e}{std::STDERR}} << \textcolor{stringliteral}{"Attempt to delete nullptr was made."} <<= \mbox{\hyperlink{namespaceBBP_1_1std_a92a50044907ba5f40a39efe0bce958d6}{std::endl}};}
+\DoxyCodeLine{115         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{116     \}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118     \textcolor{comment}{// Attempt to find index of pointer}}
+\DoxyCodeLine{119     \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} ptrIndex = \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a4e7d173638f7fb726d4fcdc6294deb81}{find\_Object\_pointer}}(ptr);}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121     \textcolor{comment}{// Call to internal \_delete function}}
+\DoxyCodeLine{122     this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_aabf2f3fcf4ce22bfeefe3a1496f79c89}{\_delete}}(ptrIndex);}
+\DoxyCodeLine{123 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d73/classBBP_1_1std_1_1ResourceManager_aabf2f3fcf4ce22bfeefe3a1496f79c89_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_a95a95eb4df0b375dfabfeb5acb58122e}\label{classBBP_1_1std_1_1ResourceManager_a95a95eb4df0b375dfabfeb5acb58122e}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!add\_alloc@{add\_alloc}}
+\index{add\_alloc@{add\_alloc}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{add\_alloc()}{add\_alloc()}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Resource\+Manager\+::add\+\_\+alloc (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Definition at line 44 of file Resources.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45 \{}
+\DoxyCodeLine{46     \textcolor{comment}{// See if allocation is possible}}
+\DoxyCodeLine{47     \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a50226c0a5243a5cc2eb0573f1a1f172e}{nextAllocationAvailable}} == this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a58db25b274e35de1aa8c3f446a7b140a}{invalidAllocationIndex}})}
+\DoxyCodeLine{48         \textcolor{keywordflow}{throw} \mbox{\hyperlink{namespaceBBP_1_1std_a750ba4c285e0788e84722a30a776b913}{std::exception}}(\textcolor{stringliteral}{"Could not register alloc'd data to Resource manager: Out of allocation space."}, \mbox{\hyperlink{errno_8h_a6a05c923dad0c1208043e9c20a58c8e5}{ENOMEM}});}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{comment}{// Store that write into next possible alloc}}
+\DoxyCodeLine{51     \mbox{\hyperlink{namespaceBBP_1_1std_aa63573041786d49b7cdb2eec8a921a6a}{std::write}}(\&this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a8a556d017821d40894d9440c6f171b0e}{allocations}}, ptr, this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a50226c0a5243a5cc2eb0573f1a1f172e}{nextAllocationAvailable}});}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     \textcolor{comment}{// Find next possible location}}
+\DoxyCodeLine{54     this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a50226c0a5243a5cc2eb0573f1a1f172e}{nextAllocationAvailable}} = \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a71c2205dc92556a9f91266343541168f}{find\_next\_empty\_alloc}}();}
+\DoxyCodeLine{55 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d73/classBBP_1_1std_1_1ResourceManager_a95a95eb4df0b375dfabfeb5acb58122e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d73/classBBP_1_1std_1_1ResourceManager_a95a95eb4df0b375dfabfeb5acb58122e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_aea4091636b0010fa96b46859b119c515}\label{classBBP_1_1std_1_1ResourceManager_aea4091636b0010fa96b46859b119c515}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!add\_object@{add\_object}}
+\index{add\_object@{add\_object}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{add\_object()}{add\_object()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ B\+B\+P\+::std\+::\+Resource\+Manager\+::add\+\_\+object (\begin{DoxyParamCaption}\item[{T $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 62 of file Resources.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63             \{}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65                 \textcolor{comment}{// See if allocation is possible}}
+\DoxyCodeLine{66                 \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a650d05eb6f6ce478e10edf0afe0fa63d}{nextObjectAvailable}} == this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_ae7e858273d1d1d86fed9d0575c1072c3}{invalidObjectIndex}})}
+\DoxyCodeLine{67                     \textcolor{keywordflow}{throw} \mbox{\hyperlink{namespaceBBP_1_1std_a750ba4c285e0788e84722a30a776b913}{std::exception}}(\textcolor{stringliteral}{"Could not register new'd data to Resource manager: Out of allocation space."}, \mbox{\hyperlink{errno_8h_a6a05c923dad0c1208043e9c20a58c8e5}{ENOMEM}});}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69                 \textcolor{comment}{// Store that write into next possible object}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71                 GCEntry<T> *entry = \textcolor{keyword}{new} GCEntry<T>();}
+\DoxyCodeLine{72                 entry-\/>ptr = ptr;}
+\DoxyCodeLine{73                 this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}{objects}}.data[this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a650d05eb6f6ce478e10edf0afe0fa63d}{nextObjectAvailable}}] = entry;}
+\DoxyCodeLine{74                 \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_ab00af56608c3ecef9a74ea06122fcf29}{totalAllocations}} += \textcolor{keyword}{sizeof}(T);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76                 \textcolor{comment}{// Find next possible location}}
+\DoxyCodeLine{77                 this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a650d05eb6f6ce478e10edf0afe0fa63d}{nextObjectAvailable}} = \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_ad45816fb0c5611cec2669e670d12106f}{find\_next\_empty\_object}}();}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79                 \textcolor{comment}{// Return ptr, in case it is needed for something}}
+\DoxyCodeLine{80                 \textcolor{keywordflow}{return} ptr;}
+\DoxyCodeLine{81             \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d73/classBBP_1_1std_1_1ResourceManager_aea4091636b0010fa96b46859b119c515_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d73/classBBP_1_1std_1_1ResourceManager_aea4091636b0010fa96b46859b119c515_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_a2feb265bae9a30994a2a4a4f69306329}\label{classBBP_1_1std_1_1ResourceManager_a2feb265bae9a30994a2a4a4f69306329}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!calloc@{calloc}}
+\index{calloc@{calloc}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{calloc()}{calloc()}}
+{\footnotesize\ttfamily void $\ast$ B\+B\+P\+::std\+::\+Resource\+Manager\+::calloc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std\+::size\+\_\+t}}}]{count,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std\+::size\+\_\+t}}}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 26 of file Resources.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{28     \textcolor{comment}{// See if allocation is possible}}
+\DoxyCodeLine{29     \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a50226c0a5243a5cc2eb0573f1a1f172e}{nextAllocationAvailable}} == this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a58db25b274e35de1aa8c3f446a7b140a}{invalidAllocationIndex}})}
+\DoxyCodeLine{30         \textcolor{keywordflow}{throw} \mbox{\hyperlink{namespaceBBP_1_1std_a750ba4c285e0788e84722a30a776b913}{std::exception}}(\textcolor{stringliteral}{"Could not allocate bytes to Resource manager: Out of allocation space."}, \mbox{\hyperlink{errno_8h_a6a05c923dad0c1208043e9c20a58c8e5}{ENOMEM}});}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \textcolor{comment}{// Actually calloc data}}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} *data = \mbox{\hyperlink{namespaceBBP_1_1std_ad23ea4bd936d0bd7f35a0aeef887e7bc}{std::ext\_calloc}}(count, size);}
+\DoxyCodeLine{34     this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_ab00af56608c3ecef9a74ea06122fcf29}{totalAllocations}} += size * count;}
+\DoxyCodeLine{35     \textcolor{comment}{//std::printf("(\%p) Application allocated \%u bytes during runtime. (calloc: \%u)\(\backslash\)n", this, totalAllocations, size * count);}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{comment}{// Add that data}}
+\DoxyCodeLine{38     \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a95a95eb4df0b375dfabfeb5acb58122e}{add\_alloc}}(data);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{comment}{// Return data}}
+\DoxyCodeLine{41     \textcolor{keywordflow}{return} data;}
+\DoxyCodeLine{42 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d73/classBBP_1_1std_1_1ResourceManager_a2feb265bae9a30994a2a4a4f69306329_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d73/classBBP_1_1std_1_1ResourceManager_a2feb265bae9a30994a2a4a4f69306329_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_a1fe4dd3e15724a9b5e2a41ef90075de6}\label{classBBP_1_1std_1_1ResourceManager_a1fe4dd3e15724a9b5e2a41ef90075de6}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!dealloc@{dealloc}}
+\index{dealloc@{dealloc}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{dealloc()}{dealloc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}} B\+B\+P\+::std\+::\+Resource\+Manager\+::dealloc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 321 of file Resources.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{322 \{}
+\DoxyCodeLine{323     \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} count = 0;}
+\DoxyCodeLine{324     count += this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a9e71b44bf2fa37404996f41b7755bec3}{freeAll}}();}
+\DoxyCodeLine{325     count += this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a8e0f86cd9da420b4a60eebda495b8309}{deleteAll}}();}
+\DoxyCodeLine{326     \textcolor{keywordflow}{return} count;}
+\DoxyCodeLine{327 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{d6/d73/classBBP_1_1std_1_1ResourceManager_a1fe4dd3e15724a9b5e2a41ef90075de6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_a8e0f86cd9da420b4a60eebda495b8309}\label{classBBP_1_1std_1_1ResourceManager_a8e0f86cd9da420b4a60eebda495b8309}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!deleteAll@{deleteAll}}
+\index{deleteAll@{deleteAll}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{deleteAll()}{deleteAll()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}} B\+B\+P\+::std\+::\+Resource\+Manager\+::delete\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 293 of file Resources.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{294 \{}
+\DoxyCodeLine{295     \textcolor{comment}{// Keep track of objects that were delete'd}}
+\DoxyCodeLine{296     \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} deleteCount = 0;}
+\DoxyCodeLine{297 }
+\DoxyCodeLine{298     \textcolor{comment}{// Loop over each pointer}}
+\DoxyCodeLine{299     \textcolor{keywordflow}{for} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} idx = 0; idx < \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}{objects}}.dataSize; idx++)}
+\DoxyCodeLine{300     \{}
+\DoxyCodeLine{301         \textcolor{comment}{// Check if pointer exists}}
+\DoxyCodeLine{302         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\_\_UNSAFE\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}})(\&\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}{objects}}, idx))}
+\DoxyCodeLine{303             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{304 }
+\DoxyCodeLine{305         \textcolor{comment}{// Read pointer}}
+\DoxyCodeLine{306         \textcolor{keywordtype}{void} *ptr = \mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\_\_UNSAFE\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}})(\&\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}{objects}}, idx)-\/>getRawPtr();}
+\DoxyCodeLine{307 }
+\DoxyCodeLine{308         \textcolor{comment}{// If ptr is nullptr, skip}}
+\DoxyCodeLine{309         \textcolor{keywordflow}{if} (ptr == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{310             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{311 }
+\DoxyCodeLine{312         \textcolor{comment}{// Since this pointer has something, delete it. Also, since we know the index, just pass it.}}
+\DoxyCodeLine{313         this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_aabf2f3fcf4ce22bfeefe3a1496f79c89}{\_delete}}(idx);}
+\DoxyCodeLine{314         deleteCount++;}
+\DoxyCodeLine{315     \}}
+\DoxyCodeLine{316 }
+\DoxyCodeLine{317     \textcolor{comment}{// Return the amount of things delete'd}}
+\DoxyCodeLine{318     \textcolor{keywordflow}{return} deleteCount;}
+\DoxyCodeLine{319 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d73/classBBP_1_1std_1_1ResourceManager_a8e0f86cd9da420b4a60eebda495b8309_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d73/classBBP_1_1std_1_1ResourceManager_a8e0f86cd9da420b4a60eebda495b8309_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_a23f4cc602d945b35b1f83e40f354360c}\label{classBBP_1_1std_1_1ResourceManager_a23f4cc602d945b35b1f83e40f354360c}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!find\_Alloc\_pointer@{find\_Alloc\_pointer}}
+\index{find\_Alloc\_pointer@{find\_Alloc\_pointer}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{find\_Alloc\_pointer()}{find\_Alloc\_pointer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}} B\+B\+P\+::std\+::\+Resource\+Manager\+::find\+\_\+\+Alloc\+\_\+pointer (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 231 of file Resources.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{232 \{}
+\DoxyCodeLine{233     \textcolor{comment}{// Loop over every pointer}}
+\DoxyCodeLine{234     \textcolor{keywordflow}{for} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} idx = 0; idx < \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a8a556d017821d40894d9440c6f171b0e}{allocations}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a3b5c962d781f42d8dc36949061c308ab}{dataSize}}; idx++)}
+\DoxyCodeLine{235     \{}
+\DoxyCodeLine{236         \textcolor{comment}{// Read value stored at 'idx'}}
+\DoxyCodeLine{237         \textcolor{keywordtype}{void} *stored = \mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\_\_UNSAFE\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}})(\&\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a8a556d017821d40894d9440c6f171b0e}{allocations}}, idx);}
+\DoxyCodeLine{238 }
+\DoxyCodeLine{239         \textcolor{comment}{// If 'stored' and 'ptr' are equal, return idx}}
+\DoxyCodeLine{240         \textcolor{keywordflow}{if} (stored == ptr)}
+\DoxyCodeLine{241             \textcolor{keywordflow}{return} idx;}
+\DoxyCodeLine{242     \}}
+\DoxyCodeLine{243 }
+\DoxyCodeLine{244     \textcolor{comment}{// Nothing found, return invalid pointer}}
+\DoxyCodeLine{245     \textcolor{keywordflow}{return} \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a58db25b274e35de1aa8c3f446a7b140a}{invalidAllocationIndex}};}
+\DoxyCodeLine{246 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d73/classBBP_1_1std_1_1ResourceManager_a23f4cc602d945b35b1f83e40f354360c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_a71c2205dc92556a9f91266343541168f}\label{classBBP_1_1std_1_1ResourceManager_a71c2205dc92556a9f91266343541168f}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!find\_next\_empty\_alloc@{find\_next\_empty\_alloc}}
+\index{find\_next\_empty\_alloc@{find\_next\_empty\_alloc}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{find\_next\_empty\_alloc()}{find\_next\_empty\_alloc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}} B\+B\+P\+::std\+::\+Resource\+Manager\+::find\+\_\+next\+\_\+empty\+\_\+alloc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 139 of file Resources.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{140 \{}
+\DoxyCodeLine{141     \textcolor{comment}{// Check if we are not already at free pointer}}
+\DoxyCodeLine{142     \textcolor{keywordtype}{void} *ptr = \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}}(\&this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a8a556d017821d40894d9440c6f171b0e}{allocations}}, this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a50226c0a5243a5cc2eb0573f1a1f172e}{nextAllocationAvailable}});}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144     \textcolor{comment}{// If we are at nullptr already, just return current location}}
+\DoxyCodeLine{145     \textcolor{keywordflow}{if} (ptr == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{146         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a50226c0a5243a5cc2eb0573f1a1f172e}{nextAllocationAvailable}};}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148     \textcolor{comment}{// Check +1, since chances are next pointer is free}}
+\DoxyCodeLine{149     \textcolor{comment}{// Careful not to cause overflow}}
+\DoxyCodeLine{150     \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a50226c0a5243a5cc2eb0573f1a1f172e}{nextAllocationAvailable}} + 1 < this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a8a556d017821d40894d9440c6f171b0e}{allocations}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a3b5c962d781f42d8dc36949061c308ab}{dataSize}})}
+\DoxyCodeLine{151     \{}
+\DoxyCodeLine{152         \textcolor{comment}{// Read pointer}}
+\DoxyCodeLine{153         ptr = \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}}(\&this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a8a556d017821d40894d9440c6f171b0e}{allocations}}, this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a50226c0a5243a5cc2eb0573f1a1f172e}{nextAllocationAvailable}} + 1);}
+\DoxyCodeLine{154         }
+\DoxyCodeLine{155         \textcolor{comment}{// If null, return.}}
+\DoxyCodeLine{156         \textcolor{keywordflow}{if} (ptr == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{157             \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a50226c0a5243a5cc2eb0573f1a1f172e}{nextAllocationAvailable}} + 1;}
+\DoxyCodeLine{158     \}}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160     \textcolor{comment}{// Here and Here + 1 are not free. Just search entire page.}}
+\DoxyCodeLine{161     \textcolor{keywordflow}{for} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} idx = 0; idx < this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a8a556d017821d40894d9440c6f171b0e}{allocations}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a3b5c962d781f42d8dc36949061c308ab}{dataSize}}; idx++)}
+\DoxyCodeLine{162     \{}
+\DoxyCodeLine{163         \textcolor{comment}{// Read one pointer}}
+\DoxyCodeLine{164         ptr = \mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\_\_UNSAFE\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}})(\&this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a8a556d017821d40894d9440c6f171b0e}{allocations}}, idx);}
+\DoxyCodeLine{165         }
+\DoxyCodeLine{166         \textcolor{comment}{// If pointer is not free, skip}}
+\DoxyCodeLine{167         \textcolor{keywordflow}{if} (ptr)}
+\DoxyCodeLine{168             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170         \textcolor{comment}{// Return idx}}
+\DoxyCodeLine{171         \textcolor{keywordflow}{return} idx; }
+\DoxyCodeLine{172     \}}
+\DoxyCodeLine{173 }
+\DoxyCodeLine{174     \textcolor{comment}{// Nothing found at all. Return invalid pointer}}
+\DoxyCodeLine{175     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a58db25b274e35de1aa8c3f446a7b140a}{invalidAllocationIndex}};}
+\DoxyCodeLine{176 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d73/classBBP_1_1std_1_1ResourceManager_a71c2205dc92556a9f91266343541168f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_ad45816fb0c5611cec2669e670d12106f}\label{classBBP_1_1std_1_1ResourceManager_ad45816fb0c5611cec2669e670d12106f}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!find\_next\_empty\_object@{find\_next\_empty\_object}}
+\index{find\_next\_empty\_object@{find\_next\_empty\_object}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{find\_next\_empty\_object()}{find\_next\_empty\_object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}} B\+B\+P\+::std\+::\+Resource\+Manager\+::find\+\_\+next\+\_\+empty\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 178 of file Resources.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{179 \{}
+\DoxyCodeLine{180     \textcolor{comment}{// Declare ptr}}
+\DoxyCodeLine{181     \textcolor{keywordtype}{void} *ptr = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183     \textcolor{comment}{// Check if pointer exists}}
+\DoxyCodeLine{184     \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}{objects}}.data[this-\/>nextObjectAvailable])}
+\DoxyCodeLine{185     \{}
+\DoxyCodeLine{186         \textcolor{comment}{// Check if we are not already at free pointer}}
+\DoxyCodeLine{187         ptr = \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}}(\&this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}{objects}}, this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a650d05eb6f6ce478e10edf0afe0fa63d}{nextObjectAvailable}})-\/>getRawPtr();}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189         \textcolor{comment}{// If we are at nullptr already, just return current location}}
+\DoxyCodeLine{190         \textcolor{keywordflow}{if} (ptr == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{191             \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a650d05eb6f6ce478e10edf0afe0fa63d}{nextObjectAvailable}};}
+\DoxyCodeLine{192     \}}
+\DoxyCodeLine{193     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{194     \{}
+\DoxyCodeLine{195         \textcolor{comment}{// Since th object at this index is apparently empty, return this index}}
+\DoxyCodeLine{196         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a650d05eb6f6ce478e10edf0afe0fa63d}{nextObjectAvailable}};}
+\DoxyCodeLine{197     \}}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{199     \textcolor{comment}{// Check +1, since chances are next pointer is free}}
+\DoxyCodeLine{200     \textcolor{comment}{// Careful not to cause overflow}}
+\DoxyCodeLine{201     \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a650d05eb6f6ce478e10edf0afe0fa63d}{nextObjectAvailable}} + 1 < this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}{objects}}.dataSize)}
+\DoxyCodeLine{202     \{}
+\DoxyCodeLine{203         \textcolor{comment}{// Check if pointer exists}}
+\DoxyCodeLine{204         \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}{objects}}.data[this-\/>nextAllocationAvailable + 1] == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{205             \textcolor{comment}{// Since th object at this index is apparently empty, return this index}}
+\DoxyCodeLine{206             \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a650d05eb6f6ce478e10edf0afe0fa63d}{nextObjectAvailable}} + 1;}
+\DoxyCodeLine{207     \}}
+\DoxyCodeLine{208 }
+\DoxyCodeLine{209     \textcolor{comment}{// Here and Here + 1 are not free. Just search entire page.}}
+\DoxyCodeLine{210     \textcolor{keywordflow}{for} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} idx = 0; idx < this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}{objects}}.dataSize; idx++)}
+\DoxyCodeLine{211     \{}
+\DoxyCodeLine{212         \textcolor{comment}{// Check if pointer exists. If not, this object is empty, so return this index}}
+\DoxyCodeLine{213         \textcolor{keywordflow}{if} (!this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}{objects}}.data[idx])}
+\DoxyCodeLine{214             \textcolor{keywordflow}{return} idx;}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{216         \textcolor{comment}{// Read one pointer}}
+\DoxyCodeLine{217         ptr = \mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\_\_UNSAFE\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}})(\&this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}{objects}}, idx)-\/>getRawPtr();}
+\DoxyCodeLine{218 }
+\DoxyCodeLine{219         \textcolor{comment}{// If pointer is not free, skip}}
+\DoxyCodeLine{220         \textcolor{keywordflow}{if} (ptr)}
+\DoxyCodeLine{221             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{222 }
+\DoxyCodeLine{223         \textcolor{comment}{// Return idx}}
+\DoxyCodeLine{224         \textcolor{keywordflow}{return} idx;}
+\DoxyCodeLine{225     \}}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227     \textcolor{comment}{// Nothing found at all. Return invalid pointer}}
+\DoxyCodeLine{228     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_ae7e858273d1d1d86fed9d0575c1072c3}{invalidObjectIndex}};}
+\DoxyCodeLine{229 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d73/classBBP_1_1std_1_1ResourceManager_ad45816fb0c5611cec2669e670d12106f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d73/classBBP_1_1std_1_1ResourceManager_ad45816fb0c5611cec2669e670d12106f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_a4e7d173638f7fb726d4fcdc6294deb81}\label{classBBP_1_1std_1_1ResourceManager_a4e7d173638f7fb726d4fcdc6294deb81}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!find\_Object\_pointer@{find\_Object\_pointer}}
+\index{find\_Object\_pointer@{find\_Object\_pointer}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{find\_Object\_pointer()}{find\_Object\_pointer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}} B\+B\+P\+::std\+::\+Resource\+Manager\+::find\+\_\+\+Object\+\_\+pointer (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 248 of file Resources.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{249 \{}
+\DoxyCodeLine{250     \textcolor{comment}{// Loop over every pointer}}
+\DoxyCodeLine{251     \textcolor{keywordflow}{for} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} idx = 0; idx < \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}{objects}}.dataSize; idx++)}
+\DoxyCodeLine{252     \{}
+\DoxyCodeLine{253         \textcolor{comment}{// Check if pointer exists}}
+\DoxyCodeLine{254         \textcolor{keywordflow}{if} (!this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}{objects}}.data[idx])}
+\DoxyCodeLine{255             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{256 }
+\DoxyCodeLine{257         \textcolor{comment}{// Read value stored at 'idx'}}
+\DoxyCodeLine{258         \textcolor{keywordtype}{void} *stored = \mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\_\_UNSAFE\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}})(\&\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}{objects}}, idx)-\/>getRawPtr();}
+\DoxyCodeLine{259 }
+\DoxyCodeLine{260         \textcolor{comment}{// If 'stored' and 'ptr' are equal, return idx}}
+\DoxyCodeLine{261         \textcolor{keywordflow}{if} (stored == ptr)}
+\DoxyCodeLine{262             \textcolor{keywordflow}{return} idx;}
+\DoxyCodeLine{263     \}}
+\DoxyCodeLine{264 }
+\DoxyCodeLine{265     \textcolor{comment}{// Nothing found, return invalid pointer}}
+\DoxyCodeLine{266     \textcolor{keywordflow}{return} \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_ae7e858273d1d1d86fed9d0575c1072c3}{invalidObjectIndex}};}
+\DoxyCodeLine{267 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d73/classBBP_1_1std_1_1ResourceManager_a4e7d173638f7fb726d4fcdc6294deb81_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_a88b2740fa8c5b5e30e6ef08cb8c7d883}\label{classBBP_1_1std_1_1ResourceManager_a88b2740fa8c5b5e30e6ef08cb8c7d883}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!free@{free}}
+\index{free@{free}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{free()}{free()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Resource\+Manager\+::free (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Definition at line 57 of file Resources.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58 \{}
+\DoxyCodeLine{59     \textcolor{comment}{// Check if pointer is not actually nullptr}}
+\DoxyCodeLine{60     \textcolor{keywordflow}{if} (ptr == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{61     \{}
+\DoxyCodeLine{62         \textcolor{comment}{// Attempting to free nullptr: Do nothing but output something to stderr}}
+\DoxyCodeLine{63         \mbox{\hyperlink{namespaceBBP_1_1std_a4eb11df4d80a8a9c26ee099360e6597e}{std::STDERR}} << \textcolor{stringliteral}{"Attempt to free nullptr was made."} <<= \mbox{\hyperlink{namespaceBBP_1_1std_a92a50044907ba5f40a39efe0bce958d6}{std::endl}};}
+\DoxyCodeLine{64         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{65     \}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67     \textcolor{comment}{// Attempt to find index of pointer}}
+\DoxyCodeLine{68     \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} ptrIndex = \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a23f4cc602d945b35b1f83e40f354360c}{find\_Alloc\_pointer}}(ptr);}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70     \textcolor{comment}{// Call to internal free function}}
+\DoxyCodeLine{71     this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a88b2740fa8c5b5e30e6ef08cb8c7d883}{free}}(ptr, ptrIndex);}
+\DoxyCodeLine{72 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d73/classBBP_1_1std_1_1ResourceManager_a88b2740fa8c5b5e30e6ef08cb8c7d883_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_a07be9ae976de3e085f19c938169868d5}\label{classBBP_1_1std_1_1ResourceManager_a07be9ae976de3e085f19c938169868d5}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!free@{free}}
+\index{free@{free}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{free()}{free()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Resource\+Manager\+::free (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}}}]{ptr\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 74 of file Resources.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{75 \{}
+\DoxyCodeLine{76     \textcolor{comment}{// If index invalid, throw sigsegv signal}}
+\DoxyCodeLine{77     \textcolor{keywordflow}{if} (ptrIndex == this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a58db25b274e35de1aa8c3f446a7b140a}{invalidAllocationIndex}})}
+\DoxyCodeLine{78     \{}
+\DoxyCodeLine{79         \mbox{\hyperlink{Signal_8h_a82e69d819748cab5933309bba1999f7c}{\_\_SIGNAL\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_a8b214d5bdfe950ea0efc262c569ff9ef}{SIGSEGV}});}
+\DoxyCodeLine{80     \}}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82     \textcolor{comment}{// Pointer exists, so free it.}}
+\DoxyCodeLine{83     \mbox{\hyperlink{namespaceBBP_1_1std_a1be352d7e7554edb7dbf42803adbf581}{std::ext\_free}}(ptr);}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85     \textcolor{comment}{// Then also write nullptr to index}}
+\DoxyCodeLine{86     this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a8a556d017821d40894d9440c6f171b0e}{allocations}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a02cc2cb6b1940e10fb3b4defba203ac6}{data}}[ptrIndex] = (\textcolor{keywordtype}{void} *)0;}
+\DoxyCodeLine{87     \textcolor{comment}{//\_\_UNSAFE\_\_(std::write)(\&this-\/>allocations, nul, ptrIndex);}}
+\DoxyCodeLine{88 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d73/classBBP_1_1std_1_1ResourceManager_a07be9ae976de3e085f19c938169868d5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_a9e71b44bf2fa37404996f41b7755bec3}\label{classBBP_1_1std_1_1ResourceManager_a9e71b44bf2fa37404996f41b7755bec3}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!freeAll@{freeAll}}
+\index{freeAll@{freeAll}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{freeAll()}{freeAll()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}} B\+B\+P\+::std\+::\+Resource\+Manager\+::free\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 269 of file Resources.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{270 \{}
+\DoxyCodeLine{271     \textcolor{comment}{// Keep track of objects that were free'd}}
+\DoxyCodeLine{272     \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} freeCount = 0;}
+\DoxyCodeLine{273 }
+\DoxyCodeLine{274     \textcolor{comment}{// Loop over each pointer}}
+\DoxyCodeLine{275     \textcolor{keywordflow}{for} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} idx = 0; idx < \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a8a556d017821d40894d9440c6f171b0e}{allocations}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a3b5c962d781f42d8dc36949061c308ab}{dataSize}}; idx++)}
+\DoxyCodeLine{276     \{}
+\DoxyCodeLine{277         \textcolor{comment}{// Read pointer}}
+\DoxyCodeLine{278         \textcolor{keywordtype}{void} *ptr = \mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\_\_UNSAFE\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}})(\&\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a8a556d017821d40894d9440c6f171b0e}{allocations}}, idx);}
+\DoxyCodeLine{279 }
+\DoxyCodeLine{280         \textcolor{comment}{// If ptr is nullptr, skip}}
+\DoxyCodeLine{281         \textcolor{keywordflow}{if} (ptr == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{282             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{283 }
+\DoxyCodeLine{284         \textcolor{comment}{// Since this pointer has something, free it. Also, since we know the index, just pass it.}}
+\DoxyCodeLine{285         this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a88b2740fa8c5b5e30e6ef08cb8c7d883}{free}}(ptr, idx);}
+\DoxyCodeLine{286         freeCount++;}
+\DoxyCodeLine{287     \}}
+\DoxyCodeLine{288 }
+\DoxyCodeLine{289     \textcolor{comment}{// Return the amount of things free'd}}
+\DoxyCodeLine{290     \textcolor{keywordflow}{return} freeCount;}
+\DoxyCodeLine{291 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d73/classBBP_1_1std_1_1ResourceManager_a9e71b44bf2fa37404996f41b7755bec3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d73/classBBP_1_1std_1_1ResourceManager_a9e71b44bf2fa37404996f41b7755bec3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_ace0746163707cba96792b1ddce1f66e4}\label{classBBP_1_1std_1_1ResourceManager_ace0746163707cba96792b1ddce1f66e4}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!malloc@{malloc}}
+\index{malloc@{malloc}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{malloc()}{malloc()}}
+{\footnotesize\ttfamily void $\ast$ B\+B\+P\+::std\+::\+Resource\+Manager\+::malloc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std\+::size\+\_\+t}}}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 8 of file Resources.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     \textcolor{comment}{// See if allocation is possible}}
+\DoxyCodeLine{11     \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a50226c0a5243a5cc2eb0573f1a1f172e}{nextAllocationAvailable}} == this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a58db25b274e35de1aa8c3f446a7b140a}{invalidAllocationIndex}})}
+\DoxyCodeLine{12         \textcolor{keywordflow}{throw} \mbox{\hyperlink{namespaceBBP_1_1std_a750ba4c285e0788e84722a30a776b913}{std::exception}}(\textcolor{stringliteral}{"Could not allocate bytes to Resource manager: Out of allocation space."}, \mbox{\hyperlink{errno_8h_a6a05c923dad0c1208043e9c20a58c8e5}{ENOMEM}});}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     \textcolor{comment}{// Actually malloc data}}
+\DoxyCodeLine{15     \textcolor{keywordtype}{void} *data = \mbox{\hyperlink{namespaceBBP_1_1std_a407f0e7e04eb723e4a480b423084ed6d}{std::ext\_malloc}}(size);}
+\DoxyCodeLine{16     this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_ab00af56608c3ecef9a74ea06122fcf29}{totalAllocations}} += size;}
+\DoxyCodeLine{17     \textcolor{comment}{//std::printf("(\%p) Application allocated \%u bytes during runtime. (malloc: \%u)\(\backslash\)n", this, this-\/>totalAllocations, size);}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{comment}{// Add that data}}
+\DoxyCodeLine{20     \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a95a95eb4df0b375dfabfeb5acb58122e}{add\_alloc}}(data);}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{comment}{// Return data}}
+\DoxyCodeLine{23     \textcolor{keywordflow}{return} data;}
+\DoxyCodeLine{24 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d73/classBBP_1_1std_1_1ResourceManager_ace0746163707cba96792b1ddce1f66e4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_ae748d6a1bf87b426245d9c1880a309fa}\label{classBBP_1_1std_1_1ResourceManager_ae748d6a1bf87b426245d9c1880a309fa}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!mark\_deleted@{mark\_deleted}}
+\index{mark\_deleted@{mark\_deleted}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{mark\_deleted()}{mark\_deleted()}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Resource\+Manager\+::mark\+\_\+deleted (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Definition at line 90 of file Resources.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{91 \{}
+\DoxyCodeLine{92     \textcolor{comment}{// Check if pointer is not actually nullptr}}
+\DoxyCodeLine{93     \textcolor{keywordflow}{if} (ptr == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{94     \{}
+\DoxyCodeLine{95         \textcolor{comment}{// Attempting to free nullptr: Do nothing but output something to stderr}}
+\DoxyCodeLine{96         \mbox{\hyperlink{namespaceBBP_1_1std_a4eb11df4d80a8a9c26ee099360e6597e}{std::STDERR}} << \textcolor{stringliteral}{"Attempt to delete nullptr was made."} <<= \mbox{\hyperlink{namespaceBBP_1_1std_a92a50044907ba5f40a39efe0bce958d6}{std::endl}};}
+\DoxyCodeLine{97         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{98     \}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100     \textcolor{comment}{// Attempt to find index of pointer}}
+\DoxyCodeLine{101     \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} ptrIndex = \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a4e7d173638f7fb726d4fcdc6294deb81}{find\_Object\_pointer}}(ptr);}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103     \textcolor{comment}{// Write nullptr to index}}
+\DoxyCodeLine{104     \textcolor{keyword}{delete}(this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}{objects}}.data[ptrIndex]);}
+\DoxyCodeLine{105     this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}{objects}}.data[ptrIndex] = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{106 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_a8a556d017821d40894d9440c6f171b0e}\label{classBBP_1_1std_1_1ResourceManager_a8a556d017821d40894d9440c6f171b0e}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!allocations@{allocations}}
+\index{allocations@{allocations}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{allocations}{allocations}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structBBP_1_1std_1_1STATIC__PAGE}{std\+::\+S\+T\+A\+T\+I\+C\+\_\+\+P\+A\+GE}}$<$void $\ast$, \mbox{\hyperlink{namespaceBBP_1_1std_a2e983fdaa4146f8a89ad06d0331adb1d}{max\+\_\+allocations}}$>$ B\+B\+P\+::std\+::\+Resource\+Manager\+::allocations\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 110 of file Resources.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_a58db25b274e35de1aa8c3f446a7b140a}\label{classBBP_1_1std_1_1ResourceManager_a58db25b274e35de1aa8c3f446a7b140a}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!invalidAllocationIndex@{invalidAllocationIndex}}
+\index{invalidAllocationIndex@{invalidAllocationIndex}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{invalidAllocationIndex}{invalidAllocationIndex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} B\+B\+P\+::std\+::\+Resource\+Manager\+::invalid\+Allocation\+Index\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 108 of file Resources.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_ae7e858273d1d1d86fed9d0575c1072c3}\label{classBBP_1_1std_1_1ResourceManager_ae7e858273d1d1d86fed9d0575c1072c3}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!invalidObjectIndex@{invalidObjectIndex}}
+\index{invalidObjectIndex@{invalidObjectIndex}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{invalidObjectIndex}{invalidObjectIndex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} B\+B\+P\+::std\+::\+Resource\+Manager\+::invalid\+Object\+Index\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 113 of file Resources.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_a50226c0a5243a5cc2eb0573f1a1f172e}\label{classBBP_1_1std_1_1ResourceManager_a50226c0a5243a5cc2eb0573f1a1f172e}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!nextAllocationAvailable@{nextAllocationAvailable}}
+\index{nextAllocationAvailable@{nextAllocationAvailable}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{nextAllocationAvailable}{nextAllocationAvailable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} B\+B\+P\+::std\+::\+Resource\+Manager\+::next\+Allocation\+Available\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 109 of file Resources.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_a650d05eb6f6ce478e10edf0afe0fa63d}\label{classBBP_1_1std_1_1ResourceManager_a650d05eb6f6ce478e10edf0afe0fa63d}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!nextObjectAvailable@{nextObjectAvailable}}
+\index{nextObjectAvailable@{nextObjectAvailable}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{nextObjectAvailable}{nextObjectAvailable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} B\+B\+P\+::std\+::\+Resource\+Manager\+::next\+Object\+Available\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 114 of file Resources.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}\label{classBBP_1_1std_1_1ResourceManager_a09e7e8854c5dec86ba02073c77e8a288}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!objects@{objects}}
+\index{objects@{objects}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{objects}{objects}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structBBP_1_1std_1_1STATIC__PAGE}{std\+::\+S\+T\+A\+T\+I\+C\+\_\+\+P\+A\+GE}}$<$\mbox{\hyperlink{structBBP_1_1std_1_1AbstractGCEntry}{Abstract\+G\+C\+Entry}} $\ast$, \mbox{\hyperlink{namespaceBBP_1_1std_a27ef098687cf6e4ef3ea65b650b1ef61}{max\+\_\+objects}}$>$ B\+B\+P\+::std\+::\+Resource\+Manager\+::objects\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 115 of file Resources.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1ResourceManager_ab00af56608c3ecef9a74ea06122fcf29}\label{classBBP_1_1std_1_1ResourceManager_ab00af56608c3ecef9a74ea06122fcf29}} 
+\index{BBP::std::ResourceManager@{BBP::std::ResourceManager}!totalAllocations@{totalAllocations}}
+\index{totalAllocations@{totalAllocations}!BBP::std::ResourceManager@{BBP::std::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{totalAllocations}{totalAllocations}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std\+::size\+\_\+t}} B\+B\+P\+::std\+::\+Resource\+Manager\+::total\+Allocations = 0}
+
+
+
+Definition at line 59 of file Resources.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Resources_8h}{Resources.\+h}}\item 
+\mbox{\hyperlink{Resources_8cpp}{Resources.\+cpp}}\end{DoxyCompactItemize}

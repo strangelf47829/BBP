@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d9/db9/MINGW64_2Graphics_8cpp" kind="file" language="C++">
+    <compoundname>MINGW64/Graphics.cpp</compoundname>
+    <includes refid="d2/dd1/Graphics_8h" local="yes">../include/Graphics.h</includes>
+    <includes local="yes">../../build/include/SDL.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>Memory.h</label>
+        <link refid="de/d5c/Memory_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Strings.h</label>
+        <link refid="de/d53/Strings_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Resources.h</label>
+        <link refid="d0/d33/Resources_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Graphics.cpp</label>
+        <link refid="d9/db9/MINGW64_2Graphics_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Stack.hxx</label>
+        <link refid="db/d61/Stack_8hxx"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Memory.hxx</label>
+        <link refid="d5/d4e/Memory_8hxx"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>FileSys.h</label>
+        <link refid="d0/d00/FileSys_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../include/Graphics.h</label>
+        <link refid="d2/dd1/Graphics_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>stdio.h</label>
+        <link refid="d6/dd1/stdio_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>errno.h</label>
+        <link refid="d8/dc2/errno_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Signal.h</label>
+        <link refid="d0/def/Signal_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Except.h</label>
+        <link refid="dc/d88/Except_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>../../build/include/SDL.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+        <link refid="df/dd8/stdint_8h"/>
+      </node>
+      <node id="4">
+        <label>stddef.h</label>
+        <link refid="d3/dce/stddef_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Stack.h</label>
+        <link refid="dc/db6/Stack_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d9/db9/MINGW64_2Graphics_8cpp_1aa6e721a97183db093899a7a38ff00ba2" prot="public" static="yes" mutable="no">
+        <type>SDL_Window *</type>
+        <definition>SDL_Window* _window</definition>
+        <argsstring></argsstring>
+        <name>_window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_MINGW64/Graphics.cpp" line="4" column="19" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_MINGW64/Graphics.cpp" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db9/MINGW64_2Graphics_8cpp_1a966da7a60c4ea3ba301e26ccc5efe452" prot="public" static="yes" mutable="no">
+        <type>SDL_Renderer *</type>
+        <definition>SDL_Renderer* renderer</definition>
+        <argsstring></argsstring>
+        <name>renderer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_MINGW64/Graphics.cpp" line="5" column="21" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_MINGW64/Graphics.cpp" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db9/MINGW64_2Graphics_8cpp_1acab531abaa74a7e664e3986f2522b33a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_MINGW64/Graphics.cpp" line="7" column="5" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_MINGW64/Graphics.cpp" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db9/MINGW64_2Graphics_8cpp_1a71867e609034d4dbd6d0ad8d84540e59" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_MINGW64/Graphics.cpp" line="8" column="5" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_MINGW64/Graphics.cpp" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db9/MINGW64_2Graphics_8cpp_1a148e3876077787926724625411d6e7a9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_MINGW64/Graphics.cpp" line="9" column="5" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_MINGW64/Graphics.cpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;../include/Graphics.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../build/include/SDL.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="d9/db9/MINGW64_2Graphics_8cpp_1aa6e721a97183db093899a7a38ff00ba2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SDL_Window<sp/>*<ref refid="d9/db9/MINGW64_2Graphics_8cpp_1aa6e721a97183db093899a7a38ff00ba2" kindref="member">_window</ref>;</highlight></codeline>
+<codeline lineno="5" refid="d9/db9/MINGW64_2Graphics_8cpp_1a966da7a60c4ea3ba301e26ccc5efe452" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SDL_Renderer<sp/>*<ref refid="d9/db9/MINGW64_2Graphics_8cpp_1a966da7a60c4ea3ba301e26ccc5efe452" kindref="member">renderer</ref>;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="d9/db9/MINGW64_2Graphics_8cpp_1acab531abaa74a7e664e3986f2522b33a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db9/MINGW64_2Graphics_8cpp_1acab531abaa74a7e664e3986f2522b33a" kindref="member">r</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="8" refid="d9/db9/MINGW64_2Graphics_8cpp_1a71867e609034d4dbd6d0ad8d84540e59" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db9/MINGW64_2Graphics_8cpp_1a71867e609034d4dbd6d0ad8d84540e59" kindref="member">g</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="9" refid="d9/db9/MINGW64_2Graphics_8cpp_1a148e3876077787926724625411d6e7a9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db9/MINGW64_2Graphics_8cpp_1a148e3876077787926724625411d6e7a9" kindref="member">b</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a0d9f6105cb70d5bbf4ea7a9c5f317b18" kindref="member">BBP::std::gINIT</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db7/namespaceBBP_1_1std_1_1Driver_1affc18526448cf9c01bfb96ffd83aed81" kindref="member">BBP::std::Driver::initializeGraphics</ref>(std::window<sp/>*window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>w,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>h)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/db9/MINGW64_2Graphics_8cpp_1aa6e721a97183db093899a7a38ff00ba2" kindref="member">_window</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Surface<sp/>*screenSurface<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(SDL_Init(SDL_INIT_VIDEO)<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">printf</ref>(</highlight><highlight class="stringliteral">&quot;could<sp/>not<sp/>initialize<sp/>SDL2:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>SDL_GetError());</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_CreateWindowAndRenderer(w,<sp/>h,<sp/>0,<sp/>&amp;<ref refid="d9/db9/MINGW64_2Graphics_8cpp_1aa6e721a97183db093899a7a38ff00ba2" kindref="member">_window</ref>,<sp/>&amp;<ref refid="d9/db9/MINGW64_2Graphics_8cpp_1a966da7a60c4ea3ba301e26ccc5efe452" kindref="member">renderer</ref>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*window<sp/>=<sp/>SDL_CreateWindow(</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;hello_sdl2&quot;,</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_WINDOWPOS_UNDEFINED,<sp/>SDL_WINDOWPOS_UNDEFINED,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>width,<sp/>height,</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_WINDOW_SHOWN</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="d9/db9/MINGW64_2Graphics_8cpp_1aa6e721a97183db093899a7a38ff00ba2" kindref="member">_window</ref><sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">printf</ref>(</highlight><highlight class="stringliteral">&quot;could<sp/>not<sp/>create<sp/>window:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>SDL_GetError());</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>screenSurface<sp/>=<sp/>SDL_GetWindowSurface(<ref refid="d9/db9/MINGW64_2Graphics_8cpp_1aa6e721a97183db093899a7a38ff00ba2" kindref="member">_window</ref>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_FillRect(screenSurface,<sp/>NULL,<sp/>SDL_MapRGB(screenSurface-&gt;format,<sp/>0x00,<sp/>0x00,<sp/>0x00));</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_UpdateWindowSurface(<ref refid="d9/db9/MINGW64_2Graphics_8cpp_1aa6e721a97183db093899a7a38ff00ba2" kindref="member">_window</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>window-&gt;backBuffer.data<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1abd452b23f01af75984864049dd13670b" kindref="member">R2D::newWindow</ref>(window,<sp/>w,<sp/>h,<sp/>0,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a0d9f6105cb70d5bbf4ea7a9c5f317b18" kindref="member">gINIT</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d9/db7/namespaceBBP_1_1std_1_1Driver_1af890afe53347748ccc3240bab4225a98" kindref="member">BBP::std::Driver::drawWindow</ref>(<ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">BBP::std::window</ref><sp/>*wind)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_SetRenderDrawColor(<ref refid="d9/db9/MINGW64_2Graphics_8cpp_1a966da7a60c4ea3ba301e26ccc5efe452" kindref="member">renderer</ref>,<sp/>255,<sp/>255,<sp/>255,<sp/>255);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_RenderClear(<ref refid="d9/db9/MINGW64_2Graphics_8cpp_1a966da7a60c4ea3ba301e26ccc5efe452" kindref="member">renderer</ref>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a370f972c44b9f597cdda3e119899f60f" kindref="member">last</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>X<sp/>=<sp/>0;<sp/>X<sp/>&lt;<sp/>wind-&gt;<ref refid="db/d2b/structBBP_1_1std_1_1window_1ac9dc99ea7caf78da1c83e3fa1c7219aa" kindref="member">width</ref>;<sp/>X++)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Y<sp/>=<sp/>0;<sp/>Y<sp/>&lt;<sp/>wind-&gt;<ref refid="db/d2b/structBBP_1_1std_1_1window_1a3868ca4815a37a5aa822eb9c6dd3d91c" kindref="member">height</ref>;<sp/>Y++)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a370f972c44b9f597cdda3e119899f60f" kindref="member">last</ref><sp/>-<sp/>wind-&gt;<ref refid="db/d2b/structBBP_1_1std_1_1window_1ab9b99c1461c6a8dfd2b29b9b4385289e" kindref="member">backBuffer</ref>.<ref refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" kindref="member">data</ref>[X<sp/>+<sp/>Y<sp/>*<sp/>wind-&gt;<ref refid="db/d2b/structBBP_1_1std_1_1window_1ac9dc99ea7caf78da1c83e3fa1c7219aa" kindref="member">width</ref>])</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a370f972c44b9f597cdda3e119899f60f" kindref="member">last</ref><sp/>=<sp/>wind-&gt;<ref refid="db/d2b/structBBP_1_1std_1_1window_1ab9b99c1461c6a8dfd2b29b9b4385289e" kindref="member">backBuffer</ref>.<ref refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" kindref="member">data</ref>[X<sp/>+<sp/>Y<sp/>*<sp/>wind-&gt;<ref refid="db/d2b/structBBP_1_1std_1_1window_1ac9dc99ea7caf78da1c83e3fa1c7219aa" kindref="member">width</ref>];</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db9/MINGW64_2Graphics_8cpp_1acab531abaa74a7e664e3986f2522b33a" kindref="member">r</ref><sp/>=<sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a370f972c44b9f597cdda3e119899f60f" kindref="member">last</ref><sp/>&amp;<sp/>(0xFF000000))<sp/>&gt;&gt;<sp/>24;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db9/MINGW64_2Graphics_8cpp_1a71867e609034d4dbd6d0ad8d84540e59" kindref="member">g</ref><sp/>=<sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a370f972c44b9f597cdda3e119899f60f" kindref="member">last</ref><sp/>&amp;<sp/>(0x00FF0000))<sp/>&gt;&gt;<sp/>16;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db9/MINGW64_2Graphics_8cpp_1a148e3876077787926724625411d6e7a9" kindref="member">b</ref><sp/>=<sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a370f972c44b9f597cdda3e119899f60f" kindref="member">last</ref><sp/>&amp;<sp/>(0x0000FF00))<sp/>&gt;&gt;<sp/>8;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a" kindref="member">a</ref><sp/>=<sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a370f972c44b9f597cdda3e119899f60f" kindref="member">last</ref><sp/>&amp;<sp/>(0x000000FF));</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_SetRenderDrawColor(<ref refid="d9/db9/MINGW64_2Graphics_8cpp_1a966da7a60c4ea3ba301e26ccc5efe452" kindref="member">renderer</ref>,<sp/><ref refid="d9/db9/MINGW64_2Graphics_8cpp_1acab531abaa74a7e664e3986f2522b33a" kindref="member">r</ref>,<sp/><ref refid="d9/db9/MINGW64_2Graphics_8cpp_1a71867e609034d4dbd6d0ad8d84540e59" kindref="member">g</ref>,<sp/><ref refid="d9/db9/MINGW64_2Graphics_8cpp_1a148e3876077787926724625411d6e7a9" kindref="member">b</ref>,<sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a" kindref="member">a</ref>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_RenderDrawPoint(<ref refid="d9/db9/MINGW64_2Graphics_8cpp_1a966da7a60c4ea3ba301e26ccc5efe452" kindref="member">renderer</ref>,<sp/>X<sp/>+<sp/>wind-&gt;<ref refid="db/d2b/structBBP_1_1std_1_1window_1a2e7001af636de4e777cbde6c3dc988ca" kindref="member">xPos</ref>,<sp/>Y<sp/>+<sp/>wind-&gt;<ref refid="db/d2b/structBBP_1_1std_1_1window_1afa1b435a139018dd919057b3b2c4028f" kindref="member">yPos</ref>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_RenderPresent(<ref refid="d9/db9/MINGW64_2Graphics_8cpp_1a966da7a60c4ea3ba301e26ccc5efe452" kindref="member">renderer</ref>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d9/db7/namespaceBBP_1_1std_1_1Driver_1afdd73d9627318511baf99a3392dd0b7e" kindref="member">BBP::std::Driver::destructGraphics</ref>()</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_DestroyWindow(<ref refid="d9/db9/MINGW64_2Graphics_8cpp_1aa6e721a97183db093899a7a38ff00ba2" kindref="member">_window</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_DestroyRenderer(<ref refid="d9/db9/MINGW64_2Graphics_8cpp_1a966da7a60c4ea3ba301e26ccc5efe452" kindref="member">renderer</ref>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Quit();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a0d9f6105cb70d5bbf4ea7a9c5f317b18" kindref="member">gINIT</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_MINGW64/Graphics.cpp"/>
+  </compounddef>
+</doxygen>

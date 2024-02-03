@@ -1,0 +1,575 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d6/d3f/Backend_8cpp" kind="file" language="C++">
+    <compoundname>Backend.cpp</compoundname>
+    <includes refid="df/d71/ELSA_8h" local="yes">../include/ELSA.h</includes>
+    <includes refid="d5/dfd/ELSABackend_8h" local="yes">../include/ELSABackend.h</includes>
+    <includes refid="de/db3/Actions_8h" local="yes">Actions.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>Memory.h</label>
+        <link refid="de/d5c/Memory_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>ELSABackend.h</label>
+        <link refid="d5/dfd/ELSABackend_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Opcodes.h</label>
+        <link refid="d1/d12/Opcodes_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Strings.h</label>
+        <link refid="de/d53/Strings_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Resources.h</label>
+        <link refid="d0/d33/Resources_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>ELF32.h</label>
+        <link refid="d1/d5d/ELF32_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Stack.hxx</label>
+        <link refid="db/d61/Stack_8hxx"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Memory.hxx</label>
+        <link refid="d5/d4e/Memory_8hxx"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>FileSys.h</label>
+        <link refid="d0/d00/FileSys_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>Actions.h</label>
+        <link refid="de/db3/Actions_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>stdio.h</label>
+        <link refid="d6/dd1/stdio_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>errno.h</label>
+        <link refid="d8/dc2/errno_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>Instructions.h</label>
+        <link refid="d9/dd5/Instructions_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Backend.cpp</label>
+        <link refid="d6/d3f/Backend_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Signal.h</label>
+        <link refid="d0/def/Signal_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Except.h</label>
+        <link refid="dc/d88/Except_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Lex.h</label>
+        <link refid="df/d80/Lex_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stdint.h</label>
+        <link refid="df/dd8/stdint_8h"/>
+      </node>
+      <node id="6">
+        <label>stddef.h</label>
+        <link refid="d3/dce/stddef_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>ELF.h</label>
+        <link refid="db/de5/ELF_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Stack.h</label>
+        <link refid="dc/db6/Stack_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../include/ELSA.h</label>
+        <link refid="df/d71/ELSA_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d6/d3f/Backend_8cpp_1ac4d325caf49183353bb692c5272a0a5e" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa628d4212b7e43b58f01273f47ecf4c6" kindref="member">BBP::std::static_string</ref>&lt; 100 &gt;</type>
+        <definition>BBP::std::static_string&lt;100&gt; Identifier</definition>
+        <argsstring></argsstring>
+        <name>Identifier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELSA/Backend.cpp" line="5" column="25" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELSA/Backend.cpp" bodystart="5" bodyend="-1"/>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1ada73c0b220f39b769e10d29bdd45ce39" compoundref="d6/d3f/Backend_8cpp" startline="7" endline="12">BBP::esa::esaProcessor::saveIdentifier</referencedby>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1ad01106b1ee15d1306e16a5c5ce2fd8cd" compoundref="d6/d3f/Backend_8cpp" startline="14" endline="24">BBP::esa::esaProcessor::mangleSymbolIdentifier</referencedby>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1aa78bbecef432f11d558f7b108084528f" compoundref="d6/d3f/Backend_8cpp" startline="26" endline="49">BBP::esa::esaProcessor::hashIdentifier</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;../include/ELSA.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/ELSABackend.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="de/db3/Actions_8h" kindref="compound">Actions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="d6/d3f/Backend_8cpp_1ac4d325caf49183353bb692c5272a0a5e" refkind="member"><highlight class="normal"><ref refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE" kindref="compound">BBP::std::static_string&lt;100&gt;</ref><sp/><ref refid="d6/d3f/Backend_8cpp_1ac4d325caf49183353bb692c5272a0a5e" kindref="member">Identifier</ref>;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1ada73c0b220f39b769e10d29bdd45ce39" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1ada73c0b220f39b769e10d29bdd45ce39" kindref="member">BBP::esa::esaProcessor::saveIdentifier</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">BBP::std::index_t</ref><sp/>start,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">BBP::std::index_t</ref><sp/>end)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">BBP::std::index_t</ref><sp/>idx<sp/>=<sp/>start,<sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eaa077f260b0319da866c90d59a5454ee7" kindref="member">n</ref><sp/>=<sp/>0;<sp/>idx<sp/>&lt;<sp/>end;<sp/>idx++,<sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eaa077f260b0319da866c90d59a5454ee7" kindref="member">n</ref>++)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d6/d3f/Backend_8cpp_1ac4d325caf49183353bb692c5272a0a5e" kindref="member">Identifier</ref>.static_data[<ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eaa077f260b0319da866c90d59a5454ee7" kindref="member">n</ref>]<sp/>=<sp/><ref refid="df/d72/namespaceBBP_1_1esa_1ac6718a2ca4ad0a1b180fa889565881d1" kindref="member">BBP::esa::processor</ref>.<ref refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a2efac58b04b63237d00f07fbce7644f3" kindref="member">esaParser</ref>.<ref refid="d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_1a142c7a1b792ab62212927587a0aa8f87" kindref="member">data</ref>.<ref refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" kindref="member">data</ref>[idx];</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d6/d3f/Backend_8cpp_1ac4d325caf49183353bb692c5272a0a5e" kindref="member">Identifier</ref>.static_data[end<sp/>-<sp/>start]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1ad01106b1ee15d1306e16a5c5ce2fd8cd" refkind="member"><highlight class="normal"><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">BBP::std::conststring</ref><sp/><ref refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1ad01106b1ee15d1306e16a5c5ce2fd8cd" kindref="member">BBP::esa::esaProcessor::mangleSymbolIdentifier</ref>(<ref refid="d1/dcf/structBBP_1_1esa_1_1dataEntry" kindref="compound">BBP::esa::dataEntry</ref><sp/>&amp;entry)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Save<sp/>the<sp/>identifier</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>saveIdentifier(symbol.start,<sp/>symbol.end);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Then<sp/>mangle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>application-&gt;mangle(<ref refid="d6/d3f/Backend_8cpp_1ac4d325caf49183353bb692c5272a0a5e" kindref="member">Identifier</ref>.static_data,<sp/>symbol,<sp/>entry);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>mangled<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>application-&gt;mangledPage.static_data;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1aa78bbecef432f11d558f7b108084528f" refkind="member"><highlight class="normal"><ref refid="dd/d98/namespaceBBP_1_1std_1ad29f433a1c033a551d50291e7d3f50b4" kindref="member">BBP::std::hash_t</ref><sp/><ref refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1aa78bbecef432f11d558f7b108084528f" kindref="member">BBP::esa::esaProcessor::hashIdentifier</ref>(<ref refid="d1/dcf/structBBP_1_1esa_1_1dataEntry" kindref="compound">BBP::esa::dataEntry</ref><sp/>&amp;entry)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Save<sp/>the<sp/>identifier</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>saveIdentifier(symbol.start,<sp/>symbol.end);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Define<sp/>hash<sp/>number<sp/>&apos;h&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ad29f433a1c033a551d50291e7d3f50b4" kindref="member">std::hash_t</ref><sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea964920435d98b78e3d9898c14fdf2d48" kindref="member">hash</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref><sp/>index<sp/>=<sp/>0;<sp/>index<sp/>&lt;<sp/><ref refid="d6/d3f/Backend_8cpp_1ac4d325caf49183353bb692c5272a0a5e" kindref="member">Identifier</ref>.dataSize;<sp/>index++)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>character</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">std::string_element</ref><sp/>c<sp/>=<sp/><ref refid="d6/d3f/Backend_8cpp_1ac4d325caf49183353bb692c5272a0a5e" kindref="member">Identifier</ref>.static_data[index];</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>c<sp/>is<sp/>0,<sp/>break<sp/>out<sp/>of<sp/>loop.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Operate<sp/>on<sp/>the<sp/>hash</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea964920435d98b78e3d9898c14fdf2d48" kindref="member">hash</ref><sp/>=<sp/>(<ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea964920435d98b78e3d9898c14fdf2d48" kindref="member">hash</ref><sp/>*<sp/>33)<sp/>+<sp/>c;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>hash</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea964920435d98b78e3d9898c14fdf2d48" kindref="member">hash</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a66b8c3e4d0b81bd4e8a399bfb8c3c5c3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a66b8c3e4d0b81bd4e8a399bfb8c3c5c3" kindref="member">BBP::esa::esaProcessor::setupBackend</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">std::conststring</ref><sp/>str,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref><sp/>seg,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref><sp/>sec,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref><sp/>sym)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>application<sp/>=<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa4b7f66aef4bb8963e9fec9370186362" kindref="member">std::activemem</ref>-&gt;<ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager_1aea4091636b0010fa96b46859b119c515" kindref="member">add_object</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d0/dbe/classBBP_1_1esa_1_1BinaryApplication" kindref="compound">BinaryApplication</ref>(str,<sp/>seg,<sp/>sec,<sp/>sym));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>application-&gt;setSource(esaParser.activeFile.static_data);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a6c03c71d935df80b40838ddac6733450" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a6c03c71d935df80b40838ddac6733450" kindref="member">BBP::esa::esaProcessor::saveAndClose</ref>()</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>application-&gt;save();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>application-&gt;close();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa4b7f66aef4bb8963e9fec9370186362" kindref="member">std::activemem</ref>-&gt;<ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager_1aabf2f3fcf4ce22bfeefe3a1496f79c89" kindref="member">_delete</ref>(application);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>application<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1ae7cd5f1fefe82579ae0dba1776d9b19e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1ae7cd5f1fefe82579ae0dba1776d9b19e" kindref="member">BBP::esa::esaProcessor::discardAndClose</ref>()</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>application-&gt;close();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa4b7f66aef4bb8963e9fec9370186362" kindref="member">std::activemem</ref>-&gt;<ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager_1aabf2f3fcf4ce22bfeefe3a1496f79c89" kindref="member">_delete</ref>(application);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>application<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a8d460cabf300a0edc2357eacdae4646e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a8d460cabf300a0edc2357eacdae4646e" kindref="member">BBP::esa::esaProcessor::emitRelocation</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref><sp/>symbolIndex)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>offset<sp/>of<sp/>instruction<sp/>from<sp/>.text<sp/>(in<sp/>words)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref><sp/>offset<sp/>=<sp/>calculateArgumentOffset();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>data<sp/>entry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d0/d92/structBBP_1_1std_1_1ELF_1_1RelEntry" kindref="compound">std::ELF::RelEntry</ref><sp/>rel_entry;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>rel_entry.<ref refid="d0/d92/structBBP_1_1std_1_1ELF_1_1RelEntry_1a4e19edcd7b607e8bcfb57fa5d247f253" kindref="member">r_offset</ref><sp/>=<sp/>application-&gt;builder._text().stack.atElement<sp/>+<sp/>offset;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>rel_entry.<ref refid="d0/d92/structBBP_1_1std_1_1ELF_1_1RelEntry_1ac88294b6c1306ba9d6af4f040546a793" kindref="member">r_info</ref><sp/>=<sp/>symbolIndex<sp/>&lt;&lt;<sp/>8<sp/>|<sp/>1;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>rel<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref><sp/>rel_data[2]<sp/>=<sp/>{<sp/>rel_entry.<ref refid="d0/d92/structBBP_1_1std_1_1ELF_1_1RelEntry_1a4e19edcd7b607e8bcfb57fa5d247f253" kindref="member">r_offset</ref>,<sp/>rel_entry.<ref refid="d0/d92/structBBP_1_1std_1_1ELF_1_1RelEntry_1ac88294b6c1306ba9d6af4f040546a793" kindref="member">r_info</ref><sp/>};</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Emit<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d1/dcf/structBBP_1_1esa_1_1dataEntry" kindref="compound">dataEntry</ref><sp/>entry((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)rel_data,<sp/>8,<sp/>0);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>application-&gt;addDataToSection(application-&gt;builder.rel_text,<sp/>entry);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a6356368fbf1217095c3ed89086288606" refkind="member"><highlight class="normal"><ref refid="dd/d98/namespaceBBP_1_1std_1a2cc851baa19a0c196a426786332b7674" kindref="member">BBP::std::errno_t</ref><sp/><ref refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a6356368fbf1217095c3ed89086288606" kindref="member">BBP::esa::esaProcessor::buildSymbol</ref>()</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Look<sp/>for<sp/>already<sp/>existing<sp/>symbol</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ad29f433a1c033a551d50291e7d3f50b4" kindref="member">std::hash_t</ref><sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea964920435d98b78e3d9898c14fdf2d48" kindref="member">hash</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref><sp/>byteSize<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref><sp/>existingSymbol<sp/>=<sp/>lookupSymbol(symbol.start,<sp/>symbol.end,<sp/>&amp;byteSize,<sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea964920435d98b78e3d9898c14fdf2d48" kindref="member">hash</ref>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>symbolExists<sp/>=<sp/>existingSymbol<sp/>!=<sp/>0;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>symbol<sp/>exists<sp/>and<sp/>is<sp/>not<sp/>&apos;extern&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(symbolExists<sp/>&amp;&amp;<sp/>application-&gt;builder.symbols[existingSymbol].shndx())</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d8/dc2/errno_8h_1a61676e39b42371c65c3b960a91887b03" kindref="member">EADDRINUSE</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>symbol<sp/>exists,<sp/>is<sp/>marked<sp/>&apos;extern&apos;,<sp/>but<sp/>is<sp/>a<sp/>procedure,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(symbolExists<sp/>&amp;&amp;<sp/>application-&gt;builder.symbols[existingSymbol].info()<sp/>&amp;<sp/><ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1acf9d76b83af2bdb55c207716fb6e81d9a84b9022b3bf9c4cdce3a63a49a2b2d89" kindref="member">std::ELF::SYM_FUNC</ref>)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d8/dc2/errno_8h_1aca1e9da0ef95864e910f550467d475fa" kindref="member">EBADR</ref>;<sp/></highlight><highlight class="comment">//<sp/>Cannot<sp/>do<sp/>that</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Declare<sp/>entry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d1/dcf/structBBP_1_1esa_1_1dataEntry" kindref="compound">dataEntry</ref><sp/>entry<sp/>=<sp/><ref refid="d1/dcf/structBBP_1_1esa_1_1dataEntry" kindref="compound">dataEntry</ref>(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>0,<sp/><ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1acf9d76b83af2bdb55c207716fb6e81d9a7aa12a5382218596ed2deea05f44fb8a" kindref="member">std::ELF::SYM_OBJECT</ref><sp/>|<sp/><ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1acf9d76b83af2bdb55c207716fb6e81d9ae80182d891cfff817fbbfaa9429d7cc6" kindref="member">std::ELF::SYM_GLOBAL</ref>);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>entry<sp/>is<sp/>extern,<sp/>just<sp/>mangle<sp/>and<sp/>set<sp/>to<sp/>section<sp/>0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(symbol.subtype<sp/>&amp;<sp/><ref refid="df/d72/namespaceBBP_1_1esa_1ac0510b5b06764b26ba3c2ef567508d07a420c6e0dee1e5c93fa86f23153ce62ea" kindref="member">SYMTMOD_EXTERN</ref>)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>empty<sp/>entry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>entry<sp/>=<sp/><ref refid="d1/dcf/structBBP_1_1esa_1_1dataEntry" kindref="compound">dataEntry</ref>(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>0,<sp/><ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1acf9d76b83af2bdb55c207716fb6e81d9a7aa12a5382218596ed2deea05f44fb8a" kindref="member">std::ELF::SYM_OBJECT</ref><sp/>|<sp/><ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1acf9d76b83af2bdb55c207716fb6e81d9ae80182d891cfff817fbbfaa9429d7cc6" kindref="member">std::ELF::SYM_GLOBAL</ref>);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Emit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>application-&gt;emitSymbol(0,<sp/>entry,<sp/>mangleSymbolIdentifier(entry),<sp/>hashIdentifier(entry),<sp/>existingSymbol);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>resetSymbol();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Do<sp/>rules<sp/>based<sp/>on<sp/>flags<sp/>set</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>access<sp/>is<sp/>&apos;static&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(symbol.subtype<sp/>&amp;<sp/><ref refid="df/d72/namespaceBBP_1_1esa_1ac0510b5b06764b26ba3c2ef567508d07ade7c9da9c918ecc7da96280c34ea046a" kindref="member">SYMTACC_STATIC</ref>)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Is<sp/>it<sp/>const?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref><sp/>section<sp/>=<sp/>(symbol.subtype<sp/>&amp;<sp/><ref refid="df/d72/namespaceBBP_1_1esa_1ac0510b5b06764b26ba3c2ef567508d07a5af77c16c7adc23504b8a65668207729" kindref="member">SYMTMOD_CONST</ref>)<sp/>?<sp/>application-&gt;builder.rodata<sp/>:<sp/>application-&gt;builder.data;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Emit<sp/>and<sp/>return</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>entry<sp/>=<sp/><ref refid="d1/dcf/structBBP_1_1esa_1_1dataEntry" kindref="compound">dataEntry</ref>((<ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">std::conststring</ref>)symbolDataWord.page-&gt;data,<sp/>symbolDataByte.atElement,<sp/><ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1acf9d76b83af2bdb55c207716fb6e81d9a7aa12a5382218596ed2deea05f44fb8a" kindref="member">std::ELF::SYM_OBJECT</ref><sp/>|<sp/><ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1acf9d76b83af2bdb55c207716fb6e81d9ae80182d891cfff817fbbfaa9429d7cc6" kindref="member">std::ELF::SYM_GLOBAL</ref>);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>application-&gt;emitSymbol(section,<sp/>entry,<sp/>mangleSymbolIdentifier(entry),<sp/>hashIdentifier(entry),<sp/>existingSymbol);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>resetSymbol();</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(symbol.subtype<sp/>&amp;<sp/><ref refid="df/d72/namespaceBBP_1_1esa_1ac0510b5b06764b26ba3c2ef567508d07ab445cb5c2be3223d6aaa56dd5b2f65aa" kindref="member">SYMTACC_VIRTUAL</ref>)<sp/></highlight><highlight class="comment">//<sp/>Are<sp/>we<sp/>virtual?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Are<sp/>we<sp/>also<sp/>marked<sp/>constant?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(symbol.subtype<sp/>&amp;<sp/><ref refid="df/d72/namespaceBBP_1_1esa_1ac0510b5b06764b26ba3c2ef567508d07a0fda2a53f57315234526e346b37b2040" kindref="member">SYMTMOD_STATIC</ref>)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>another<sp/>entry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref><sp/>size<sp/>=<sp/>application-&gt;builder.sections[application-&gt;builder.bss].stack.atElement;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d1/dcf/structBBP_1_1esa_1_1dataEntry" kindref="compound">dataEntry</ref><sp/>staticEntry<sp/>=<sp/><ref refid="d1/dcf/structBBP_1_1esa_1_1dataEntry" kindref="compound">dataEntry</ref>((<ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">std::conststring</ref>)&amp;size,<sp/>4,<sp/><ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1acf9d76b83af2bdb55c207716fb6e81d9a0206bed0377b02ecd352e201fc556542" kindref="member">std::ELF::SYM_LOCAL</ref>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Are<sp/>we<sp/>also<sp/>const?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref><sp/>section<sp/>=<sp/>(symbol.subtype<sp/>&amp;<sp/><ref refid="df/d72/namespaceBBP_1_1esa_1ac0510b5b06764b26ba3c2ef567508d07a5af77c16c7adc23504b8a65668207729" kindref="member">SYMTMOD_CONST</ref>)<sp/>?<sp/>application-&gt;builder.rodata<sp/>:<sp/>application-&gt;builder.data;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>data<sp/>to<sp/>.bss<sp/>(.bss<sp/>gets<sp/>removed<sp/>later)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>entry<sp/>=<sp/><ref refid="d1/dcf/structBBP_1_1esa_1_1dataEntry" kindref="compound">dataEntry</ref>((<ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">std::conststring</ref>)symbolDataWord.page-&gt;data,<sp/>symbolDataByte.atElement,<sp/><ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1acf9d76b83af2bdb55c207716fb6e81d9a7aa12a5382218596ed2deea05f44fb8a" kindref="member">std::ELF::SYM_OBJECT</ref><sp/>|<sp/><ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1acf9d76b83af2bdb55c207716fb6e81d9ae80182d891cfff817fbbfaa9429d7cc6" kindref="member">std::ELF::SYM_GLOBAL</ref>);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>application-&gt;emitSymbol(application-&gt;builder.bss,<sp/>entry,<sp/>mangleSymbolIdentifier(entry),<sp/>hashIdentifier(entry),<sp/>existingSymbol);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Emit<sp/>static<sp/>symbol</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>application-&gt;emitSymbol(section,<sp/>staticEntry,<sp/>mangleSymbolIdentifier(staticEntry),<sp/>hashIdentifier(staticEntry),<sp/>existingSymbol);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>resetSymbol();</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Not<sp/>virtual,<sp/>just<sp/>do<sp/>it<sp/>normally<sp/>then.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>data<sp/>to<sp/>.bss<sp/>(.bss<sp/>gets<sp/>removed<sp/>later)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>entry<sp/>=<sp/><ref refid="d1/dcf/structBBP_1_1esa_1_1dataEntry" kindref="compound">dataEntry</ref>((<ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">std::conststring</ref>)symbolDataWord.page-&gt;data,<sp/>symbolDataByte.atElement,<sp/><ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1acf9d76b83af2bdb55c207716fb6e81d9a7aa12a5382218596ed2deea05f44fb8a" kindref="member">std::ELF::SYM_OBJECT</ref><sp/>|<sp/><ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1acf9d76b83af2bdb55c207716fb6e81d9ae80182d891cfff817fbbfaa9429d7cc6" kindref="member">std::ELF::SYM_GLOBAL</ref>);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Emit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>application-&gt;emitSymbol(application-&gt;builder.bss,<sp/>entry,<sp/>mangleSymbolIdentifier(entry),<sp/>hashIdentifier(entry),<sp/>existingSymbol);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>resetSymbol();</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Quasi<sp/>symbol<sp/>cannot<sp/>be<sp/>exported.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Find<sp/>empty<sp/>quasi<sp/>symbol<sp/>spot</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref><sp/>emptyQuasi<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>emptyQuasi<sp/>&lt;<sp/><ref refid="df/d72/namespaceBBP_1_1esa_1ac6718a2ca4ad0a1b180fa889565881d1" kindref="member">processor</ref>.<ref refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1accb6eb52b5b0ef94cf422b585603a753" kindref="member">quasiSymbols</ref>.<ref refid="df/ddc/structBBP_1_1std_1_1PAGE_1a3b5c962d781f42d8dc36949061c308ab" kindref="member">dataSize</ref>;<sp/>emptyQuasi++)</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ad29f433a1c033a551d50291e7d3f50b4" kindref="member">std::hash_t</ref><sp/>value<sp/>=<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a1d232f50fc4e569e79449970f1b4bb9e" kindref="member">std::read</ref>(&amp;<ref refid="df/d72/namespaceBBP_1_1esa_1ac6718a2ca4ad0a1b180fa889565881d1" kindref="member">processor</ref>.<ref refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1accb6eb52b5b0ef94cf422b585603a753" kindref="member">quasiSymbols</ref>,<sp/>emptyQuasi);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>value<sp/>is<sp/>0,<sp/>break<sp/>out.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Do<sp/>nothing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>for<sp/>error<sp/>condition</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(emptyQuasi<sp/>==<sp/><ref refid="df/d72/namespaceBBP_1_1esa_1ac6718a2ca4ad0a1b180fa889565881d1" kindref="member">processor</ref>.<ref refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1accb6eb52b5b0ef94cf422b585603a753" kindref="member">quasiSymbols</ref>.<ref refid="df/ddc/structBBP_1_1std_1_1PAGE_1a3b5c962d781f42d8dc36949061c308ab" kindref="member">dataSize</ref>)</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d8/dc2/errno_8h_1a9e655f47bfd914a1174f281fc31cf63d" kindref="member">ENOBUFS</ref>;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>hash</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ad29f433a1c033a551d50291e7d3f50b4" kindref="member">std::hash_t</ref><sp/>quasiHash<sp/>=<sp/>hashIdentifier(entry);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>hash<sp/>to<sp/>that,<sp/>then<sp/>set<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa63573041786d49b7cdb2eec8a921a6a" kindref="member">std::write</ref>(&amp;<ref refid="df/d72/namespaceBBP_1_1esa_1ac6718a2ca4ad0a1b180fa889565881d1" kindref="member">processor</ref>.<ref refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1accb6eb52b5b0ef94cf422b585603a753" kindref="member">quasiSymbols</ref>,<sp/>quasiHash,<sp/>emptyQuasi);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa63573041786d49b7cdb2eec8a921a6a" kindref="member">std::write</ref>(&amp;<ref refid="df/d72/namespaceBBP_1_1esa_1ac6718a2ca4ad0a1b180fa889565881d1" kindref="member">processor</ref>.<ref refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a698018381954b03df9e67207638d617f" kindref="member">quasiSymbolValues</ref>,<sp/>symbolDataWord[0],<sp/>emptyQuasi);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reset<sp/>symbol</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>resetSymbol();</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212" refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a553f28a74233c3b7f4268343e1037f55" refkind="member"><highlight class="normal"><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">BBP::std::conststring</ref><sp/><ref refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a553f28a74233c3b7f4268343e1037f55" kindref="member">BBP::esa::esaProcessor::emitProcedure</ref>()</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Before<sp/>doing<sp/>anything,<sp/>emit<sp/>a<sp/>&apos;ret<sp/>0&apos;<sp/>(if<sp/>procedure<sp/>is<sp/>at<sp/>least<sp/>non-extern)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(<ref refid="df/d72/namespaceBBP_1_1esa_1ac6718a2ca4ad0a1b180fa889565881d1" kindref="member">processor</ref>.<ref refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a748f566f9445ba86b64ef4da1c1f8de3" kindref="member">symbol</ref>.<ref refid="d5/d76/structBBP_1_1std_1_1Lexer_1_1lex__thing_1ad483aec6eef1df5ba0d7d692fa1c03bf" kindref="member">subtype</ref><sp/>&amp;<sp/><ref refid="df/d72/namespaceBBP_1_1esa_1ac0510b5b06764b26ba3c2ef567508d07a420c6e0dee1e5c93fa86f23153ce62ea" kindref="member">SYMTMOD_EXTERN</ref>))</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>resetInstruction();</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setInstruction(<ref refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691ac4bd4c2be49f7c793b2025eb2379f59c" kindref="member">userspace::CTRL</ref>,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a86c94964f34d454bdbd36473722cfb1ea268eb33701686501168a16e9875bf901" kindref="member">userspace::ret</ref>,<sp/>0,<sp/>1);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>expectLiteral(0);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numericalArgument({<sp/>0<sp/>},<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emitInstruction();</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>resetInstruction();</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>procedure.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d1/dcf/structBBP_1_1esa_1_1dataEntry" kindref="compound">dataEntry</ref><sp/>procedure(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>0,<sp/><ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1acf9d76b83af2bdb55c207716fb6e81d9a84b9022b3bf9c4cdce3a63a49a2b2d89" kindref="member">std::ELF::SYM_FUNC</ref><sp/>|<sp/>((symbol.subtype<sp/>&amp;<sp/><ref refid="df/d72/namespaceBBP_1_1esa_1ac0510b5b06764b26ba3c2ef567508d07aed30841e74ec427ba12d47cdfcd2e08b" kindref="member">SYMTMOD_SHARED</ref>)<sp/>?<sp/><ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1acf9d76b83af2bdb55c207716fb6e81d9a6cb1482dd995cbbb447d3c0fd75a43f3" kindref="member">std::ELF::SYM_WEAK</ref><sp/>:<sp/><ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1acf9d76b83af2bdb55c207716fb6e81d9ae80182d891cfff817fbbfaa9429d7cc6" kindref="member">std::ELF::SYM_GLOBAL</ref>));</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Define<sp/>symbol</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>symbol<sp/>=<sp/><ref refid="d5/d76/structBBP_1_1std_1_1Lexer_1_1lex__thing" kindref="compound">std::Lexer::lex_thing</ref>{<sp/>&amp;esaParser,<sp/>startedAt,<sp/>endedAt,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/><ref refid="df/d72/namespaceBBP_1_1esa_1a91649c3a3b541f1c33285ece9ae4e88ba2c51dbbd700d5463157ed242f72fa464" kindref="member">esa::PROCEDURE_T</ref>,<sp/>procedureArgumentCount<sp/>|<sp/>(symbol.subtype<sp/>&amp;<sp/><ref refid="df/d72/namespaceBBP_1_1esa_1ac0510b5b06764b26ba3c2ef567508d07aed30841e74ec427ba12d47cdfcd2e08b" kindref="member">SYMTMOD_SHARED</ref>),<sp/>procedureHash<sp/>};</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Mangle<sp/>procedure<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>application-&gt;mangle(procedureName.static_data,<sp/>symbol,<sp/>procedure);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Hash<sp/>identifier</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ad29f433a1c033a551d50291e7d3f50b4" kindref="member">std::hash_t</ref><sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea964920435d98b78e3d9898c14fdf2d48" kindref="member">hash</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref><sp/>index<sp/>=<sp/>0;<sp/>index<sp/>&lt;<sp/>procedureName.dataSize;<sp/>index++)</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>character</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">std::string_element</ref><sp/>c<sp/>=<sp/>procedureName.static_data[index];</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>c<sp/>is<sp/>0,<sp/>break<sp/>out<sp/>of<sp/>loop.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Operate<sp/>on<sp/>the<sp/>hash</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea964920435d98b78e3d9898c14fdf2d48" kindref="member">hash</ref><sp/>=<sp/>(<ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea964920435d98b78e3d9898c14fdf2d48" kindref="member">hash</ref><sp/>*<sp/>33)<sp/>+<sp/>c;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Yeah<sp/>yeah<sp/>extraction<sp/>whatever<sp/>idc<sp/>right<sp/>now</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>for<sp/>symbol<sp/>memory<sp/>uniqueness,<sp/>since<sp/>an<sp/>overwrite<sp/>could<sp/>loose<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(application-&gt;builder.symbols[procedure.<ref refid="d1/dcf/structBBP_1_1esa_1_1dataEntry_1a8c1459b17d8748706b0a17ceca6d4dbe" kindref="member">symbol</ref>].isMemUnique)</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a750ba4c285e0788e84722a30a776b913" kindref="member">std::exception</ref>(</highlight><highlight class="stringliteral">&quot;Symbol<sp/>overwrite<sp/>looses<sp/>unique<sp/>data.&quot;</highlight><highlight class="normal">,<sp/><ref refid="d8/dc2/errno_8h_1a61676e39b42371c65c3b960a91887b03" kindref="member">EADDRINUSE</ref>);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>procedure<sp/>already<sp/>exists</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ad29f433a1c033a551d50291e7d3f50b4" kindref="member">std::hash_t</ref><sp/>hasher<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref><sp/>byteSize<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref><sp/>existingSymbol<sp/>=<sp/>lookupSymbol(procedureNameStart,<sp/>procedureNameEnd,<sp/>&amp;byteSize,<sp/>hasher);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>symbolExists<sp/>=<sp/>existingSymbol<sp/>!=<sp/>0;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>symbol<sp/>exists<sp/>and<sp/>is<sp/>not<sp/>&apos;extern&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(symbolExists<sp/>&amp;&amp;<sp/>application-&gt;builder.symbols[existingSymbol].shndx())</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esaParser.resetInfo(esaParser.debugInformation);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esaParser.debugInformation.highlight<sp/>=<sp/>procedureNameStart<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esaParser.debugInformation.highlightLength<sp/>=<sp/>procedureNameEnd<sp/>-<sp/>procedureNameStart<sp/>+<sp/>2;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esaParser.debugInformation.highlightmsg<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;NSecond<sp/>definition<sp/>here:&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;EProcedure<sp/>name<sp/>already<sp/>in<sp/>use.&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>symbol<sp/>exists,<sp/>is<sp/>marked<sp/>&apos;extern&apos;,<sp/>but<sp/>is<sp/>a<sp/>procedure,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(symbolExists<sp/>&amp;&amp;<sp/>!(application-&gt;builder.symbols[existingSymbol].info()<sp/>&amp;<sp/><ref refid="d9/d86/namespaceBBP_1_1std_1_1ELF_1acf9d76b83af2bdb55c207716fb6e81d9a84b9022b3bf9c4cdce3a63a49a2b2d89" kindref="member">std::ELF::SYM_FUNC</ref>))</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;ECannot<sp/>do<sp/>that.&quot;</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Cannot<sp/>do<sp/>that</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>exists,<sp/>override</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(symbolExists)</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>application-&gt;addSymbol(procedure,<sp/>application-&gt;mangledPage.static_data,<sp/>existingSymbol);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>symbol<sp/>has<sp/>reached<sp/>max,<sp/>extend<sp/>symbols</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(application-&gt;builder.symbols.atElement<sp/>&gt;=<sp/>application-&gt;builder.symbolCount)</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>application-&gt;appendSymbols(6);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>application-&gt;addSymbol(procedure,<sp/>application-&gt;mangledPage.static_data);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Then<sp/>also<sp/>update<sp/>the<sp/>remaining<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/>application-&gt;builder.symbols[procedure.<ref refid="d1/dcf/structBBP_1_1esa_1_1dataEntry_1a8c1459b17d8748706b0a17ceca6d4dbe" kindref="member">symbol</ref>].shndx(externProcedure<sp/>?<sp/>0<sp/>:<sp/>application-&gt;builder.text);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>application-&gt;builder.symbols[procedure.<ref refid="d1/dcf/structBBP_1_1esa_1_1dataEntry_1a8c1459b17d8748706b0a17ceca6d4dbe" kindref="member">symbol</ref>].value(externProcedure<sp/>?<sp/>0<sp/>:<sp/>startedAt);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/>application-&gt;builder.symbols[procedure.<ref refid="d1/dcf/structBBP_1_1esa_1_1dataEntry_1a8c1459b17d8748706b0a17ceca6d4dbe" kindref="member">symbol</ref>].size(externProcedure<sp/>?<sp/>0<sp/>:<sp/>(endedAt<sp/>-<sp/>startedAt));</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Emit<sp/>symbol<sp/>hash.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>couldHash<sp/>=<sp/>application-&gt;emitSymbolHash(<ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea964920435d98b78e3d9898c14fdf2d48" kindref="member">hash</ref>,<sp/>procedure.<ref refid="d1/dcf/structBBP_1_1esa_1_1dataEntry_1a8c1459b17d8748706b0a17ceca6d4dbe" kindref="member">symbol</ref>);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!couldHash)</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">std::printf</ref>(</highlight><highlight class="stringliteral">&quot;ELF<sp/>Builder:<sp/>Failed<sp/>to<sp/>hash<sp/>symbol\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303" refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1adab5f68614326a968bc96042947e7baa" refkind="member"><highlight class="normal"><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">BBP::std::conststring</ref><sp/><ref refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1adab5f68614326a968bc96042947e7baa" kindref="member">BBP::esa::esaProcessor::emitInstruction</ref>()</highlight></codeline>
+<codeline lineno="304"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>right<sp/>amount<sp/>of<sp/>arguments<sp/>is<sp/>reached.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>hasRightArguments<sp/>=<sp/>atArgument<sp/>==<sp/>instruction.header.args<sp/>||<sp/>surpress[atArgument];</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/>instruction.header.args<sp/>=<sp/>atArgument;</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>there<sp/>is<sp/>room<sp/>to<sp/>do<sp/>so</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Worst<sp/>case<sp/>scenario:<sp/>1+8+4*8<sp/>=<sp/>41<sp/>words<sp/>for<sp/>an<sp/>instruction.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(application-&gt;builder._text().stack.atElement<sp/>+<sp/>41<sp/>&gt;=<sp/>application-&gt;builder._text().stack.max_elements)</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref><sp/>extendBy<sp/>=<sp/>(application-&gt;builder._text().stack.atElement<sp/>+<sp/>41<sp/>+<sp/>128<sp/>&lt;<sp/>application-&gt;builder._text().stack.max_elements)<sp/>?<sp/>128<sp/>:<sp/>(application-&gt;builder._text().stack.atElement<sp/>+<sp/>41<sp/>+<sp/>128<sp/>-<sp/>application-&gt;builder._text().stack.max_elements);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>application-&gt;builder._text().Extend(extendBy);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Emit<sp/>header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/>application-&gt;builder._text().stack<sp/>&lt;&lt;<sp/>instruction.header.prefix;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>application-&gt;builder._text().stack<sp/>&lt;&lt;<sp/>instruction.header.opcode;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/>application-&gt;builder._text().stack<sp/>&lt;&lt;<sp/>instruction.header.suffix;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/>application-&gt;builder._text().stack<sp/>&lt;&lt;<sp/>(((instruction.header.flags<sp/>&amp;<sp/>0xF)<sp/>&lt;&lt;<sp/>4)<sp/>|<sp/>(instruction.header.args<sp/>&amp;<sp/>0xF));</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Emit<sp/>Arguments</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a4926ba934876e4a1028b9abb47edbc56" kindref="member">std::byte</ref><sp/>arg<sp/>=<sp/>0;<sp/>arg<sp/>&lt;<sp/>instruction.header.args;<sp/>arg++)</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>literal<sp/>value,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(instruction.args[arg].isLiteralArg)</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Just<sp/>emit<sp/>that<sp/>and<sp/>continue.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>application-&gt;builder._text().stack<sp/>&lt;&lt;<sp/>((instruction.args[arg].data<sp/>&gt;&gt;<sp/>24)<sp/>&amp;<sp/>0xFF);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>application-&gt;builder._text().stack<sp/>&lt;&lt;<sp/>((instruction.args[arg].data<sp/>&gt;&gt;<sp/>16)<sp/>&amp;<sp/>0xFF);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>application-&gt;builder._text().stack<sp/>&lt;&lt;<sp/>((instruction.args[arg].data<sp/>&gt;&gt;<sp/>8)<sp/>&amp;<sp/>0xFF);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>application-&gt;builder._text().stack<sp/>&lt;&lt;<sp/>((instruction.args[arg].data<sp/>&gt;&gt;<sp/>0)<sp/>&amp;<sp/>0xFF);</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>application-&gt;builder._text().stack<sp/>&lt;&lt;<sp/>(((instruction.args[arg].referenced<sp/>&lt;&lt;<sp/>7)<sp/>|<sp/>(instruction.args[arg].dereferenced<sp/>&lt;&lt;<sp/>6)<sp/>|</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((instruction.args[arg].offset<sp/>&amp;<sp/>0xF)<sp/>&lt;&lt;<sp/>2)<sp/>|<sp/>(instruction.args[arg].trailerCount<sp/>&amp;<sp/>0b11)));</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>application-&gt;builder._text().stack<sp/>&lt;&lt;<sp/>((instruction.args[arg].data<sp/>&gt;&gt;<sp/>16)<sp/>&amp;<sp/>0xFF);</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>application-&gt;builder._text().stack<sp/>&lt;&lt;<sp/>((instruction.args[arg].data<sp/>&gt;&gt;<sp/>8)<sp/>&amp;<sp/>0xFF);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>application-&gt;builder._text().stack<sp/>&lt;&lt;<sp/>((instruction.args[arg].data<sp/>&gt;&gt;<sp/>0)<sp/>&amp;<sp/>0xFF);</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Then<sp/>emit<sp/>trailers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a4926ba934876e4a1028b9abb47edbc56" kindref="member">std::byte</ref><sp/>trailer<sp/>=<sp/>0;<sp/>trailer<sp/>&lt;<sp/>instruction.args[arg].trailerCount;<sp/>trailer++)</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>application-&gt;builder._text().stack<sp/>&lt;&lt;<sp/>((instruction.args[arg].trailers[trailer]<sp/>&gt;&gt;<sp/>24)<sp/>&amp;<sp/>0xFF);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>application-&gt;builder._text().stack<sp/>&lt;&lt;<sp/>((instruction.args[arg].trailers[trailer]<sp/>&gt;&gt;<sp/>16)<sp/>&amp;<sp/>0xFF);</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>application-&gt;builder._text().stack<sp/>&lt;&lt;<sp/>((instruction.args[arg].trailers[trailer]<sp/>&gt;&gt;<sp/>8)<sp/>&amp;<sp/>0xFF);</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>application-&gt;builder._text().stack<sp/>&lt;&lt;<sp/>((instruction.args[arg].trailers[trailer]<sp/>&gt;&gt;<sp/>0)<sp/>&amp;<sp/>0xFF);</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hasRightArguments)</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/>esaParser.debugInformation.errName<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;-Wmismatched-arg-count&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;WAmount<sp/>of<sp/>arguments<sp/>supplied<sp/>does<sp/>not<sp/>match<sp/>the<sp/>amount<sp/>of<sp/>arguments<sp/>expected.&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="363"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELSA/Backend.cpp"/>
+  </compounddef>
+</doxygen>

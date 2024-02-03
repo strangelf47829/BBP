@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_56246d454ba80b3f030b336496bc3f7b" kind="dir">
+    <compoundname>Applications</compoundname>
+    <innerfile refid="d7/d40/badapple_8cpp">badapple.cpp</innerfile>
+    <innerfile refid="d6/d73/L_09_09_8cpp">L++.cpp</innerfile>
+    <innerfile refid="dc/d9b/Logout_8cpp">Logout.cpp</innerfile>
+    <innerfile refid="d3/da0/neofetch_8cpp">neofetch.cpp</innerfile>
+    <innerfile refid="df/d6c/Shell_8cpp">Shell.cpp</innerfile>
+    <innerfile refid="de/dd1/Smile_8cpp">Smile.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Applications/"/>
+  </compounddef>
+</doxygen>

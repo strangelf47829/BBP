@@ -1,0 +1,122 @@
+.TH "BBP::std::Lexer::lex_debugInfo" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BBP::std::Lexer::lex_debugInfo
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Lex\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBstd::index_t\fP \fBcoloumn\fP = 0"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBline\fP = 0"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBcharacter\fP = 0"
+.br
+.ti -1c
+.RI "\fBstd::conststring\fP \fBmsg\fP = nullptr"
+.br
+.ti -1c
+.RI "\fBstd::conststring\fP \fBerrName\fP = nullptr"
+.br
+.ti -1c
+.RI "\fBstd::PAGE\fP< \fBstd::string_element\fP > \fBprocedure\fP"
+.br
+.ti -1c
+.RI "bool \fBshowLinesAndColoumns\fP = true"
+.br
+.ti -1c
+.RI "bool \fBshowWhere\fP = true"
+.br
+.ti -1c
+.RI "const char * \fBhighlightmsg\fP = nullptr"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBhighlight\fP"
+.br
+.ti -1c
+.RI "\fBstd::size_t\fP \fBhighlightLength\fP = 0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 75 of file Lex\&.h\&.
+.SH "Field Documentation"
+.PP 
+.SS "\fBstd::index_t\fP BBP::std::Lexer::lex_debugInfo::character = 0"
+
+.PP
+Definition at line 80 of file Lex\&.h\&.
+.PP
+Referenced by BBP::std::Lexer::lex_context::Highlight(), and BBP::std::Lexer::lex_context::Log()\&.
+.SS "\fBstd::index_t\fP BBP::std::Lexer::lex_debugInfo::coloumn = 0"
+
+.PP
+Definition at line 78 of file Lex\&.h\&.
+.PP
+Referenced by BBP::std::Lexer::lex_context::Highlight(), and BBP::std::Lexer::lex_context::Log()\&.
+.SS "\fBstd::conststring\fP BBP::std::Lexer::lex_debugInfo::errName = nullptr"
+
+.PP
+Definition at line 83 of file Lex\&.h\&.
+.PP
+Referenced by BBP::esa::INSTRUCTION(), BBP::std::Lexer::lex_context::Log(), and BBP::std::Lexer::lex_context::resetInfo()\&.
+.SS "\fBstd::index_t\fP BBP::std::Lexer::lex_debugInfo::highlight"
+
+.PP
+Definition at line 93 of file Lex\&.h\&.
+.PP
+Referenced by BBP::esa::esaProcessor::ExpectDelimiters(), BBP::std::Lexer::lex_context::Highlight(), BBP::esa::esaProcessor::includeFile(), and BBP::std::Lexer::lex_context::resetInfo()\&.
+.SS "\fBstd::size_t\fP BBP::std::Lexer::lex_debugInfo::highlightLength = 0"
+
+.PP
+Definition at line 94 of file Lex\&.h\&.
+.PP
+Referenced by BBP::std::Lexer::lex_context::Highlight(), BBP::esa::esaProcessor::includeFile(), and BBP::std::Lexer::lex_context::resetInfo()\&.
+.SS "const char* BBP::std::Lexer::lex_debugInfo::highlightmsg = nullptr"
+
+.PP
+Definition at line 90 of file Lex\&.h\&.
+.PP
+Referenced by BBP::esa::esaProcessor::includeFile(), BBP::std::Lexer::lex_context::Log(), and BBP::std::Lexer::lex_context::resetInfo()\&.
+.SS "\fBstd::index_t\fP BBP::std::Lexer::lex_debugInfo::line = 0"
+
+.PP
+Definition at line 79 of file Lex\&.h\&.
+.PP
+Referenced by BBP::std::Lexer::lex_context::Highlight(), and BBP::std::Lexer::lex_context::Log()\&.
+.SS "\fBstd::conststring\fP BBP::std::Lexer::lex_debugInfo::msg = nullptr"
+
+.PP
+Definition at line 82 of file Lex\&.h\&.
+.PP
+Referenced by BBP::std::Lexer::lex_context::Log()\&.
+.SS "\fBstd::PAGE\fP<\fBstd::string_element\fP> BBP::std::Lexer::lex_debugInfo::procedure"
+
+.PP
+Definition at line 85 of file Lex\&.h\&.
+.PP
+Referenced by BBP::std::Lexer::lex_context::Log()\&.
+.SS "bool BBP::std::Lexer::lex_debugInfo::showLinesAndColoumns = true"
+
+.PP
+Definition at line 87 of file Lex\&.h\&.
+.PP
+Referenced by BBP::std::Lexer::lex_context::Highlight(), BBP::std::Lexer::lex_context::Log(), BBP::std::Lexer::lex_context::resetInfo(), and BBP::std::Lexer::lex_context::translateUnit()\&.
+.SS "bool BBP::std::Lexer::lex_debugInfo::showWhere = true"
+
+.PP
+Definition at line 88 of file Lex\&.h\&.
+.PP
+Referenced by BBP::std::Lexer::lex_context::Highlight(), BBP::std::Lexer::lex_context::Log(), and BBP::std::Lexer::lex_context::resetInfo()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

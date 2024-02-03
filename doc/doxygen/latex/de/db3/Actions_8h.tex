@@ -1,0 +1,2061 @@
+\hypertarget{Actions_8h}{}\doxysection{Actions.\+h File Reference}
+\label{Actions_8h}\index{Actions.h@{Actions.h}}
+{\ttfamily \#include \char`\"{}../include/\+Lex.\+h\char`\"{}}\newline
+Include dependency graph for Actions.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{da/d46/Actions_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d41/Actions_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceBBP}{B\+BP}}
+\item 
+ \mbox{\hyperlink{namespaceBBP_1_1esa}{B\+B\+P\+::esa}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a7af7137aa4871df4235881af377205fe}{A\+C\+T\+I\+ON}}(name)~\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{B\+B\+P\+::std\+::conststring}} kw\+\_\+\#\#name (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context}} $\ast$, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}}, \mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+keywordhandle}})
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ac188540cef64cbf870f35a3b6e3724a1}{T\+O\+K\+EN}}(name)~\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{B\+B\+P\+::std\+::conststring}} tk\+\_\+\#\#name (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context}} $\ast$, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}}, \mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+keywordhandle}})
+\item 
+\#define \mbox{\hyperlink{Actions_8h_af419120419128cff83cdaa9717fd24b7}{P\+R\+A\+G\+MA}}(name)~\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{B\+B\+P\+::std\+::conststring}} pragma\+\_\+\#\#name (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context}} $\ast$, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}}, \mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+keywordhandle}})
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a24e9088f8d0f96ef176b53c350d2b9bb}{I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}(name)~\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{B\+B\+P\+::std\+::conststring}} mn\+\_\+\#\#name (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context}} $\ast$, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}}, \mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+keywordhandle}})
+\item 
+\#define \mbox{\hyperlink{Actions_8h_afb5105ae0e7c3ed2b2146e7bc2967edd}{I\+N\+C\+L\+U\+D\+E\+\_\+\+H\+A\+N\+D\+LE}}~0
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a85611afba9977b3d43a734488380665c}{H\+A\+N\+D\+L\+E\+R\+\_\+\+H\+A\+N\+D\+LE}}~1
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a3e812f3ba658df77466f1a7540216206}{D\+E\+F\+I\+N\+E\+\_\+\+H\+A\+N\+D\+LE}}~2
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a98e8aa831ef368ad6af0abc82d67a3e8}{U\+N\+D\+E\+F\+\_\+\+H\+A\+N\+D\+LE}}~3
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ad03637c21b5f3a2ad1d8fd1d6f443024}{I\+F\+N\+D\+E\+F\+\_\+\+H\+A\+N\+D\+LE}}~4
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ac68da7bf308f1b4be4cf9c188e60355d}{I\+F\+D\+E\+F\+\_\+\+H\+A\+N\+D\+LE}}~5
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a49996e5d6dc3780947a6e5b6e2fa8bb2}{E\+N\+D\+I\+F\+\_\+\+H\+A\+N\+D\+LE}}~6
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a79b87217d2decc6fd6580e484f17fef6}{E\+L\+S\+E\+\_\+\+H\+A\+N\+D\+LE}}~7
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a13d01f6174ddc9bc48e6dc2807316a5d}{A\+T\+O\+M\+I\+C\+\_\+\+H\+A\+N\+D\+LE}}~8
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a439e090ace5dba153dade39ab4495e2a}{H\+A\+N\+D\+O\+V\+E\+R\+\_\+\+H\+A\+N\+D\+LE}}~9
+\item 
+\#define \mbox{\hyperlink{Actions_8h_af4cab135a235aba514747e8ae0ec373f}{C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+H\+A\+N\+D\+LE}}~10
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a6e1316d02fa57d64f9dd1466e3528058}{S\+T\+A\+T\+I\+C\+\_\+\+H\+A\+N\+D\+LE}}~11
+\item 
+\#define \mbox{\hyperlink{Actions_8h_af62e50b4be3a5c9ed141a37679d60cb9}{C\+O\+N\+S\+T\+\_\+\+H\+A\+N\+D\+LE}}~12
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a8f972a50c72b12a71f3d870db6a33272}{V\+I\+R\+T\+U\+A\+L\+\_\+\+H\+A\+N\+D\+LE}}~13
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a2b33af8608968100ff6971b8c1e91ac8}{E\+X\+T\+E\+R\+N\+\_\+\+H\+A\+N\+D\+LE}}~14
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ab49f57708d4af59061cca89e20a11d09}{P\+R\+O\+C\+E\+D\+U\+R\+E\+\_\+\+H\+A\+N\+D\+LE}}~15
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ac8ee9127993d812f62643f325e6e0f31}{E\+N\+D\+\_\+\+H\+A\+N\+D\+LE}}~16
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a2f150ae798b6153126c2cb284827e444}{L\+A\+B\+E\+L\+\_\+\+H\+A\+N\+D\+LE}}~17
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a736853e755f060d21eae116225fea002}{C\+A\+R\+R\+I\+A\+G\+E\+R\+E\+T\+U\+R\+N\+\_\+\+H\+A\+N\+D\+LE}}~18
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a6fb0f807d3a03f896b62476081f547b2}{N\+E\+W\+L\+I\+N\+E\+\_\+\+H\+A\+N\+D\+LE}}~19
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a43c77c40bc7bbe58468844329a0e2d28}{S\+E\+M\+I\+C\+O\+L\+O\+N\+\_\+\+H\+A\+N\+D\+LE}}~20
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a6c133da74a9b88beb91375897d0e6bc5}{O\+P\+E\+N\+B\+R\+A\+C\+K\+E\+T\+\_\+\+H\+A\+N\+D\+LE}}~21
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a9815d692ecdb81af880e92966029c1a5}{C\+L\+O\+S\+E\+B\+R\+A\+C\+K\+E\+T\+\_\+\+H\+A\+N\+D\+LE}}~22
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ab9c1bc2b6752e2559e8234b3ed0cc6a3}{C\+O\+M\+M\+A\+\_\+\+H\+A\+N\+D\+LE}}~23
+\item 
+\#define \mbox{\hyperlink{Actions_8h_aa91b7ef53af5cd3042ef19b7a075fdc3}{O\+P\+E\+N\+S\+Q\+B\+R\+A\+C\+K\+E\+T\+\_\+\+H\+A\+N\+D\+LE}}~24
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a34ded8797bbf5153d00ac8528a70b5c0}{C\+L\+O\+S\+E\+S\+Q\+B\+R\+A\+C\+K\+E\+T\+\_\+\+H\+A\+N\+D\+LE}}~25
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ab35771746743a1c396f16ebd0d5ca1ac}{O\+P\+E\+N\+C\+U\+R\+L\+B\+R\+A\+C\+K\+E\+T\+\_\+\+H\+A\+N\+D\+LE}}~26
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a34f426c1f2b22f6d22f9c9102b5803ae}{C\+L\+O\+S\+E\+C\+U\+R\+L\+B\+R\+A\+C\+K\+E\+T\+\_\+\+H\+A\+N\+D\+LE}}~27
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a8fd45d76517ad0d818be82071e281ce8}{P\+E\+R\+C\+E\+N\+T\+\_\+\+H\+A\+N\+D\+LE}}~28
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a521b78fef09371732de4168126a51642}{O\+P\+E\+N\+A\+N\+G\+L\+E\+B\+R\+A\+C\+K\+E\+T\+\_\+\+H\+A\+N\+D\+LE}}~29
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a5ae751ccff9610e8fc38ff16b14d547b}{C\+L\+O\+S\+E\+A\+N\+G\+L\+E\+B\+R\+A\+C\+K\+E\+T\+\_\+\+H\+A\+N\+D\+LE}}~30
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ad5ee3660d6bc9b17edf23a8f0d37ca26}{D\+O\+U\+B\+L\+E\+Q\+U\+O\+T\+E\+S\+\_\+\+H\+A\+N\+D\+LE}}~31
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a0cd6c8839ee360b9b91fc40d714b196d}{S\+I\+N\+G\+L\+E\+Q\+U\+O\+T\+E\+S\+\_\+\+H\+A\+N\+D\+LE}}~32
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a6bb8cde05e47a76ddd97557b571d1199}{C\+O\+L\+O\+N\+\_\+\+H\+A\+N\+D\+LE}}~33
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a0481b553e7b5e7d7af3cd579814dd46f}{B\+A\+C\+K\+S\+L\+A\+S\+H\+\_\+\+H\+A\+N\+D\+LE}}~34
+\item 
+\#define \mbox{\hyperlink{Actions_8h_aac93e56e3e4582835f9f3e1db421f5e0}{D\+N\+\_\+\+H\+A\+N\+D\+LE}}~35
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a3d712f3c2229eea728e746b3bbb85b41}{D\+B\+\_\+\+H\+A\+N\+D\+LE}}~36
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a7294537c03fd41dd542a2fa821e99a68}{D\+H\+\_\+\+H\+A\+N\+D\+LE}}~37
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a3bae7fe329e3dfcdb145912710145ca1}{D\+I\+\_\+\+H\+A\+N\+D\+LE}}~38
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ae757079b8fc8ac39ea1608e7685d21aa}{D\+A\+\_\+\+H\+A\+N\+D\+LE}}~39
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ae260e7c7e18cf74d7e055d27347735f9}{D\+W\+\_\+\+H\+A\+N\+D\+LE}}~40
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a0fa8056df9c4194f5ce63915e4bb8645}{N\+I\+L\+\_\+\+H\+A\+N\+D\+LE}}~41
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a96fb121aee37696811d6a502cbf1e54a}{P\+U\+S\+H\+\_\+\+H\+A\+N\+D\+LE}}~42
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a942c12614451dfccd5401b7f28bae5c7}{P\+O\+P\+\_\+\+H\+A\+N\+D\+LE}}~43
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a8ef85f7493ce727efffd18d947bd5bf7}{P\+O\+P\+A\+\_\+\+H\+A\+N\+D\+LE}}~44
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ac290f10e93fc641e04a64a315276d359}{R\+E\+T\+\_\+\+H\+A\+N\+D\+LE}}~45
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a6373b427d0028fc3ca7f995a907a058b}{C\+A\+L\+L\+\_\+\+H\+A\+N\+D\+LE}}~46
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a1982106cdc9a13afe3fc43baac78c002}{C\+A\+L\+L\+P\+\_\+\+H\+A\+N\+D\+LE}}~47
+\item 
+\#define \mbox{\hyperlink{Actions_8h_aeab4738e21f5ea4aa501ace3a842c96c}{S\+Y\+S\+C\+A\+L\+L\+\_\+\+H\+A\+N\+D\+LE}}~48
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ab01cbde0c57e3e0113d1b3859dd245d3}{M\+O\+V\+B\+\_\+\+H\+A\+N\+D\+LE}}~49
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a06af0d0e8446795b9fdb5da55bc25a66}{M\+O\+V\+H\+\_\+\+H\+A\+N\+D\+LE}}~50
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a0036f48f4e53c05d52995e8e6f651feb}{M\+O\+V\+W\+\_\+\+H\+A\+N\+D\+LE}}~51
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a869555633df88720c7271fc9fd9cb63b}{M\+O\+V\+A\+\_\+\+H\+A\+N\+D\+LE}}~52
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a85a10696bd8ab6d641429db536d185cf}{M\+O\+V\+B\+H\+\_\+\+H\+A\+N\+D\+LE}}~53
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a76073d93c4c189cdd5900697e119256f}{M\+O\+V\+B\+W\+\_\+\+H\+A\+N\+D\+LE}}~54
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a918a1e70a80678c17a58fd647870bebf}{M\+O\+V\+B\+A\+\_\+\+H\+A\+N\+D\+LE}}~55
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a3d7a56bf360bede800d319608004dad7}{M\+O\+V\+H\+B\+\_\+\+H\+A\+N\+D\+LE}}~56
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a95ec94cffd6b7c36991d3d621d98fd0e}{M\+O\+V\+H\+W\+\_\+\+H\+A\+N\+D\+LE}}~57
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a29c244a3de384b4c19348b34be4c3b53}{M\+O\+V\+H\+A\+\_\+\+H\+A\+N\+D\+LE}}~58
+\item 
+\#define \mbox{\hyperlink{Actions_8h_aaa0a9046af16906b1faefa692b35b21b}{M\+O\+V\+W\+B\+\_\+\+H\+A\+N\+D\+LE}}~59
+\item 
+\#define \mbox{\hyperlink{Actions_8h_af4c49989920743c4584cd4972b98d21b}{M\+O\+V\+W\+H\+\_\+\+H\+A\+N\+D\+LE}}~60
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a28eefd8e50433578f74a6f5bb7be4e65}{M\+O\+V\+W\+A\+\_\+\+H\+A\+N\+D\+LE}}~61
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ac218b4fb758f57d192089b939518184d}{M\+O\+V\+A\+B\+\_\+\+H\+A\+N\+D\+LE}}~62
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a612d140b1fa0c36650b77bd308b48bca}{M\+O\+V\+A\+H\+\_\+\+H\+A\+N\+D\+LE}}~63
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a77cf7b971dacbd644af44cebc992b535}{M\+O\+V\+A\+W\+\_\+\+H\+A\+N\+D\+LE}}~64
+\item 
+\#define \mbox{\hyperlink{Actions_8h_aa85063241f88332570dff45d721015bc}{I\+N\+C\+\_\+\+H\+A\+N\+D\+LE}}~65
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a4f53a6f50b0041abe78e1a5c36f1c95c}{D\+E\+C\+\_\+\+H\+A\+N\+D\+LE}}~66
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a3546b74e56ba1d64aa88f0cdbe4cbb64}{N\+E\+G\+\_\+\+H\+A\+N\+D\+LE}}~67
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ac8f240edadef83e4705be916cfef49fa}{A\+D\+D\+\_\+\+H\+A\+N\+D\+LE}}~68
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a5bfe3d9fca6fce9a3be09745c5ac6cde}{S\+U\+B\+\_\+\+H\+A\+N\+D\+LE}}~69
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a52460ca6f1fefe7072fb738e87e9c014}{M\+U\+L\+\_\+\+H\+A\+N\+D\+LE}}~70
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ab04442d320ea332b6edfc397bf6cb0d0}{D\+I\+V\+\_\+\+H\+A\+N\+D\+LE}}~71
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a2ebd4ac0b46f8bec0d492fcab24b3dc2}{M\+O\+D\+\_\+\+H\+A\+N\+D\+LE}}~72
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a822c7e9d4d9e723afb41a61a75104b81}{I\+N\+C\+F\+\_\+\+H\+A\+N\+D\+LE}}~73
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a356c1d82ecef2476a0e9fe74a6da9ab6}{D\+E\+C\+F\+\_\+\+H\+A\+N\+D\+LE}}~74
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ae43b49fc1ab164b74c3b33ca743e74d9}{N\+E\+G\+F\+\_\+\+H\+A\+N\+D\+LE}}~75
+\item 
+\#define \mbox{\hyperlink{Actions_8h_afc847db53964a49ba3a5642d5c849093}{A\+D\+D\+F\+\_\+\+H\+A\+N\+D\+LE}}~76
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a1161746b2fd1af1bbc49ee705b88477e}{S\+U\+B\+F\+\_\+\+H\+A\+N\+D\+LE}}~77
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a566a116ed94e8585e359e7dabf05dc99}{M\+U\+L\+F\+\_\+\+H\+A\+N\+D\+LE}}~78
+\item 
+\#define \mbox{\hyperlink{Actions_8h_aceb49ac302d4f3dcfd5287ee09f6ffb6}{D\+I\+V\+F\+\_\+\+H\+A\+N\+D\+LE}}~79
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ad3dae65fb10992f964ae3f9c1b4d7e9a}{M\+O\+D\+F\+\_\+\+H\+A\+N\+D\+LE}}~80
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ace8889da6d37724c779ad870a89cc6f6}{A\+D\+D\+F\+F\+\_\+\+H\+A\+N\+D\+LE}}~81
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a20078f1b6a6032691ff272616602fb1e}{S\+U\+B\+F\+F\+\_\+\+H\+A\+N\+D\+LE}}~82
+\item 
+\#define \mbox{\hyperlink{Actions_8h_aea78b4732229f2a732b55792d22e699d}{M\+U\+L\+F\+F\+\_\+\+H\+A\+N\+D\+LE}}~83
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a127a1f0724aeb79f45ebee177ac36d1c}{D\+I\+V\+F\+F\+\_\+\+H\+A\+N\+D\+LE}}~84
+\item 
+\#define \mbox{\hyperlink{Actions_8h_aa99bd35afb02ee6d67c2312a0224c25f}{M\+O\+D\+F\+F\+\_\+\+H\+A\+N\+D\+LE}}~85
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a801027df69dd328d6b3bc08f3af6ca08}{A\+D\+D\+I\+F\+\_\+\+H\+A\+N\+D\+LE}}~86
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a96985578d242c94c0a29233df22d434f}{S\+U\+B\+I\+F\+\_\+\+H\+A\+N\+D\+LE}}~87
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ab6ee71085755aa5f40c16c7b5f8caaf7}{M\+U\+L\+I\+F\+\_\+\+H\+A\+N\+D\+LE}}~88
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ae0443891c93678897252653838beea25}{D\+I\+V\+I\+F\+\_\+\+H\+A\+N\+D\+LE}}~89
+\item 
+\#define \mbox{\hyperlink{Actions_8h_af1f622a383bc5a37bb8cbeadeb3ac047}{M\+O\+D\+I\+F\+\_\+\+H\+A\+N\+D\+LE}}~90
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a79a2e6a50851f68dbd7fa7703231fa68}{L\+B\+S\+\_\+\+H\+A\+N\+D\+LE}}~91
+\item 
+\#define \mbox{\hyperlink{Actions_8h_aa201bab9643c2aa38aa65915061306b4}{R\+B\+S\+\_\+\+H\+A\+N\+D\+LE}}~92
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a9fe95e91b75fe15eb50a107d62d866f8}{O\+R\+\_\+\+H\+A\+N\+D\+LE}}~93
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a5c4eea1d7acb2e7199c9f5d141263c93}{X\+O\+R\+\_\+\+H\+A\+N\+D\+LE}}~94
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a6934e66a289fd403d0c01202434261e9}{A\+N\+D\+\_\+\+H\+A\+N\+D\+LE}}~95
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a85d9ac6a4a434f52926e1d5b27555c4a}{N\+O\+T\+\_\+\+H\+A\+N\+D\+LE}}~96
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a058da311315924f137e9f0e5f695d5fb}{O\+R\+B\+\_\+\+H\+A\+N\+D\+LE}}~97
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a8e7784f9af117afc29966ab7ef7b6f2e}{X\+O\+R\+B\+\_\+\+H\+A\+N\+D\+LE}}~98
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ae8205508f30665af7dd2e4a6c1d2d282}{A\+N\+D\+B\+\_\+\+H\+A\+N\+D\+LE}}~99
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ac2b71f20f631d35da721f86f8f533049}{N\+O\+T\+B\+\_\+\+H\+A\+N\+D\+LE}}~100
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a89865cf3bec8bc8a3673c27bf29746f1}{L\+B\+S\+I\+P\+\_\+\+H\+A\+N\+D\+LE}}~101
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a1eb0b93e66f5f333f34d849252e8dbc4}{R\+B\+S\+I\+P\+\_\+\+H\+A\+N\+D\+LE}}~102
+\item 
+\#define \mbox{\hyperlink{Actions_8h_affc744424740b6b6590f1c18b13084a8}{O\+R\+I\+P\+\_\+\+H\+A\+N\+D\+LE}}~103
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a8e544f3c48dae923bb95c9e1c0020502}{X\+O\+R\+I\+P\+\_\+\+H\+A\+N\+D\+LE}}~104
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a82cb2c543ea088d4fd599d51d36218b0}{A\+N\+D\+I\+P\+\_\+\+H\+A\+N\+D\+LE}}~105
+\item 
+\#define \mbox{\hyperlink{Actions_8h_aa4fbb99b0d5385df9a8060d54d8f08c3}{N\+O\+T\+I\+P\+\_\+\+H\+A\+N\+D\+LE}}~106
+\item 
+\#define \mbox{\hyperlink{Actions_8h_aa6db8907c04a796a1d657e66969a129d}{O\+R\+B\+I\+P\+\_\+\+H\+A\+N\+D\+LE}}~107
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ad81344d90198b04c22b90de15bda12bc}{X\+O\+R\+B\+I\+P\+\_\+\+H\+A\+N\+D\+LE}}~108
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a0490d3810b0565a990afe853a877523d}{A\+N\+D\+B\+I\+P\+\_\+\+H\+A\+N\+D\+LE}}~109
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ae148f354ecfa6b76d7e6ed20c7ad9648}{N\+O\+T\+B\+I\+P\+\_\+\+H\+A\+N\+D\+LE}}~110
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a39901447f0b8f7b8229f49eb96d4c892}{C\+O\+M\+P\+\_\+\+H\+A\+N\+D\+LE}}~111
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a4d1c7fcd68595fd796353582c503156b}{F\+L\+A\+G\+\_\+\+H\+A\+N\+D\+LE}}~112
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a68be6f1e3d091224fe552ad5dfb5cb39}{R\+O\+U\+T\+I\+N\+E\+\_\+\+H\+A\+N\+D\+LE}}~113
+\item 
+\#define \mbox{\hyperlink{Actions_8h_af81ad80a2fc69f4786f01610643e207b}{J\+M\+P\+\_\+\+H\+A\+N\+D\+LE}}~114
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a6c2a2fc873671615a7956264af075b83}{J\+L\+Z\+\_\+\+H\+A\+N\+D\+LE}}~115
+\item 
+\#define \mbox{\hyperlink{Actions_8h_abba35561d4ace0f26588b533a9360f4c}{J\+G\+Z\+\_\+\+H\+A\+N\+D\+LE}}~116
+\item 
+\#define \mbox{\hyperlink{Actions_8h_af4b853f8e9f23bf8df22d935776a2672}{J\+E\+Z\+\_\+\+H\+A\+N\+D\+LE}}~117
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a1804e03a292f747fb2544b7f4c570354}{J\+L\+T\+\_\+\+H\+A\+N\+D\+LE}}~118
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a2fbeb2ac8064470e4d3a2bcaa9bc25ee}{J\+G\+T\+\_\+\+H\+A\+N\+D\+LE}}~119
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ae00c3c36ce57e048c79a1eca9e08d616}{J\+L\+Z\+N\+\_\+\+H\+A\+N\+D\+LE}}~120
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a0f73d4fb9da61a6d5a957d981ba832c2}{J\+G\+Z\+N\+\_\+\+H\+A\+N\+D\+LE}}~121
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a81238f10671044e3f5c642fdac65a375}{J\+E\+Z\+N\+\_\+\+H\+A\+N\+D\+LE}}~122
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ad761bf54937dadb34b1f38cb9ebc6c90}{J\+L\+T\+N\+\_\+\+H\+A\+N\+D\+LE}}~123
+\item 
+\#define \mbox{\hyperlink{Actions_8h_aff7a4576b5740be1e36d19d520eb774b}{J\+G\+T\+N\+\_\+\+H\+A\+N\+D\+LE}}~124
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a223ecdc540289fb8ac6dcaf5d6f4976a}{J\+M\+P\+R\+\_\+\+H\+A\+N\+D\+LE}}~125
+\item 
+\#define \mbox{\hyperlink{Actions_8h_aa03b7a50cad5b6a71f2f6a8e6ddf7862}{J\+L\+Z\+R\+\_\+\+H\+A\+N\+D\+LE}}~126
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a7eed5269e0656e01edc126a31eedd9db}{J\+G\+Z\+R\+\_\+\+H\+A\+N\+D\+LE}}~127
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ab66d23754ee7438f42e322181b92bc9b}{J\+E\+Z\+R\+\_\+\+H\+A\+N\+D\+LE}}~128
+\item 
+\#define \mbox{\hyperlink{Actions_8h_aff90e1c582195c51636eb5e921d92534}{J\+L\+T\+R\+\_\+\+H\+A\+N\+D\+LE}}~129
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a04e5d6fae7148d6b7a529510744d9382}{J\+G\+T\+R\+\_\+\+H\+A\+N\+D\+LE}}~130
+\item 
+\#define \mbox{\hyperlink{Actions_8h_adc7b227916c83d39786dce4002c3a8d8}{J\+L\+Z\+N\+R\+\_\+\+H\+A\+N\+D\+LE}}~131
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a06a984ea493959ae800d4f0cd031d7f1}{J\+G\+Z\+N\+R\+\_\+\+H\+A\+N\+D\+LE}}~132
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ab27dff3f08ea59041259f8b0d20a786f}{J\+E\+Z\+N\+R\+\_\+\+H\+A\+N\+D\+LE}}~133
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a195260806145aa9458faff8f47d3be8d}{J\+L\+T\+N\+R\+\_\+\+H\+A\+N\+D\+LE}}~134
+\item 
+\#define \mbox{\hyperlink{Actions_8h_aebc9ba512570b143ea7d5b72bf1a6479}{J\+G\+T\+N\+R\+\_\+\+H\+A\+N\+D\+LE}}~135
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a4eae13e6d2c56f946027d053d11b236a}{P\+A\+G\+E\+\_\+\+H\+A\+N\+D\+LE}}~136
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a7e7595c006cbe58a2d459e24a4689986}{P\+A\+G\+E\+A\+W\+\_\+\+H\+A\+N\+D\+LE}}~137
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ae3ccff65febae84a12e41d3daab9b187}{P\+A\+G\+E\+A\+R\+\_\+\+H\+A\+N\+D\+LE}}~138
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a317dae8f185c2eb221e0fd1044276e2c}{P\+A\+G\+E\+W\+\_\+\+H\+A\+N\+D\+LE}}~139
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ab8085cf41c62d9580eb6b70378aaaa2e}{P\+A\+G\+E\+R\+\_\+\+H\+A\+N\+D\+LE}}~140
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a437fcffdce138f538edb13efe32e69aa}{P\+A\+L\+L\+O\+C\+\_\+\+H\+A\+N\+D\+LE}}~141
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ab0e15fb956f72d6c5842f14433374e3a}{P\+F\+R\+E\+E\+\_\+\+H\+A\+N\+D\+LE}}~142
+\item 
+\#define \mbox{\hyperlink{Actions_8h_afcf47f13a02ce1dedb6c8154c103f4b6}{P\+A\+G\+E\+S\+\_\+\+H\+A\+N\+D\+LE}}~143
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a94e4417ea6c326667ee3e2cfe0d92577}{P\+A\+G\+E\+B\+C\+\_\+\+H\+A\+N\+D\+LE}}~144
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a1459530229c259fd85b3c294854bd0df}{P\+A\+S\+S\+I\+G\+N\+\_\+\+H\+A\+N\+D\+LE}}~145
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a2ac8ec5c8d488968ab9451556749d425}{S\+I\+G\+N\+A\+L\+\_\+\+H\+A\+N\+D\+LE}}~146
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ab62db66a7f487a999058292973e4767b}{S\+I\+G\+N\+A\+L\+F\+\_\+\+H\+A\+N\+D\+LE}}~147
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ae3253963f10d2f879f958d61558c56c6}{H\+L\+T\+\_\+\+H\+A\+N\+D\+LE}}~148
+\item 
+\#define \mbox{\hyperlink{Actions_8h_aebbc9faa9d8bfb7390810bd1290fcd57}{H\+C\+F\+\_\+\+H\+A\+N\+D\+LE}}~149
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a800ba203c310d8fc2a1bee7975b825e1}{H\+B\+U\+\_\+\+H\+A\+N\+D\+LE}}~150
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a7af7137aa4871df4235881af377205fe}{A\+C\+T\+I\+ON}}(name)~\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{B\+B\+P\+::std\+::conststring}} B\+B\+P\+::esa\+::kw\+\_\+\#\#name (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context}} $\ast$context, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}} index, \mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+keywordhandle}} handle)
+\item 
+\#define \mbox{\hyperlink{Actions_8h_ac188540cef64cbf870f35a3b6e3724a1}{T\+O\+K\+EN}}(name)~\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{B\+B\+P\+::std\+::conststring}} B\+B\+P\+::esa\+::tk\+\_\+\#\#name (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context}} $\ast$context, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}} index, \mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+keywordhandle}} handle)
+\item 
+\#define \mbox{\hyperlink{Actions_8h_af419120419128cff83cdaa9717fd24b7}{P\+R\+A\+G\+MA}}(name)~\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{B\+B\+P\+::std\+::conststring}} B\+B\+P\+::esa\+::pragma\+\_\+\#\#name (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context}} $\ast$context, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}} index, \mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+keywordhandle}} handle)
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a24e9088f8d0f96ef176b53c350d2b9bb}{I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}(name)~\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{B\+B\+P\+::std\+::conststring}} B\+B\+P\+::esa\+::mn\+\_\+\#\#name (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context}} $\ast$context, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}} index, \mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+keywordhandle}} handle)
+\item 
+\#define \mbox{\hyperlink{Actions_8h_a8d6adf5bb0a3b58d9c8d0078cab93208}{A\+UX}}(name)~\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{B\+B\+P\+::std\+::conststring}} B\+B\+P\+::esa\+::\#\#name (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context}} $\ast$, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}}, \mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+keywordhandle}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a3aff5449e05ebaf7c68478bbffdbae84}{B\+B\+P\+::esa\+::\+P\+R\+A\+G\+MA}} (include)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_aabde672bee184b8ee5064a9bd7b2cc49}{B\+B\+P\+::esa\+::\+P\+R\+A\+G\+MA}} (handler)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a4ae9322cf167da94e4e350d561d48ac5}{B\+B\+P\+::esa\+::\+P\+R\+A\+G\+MA}} (define)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a6967a3e908d9025792f0ccc4f3d3da2b}{B\+B\+P\+::esa\+::\+P\+R\+A\+G\+MA}} (undef)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a6e6dcccd889373eca729083c1cb12230}{B\+B\+P\+::esa\+::\+P\+R\+A\+G\+MA}} (ifndef)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a376a651ef0025ec30379627f00a0991a}{B\+B\+P\+::esa\+::\+P\+R\+A\+G\+MA}} (ifdef)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_ae125979ea909824a16d7d3e091c5a5d1}{B\+B\+P\+::esa\+::\+P\+R\+A\+G\+MA}} (endif)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a4c1978acd11f1c60bc0e3f5cdc0bba3d}{B\+B\+P\+::esa\+::\+P\+R\+A\+G\+MA}} (else)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_af2491b974ed6e5dfd91f988ffbeec55f}{B\+B\+P\+::esa\+::\+P\+R\+A\+G\+MA}} (atomic)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_aa878bfc30ecfba31d53f1bcd4f3396b6}{B\+B\+P\+::esa\+::\+P\+R\+A\+G\+MA}} (handover)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a63ab48c1544c11b30cf7b8973dc3c4a7}{B\+B\+P\+::esa\+::\+P\+R\+A\+G\+MA}} (continue)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a1e219df3520157b5f50076e6e7e7e250}{B\+B\+P\+::esa\+::\+A\+C\+T\+I\+ON}} (static)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a3777ff300b8f0a94ac58e777d8877534}{B\+B\+P\+::esa\+::\+A\+C\+T\+I\+ON}} (const)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_adb2d356e3988d26ce0730f993d09836c}{B\+B\+P\+::esa\+::\+A\+C\+T\+I\+ON}} (virtual)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_afe48c2bb73ee462fb41415d80586657c}{B\+B\+P\+::esa\+::\+A\+C\+T\+I\+ON}} (extern)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a8be66acb92b552dcec6dd4f470e75bf0}{B\+B\+P\+::esa\+::\+A\+C\+T\+I\+ON}} (procedure)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a12036e29fe89ed5f33db3ef83bed0099}{B\+B\+P\+::esa\+::\+A\+C\+T\+I\+ON}} (end)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a378c228d11eb0f5036c884aece1e5076}{B\+B\+P\+::esa\+::\+A\+C\+T\+I\+ON}} (endroutine)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_ac55c91862e5f70653b813af5c314dea7}{B\+B\+P\+::esa\+::\+T\+O\+K\+EN}} (newline)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_af5eb96e9ac657293a30379703b75efba}{B\+B\+P\+::esa\+::\+T\+O\+K\+EN}} (semicolon)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a54588e10bc829ad5d640e64e1356d3ce}{B\+B\+P\+::esa\+::\+T\+O\+K\+EN}} (open\+Delimiter)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a403ba551f1ee42fe1580e8a8512bfa35}{B\+B\+P\+::esa\+::\+T\+O\+K\+EN}} (close\+Delimiter)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_afd3a06bcc97d8fcdfb32a53478282ef2}{B\+B\+P\+::esa\+::\+T\+O\+K\+EN}} (comma)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a82381333342e731dfb93f09c84b51132}{B\+B\+P\+::esa\+::\+T\+O\+K\+EN}} (caret)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_ad4ccb077def20101accff187545f4b6c}{B\+B\+P\+::esa\+::\+T\+O\+K\+EN}} (double\+Quote)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_aceac1883d416f22963a0707658d7e110}{B\+B\+P\+::esa\+::\+T\+O\+K\+EN}} (single\+Quote)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a1823ca27ef7c399993c2afd0120757bc}{B\+B\+P\+::esa\+::\+T\+O\+K\+EN}} (colon)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a65caea5c1472041f390cca7a0e800acf}{B\+B\+P\+::esa\+::\+T\+O\+K\+EN}} (backslash)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a525eca9a0c00d832c8c5fe6722ace044}{B\+B\+P\+::esa\+::\+T\+O\+K\+EN}} (size)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a0eabac2fa0653290ed5f7c42a0d0bbb6}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (nil)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a55556f03ed541d5ddbfcc107383ff4f0}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (stack)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_afbb86002c0e686550b6db9cd18643a01}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (ctrl)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a7270868ee9626ba58f73b71bb6f96068}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (mem)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_acca2dee8b95ee929b51f69e29210ee35}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (inc)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a0f5ace888e2e97c1af4185f776e41157}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (dec)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a044680bbd9543a92f0a1570bca541adf}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (neg)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a5cdbb37fec09abcfa1b655e50ac300f8}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (add)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a2ac383d2a44e8a3bd156c65d6b1123c5}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (sub)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_ab89285ad6ec44b992e18c9319d2e12f7}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (mul)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_aeadf729eb17c492d0e9b1d743c5ee0c0}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (div)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_aeca3f5a97e516916ac87423eca0d6580}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (mod)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_ac11ca03ca0b25d1700c89824d78a5e7c}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (lbs)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a9e1c81f6d4c9b5a295e440e08b9ef7d9}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (rbs)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_ad7a8860a16d4f84a398acbcbf842c76a}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (or)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_ac5fc728568cda6a0f471c198aa1e5860}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (xor)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a6a4d6d7f9a4160ebace06e3406d80fcf}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (and)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a0c5b48d28d842b92e9c1d98bc345ff8e}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (not)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_aae7777096b8691efdf3dc0217d4e740d}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (flag)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_adb650f68a6de04f65e2e794d5b871307}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (jmp)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a47d72095af2aa836db18d4bba248935c}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (jmpc)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_ad6560a0da2c10fe1f6569a19d6f4dc66}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (jmpz)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a2fe6657ee096963c67e0dd789e4fb2e8}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (page)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a6f1c531accfe30525f4742019b07c045}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (signal)
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1esa_a8168478518d83ec93be5b55b7f806980}{B\+B\+P\+::esa\+::\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}} (halt)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{Actions_8h_a7af7137aa4871df4235881af377205fe}\label{Actions_8h_a7af7137aa4871df4235881af377205fe}} 
+\index{Actions.h@{Actions.h}!ACTION@{ACTION}}
+\index{ACTION@{ACTION}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{ACTION}{ACTION}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define A\+C\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{B\+B\+P\+::std\+::conststring}} kw\+\_\+\#\#name (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context}} $\ast$, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}}, \mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+keywordhandle}})}
+
+
+
+Definition at line 273 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a7af7137aa4871df4235881af377205fe}\label{Actions_8h_a7af7137aa4871df4235881af377205fe}} 
+\index{Actions.h@{Actions.h}!ACTION@{ACTION}}
+\index{ACTION@{ACTION}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{ACTION}{ACTION}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define A\+C\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{B\+B\+P\+::std\+::conststring}} B\+B\+P\+::esa\+::kw\+\_\+\#\#name (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context}} $\ast$context, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}} index, \mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+keywordhandle}} handle)}
+
+
+
+Definition at line 273 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ac8f240edadef83e4705be916cfef49fa}\label{Actions_8h_ac8f240edadef83e4705be916cfef49fa}} 
+\index{Actions.h@{Actions.h}!ADD\_HANDLE@{ADD\_HANDLE}}
+\index{ADD\_HANDLE@{ADD\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{ADD\_HANDLE}{ADD\_HANDLE}}
+{\footnotesize\ttfamily \#define A\+D\+D\+\_\+\+H\+A\+N\+D\+LE~68}
+
+
+
+Definition at line 97 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_afc847db53964a49ba3a5642d5c849093}\label{Actions_8h_afc847db53964a49ba3a5642d5c849093}} 
+\index{Actions.h@{Actions.h}!ADDF\_HANDLE@{ADDF\_HANDLE}}
+\index{ADDF\_HANDLE@{ADDF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{ADDF\_HANDLE}{ADDF\_HANDLE}}
+{\footnotesize\ttfamily \#define A\+D\+D\+F\+\_\+\+H\+A\+N\+D\+LE~76}
+
+
+
+Definition at line 105 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ace8889da6d37724c779ad870a89cc6f6}\label{Actions_8h_ace8889da6d37724c779ad870a89cc6f6}} 
+\index{Actions.h@{Actions.h}!ADDFF\_HANDLE@{ADDFF\_HANDLE}}
+\index{ADDFF\_HANDLE@{ADDFF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{ADDFF\_HANDLE}{ADDFF\_HANDLE}}
+{\footnotesize\ttfamily \#define A\+D\+D\+F\+F\+\_\+\+H\+A\+N\+D\+LE~81}
+
+
+
+Definition at line 110 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a801027df69dd328d6b3bc08f3af6ca08}\label{Actions_8h_a801027df69dd328d6b3bc08f3af6ca08}} 
+\index{Actions.h@{Actions.h}!ADDIF\_HANDLE@{ADDIF\_HANDLE}}
+\index{ADDIF\_HANDLE@{ADDIF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{ADDIF\_HANDLE}{ADDIF\_HANDLE}}
+{\footnotesize\ttfamily \#define A\+D\+D\+I\+F\+\_\+\+H\+A\+N\+D\+LE~86}
+
+
+
+Definition at line 115 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a6934e66a289fd403d0c01202434261e9}\label{Actions_8h_a6934e66a289fd403d0c01202434261e9}} 
+\index{Actions.h@{Actions.h}!AND\_HANDLE@{AND\_HANDLE}}
+\index{AND\_HANDLE@{AND\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{AND\_HANDLE}{AND\_HANDLE}}
+{\footnotesize\ttfamily \#define A\+N\+D\+\_\+\+H\+A\+N\+D\+LE~95}
+
+
+
+Definition at line 125 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ae8205508f30665af7dd2e4a6c1d2d282}\label{Actions_8h_ae8205508f30665af7dd2e4a6c1d2d282}} 
+\index{Actions.h@{Actions.h}!ANDB\_HANDLE@{ANDB\_HANDLE}}
+\index{ANDB\_HANDLE@{ANDB\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{ANDB\_HANDLE}{ANDB\_HANDLE}}
+{\footnotesize\ttfamily \#define A\+N\+D\+B\+\_\+\+H\+A\+N\+D\+LE~99}
+
+
+
+Definition at line 129 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a0490d3810b0565a990afe853a877523d}\label{Actions_8h_a0490d3810b0565a990afe853a877523d}} 
+\index{Actions.h@{Actions.h}!ANDBIP\_HANDLE@{ANDBIP\_HANDLE}}
+\index{ANDBIP\_HANDLE@{ANDBIP\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{ANDBIP\_HANDLE}{ANDBIP\_HANDLE}}
+{\footnotesize\ttfamily \#define A\+N\+D\+B\+I\+P\+\_\+\+H\+A\+N\+D\+LE~109}
+
+
+
+Definition at line 139 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a82cb2c543ea088d4fd599d51d36218b0}\label{Actions_8h_a82cb2c543ea088d4fd599d51d36218b0}} 
+\index{Actions.h@{Actions.h}!ANDIP\_HANDLE@{ANDIP\_HANDLE}}
+\index{ANDIP\_HANDLE@{ANDIP\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{ANDIP\_HANDLE}{ANDIP\_HANDLE}}
+{\footnotesize\ttfamily \#define A\+N\+D\+I\+P\+\_\+\+H\+A\+N\+D\+LE~105}
+
+
+
+Definition at line 135 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a13d01f6174ddc9bc48e6dc2807316a5d}\label{Actions_8h_a13d01f6174ddc9bc48e6dc2807316a5d}} 
+\index{Actions.h@{Actions.h}!ATOMIC\_HANDLE@{ATOMIC\_HANDLE}}
+\index{ATOMIC\_HANDLE@{ATOMIC\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{ATOMIC\_HANDLE}{ATOMIC\_HANDLE}}
+{\footnotesize\ttfamily \#define A\+T\+O\+M\+I\+C\+\_\+\+H\+A\+N\+D\+LE~8}
+
+
+
+Definition at line 19 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a8d6adf5bb0a3b58d9c8d0078cab93208}\label{Actions_8h_a8d6adf5bb0a3b58d9c8d0078cab93208}} 
+\index{Actions.h@{Actions.h}!AUX@{AUX}}
+\index{AUX@{AUX}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{AUX}{AUX}}
+{\footnotesize\ttfamily \#define A\+UX(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{B\+B\+P\+::std\+::conststring}} B\+B\+P\+::esa\+::\#\#name (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context}} $\ast$, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}}, \mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+keywordhandle}})}
+
+
+
+Definition at line 277 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a0481b553e7b5e7d7af3cd579814dd46f}\label{Actions_8h_a0481b553e7b5e7d7af3cd579814dd46f}} 
+\index{Actions.h@{Actions.h}!BACKSLASH\_HANDLE@{BACKSLASH\_HANDLE}}
+\index{BACKSLASH\_HANDLE@{BACKSLASH\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{BACKSLASH\_HANDLE}{BACKSLASH\_HANDLE}}
+{\footnotesize\ttfamily \#define B\+A\+C\+K\+S\+L\+A\+S\+H\+\_\+\+H\+A\+N\+D\+LE~34}
+
+
+
+Definition at line 47 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a6373b427d0028fc3ca7f995a907a058b}\label{Actions_8h_a6373b427d0028fc3ca7f995a907a058b}} 
+\index{Actions.h@{Actions.h}!CALL\_HANDLE@{CALL\_HANDLE}}
+\index{CALL\_HANDLE@{CALL\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{CALL\_HANDLE}{CALL\_HANDLE}}
+{\footnotesize\ttfamily \#define C\+A\+L\+L\+\_\+\+H\+A\+N\+D\+LE~46}
+
+
+
+Definition at line 66 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a1982106cdc9a13afe3fc43baac78c002}\label{Actions_8h_a1982106cdc9a13afe3fc43baac78c002}} 
+\index{Actions.h@{Actions.h}!CALLP\_HANDLE@{CALLP\_HANDLE}}
+\index{CALLP\_HANDLE@{CALLP\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{CALLP\_HANDLE}{CALLP\_HANDLE}}
+{\footnotesize\ttfamily \#define C\+A\+L\+L\+P\+\_\+\+H\+A\+N\+D\+LE~47}
+
+
+
+Definition at line 67 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a736853e755f060d21eae116225fea002}\label{Actions_8h_a736853e755f060d21eae116225fea002}} 
+\index{Actions.h@{Actions.h}!CARRIAGERETURN\_HANDLE@{CARRIAGERETURN\_HANDLE}}
+\index{CARRIAGERETURN\_HANDLE@{CARRIAGERETURN\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{CARRIAGERETURN\_HANDLE}{CARRIAGERETURN\_HANDLE}}
+{\footnotesize\ttfamily \#define C\+A\+R\+R\+I\+A\+G\+E\+R\+E\+T\+U\+R\+N\+\_\+\+H\+A\+N\+D\+LE~18}
+
+
+
+Definition at line 31 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a5ae751ccff9610e8fc38ff16b14d547b}\label{Actions_8h_a5ae751ccff9610e8fc38ff16b14d547b}} 
+\index{Actions.h@{Actions.h}!CLOSEANGLEBRACKET\_HANDLE@{CLOSEANGLEBRACKET\_HANDLE}}
+\index{CLOSEANGLEBRACKET\_HANDLE@{CLOSEANGLEBRACKET\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{CLOSEANGLEBRACKET\_HANDLE}{CLOSEANGLEBRACKET\_HANDLE}}
+{\footnotesize\ttfamily \#define C\+L\+O\+S\+E\+A\+N\+G\+L\+E\+B\+R\+A\+C\+K\+E\+T\+\_\+\+H\+A\+N\+D\+LE~30}
+
+
+
+Definition at line 43 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a9815d692ecdb81af880e92966029c1a5}\label{Actions_8h_a9815d692ecdb81af880e92966029c1a5}} 
+\index{Actions.h@{Actions.h}!CLOSEBRACKET\_HANDLE@{CLOSEBRACKET\_HANDLE}}
+\index{CLOSEBRACKET\_HANDLE@{CLOSEBRACKET\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{CLOSEBRACKET\_HANDLE}{CLOSEBRACKET\_HANDLE}}
+{\footnotesize\ttfamily \#define C\+L\+O\+S\+E\+B\+R\+A\+C\+K\+E\+T\+\_\+\+H\+A\+N\+D\+LE~22}
+
+
+
+Definition at line 35 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a34f426c1f2b22f6d22f9c9102b5803ae}\label{Actions_8h_a34f426c1f2b22f6d22f9c9102b5803ae}} 
+\index{Actions.h@{Actions.h}!CLOSECURLBRACKET\_HANDLE@{CLOSECURLBRACKET\_HANDLE}}
+\index{CLOSECURLBRACKET\_HANDLE@{CLOSECURLBRACKET\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{CLOSECURLBRACKET\_HANDLE}{CLOSECURLBRACKET\_HANDLE}}
+{\footnotesize\ttfamily \#define C\+L\+O\+S\+E\+C\+U\+R\+L\+B\+R\+A\+C\+K\+E\+T\+\_\+\+H\+A\+N\+D\+LE~27}
+
+
+
+Definition at line 40 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a34ded8797bbf5153d00ac8528a70b5c0}\label{Actions_8h_a34ded8797bbf5153d00ac8528a70b5c0}} 
+\index{Actions.h@{Actions.h}!CLOSESQBRACKET\_HANDLE@{CLOSESQBRACKET\_HANDLE}}
+\index{CLOSESQBRACKET\_HANDLE@{CLOSESQBRACKET\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{CLOSESQBRACKET\_HANDLE}{CLOSESQBRACKET\_HANDLE}}
+{\footnotesize\ttfamily \#define C\+L\+O\+S\+E\+S\+Q\+B\+R\+A\+C\+K\+E\+T\+\_\+\+H\+A\+N\+D\+LE~25}
+
+
+
+Definition at line 38 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a6bb8cde05e47a76ddd97557b571d1199}\label{Actions_8h_a6bb8cde05e47a76ddd97557b571d1199}} 
+\index{Actions.h@{Actions.h}!COLON\_HANDLE@{COLON\_HANDLE}}
+\index{COLON\_HANDLE@{COLON\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{COLON\_HANDLE}{COLON\_HANDLE}}
+{\footnotesize\ttfamily \#define C\+O\+L\+O\+N\+\_\+\+H\+A\+N\+D\+LE~33}
+
+
+
+Definition at line 46 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ab9c1bc2b6752e2559e8234b3ed0cc6a3}\label{Actions_8h_ab9c1bc2b6752e2559e8234b3ed0cc6a3}} 
+\index{Actions.h@{Actions.h}!COMMA\_HANDLE@{COMMA\_HANDLE}}
+\index{COMMA\_HANDLE@{COMMA\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{COMMA\_HANDLE}{COMMA\_HANDLE}}
+{\footnotesize\ttfamily \#define C\+O\+M\+M\+A\+\_\+\+H\+A\+N\+D\+LE~23}
+
+
+
+Definition at line 36 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a39901447f0b8f7b8229f49eb96d4c892}\label{Actions_8h_a39901447f0b8f7b8229f49eb96d4c892}} 
+\index{Actions.h@{Actions.h}!COMP\_HANDLE@{COMP\_HANDLE}}
+\index{COMP\_HANDLE@{COMP\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{COMP\_HANDLE}{COMP\_HANDLE}}
+{\footnotesize\ttfamily \#define C\+O\+M\+P\+\_\+\+H\+A\+N\+D\+LE~111}
+
+
+
+Definition at line 143 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_af62e50b4be3a5c9ed141a37679d60cb9}\label{Actions_8h_af62e50b4be3a5c9ed141a37679d60cb9}} 
+\index{Actions.h@{Actions.h}!CONST\_HANDLE@{CONST\_HANDLE}}
+\index{CONST\_HANDLE@{CONST\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{CONST\_HANDLE}{CONST\_HANDLE}}
+{\footnotesize\ttfamily \#define C\+O\+N\+S\+T\+\_\+\+H\+A\+N\+D\+LE~12}
+
+
+
+Definition at line 24 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_af4cab135a235aba514747e8ae0ec373f}\label{Actions_8h_af4cab135a235aba514747e8ae0ec373f}} 
+\index{Actions.h@{Actions.h}!CONTINUE\_HANDLE@{CONTINUE\_HANDLE}}
+\index{CONTINUE\_HANDLE@{CONTINUE\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{CONTINUE\_HANDLE}{CONTINUE\_HANDLE}}
+{\footnotesize\ttfamily \#define C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+H\+A\+N\+D\+LE~10}
+
+
+
+Definition at line 21 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ae757079b8fc8ac39ea1608e7685d21aa}\label{Actions_8h_ae757079b8fc8ac39ea1608e7685d21aa}} 
+\index{Actions.h@{Actions.h}!DA\_HANDLE@{DA\_HANDLE}}
+\index{DA\_HANDLE@{DA\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{DA\_HANDLE}{DA\_HANDLE}}
+{\footnotesize\ttfamily \#define D\+A\+\_\+\+H\+A\+N\+D\+LE~39}
+
+
+
+Definition at line 53 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a3d712f3c2229eea728e746b3bbb85b41}\label{Actions_8h_a3d712f3c2229eea728e746b3bbb85b41}} 
+\index{Actions.h@{Actions.h}!DB\_HANDLE@{DB\_HANDLE}}
+\index{DB\_HANDLE@{DB\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{DB\_HANDLE}{DB\_HANDLE}}
+{\footnotesize\ttfamily \#define D\+B\+\_\+\+H\+A\+N\+D\+LE~36}
+
+
+
+Definition at line 50 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a4f53a6f50b0041abe78e1a5c36f1c95c}\label{Actions_8h_a4f53a6f50b0041abe78e1a5c36f1c95c}} 
+\index{Actions.h@{Actions.h}!DEC\_HANDLE@{DEC\_HANDLE}}
+\index{DEC\_HANDLE@{DEC\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{DEC\_HANDLE}{DEC\_HANDLE}}
+{\footnotesize\ttfamily \#define D\+E\+C\+\_\+\+H\+A\+N\+D\+LE~66}
+
+
+
+Definition at line 95 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a356c1d82ecef2476a0e9fe74a6da9ab6}\label{Actions_8h_a356c1d82ecef2476a0e9fe74a6da9ab6}} 
+\index{Actions.h@{Actions.h}!DECF\_HANDLE@{DECF\_HANDLE}}
+\index{DECF\_HANDLE@{DECF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{DECF\_HANDLE}{DECF\_HANDLE}}
+{\footnotesize\ttfamily \#define D\+E\+C\+F\+\_\+\+H\+A\+N\+D\+LE~74}
+
+
+
+Definition at line 103 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a3e812f3ba658df77466f1a7540216206}\label{Actions_8h_a3e812f3ba658df77466f1a7540216206}} 
+\index{Actions.h@{Actions.h}!DEFINE\_HANDLE@{DEFINE\_HANDLE}}
+\index{DEFINE\_HANDLE@{DEFINE\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_HANDLE}{DEFINE\_HANDLE}}
+{\footnotesize\ttfamily \#define D\+E\+F\+I\+N\+E\+\_\+\+H\+A\+N\+D\+LE~2}
+
+
+
+Definition at line 13 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a7294537c03fd41dd542a2fa821e99a68}\label{Actions_8h_a7294537c03fd41dd542a2fa821e99a68}} 
+\index{Actions.h@{Actions.h}!DH\_HANDLE@{DH\_HANDLE}}
+\index{DH\_HANDLE@{DH\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{DH\_HANDLE}{DH\_HANDLE}}
+{\footnotesize\ttfamily \#define D\+H\+\_\+\+H\+A\+N\+D\+LE~37}
+
+
+
+Definition at line 51 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a3bae7fe329e3dfcdb145912710145ca1}\label{Actions_8h_a3bae7fe329e3dfcdb145912710145ca1}} 
+\index{Actions.h@{Actions.h}!DI\_HANDLE@{DI\_HANDLE}}
+\index{DI\_HANDLE@{DI\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{DI\_HANDLE}{DI\_HANDLE}}
+{\footnotesize\ttfamily \#define D\+I\+\_\+\+H\+A\+N\+D\+LE~38}
+
+
+
+Definition at line 52 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ab04442d320ea332b6edfc397bf6cb0d0}\label{Actions_8h_ab04442d320ea332b6edfc397bf6cb0d0}} 
+\index{Actions.h@{Actions.h}!DIV\_HANDLE@{DIV\_HANDLE}}
+\index{DIV\_HANDLE@{DIV\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{DIV\_HANDLE}{DIV\_HANDLE}}
+{\footnotesize\ttfamily \#define D\+I\+V\+\_\+\+H\+A\+N\+D\+LE~71}
+
+
+
+Definition at line 100 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_aceb49ac302d4f3dcfd5287ee09f6ffb6}\label{Actions_8h_aceb49ac302d4f3dcfd5287ee09f6ffb6}} 
+\index{Actions.h@{Actions.h}!DIVF\_HANDLE@{DIVF\_HANDLE}}
+\index{DIVF\_HANDLE@{DIVF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{DIVF\_HANDLE}{DIVF\_HANDLE}}
+{\footnotesize\ttfamily \#define D\+I\+V\+F\+\_\+\+H\+A\+N\+D\+LE~79}
+
+
+
+Definition at line 108 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a127a1f0724aeb79f45ebee177ac36d1c}\label{Actions_8h_a127a1f0724aeb79f45ebee177ac36d1c}} 
+\index{Actions.h@{Actions.h}!DIVFF\_HANDLE@{DIVFF\_HANDLE}}
+\index{DIVFF\_HANDLE@{DIVFF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{DIVFF\_HANDLE}{DIVFF\_HANDLE}}
+{\footnotesize\ttfamily \#define D\+I\+V\+F\+F\+\_\+\+H\+A\+N\+D\+LE~84}
+
+
+
+Definition at line 113 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ae0443891c93678897252653838beea25}\label{Actions_8h_ae0443891c93678897252653838beea25}} 
+\index{Actions.h@{Actions.h}!DIVIF\_HANDLE@{DIVIF\_HANDLE}}
+\index{DIVIF\_HANDLE@{DIVIF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{DIVIF\_HANDLE}{DIVIF\_HANDLE}}
+{\footnotesize\ttfamily \#define D\+I\+V\+I\+F\+\_\+\+H\+A\+N\+D\+LE~89}
+
+
+
+Definition at line 118 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_aac93e56e3e4582835f9f3e1db421f5e0}\label{Actions_8h_aac93e56e3e4582835f9f3e1db421f5e0}} 
+\index{Actions.h@{Actions.h}!DN\_HANDLE@{DN\_HANDLE}}
+\index{DN\_HANDLE@{DN\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{DN\_HANDLE}{DN\_HANDLE}}
+{\footnotesize\ttfamily \#define D\+N\+\_\+\+H\+A\+N\+D\+LE~35}
+
+
+
+Definition at line 49 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ad5ee3660d6bc9b17edf23a8f0d37ca26}\label{Actions_8h_ad5ee3660d6bc9b17edf23a8f0d37ca26}} 
+\index{Actions.h@{Actions.h}!DOUBLEQUOTES\_HANDLE@{DOUBLEQUOTES\_HANDLE}}
+\index{DOUBLEQUOTES\_HANDLE@{DOUBLEQUOTES\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{DOUBLEQUOTES\_HANDLE}{DOUBLEQUOTES\_HANDLE}}
+{\footnotesize\ttfamily \#define D\+O\+U\+B\+L\+E\+Q\+U\+O\+T\+E\+S\+\_\+\+H\+A\+N\+D\+LE~31}
+
+
+
+Definition at line 44 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ae260e7c7e18cf74d7e055d27347735f9}\label{Actions_8h_ae260e7c7e18cf74d7e055d27347735f9}} 
+\index{Actions.h@{Actions.h}!DW\_HANDLE@{DW\_HANDLE}}
+\index{DW\_HANDLE@{DW\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{DW\_HANDLE}{DW\_HANDLE}}
+{\footnotesize\ttfamily \#define D\+W\+\_\+\+H\+A\+N\+D\+LE~40}
+
+
+
+Definition at line 54 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a79b87217d2decc6fd6580e484f17fef6}\label{Actions_8h_a79b87217d2decc6fd6580e484f17fef6}} 
+\index{Actions.h@{Actions.h}!ELSE\_HANDLE@{ELSE\_HANDLE}}
+\index{ELSE\_HANDLE@{ELSE\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{ELSE\_HANDLE}{ELSE\_HANDLE}}
+{\footnotesize\ttfamily \#define E\+L\+S\+E\+\_\+\+H\+A\+N\+D\+LE~7}
+
+
+
+Definition at line 18 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ac8ee9127993d812f62643f325e6e0f31}\label{Actions_8h_ac8ee9127993d812f62643f325e6e0f31}} 
+\index{Actions.h@{Actions.h}!END\_HANDLE@{END\_HANDLE}}
+\index{END\_HANDLE@{END\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{END\_HANDLE}{END\_HANDLE}}
+{\footnotesize\ttfamily \#define E\+N\+D\+\_\+\+H\+A\+N\+D\+LE~16}
+
+
+
+Definition at line 28 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a49996e5d6dc3780947a6e5b6e2fa8bb2}\label{Actions_8h_a49996e5d6dc3780947a6e5b6e2fa8bb2}} 
+\index{Actions.h@{Actions.h}!ENDIF\_HANDLE@{ENDIF\_HANDLE}}
+\index{ENDIF\_HANDLE@{ENDIF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{ENDIF\_HANDLE}{ENDIF\_HANDLE}}
+{\footnotesize\ttfamily \#define E\+N\+D\+I\+F\+\_\+\+H\+A\+N\+D\+LE~6}
+
+
+
+Definition at line 17 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a2b33af8608968100ff6971b8c1e91ac8}\label{Actions_8h_a2b33af8608968100ff6971b8c1e91ac8}} 
+\index{Actions.h@{Actions.h}!EXTERN\_HANDLE@{EXTERN\_HANDLE}}
+\index{EXTERN\_HANDLE@{EXTERN\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{EXTERN\_HANDLE}{EXTERN\_HANDLE}}
+{\footnotesize\ttfamily \#define E\+X\+T\+E\+R\+N\+\_\+\+H\+A\+N\+D\+LE~14}
+
+
+
+Definition at line 26 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a4d1c7fcd68595fd796353582c503156b}\label{Actions_8h_a4d1c7fcd68595fd796353582c503156b}} 
+\index{Actions.h@{Actions.h}!FLAG\_HANDLE@{FLAG\_HANDLE}}
+\index{FLAG\_HANDLE@{FLAG\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{FLAG\_HANDLE}{FLAG\_HANDLE}}
+{\footnotesize\ttfamily \#define F\+L\+A\+G\+\_\+\+H\+A\+N\+D\+LE~112}
+
+
+
+Definition at line 144 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a85611afba9977b3d43a734488380665c}\label{Actions_8h_a85611afba9977b3d43a734488380665c}} 
+\index{Actions.h@{Actions.h}!HANDLER\_HANDLE@{HANDLER\_HANDLE}}
+\index{HANDLER\_HANDLE@{HANDLER\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{HANDLER\_HANDLE}{HANDLER\_HANDLE}}
+{\footnotesize\ttfamily \#define H\+A\+N\+D\+L\+E\+R\+\_\+\+H\+A\+N\+D\+LE~1}
+
+
+
+Definition at line 12 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a439e090ace5dba153dade39ab4495e2a}\label{Actions_8h_a439e090ace5dba153dade39ab4495e2a}} 
+\index{Actions.h@{Actions.h}!HANDOVER\_HANDLE@{HANDOVER\_HANDLE}}
+\index{HANDOVER\_HANDLE@{HANDOVER\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{HANDOVER\_HANDLE}{HANDOVER\_HANDLE}}
+{\footnotesize\ttfamily \#define H\+A\+N\+D\+O\+V\+E\+R\+\_\+\+H\+A\+N\+D\+LE~9}
+
+
+
+Definition at line 20 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a800ba203c310d8fc2a1bee7975b825e1}\label{Actions_8h_a800ba203c310d8fc2a1bee7975b825e1}} 
+\index{Actions.h@{Actions.h}!HBU\_HANDLE@{HBU\_HANDLE}}
+\index{HBU\_HANDLE@{HBU\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{HBU\_HANDLE}{HBU\_HANDLE}}
+{\footnotesize\ttfamily \#define H\+B\+U\+\_\+\+H\+A\+N\+D\+LE~150}
+
+
+
+Definition at line 192 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_aebbc9faa9d8bfb7390810bd1290fcd57}\label{Actions_8h_aebbc9faa9d8bfb7390810bd1290fcd57}} 
+\index{Actions.h@{Actions.h}!HCF\_HANDLE@{HCF\_HANDLE}}
+\index{HCF\_HANDLE@{HCF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{HCF\_HANDLE}{HCF\_HANDLE}}
+{\footnotesize\ttfamily \#define H\+C\+F\+\_\+\+H\+A\+N\+D\+LE~149}
+
+
+
+Definition at line 191 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ae3253963f10d2f879f958d61558c56c6}\label{Actions_8h_ae3253963f10d2f879f958d61558c56c6}} 
+\index{Actions.h@{Actions.h}!HLT\_HANDLE@{HLT\_HANDLE}}
+\index{HLT\_HANDLE@{HLT\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{HLT\_HANDLE}{HLT\_HANDLE}}
+{\footnotesize\ttfamily \#define H\+L\+T\+\_\+\+H\+A\+N\+D\+LE~148}
+
+
+
+Definition at line 190 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ac68da7bf308f1b4be4cf9c188e60355d}\label{Actions_8h_ac68da7bf308f1b4be4cf9c188e60355d}} 
+\index{Actions.h@{Actions.h}!IFDEF\_HANDLE@{IFDEF\_HANDLE}}
+\index{IFDEF\_HANDLE@{IFDEF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{IFDEF\_HANDLE}{IFDEF\_HANDLE}}
+{\footnotesize\ttfamily \#define I\+F\+D\+E\+F\+\_\+\+H\+A\+N\+D\+LE~5}
+
+
+
+Definition at line 16 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ad03637c21b5f3a2ad1d8fd1d6f443024}\label{Actions_8h_ad03637c21b5f3a2ad1d8fd1d6f443024}} 
+\index{Actions.h@{Actions.h}!IFNDEF\_HANDLE@{IFNDEF\_HANDLE}}
+\index{IFNDEF\_HANDLE@{IFNDEF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{IFNDEF\_HANDLE}{IFNDEF\_HANDLE}}
+{\footnotesize\ttfamily \#define I\+F\+N\+D\+E\+F\+\_\+\+H\+A\+N\+D\+LE~4}
+
+
+
+Definition at line 15 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_aa85063241f88332570dff45d721015bc}\label{Actions_8h_aa85063241f88332570dff45d721015bc}} 
+\index{Actions.h@{Actions.h}!INC\_HANDLE@{INC\_HANDLE}}
+\index{INC\_HANDLE@{INC\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{INC\_HANDLE}{INC\_HANDLE}}
+{\footnotesize\ttfamily \#define I\+N\+C\+\_\+\+H\+A\+N\+D\+LE~65}
+
+
+
+Definition at line 94 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a822c7e9d4d9e723afb41a61a75104b81}\label{Actions_8h_a822c7e9d4d9e723afb41a61a75104b81}} 
+\index{Actions.h@{Actions.h}!INCF\_HANDLE@{INCF\_HANDLE}}
+\index{INCF\_HANDLE@{INCF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{INCF\_HANDLE}{INCF\_HANDLE}}
+{\footnotesize\ttfamily \#define I\+N\+C\+F\+\_\+\+H\+A\+N\+D\+LE~73}
+
+
+
+Definition at line 102 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_afb5105ae0e7c3ed2b2146e7bc2967edd}\label{Actions_8h_afb5105ae0e7c3ed2b2146e7bc2967edd}} 
+\index{Actions.h@{Actions.h}!INCLUDE\_HANDLE@{INCLUDE\_HANDLE}}
+\index{INCLUDE\_HANDLE@{INCLUDE\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{INCLUDE\_HANDLE}{INCLUDE\_HANDLE}}
+{\footnotesize\ttfamily \#define I\+N\+C\+L\+U\+D\+E\+\_\+\+H\+A\+N\+D\+LE~0}
+
+
+
+Definition at line 11 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a24e9088f8d0f96ef176b53c350d2b9bb}\label{Actions_8h_a24e9088f8d0f96ef176b53c350d2b9bb}} 
+\index{Actions.h@{Actions.h}!INSTRUCTION@{INSTRUCTION}}
+\index{INSTRUCTION@{INSTRUCTION}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{INSTRUCTION}{INSTRUCTION}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define I\+N\+S\+T\+R\+U\+C\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{B\+B\+P\+::std\+::conststring}} mn\+\_\+\#\#name (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context}} $\ast$, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}}, \mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+keywordhandle}})}
+
+
+
+Definition at line 276 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a24e9088f8d0f96ef176b53c350d2b9bb}\label{Actions_8h_a24e9088f8d0f96ef176b53c350d2b9bb}} 
+\index{Actions.h@{Actions.h}!INSTRUCTION@{INSTRUCTION}}
+\index{INSTRUCTION@{INSTRUCTION}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{INSTRUCTION}{INSTRUCTION}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define I\+N\+S\+T\+R\+U\+C\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{B\+B\+P\+::std\+::conststring}} B\+B\+P\+::esa\+::mn\+\_\+\#\#name (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context}} $\ast$context, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}} index, \mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+keywordhandle}} handle)}
+
+
+
+Definition at line 276 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_af4b853f8e9f23bf8df22d935776a2672}\label{Actions_8h_af4b853f8e9f23bf8df22d935776a2672}} 
+\index{Actions.h@{Actions.h}!JEZ\_HANDLE@{JEZ\_HANDLE}}
+\index{JEZ\_HANDLE@{JEZ\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{JEZ\_HANDLE}{JEZ\_HANDLE}}
+{\footnotesize\ttfamily \#define J\+E\+Z\+\_\+\+H\+A\+N\+D\+LE~117}
+
+
+
+Definition at line 153 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a81238f10671044e3f5c642fdac65a375}\label{Actions_8h_a81238f10671044e3f5c642fdac65a375}} 
+\index{Actions.h@{Actions.h}!JEZN\_HANDLE@{JEZN\_HANDLE}}
+\index{JEZN\_HANDLE@{JEZN\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{JEZN\_HANDLE}{JEZN\_HANDLE}}
+{\footnotesize\ttfamily \#define J\+E\+Z\+N\+\_\+\+H\+A\+N\+D\+LE~122}
+
+
+
+Definition at line 158 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ab27dff3f08ea59041259f8b0d20a786f}\label{Actions_8h_ab27dff3f08ea59041259f8b0d20a786f}} 
+\index{Actions.h@{Actions.h}!JEZNR\_HANDLE@{JEZNR\_HANDLE}}
+\index{JEZNR\_HANDLE@{JEZNR\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{JEZNR\_HANDLE}{JEZNR\_HANDLE}}
+{\footnotesize\ttfamily \#define J\+E\+Z\+N\+R\+\_\+\+H\+A\+N\+D\+LE~133}
+
+
+
+Definition at line 169 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ab66d23754ee7438f42e322181b92bc9b}\label{Actions_8h_ab66d23754ee7438f42e322181b92bc9b}} 
+\index{Actions.h@{Actions.h}!JEZR\_HANDLE@{JEZR\_HANDLE}}
+\index{JEZR\_HANDLE@{JEZR\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{JEZR\_HANDLE}{JEZR\_HANDLE}}
+{\footnotesize\ttfamily \#define J\+E\+Z\+R\+\_\+\+H\+A\+N\+D\+LE~128}
+
+
+
+Definition at line 164 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a2fbeb2ac8064470e4d3a2bcaa9bc25ee}\label{Actions_8h_a2fbeb2ac8064470e4d3a2bcaa9bc25ee}} 
+\index{Actions.h@{Actions.h}!JGT\_HANDLE@{JGT\_HANDLE}}
+\index{JGT\_HANDLE@{JGT\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{JGT\_HANDLE}{JGT\_HANDLE}}
+{\footnotesize\ttfamily \#define J\+G\+T\+\_\+\+H\+A\+N\+D\+LE~119}
+
+
+
+Definition at line 155 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_aff7a4576b5740be1e36d19d520eb774b}\label{Actions_8h_aff7a4576b5740be1e36d19d520eb774b}} 
+\index{Actions.h@{Actions.h}!JGTN\_HANDLE@{JGTN\_HANDLE}}
+\index{JGTN\_HANDLE@{JGTN\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{JGTN\_HANDLE}{JGTN\_HANDLE}}
+{\footnotesize\ttfamily \#define J\+G\+T\+N\+\_\+\+H\+A\+N\+D\+LE~124}
+
+
+
+Definition at line 160 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_aebc9ba512570b143ea7d5b72bf1a6479}\label{Actions_8h_aebc9ba512570b143ea7d5b72bf1a6479}} 
+\index{Actions.h@{Actions.h}!JGTNR\_HANDLE@{JGTNR\_HANDLE}}
+\index{JGTNR\_HANDLE@{JGTNR\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{JGTNR\_HANDLE}{JGTNR\_HANDLE}}
+{\footnotesize\ttfamily \#define J\+G\+T\+N\+R\+\_\+\+H\+A\+N\+D\+LE~135}
+
+
+
+Definition at line 171 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a04e5d6fae7148d6b7a529510744d9382}\label{Actions_8h_a04e5d6fae7148d6b7a529510744d9382}} 
+\index{Actions.h@{Actions.h}!JGTR\_HANDLE@{JGTR\_HANDLE}}
+\index{JGTR\_HANDLE@{JGTR\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{JGTR\_HANDLE}{JGTR\_HANDLE}}
+{\footnotesize\ttfamily \#define J\+G\+T\+R\+\_\+\+H\+A\+N\+D\+LE~130}
+
+
+
+Definition at line 166 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_abba35561d4ace0f26588b533a9360f4c}\label{Actions_8h_abba35561d4ace0f26588b533a9360f4c}} 
+\index{Actions.h@{Actions.h}!JGZ\_HANDLE@{JGZ\_HANDLE}}
+\index{JGZ\_HANDLE@{JGZ\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{JGZ\_HANDLE}{JGZ\_HANDLE}}
+{\footnotesize\ttfamily \#define J\+G\+Z\+\_\+\+H\+A\+N\+D\+LE~116}
+
+
+
+Definition at line 152 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a0f73d4fb9da61a6d5a957d981ba832c2}\label{Actions_8h_a0f73d4fb9da61a6d5a957d981ba832c2}} 
+\index{Actions.h@{Actions.h}!JGZN\_HANDLE@{JGZN\_HANDLE}}
+\index{JGZN\_HANDLE@{JGZN\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{JGZN\_HANDLE}{JGZN\_HANDLE}}
+{\footnotesize\ttfamily \#define J\+G\+Z\+N\+\_\+\+H\+A\+N\+D\+LE~121}
+
+
+
+Definition at line 157 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a06a984ea493959ae800d4f0cd031d7f1}\label{Actions_8h_a06a984ea493959ae800d4f0cd031d7f1}} 
+\index{Actions.h@{Actions.h}!JGZNR\_HANDLE@{JGZNR\_HANDLE}}
+\index{JGZNR\_HANDLE@{JGZNR\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{JGZNR\_HANDLE}{JGZNR\_HANDLE}}
+{\footnotesize\ttfamily \#define J\+G\+Z\+N\+R\+\_\+\+H\+A\+N\+D\+LE~132}
+
+
+
+Definition at line 168 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a7eed5269e0656e01edc126a31eedd9db}\label{Actions_8h_a7eed5269e0656e01edc126a31eedd9db}} 
+\index{Actions.h@{Actions.h}!JGZR\_HANDLE@{JGZR\_HANDLE}}
+\index{JGZR\_HANDLE@{JGZR\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{JGZR\_HANDLE}{JGZR\_HANDLE}}
+{\footnotesize\ttfamily \#define J\+G\+Z\+R\+\_\+\+H\+A\+N\+D\+LE~127}
+
+
+
+Definition at line 163 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a1804e03a292f747fb2544b7f4c570354}\label{Actions_8h_a1804e03a292f747fb2544b7f4c570354}} 
+\index{Actions.h@{Actions.h}!JLT\_HANDLE@{JLT\_HANDLE}}
+\index{JLT\_HANDLE@{JLT\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{JLT\_HANDLE}{JLT\_HANDLE}}
+{\footnotesize\ttfamily \#define J\+L\+T\+\_\+\+H\+A\+N\+D\+LE~118}
+
+
+
+Definition at line 154 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ad761bf54937dadb34b1f38cb9ebc6c90}\label{Actions_8h_ad761bf54937dadb34b1f38cb9ebc6c90}} 
+\index{Actions.h@{Actions.h}!JLTN\_HANDLE@{JLTN\_HANDLE}}
+\index{JLTN\_HANDLE@{JLTN\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{JLTN\_HANDLE}{JLTN\_HANDLE}}
+{\footnotesize\ttfamily \#define J\+L\+T\+N\+\_\+\+H\+A\+N\+D\+LE~123}
+
+
+
+Definition at line 159 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a195260806145aa9458faff8f47d3be8d}\label{Actions_8h_a195260806145aa9458faff8f47d3be8d}} 
+\index{Actions.h@{Actions.h}!JLTNR\_HANDLE@{JLTNR\_HANDLE}}
+\index{JLTNR\_HANDLE@{JLTNR\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{JLTNR\_HANDLE}{JLTNR\_HANDLE}}
+{\footnotesize\ttfamily \#define J\+L\+T\+N\+R\+\_\+\+H\+A\+N\+D\+LE~134}
+
+
+
+Definition at line 170 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_aff90e1c582195c51636eb5e921d92534}\label{Actions_8h_aff90e1c582195c51636eb5e921d92534}} 
+\index{Actions.h@{Actions.h}!JLTR\_HANDLE@{JLTR\_HANDLE}}
+\index{JLTR\_HANDLE@{JLTR\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{JLTR\_HANDLE}{JLTR\_HANDLE}}
+{\footnotesize\ttfamily \#define J\+L\+T\+R\+\_\+\+H\+A\+N\+D\+LE~129}
+
+
+
+Definition at line 165 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a6c2a2fc873671615a7956264af075b83}\label{Actions_8h_a6c2a2fc873671615a7956264af075b83}} 
+\index{Actions.h@{Actions.h}!JLZ\_HANDLE@{JLZ\_HANDLE}}
+\index{JLZ\_HANDLE@{JLZ\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{JLZ\_HANDLE}{JLZ\_HANDLE}}
+{\footnotesize\ttfamily \#define J\+L\+Z\+\_\+\+H\+A\+N\+D\+LE~115}
+
+
+
+Definition at line 151 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ae00c3c36ce57e048c79a1eca9e08d616}\label{Actions_8h_ae00c3c36ce57e048c79a1eca9e08d616}} 
+\index{Actions.h@{Actions.h}!JLZN\_HANDLE@{JLZN\_HANDLE}}
+\index{JLZN\_HANDLE@{JLZN\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{JLZN\_HANDLE}{JLZN\_HANDLE}}
+{\footnotesize\ttfamily \#define J\+L\+Z\+N\+\_\+\+H\+A\+N\+D\+LE~120}
+
+
+
+Definition at line 156 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_adc7b227916c83d39786dce4002c3a8d8}\label{Actions_8h_adc7b227916c83d39786dce4002c3a8d8}} 
+\index{Actions.h@{Actions.h}!JLZNR\_HANDLE@{JLZNR\_HANDLE}}
+\index{JLZNR\_HANDLE@{JLZNR\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{JLZNR\_HANDLE}{JLZNR\_HANDLE}}
+{\footnotesize\ttfamily \#define J\+L\+Z\+N\+R\+\_\+\+H\+A\+N\+D\+LE~131}
+
+
+
+Definition at line 167 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_aa03b7a50cad5b6a71f2f6a8e6ddf7862}\label{Actions_8h_aa03b7a50cad5b6a71f2f6a8e6ddf7862}} 
+\index{Actions.h@{Actions.h}!JLZR\_HANDLE@{JLZR\_HANDLE}}
+\index{JLZR\_HANDLE@{JLZR\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{JLZR\_HANDLE}{JLZR\_HANDLE}}
+{\footnotesize\ttfamily \#define J\+L\+Z\+R\+\_\+\+H\+A\+N\+D\+LE~126}
+
+
+
+Definition at line 162 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_af81ad80a2fc69f4786f01610643e207b}\label{Actions_8h_af81ad80a2fc69f4786f01610643e207b}} 
+\index{Actions.h@{Actions.h}!JMP\_HANDLE@{JMP\_HANDLE}}
+\index{JMP\_HANDLE@{JMP\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{JMP\_HANDLE}{JMP\_HANDLE}}
+{\footnotesize\ttfamily \#define J\+M\+P\+\_\+\+H\+A\+N\+D\+LE~114}
+
+
+
+Definition at line 150 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a223ecdc540289fb8ac6dcaf5d6f4976a}\label{Actions_8h_a223ecdc540289fb8ac6dcaf5d6f4976a}} 
+\index{Actions.h@{Actions.h}!JMPR\_HANDLE@{JMPR\_HANDLE}}
+\index{JMPR\_HANDLE@{JMPR\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{JMPR\_HANDLE}{JMPR\_HANDLE}}
+{\footnotesize\ttfamily \#define J\+M\+P\+R\+\_\+\+H\+A\+N\+D\+LE~125}
+
+
+
+Definition at line 161 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a2f150ae798b6153126c2cb284827e444}\label{Actions_8h_a2f150ae798b6153126c2cb284827e444}} 
+\index{Actions.h@{Actions.h}!LABEL\_HANDLE@{LABEL\_HANDLE}}
+\index{LABEL\_HANDLE@{LABEL\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{LABEL\_HANDLE}{LABEL\_HANDLE}}
+{\footnotesize\ttfamily \#define L\+A\+B\+E\+L\+\_\+\+H\+A\+N\+D\+LE~17}
+
+
+
+Definition at line 29 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a79a2e6a50851f68dbd7fa7703231fa68}\label{Actions_8h_a79a2e6a50851f68dbd7fa7703231fa68}} 
+\index{Actions.h@{Actions.h}!LBS\_HANDLE@{LBS\_HANDLE}}
+\index{LBS\_HANDLE@{LBS\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{LBS\_HANDLE}{LBS\_HANDLE}}
+{\footnotesize\ttfamily \#define L\+B\+S\+\_\+\+H\+A\+N\+D\+LE~91}
+
+
+
+Definition at line 121 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a89865cf3bec8bc8a3673c27bf29746f1}\label{Actions_8h_a89865cf3bec8bc8a3673c27bf29746f1}} 
+\index{Actions.h@{Actions.h}!LBSIP\_HANDLE@{LBSIP\_HANDLE}}
+\index{LBSIP\_HANDLE@{LBSIP\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{LBSIP\_HANDLE}{LBSIP\_HANDLE}}
+{\footnotesize\ttfamily \#define L\+B\+S\+I\+P\+\_\+\+H\+A\+N\+D\+LE~101}
+
+
+
+Definition at line 131 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a2ebd4ac0b46f8bec0d492fcab24b3dc2}\label{Actions_8h_a2ebd4ac0b46f8bec0d492fcab24b3dc2}} 
+\index{Actions.h@{Actions.h}!MOD\_HANDLE@{MOD\_HANDLE}}
+\index{MOD\_HANDLE@{MOD\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MOD\_HANDLE}{MOD\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+O\+D\+\_\+\+H\+A\+N\+D\+LE~72}
+
+
+
+Definition at line 101 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ad3dae65fb10992f964ae3f9c1b4d7e9a}\label{Actions_8h_ad3dae65fb10992f964ae3f9c1b4d7e9a}} 
+\index{Actions.h@{Actions.h}!MODF\_HANDLE@{MODF\_HANDLE}}
+\index{MODF\_HANDLE@{MODF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MODF\_HANDLE}{MODF\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+O\+D\+F\+\_\+\+H\+A\+N\+D\+LE~80}
+
+
+
+Definition at line 109 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_aa99bd35afb02ee6d67c2312a0224c25f}\label{Actions_8h_aa99bd35afb02ee6d67c2312a0224c25f}} 
+\index{Actions.h@{Actions.h}!MODFF\_HANDLE@{MODFF\_HANDLE}}
+\index{MODFF\_HANDLE@{MODFF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MODFF\_HANDLE}{MODFF\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+O\+D\+F\+F\+\_\+\+H\+A\+N\+D\+LE~85}
+
+
+
+Definition at line 114 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_af1f622a383bc5a37bb8cbeadeb3ac047}\label{Actions_8h_af1f622a383bc5a37bb8cbeadeb3ac047}} 
+\index{Actions.h@{Actions.h}!MODIF\_HANDLE@{MODIF\_HANDLE}}
+\index{MODIF\_HANDLE@{MODIF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MODIF\_HANDLE}{MODIF\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+O\+D\+I\+F\+\_\+\+H\+A\+N\+D\+LE~90}
+
+
+
+Definition at line 119 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a869555633df88720c7271fc9fd9cb63b}\label{Actions_8h_a869555633df88720c7271fc9fd9cb63b}} 
+\index{Actions.h@{Actions.h}!MOVA\_HANDLE@{MOVA\_HANDLE}}
+\index{MOVA\_HANDLE@{MOVA\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MOVA\_HANDLE}{MOVA\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+O\+V\+A\+\_\+\+H\+A\+N\+D\+LE~52}
+
+
+
+Definition at line 74 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ac218b4fb758f57d192089b939518184d}\label{Actions_8h_ac218b4fb758f57d192089b939518184d}} 
+\index{Actions.h@{Actions.h}!MOVAB\_HANDLE@{MOVAB\_HANDLE}}
+\index{MOVAB\_HANDLE@{MOVAB\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MOVAB\_HANDLE}{MOVAB\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+O\+V\+A\+B\+\_\+\+H\+A\+N\+D\+LE~62}
+
+
+
+Definition at line 88 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a612d140b1fa0c36650b77bd308b48bca}\label{Actions_8h_a612d140b1fa0c36650b77bd308b48bca}} 
+\index{Actions.h@{Actions.h}!MOVAH\_HANDLE@{MOVAH\_HANDLE}}
+\index{MOVAH\_HANDLE@{MOVAH\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MOVAH\_HANDLE}{MOVAH\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+O\+V\+A\+H\+\_\+\+H\+A\+N\+D\+LE~63}
+
+
+
+Definition at line 89 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a77cf7b971dacbd644af44cebc992b535}\label{Actions_8h_a77cf7b971dacbd644af44cebc992b535}} 
+\index{Actions.h@{Actions.h}!MOVAW\_HANDLE@{MOVAW\_HANDLE}}
+\index{MOVAW\_HANDLE@{MOVAW\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MOVAW\_HANDLE}{MOVAW\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+O\+V\+A\+W\+\_\+\+H\+A\+N\+D\+LE~64}
+
+
+
+Definition at line 90 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ab01cbde0c57e3e0113d1b3859dd245d3}\label{Actions_8h_ab01cbde0c57e3e0113d1b3859dd245d3}} 
+\index{Actions.h@{Actions.h}!MOVB\_HANDLE@{MOVB\_HANDLE}}
+\index{MOVB\_HANDLE@{MOVB\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MOVB\_HANDLE}{MOVB\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+O\+V\+B\+\_\+\+H\+A\+N\+D\+LE~49}
+
+
+
+Definition at line 71 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a918a1e70a80678c17a58fd647870bebf}\label{Actions_8h_a918a1e70a80678c17a58fd647870bebf}} 
+\index{Actions.h@{Actions.h}!MOVBA\_HANDLE@{MOVBA\_HANDLE}}
+\index{MOVBA\_HANDLE@{MOVBA\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MOVBA\_HANDLE}{MOVBA\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+O\+V\+B\+A\+\_\+\+H\+A\+N\+D\+LE~55}
+
+
+
+Definition at line 78 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a85a10696bd8ab6d641429db536d185cf}\label{Actions_8h_a85a10696bd8ab6d641429db536d185cf}} 
+\index{Actions.h@{Actions.h}!MOVBH\_HANDLE@{MOVBH\_HANDLE}}
+\index{MOVBH\_HANDLE@{MOVBH\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MOVBH\_HANDLE}{MOVBH\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+O\+V\+B\+H\+\_\+\+H\+A\+N\+D\+LE~53}
+
+
+
+Definition at line 76 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a76073d93c4c189cdd5900697e119256f}\label{Actions_8h_a76073d93c4c189cdd5900697e119256f}} 
+\index{Actions.h@{Actions.h}!MOVBW\_HANDLE@{MOVBW\_HANDLE}}
+\index{MOVBW\_HANDLE@{MOVBW\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MOVBW\_HANDLE}{MOVBW\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+O\+V\+B\+W\+\_\+\+H\+A\+N\+D\+LE~54}
+
+
+
+Definition at line 77 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a06af0d0e8446795b9fdb5da55bc25a66}\label{Actions_8h_a06af0d0e8446795b9fdb5da55bc25a66}} 
+\index{Actions.h@{Actions.h}!MOVH\_HANDLE@{MOVH\_HANDLE}}
+\index{MOVH\_HANDLE@{MOVH\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MOVH\_HANDLE}{MOVH\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+O\+V\+H\+\_\+\+H\+A\+N\+D\+LE~50}
+
+
+
+Definition at line 72 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a29c244a3de384b4c19348b34be4c3b53}\label{Actions_8h_a29c244a3de384b4c19348b34be4c3b53}} 
+\index{Actions.h@{Actions.h}!MOVHA\_HANDLE@{MOVHA\_HANDLE}}
+\index{MOVHA\_HANDLE@{MOVHA\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MOVHA\_HANDLE}{MOVHA\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+O\+V\+H\+A\+\_\+\+H\+A\+N\+D\+LE~58}
+
+
+
+Definition at line 82 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a3d7a56bf360bede800d319608004dad7}\label{Actions_8h_a3d7a56bf360bede800d319608004dad7}} 
+\index{Actions.h@{Actions.h}!MOVHB\_HANDLE@{MOVHB\_HANDLE}}
+\index{MOVHB\_HANDLE@{MOVHB\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MOVHB\_HANDLE}{MOVHB\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+O\+V\+H\+B\+\_\+\+H\+A\+N\+D\+LE~56}
+
+
+
+Definition at line 80 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a95ec94cffd6b7c36991d3d621d98fd0e}\label{Actions_8h_a95ec94cffd6b7c36991d3d621d98fd0e}} 
+\index{Actions.h@{Actions.h}!MOVHW\_HANDLE@{MOVHW\_HANDLE}}
+\index{MOVHW\_HANDLE@{MOVHW\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MOVHW\_HANDLE}{MOVHW\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+O\+V\+H\+W\+\_\+\+H\+A\+N\+D\+LE~57}
+
+
+
+Definition at line 81 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a0036f48f4e53c05d52995e8e6f651feb}\label{Actions_8h_a0036f48f4e53c05d52995e8e6f651feb}} 
+\index{Actions.h@{Actions.h}!MOVW\_HANDLE@{MOVW\_HANDLE}}
+\index{MOVW\_HANDLE@{MOVW\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MOVW\_HANDLE}{MOVW\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+O\+V\+W\+\_\+\+H\+A\+N\+D\+LE~51}
+
+
+
+Definition at line 73 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a28eefd8e50433578f74a6f5bb7be4e65}\label{Actions_8h_a28eefd8e50433578f74a6f5bb7be4e65}} 
+\index{Actions.h@{Actions.h}!MOVWA\_HANDLE@{MOVWA\_HANDLE}}
+\index{MOVWA\_HANDLE@{MOVWA\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MOVWA\_HANDLE}{MOVWA\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+O\+V\+W\+A\+\_\+\+H\+A\+N\+D\+LE~61}
+
+
+
+Definition at line 86 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_aaa0a9046af16906b1faefa692b35b21b}\label{Actions_8h_aaa0a9046af16906b1faefa692b35b21b}} 
+\index{Actions.h@{Actions.h}!MOVWB\_HANDLE@{MOVWB\_HANDLE}}
+\index{MOVWB\_HANDLE@{MOVWB\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MOVWB\_HANDLE}{MOVWB\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+O\+V\+W\+B\+\_\+\+H\+A\+N\+D\+LE~59}
+
+
+
+Definition at line 84 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_af4c49989920743c4584cd4972b98d21b}\label{Actions_8h_af4c49989920743c4584cd4972b98d21b}} 
+\index{Actions.h@{Actions.h}!MOVWH\_HANDLE@{MOVWH\_HANDLE}}
+\index{MOVWH\_HANDLE@{MOVWH\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MOVWH\_HANDLE}{MOVWH\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+O\+V\+W\+H\+\_\+\+H\+A\+N\+D\+LE~60}
+
+
+
+Definition at line 85 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a52460ca6f1fefe7072fb738e87e9c014}\label{Actions_8h_a52460ca6f1fefe7072fb738e87e9c014}} 
+\index{Actions.h@{Actions.h}!MUL\_HANDLE@{MUL\_HANDLE}}
+\index{MUL\_HANDLE@{MUL\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MUL\_HANDLE}{MUL\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+U\+L\+\_\+\+H\+A\+N\+D\+LE~70}
+
+
+
+Definition at line 99 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a566a116ed94e8585e359e7dabf05dc99}\label{Actions_8h_a566a116ed94e8585e359e7dabf05dc99}} 
+\index{Actions.h@{Actions.h}!MULF\_HANDLE@{MULF\_HANDLE}}
+\index{MULF\_HANDLE@{MULF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MULF\_HANDLE}{MULF\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+U\+L\+F\+\_\+\+H\+A\+N\+D\+LE~78}
+
+
+
+Definition at line 107 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_aea78b4732229f2a732b55792d22e699d}\label{Actions_8h_aea78b4732229f2a732b55792d22e699d}} 
+\index{Actions.h@{Actions.h}!MULFF\_HANDLE@{MULFF\_HANDLE}}
+\index{MULFF\_HANDLE@{MULFF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MULFF\_HANDLE}{MULFF\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+U\+L\+F\+F\+\_\+\+H\+A\+N\+D\+LE~83}
+
+
+
+Definition at line 112 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ab6ee71085755aa5f40c16c7b5f8caaf7}\label{Actions_8h_ab6ee71085755aa5f40c16c7b5f8caaf7}} 
+\index{Actions.h@{Actions.h}!MULIF\_HANDLE@{MULIF\_HANDLE}}
+\index{MULIF\_HANDLE@{MULIF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{MULIF\_HANDLE}{MULIF\_HANDLE}}
+{\footnotesize\ttfamily \#define M\+U\+L\+I\+F\+\_\+\+H\+A\+N\+D\+LE~88}
+
+
+
+Definition at line 117 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a3546b74e56ba1d64aa88f0cdbe4cbb64}\label{Actions_8h_a3546b74e56ba1d64aa88f0cdbe4cbb64}} 
+\index{Actions.h@{Actions.h}!NEG\_HANDLE@{NEG\_HANDLE}}
+\index{NEG\_HANDLE@{NEG\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{NEG\_HANDLE}{NEG\_HANDLE}}
+{\footnotesize\ttfamily \#define N\+E\+G\+\_\+\+H\+A\+N\+D\+LE~67}
+
+
+
+Definition at line 96 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ae43b49fc1ab164b74c3b33ca743e74d9}\label{Actions_8h_ae43b49fc1ab164b74c3b33ca743e74d9}} 
+\index{Actions.h@{Actions.h}!NEGF\_HANDLE@{NEGF\_HANDLE}}
+\index{NEGF\_HANDLE@{NEGF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{NEGF\_HANDLE}{NEGF\_HANDLE}}
+{\footnotesize\ttfamily \#define N\+E\+G\+F\+\_\+\+H\+A\+N\+D\+LE~75}
+
+
+
+Definition at line 104 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a6fb0f807d3a03f896b62476081f547b2}\label{Actions_8h_a6fb0f807d3a03f896b62476081f547b2}} 
+\index{Actions.h@{Actions.h}!NEWLINE\_HANDLE@{NEWLINE\_HANDLE}}
+\index{NEWLINE\_HANDLE@{NEWLINE\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{NEWLINE\_HANDLE}{NEWLINE\_HANDLE}}
+{\footnotesize\ttfamily \#define N\+E\+W\+L\+I\+N\+E\+\_\+\+H\+A\+N\+D\+LE~19}
+
+
+
+Definition at line 32 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a0fa8056df9c4194f5ce63915e4bb8645}\label{Actions_8h_a0fa8056df9c4194f5ce63915e4bb8645}} 
+\index{Actions.h@{Actions.h}!NIL\_HANDLE@{NIL\_HANDLE}}
+\index{NIL\_HANDLE@{NIL\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{NIL\_HANDLE}{NIL\_HANDLE}}
+{\footnotesize\ttfamily \#define N\+I\+L\+\_\+\+H\+A\+N\+D\+LE~41}
+
+
+
+Definition at line 57 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a85d9ac6a4a434f52926e1d5b27555c4a}\label{Actions_8h_a85d9ac6a4a434f52926e1d5b27555c4a}} 
+\index{Actions.h@{Actions.h}!NOT\_HANDLE@{NOT\_HANDLE}}
+\index{NOT\_HANDLE@{NOT\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{NOT\_HANDLE}{NOT\_HANDLE}}
+{\footnotesize\ttfamily \#define N\+O\+T\+\_\+\+H\+A\+N\+D\+LE~96}
+
+
+
+Definition at line 126 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ac2b71f20f631d35da721f86f8f533049}\label{Actions_8h_ac2b71f20f631d35da721f86f8f533049}} 
+\index{Actions.h@{Actions.h}!NOTB\_HANDLE@{NOTB\_HANDLE}}
+\index{NOTB\_HANDLE@{NOTB\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{NOTB\_HANDLE}{NOTB\_HANDLE}}
+{\footnotesize\ttfamily \#define N\+O\+T\+B\+\_\+\+H\+A\+N\+D\+LE~100}
+
+
+
+Definition at line 130 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ae148f354ecfa6b76d7e6ed20c7ad9648}\label{Actions_8h_ae148f354ecfa6b76d7e6ed20c7ad9648}} 
+\index{Actions.h@{Actions.h}!NOTBIP\_HANDLE@{NOTBIP\_HANDLE}}
+\index{NOTBIP\_HANDLE@{NOTBIP\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{NOTBIP\_HANDLE}{NOTBIP\_HANDLE}}
+{\footnotesize\ttfamily \#define N\+O\+T\+B\+I\+P\+\_\+\+H\+A\+N\+D\+LE~110}
+
+
+
+Definition at line 140 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_aa4fbb99b0d5385df9a8060d54d8f08c3}\label{Actions_8h_aa4fbb99b0d5385df9a8060d54d8f08c3}} 
+\index{Actions.h@{Actions.h}!NOTIP\_HANDLE@{NOTIP\_HANDLE}}
+\index{NOTIP\_HANDLE@{NOTIP\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{NOTIP\_HANDLE}{NOTIP\_HANDLE}}
+{\footnotesize\ttfamily \#define N\+O\+T\+I\+P\+\_\+\+H\+A\+N\+D\+LE~106}
+
+
+
+Definition at line 136 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a521b78fef09371732de4168126a51642}\label{Actions_8h_a521b78fef09371732de4168126a51642}} 
+\index{Actions.h@{Actions.h}!OPENANGLEBRACKET\_HANDLE@{OPENANGLEBRACKET\_HANDLE}}
+\index{OPENANGLEBRACKET\_HANDLE@{OPENANGLEBRACKET\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{OPENANGLEBRACKET\_HANDLE}{OPENANGLEBRACKET\_HANDLE}}
+{\footnotesize\ttfamily \#define O\+P\+E\+N\+A\+N\+G\+L\+E\+B\+R\+A\+C\+K\+E\+T\+\_\+\+H\+A\+N\+D\+LE~29}
+
+
+
+Definition at line 42 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a6c133da74a9b88beb91375897d0e6bc5}\label{Actions_8h_a6c133da74a9b88beb91375897d0e6bc5}} 
+\index{Actions.h@{Actions.h}!OPENBRACKET\_HANDLE@{OPENBRACKET\_HANDLE}}
+\index{OPENBRACKET\_HANDLE@{OPENBRACKET\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{OPENBRACKET\_HANDLE}{OPENBRACKET\_HANDLE}}
+{\footnotesize\ttfamily \#define O\+P\+E\+N\+B\+R\+A\+C\+K\+E\+T\+\_\+\+H\+A\+N\+D\+LE~21}
+
+
+
+Definition at line 34 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ab35771746743a1c396f16ebd0d5ca1ac}\label{Actions_8h_ab35771746743a1c396f16ebd0d5ca1ac}} 
+\index{Actions.h@{Actions.h}!OPENCURLBRACKET\_HANDLE@{OPENCURLBRACKET\_HANDLE}}
+\index{OPENCURLBRACKET\_HANDLE@{OPENCURLBRACKET\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{OPENCURLBRACKET\_HANDLE}{OPENCURLBRACKET\_HANDLE}}
+{\footnotesize\ttfamily \#define O\+P\+E\+N\+C\+U\+R\+L\+B\+R\+A\+C\+K\+E\+T\+\_\+\+H\+A\+N\+D\+LE~26}
+
+
+
+Definition at line 39 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_aa91b7ef53af5cd3042ef19b7a075fdc3}\label{Actions_8h_aa91b7ef53af5cd3042ef19b7a075fdc3}} 
+\index{Actions.h@{Actions.h}!OPENSQBRACKET\_HANDLE@{OPENSQBRACKET\_HANDLE}}
+\index{OPENSQBRACKET\_HANDLE@{OPENSQBRACKET\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{OPENSQBRACKET\_HANDLE}{OPENSQBRACKET\_HANDLE}}
+{\footnotesize\ttfamily \#define O\+P\+E\+N\+S\+Q\+B\+R\+A\+C\+K\+E\+T\+\_\+\+H\+A\+N\+D\+LE~24}
+
+
+
+Definition at line 37 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a9fe95e91b75fe15eb50a107d62d866f8}\label{Actions_8h_a9fe95e91b75fe15eb50a107d62d866f8}} 
+\index{Actions.h@{Actions.h}!OR\_HANDLE@{OR\_HANDLE}}
+\index{OR\_HANDLE@{OR\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{OR\_HANDLE}{OR\_HANDLE}}
+{\footnotesize\ttfamily \#define O\+R\+\_\+\+H\+A\+N\+D\+LE~93}
+
+
+
+Definition at line 123 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a058da311315924f137e9f0e5f695d5fb}\label{Actions_8h_a058da311315924f137e9f0e5f695d5fb}} 
+\index{Actions.h@{Actions.h}!ORB\_HANDLE@{ORB\_HANDLE}}
+\index{ORB\_HANDLE@{ORB\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{ORB\_HANDLE}{ORB\_HANDLE}}
+{\footnotesize\ttfamily \#define O\+R\+B\+\_\+\+H\+A\+N\+D\+LE~97}
+
+
+
+Definition at line 127 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_aa6db8907c04a796a1d657e66969a129d}\label{Actions_8h_aa6db8907c04a796a1d657e66969a129d}} 
+\index{Actions.h@{Actions.h}!ORBIP\_HANDLE@{ORBIP\_HANDLE}}
+\index{ORBIP\_HANDLE@{ORBIP\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{ORBIP\_HANDLE}{ORBIP\_HANDLE}}
+{\footnotesize\ttfamily \#define O\+R\+B\+I\+P\+\_\+\+H\+A\+N\+D\+LE~107}
+
+
+
+Definition at line 137 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_affc744424740b6b6590f1c18b13084a8}\label{Actions_8h_affc744424740b6b6590f1c18b13084a8}} 
+\index{Actions.h@{Actions.h}!ORIP\_HANDLE@{ORIP\_HANDLE}}
+\index{ORIP\_HANDLE@{ORIP\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{ORIP\_HANDLE}{ORIP\_HANDLE}}
+{\footnotesize\ttfamily \#define O\+R\+I\+P\+\_\+\+H\+A\+N\+D\+LE~103}
+
+
+
+Definition at line 133 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a4eae13e6d2c56f946027d053d11b236a}\label{Actions_8h_a4eae13e6d2c56f946027d053d11b236a}} 
+\index{Actions.h@{Actions.h}!PAGE\_HANDLE@{PAGE\_HANDLE}}
+\index{PAGE\_HANDLE@{PAGE\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{PAGE\_HANDLE}{PAGE\_HANDLE}}
+{\footnotesize\ttfamily \#define P\+A\+G\+E\+\_\+\+H\+A\+N\+D\+LE~136}
+
+
+
+Definition at line 174 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ae3ccff65febae84a12e41d3daab9b187}\label{Actions_8h_ae3ccff65febae84a12e41d3daab9b187}} 
+\index{Actions.h@{Actions.h}!PAGEAR\_HANDLE@{PAGEAR\_HANDLE}}
+\index{PAGEAR\_HANDLE@{PAGEAR\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{PAGEAR\_HANDLE}{PAGEAR\_HANDLE}}
+{\footnotesize\ttfamily \#define P\+A\+G\+E\+A\+R\+\_\+\+H\+A\+N\+D\+LE~138}
+
+
+
+Definition at line 176 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a7e7595c006cbe58a2d459e24a4689986}\label{Actions_8h_a7e7595c006cbe58a2d459e24a4689986}} 
+\index{Actions.h@{Actions.h}!PAGEAW\_HANDLE@{PAGEAW\_HANDLE}}
+\index{PAGEAW\_HANDLE@{PAGEAW\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{PAGEAW\_HANDLE}{PAGEAW\_HANDLE}}
+{\footnotesize\ttfamily \#define P\+A\+G\+E\+A\+W\+\_\+\+H\+A\+N\+D\+LE~137}
+
+
+
+Definition at line 175 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a94e4417ea6c326667ee3e2cfe0d92577}\label{Actions_8h_a94e4417ea6c326667ee3e2cfe0d92577}} 
+\index{Actions.h@{Actions.h}!PAGEBC\_HANDLE@{PAGEBC\_HANDLE}}
+\index{PAGEBC\_HANDLE@{PAGEBC\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{PAGEBC\_HANDLE}{PAGEBC\_HANDLE}}
+{\footnotesize\ttfamily \#define P\+A\+G\+E\+B\+C\+\_\+\+H\+A\+N\+D\+LE~144}
+
+
+
+Definition at line 182 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ab8085cf41c62d9580eb6b70378aaaa2e}\label{Actions_8h_ab8085cf41c62d9580eb6b70378aaaa2e}} 
+\index{Actions.h@{Actions.h}!PAGER\_HANDLE@{PAGER\_HANDLE}}
+\index{PAGER\_HANDLE@{PAGER\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{PAGER\_HANDLE}{PAGER\_HANDLE}}
+{\footnotesize\ttfamily \#define P\+A\+G\+E\+R\+\_\+\+H\+A\+N\+D\+LE~140}
+
+
+
+Definition at line 178 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_afcf47f13a02ce1dedb6c8154c103f4b6}\label{Actions_8h_afcf47f13a02ce1dedb6c8154c103f4b6}} 
+\index{Actions.h@{Actions.h}!PAGES\_HANDLE@{PAGES\_HANDLE}}
+\index{PAGES\_HANDLE@{PAGES\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{PAGES\_HANDLE}{PAGES\_HANDLE}}
+{\footnotesize\ttfamily \#define P\+A\+G\+E\+S\+\_\+\+H\+A\+N\+D\+LE~143}
+
+
+
+Definition at line 181 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a317dae8f185c2eb221e0fd1044276e2c}\label{Actions_8h_a317dae8f185c2eb221e0fd1044276e2c}} 
+\index{Actions.h@{Actions.h}!PAGEW\_HANDLE@{PAGEW\_HANDLE}}
+\index{PAGEW\_HANDLE@{PAGEW\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{PAGEW\_HANDLE}{PAGEW\_HANDLE}}
+{\footnotesize\ttfamily \#define P\+A\+G\+E\+W\+\_\+\+H\+A\+N\+D\+LE~139}
+
+
+
+Definition at line 177 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a437fcffdce138f538edb13efe32e69aa}\label{Actions_8h_a437fcffdce138f538edb13efe32e69aa}} 
+\index{Actions.h@{Actions.h}!PALLOC\_HANDLE@{PALLOC\_HANDLE}}
+\index{PALLOC\_HANDLE@{PALLOC\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{PALLOC\_HANDLE}{PALLOC\_HANDLE}}
+{\footnotesize\ttfamily \#define P\+A\+L\+L\+O\+C\+\_\+\+H\+A\+N\+D\+LE~141}
+
+
+
+Definition at line 179 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a1459530229c259fd85b3c294854bd0df}\label{Actions_8h_a1459530229c259fd85b3c294854bd0df}} 
+\index{Actions.h@{Actions.h}!PASSIGN\_HANDLE@{PASSIGN\_HANDLE}}
+\index{PASSIGN\_HANDLE@{PASSIGN\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{PASSIGN\_HANDLE}{PASSIGN\_HANDLE}}
+{\footnotesize\ttfamily \#define P\+A\+S\+S\+I\+G\+N\+\_\+\+H\+A\+N\+D\+LE~145}
+
+
+
+Definition at line 183 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a8fd45d76517ad0d818be82071e281ce8}\label{Actions_8h_a8fd45d76517ad0d818be82071e281ce8}} 
+\index{Actions.h@{Actions.h}!PERCENT\_HANDLE@{PERCENT\_HANDLE}}
+\index{PERCENT\_HANDLE@{PERCENT\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{PERCENT\_HANDLE}{PERCENT\_HANDLE}}
+{\footnotesize\ttfamily \#define P\+E\+R\+C\+E\+N\+T\+\_\+\+H\+A\+N\+D\+LE~28}
+
+
+
+Definition at line 41 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ab0e15fb956f72d6c5842f14433374e3a}\label{Actions_8h_ab0e15fb956f72d6c5842f14433374e3a}} 
+\index{Actions.h@{Actions.h}!PFREE\_HANDLE@{PFREE\_HANDLE}}
+\index{PFREE\_HANDLE@{PFREE\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{PFREE\_HANDLE}{PFREE\_HANDLE}}
+{\footnotesize\ttfamily \#define P\+F\+R\+E\+E\+\_\+\+H\+A\+N\+D\+LE~142}
+
+
+
+Definition at line 180 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a942c12614451dfccd5401b7f28bae5c7}\label{Actions_8h_a942c12614451dfccd5401b7f28bae5c7}} 
+\index{Actions.h@{Actions.h}!POP\_HANDLE@{POP\_HANDLE}}
+\index{POP\_HANDLE@{POP\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{POP\_HANDLE}{POP\_HANDLE}}
+{\footnotesize\ttfamily \#define P\+O\+P\+\_\+\+H\+A\+N\+D\+LE~43}
+
+
+
+Definition at line 61 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a8ef85f7493ce727efffd18d947bd5bf7}\label{Actions_8h_a8ef85f7493ce727efffd18d947bd5bf7}} 
+\index{Actions.h@{Actions.h}!POPA\_HANDLE@{POPA\_HANDLE}}
+\index{POPA\_HANDLE@{POPA\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{POPA\_HANDLE}{POPA\_HANDLE}}
+{\footnotesize\ttfamily \#define P\+O\+P\+A\+\_\+\+H\+A\+N\+D\+LE~44}
+
+
+
+Definition at line 62 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_af419120419128cff83cdaa9717fd24b7}\label{Actions_8h_af419120419128cff83cdaa9717fd24b7}} 
+\index{Actions.h@{Actions.h}!PRAGMA@{PRAGMA}}
+\index{PRAGMA@{PRAGMA}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{PRAGMA}{PRAGMA}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define P\+R\+A\+G\+MA(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{B\+B\+P\+::std\+::conststring}} pragma\+\_\+\#\#name (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context}} $\ast$, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}}, \mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+keywordhandle}})}
+
+
+
+Definition at line 275 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_af419120419128cff83cdaa9717fd24b7}\label{Actions_8h_af419120419128cff83cdaa9717fd24b7}} 
+\index{Actions.h@{Actions.h}!PRAGMA@{PRAGMA}}
+\index{PRAGMA@{PRAGMA}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{PRAGMA}{PRAGMA}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define P\+R\+A\+G\+MA(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{B\+B\+P\+::std\+::conststring}} B\+B\+P\+::esa\+::pragma\+\_\+\#\#name (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context}} $\ast$context, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}} index, \mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+keywordhandle}} handle)}
+
+
+
+Definition at line 275 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ab49f57708d4af59061cca89e20a11d09}\label{Actions_8h_ab49f57708d4af59061cca89e20a11d09}} 
+\index{Actions.h@{Actions.h}!PROCEDURE\_HANDLE@{PROCEDURE\_HANDLE}}
+\index{PROCEDURE\_HANDLE@{PROCEDURE\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{PROCEDURE\_HANDLE}{PROCEDURE\_HANDLE}}
+{\footnotesize\ttfamily \#define P\+R\+O\+C\+E\+D\+U\+R\+E\+\_\+\+H\+A\+N\+D\+LE~15}
+
+
+
+Definition at line 27 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a96fb121aee37696811d6a502cbf1e54a}\label{Actions_8h_a96fb121aee37696811d6a502cbf1e54a}} 
+\index{Actions.h@{Actions.h}!PUSH\_HANDLE@{PUSH\_HANDLE}}
+\index{PUSH\_HANDLE@{PUSH\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{PUSH\_HANDLE}{PUSH\_HANDLE}}
+{\footnotesize\ttfamily \#define P\+U\+S\+H\+\_\+\+H\+A\+N\+D\+LE~42}
+
+
+
+Definition at line 60 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_aa201bab9643c2aa38aa65915061306b4}\label{Actions_8h_aa201bab9643c2aa38aa65915061306b4}} 
+\index{Actions.h@{Actions.h}!RBS\_HANDLE@{RBS\_HANDLE}}
+\index{RBS\_HANDLE@{RBS\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{RBS\_HANDLE}{RBS\_HANDLE}}
+{\footnotesize\ttfamily \#define R\+B\+S\+\_\+\+H\+A\+N\+D\+LE~92}
+
+
+
+Definition at line 122 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a1eb0b93e66f5f333f34d849252e8dbc4}\label{Actions_8h_a1eb0b93e66f5f333f34d849252e8dbc4}} 
+\index{Actions.h@{Actions.h}!RBSIP\_HANDLE@{RBSIP\_HANDLE}}
+\index{RBSIP\_HANDLE@{RBSIP\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{RBSIP\_HANDLE}{RBSIP\_HANDLE}}
+{\footnotesize\ttfamily \#define R\+B\+S\+I\+P\+\_\+\+H\+A\+N\+D\+LE~102}
+
+
+
+Definition at line 132 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ac290f10e93fc641e04a64a315276d359}\label{Actions_8h_ac290f10e93fc641e04a64a315276d359}} 
+\index{Actions.h@{Actions.h}!RET\_HANDLE@{RET\_HANDLE}}
+\index{RET\_HANDLE@{RET\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{RET\_HANDLE}{RET\_HANDLE}}
+{\footnotesize\ttfamily \#define R\+E\+T\+\_\+\+H\+A\+N\+D\+LE~45}
+
+
+
+Definition at line 65 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a68be6f1e3d091224fe552ad5dfb5cb39}\label{Actions_8h_a68be6f1e3d091224fe552ad5dfb5cb39}} 
+\index{Actions.h@{Actions.h}!ROUTINE\_HANDLE@{ROUTINE\_HANDLE}}
+\index{ROUTINE\_HANDLE@{ROUTINE\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{ROUTINE\_HANDLE}{ROUTINE\_HANDLE}}
+{\footnotesize\ttfamily \#define R\+O\+U\+T\+I\+N\+E\+\_\+\+H\+A\+N\+D\+LE~113}
+
+
+
+Definition at line 147 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a43c77c40bc7bbe58468844329a0e2d28}\label{Actions_8h_a43c77c40bc7bbe58468844329a0e2d28}} 
+\index{Actions.h@{Actions.h}!SEMICOLON\_HANDLE@{SEMICOLON\_HANDLE}}
+\index{SEMICOLON\_HANDLE@{SEMICOLON\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{SEMICOLON\_HANDLE}{SEMICOLON\_HANDLE}}
+{\footnotesize\ttfamily \#define S\+E\+M\+I\+C\+O\+L\+O\+N\+\_\+\+H\+A\+N\+D\+LE~20}
+
+
+
+Definition at line 33 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a2ac8ec5c8d488968ab9451556749d425}\label{Actions_8h_a2ac8ec5c8d488968ab9451556749d425}} 
+\index{Actions.h@{Actions.h}!SIGNAL\_HANDLE@{SIGNAL\_HANDLE}}
+\index{SIGNAL\_HANDLE@{SIGNAL\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_HANDLE}{SIGNAL\_HANDLE}}
+{\footnotesize\ttfamily \#define S\+I\+G\+N\+A\+L\+\_\+\+H\+A\+N\+D\+LE~146}
+
+
+
+Definition at line 186 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ab62db66a7f487a999058292973e4767b}\label{Actions_8h_ab62db66a7f487a999058292973e4767b}} 
+\index{Actions.h@{Actions.h}!SIGNALF\_HANDLE@{SIGNALF\_HANDLE}}
+\index{SIGNALF\_HANDLE@{SIGNALF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{SIGNALF\_HANDLE}{SIGNALF\_HANDLE}}
+{\footnotesize\ttfamily \#define S\+I\+G\+N\+A\+L\+F\+\_\+\+H\+A\+N\+D\+LE~147}
+
+
+
+Definition at line 187 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a0cd6c8839ee360b9b91fc40d714b196d}\label{Actions_8h_a0cd6c8839ee360b9b91fc40d714b196d}} 
+\index{Actions.h@{Actions.h}!SINGLEQUOTES\_HANDLE@{SINGLEQUOTES\_HANDLE}}
+\index{SINGLEQUOTES\_HANDLE@{SINGLEQUOTES\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{SINGLEQUOTES\_HANDLE}{SINGLEQUOTES\_HANDLE}}
+{\footnotesize\ttfamily \#define S\+I\+N\+G\+L\+E\+Q\+U\+O\+T\+E\+S\+\_\+\+H\+A\+N\+D\+LE~32}
+
+
+
+Definition at line 45 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a6e1316d02fa57d64f9dd1466e3528058}\label{Actions_8h_a6e1316d02fa57d64f9dd1466e3528058}} 
+\index{Actions.h@{Actions.h}!STATIC\_HANDLE@{STATIC\_HANDLE}}
+\index{STATIC\_HANDLE@{STATIC\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{STATIC\_HANDLE}{STATIC\_HANDLE}}
+{\footnotesize\ttfamily \#define S\+T\+A\+T\+I\+C\+\_\+\+H\+A\+N\+D\+LE~11}
+
+
+
+Definition at line 23 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a5bfe3d9fca6fce9a3be09745c5ac6cde}\label{Actions_8h_a5bfe3d9fca6fce9a3be09745c5ac6cde}} 
+\index{Actions.h@{Actions.h}!SUB\_HANDLE@{SUB\_HANDLE}}
+\index{SUB\_HANDLE@{SUB\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{SUB\_HANDLE}{SUB\_HANDLE}}
+{\footnotesize\ttfamily \#define S\+U\+B\+\_\+\+H\+A\+N\+D\+LE~69}
+
+
+
+Definition at line 98 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a1161746b2fd1af1bbc49ee705b88477e}\label{Actions_8h_a1161746b2fd1af1bbc49ee705b88477e}} 
+\index{Actions.h@{Actions.h}!SUBF\_HANDLE@{SUBF\_HANDLE}}
+\index{SUBF\_HANDLE@{SUBF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{SUBF\_HANDLE}{SUBF\_HANDLE}}
+{\footnotesize\ttfamily \#define S\+U\+B\+F\+\_\+\+H\+A\+N\+D\+LE~77}
+
+
+
+Definition at line 106 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a20078f1b6a6032691ff272616602fb1e}\label{Actions_8h_a20078f1b6a6032691ff272616602fb1e}} 
+\index{Actions.h@{Actions.h}!SUBFF\_HANDLE@{SUBFF\_HANDLE}}
+\index{SUBFF\_HANDLE@{SUBFF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{SUBFF\_HANDLE}{SUBFF\_HANDLE}}
+{\footnotesize\ttfamily \#define S\+U\+B\+F\+F\+\_\+\+H\+A\+N\+D\+LE~82}
+
+
+
+Definition at line 111 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a96985578d242c94c0a29233df22d434f}\label{Actions_8h_a96985578d242c94c0a29233df22d434f}} 
+\index{Actions.h@{Actions.h}!SUBIF\_HANDLE@{SUBIF\_HANDLE}}
+\index{SUBIF\_HANDLE@{SUBIF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{SUBIF\_HANDLE}{SUBIF\_HANDLE}}
+{\footnotesize\ttfamily \#define S\+U\+B\+I\+F\+\_\+\+H\+A\+N\+D\+LE~87}
+
+
+
+Definition at line 116 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_aeab4738e21f5ea4aa501ace3a842c96c}\label{Actions_8h_aeab4738e21f5ea4aa501ace3a842c96c}} 
+\index{Actions.h@{Actions.h}!SYSCALL\_HANDLE@{SYSCALL\_HANDLE}}
+\index{SYSCALL\_HANDLE@{SYSCALL\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{SYSCALL\_HANDLE}{SYSCALL\_HANDLE}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+C\+A\+L\+L\+\_\+\+H\+A\+N\+D\+LE~48}
+
+
+
+Definition at line 68 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ac188540cef64cbf870f35a3b6e3724a1}\label{Actions_8h_ac188540cef64cbf870f35a3b6e3724a1}} 
+\index{Actions.h@{Actions.h}!TOKEN@{TOKEN}}
+\index{TOKEN@{TOKEN}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{TOKEN}{TOKEN}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+O\+K\+EN(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{B\+B\+P\+::std\+::conststring}} tk\+\_\+\#\#name (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context}} $\ast$, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}}, \mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+keywordhandle}})}
+
+
+
+Definition at line 274 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ac188540cef64cbf870f35a3b6e3724a1}\label{Actions_8h_ac188540cef64cbf870f35a3b6e3724a1}} 
+\index{Actions.h@{Actions.h}!TOKEN@{TOKEN}}
+\index{TOKEN@{TOKEN}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{TOKEN}{TOKEN}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+O\+K\+EN(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{B\+B\+P\+::std\+::conststring}} B\+B\+P\+::esa\+::tk\+\_\+\#\#name (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context}} $\ast$context, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}} index, \mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+keywordhandle}} handle)}
+
+
+
+Definition at line 274 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a98e8aa831ef368ad6af0abc82d67a3e8}\label{Actions_8h_a98e8aa831ef368ad6af0abc82d67a3e8}} 
+\index{Actions.h@{Actions.h}!UNDEF\_HANDLE@{UNDEF\_HANDLE}}
+\index{UNDEF\_HANDLE@{UNDEF\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{UNDEF\_HANDLE}{UNDEF\_HANDLE}}
+{\footnotesize\ttfamily \#define U\+N\+D\+E\+F\+\_\+\+H\+A\+N\+D\+LE~3}
+
+
+
+Definition at line 14 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a8f972a50c72b12a71f3d870db6a33272}\label{Actions_8h_a8f972a50c72b12a71f3d870db6a33272}} 
+\index{Actions.h@{Actions.h}!VIRTUAL\_HANDLE@{VIRTUAL\_HANDLE}}
+\index{VIRTUAL\_HANDLE@{VIRTUAL\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{VIRTUAL\_HANDLE}{VIRTUAL\_HANDLE}}
+{\footnotesize\ttfamily \#define V\+I\+R\+T\+U\+A\+L\+\_\+\+H\+A\+N\+D\+LE~13}
+
+
+
+Definition at line 25 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a5c4eea1d7acb2e7199c9f5d141263c93}\label{Actions_8h_a5c4eea1d7acb2e7199c9f5d141263c93}} 
+\index{Actions.h@{Actions.h}!XOR\_HANDLE@{XOR\_HANDLE}}
+\index{XOR\_HANDLE@{XOR\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{XOR\_HANDLE}{XOR\_HANDLE}}
+{\footnotesize\ttfamily \#define X\+O\+R\+\_\+\+H\+A\+N\+D\+LE~94}
+
+
+
+Definition at line 124 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a8e7784f9af117afc29966ab7ef7b6f2e}\label{Actions_8h_a8e7784f9af117afc29966ab7ef7b6f2e}} 
+\index{Actions.h@{Actions.h}!XORB\_HANDLE@{XORB\_HANDLE}}
+\index{XORB\_HANDLE@{XORB\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{XORB\_HANDLE}{XORB\_HANDLE}}
+{\footnotesize\ttfamily \#define X\+O\+R\+B\+\_\+\+H\+A\+N\+D\+LE~98}
+
+
+
+Definition at line 128 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_ad81344d90198b04c22b90de15bda12bc}\label{Actions_8h_ad81344d90198b04c22b90de15bda12bc}} 
+\index{Actions.h@{Actions.h}!XORBIP\_HANDLE@{XORBIP\_HANDLE}}
+\index{XORBIP\_HANDLE@{XORBIP\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{XORBIP\_HANDLE}{XORBIP\_HANDLE}}
+{\footnotesize\ttfamily \#define X\+O\+R\+B\+I\+P\+\_\+\+H\+A\+N\+D\+LE~108}
+
+
+
+Definition at line 138 of file Actions.\+h.
+
+\mbox{\Hypertarget{Actions_8h_a8e544f3c48dae923bb95c9e1c0020502}\label{Actions_8h_a8e544f3c48dae923bb95c9e1c0020502}} 
+\index{Actions.h@{Actions.h}!XORIP\_HANDLE@{XORIP\_HANDLE}}
+\index{XORIP\_HANDLE@{XORIP\_HANDLE}!Actions.h@{Actions.h}}
+\doxysubsubsection{\texorpdfstring{XORIP\_HANDLE}{XORIP\_HANDLE}}
+{\footnotesize\ttfamily \#define X\+O\+R\+I\+P\+\_\+\+H\+A\+N\+D\+LE~104}
+
+
+
+Definition at line 134 of file Actions.\+h.
+

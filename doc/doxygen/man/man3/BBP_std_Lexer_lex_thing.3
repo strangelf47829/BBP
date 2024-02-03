@@ -1,0 +1,80 @@
+.TH "BBP::std::Lexer::lex_thing" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BBP::std::Lexer::lex_thing
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Lex\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBlex_context\fP * \fBcontext\fP"
+.br
+.ti -1c
+.RI "\fBindex_t\fP \fBstart\fP"
+.br
+.ti -1c
+.RI "\fBindex_t\fP \fBend\fP"
+.br
+.ti -1c
+.RI "\fBlex_thing\fP * \fBinsideOf\fP"
+.br
+.ti -1c
+.RI "\fBlex_type\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBlex_specialty\fP \fBsubtype\fP"
+.br
+.ti -1c
+.RI "\fBhash_t\fP \fBhash\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 52 of file Lex\&.h\&.
+.SH "Field Documentation"
+.PP 
+.SS "\fBlex_context\fP* BBP::std::Lexer::lex_thing::context"
+
+.PP
+Definition at line 55 of file Lex\&.h\&.
+.SS "\fBindex_t\fP BBP::std::Lexer::lex_thing::end"
+
+.PP
+Definition at line 59 of file Lex\&.h\&.
+.PP
+Referenced by BBP::esa::TOKEN()\&.
+.SS "\fBhash_t\fP BBP::std::Lexer::lex_thing::hash"
+
+.PP
+Definition at line 71 of file Lex\&.h\&.
+.PP
+Referenced by BBP::esa::esaProcessor::markConst()\&.
+.SS "\fBlex_thing\fP* BBP::std::Lexer::lex_thing::insideOf"
+
+.PP
+Definition at line 62 of file Lex\&.h\&.
+.SS "\fBindex_t\fP BBP::std::Lexer::lex_thing::start"
+
+.PP
+Definition at line 58 of file Lex\&.h\&.
+.PP
+Referenced by BBP::esa::TOKEN()\&.
+.SS "\fBlex_specialty\fP BBP::std::Lexer::lex_thing::subtype"
+
+.PP
+Definition at line 68 of file Lex\&.h\&.
+.PP
+Referenced by BBP::esa::BinaryApplication::mangle(), BBP::esa::esaProcessor::markConst(), and BBP::esa::TOKEN()\&.
+.SS "\fBlex_type\fP BBP::std::Lexer::lex_thing::type"
+
+.PP
+Definition at line 65 of file Lex\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

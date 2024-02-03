@@ -1,0 +1,611 @@
+\hypertarget{classBBP_1_1userspace_1_1BinaryExecutable}{}\doxysection{B\+BP\+::userspace\+::Binary\+Executable Class Reference}
+\label{classBBP_1_1userspace_1_1BinaryExecutable}\index{BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}}
+
+
+{\ttfamily \#include $<$Binary\+Executable.\+h$>$}
+
+
+
+Collaboration diagram for B\+BP\+::userspace\+::Binary\+Executable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/dd8/classBBP_1_1userspace_1_1BinaryExecutable__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a2eea354e4d1578fe320884a693aaaea6}{load\+Executable}} (\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1ELFBuilder}{std\+::\+E\+L\+F\+::\+E\+L\+F\+Builder}} \&data, \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager}{std\+::\+Resource\+Manager}} $\ast$\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a7aea680298a0a52637bb8d96bd56e50d}{allocator}})
+\item 
+void \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a9d5e6d71b96e1ace8d45c87dedeab11f}{unload\+Executable}} ()
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std\+::address\+\_\+t}} \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a96eb4539fc4f247710a8c1effabea87e}{virtual\+To\+Physical}} (\mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std\+::address\+\_\+t}})
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std\+::address\+\_\+t}} \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_af46ca1c3ec18196e50f62e7bda446b6b}{physical\+To\+Virtual}} (\mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std\+::address\+\_\+t}})
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std\+::address\+\_\+t}} \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a2b295eba81c58863f4657eb94f0e2156}{virtual\+To\+Physical}} (\mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std\+::address\+\_\+t}}, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}})
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std\+::address\+\_\+t}} \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ac2eba49b57e0aa11e970173e097fccb7}{physical\+To\+Virtual}} (\mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std\+::address\+\_\+t}}, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}})
+\item 
+void \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_af9382501257bd31fb11126a44007d18c}{create\+T\+LS}} (\mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{std\+::\+P\+A\+GE}}$<$ \mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std\+::string\+\_\+element}} $>$ \&)
+\item 
+void \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a28be13bcd4204fcd3f95601b6c82a51b}{load\+T\+LS}} (\mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{std\+::\+P\+A\+GE}}$<$ \mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std\+::string\+\_\+element}} $>$ \&)
+\item 
+void \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a8e2d0b0de64b559b165176370cb37ec0}{unload\+T\+LS}} (\mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{std\+::\+P\+A\+GE}}$<$ \mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std\+::string\+\_\+element}} $>$ \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{std\+::\+P\+A\+GE}}$<$ \mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std\+::string\+\_\+element}} $>$ \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ab75ab6cf2c312ecb34fe62562936ce67}{Binary\+Data}}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std\+::size\+\_\+t}} \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a069910ce9f3d2bdf7580e55eec85c62f}{total\+Size}}
+\item 
+\mbox{\hyperlink{structBBP_1_1std_1_1STATIC__PAGE}{std\+::\+S\+T\+A\+T\+I\+C\+\_\+\+P\+A\+GE}}$<$ \mbox{\hyperlink{structBBP_1_1userspace_1_1MemoryRegion}{Memory\+Region}}, 8 $>$ \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_aa7c08493ef5b210b84ff067a5b6aeae2}{find\+Index\+Of\+Virtual\+Memory}} (\mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std\+::address\+\_\+t}})
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_aec6ae6967b1f32362e7d4cc563cfab67}{find\+Index\+Of\+Physical\+Memory}} (\mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std\+::address\+\_\+t}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager}{std\+::\+Resource\+Manager}} $\ast$ \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a7aea680298a0a52637bb8d96bd56e50d}{allocator}}
+\item 
+bool \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ae215ff73f42ca9f57046c5d3ef5a8476}{allocated}}
+\item 
+\mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{std\+::\+P\+A\+GE}}$<$ \mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std\+::string\+\_\+element}} $>$ \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ae4efaa5ede25b5ff9ada504ca5f87f6f}{T\+L\+S\+Data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 33 of file Binary\+Executable.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1BinaryExecutable_af9382501257bd31fb11126a44007d18c}\label{classBBP_1_1userspace_1_1BinaryExecutable_af9382501257bd31fb11126a44007d18c}} 
+\index{BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}!createTLS@{createTLS}}
+\index{createTLS@{createTLS}!BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}}
+\doxysubsubsection{\texorpdfstring{createTLS()}{createTLS()}}
+{\footnotesize\ttfamily void B\+B\+P\+::userspace\+::\+Binary\+Executable\+::create\+T\+LS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{std\+::\+P\+A\+GE}}$<$ \mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std\+::string\+\_\+element}} $>$ \&}]{page }\end{DoxyParamCaption})}
+
+
+
+Definition at line 240 of file Binary\+Executables.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{241 \{}
+\DoxyCodeLine{242     \textcolor{comment}{// If no binary data is loaded, throw exception}}
+\DoxyCodeLine{243     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ae215ff73f42ca9f57046c5d3ef5a8476}{allocated}} == \textcolor{keyword}{false})}
+\DoxyCodeLine{244         \textcolor{keywordflow}{throw} \mbox{\hyperlink{namespaceBBP_1_1std_a750ba4c285e0788e84722a30a776b913}{std::exception}}(\textcolor{stringliteral}{"Could not create TLS Data: No binary loaded"}, \mbox{\hyperlink{errno_8h_a0030614bc864d1b24eaedd71585acc27}{ENODATA}});}
+\DoxyCodeLine{245 }
+\DoxyCodeLine{246     \textcolor{comment}{// Initialize page}}
+\DoxyCodeLine{247     page = std::PAGE<std::string\_element>(\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ae4efaa5ede25b5ff9ada504ca5f87f6f}{TLSData}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a3b5c962d781f42d8dc36949061c308ab}{dataSize}}, (\mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std::string\_element}}*)\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a7aea680298a0a52637bb8d96bd56e50d}{allocator}}-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a2feb265bae9a30994a2a4a4f69306329}{calloc}}(\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ae4efaa5ede25b5ff9ada504ca5f87f6f}{TLSData}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a3b5c962d781f42d8dc36949061c308ab}{dataSize}}, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std::string\_element}})));}
+\DoxyCodeLine{248 }
+\DoxyCodeLine{249     \textcolor{comment}{// Copy memory}}
+\DoxyCodeLine{250     \mbox{\hyperlink{namespaceBBP_1_1std_a997d77887946462f3e071f11465abfae}{std::memcpy}}(\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ae4efaa5ede25b5ff9ada504ca5f87f6f}{TLSData}}, page);}
+\DoxyCodeLine{251 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_af9382501257bd31fb11126a44007d18c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_af9382501257bd31fb11126a44007d18c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1BinaryExecutable_aec6ae6967b1f32362e7d4cc563cfab67}\label{classBBP_1_1userspace_1_1BinaryExecutable_aec6ae6967b1f32362e7d4cc563cfab67}} 
+\index{BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}!findIndexOfPhysicalMemory@{findIndexOfPhysicalMemory}}
+\index{findIndexOfPhysicalMemory@{findIndexOfPhysicalMemory}!BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}}
+\doxysubsubsection{\texorpdfstring{findIndexOfPhysicalMemory()}{findIndexOfPhysicalMemory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}} B\+B\+P\+::userspace\+::\+Binary\+Executable\+::find\+Index\+Of\+Physical\+Memory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std\+::address\+\_\+t}}}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 216 of file Binary\+Executables.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{217 \{}
+\DoxyCodeLine{218     \textcolor{comment}{// Loop over each memory mapping}}
+\DoxyCodeLine{219     \textcolor{keywordflow}{for} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} block = 0; block < \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.dataSize; block++)}
+\DoxyCodeLine{220     \{}
+\DoxyCodeLine{221         \textcolor{comment}{// If block is not allocated, continue search}}
+\DoxyCodeLine{222         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[block].allocated == \textcolor{keyword}{false})}
+\DoxyCodeLine{223             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{225         \textcolor{comment}{// Retrieve variables}}
+\DoxyCodeLine{226         \mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std::address\_t}} physicalHead = \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[block].physicalMemoryHead;}
+\DoxyCodeLine{227         \mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std::size\_t}} physicalSize = \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[block].size;}
+\DoxyCodeLine{228 }
+\DoxyCodeLine{229         \textcolor{comment}{// Physical memory address is found if address is within virtual memory head and virtual memory head + size}}
+\DoxyCodeLine{230         \textcolor{keywordflow}{if} (physicalHead <= address \&\& (physicalHead + physicalSize) > address)}
+\DoxyCodeLine{231             \textcolor{keywordflow}{return} block;}
+\DoxyCodeLine{232     \}}
+\DoxyCodeLine{233 }
+\DoxyCodeLine{234     \textcolor{comment}{// None found. Return block count to indicate error}}
+\DoxyCodeLine{235     \textcolor{keywordflow}{return} \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.dataSize;}
+\DoxyCodeLine{236 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1BinaryExecutable_aa7c08493ef5b210b84ff067a5b6aeae2}\label{classBBP_1_1userspace_1_1BinaryExecutable_aa7c08493ef5b210b84ff067a5b6aeae2}} 
+\index{BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}!findIndexOfVirtualMemory@{findIndexOfVirtualMemory}}
+\index{findIndexOfVirtualMemory@{findIndexOfVirtualMemory}!BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}}
+\doxysubsubsection{\texorpdfstring{findIndexOfVirtualMemory()}{findIndexOfVirtualMemory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{B\+B\+P\+::std\+::index\+\_\+t}} B\+B\+P\+::userspace\+::\+Binary\+Executable\+::find\+Index\+Of\+Virtual\+Memory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std\+::address\+\_\+t}}}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 194 of file Binary\+Executables.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{195 \{}
+\DoxyCodeLine{196     \textcolor{comment}{// Loop over each memory mapping}}
+\DoxyCodeLine{197     \textcolor{keywordflow}{for} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} block = 0; block < \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.dataSize; block++)}
+\DoxyCodeLine{198     \{}
+\DoxyCodeLine{199         \textcolor{comment}{// If block is not allocated, continue search}}
+\DoxyCodeLine{200         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[block].allocated == \textcolor{keyword}{false})}
+\DoxyCodeLine{201             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{203         \textcolor{comment}{// Retrieve variables}}
+\DoxyCodeLine{204         \mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std::address\_t}} virtualHead = \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[block].virtualMemoryHead;}
+\DoxyCodeLine{205         \mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std::size\_t}} virtualSize = \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[block].size;}
+\DoxyCodeLine{206 }
+\DoxyCodeLine{207         \textcolor{comment}{// Physical memory address is found if address is within virtual memory head and virtual memory head + size}}
+\DoxyCodeLine{208         \textcolor{keywordflow}{if} (virtualHead <= address \&\& (virtualHead + virtualSize) > address)}
+\DoxyCodeLine{209             \textcolor{keywordflow}{return} block;}
+\DoxyCodeLine{210     \}}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{212     \textcolor{comment}{// None found. Return block count to indicate error}}
+\DoxyCodeLine{213     \textcolor{keywordflow}{return} \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.dataSize;}
+\DoxyCodeLine{214 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1BinaryExecutable_a2eea354e4d1578fe320884a693aaaea6}\label{classBBP_1_1userspace_1_1BinaryExecutable_a2eea354e4d1578fe320884a693aaaea6}} 
+\index{BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}!loadExecutable@{loadExecutable}}
+\index{loadExecutable@{loadExecutable}!BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}}
+\doxysubsubsection{\texorpdfstring{loadExecutable()}{loadExecutable()}}
+{\footnotesize\ttfamily void B\+B\+P\+::userspace\+::\+Binary\+Executable\+::load\+Executable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBBP_1_1std_1_1ELF_1_1ELFBuilder}{std\+::\+E\+L\+F\+::\+E\+L\+F\+Builder}} \&}]{data,  }\item[{\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager}{std\+::\+Resource\+Manager}} $\ast$}]{allocator }\end{DoxyParamCaption})}
+
+
+
+Definition at line 4 of file Binary\+Executables.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6     \textcolor{comment}{// Check if allocator is null}}
+\DoxyCodeLine{7     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a7aea680298a0a52637bb8d96bd56e50d}{allocator}} == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{8         \textcolor{keywordflow}{throw} \mbox{\hyperlink{namespaceBBP_1_1std_a750ba4c285e0788e84722a30a776b913}{std::exception}}(\textcolor{stringliteral}{"Could not load binary: Allocator invalid."}, \mbox{\hyperlink{errno_8h_a0030614bc864d1b24eaedd71585acc27}{ENODATA}});}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10     this-\/>\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a7aea680298a0a52637bb8d96bd56e50d}{allocator}} = \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a7aea680298a0a52637bb8d96bd56e50d}{allocator}};}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12     \textcolor{comment}{// Keep track of the physical size}}
+\DoxyCodeLine{13     \mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std::size\_t}} BinaryPhysicalSize = 0;}
+\DoxyCodeLine{14     \mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std::size\_t}} TLSSize = 0;}
+\DoxyCodeLine{15     \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} loadedSegment = 0;}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{comment}{// Loop over each segment}}
+\DoxyCodeLine{18     \textcolor{keywordflow}{for} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} segment = 0; segment < binary.segments.max\_elements; segment++)}
+\DoxyCodeLine{19     \{}
+\DoxyCodeLine{20         \textcolor{comment}{// If segment is not of type 'load', do nothing}}
+\DoxyCodeLine{21         \textcolor{keywordflow}{if} (binary.segments[segment].type() != \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09}{std::ELF::PT\_LOAD}} \&\& binary.segments[segment].type() != \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9aa41f51d27471b57de855a2c37a3d11cb}{std::ELF::PT\_TLS}})}
+\DoxyCodeLine{22             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24         \textcolor{comment}{// Get physical and virtual memory sizes}}
+\DoxyCodeLine{25         \mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std::size\_t}} physicalSize = binary.segments[segment].filesz();}
+\DoxyCodeLine{26         \mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std::size\_t}} virtualSize = binary.segments[segment].memsz();}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28         \textcolor{comment}{// Get ending address of segment}}
+\DoxyCodeLine{29         \mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std::size\_t}} actualSize = ((physicalSize > virtualSize) ? physicalSize : virtualSize);}
+\DoxyCodeLine{30         \mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std::address\_t}} segmentEndsAt = binary.segments[segment].paddr() + actualSize;}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32         \textcolor{comment}{// If segment ends at address greater than physical size, increase physical size}}
+\DoxyCodeLine{33         \textcolor{keywordflow}{if} (segmentEndsAt > BinaryPhysicalSize \&\& binary.segments[segment].type() == \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09}{std::ELF::PT\_LOAD}})}
+\DoxyCodeLine{34             BinaryPhysicalSize += actualSize;}
+\DoxyCodeLine{35         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (segmentEndsAt > BinaryPhysicalSize \&\& binary.segments[segment].type() == \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9aa41f51d27471b57de855a2c37a3d11cb}{std::ELF::PT\_TLS}})}
+\DoxyCodeLine{36             TLSSize += actualSize;}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38         \textcolor{comment}{// Since we are here anyway, set segment data head data}}
+\DoxyCodeLine{39         \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[loadedSegment].physicalMemoryHead = binary.segments[segment].paddr();}
+\DoxyCodeLine{40         \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[loadedSegment].virtualMemoryHead = binary.segments[segment].vaddr();}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42         \textcolor{comment}{// Also set size and flags}}
+\DoxyCodeLine{43         \mbox{\hyperlink{namespaceBBP_1_1std_ae104641b17c021a901add93f7bc5d808}{std::word}} flag = binary.segments[segment].flags();}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45         \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[loadedSegment].readable = flag \& 0b100;}
+\DoxyCodeLine{46         \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[loadedSegment].writeable = flag \& 0b010;}
+\DoxyCodeLine{47         \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[loadedSegment].executable = flag \& 0b001;}
+\DoxyCodeLine{48         \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[loadedSegment].allocated = \textcolor{keyword}{true};}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50         \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[loadedSegment].size = actualSize;}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52         \textcolor{comment}{// Increase loaded segment}}
+\DoxyCodeLine{53         loadedSegment++;}
+\DoxyCodeLine{54     \}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56     \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a069910ce9f3d2bdf7580e55eec85c62f}{totalSize}} = BinaryPhysicalSize + TLSSize;}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     \textcolor{comment}{// Allocate the specified amount of bytes into memory.}}
+\DoxyCodeLine{59     \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ab75ab6cf2c312ecb34fe62562936ce67}{BinaryData}} = std::PAGE<std::string\_element>(BinaryPhysicalSize, (\mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std::string\_element}}*)\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a7aea680298a0a52637bb8d96bd56e50d}{allocator}}-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a2feb265bae9a30994a2a4a4f69306329}{calloc}}(BinaryPhysicalSize, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std::string\_element}})));}
+\DoxyCodeLine{60     \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ae4efaa5ede25b5ff9ada504ca5f87f6f}{TLSData}} = std::PAGE<std::string\_element>(TLSSize, (\mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std::string\_element}} *)\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a7aea680298a0a52637bb8d96bd56e50d}{allocator}}-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a2feb265bae9a30994a2a4a4f69306329}{calloc}}(TLSSize, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std::string\_element}})));}
+\DoxyCodeLine{61     \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ae215ff73f42ca9f57046c5d3ef5a8476}{allocated}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     \textcolor{comment}{// Link TLS data and Binary Data together}}
+\DoxyCodeLine{64     \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ab75ab6cf2c312ecb34fe62562936ce67}{BinaryData}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a8d21ebf8bb4b9485b67e17698ff1f890}{nextPage}} = \&\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ae4efaa5ede25b5ff9ada504ca5f87f6f}{TLSData}};}
+\DoxyCodeLine{65     \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ae4efaa5ede25b5ff9ada504ca5f87f6f}{TLSData}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_ae3ed5c6be788a903036a151ac69cd2d9}{prevPage}} = \&\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ab75ab6cf2c312ecb34fe62562936ce67}{BinaryData}};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67     \textcolor{comment}{// Now loop over each segment again}}
+\DoxyCodeLine{68     \textcolor{keywordflow}{for} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} segment = 0; segment < binary.segments.max\_elements; segment++)}
+\DoxyCodeLine{69     \{}
+\DoxyCodeLine{70         \textcolor{comment}{// If segment is not of type 'load', do nothing}}
+\DoxyCodeLine{71         \textcolor{keywordflow}{if} (binary.segments[segment].type() != \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9a98a1bd0faaa182fa419db5ed4a2e1a09}{std::ELF::PT\_LOAD}} \&\& binary.segments[segment].type() != \mbox{\hyperlink{namespaceBBP_1_1std_1_1ELF_ac724b0f41a81caa3f2950886d087dee9aa41f51d27471b57de855a2c37a3d11cb}{std::ELF::PT\_TLS}})}
+\DoxyCodeLine{72             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74         \textcolor{comment}{// Get physical size, and offset}}
+\DoxyCodeLine{75         \mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std::size\_t}} physicalSegmentSize = binary.segments[segment].filesz();}
+\DoxyCodeLine{76         \mbox{\hyperlink{namespaceBBP_1_1std_aba0804f0534bca779731a6e8f2d3b123}{std::offset\_t}} segmentOffset = binary.segments[segment].offset();}
+\DoxyCodeLine{77         \mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std::address\_t}} loadIntoAddress = binary.segments[segment].paddr();}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79         \textcolor{comment}{// If offset is 0, continue}}
+\DoxyCodeLine{80         \textcolor{keywordflow}{if} (segmentOffset == 0)}
+\DoxyCodeLine{81             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83         \textcolor{comment}{// Now copy binary data into physical memory}}
+\DoxyCodeLine{84         \textcolor{keywordflow}{for} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} idx = 0; idx < physicalSegmentSize; idx++)}
+\DoxyCodeLine{85             \mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\_\_UNSAFE\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_aa63573041786d49b7cdb2eec8a921a6a}{std::write}})(\&\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ab75ab6cf2c312ecb34fe62562936ce67}{BinaryData}}, \mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\_\_UNSAFE\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}})(\&binary.file, segmentOffset + idx), loadIntoAddress + idx);}
+\DoxyCodeLine{86     \}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_a2eea354e4d1578fe320884a693aaaea6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_a2eea354e4d1578fe320884a693aaaea6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1BinaryExecutable_a28be13bcd4204fcd3f95601b6c82a51b}\label{classBBP_1_1userspace_1_1BinaryExecutable_a28be13bcd4204fcd3f95601b6c82a51b}} 
+\index{BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}!loadTLS@{loadTLS}}
+\index{loadTLS@{loadTLS}!BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}}
+\doxysubsubsection{\texorpdfstring{loadTLS()}{loadTLS()}}
+{\footnotesize\ttfamily void B\+B\+P\+::userspace\+::\+Binary\+Executable\+::load\+T\+LS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{std\+::\+P\+A\+GE}}$<$ \mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std\+::string\+\_\+element}} $>$ \&}]{page }\end{DoxyParamCaption})}
+
+
+
+Definition at line 254 of file Binary\+Executables.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{255 \{}
+\DoxyCodeLine{256     \textcolor{comment}{// Save page next-\/prev relation}}
+\DoxyCodeLine{257     \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ae4efaa5ede25b5ff9ada504ca5f87f6f}{TLSData}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_ae3ed5c6be788a903036a151ac69cd2d9}{prevPage}} = page.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_ae3ed5c6be788a903036a151ac69cd2d9}{prevPage}};}
+\DoxyCodeLine{258     \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ae4efaa5ede25b5ff9ada504ca5f87f6f}{TLSData}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a8d21ebf8bb4b9485b67e17698ff1f890}{nextPage}} = page.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a8d21ebf8bb4b9485b67e17698ff1f890}{nextPage}};}
+\DoxyCodeLine{259 }
+\DoxyCodeLine{260     \textcolor{comment}{// Now set binary data}}
+\DoxyCodeLine{261     \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ab75ab6cf2c312ecb34fe62562936ce67}{BinaryData}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a8d21ebf8bb4b9485b67e17698ff1f890}{nextPage}} = \&page;}
+\DoxyCodeLine{262     page.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_ae3ed5c6be788a903036a151ac69cd2d9}{prevPage}} = \&\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ab75ab6cf2c312ecb34fe62562936ce67}{BinaryData}};}
+\DoxyCodeLine{263 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1BinaryExecutable_af46ca1c3ec18196e50f62e7bda446b6b}\label{classBBP_1_1userspace_1_1BinaryExecutable_af46ca1c3ec18196e50f62e7bda446b6b}} 
+\index{BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}!physicalToVirtual@{physicalToVirtual}}
+\index{physicalToVirtual@{physicalToVirtual}!BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}}
+\doxysubsubsection{\texorpdfstring{physicalToVirtual()}{physicalToVirtual()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{B\+B\+P\+::std\+::address\+\_\+t}} B\+B\+P\+::userspace\+::\+Binary\+Executable\+::physical\+To\+Virtual (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std\+::address\+\_\+t}}}]{address }\end{DoxyParamCaption})}
+
+
+
+Definition at line 172 of file Binary\+Executables.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{173 \{}
+\DoxyCodeLine{174     \textcolor{comment}{// Find the address of the memory mapping for this address}}
+\DoxyCodeLine{175     \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} block = \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_aec6ae6967b1f32362e7d4cc563cfab67}{findIndexOfPhysicalMemory}}(address);}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177     \textcolor{comment}{// If no address is found, signal SIGSEGV}}
+\DoxyCodeLine{178     \textcolor{keywordflow}{if} (block == \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.dataSize)}
+\DoxyCodeLine{179     \{}
+\DoxyCodeLine{180         \mbox{\hyperlink{Signal_8h_a82e69d819748cab5933309bba1999f7c}{\_\_SIGNAL\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_a8b214d5bdfe950ea0efc262c569ff9ef}{SIGSEGV}});}
+\DoxyCodeLine{181     \}}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183     \textcolor{comment}{// Retrieve variables}}
+\DoxyCodeLine{184     \mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std::address\_t}} virtualHead = \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[block].virtualMemoryHead;}
+\DoxyCodeLine{185     \mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std::address\_t}} physicalHead = \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[block].physicalMemoryHead;}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187     \textcolor{comment}{// Valid block found. Now find difference between address and virtual head}}
+\DoxyCodeLine{188     \mbox{\hyperlink{namespaceBBP_1_1std_aba0804f0534bca779731a6e8f2d3b123}{std::offset\_t}} difference = address -\/ physicalHead;}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{190     \textcolor{comment}{// Then Add that difference to physical head}}
+\DoxyCodeLine{191     \textcolor{keywordflow}{return} difference + virtualHead;}
+\DoxyCodeLine{192 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_af46ca1c3ec18196e50f62e7bda446b6b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1BinaryExecutable_ac2eba49b57e0aa11e970173e097fccb7}\label{classBBP_1_1userspace_1_1BinaryExecutable_ac2eba49b57e0aa11e970173e097fccb7}} 
+\index{BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}!physicalToVirtual@{physicalToVirtual}}
+\index{physicalToVirtual@{physicalToVirtual}!BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}}
+\doxysubsubsection{\texorpdfstring{physicalToVirtual()}{physicalToVirtual()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{B\+B\+P\+::std\+::address\+\_\+t}} B\+B\+P\+::userspace\+::\+Binary\+Executable\+::physical\+To\+Virtual (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std\+::address\+\_\+t}}}]{address,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}}}]{cached }\end{DoxyParamCaption})}
+
+
+
+Definition at line 132 of file Binary\+Executables.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{133 \{}
+\DoxyCodeLine{134     \textcolor{comment}{// If cached index is out of static\_data index, throw exception}}
+\DoxyCodeLine{135     \textcolor{keywordflow}{if} (cached >= \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.dataSize)}
+\DoxyCodeLine{136         \textcolor{keywordflow}{throw} \mbox{\hyperlink{namespaceBBP_1_1std_a750ba4c285e0788e84722a30a776b913}{std::exception}}(\textcolor{stringliteral}{"Physical memory cache index invalid."}, \mbox{\hyperlink{errno_8h_a556612e55358838192165684c971a44f}{EADDRNOTAVAIL}});}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138     \textcolor{comment}{// Check if cached block contains address}}
+\DoxyCodeLine{139     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[cached].allocated \&\& \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[cached].physicalMemoryHead <= address \&\& (\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[cached].physicalMemoryHead + \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[cached].size) > address)}
+\DoxyCodeLine{140     \{}
+\DoxyCodeLine{141         \textcolor{comment}{// If so, find difference and return}}
+\DoxyCodeLine{142         \mbox{\hyperlink{namespaceBBP_1_1std_aba0804f0534bca779731a6e8f2d3b123}{std::offset\_t}} offset = address -\/ \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[cached].physicalMemoryHead;}
+\DoxyCodeLine{143         \textcolor{keywordflow}{return} \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[cached].virtualMemoryHead + offset;}
+\DoxyCodeLine{144     \}}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146     \textcolor{comment}{// Otherwise, just return virtual to physical}}
+\DoxyCodeLine{147     \textcolor{keywordflow}{return} \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_af46ca1c3ec18196e50f62e7bda446b6b}{physicalToVirtual}}(address);}
+\DoxyCodeLine{148 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_ac2eba49b57e0aa11e970173e097fccb7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1BinaryExecutable_a9d5e6d71b96e1ace8d45c87dedeab11f}\label{classBBP_1_1userspace_1_1BinaryExecutable_a9d5e6d71b96e1ace8d45c87dedeab11f}} 
+\index{BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}!unloadExecutable@{unloadExecutable}}
+\index{unloadExecutable@{unloadExecutable}!BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}}
+\doxysubsubsection{\texorpdfstring{unloadExecutable()}{unloadExecutable()}}
+{\footnotesize\ttfamily void B\+B\+P\+::userspace\+::\+Binary\+Executable\+::unload\+Executable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 90 of file Binary\+Executables.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{91 \{}
+\DoxyCodeLine{92     \textcolor{comment}{// If binary is not allocated, do nothing}}
+\DoxyCodeLine{93     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ae215ff73f42ca9f57046c5d3ef5a8476}{allocated}} == \textcolor{keyword}{false})}
+\DoxyCodeLine{94         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96     \textcolor{comment}{// Free binary page}}
+\DoxyCodeLine{97     \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a7aea680298a0a52637bb8d96bd56e50d}{allocator}}-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a88b2740fa8c5b5e30e6ef08cb8c7d883}{free}}(\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ab75ab6cf2c312ecb34fe62562936ce67}{BinaryData}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a02cc2cb6b1940e10fb3b4defba203ac6}{data}});}
+\DoxyCodeLine{98     \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a7aea680298a0a52637bb8d96bd56e50d}{allocator}}-\/>\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager_a88b2740fa8c5b5e30e6ef08cb8c7d883}{free}}(\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ae4efaa5ede25b5ff9ada504ca5f87f6f}{TLSData}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a02cc2cb6b1940e10fb3b4defba203ac6}{data}});}
+\DoxyCodeLine{99     \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ab75ab6cf2c312ecb34fe62562936ce67}{BinaryData}} = std::PAGE<std::string\_element>(0, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{100     \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ae4efaa5ede25b5ff9ada504ca5f87f6f}{TLSData}} = std::PAGE<std::string\_element>(0, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{101     \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ae215ff73f42ca9f57046c5d3ef5a8476}{allocated}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103     \textcolor{comment}{// Clear size}}
+\DoxyCodeLine{104     \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a069910ce9f3d2bdf7580e55eec85c62f}{totalSize}} = 0;}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106     \textcolor{comment}{// Loop over each segment and set them to zero}}
+\DoxyCodeLine{107     \textcolor{keywordflow}{for} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} map = 0; map < \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.dataSize; map++)}
+\DoxyCodeLine{108         \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[map] = MemoryRegion();}
+\DoxyCodeLine{109     }
+\DoxyCodeLine{110     \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a7aea680298a0a52637bb8d96bd56e50d}{allocator}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{111 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_a9d5e6d71b96e1ace8d45c87dedeab11f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1BinaryExecutable_a8e2d0b0de64b559b165176370cb37ec0}\label{classBBP_1_1userspace_1_1BinaryExecutable_a8e2d0b0de64b559b165176370cb37ec0}} 
+\index{BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}!unloadTLS@{unloadTLS}}
+\index{unloadTLS@{unloadTLS}!BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}}
+\doxysubsubsection{\texorpdfstring{unloadTLS()}{unloadTLS()}}
+{\footnotesize\ttfamily void B\+B\+P\+::userspace\+::\+Binary\+Executable\+::unload\+T\+LS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{std\+::\+P\+A\+GE}}$<$ \mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std\+::string\+\_\+element}} $>$ \&}]{page }\end{DoxyParamCaption})}
+
+
+
+Definition at line 266 of file Binary\+Executables.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{267 \{}
+\DoxyCodeLine{268     \textcolor{comment}{// Restore page next-\/prev relation}}
+\DoxyCodeLine{269     page.prevPage = \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ae4efaa5ede25b5ff9ada504ca5f87f6f}{TLSData}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_ae3ed5c6be788a903036a151ac69cd2d9}{prevPage}};}
+\DoxyCodeLine{270     page.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a8d21ebf8bb4b9485b67e17698ff1f890}{nextPage}} = \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ae4efaa5ede25b5ff9ada504ca5f87f6f}{TLSData}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a8d21ebf8bb4b9485b67e17698ff1f890}{nextPage}};}
+\DoxyCodeLine{271 }
+\DoxyCodeLine{272     \textcolor{comment}{// Now set binary data}}
+\DoxyCodeLine{273     \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ab75ab6cf2c312ecb34fe62562936ce67}{BinaryData}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a8d21ebf8bb4b9485b67e17698ff1f890}{nextPage}} = \&\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ae4efaa5ede25b5ff9ada504ca5f87f6f}{TLSData}};}
+\DoxyCodeLine{274     \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ae4efaa5ede25b5ff9ada504ca5f87f6f}{TLSData}}.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_ae3ed5c6be788a903036a151ac69cd2d9}{prevPage}} = \&\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_ab75ab6cf2c312ecb34fe62562936ce67}{BinaryData}};}
+\DoxyCodeLine{275 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1BinaryExecutable_a96eb4539fc4f247710a8c1effabea87e}\label{classBBP_1_1userspace_1_1BinaryExecutable_a96eb4539fc4f247710a8c1effabea87e}} 
+\index{BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}!virtualToPhysical@{virtualToPhysical}}
+\index{virtualToPhysical@{virtualToPhysical}!BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}}
+\doxysubsubsection{\texorpdfstring{virtualToPhysical()}{virtualToPhysical()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{B\+B\+P\+::std\+::address\+\_\+t}} B\+B\+P\+::userspace\+::\+Binary\+Executable\+::virtual\+To\+Physical (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std\+::address\+\_\+t}}}]{address }\end{DoxyParamCaption})}
+
+
+
+Definition at line 150 of file Binary\+Executables.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{151 \{}
+\DoxyCodeLine{152     \textcolor{comment}{// Find the address of the memory mapping for this address}}
+\DoxyCodeLine{153     \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} block = \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_aa7c08493ef5b210b84ff067a5b6aeae2}{findIndexOfVirtualMemory}}(address);}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155     \textcolor{comment}{// If no address is found, signal SIGSEGV}}
+\DoxyCodeLine{156     \textcolor{keywordflow}{if} (block == \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.dataSize)}
+\DoxyCodeLine{157     \{}
+\DoxyCodeLine{158         \mbox{\hyperlink{Signal_8h_a82e69d819748cab5933309bba1999f7c}{\_\_SIGNAL\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_a8b214d5bdfe950ea0efc262c569ff9ef}{SIGSEGV}});}
+\DoxyCodeLine{159     \}}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{161     \textcolor{comment}{// Retrieve variables}}
+\DoxyCodeLine{162     \mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std::address\_t}} virtualHead = \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[block].virtualMemoryHead;}
+\DoxyCodeLine{163     \mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std::address\_t}} physicalHead = \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[block].physicalMemoryHead;}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165     \textcolor{comment}{// Valid block found. Now find difference between address and virtual head}}
+\DoxyCodeLine{166     \mbox{\hyperlink{namespaceBBP_1_1std_aba0804f0534bca779731a6e8f2d3b123}{std::offset\_t}} difference = address -\/ virtualHead;}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168     \textcolor{comment}{// Then Add that difference to physical head}}
+\DoxyCodeLine{169     \textcolor{keywordflow}{return} difference + physicalHead;}
+\DoxyCodeLine{170 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_a96eb4539fc4f247710a8c1effabea87e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1BinaryExecutable_a2b295eba81c58863f4657eb94f0e2156}\label{classBBP_1_1userspace_1_1BinaryExecutable_a2b295eba81c58863f4657eb94f0e2156}} 
+\index{BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}!virtualToPhysical@{virtualToPhysical}}
+\index{virtualToPhysical@{virtualToPhysical}!BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}}
+\doxysubsubsection{\texorpdfstring{virtualToPhysical()}{virtualToPhysical()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{B\+B\+P\+::std\+::address\+\_\+t}} B\+B\+P\+::userspace\+::\+Binary\+Executable\+::virtual\+To\+Physical (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std\+::address\+\_\+t}}}]{address,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}}}]{cached }\end{DoxyParamCaption})}
+
+
+
+Definition at line 114 of file Binary\+Executables.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{115 \{}
+\DoxyCodeLine{116     \textcolor{comment}{// If cached index is out of static\_data index, throw exception}}
+\DoxyCodeLine{117     \textcolor{keywordflow}{if} (cached >= \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.dataSize)}
+\DoxyCodeLine{118         \textcolor{keywordflow}{throw} \mbox{\hyperlink{namespaceBBP_1_1std_a750ba4c285e0788e84722a30a776b913}{std::exception}}(\textcolor{stringliteral}{"Virtual memory cache index invalid."}, \mbox{\hyperlink{errno_8h_a556612e55358838192165684c971a44f}{EADDRNOTAVAIL}});}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120     \textcolor{comment}{// Check if cached block contains address}}
+\DoxyCodeLine{121     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[cached].allocated \&\& \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[cached].virtualMemoryHead <= address \&\& (\mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[cached].virtualMemoryHead + \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[cached].size) > address)}
+\DoxyCodeLine{122     \{}
+\DoxyCodeLine{123         \textcolor{comment}{// If so, find difference and return}}
+\DoxyCodeLine{124         \mbox{\hyperlink{namespaceBBP_1_1std_aba0804f0534bca779731a6e8f2d3b123}{std::offset\_t}} offset = address -\/ \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[cached].virtualMemoryHead;}
+\DoxyCodeLine{125         \textcolor{keywordflow}{return} \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}{mapping}}.static\_data[cached].physicalMemoryHead + offset;}
+\DoxyCodeLine{126     \}}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128     \textcolor{comment}{// Otherwise, just return virtual to physical}}
+\DoxyCodeLine{129     \textcolor{keywordflow}{return} \mbox{\hyperlink{classBBP_1_1userspace_1_1BinaryExecutable_a96eb4539fc4f247710a8c1effabea87e}{virtualToPhysical}}(address);}
+\DoxyCodeLine{130 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_a2b295eba81c58863f4657eb94f0e2156_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1BinaryExecutable_ae215ff73f42ca9f57046c5d3ef5a8476}\label{classBBP_1_1userspace_1_1BinaryExecutable_ae215ff73f42ca9f57046c5d3ef5a8476}} 
+\index{BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}!allocated@{allocated}}
+\index{allocated@{allocated}!BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}}
+\doxysubsubsection{\texorpdfstring{allocated}{allocated}}
+{\footnotesize\ttfamily bool B\+B\+P\+::userspace\+::\+Binary\+Executable\+::allocated\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 44 of file Binary\+Executable.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1BinaryExecutable_a7aea680298a0a52637bb8d96bd56e50d}\label{classBBP_1_1userspace_1_1BinaryExecutable_a7aea680298a0a52637bb8d96bd56e50d}} 
+\index{BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}!allocator@{allocator}}
+\index{allocator@{allocator}!BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}}
+\doxysubsubsection{\texorpdfstring{allocator}{allocator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager}{std\+::\+Resource\+Manager}}$\ast$ B\+B\+P\+::userspace\+::\+Binary\+Executable\+::allocator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 41 of file Binary\+Executable.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1BinaryExecutable_ab75ab6cf2c312ecb34fe62562936ce67}\label{classBBP_1_1userspace_1_1BinaryExecutable_ab75ab6cf2c312ecb34fe62562936ce67}} 
+\index{BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}!BinaryData@{BinaryData}}
+\index{BinaryData@{BinaryData}!BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}}
+\doxysubsubsection{\texorpdfstring{BinaryData}{BinaryData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{std\+::\+P\+A\+GE}}$<$\mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std\+::string\+\_\+element}}$>$ B\+B\+P\+::userspace\+::\+Binary\+Executable\+::\+Binary\+Data}
+
+
+
+Definition at line 52 of file Binary\+Executable.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}\label{classBBP_1_1userspace_1_1BinaryExecutable_a4e9ead370dc435afc1dabb9a0e800dd9}} 
+\index{BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}!mapping@{mapping}}
+\index{mapping@{mapping}!BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}}
+\doxysubsubsection{\texorpdfstring{mapping}{mapping}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structBBP_1_1std_1_1STATIC__PAGE}{std\+::\+S\+T\+A\+T\+I\+C\+\_\+\+P\+A\+GE}}$<$\mbox{\hyperlink{structBBP_1_1userspace_1_1MemoryRegion}{Memory\+Region}}, 8$>$ B\+B\+P\+::userspace\+::\+Binary\+Executable\+::mapping}
+
+
+
+Definition at line 56 of file Binary\+Executable.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1BinaryExecutable_ae4efaa5ede25b5ff9ada504ca5f87f6f}\label{classBBP_1_1userspace_1_1BinaryExecutable_ae4efaa5ede25b5ff9ada504ca5f87f6f}} 
+\index{BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}!TLSData@{TLSData}}
+\index{TLSData@{TLSData}!BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}}
+\doxysubsubsection{\texorpdfstring{TLSData}{TLSData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{std\+::\+P\+A\+GE}}$<$\mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std\+::string\+\_\+element}}$>$ B\+B\+P\+::userspace\+::\+Binary\+Executable\+::\+T\+L\+S\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 47 of file Binary\+Executable.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1userspace_1_1BinaryExecutable_a069910ce9f3d2bdf7580e55eec85c62f}\label{classBBP_1_1userspace_1_1BinaryExecutable_a069910ce9f3d2bdf7580e55eec85c62f}} 
+\index{BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}!totalSize@{totalSize}}
+\index{totalSize@{totalSize}!BBP::userspace::BinaryExecutable@{BBP::userspace::BinaryExecutable}}
+\doxysubsubsection{\texorpdfstring{totalSize}{totalSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std\+::size\+\_\+t}} B\+B\+P\+::userspace\+::\+Binary\+Executable\+::total\+Size}
+
+
+
+Definition at line 53 of file Binary\+Executable.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{BinaryExecutable_8h}{Binary\+Executable.\+h}}\item 
+\mbox{\hyperlink{BinaryExecutables_8cpp}{Binary\+Executables.\+cpp}}\end{DoxyCompactItemize}

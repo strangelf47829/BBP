@@ -1,0 +1,197 @@
+\hypertarget{EMULATOR_2tterm_8cpp}{}\doxysection{tterm.\+cpp File Reference}
+\label{EMULATOR_2tterm_8cpp}\index{tterm.cpp@{tterm.cpp}}
+{\ttfamily \#include \char`\"{}../include/stdio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/\+Graphics.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../build/include/\+S\+D\+L.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$Windows.\+h$>$}\newline
+Include dependency graph for E\+M\+U\+L\+A\+T\+O\+R/tterm.cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/deb/EMULATOR_2tterm_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{EMULATOR_2tterm_8cpp_a6f762346f9b3ee9e4887d897b256eb80}{input\+Thread}} (void $\ast$data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+H\+A\+N\+D\+LE \mbox{\hyperlink{EMULATOR_2tterm_8cpp_ad260f4564dd02146b8dd402b966a0007}{serial\+Handle}}
+\item 
+volatile bool \mbox{\hyperlink{EMULATOR_2tterm_8cpp_aec806dcd05c5f854b5b85e79b67df94d}{write\+Something}} = false
+\item 
+volatile \mbox{\hyperlink{namespaceBBP_1_1std_a95c149a6e963e567bd059eb11aef4ac8}{B\+B\+P\+::std\+::c\+\_\+string}} \mbox{\hyperlink{EMULATOR_2tterm_8cpp_a8c702f252e54444019297f4e1cbb0623}{outputstr}}
+\item 
+volatile \mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{B\+B\+P\+::std\+::size\+\_\+t}} \mbox{\hyperlink{EMULATOR_2tterm_8cpp_a81f8d0ed934695b7e9aa57cac0e5c07f}{outputstrlen}}
+\item 
+volatile bool \mbox{\hyperlink{EMULATOR_2tterm_8cpp_a7edad9a2d03fb1868407492bb99ea2fc}{written}} = false
+\item 
+S\+D\+L\+\_\+\+Thread $\ast$ \mbox{\hyperlink{EMULATOR_2tterm_8cpp_acf12fd02d718d8c4907145316b1063aa}{thr}}
+\item 
+volatile bool \mbox{\hyperlink{EMULATOR_2tterm_8cpp_ae1fd54bdbfbc12c29816883afaa80969}{listen\+For\+Input}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{EMULATOR_2tterm_8cpp_a6f762346f9b3ee9e4887d897b256eb80}\label{EMULATOR_2tterm_8cpp_a6f762346f9b3ee9e4887d897b256eb80}} 
+\index{EMULATOR/tterm.cpp@{EMULATOR/tterm.cpp}!inputThread@{inputThread}}
+\index{inputThread@{inputThread}!EMULATOR/tterm.cpp@{EMULATOR/tterm.cpp}}
+\doxysubsubsection{\texorpdfstring{inputThread()}{inputThread()}}
+{\footnotesize\ttfamily int input\+Thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 85 of file E\+M\+U\+L\+A\+T\+O\+R/tterm.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{86 \{}
+\DoxyCodeLine{87     \textcolor{comment}{// Create serial object}}
+\DoxyCodeLine{88     HANDLE h\_serial;}
+\DoxyCodeLine{89     HANDLE outputSerial;}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91     \textcolor{comment}{// Create serial object}}
+\DoxyCodeLine{92     h\_serial = CreateFile(\textcolor{stringliteral}{"COM6"}, GENERIC\_READ | GENERIC\_WRITE, 0, 0, OPEN\_EXISTING, FILE\_ATTRIBUTE\_NORMAL, 0);}
+\DoxyCodeLine{93     outputSerial = CreateFile(\textcolor{stringliteral}{"COM8"}, GENERIC\_READ | GENERIC\_WRITE, 0, 0, OPEN\_EXISTING, FILE\_ATTRIBUTE\_NORMAL, 0);}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95     \textcolor{comment}{// Configure input}}
+\DoxyCodeLine{96     DCB dcbSerialParam = \{ 0 \};}
+\DoxyCodeLine{97     dcbSerialParam.DCBlength = \textcolor{keyword}{sizeof}(dcbSerialParam);}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99     dcbSerialParam.BaudRate = CBR\_57600;}
+\DoxyCodeLine{100     dcbSerialParam.ByteSize = 8;}
+\DoxyCodeLine{101     dcbSerialParam.StopBits = ONESTOPBIT;}
+\DoxyCodeLine{102     dcbSerialParam.Parity = NOPARITY;}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104     \textcolor{comment}{// Set configuration}}
+\DoxyCodeLine{105     SetCommState(h\_serial, \&dcbSerialParam);}
+\DoxyCodeLine{106     SetCommState(outputSerial, \&dcbSerialParam);}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108     \textcolor{comment}{// Set timeouts}}
+\DoxyCodeLine{109     COMMTIMEOUTS timeout = \{ 0 \};}
+\DoxyCodeLine{110     timeout.ReadIntervalTimeout = 60;}
+\DoxyCodeLine{111     timeout.ReadTotalTimeoutConstant = 60;}
+\DoxyCodeLine{112     timeout.ReadTotalTimeoutMultiplier = 15;}
+\DoxyCodeLine{113     timeout.WriteTotalTimeoutConstant = 60;}
+\DoxyCodeLine{114     timeout.WriteTotalTimeoutMultiplier = 8;}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116     \textcolor{comment}{// Apply timeouts}}
+\DoxyCodeLine{117     SetCommTimeouts(h\_serial, \&timeout);}
+\DoxyCodeLine{118     SetCommTimeouts(outputSerial, \&timeout);}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121     \textcolor{keywordtype}{char} sBuff[16 + 1] = \{ 0 \};}
+\DoxyCodeLine{122     DWORD dwRead = 0;}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124     SDL\_Event event;}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127     \textcolor{keywordflow}{while} (\mbox{\hyperlink{EMULATOR_2tterm_8cpp_ae1fd54bdbfbc12c29816883afaa80969}{listenForInput}}) \{}
+\DoxyCodeLine{128         \textcolor{keywordflow}{if} (ReadFile(h\_serial, sBuff, 16, \&dwRead, NULL))}
+\DoxyCodeLine{129         \{}
+\DoxyCodeLine{130             SDL\_PollEvent(\&event);}
+\DoxyCodeLine{131             \textcolor{keywordflow}{for} (DWORD idx = 0; idx < dwRead; idx++)}
+\DoxyCodeLine{132             \{}
+\DoxyCodeLine{133                 \mbox{\hyperlink{namespaceBBP_1_1std_a0e604b25e277316ba6a6d604812bbee3}{BBP::std::STDIN}} << sBuff[idx];}
+\DoxyCodeLine{134             \}}
+\DoxyCodeLine{135         \}}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137         \textcolor{keywordflow}{if} (\mbox{\hyperlink{EMULATOR_2tterm_8cpp_aec806dcd05c5f854b5b85e79b67df94d}{writeSomething}})}
+\DoxyCodeLine{138         \{}
+\DoxyCodeLine{139             DWORD amountWritten = 0;}
+\DoxyCodeLine{140             WriteFile(outputSerial, \mbox{\hyperlink{EMULATOR_2tterm_8cpp_a8c702f252e54444019297f4e1cbb0623}{outputstr}}, \mbox{\hyperlink{EMULATOR_2tterm_8cpp_a81f8d0ed934695b7e9aa57cac0e5c07f}{outputstrlen}}, \&amountWritten, NULL);}
+\DoxyCodeLine{141             \mbox{\hyperlink{EMULATOR_2tterm_8cpp_aec806dcd05c5f854b5b85e79b67df94d}{writeSomething}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{142             \mbox{\hyperlink{EMULATOR_2tterm_8cpp_a7edad9a2d03fb1868407492bb99ea2fc}{written}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{143         \}}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145     \}}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147     \textcolor{comment}{// close serial}}
+\DoxyCodeLine{148     CloseHandle(h\_serial);}
+\DoxyCodeLine{149     CloseHandle(outputSerial);}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{152 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{EMULATOR_2tterm_8cpp_ae1fd54bdbfbc12c29816883afaa80969}\label{EMULATOR_2tterm_8cpp_ae1fd54bdbfbc12c29816883afaa80969}} 
+\index{EMULATOR/tterm.cpp@{EMULATOR/tterm.cpp}!listenForInput@{listenForInput}}
+\index{listenForInput@{listenForInput}!EMULATOR/tterm.cpp@{EMULATOR/tterm.cpp}}
+\doxysubsubsection{\texorpdfstring{listenForInput}{listenForInput}}
+{\footnotesize\ttfamily volatile bool listen\+For\+Input = false}
+
+
+
+Definition at line 83 of file E\+M\+U\+L\+A\+T\+O\+R/tterm.\+cpp.
+
+\mbox{\Hypertarget{EMULATOR_2tterm_8cpp_a8c702f252e54444019297f4e1cbb0623}\label{EMULATOR_2tterm_8cpp_a8c702f252e54444019297f4e1cbb0623}} 
+\index{EMULATOR/tterm.cpp@{EMULATOR/tterm.cpp}!outputstr@{outputstr}}
+\index{outputstr@{outputstr}!EMULATOR/tterm.cpp@{EMULATOR/tterm.cpp}}
+\doxysubsubsection{\texorpdfstring{outputstr}{outputstr}}
+{\footnotesize\ttfamily volatile \mbox{\hyperlink{namespaceBBP_1_1std_a95c149a6e963e567bd059eb11aef4ac8}{B\+B\+P\+::std\+::c\+\_\+string}} outputstr}
+
+
+
+Definition at line 58 of file E\+M\+U\+L\+A\+T\+O\+R/tterm.\+cpp.
+
+\mbox{\Hypertarget{EMULATOR_2tterm_8cpp_a81f8d0ed934695b7e9aa57cac0e5c07f}\label{EMULATOR_2tterm_8cpp_a81f8d0ed934695b7e9aa57cac0e5c07f}} 
+\index{EMULATOR/tterm.cpp@{EMULATOR/tterm.cpp}!outputstrlen@{outputstrlen}}
+\index{outputstrlen@{outputstrlen}!EMULATOR/tterm.cpp@{EMULATOR/tterm.cpp}}
+\doxysubsubsection{\texorpdfstring{outputstrlen}{outputstrlen}}
+{\footnotesize\ttfamily volatile \mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{B\+B\+P\+::std\+::size\+\_\+t}} outputstrlen}
+
+
+
+Definition at line 59 of file E\+M\+U\+L\+A\+T\+O\+R/tterm.\+cpp.
+
+\mbox{\Hypertarget{EMULATOR_2tterm_8cpp_ad260f4564dd02146b8dd402b966a0007}\label{EMULATOR_2tterm_8cpp_ad260f4564dd02146b8dd402b966a0007}} 
+\index{EMULATOR/tterm.cpp@{EMULATOR/tterm.cpp}!serialHandle@{serialHandle}}
+\index{serialHandle@{serialHandle}!EMULATOR/tterm.cpp@{EMULATOR/tterm.cpp}}
+\doxysubsubsection{\texorpdfstring{serialHandle}{serialHandle}}
+{\footnotesize\ttfamily H\+A\+N\+D\+LE serial\+Handle}
+
+
+
+Definition at line 56 of file E\+M\+U\+L\+A\+T\+O\+R/tterm.\+cpp.
+
+\mbox{\Hypertarget{EMULATOR_2tterm_8cpp_acf12fd02d718d8c4907145316b1063aa}\label{EMULATOR_2tterm_8cpp_acf12fd02d718d8c4907145316b1063aa}} 
+\index{EMULATOR/tterm.cpp@{EMULATOR/tterm.cpp}!thr@{thr}}
+\index{thr@{thr}!EMULATOR/tterm.cpp@{EMULATOR/tterm.cpp}}
+\doxysubsubsection{\texorpdfstring{thr}{thr}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Thread$\ast$ thr}
+
+
+
+Definition at line 82 of file E\+M\+U\+L\+A\+T\+O\+R/tterm.\+cpp.
+
+\mbox{\Hypertarget{EMULATOR_2tterm_8cpp_aec806dcd05c5f854b5b85e79b67df94d}\label{EMULATOR_2tterm_8cpp_aec806dcd05c5f854b5b85e79b67df94d}} 
+\index{EMULATOR/tterm.cpp@{EMULATOR/tterm.cpp}!writeSomething@{writeSomething}}
+\index{writeSomething@{writeSomething}!EMULATOR/tterm.cpp@{EMULATOR/tterm.cpp}}
+\doxysubsubsection{\texorpdfstring{writeSomething}{writeSomething}}
+{\footnotesize\ttfamily volatile bool write\+Something = false}
+
+
+
+Definition at line 57 of file E\+M\+U\+L\+A\+T\+O\+R/tterm.\+cpp.
+
+\mbox{\Hypertarget{EMULATOR_2tterm_8cpp_a7edad9a2d03fb1868407492bb99ea2fc}\label{EMULATOR_2tterm_8cpp_a7edad9a2d03fb1868407492bb99ea2fc}} 
+\index{EMULATOR/tterm.cpp@{EMULATOR/tterm.cpp}!written@{written}}
+\index{written@{written}!EMULATOR/tterm.cpp@{EMULATOR/tterm.cpp}}
+\doxysubsubsection{\texorpdfstring{written}{written}}
+{\footnotesize\ttfamily volatile bool written = false}
+
+
+
+Definition at line 60 of file E\+M\+U\+L\+A\+T\+O\+R/tterm.\+cpp.
+

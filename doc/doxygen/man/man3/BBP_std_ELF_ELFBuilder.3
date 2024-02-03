@@ -1,0 +1,1317 @@
+.TH "BBP::std::ELF::ELFBuilder" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BBP::std::ELF::ELFBuilder
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ELF\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBELFBuilder\fP (\fBResourceManager\fP *res, \fBstd::size_t\fP segCount, \fBstd::size_t\fP secCount, \fBstd::size_t\fP symCount)"
+.br
+.ti -1c
+.RI "\fBELFBuilder\fP (\fBPAGE\fP< \fBstring_element\fP > *_file, \fBResourceManager\fP *res)"
+.br
+.ti -1c
+.RI "\fBstd::byte\fP \fBident\fP (\fBstd::byte\fP)"
+.br
+.ti -1c
+.RI "void \fBident\fP (\fBstd::byte\fP, \fBstd::byte\fP)"
+.br
+.ti -1c
+.RI "\fBstd::halfword\fP \fBtype\fP (void)"
+.br
+.ti -1c
+.RI "void \fBtype\fP (\fBstd::halfword\fP)"
+.br
+.ti -1c
+.RI "\fBstd::halfword\fP \fBmachine\fP (void)"
+.br
+.ti -1c
+.RI "void \fBmachine\fP (\fBstd::halfword\fP)"
+.br
+.ti -1c
+.RI "\fBstd::word\fP \fBversion\fP (void)"
+.br
+.ti -1c
+.RI "void \fBversion\fP (\fBstd::word\fP)"
+.br
+.ti -1c
+.RI "\fBstd::address_t\fP \fBentry\fP (void)"
+.br
+.ti -1c
+.RI "void \fBentry\fP (\fBstd::address_t\fP)"
+.br
+.ti -1c
+.RI "\fBstd::offset_t\fP \fBphoff\fP (void)"
+.br
+.ti -1c
+.RI "void \fBphoff\fP (\fBstd::offset_t\fP)"
+.br
+.ti -1c
+.RI "\fBstd::offset_t\fP \fBshoff\fP (void)"
+.br
+.ti -1c
+.RI "void \fBshoff\fP (\fBstd::offset_t\fP)"
+.br
+.ti -1c
+.RI "\fBstd::word\fP \fBflags\fP (void)"
+.br
+.ti -1c
+.RI "void \fBflags\fP (\fBstd::word\fP)"
+.br
+.ti -1c
+.RI "\fBstd::halfword\fP \fBehsize\fP (void)"
+.br
+.ti -1c
+.RI "void \fBehsize\fP (\fBstd::halfword\fP)"
+.br
+.ti -1c
+.RI "\fBstd::halfword\fP \fBphentsize\fP (void)"
+.br
+.ti -1c
+.RI "void \fBphentsize\fP (\fBstd::halfword\fP)"
+.br
+.ti -1c
+.RI "\fBstd::halfword\fP \fBphnum\fP (void)"
+.br
+.ti -1c
+.RI "void \fBphnum\fP (\fBstd::halfword\fP)"
+.br
+.ti -1c
+.RI "\fBstd::halfword\fP \fBshentsize\fP (void)"
+.br
+.ti -1c
+.RI "void \fBshentsize\fP (\fBstd::halfword\fP)"
+.br
+.ti -1c
+.RI "\fBstd::halfword\fP \fBshnum\fP (void)"
+.br
+.ti -1c
+.RI "void \fBshnum\fP (\fBstd::halfword\fP)"
+.br
+.ti -1c
+.RI "\fBstd::halfword\fP \fBshstrndx\fP (void)"
+.br
+.ti -1c
+.RI "void \fBshstrndx\fP (\fBstd::halfword\fP)"
+.br
+.ti -1c
+.RI "void \fBemitHeader\fP ()"
+.br
+.ti -1c
+.RI "\fBstd::size_t\fP \fBcalculateHeaderSize\fP ()"
+.br
+.ti -1c
+.RI "void \fBemitELFHeaders\fP ()"
+.br
+.ti -1c
+.RI "\fBSectionBuilder\fP & \fB_shstrtab\fP ()"
+.br
+.ti -1c
+.RI "\fBSectionBuilder\fP & \fB_strtab\fP ()"
+.br
+.ti -1c
+.RI "\fBSectionBuilder\fP & \fB_symtab\fP ()"
+.br
+.ti -1c
+.RI "\fBSectionBuilder\fP & \fB_hashtab\fP ()"
+.br
+.ti -1c
+.RI "\fBSectionBuilder\fP & \fB_bss\fP ()"
+.br
+.ti -1c
+.RI "\fBSectionBuilder\fP & \fB_data\fP ()"
+.br
+.ti -1c
+.RI "\fBSectionBuilder\fP & \fB_data1\fP ()"
+.br
+.ti -1c
+.RI "\fBSectionBuilder\fP & \fB_fini\fP ()"
+.br
+.ti -1c
+.RI "\fBSectionBuilder\fP & \fB_init\fP ()"
+.br
+.ti -1c
+.RI "\fBSectionBuilder\fP & \fB_rodata\fP ()"
+.br
+.ti -1c
+.RI "\fBSectionBuilder\fP & \fB_rodata1\fP ()"
+.br
+.ti -1c
+.RI "\fBSectionBuilder\fP & \fB_text\fP ()"
+.br
+.ti -1c
+.RI "\fBSectionBuilder\fP & \fB_rel_text\fP ()"
+.br
+.ti -1c
+.RI "void \fBrecalculateOffsets\fP (\fBstd::offset_t\fP after, \fBstd::size_t\fP byHowMuch)"
+.br
+.ti -1c
+.RI "void \fBformStandard\fP (\fBstd::size_t\fP textSize, \fBstd::size_t\fP dataSize, \fBstd::size_t\fP rodataSize, \fBstd::size_t\fP bssSize)"
+.br
+.ti -1c
+.RI "void \fBrenameSymbol\fP (\fBstd::index_t\fP, \fBconststring\fP)"
+.br
+.ti -1c
+.RI "void \fBclose\fP ()"
+.br
+.in -1c
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBResourceManager\fP * \fBallocator\fP"
+.br
+.ti -1c
+.RI "\fBPAGE\fP< \fBstring_element\fP > \fBfile\fP"
+.br
+.ti -1c
+.RI "bool \fBEndian\fP"
+.br
+.ti -1c
+.RI "\fBStack\fP< \fBSegmentBuilder\fP > \fBsegments\fP"
+.br
+.ti -1c
+.RI "\fBStack\fP< \fBSectionBuilder\fP > \fBsections\fP"
+.br
+.ti -1c
+.RI "\fBStack\fP< \fBSymbolBuilder\fP > \fBsymbols\fP"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBshstrtab\fP"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBstrtab\fP"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBsymtab\fP"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBhashtab\fP"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBbss\fP"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBdata\fP"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBdata1\fP"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBfini\fP"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBinit\fP"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBrodata\fP"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBrodata1\fP"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBtext\fP"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBrel_text\fP"
+.br
+.ti -1c
+.RI "\fBstd::size_t\fP \fBsymbolCount\fP"
+.br
+.ti -1c
+.RI "\fBstd::word\fP \fBhashBucketCount\fP"
+.br
+.ti -1c
+.RI "\fBstd::word\fP \fBhashChainCount\fP"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPAGE\fP< \fBSegmentBuilder\fP > \fBsegPages\fP"
+.br
+.ti -1c
+.RI "\fBPAGE\fP< \fBSectionBuilder\fP > \fBsecPages\fP"
+.br
+.ti -1c
+.RI "\fBPAGE\fP< \fBSymbolBuilder\fP > \fBsymPages\fP"
+.br
+.ti -1c
+.RI "bool \fBisMemUnique\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 22 of file ELF\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "BBP::std::ELF::ELFBuilder::ELFBuilder (\fBResourceManager\fP * res, \fBstd::size_t\fP segCount, \fBstd::size_t\fP secCount, \fBstd::size_t\fP symCount)"
+
+.PP
+Definition at line 7 of file ELFHeader\&.cpp\&.
+.PP
+.nf
+8     : allocator(res),
+9     file(PAGE<string_element>(52 + segCount * ELF_SEGMENT_HEADERSIZE + secCount * ELF_SECTION_HEADERSIZE, (std::string_element *)res->calloc(52 + segCount * ELF_SEGMENT_HEADERSIZE + secCount * ELF_SECTION_HEADERSIZE, sizeof(std::string_element)))),
+10     Endian(false),
+11     segments(Stack<SegmentBuilder>(&segPages, segCount)),
+12     sections(Stack<SectionBuilder>(&secPages, secCount)),
+13     symbols(Stack<SymbolBuilder>(&symPages, symCount)),
+14     symbolCount(symCount),
+15     segPages(PAGE<SegmentBuilder>(segCount, (SegmentBuilder *)res->calloc(segCount, sizeof(SegmentBuilder)))),
+16     secPages(PAGE<SectionBuilder>(secCount, (SectionBuilder *)res->calloc(secCount, sizeof(SectionBuilder)))),
+17     symPages(PAGE<SymbolBuilder>(symCount, (SymbolBuilder *)res->calloc(symCount, sizeof(SymbolBuilder)))),
+18     isMemUnique(true),
+19     hashBucketCount(4),
+20     hashChainCount(symCount)
+21 {
+22     for (index_t index = 0; index < segCount; index++)
+23     {
+24         segments[index] = ELF::SegmentBuilder(this, 0);
+25         segments[index]\&.elf = this;
+26     }
+27     for (index_t index = 0; index < secCount; index++)
+28     {
+29         sections[index] = ELF::SectionBuilder(this, 0);
+30         sections[index]\&.elf = this;
+31     }
+32     for (index_t index = 0; index < symCount; index++)
+33     {
+34         symbols[index] = ELF::SymbolBuilder(this, 0);
+35         symbols[index]\&.elf = this;
+36     }
+37 
+38     phnum(segCount);
+39     shnum(secCount);
+40 }
+.fi
+.PP
+References phnum(), sections, segments, shnum(), and symbols\&.
+.SS "BBP::std::ELF::ELFBuilder::ELFBuilder (\fBPAGE\fP< \fBstring_element\fP > * _file, \fBResourceManager\fP * res)"
+
+.PP
+Definition at line 42 of file ELFHeader\&.cpp\&.
+.PP
+.nf
+43     : allocator(res),
+44     file(PAGE<string_element>(0, nullptr)),
+45     Endian(false),
+46     segments(Stack<SegmentBuilder>(&segPages, 0)),
+47     sections(Stack<SectionBuilder>(&secPages, 0)),
+48     symbols(Stack<SymbolBuilder>(&symPages, 0)),
+49     symbolCount(0),
+50     segPages(PAGE<SegmentBuilder>()),
+51     secPages(PAGE<SectionBuilder>()),
+52     symPages(PAGE<SymbolBuilder>()),
+53     isMemUnique(false),
+54     hashBucketCount(4),
+55     hashChainCount(0)
+56 {
+57 
+58     // Check if file is not nullptr
+59     if (_file == nullptr)
+60         throw std::exception("Invalid file", ENOENT);
+61 
+62     // Check if resource allocator is nullptr
+63     if (res == nullptr)
+64         throw std::exception("Invalid resource allocator", ENOENT);
+65 
+66     // Check if file size is at least 52 bytes
+67     if (std::seqlen(*_file) < 52)
+68         throw std::exception("File is not ELF file: too small\&.", ENODATA);
+69 
+70     // Set file
+71     file = std::PAGE<std::string_element>(_file->dataSize, _file->data);
+72 
+73     // Get magic
+74     std::word magic = (ident(0) << 24) | (ident(1) << 16) | (ident(2) << 8) | ident(3);
+75 
+76     // Validate magic
+77     if (magic != 0x7f454c46)
+78         throw std::exception("FIle is not ELF file: wrong magic", ENODATA);
+79 
+80     // Get phnum and shnum count
+81     std::size_t sectionCount = shnum();
+82     std::size_t segmentCount = phnum();
+83 
+84     // Create resources
+85     secPages = std::PAGE<SectionBuilder>(sectionCount, (SectionBuilder *)res->calloc(sectionCount, sizeof(SectionBuilder)));
+86     segPages = std::PAGE<SegmentBuilder>(segmentCount, (SegmentBuilder *)res->calloc(segmentCount, sizeof(SegmentBuilder)));
+87     
+88     // And assign stacks
+89     sections = std::Stack<SectionBuilder>(&secPages, sectionCount);
+90     segments = std::Stack<SegmentBuilder>(&segPages, segmentCount);
+91 
+92     // Get offsets of program and section headers
+93     std::offset_t sectionOffsets = shoff();
+94     std::offset_t segmentOffsets = phoff();
+95 
+96     // Now also get size of program and section headers
+97     std::size_t sectionSize = shentsize();
+98     std::size_t segmentSize = phentsize();
+99 
+100     // Now initialize them
+101     for (index_t index = 0; index < segmentCount; index++)
+102     {
+103         segments[index] = ELF::SegmentBuilder(this, segmentOffsets + index * segmentSize);
+104         segments[index]\&.elf = this;
+105     }
+106     for (index_t index = 0; index < sectionCount; index++)
+107     {
+108         sections[index] = ELF::SectionBuilder(this, sectionOffsets + index * sectionSize);
+109         sections[index]\&.elf = this;
+110     }
+111 
+112     // Now, each section should now be initialized\&. Find the string tab\&.
+113     shstrtab = shstrndx();
+114 
+115     // If strings are invalid, return error
+116     if (shstrtab == 0)
+117         throw std::exception("No string table present", ENODATA);
+118 
+119     // If string table type is not string table, throw error
+120     if (_shstrtab()\&.type() != std::ELF::SHT_STRTAB)
+121         throw std::exception("Invalid string table type", EINVAL);
+122 
+123     // Try to parse each string stuff
+124     for (std::index_t index = 0; index < sectionCount; index++)
+125     {
+126         // Get string
+127         std::c_string sectionName = file\&.data + sections[shstrtab]\&.offset() + sections[index]\&.name();
+128 
+129         // Hash string
+130         std::hash_t nameHash = std::strhsh(sectionName);
+131 
+132         // Switch based on name
+133         switch (nameHash)
+134         {
+135         case 0x12b9abd7: /*\&.text*/
+136             text = index;
+137             break;
+138         case 0x04079010: /*\&.rel\&.text*/
+139             rel_text = index;
+140             break;
+141         case 0x12b2faba: /*\&.init*/
+142             init = index;
+143             break;
+144         case 0x121a2ae8: /*\&.fini*/
+145             fini = index;
+146             break;
+147         case 0x11ac0ad4: /*\&.data*/
+148             data = index;
+149             break;
+150         case 0x2d1158c8: /*\&.rodata*/
+151             rodata = index;
+152             break;
+153         case 0x119dc248: /*\&.bss*/
+154             bss = index;
+155             break;
+156         case 0x0ea7e788: /*\&.data1*/
+157             data1 = index;
+158             break;
+159         case 0x0c25337e: /*\&.rodata1*/
+160             rodata1 = index;
+161             break;
+162         case 0x0700b1c6: /*\&.symtab*/
+163             symtab = index;
+164             break;
+165         case 0x0eb7addf: /*\&.shstrtab*/
+166             shstrtab = index;
+167             break;
+168         case 0x0702e4dc: /*\&.strtab*/
+169             strtab = index;
+170             break;
+171         case 0x0ed1cab6: /*\&.hashtab*/
+172             hashtab = index;
+173             break;
+174         }
+175 
+176 
+177     }
+178 
+179     // If symbols exist, check how many exist
+180     // Early return ignored since more conditions may be added later\&.
+181     if (symtab)
+182     {
+183         // Get count by dividing size by entsize
+184         symbolCount = _symtab()\&.size() / _symtab()\&.entsize();
+185 
+186         // Remove empty symbols
+187         for (std::index_t index = 0; index < symbolCount; index++)
+188         {
+189             // Create symbol builder
+190             SymbolBuilder sym(this, _symtab()\&.offset() + _symtab()\&.entsize() * index);
+191 
+192             // Get name
+193             std::c_string symName = file\&.data + sections[_symtab()\&.link()]\&.offset() + sym\&.name();
+194 
+195             // Symbol is wasted if index is 0 and name is 0\&.
+196             if (sym\&.info() == 0 && sym\&.name() == 0)
+197                 symbolCount--;
+198         }
+199 
+200         // Create page and stack
+201         symPages = std::PAGE<SymbolBuilder>(symbolCount, (SymbolBuilder *)res->calloc(symbolCount, sizeof(SymbolBuilder)));
+202         symbols = std::Stack<SymbolBuilder>(&symPages, symbolCount);
+203 
+204         // Assign stuff now
+205         for (std::index_t index = 0; index < symbolCount; index++)
+206         {
+207             // Constructor
+208             symbols[index] = SymbolBuilder(this, _symtab()\&.offset() + _symtab()\&.entsize() * index);
+209 
+210             // Save data if it has any\&.
+211             if (!(symbols[index]\&.info() == 0 && symbols[index]\&.name() == 0) && index != 0)
+212                 symbols[index]\&.data = std::PAGE<std::string_element>(symbols[index]\&.size(), file\&.data + sections[symbols[index]\&.shndx()]\&.offset() + symbols[index]\&.value());
+213 
+214         }
+215 
+216         // and that's basically it\&.
+217     }
+218 }
+.fi
+.PP
+References _shstrtab(), _symtab(), bss, BBP::std::ResourceManager::calloc(), BBP::std::PAGE< T >::data, data, data1, BBP::std::PAGE< T >::dataSize, EINVAL, ENODATA, ENOENT, BBP::std::ELF::SectionBuilder::entsize(), BBP::std::exception(), file, fini, hashtab, ident(), BBP::std::ELF::SymbolBuilder::info(), init, BBP::std::ELF::SectionBuilder::link(), BBP::std::ELF::SymbolBuilder::name(), phentsize(), phnum(), phoff(), rel_text, rodata, rodata1, secPages, sections, segments, segPages, BBP::std::seqlen(), shentsize(), shnum(), shoff(), shstrndx(), shstrtab, BBP::std::ELF::SHT_STRTAB, BBP::std::ELF::SectionBuilder::size(), BBP::std::strhsh(), strtab, symbolCount, symbols, symPages, symtab, text, and type()\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBSectionBuilder\fP& BBP::std::ELF::ELFBuilder::_bss ()"
+
+.SS "\fBSectionBuilder\fP& BBP::std::ELF::ELFBuilder::_data ()"
+
+.SS "\fBSectionBuilder\fP& BBP::std::ELF::ELFBuilder::_data1 ()"
+
+.SS "\fBSectionBuilder\fP& BBP::std::ELF::ELFBuilder::_fini ()"
+
+.SS "\fBSectionBuilder\fP& BBP::std::ELF::ELFBuilder::_hashtab ()"
+
+.SS "\fBSectionBuilder\fP& BBP::std::ELF::ELFBuilder::_init ()"
+
+.SS "\fBSectionBuilder\fP& BBP::std::ELF::ELFBuilder::_rel_text ()"
+
+.SS "\fBSectionBuilder\fP& BBP::std::ELF::ELFBuilder::_rodata ()"
+
+.SS "\fBSectionBuilder\fP& BBP::std::ELF::ELFBuilder::_rodata1 ()"
+
+.SS "\fBSectionBuilder\fP& BBP::std::ELF::ELFBuilder::_shstrtab ()"
+
+.PP
+Referenced by ELFBuilder()\&.
+.SS "\fBSectionBuilder\fP& BBP::std::ELF::ELFBuilder::_strtab ()"
+
+.SS "\fBSectionBuilder\fP& BBP::std::ELF::ELFBuilder::_symtab ()"
+
+.PP
+Referenced by ELFBuilder()\&.
+.SS "\fBSectionBuilder\fP& BBP::std::ELF::ELFBuilder::_text ()"
+
+.PP
+Referenced by BBP::esa::ACTION(), BBP::esa::esaProcessor::setProcedureAddress(), and BBP::smile_main()\&.
+.SS "\fBBBP::std::size_t\fP BBP::std::ELF::ELFBuilder::calculateHeaderSize ()"
+
+.PP
+Definition at line 26 of file ELF\&.cpp\&.
+.PP
+.nf
+27 {
+28     return 52 + phnum() * ELF_SEGMENT_HEADERSIZE + shnum() * ELF_SECTION_HEADERSIZE;
+29 }
+.fi
+.PP
+References ELF_SECTION_HEADERSIZE, and ELF_SEGMENT_HEADERSIZE\&.
+.SS "void BBP::std::ELF::ELFBuilder::close ()"
+
+.PP
+Definition at line 222 of file ELFHeader\&.cpp\&.
+.PP
+.nf
+223 {
+224     segments\&.atElement = segments\&.max_elements;
+225     sections\&.atElement = sections\&.max_elements;
+226     symbols\&.atElement = symbols\&.max_elements;
+227 
+228     segments\&.foreach([](SegmentBuilder &segment) { segment\&.close(); });
+229     sections\&.foreach([](SectionBuilder &section) { section\&.close(); });
+230     symbols\&.foreach([](SymbolBuilder &symbol) { symbol\&.close(); });
+231 
+232     // Loop over until no more
+233     std::PAGE<std::ELF::SegmentBuilder> *segmentptr = segments\&.page;
+234     std::PAGE<std::ELF::SectionBuilder> *sectionptr = sections\&.page;
+235     std::PAGE<std::ELF::SymbolBuilder> *symbolptr = symbols\&.page;
+236 
+237     do
+238     {
+239         std::PAGE<std::ELF::SegmentBuilder> *tmp = segmentptr->nextPage;
+240         allocator->free(segmentptr->data);
+241         segmentptr = tmp;
+242     } while (segmentptr);
+243 
+244     do
+245     {
+246         std::PAGE<std::ELF::SectionBuilder> *tmp = sectionptr->nextPage;
+247         allocator->free(sectionptr->data);
+248         sectionptr = tmp;
+249     } while (sectionptr);
+250 
+251     do
+252     {
+253         std::PAGE<std::ELF::SymbolBuilder> *tmp = symbolptr->nextPage;
+254         allocator->free(symbolptr->data);
+255         symbolptr = tmp;
+256     } while (symbolptr);
+257 
+258 
+259     //allocator->free(segments\&.page->data);
+260     //allocator->free(sections\&.page->data);
+261     //allocator->free(symbols\&.page->data);
+262 
+263     if (isMemUnique)
+264         allocator->free(file\&.data);
+265 
+266 }
+.fi
+.PP
+References BBP::std::ELF::SymbolBuilder::close(), BBP::std::ELF::SectionBuilder::close(), BBP::std::ELF::SegmentBuilder::close(), BBP::std::PAGE< T >::data, and BBP::std::PAGE< T >::nextPage\&.
+.PP
+Referenced by BBP::smile_main()\&.
+.SS "void BBP::std::ELF::ELFBuilder::ehsize (\fBstd::halfword\fP value)"
+
+.PP
+Definition at line 96 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+96 { writeHalfWord(this, value, ELF_HEADER_EHSIZEOFFSET); }
+.fi
+.PP
+References ELF_HEADER_EHSIZEOFFSET, and writeHalfWord()\&.
+.SS "\fBBBP::std::halfword\fP BBP::std::ELF::ELFBuilder::ehsize (void)"
+
+.PP
+Definition at line 95 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+95 { return readHalfWord(this, ELF_HEADER_EHSIZEOFFSET); }
+.fi
+.PP
+References ELF_HEADER_EHSIZEOFFSET, and readHalfWord()\&.
+.SS "void BBP::std::ELF::ELFBuilder::emitELFHeaders ()"
+
+.PP
+Definition at line 4 of file ELF\&.cpp\&.
+.PP
+.nf
+5 {
+6 
+7     // Set phnum and shnum
+8     phnum(segments\&.max_elements);
+9     shnum(sections\&.max_elements);
+10 
+11     // If phnum is not 0, set offset directly after header
+12     if (segments\&.max_elements)
+13     {
+14         phoff(52);
+15         // Then, if shnum is not 0, set shoff directly after program headers
+16         if (sections\&.max_elements)
+17             shoff(52 + segments\&.max_elements * ELF_SEGMENT_HEADERSIZE);
+18     }
+19     else if (sections\&.max_elements)
+20     {
+21         // Otherwise set shoff to 52 if it has sections
+22         shoff(52);
+23     }
+24 }
+.fi
+.PP
+References ELF_SEGMENT_HEADERSIZE, phnum(), phoff(), sections, segments, shnum(), and shoff()\&.
+.SS "void BBP::std::ELF::ELFBuilder::emitHeader ()"
+
+.PP
+Definition at line 32 of file ELF\&.cpp\&.
+.PP
+.nf
+33 {
+34     // Write the 16 magic ident bytes
+35     ident(0, 0x7F);
+36     ident(1, 'E');
+37     ident(2, 'L');
+38     ident(3, 'F');
+39 
+40     // 32 Bits
+41     ident(4, 0x01);
+42     
+43     // Endian-nes
+44     ident(5, Endian + 1);
+45 
+46     // ELF header version, always 1
+47     ident(6, 1);
+48 
+49     // OS ABI (version 1)
+50     ident(7, 0x1);
+51 
+52     // Default is relocatable
+53     type(1);
+54 
+55     // Custom instruction set, so set to whatever
+56     machine(0);
+57 
+58     // Set version to 1
+59     version(1);
+60 
+61     // Since this is relocatable, entry is 0
+62     entry(32);
+63 
+64     // Set phnum and shnum
+65     phnum(segments\&.max_elements);
+66     shnum(sections\&.max_elements);
+67 
+68     // Emit the other headers
+69     emitELFHeaders();
+70 
+71     // Set the respective pages for each segment
+72     std::offset_t phOffset = phoff();
+73     for (std::index_t segment = 0; segment < segments\&.max_elements; segment++)
+74         this->segments[segment]\&.header = std::string(ELF_SEGMENT_HEADERSIZE, file\&.data + phOffset + segment * ELF_SEGMENT_HEADERSIZE);
+75 
+76     // \&.\&.\&. and section
+77     std::offset_t shOffset = shoff();
+78     for (std::index_t section = 0; section < sections\&.max_elements; section++)
+79         this->sections[section]\&.header = std::string(ELF_SECTION_HEADERSIZE, file\&.data + shOffset + section * ELF_SECTION_HEADERSIZE);
+80 
+81     // No flags
+82     flags(0);
+83 
+84     // Header size, which is always 52
+85     ehsize(52);
+86 
+87     // Set sizes
+88     phentsize(ELF_SEGMENT_HEADERSIZE);
+89     shentsize(ELF_SECTION_HEADERSIZE);
+90 
+91     // No string index
+92     shstrndx(0);
+93 
+94 }
+.fi
+.PP
+References ELF_SECTION_HEADERSIZE, ELF_SEGMENT_HEADERSIZE, and BBP::esa::flags\&.
+.SS "void BBP::std::ELF::ELFBuilder::entry (\fBstd::address_t\fP value)"
+
+.PP
+Definition at line 84 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+84 { writeWord(this, value, ELF_HEADER_ENTRYOFFSET); }
+.fi
+.PP
+References ELF_HEADER_ENTRYOFFSET, and writeWord()\&.
+.SS "\fBBBP::std::address_t\fP BBP::std::ELF::ELFBuilder::entry (void)"
+
+.PP
+Definition at line 83 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+83 { return readWord(this, ELF_HEADER_ENTRYOFFSET); }
+.fi
+.PP
+References ELF_HEADER_ENTRYOFFSET, and readWord()\&.
+.SS "void BBP::std::ELF::ELFBuilder::flags (\fBstd::word\fP value)"
+
+.PP
+Definition at line 93 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+93 { writeWord(this, value, ELF_HEADER_FLAGSOFFSET); }
+.fi
+.PP
+References ELF_HEADER_FLAGSOFFSET, and writeWord()\&.
+.SS "\fBBBP::std::word\fP BBP::std::ELF::ELFBuilder::flags (void)"
+
+.PP
+Definition at line 92 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+92 { return readWord(this, ELF_HEADER_FLAGSOFFSET); }
+.fi
+.PP
+References ELF_HEADER_FLAGSOFFSET, and readWord()\&.
+.SS "void BBP::std::ELF::ELFBuilder::formStandard (\fBstd::size_t\fP textSize, \fBstd::size_t\fP dataSize, \fBstd::size_t\fP rodataSize, \fBstd::size_t\fP bssSize)"
+
+.PP
+Definition at line 288 of file ELFHeader\&.cpp\&.
+.PP
+.nf
+289 {
+290     // Emit headers so we can actually modify them
+291     emitHeader();
+292 
+293     // Define the different sections indicies
+294     text = 1;
+295     rel_text = 2;
+296     init = 3;
+297     fini = 4;
+298     data = 5;
+299     bss = 6;
+300     data1 = 7;
+301     rodata = 8;
+302     rodata1 = 9;
+303     symtab = 10;
+304     shstrtab = 11;
+305     strtab = 12;
+306     hashtab = 13;
+307 
+308     // Now set types
+309     sections[text]\&.type(SHT_PROGBITS);
+310     sections[rel_text]\&.type(SHT_REL);
+311     sections[init]\&.type(SHT_PROGBITS);
+312     sections[fini]\&.type(SHT_PROGBITS);
+313     sections[data]\&.type(SHT_PROGBITS);
+314     sections[rodata]\&.type(SHT_PROGBITS);
+315     sections[bss]\&.type(SHT_NOBITS);
+316     sections[data1]\&.type(SHT_PROGBITS);
+317     sections[rodata1]\&.type(SHT_PROGBITS);
+318     sections[symtab]\&.type(SHT_SYMTAB);
+319     sections[strtab]\&.type(SHT_STRTAB);
+320     sections[shstrtab]\&.type(SHT_STRTAB);
+321     sections[hashtab]\&.type(SHT_HASH);
+322 
+323     // Set ent sizes
+324     sections[symtab]\&.entsize(ELF_SYMBOL_ENTRYSIZE);
+325     sections[rel_text]\&.entsize(8);
+326 
+327     // Set names
+328     sections[shstrtab]\&.Append(128);
+329     sections[shstrtab]\&.stack++;
+330     sections[text]\&.name(sections[shstrtab]\&.stack\&.atElement);
+331     sections[shstrtab]\&.stack <<= "\&.text";
+332     sections[rel_text]\&.name(sections[shstrtab]\&.stack\&.atElement);
+333     sections[shstrtab]\&.stack <<= "\&.rel\&.text";
+334     sections[init]\&.name(sections[shstrtab]\&.stack\&.atElement);
+335     sections[shstrtab]\&.stack <<= "\&.init";
+336     sections[fini]\&.name(sections[shstrtab]\&.stack\&.atElement);
+337     sections[shstrtab]\&.stack <<= "\&.fini";
+338     sections[data]\&.name(sections[shstrtab]\&.stack\&.atElement);
+339     sections[shstrtab]\&.stack <<= "\&.data";
+340     sections[rodata]\&.name(sections[shstrtab]\&.stack\&.atElement);
+341     sections[shstrtab]\&.stack <<= "\&.rodata";
+342     sections[bss]\&.name(sections[shstrtab]\&.stack\&.atElement);
+343     sections[shstrtab]\&.stack <<= "\&.bss";
+344     sections[data1]\&.name(sections[shstrtab]\&.stack\&.atElement);
+345     sections[shstrtab]\&.stack <<= "\&.data1";
+346     sections[rodata1]\&.name(sections[shstrtab]\&.stack\&.atElement);
+347     sections[shstrtab]\&.stack <<= "\&.rodata1";
+348     sections[symtab]\&.name(sections[shstrtab]\&.stack\&.atElement);
+349     sections[shstrtab]\&.stack <<= "\&.symtab";
+350     sections[strtab]\&.name(sections[shstrtab]\&.stack\&.atElement);
+351     sections[shstrtab]\&.stack <<= "\&.strtab";
+352     sections[shstrtab]\&.name(sections[shstrtab]\&.stack\&.atElement);
+353     sections[shstrtab]\&.stack <<= "\&.shstrtab";
+354     sections[hashtab]\&.name(sections[shstrtab]\&.stack\&.atElement);
+355     sections[shstrtab]\&.stack <<= "\&.hashtab";
+356 
+357     // Update header
+358     shstrndx(shstrtab);
+359 
+360     // Update link and info fields
+361     sections[rel_text]\&.link(symtab);
+362     sections[rel_text]\&.info(text);
+363     sections[symtab]\&.link(strtab);
+364     sections[symtab]\&.info(symbolCount);
+365     sections[hashtab]\&.link(symtab);
+366     IHate::Myself();
+367 
+368     // Add symbols
+369     sections[symtab]\&.Append(symbolCount * ELF_SYMBOL_ENTRYSIZE);
+370     sections[strtab]\&.Append(1024);
+371     
+372     // Set symbol entry flags
+373     for (index_t i = 0; i < symbolCount; i++)
+374     {
+375         symbols[i]\&.header\&.bytes = ELF_SYMBOL_ENTRYSIZE;
+376         symbols[i]\&.header\&.data = sections[symtab]\&.data\&.data + ELF_SYMBOL_ENTRYSIZE * i;
+377     }
+378 
+379     // Now Append data sizes and so
+380     sections[text]\&.Append(textSize);
+381     sections[data]\&.Append(dataSize);
+382     sections[rodata]\&.Append(rodataSize);
+383     sections[bss]\&.Append(bssSize);
+384 
+385     // Now set hashtab ready\&. Size has to be multiplied by sizeof(word) / sizeof(byte)
+386     sections[hashtab]\&.Append((hashBucketCount + hashChainCount + 2) * (sizeof(std::word) / sizeof(std::byte)));
+387     sections[hashtab]\&.stack << hashBucketCount;
+388     sections[hashtab]\&.stack << hashChainCount;
+389 
+390     // We want \&.text sections to be executable,
+391     sections[text]\&.flags(std::ELF::Executable);
+392 
+393     // We also want \&.data and \&.bss to be allocated and writeable
+394     sections[bss]\&.flags(std::ELF::Allocator | std::ELF::Writeable);
+395     sections[data]\&.flags(std::ELF::Allocator | std::ELF::Writeable);
+396     sections[data1]\&.flags(std::ELF::Allocator | std::ELF::Writeable);
+397 
+398     // We want rodata to be allocateable, but not writeable
+399     sections[rodata]\&.flags(std::ELF::Allocator);
+400     sections[rodata1]\&.flags(std::ELF::Allocator);
+401 
+402 }
+.fi
+.PP
+References BBP::std::ELF::Allocator, ELF_SYMBOL_ENTRYSIZE, BBP::std::ELF::Executable, BBP::Locale::Japanese::i, IHate::Myself(), BBP::std::ELF::SHT_HASH, BBP::std::ELF::SHT_NOBITS, BBP::std::ELF::SHT_PROGBITS, BBP::std::ELF::SHT_REL, BBP::std::ELF::SHT_STRTAB, BBP::std::ELF::SHT_SYMTAB, and BBP::std::ELF::Writeable\&.
+.PP
+Referenced by BBP::esa::BinaryApplication::BinaryApplication()\&.
+.SS "\fBBBP::std::byte\fP BBP::std::ELF::ELFBuilder::ident (\fBstd::byte\fP idx)"
+
+.PP
+Definition at line 71 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+71 { return readByte(this, ELF_HEADER_IDENTOFFSET + idx); }
+.fi
+.PP
+References ELF_HEADER_IDENTOFFSET, and readByte()\&.
+.PP
+Referenced by ELFBuilder()\&.
+.SS "void BBP::std::ELF::ELFBuilder::ident (\fBstd::byte\fP idx, \fBstd::byte\fP value)"
+
+.PP
+Definition at line 72 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+72 { writeByte(this, value, ELF_HEADER_IDENTOFFSET + idx); }
+.fi
+.PP
+References ELF_HEADER_IDENTOFFSET, and writeByte()\&.
+.SS "void BBP::std::ELF::ELFBuilder::machine (\fBstd::halfword\fP value)"
+
+.PP
+Definition at line 78 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+78 { writeHalfWord(this, value, ELF_HEADER_MACHINEOFFSET); }
+.fi
+.PP
+References ELF_HEADER_MACHINEOFFSET, and writeHalfWord()\&.
+.SS "\fBBBP::std::halfword\fP BBP::std::ELF::ELFBuilder::machine (void)"
+
+.PP
+Definition at line 77 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+77 { return readHalfWord(this, ELF_HEADER_MACHINEOFFSET); }
+.fi
+.PP
+References ELF_HEADER_MACHINEOFFSET, and readHalfWord()\&.
+.SS "void BBP::std::ELF::ELFBuilder::phentsize (\fBstd::halfword\fP value)"
+
+.PP
+Definition at line 99 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+99 { writeHalfWord(this, value, ELF_HEADER_PHENTSIZEOFFSET); }
+.fi
+.PP
+References ELF_HEADER_PHENTSIZEOFFSET, and writeHalfWord()\&.
+.SS "\fBBBP::std::halfword\fP BBP::std::ELF::ELFBuilder::phentsize (void)"
+
+.PP
+Definition at line 98 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+98 { return readHalfWord(this, ELF_HEADER_PHENTSIZEOFFSET); }
+.fi
+.PP
+References ELF_HEADER_PHENTSIZEOFFSET, and readHalfWord()\&.
+.PP
+Referenced by ELFBuilder()\&.
+.SS "void BBP::std::ELF::ELFBuilder::phnum (\fBstd::halfword\fP value)"
+
+.PP
+Definition at line 102 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+102 { writeHalfWord(this, value, ELF_HEADER_PHNUMOFFSET); }
+.fi
+.PP
+References ELF_HEADER_PHNUMOFFSET, and writeHalfWord()\&.
+.SS "\fBBBP::std::halfword\fP BBP::std::ELF::ELFBuilder::phnum (void)"
+
+.PP
+Definition at line 101 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+101 { return readHalfWord(this, ELF_HEADER_PHNUMOFFSET); }
+.fi
+.PP
+References ELF_HEADER_PHNUMOFFSET, and readHalfWord()\&.
+.PP
+Referenced by ELFBuilder(), and emitELFHeaders()\&.
+.SS "void BBP::std::ELF::ELFBuilder::phoff (\fBstd::offset_t\fP value)"
+
+.PP
+Definition at line 87 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+87 { writeWord(this, value, ELF_HEADER_PHOFFOFFSET); }
+.fi
+.PP
+References ELF_HEADER_PHOFFOFFSET, and writeWord()\&.
+.SS "\fBBBP::std::offset_t\fP BBP::std::ELF::ELFBuilder::phoff (void)"
+
+.PP
+Definition at line 86 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+86 { return readWord(this, ELF_HEADER_PHOFFOFFSET); }
+.fi
+.PP
+References ELF_HEADER_PHOFFOFFSET, and readWord()\&.
+.PP
+Referenced by ELFBuilder(), and emitELFHeaders()\&.
+.SS "void BBP::std::ELF::ELFBuilder::recalculateOffsets (\fBstd::offset_t\fP after, \fBstd::size_t\fP byHowMuch)"
+
+.PP
+Definition at line 96 of file ELF\&.cpp\&.
+.PP
+.nf
+97 {
+98     std::size_t PHnum = phnum();
+99     for (index_t index = 0; index < PHnum; index++)
+100     {
+101         // If segment is below or equal to this one, do nothing
+102         if (segments[index]\&.offset() <= after)
+103             continue;
+104 
+105         // If segment has no data, do nothing
+106         if (segments[index]\&.filesz() == 0)
+107             continue;
+108 
+109         // Add offset
+110         segments[index]\&.offset(segments[index]\&.offset() + howmuch);
+111     }
+112 
+113     std::size_t SHnum = shnum();
+114     for (index_t index = 0; index < SHnum; index++)
+115     {
+116         // If section is below or equal to this one, do nothing
+117         if (sections[index]\&.offset() <= after)
+118             continue;
+119 
+120         // If section has no data, do nothing
+121         if (sections[index]\&.size() == 0)
+122             continue;
+123 
+124         // Add offset
+125         sections[index]\&.offset(sections[index]\&.offset() + howmuch);
+126     }
+127 
+128 }
+.fi
+.SS "void BBP::std::ELF::ELFBuilder::renameSymbol (\fBstd::index_t\fP, \fBconststring\fP)"
+
+.PP
+Definition at line 404 of file ELFHeader\&.cpp\&.
+.PP
+.nf
+405 {
+406     if (symb >= symbolCount)
+407         throw std::exception("Symbol out of range\&.", ERANGE);
+408     sections[strtab]\&.stack++;
+409     symbols[symb]\&.name(sections[strtab]\&.stack\&.atElement);
+410     sections[strtab]\&.stack <<= name; 
+411 }
+.fi
+.PP
+References ERANGE, and BBP::std::exception()\&.
+.SS "void BBP::std::ELF::ELFBuilder::shentsize (\fBstd::halfword\fP value)"
+
+.PP
+Definition at line 105 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+105 { writeHalfWord(this, value, ELF_HEADER_SHENTSIZEOFFSET); }
+.fi
+.PP
+References ELF_HEADER_SHENTSIZEOFFSET, and writeHalfWord()\&.
+.SS "\fBBBP::std::halfword\fP BBP::std::ELF::ELFBuilder::shentsize (void)"
+
+.PP
+Definition at line 104 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+104 { return readHalfWord(this, ELF_HEADER_SHENTSIZEOFFSET); }
+.fi
+.PP
+References ELF_HEADER_SHENTSIZEOFFSET, and readHalfWord()\&.
+.PP
+Referenced by ELFBuilder()\&.
+.SS "void BBP::std::ELF::ELFBuilder::shnum (\fBstd::halfword\fP value)"
+
+.PP
+Definition at line 108 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+108 { writeHalfWord(this, value, ELF_HEADER_SHNUMOFFSET); }
+.fi
+.PP
+References ELF_HEADER_SHNUMOFFSET, and writeHalfWord()\&.
+.SS "\fBBBP::std::halfword\fP BBP::std::ELF::ELFBuilder::shnum (void)"
+
+.PP
+Definition at line 107 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+107 { return readHalfWord(this, ELF_HEADER_SHNUMOFFSET); }
+.fi
+.PP
+References ELF_HEADER_SHNUMOFFSET, and readHalfWord()\&.
+.PP
+Referenced by ELFBuilder(), and emitELFHeaders()\&.
+.SS "void BBP::std::ELF::ELFBuilder::shoff (\fBstd::offset_t\fP value)"
+
+.PP
+Definition at line 90 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+90 { writeWord(this, value, ELF_HEADER_SHOFFOFFSET); }
+.fi
+.PP
+References ELF_HEADER_SHOFFOFFSET, and writeWord()\&.
+.SS "\fBBBP::std::offset_t\fP BBP::std::ELF::ELFBuilder::shoff (void)"
+
+.PP
+Definition at line 89 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+89 { return readWord(this, ELF_HEADER_SHOFFOFFSET); }
+.fi
+.PP
+References ELF_HEADER_SHOFFOFFSET, and readWord()\&.
+.PP
+Referenced by ELFBuilder(), and emitELFHeaders()\&.
+.SS "void BBP::std::ELF::ELFBuilder::shstrndx (\fBstd::halfword\fP value)"
+
+.PP
+Definition at line 111 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+111 { writeHalfWord(this, value, ELF_HEADER_SHSTRNDXOFFSET); }
+.fi
+.PP
+References ELF_HEADER_SHSTRNDXOFFSET, and writeHalfWord()\&.
+.SS "\fBBBP::std::halfword\fP BBP::std::ELF::ELFBuilder::shstrndx (void)"
+
+.PP
+Definition at line 110 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+110 { return readHalfWord(this, ELF_HEADER_SHSTRNDXOFFSET); }
+.fi
+.PP
+References ELF_HEADER_SHSTRNDXOFFSET, and readHalfWord()\&.
+.PP
+Referenced by ELFBuilder()\&.
+.SS "void BBP::std::ELF::ELFBuilder::type (\fBstd::halfword\fP value)"
+
+.PP
+Definition at line 75 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+75 { writeHalfWord(this, value, ELF_HEADER_TYPEOFFSET); }
+.fi
+.PP
+References ELF_HEADER_TYPEOFFSET, and writeHalfWord()\&.
+.SS "\fBBBP::std::halfword\fP BBP::std::ELF::ELFBuilder::type (void)"
+
+.PP
+Definition at line 74 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+74 { return readHalfWord(this, ELF_HEADER_TYPEOFFSET); }
+.fi
+.PP
+References ELF_HEADER_TYPEOFFSET, and readHalfWord()\&.
+.PP
+Referenced by ELFBuilder()\&.
+.SS "void BBP::std::ELF::ELFBuilder::version (\fBstd::word\fP value)"
+
+.PP
+Definition at line 81 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+81 { writeWord(this, value, ELF_HEADER_VERSIONOFFSET); }
+.fi
+.PP
+References ELF_HEADER_VERSIONOFFSET, and writeWord()\&.
+.SS "\fBBBP::std::word\fP BBP::std::ELF::ELFBuilder::version (void)"
+
+.PP
+Definition at line 80 of file ELFHeaderGettersSetters\&.cpp\&.
+.PP
+.nf
+80 { return readWord(this, ELF_HEADER_VERSIONOFFSET); }
+.fi
+.PP
+References ELF_HEADER_VERSIONOFFSET, and readWord()\&.
+.SH "Field Documentation"
+.PP 
+.SS "\fBResourceManager\fP* BBP::std::ELF::ELFBuilder::allocator"
+
+.PP
+Definition at line 30 of file ELF\&.h\&.
+.PP
+Referenced by BBP::std::ELF::SectionBuilder::Append(), and BBP::std::ELF::SegmentBuilder::Append()\&.
+.SS "\fBstd::index_t\fP BBP::std::ELF::ELFBuilder::bss"
+
+.PP
+Definition at line 100 of file ELF\&.h\&.
+.PP
+Referenced by ELFBuilder()\&.
+.SS "\fBstd::index_t\fP BBP::std::ELF::ELFBuilder::data"
+
+.PP
+Definition at line 101 of file ELF\&.h\&.
+.PP
+Referenced by ELFBuilder()\&.
+.SS "\fBstd::index_t\fP BBP::std::ELF::ELFBuilder::data1"
+
+.PP
+Definition at line 102 of file ELF\&.h\&.
+.PP
+Referenced by ELFBuilder()\&.
+.SS "bool BBP::std::ELF::ELFBuilder::Endian"
+
+.PP
+Definition at line 36 of file ELF\&.h\&.
+.PP
+Referenced by readHalfWord(), readWord(), writeHalfWord(), and writeWord()\&.
+.SS "\fBPAGE\fP<\fBstring_element\fP> BBP::std::ELF::ELFBuilder::file"
+
+.PP
+Definition at line 33 of file ELF\&.h\&.
+.PP
+Referenced by BBP::std::ELF::SectionBuilder::Append(), BBP::std::ELF::SegmentBuilder::Append(), ELFBuilder(), readByte(), readHalfWord(), readWord(), BBP::smile_main(), writeByte(), writeHalfWord(), and writeWord()\&.
+.SS "\fBstd::index_t\fP BBP::std::ELF::ELFBuilder::fini"
+
+.PP
+Definition at line 103 of file ELF\&.h\&.
+.PP
+Referenced by ELFBuilder()\&.
+.SS "\fBstd::word\fP BBP::std::ELF::ELFBuilder::hashBucketCount"
+
+.PP
+Definition at line 139 of file ELF\&.h\&.
+.SS "\fBstd::word\fP BBP::std::ELF::ELFBuilder::hashChainCount"
+
+.PP
+Definition at line 140 of file ELF\&.h\&.
+.SS "\fBstd::index_t\fP BBP::std::ELF::ELFBuilder::hashtab"
+
+.PP
+Definition at line 98 of file ELF\&.h\&.
+.PP
+Referenced by ELFBuilder()\&.
+.SS "\fBstd::index_t\fP BBP::std::ELF::ELFBuilder::init"
+
+.PP
+Definition at line 104 of file ELF\&.h\&.
+.PP
+Referenced by ELFBuilder()\&.
+.SS "bool BBP::std::ELF::ELFBuilder::isMemUnique\fC [private]\fP"
+
+.PP
+Definition at line 147 of file ELF\&.h\&.
+.SS "\fBstd::index_t\fP BBP::std::ELF::ELFBuilder::rel_text"
+
+.PP
+Definition at line 108 of file ELF\&.h\&.
+.PP
+Referenced by ELFBuilder()\&.
+.SS "\fBstd::index_t\fP BBP::std::ELF::ELFBuilder::rodata"
+
+.PP
+Definition at line 105 of file ELF\&.h\&.
+.PP
+Referenced by ELFBuilder()\&.
+.SS "\fBstd::index_t\fP BBP::std::ELF::ELFBuilder::rodata1"
+
+.PP
+Definition at line 106 of file ELF\&.h\&.
+.PP
+Referenced by ELFBuilder()\&.
+.SS "\fBPAGE\fP<\fBSectionBuilder\fP> BBP::std::ELF::ELFBuilder::secPages\fC [private]\fP"
+
+.PP
+Definition at line 144 of file ELF\&.h\&.
+.PP
+Referenced by ELFBuilder()\&.
+.SS "\fBStack\fP<\fBSectionBuilder\fP> BBP::std::ELF::ELFBuilder::sections"
+
+.PP
+Definition at line 42 of file ELF\&.h\&.
+.PP
+Referenced by BBP::esa::ACTION(), ELFBuilder(), and emitELFHeaders()\&.
+.SS "\fBStack\fP<\fBSegmentBuilder\fP> BBP::std::ELF::ELFBuilder::segments"
+
+.PP
+Definition at line 39 of file ELF\&.h\&.
+.PP
+Referenced by ELFBuilder(), and emitELFHeaders()\&.
+.SS "\fBPAGE\fP<\fBSegmentBuilder\fP> BBP::std::ELF::ELFBuilder::segPages\fC [private]\fP"
+
+.PP
+Definition at line 143 of file ELF\&.h\&.
+.PP
+Referenced by ELFBuilder()\&.
+.SS "\fBstd::index_t\fP BBP::std::ELF::ELFBuilder::shstrtab"
+
+.PP
+Definition at line 95 of file ELF\&.h\&.
+.PP
+Referenced by ELFBuilder()\&.
+.SS "\fBstd::index_t\fP BBP::std::ELF::ELFBuilder::strtab"
+
+.PP
+Definition at line 96 of file ELF\&.h\&.
+.PP
+Referenced by ELFBuilder()\&.
+.SS "\fBstd::size_t\fP BBP::std::ELF::ELFBuilder::symbolCount"
+
+.PP
+Definition at line 136 of file ELF\&.h\&.
+.PP
+Referenced by ELFBuilder(), and BBP::smile_main()\&.
+.SS "\fBStack\fP<\fBSymbolBuilder\fP> BBP::std::ELF::ELFBuilder::symbols"
+
+.PP
+Definition at line 45 of file ELF\&.h\&.
+.PP
+Referenced by ELFBuilder(), and BBP::smile_main()\&.
+.SS "\fBPAGE\fP<\fBSymbolBuilder\fP> BBP::std::ELF::ELFBuilder::symPages\fC [private]\fP"
+
+.PP
+Definition at line 145 of file ELF\&.h\&.
+.PP
+Referenced by ELFBuilder()\&.
+.SS "\fBstd::index_t\fP BBP::std::ELF::ELFBuilder::symtab"
+
+.PP
+Definition at line 97 of file ELF\&.h\&.
+.PP
+Referenced by ELFBuilder()\&.
+.SS "\fBstd::index_t\fP BBP::std::ELF::ELFBuilder::text"
+
+.PP
+Definition at line 107 of file ELF\&.h\&.
+.PP
+Referenced by BBP::esa::ACTION(), and ELFBuilder()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

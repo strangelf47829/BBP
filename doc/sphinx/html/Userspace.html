@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Userspace &mdash; BBP 0.2.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b1f64a84"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Embeddable Simple Assembly (language)" href="ESA.html" />
+    <link rel="prev" title="Stub" href="stub.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            BBP
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stub.html">Links</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The Userspace</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#creating-userspace-applications">Creating Userspace Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#userspace-applications">Userspace Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#motivations">Motivations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#userspace-linking-process">Userspace linking process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-userspace-abi">The userspace ABI</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ESA.html">Embeddable Simple Assembly (language)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EABI.html">ESA Embedded Application Binary Interface</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">BBP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">The Userspace</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Userspace.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-userspace">
+<h1>The Userspace<a class="headerlink" href="#the-userspace" title="Permalink to this heading"></a></h1>
+<p>The userspace is where</p>
+<section id="creating-userspace-applications">
+<span id="creatinguserspaceapplications"></span><h2>Creating Userspace Applications<a class="headerlink" href="#creating-userspace-applications" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>For documentation on creating userspace applications, please refer to <a class="reference internal" href="stub.html#id1"><span class="std std-ref">(Stub)</span></a></p>
+</div></blockquote>
+</section>
+<section id="userspace-applications">
+<span id="userspaceapplicationmechanisms"></span><h2>Userspace Applications<a class="headerlink" href="#userspace-applications" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>BBP can load and execute applications from a persistent storage device such as an SDMMC.</p>
+<p>Userspace applications are stored as ELF binaries (specific details on the parsing and format of ELF binaries can be found <a class="reference internal" href="stub.html#id1"><span class="std std-ref">here</span></a>).
+BBP contains various APIs to read, parse, and build ELF applications from memory or disk, without using much heap memory.</p>
+<p>Once userspace applications have been loaded into memory, they can be executed through the <a class="reference internal" href="stub.html#id1"><span class="std std-ref">virtual processor</span></a>.
+the virtual processor is an API that can execute <a class="reference internal" href="stub.html#id1"><span class="std std-ref">x86</span></a> binaries, including multi-threading and signal handling.</p>
+<p>Several services are available to userspace applications through <a class="reference internal" href="stub.html#id1"><span class="std std-ref">x86</span></a> syscalls such as garbage collection, file handling, IO services, and more.
+For a complete list of syscalls, please refer to <a class="reference internal" href="stub.html#id1"><span class="std std-ref">(Stub)</span></a>.</p>
+</div></blockquote>
+</section>
+<section id="motivations">
+<span id="userspaceapplicationmotivations"></span><h2>Motivations<a class="headerlink" href="#motivations" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>The motivations are …</p>
+</div></blockquote>
+</section>
+<section id="userspace-linking-process">
+<span id="userspacelinkingprocess"></span><h2>Userspace linking process<a class="headerlink" href="#userspace-linking-process" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>Userspace applications are linked at runtime using standard ELF linking procedures.</p>
+</div></blockquote>
+</section>
+<section id="the-userspace-abi">
+<span id="userspaceabi"></span><h2>The userspace ABI<a class="headerlink" href="#the-userspace-abi" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a high level overview of the ABI. For a more detailed and complete documentation of the ABI, please refer to <a class="reference internal" href="stub.html#id1"><span class="std std-ref">(Stub)</span></a></p>
+</div>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="stub.html" class="btn btn-neutral float-left" title="Stub" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ESA.html" class="btn btn-neutral float-right" title="Embeddable Simple Assembly (language)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Rafael Bie.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

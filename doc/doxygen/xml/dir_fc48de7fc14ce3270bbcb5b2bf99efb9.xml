@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_fc48de7fc14ce3270bbcb5b2bf99efb9" kind="dir">
+    <compoundname>env_UBUNTU</compoundname>
+    <innerfile refid="d6/dac/env__UBUNTU_2Dir_8cpp">env_UBUNTU/Dir.cpp</innerfile>
+    <innerfile refid="da/d7b/env__UBUNTU_2File_8cpp">env_UBUNTU/File.cpp</innerfile>
+    <innerfile refid="d9/d4a/UBUNTU_2Graphics_8cpp">UBUNTU/Graphics.cpp</innerfile>
+    <innerfile refid="d3/de1/UBUNTU_2Memory_8cpp">UBUNTU/Memory.cpp</innerfile>
+    <innerfile refid="de/d3d/UBUNTU_2Start_8cpp">UBUNTU/Start.cpp</innerfile>
+    <innerfile refid="d3/d0d/Terminal_8cpp">Terminal.cpp</innerfile>
+    <innerfile refid="d1/d81/UBUNTU_2Time_8cpp">UBUNTU/Time.cpp</innerfile>
+    <innerfile refid="d0/d75/UBUNTU_2tterm_8cpp">UBUNTU/tterm.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env_UBUNTU/"/>
+  </compounddef>
+</doxygen>

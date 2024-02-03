@@ -1,0 +1,128 @@
+\hypertarget{Strings_8h}{}\doxysection{Strings.\+h File Reference}
+\label{Strings_8h}\index{Strings.h@{Strings.h}}
+{\ttfamily \#include \char`\"{}Memory.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Stack.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Resources.\+h\char`\"{}}\newline
+Include dependency graph for Strings.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{db/d68/Strings_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d9d/Strings_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceBBP}{B\+BP}}
+\item 
+ \mbox{\hyperlink{namespaceBBP_1_1std}{B\+B\+P\+::std}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef char \mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{B\+B\+P\+::std\+::string\+\_\+element}}
+\item 
+typedef unsigned char \mbox{\hyperlink{namespaceBBP_1_1std_a93ee4e8e0be4fe0fbad19f4b385cd356}{B\+B\+P\+::std\+::ustring\+\_\+element}}
+\item 
+typedef P\+A\+GE$<$ string\+\_\+element $>$ \mbox{\hyperlink{namespaceBBP_1_1std_afb582024987be6020cff7542cd771ae7}{B\+B\+P\+::std\+::string}}
+\item 
+{\footnotesize template$<$int N$>$ }\\using \mbox{\hyperlink{namespaceBBP_1_1std_aa628d4212b7e43b58f01273f47ecf4c6}{B\+B\+P\+::std\+::static\+\_\+string}} = S\+T\+A\+T\+I\+C\+\_\+\+P\+A\+GE$<$ string\+\_\+element, N $>$
+\item 
+typedef string\+\_\+element $\ast$ \mbox{\hyperlink{namespaceBBP_1_1std_a95c149a6e963e567bd059eb11aef4ac8}{B\+B\+P\+::std\+::c\+\_\+string}}
+\item 
+typedef ustring\+\_\+element $\ast$ \mbox{\hyperlink{namespaceBBP_1_1std_a8ad0d6777f4da0a082aaec3fbe5e5098}{B\+B\+P\+::std\+::uc\+\_\+string}}
+\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{namespaceBBP_1_1std_ad29f433a1c033a551d50291e7d3f50b4}{B\+B\+P\+::std\+::hash\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespaceBBP_1_1std_ad340be18a81465c75a58f55b151fbd85}{B\+B\+P\+::std\+::strcpy}} (string $\ast$dst, conststring src)
+\item 
+void \mbox{\hyperlink{namespaceBBP_1_1std_adce07ae43f3eec1d803d60483e879c46}{B\+B\+P\+::std\+::operator$<$=}} (string \&dst, conststring src)
+\item 
+void \mbox{\hyperlink{namespaceBBP_1_1std_ab265d2091a638c87704f5c324cda8560}{B\+B\+P\+::std\+::strcpy}} (string $\ast$dst, c\+\_\+string src)
+\item 
+void \mbox{\hyperlink{namespaceBBP_1_1std_a8803dd235bf430e587c5fd54ee05e830}{B\+B\+P\+::std\+::operator$<$=}} (string \&dst, c\+\_\+string src)
+\item 
+void \mbox{\hyperlink{namespaceBBP_1_1std_a64546fad320a0d37b91d60a9be9b57bc}{B\+B\+P\+::std\+::strcpy}} (c\+\_\+string dst, conststring src)
+\item 
+bool \mbox{\hyperlink{namespaceBBP_1_1std_a0732a2d69fc0a894ca5e9b017c6fe01e}{B\+B\+P\+::std\+::strcmp}} (string $\ast$sta, conststring stb)
+\item 
+bool \mbox{\hyperlink{namespaceBBP_1_1std_a9ce070962847b8a579bf67a99e17902a}{B\+B\+P\+::std\+::strcmp}} (string $\ast$sta, c\+\_\+string stb)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespaceBBP_1_1std_a05512e3a63e13122046db97314f58591}{B\+B\+P\+::std\+::strlen}} (conststring str)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespaceBBP_1_1std_ab8543973d238f4dd31cb788c8d0aab92}{B\+B\+P\+::std\+::strlen}} (c\+\_\+string str)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespaceBBP_1_1std_a488ad6c683fa5f2c35e3a4cca65a2e3d}{B\+B\+P\+::std\+::strlen}} (string \&str)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespaceBBP_1_1std_a40d1a207b7eef358325a478fdfeb3a0d}{B\+B\+P\+::std\+::strlen}} (string str, offset\+\_\+t offset)
+\item 
+hash\+\_\+t \mbox{\hyperlink{namespaceBBP_1_1std_a53a0c211ad7056be924a561f9ebc8739}{B\+B\+P\+::std\+::strhsh}} (string \&str)
+\item 
+hash\+\_\+t \mbox{\hyperlink{namespaceBBP_1_1std_a588ea5eca9ac62a43ce76db1c07f64d4}{B\+B\+P\+::std\+::strhsh}} (c\+\_\+string str)
+\item 
+hash\+\_\+t \mbox{\hyperlink{namespaceBBP_1_1std_a5abd334c9d96acb3ed1aa62d2b6d422b}{B\+B\+P\+::std\+::strhsh}} (conststring str)
+\item 
+constexpr std\+::hash\+\_\+t \mbox{\hyperlink{namespaceBBP_1_1std_a139c4376c77070774335b26226c5da10}{B\+B\+P\+::std\+::operator\char`\"{}\char`\"{}\+\_\+hash}} (const char $\ast$str, long unsigned int hehe)
+\item 
+void \mbox{\hyperlink{namespaceBBP_1_1std_a34a7eefbc87aa01762b83a86ff90fa2a}{B\+B\+P\+::std\+::strhsh}} (hash\+\_\+t \&, word \&, string\+\_\+element \&)
+\item 
+size\+\_\+t \mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\+\_\+\+\_\+\+U\+N\+S\+A\+F\+E\+\_\+\+\_\+}}() \mbox{\hyperlink{namespaceBBP_1_1std_ae5c8e83341738e65a0a51d0b7b4703f5}{B\+B\+P\+::std\+::strlen}} (string str)
+\item 
+std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \& \mbox{\hyperlink{namespaceBBP_1_1std_a70dd1e33acbfe3b2a80db1362ee0b7df}{B\+B\+P\+::std\+::operator$<$$<$=}} (std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \&stack, std\+::conststring str)
+\item 
+std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \& \mbox{\hyperlink{namespaceBBP_1_1std_a3c5fbed5e42156a9aed1cca658ec074e}{B\+B\+P\+::std\+::operator$<$$<$=}} (std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \&stack, std\+::c\+\_\+string str)
+\item 
+std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \& \mbox{\hyperlink{namespaceBBP_1_1std_a6e84346269af92c46831291e07b00f82}{B\+B\+P\+::std\+::operator$<$$<$=}} (std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \&stack, std\+::string \&str)
+\item 
+std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \& \mbox{\hyperlink{namespaceBBP_1_1std_a3da9ba4aa61f6cf9a7a1563cc309401f}{B\+B\+P\+::std\+::operator$<$$<$=}} (std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \&stack, char c)
+\item 
+std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \& \mbox{\hyperlink{namespaceBBP_1_1std_a807b5c4899443fad77ac3ad5a9f82ac9}{B\+B\+P\+::std\+::operator$<$=}} (std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \&stack, int value)
+\item 
+std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \& \mbox{\hyperlink{namespaceBBP_1_1std_a27729307826cf7d30436c8280997ed0f}{B\+B\+P\+::std\+::operator$<$$<$}} (std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \&stack, std\+::conststring str)
+\item 
+std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \& \mbox{\hyperlink{namespaceBBP_1_1std_a115e846384a5f60bc5f257877aa331b6}{B\+B\+P\+::std\+::operator$<$$<$}} (std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \&stack, std\+::c\+\_\+string str)
+\item 
+std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \& \mbox{\hyperlink{namespaceBBP_1_1std_a58d4164508e93f2175e3829a05dc018b}{B\+B\+P\+::std\+::operator$<$$<$}} (std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \&stack, std\+::string \&str)
+\item 
+std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \& \mbox{\hyperlink{namespaceBBP_1_1std_ae660682d94d7d97bd418f86be996e4b1}{B\+B\+P\+::std\+::operator$<$}} (std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \&stack, int value)
+\item 
+std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \& \mbox{\hyperlink{namespaceBBP_1_1std_af3ec20a9dd652424defa2f6fbaacfe41}{B\+B\+P\+::std\+::operator$>$$>$=}} (std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \&stack, std\+::c\+\_\+string $\ast$str)
+\item 
+std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \& \mbox{\hyperlink{namespaceBBP_1_1std_aa80fe0f1a63a1fe95e02ebeb154b97c7}{B\+B\+P\+::std\+::operator$>$$>$=}} (std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \&stack, std\+::string $\ast$str)
+\item 
+std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \& \mbox{\hyperlink{namespaceBBP_1_1std_acf94469ccd3758128fbc9b57ade0c04b}{B\+B\+P\+::std\+::operator$>$$>$}} (std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \&lh, std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \&rh)
+\item 
+std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \& \mbox{\hyperlink{namespaceBBP_1_1std_a747b39bfe83825422dc3c65e5e5ff618}{B\+B\+P\+::std\+::operator$<$$<$}} (std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \&lh, std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \&rh)
+\item 
+std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \& \mbox{\hyperlink{namespaceBBP_1_1std_aad25ce116c7c8f0b7f042e2c5b9f733b}{B\+B\+P\+::std\+::operator$>$$>$=}} (std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \&lh, std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \&rh)
+\item 
+std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \& \mbox{\hyperlink{namespaceBBP_1_1std_a23b09468820f72265cb93369926d19e7}{B\+B\+P\+::std\+::operator$<$$<$=}} (std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \&lh, std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \&rh)
+\item 
+std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \& \mbox{\hyperlink{namespaceBBP_1_1std_a350236449e81981979f94acf450a2113}{B\+B\+P\+::std\+::operator$>$}} (std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \&stack, std\+::c\+\_\+string $\ast$str)
+\item 
+std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \& \mbox{\hyperlink{namespaceBBP_1_1std_adb8fd9396711ddd3946b69b97489b2d6}{B\+B\+P\+::std\+::operator$>$}} (std\+::\+Stack$<$ std\+::string\+\_\+element $>$ \&stack, std\+::string $\ast$str)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const typedef string\+\_\+element $\ast$ \mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{B\+B\+P\+::std\+::conststring}}
+\item 
+const typedef ustring\+\_\+element $\ast$ \mbox{\hyperlink{namespaceBBP_1_1std_a957d8d918516bf5286b2077abf1ffa74}{B\+B\+P\+::std\+::uconststring}}
+\item 
+const size\+\_\+t \mbox{\hyperlink{namespaceBBP_1_1std_a9fa8e66a7c18f75c69868f3ba91155ef}{B\+B\+P\+::std\+::max\+\_\+string\+\_\+length}} = 0x\+F\+F\+FF
+\item 
+const std\+::conststring \mbox{\hyperlink{namespaceBBP_1_1std_aef24a3a4d0b0447cba087eecbcfd586e}{B\+B\+P\+::std\+::space}} = \char`\"{} \char`\"{}
+\item 
+const std\+::conststring \mbox{\hyperlink{namespaceBBP_1_1std_a92a50044907ba5f40a39efe0bce958d6}{B\+B\+P\+::std\+::endl}} = \char`\"{}\textbackslash{}n\char`\"{}
+\end{DoxyCompactItemize}

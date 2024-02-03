@@ -1,0 +1,22 @@
+#include "../include/FileSys.h"
+
+BBP::std::DIRECTORY &BBP::std::VOLUME::root()
+{
+	return this->rootDir;
+}
+
+BBP::std::VOLUME::VOLUME(std::conststring path)
+{
+	// Get path size
+	size_t pathLength = std::strlen(path);
+
+	// Allocate memory
+	this->path = std::string(pathLength + 1, (std::string_element *)std::progmem.calloc(pathLength + 1, sizeof(std::string_element)));
+
+	// Copy string
+	std::strcpy(&this->path, path);
+	this->path.data[pathLength] = 0;
+
+	// Get directory
+	this->rootDir.info(path);
+}

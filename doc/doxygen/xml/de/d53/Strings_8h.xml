@@ -1,0 +1,913 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="de/d53/Strings_8h" kind="file" language="C++">
+    <compoundname>Strings.h</compoundname>
+    <includes refid="de/d5c/Memory_8h" local="yes">Memory.h</includes>
+    <includes refid="dc/db6/Stack_8h" local="yes">Stack.h</includes>
+    <includes refid="d0/d33/Resources_8h" local="yes">Resources.h</includes>
+    <includedby refid="d6/dd1/stdio_8h" local="yes">stdio.h</includedby>
+    <includedby refid="db/de5/ELF_8h" local="yes">ELF.h</includedby>
+    <includedby refid="d0/d00/FileSys_8h" local="yes">FileSys.h</includedby>
+    <includedby refid="df/d80/Lex_8h" local="yes">Lex.h</includedby>
+    <includedby refid="de/da9/Executable_8h" local="yes">Executable.h</includedby>
+    <includedby refid="d9/d1d/ELFHeader_8cpp" local="yes">ELFHeader.cpp</includedby>
+    <includedby refid="d5/d22/ECMA35_8h" local="yes">ECMA35.h</includedby>
+    <includedby refid="de/d6d/Strings_8cpp" local="yes">Strings.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>Memory.h</label>
+        <link refid="de/d5c/Memory_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Strings.h</label>
+        <link refid="de/d53/Strings_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Resources.h</label>
+        <link refid="d0/d33/Resources_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Stack.hxx</label>
+        <link refid="db/d61/Stack_8hxx"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Memory.hxx</label>
+        <link refid="d5/d4e/Memory_8hxx"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>errno.h</label>
+        <link refid="d8/dc2/errno_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Signal.h</label>
+        <link refid="d0/def/Signal_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Except.h</label>
+        <link refid="dc/d88/Except_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+        <link refid="df/dd8/stdint_8h"/>
+      </node>
+      <node id="3">
+        <label>stddef.h</label>
+        <link refid="d3/dce/stddef_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Stack.h</label>
+        <link refid="dc/db6/Stack_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="47">
+        <label>ELFHeader.cpp</label>
+        <link refid="d9/d1d/ELFHeader_8cpp"/>
+      </node>
+      <node id="29">
+        <label>Start.cpp</label>
+        <link refid="d6/d8a/MINGW64_2Start_8cpp"/>
+      </node>
+      <node id="8">
+        <label>Shell.cpp</label>
+        <link refid="df/d6c/Shell_8cpp"/>
+      </node>
+      <node id="24">
+        <label>Executable.cpp</label>
+        <link refid="d6/dc6/Executable_8cpp"/>
+      </node>
+      <node id="6">
+        <label>Logout.cpp</label>
+        <link refid="dc/d9b/Logout_8cpp"/>
+      </node>
+      <node id="25">
+        <label>Start.cpp</label>
+        <link refid="db/db7/Start_8cpp"/>
+      </node>
+      <node id="71">
+        <label>SegmentBuilder.cpp</label>
+        <link refid="d0/dc2/SegmentBuilder_8cpp"/>
+      </node>
+      <node id="35">
+        <label>Terminal.cpp</label>
+        <link refid="d3/d0d/Terminal_8cpp"/>
+      </node>
+      <node id="11">
+        <label>Actions.cpp</label>
+        <link refid="da/d4c/Actions_8cpp"/>
+      </node>
+      <node id="9">
+        <label>Smile.cpp</label>
+        <link refid="de/dd1/Smile_8cpp"/>
+      </node>
+      <node id="75">
+        <label>Executable.h</label>
+        <link refid="de/da9/Executable_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>Graphics.cpp</label>
+        <link refid="d3/df1/EMULATOR_2Graphics_8cpp"/>
+      </node>
+      <node id="18">
+        <label>ELSABackend.h</label>
+        <link refid="d5/dfd/ELSABackend_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>File.cpp</label>
+        <link refid="d6/d5a/env__MINGW64_2File_8cpp"/>
+      </node>
+      <node id="12">
+        <label>Auxiliary.cpp</label>
+        <link refid="de/dec/Auxiliary_8cpp"/>
+      </node>
+      <node id="30">
+        <label>tterm.cpp</label>
+        <link refid="d0/d7e/MINGW64_2tterm_8cpp"/>
+      </node>
+      <node id="57">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Strings.h</label>
+        <link refid="de/d53/Strings_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>Registers.cpp</label>
+        <link refid="d9/de4/Registers_8cpp"/>
+      </node>
+      <node id="14">
+        <label>EABI.cpp</label>
+        <link refid="d2/d8c/EABI_8cpp"/>
+      </node>
+      <node id="36">
+        <label>Graphics.cpp</label>
+        <link refid="df/d3f/Graphics_8cpp"/>
+      </node>
+      <node id="38">
+        <label>Graphics.cpp</label>
+        <link refid="d9/db9/MINGW64_2Graphics_8cpp"/>
+      </node>
+      <node id="16">
+        <label>Processor.cpp</label>
+        <link refid="d6/d69/Processor_8cpp"/>
+      </node>
+      <node id="69">
+        <label>SectionBuilder.cpp</label>
+        <link refid="d6/d8a/SectionBuilder_8cpp"/>
+      </node>
+      <node id="76">
+        <label>Strings.cpp</label>
+        <link refid="de/d6d/Strings_8cpp"/>
+      </node>
+      <node id="43">
+        <label>File.cpp</label>
+        <link refid="d0/d45/env_2File_8cpp"/>
+      </node>
+      <node id="23">
+        <label>OS.h</label>
+        <link refid="d2/d4f/OS_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>InstructionCycle.cpp</label>
+        <link refid="d5/d95/InstructionCycle_8cpp"/>
+      </node>
+      <node id="4">
+        <label>FileSys.h</label>
+        <link refid="d0/d00/FileSys_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>stdio.cpp</label>
+        <link refid="df/dce/stdio_8cpp"/>
+      </node>
+      <node id="59">
+        <label>RAE.h</label>
+        <link refid="db/d6a/RAE_8h"/>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>Actions.h</label>
+        <link refid="de/db3/Actions_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>tterm.cpp</label>
+        <link refid="d0/d75/UBUNTU_2tterm_8cpp"/>
+      </node>
+      <node id="28">
+        <label>tterm.cpp</label>
+        <link refid="d0/d6f/EMULATOR_2tterm_8cpp"/>
+      </node>
+      <node id="63">
+        <label>StateMachine.cpp</label>
+        <link refid="d6/d82/StateMachine_8cpp"/>
+      </node>
+      <node id="62">
+        <label>lvalue.cpp</label>
+        <link refid="d4/d56/lvalue_8cpp"/>
+      </node>
+      <node id="15">
+        <label>Frontend.cpp</label>
+        <link refid="d4/d83/Frontend_8cpp"/>
+      </node>
+      <node id="22">
+        <label>Graphics.h</label>
+        <link refid="d2/dd1/Graphics_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>Start.cpp</label>
+        <link refid="d0/d06/EMULATOR_2Start_8cpp"/>
+      </node>
+      <node id="49">
+        <label>Resources.cpp</label>
+        <link refid="db/d83/Resources_8cpp"/>
+      </node>
+      <node id="72">
+        <label>SegmentBuilderGettersSetters.cpp</label>
+        <link refid="db/db5/SegmentBuilderGettersSetters_8cpp"/>
+      </node>
+      <node id="70">
+        <label>SectionBuilderGettersSetters.cpp</label>
+        <link refid="dc/d51/SectionBuilderGettersSetters_8cpp"/>
+      </node>
+      <node id="48">
+        <label>Except.cpp</label>
+        <link refid="d4/df4/Except_8cpp"/>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+        <link refid="d6/dd1/stdio_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>Hyperv.h</label>
+        <link refid="d0/dde/Hyperv_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>Start.cpp</label>
+        <link refid="de/d3d/UBUNTU_2Start_8cpp"/>
+      </node>
+      <node id="64">
+        <label>ThreadState.cpp</label>
+        <link refid="d8/df1/ThreadState_8cpp"/>
+      </node>
+      <node id="60">
+        <label>StateMachine.h</label>
+        <link refid="da/d78/StateMachine_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Backend.cpp</label>
+        <link refid="d6/d3f/Backend_8cpp"/>
+      </node>
+      <node id="19">
+        <label>Builder.cpp</label>
+        <link refid="d9/d9b/Builder_8cpp"/>
+      </node>
+      <node id="53">
+        <label>rvalue.cpp</label>
+        <link refid="d1/d5d/rvalue_8cpp"/>
+      </node>
+      <node id="44">
+        <label>File.cpp</label>
+        <link refid="d3/dce/env__EMULATOR_2File_8cpp"/>
+      </node>
+      <node id="17">
+        <label>Secondary.cpp</label>
+        <link refid="d1/d38/Secondary_8cpp"/>
+      </node>
+      <node id="34">
+        <label>ECMA35.h</label>
+        <link refid="d5/d22/ECMA35_8h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Lex.h</label>
+        <link refid="df/d80/Lex_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>tterm.cpp</label>
+        <link refid="d7/d67/tterm_8cpp"/>
+      </node>
+      <node id="3">
+        <label>badapple.cpp</label>
+        <link refid="d7/d40/badapple_8cpp"/>
+      </node>
+      <node id="42">
+        <label>Volume.cpp</label>
+        <link refid="de/d33/Volume_8cpp"/>
+      </node>
+      <node id="39">
+        <label>Graphics.cpp</label>
+        <link refid="d9/d4a/UBUNTU_2Graphics_8cpp"/>
+      </node>
+      <node id="68">
+        <label>ELFHeaderGettersSetters.cpp</label>
+        <link refid="dc/dc2/ELFHeaderGettersSetters_8cpp"/>
+      </node>
+      <node id="21">
+        <label>Lexer.cpp</label>
+        <link refid="d2/d15/Lexer_8cpp"/>
+      </node>
+      <node id="73">
+        <label>SymbolBuilder.cpp</label>
+        <link refid="d6/db7/SymbolBuilder_8cpp"/>
+      </node>
+      <node id="33">
+        <label>R2D.cpp</label>
+        <link refid="de/db8/R2D_8cpp"/>
+      </node>
+      <node id="40">
+        <label>File.cpp</label>
+        <link refid="d0/ddd/File_2File_8cpp"/>
+      </node>
+      <node id="66">
+        <label>BinaryExecutable.h</label>
+        <link refid="d0/dcf/BinaryExecutable_8h"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>File.cpp</label>
+        <link refid="da/d7b/env__UBUNTU_2File_8cpp"/>
+      </node>
+      <node id="7">
+        <label>neofetch.cpp</label>
+        <link refid="d3/da0/neofetch_8cpp"/>
+      </node>
+      <node id="51">
+        <label>BinaryExecutables.cpp</label>
+        <link refid="de/d02/BinaryExecutables_8cpp"/>
+      </node>
+      <node id="74">
+        <label>SymbolBuilderGettersSetters.cpp</label>
+        <link refid="d1/d6c/SymbolBuilderGettersSetters_8cpp"/>
+      </node>
+      <node id="56">
+        <label>ELF.h</label>
+        <link refid="db/de5/ELF_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>Path.cpp</label>
+        <link refid="d5/dbb/Path_8cpp"/>
+      </node>
+      <node id="67">
+        <label>ELF.cpp</label>
+        <link refid="dd/dc2/ELF_8cpp"/>
+      </node>
+      <node id="61">
+        <label>ValueCategories.h</label>
+        <link refid="d8/da7/ValueCategories_8h"/>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>xvalue.cpp</label>
+        <link refid="d6/db1/xvalue_8cpp"/>
+      </node>
+      <node id="54">
+        <label>StateMachineOpcodes.cpp</label>
+        <link refid="df/d1c/StateMachineOpcodes_8cpp"/>
+      </node>
+      <node id="10">
+        <label>ELSA.h</label>
+        <link refid="df/d71/ELSA_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="d9/d6f/namespaceBBP">BBP</innernamespace>
+    <innernamespace refid="dd/d98/namespaceBBP_1_1std">BBP::std</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>BBP_STDLIB_STRINGS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BBP_STDLIB_STRINGS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="de/d5c/Memory_8h" kindref="compound">Memory.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dc/db6/Stack_8h" kindref="compound">Stack.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d0/d33/Resources_8h" kindref="compound">Resources.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="d9/d6f/namespaceBBP" kindref="compound">BBP</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">std</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>type<sp/>a<sp/>string<sp/>is<sp/>made<sp/>of<sp/>(which<sp/>is<sp/>just<sp/>&apos;char&apos;)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">string_element</ref>;</highlight></codeline>
+<codeline lineno="15" refid="dd/d98/namespaceBBP_1_1std_1a93ee4e8e0be4fe0fbad19f4b385cd356" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a93ee4e8e0be4fe0fbad19f4b385cd356" kindref="member">ustring_element</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Dynamically<sp/>allocated<sp/>string<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="dd/d98/namespaceBBP_1_1std_1afb582024987be6020cff7542cd771ae7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">PAGE&lt;string_element&gt;</ref><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1afb582024987be6020cff7542cd771ae7" kindref="member">string</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Statically<sp/>allocated<sp/>string<sp/>typedef<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N&gt;</highlight></codeline>
+<codeline lineno="22" refid="dd/d98/namespaceBBP_1_1std_1aa628d4212b7e43b58f01273f47ecf4c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE" kindref="compound">static_string</ref><sp/>=<sp/><ref refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE" kindref="compound">STATIC_PAGE&lt;string_element, N&gt;</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Usual<sp/>c-string<sp/>definition<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="dd/d98/namespaceBBP_1_1std_1a95c149a6e963e567bd059eb11aef4ac8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">string_element</ref><sp/>*<ref refid="dd/d98/namespaceBBP_1_1std_1a95c149a6e963e567bd059eb11aef4ac8" kindref="member">c_string</ref>;</highlight></codeline>
+<codeline lineno="26" refid="dd/d98/namespaceBBP_1_1std_1a8ad0d6777f4da0a082aaec3fbe5e5098" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a93ee4e8e0be4fe0fbad19f4b385cd356" kindref="member">ustring_element</ref><sp/>*<ref refid="dd/d98/namespaceBBP_1_1std_1a8ad0d6777f4da0a082aaec3fbe5e5098" kindref="member">uc_string</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Constant<sp/>string<sp/>definition<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">string_element</ref><sp/>*<ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">conststring</ref>;</highlight></codeline>
+<codeline lineno="30" refid="dd/d98/namespaceBBP_1_1std_1a957d8d918516bf5286b2077abf1ffa74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a93ee4e8e0be4fe0fbad19f4b385cd356" kindref="member">ustring_element</ref><sp/>*<ref refid="dd/d98/namespaceBBP_1_1std_1a957d8d918516bf5286b2077abf1ffa74" kindref="member">uconststring</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>absolute<sp/>longest<sp/>size<sp/>of<sp/>a<sp/>string<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="dd/d98/namespaceBBP_1_1std_1a9fa8e66a7c18f75c69868f3ba91155ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a9fa8e66a7c18f75c69868f3ba91155ef" kindref="member">max_string_length</ref><sp/>=<sp/>0xFFFF;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>hashing<sp/>type<sp/>of<sp/>a<sp/>string<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="dd/d98/namespaceBBP_1_1std_1ad29f433a1c033a551d50291e7d3f50b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="d9/d6f/namespaceBBP_1a3558ab6953f5ed22d4c90a0e747bfc04" kindref="member">uint32_t</ref><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ad29f433a1c033a551d50291e7d3f50b4" kindref="member">hash_t</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Copy<sp/>string<sp/>literal<sp/>into<sp/>&apos;dst&apos;<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ad340be18a81465c75a58f55b151fbd85" kindref="member">strcpy</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>*dst,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">conststring</ref><sp/>src);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1adce07ae43f3eec1d803d60483e879c46" kindref="member">operator&lt;=</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;dst,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">conststring</ref><sp/>src);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Copy<sp/>conventional<sp/>string<sp/>into<sp/>&apos;dst&apos;<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ad340be18a81465c75a58f55b151fbd85" kindref="member">strcpy</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>*dst,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a95c149a6e963e567bd059eb11aef4ac8" kindref="member">c_string</ref><sp/>src);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1adce07ae43f3eec1d803d60483e879c46" kindref="member">operator&lt;=</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;dst,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a95c149a6e963e567bd059eb11aef4ac8" kindref="member">c_string</ref><sp/>src);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Copy<sp/>conventional<sp/>string<sp/>into<sp/>&apos;dst&apos;<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ad340be18a81465c75a58f55b151fbd85" kindref="member">strcpy</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1a95c149a6e963e567bd059eb11aef4ac8" kindref="member">c_string</ref><sp/>dst,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">conststring</ref><sp/>src);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Compare<sp/>string<sp/>to<sp/>string<sp/>literal<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a0732a2d69fc0a894ca5e9b017c6fe01e" kindref="member">strcmp</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>*sta,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">conststring</ref><sp/>stb);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Compare<sp/>string<sp/>to<sp/>conventional<sp/>string<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a0732a2d69fc0a894ca5e9b017c6fe01e" kindref="member">strcmp</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>*sta,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a95c149a6e963e567bd059eb11aef4ac8" kindref="member">c_string</ref><sp/>stb);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Calculate<sp/>size<sp/>of<sp/>string<sp/>literal<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a05512e3a63e13122046db97314f58591" kindref="member">strlen</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">conststring</ref><sp/>str);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Calculate<sp/>size<sp/>of<sp/>conventional<sp/>string<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a05512e3a63e13122046db97314f58591" kindref="member">strlen</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1a95c149a6e963e567bd059eb11aef4ac8" kindref="member">c_string</ref><sp/>str);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Calculate<sp/>size<sp/>of<sp/>string<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a05512e3a63e13122046db97314f58591" kindref="member">strlen</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;str);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Calculate<sp/>size<sp/>of<sp/>string<sp/>at<sp/>specified<sp/>offset<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a05512e3a63e13122046db97314f58591" kindref="member">strlen</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>str,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aba0804f0534bca779731a6e8f2d3b123" kindref="member">offset_t</ref><sp/>offset);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Calculate<sp/>the<sp/>hash<sp/>of<sp/>a<sp/>given<sp/>string<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ad29f433a1c033a551d50291e7d3f50b4" kindref="member">hash_t</ref><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a53a0c211ad7056be924a561f9ebc8739" kindref="member">strhsh</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;str);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ad29f433a1c033a551d50291e7d3f50b4" kindref="member">hash_t</ref><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a53a0c211ad7056be924a561f9ebc8739" kindref="member">strhsh</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1a95c149a6e963e567bd059eb11aef4ac8" kindref="member">c_string</ref><sp/>str);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ad29f433a1c033a551d50291e7d3f50b4" kindref="member">hash_t</ref><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a53a0c211ad7056be924a561f9ebc8739" kindref="member">strhsh</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">conststring</ref><sp/>str);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="dd/d98/namespaceBBP_1_1std_1a139c4376c77070774335b26226c5da10" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ad29f433a1c033a551d50291e7d3f50b4" kindref="member">std::hash_t</ref><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">_hash(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*str,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hehe)<sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Hashing<sp/>constants</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>p<sp/>=<sp/>31;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m<sp/>=<sp/>1e9<sp/>+<sp/>9;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Working<sp/>variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ad29f433a1c033a551d50291e7d3f50b4" kindref="member">std::hash_t</ref><sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea964920435d98b78e3d9898c14fdf2d48" kindref="member">hash</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d6f/namespaceBBP_1a3558ab6953f5ed22d4c90a0e747bfc04" kindref="member">uint32_t</ref><sp/>Power<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>size<sp/>of<sp/>the<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref><sp/>length<sp/>=<sp/>hehe;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Actual<sp/>hashing<sp/>algorithm.<sp/>Taken<sp/>from:<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref><sp/>index<sp/>=<sp/>0;<sp/>index<sp/>&lt;<sp/>length;<sp/>index++)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>str[index];</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea964920435d98b78e3d9898c14fdf2d48" kindref="member">hash</ref><sp/>=<sp/>(<ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea964920435d98b78e3d9898c14fdf2d48" kindref="member">hash</ref><sp/>+<sp/>(c<sp/>-<sp/></highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal"><sp/>+<sp/>1)<sp/>*<sp/>Power)<sp/>%<sp/>m;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Power<sp/>=<sp/>(p<sp/>*<sp/>Power)<sp/>%<sp/>m;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea964920435d98b78e3d9898c14fdf2d48" kindref="member">hash</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Running<sp/>hash<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a53a0c211ad7056be924a561f9ebc8739" kindref="member">strhsh</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1ad29f433a1c033a551d50291e7d3f50b4" kindref="member">hash_t</ref><sp/>&amp;,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">word</ref><sp/>&amp;,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">string_element</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Calculate<sp/>size<sp/>of<sp/>string<sp/>literal<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="d3/dce/stddef_8h_1abe45653ace4e77c9ae4612de5535ff1d" kindref="member">__UNSAFE__</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1a05512e3a63e13122046db97314f58591" kindref="member">strlen</ref>)(<ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">conststring</ref><sp/>str);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Calculate<sp/>size<sp/>of<sp/>conventional<sp/>string<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="d3/dce/stddef_8h_1abe45653ace4e77c9ae4612de5535ff1d" kindref="member">__UNSAFE__</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1a05512e3a63e13122046db97314f58591" kindref="member">strlen</ref>)(<ref refid="dd/d98/namespaceBBP_1_1std_1a95c149a6e963e567bd059eb11aef4ac8" kindref="member">c_string</ref><sp/>str);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Calculate<sp/>size<sp/>of<sp/>string<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="d3/dce/stddef_8h_1abe45653ace4e77c9ae4612de5535ff1d" kindref="member">__UNSAFE__</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1a05512e3a63e13122046db97314f58591" kindref="member">strlen</ref>)(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>str);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Calculate<sp/>size<sp/>of<sp/>string<sp/>at<sp/>specified<sp/>offset<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="d3/dce/stddef_8h_1abe45653ace4e77c9ae4612de5535ff1d" kindref="member">__UNSAFE__</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1a05512e3a63e13122046db97314f58591" kindref="member">strlen</ref>)(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>str,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aba0804f0534bca779731a6e8f2d3b123" kindref="member">offset_t</ref><sp/>offset);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Write<sp/>one<sp/>whole<sp/>string<sp/>into<sp/>a<sp/>char<sp/>buffer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;<ref refid="dd/d98/namespaceBBP_1_1std_1a70dd1e33acbfe3b2a80db1362ee0b7df" kindref="member">operator&lt;&lt;=</ref>(<ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;stack,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">std::conststring</ref><sp/>str);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;<ref refid="dd/d98/namespaceBBP_1_1std_1a70dd1e33acbfe3b2a80db1362ee0b7df" kindref="member">operator&lt;&lt;=</ref>(<ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;stack,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a95c149a6e963e567bd059eb11aef4ac8" kindref="member">std::c_string</ref><sp/>str);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;<ref refid="dd/d98/namespaceBBP_1_1std_1a70dd1e33acbfe3b2a80db1362ee0b7df" kindref="member">operator&lt;&lt;=</ref>(<ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;stack,<sp/><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::string</ref><sp/>&amp;str);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;<ref refid="dd/d98/namespaceBBP_1_1std_1a70dd1e33acbfe3b2a80db1362ee0b7df" kindref="member">operator&lt;&lt;=</ref>(<ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;stack,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;<ref refid="dd/d98/namespaceBBP_1_1std_1adce07ae43f3eec1d803d60483e879c46" kindref="member">operator&lt;=</ref>(<ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;stack,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Write<sp/>one<sp/>whole<sp/>string<sp/>into<sp/>a<sp/>char<sp/>buffer<sp/>(no<sp/>null<sp/>terminator)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;<ref refid="dd/d98/namespaceBBP_1_1std_1a27729307826cf7d30436c8280997ed0f" kindref="member">operator&lt;&lt;</ref>(<ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;stack,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">std::conststring</ref><sp/>str);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;<ref refid="dd/d98/namespaceBBP_1_1std_1a27729307826cf7d30436c8280997ed0f" kindref="member">operator&lt;&lt;</ref>(<ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;stack,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a95c149a6e963e567bd059eb11aef4ac8" kindref="member">std::c_string</ref><sp/>str);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;<ref refid="dd/d98/namespaceBBP_1_1std_1a27729307826cf7d30436c8280997ed0f" kindref="member">operator&lt;&lt;</ref>(<ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;stack,<sp/><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::string</ref><sp/>&amp;str);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;<ref refid="dd/d98/namespaceBBP_1_1std_1ae660682d94d7d97bd418f86be996e4b1" kindref="member">operator&lt;</ref>(<ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;stack,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>one<sp/>whole<sp/>string<sp/>from<sp/>a<sp/>buffer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;<ref refid="dd/d98/namespaceBBP_1_1std_1af3ec20a9dd652424defa2f6fbaacfe41" kindref="member">operator&gt;&gt;=</ref>(<ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;stack,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a95c149a6e963e567bd059eb11aef4ac8" kindref="member">std::c_string</ref><sp/>*str);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;<ref refid="dd/d98/namespaceBBP_1_1std_1af3ec20a9dd652424defa2f6fbaacfe41" kindref="member">operator&gt;&gt;=</ref>(<ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;stack,<sp/><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::string</ref><sp/>*str);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>one<sp/>whole<sp/>string<sp/>from<sp/>a<sp/>buffer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;<ref refid="dd/d98/namespaceBBP_1_1std_1acf94469ccd3758128fbc9b57ade0c04b" kindref="member">operator&gt;&gt;</ref>(<ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;lh,<sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;rh);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;<ref refid="dd/d98/namespaceBBP_1_1std_1a27729307826cf7d30436c8280997ed0f" kindref="member">operator&lt;&lt;</ref>(<ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;lh,<sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;rh);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;<ref refid="dd/d98/namespaceBBP_1_1std_1af3ec20a9dd652424defa2f6fbaacfe41" kindref="member">operator&gt;&gt;=</ref>(<ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;lh,<sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;rh);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;<ref refid="dd/d98/namespaceBBP_1_1std_1a70dd1e33acbfe3b2a80db1362ee0b7df" kindref="member">operator&lt;&lt;=</ref>(<ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;lh,<sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;rh);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>one<sp/>whole<sp/>string<sp/>from<sp/>a<sp/>buffer<sp/>(unsafe)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;<ref refid="dd/d98/namespaceBBP_1_1std_1a350236449e81981979f94acf450a2113" kindref="member">operator&gt;</ref>(<ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;stack,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a95c149a6e963e567bd059eb11aef4ac8" kindref="member">std::c_string</ref><sp/>*str);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;<ref refid="dd/d98/namespaceBBP_1_1std_1a350236449e81981979f94acf450a2113" kindref="member">operator&gt;</ref>(<ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::string_element&gt;</ref><sp/>&amp;stack,<sp/><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::string</ref><sp/>*str);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="dd/d98/namespaceBBP_1_1std_1aef24a3a4d0b0447cba087eecbcfd586e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">std::conststring</ref><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aef24a3a4d0b0447cba087eecbcfd586e" kindref="member">space</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="139" refid="dd/d98/namespaceBBP_1_1std_1a92a50044907ba5f40a39efe0bce958d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">std::conststring</ref><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a92a50044907ba5f40a39efe0bce958d6" kindref="member">endl</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Strings.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1072 @@
+.TH "BBP::std::R2D" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BBP::std::R2D
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRGBA_t\fP \fBconvertUCHARtoINT\fP (\fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b, \fBchan_t\fP a)"
+.br
+.ti -1c
+.RI "void \fBconvertINTtoUCHAR\fP (\fBchan_t\fP *r, \fBchan_t\fP *g, \fBchan_t\fP *b, \fBRGBA_t\fP rgb)"
+.br
+.ti -1c
+.RI "void \fBconvertINTtoUCHAR\fP (\fBchan_t\fP *r, \fBchan_t\fP *g, \fBchan_t\fP *b, \fBchan_t\fP *a, \fBRGBA_t\fP rgba)"
+.br
+.ti -1c
+.RI "void \fBnewWindow\fP (\fBwindow\fP *, \fBpos_t\fP width, \fBpos_t\fP height, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b)"
+.br
+.ti -1c
+.RI "void \fBnewWindow\fP (\fBwindow\fP *, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b)"
+.br
+.ti -1c
+.RI "void \fBbackground\fP (\fBwindow\fP *, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b)"
+.br
+.ti -1c
+.RI "void \fBbackground\fP (\fBwindow\fP *, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b, \fBchan_t\fP a)"
+.br
+.ti -1c
+.RI "void \fBbackground\fP (\fBwindow\fP *, \fBRGBA_t\fP rgb)"
+.br
+.ti -1c
+.RI "void \fBbackground\fP (\fBwindow\fP *, \fBRGBA_t\fP rgb, \fBchan_t\fP a)"
+.br
+.ti -1c
+.RI "void \fBstroke\fP (\fBwindow\fP *, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b)"
+.br
+.ti -1c
+.RI "void \fBstroke\fP (\fBwindow\fP *, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b, \fBchan_t\fP a)"
+.br
+.ti -1c
+.RI "void \fBstroke\fP (\fBwindow\fP *, \fBRGBA_t\fP rgb)"
+.br
+.ti -1c
+.RI "void \fBstroke\fP (\fBwindow\fP *, \fBRGBA_t\fP rgb, \fBchan_t\fP a)"
+.br
+.ti -1c
+.RI "void \fBstrokeWeight\fP (\fBwindow\fP *, \fBword\fP weight)"
+.br
+.ti -1c
+.RI "void \fBnoStroke\fP (\fBwindow\fP *)"
+.br
+.ti -1c
+.RI "void \fBfill\fP (\fBwindow\fP *, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b)"
+.br
+.ti -1c
+.RI "void \fBfill\fP (\fBwindow\fP *, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b, \fBchan_t\fP a)"
+.br
+.ti -1c
+.RI "void \fBfill\fP (\fBwindow\fP *, \fBRGBA_t\fP rgb)"
+.br
+.ti -1c
+.RI "void \fBfill\fP (\fBwindow\fP *, \fBRGBA_t\fP rgb, \fBchan_t\fP a)"
+.br
+.ti -1c
+.RI "void \fBnoFill\fP (\fBwindow\fP *)"
+.br
+.ti -1c
+.RI "void \fBLine\fP (\fBwindow\fP *, int x1, int y1, int x2, int y2)"
+.br
+.ti -1c
+.RI "void \fBHrule\fP (\fBwindow\fP *, \fBpos_t\fP x1, \fBpos_t\fP x2, \fBpos_t\fP y)"
+.br
+.ti -1c
+.RI "void \fBVrule\fP (\fBwindow\fP *, \fBpos_t\fP y1, \fBpos_t\fP y2, \fBpos_t\fP x)"
+.br
+.ti -1c
+.RI "void \fBLine\fP (\fBwindow\fP *, int x1, int y1, int x2, int y2, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b)"
+.br
+.ti -1c
+.RI "void \fBHrule\fP (\fBwindow\fP *, \fBpos_t\fP x1, \fBpos_t\fP x2, \fBpos_t\fP y, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b)"
+.br
+.ti -1c
+.RI "void \fBVrule\fP (\fBwindow\fP *, \fBpos_t\fP y1, \fBpos_t\fP y2, \fBpos_t\fP x, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b)"
+.br
+.ti -1c
+.RI "void \fBLine\fP (\fBwindow\fP *, int x1, int y1, int x2, int y2, \fBRGBA_t\fP rgb)"
+.br
+.ti -1c
+.RI "void \fBHrule\fP (\fBwindow\fP *, \fBpos_t\fP x1, \fBpos_t\fP x2, \fBpos_t\fP y, \fBRGBA_t\fP rgb)"
+.br
+.ti -1c
+.RI "void \fBVrule\fP (\fBwindow\fP *, \fBpos_t\fP y1, \fBpos_t\fP y2, \fBpos_t\fP x, \fBRGBA_t\fP rgb)"
+.br
+.ti -1c
+.RI "void \fBRect\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBpos_t\fP w, \fBpos_t\fP h)"
+.br
+.ti -1c
+.RI "void \fBBox\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBpos_t\fP w, \fBpos_t\fP h)"
+.br
+.ti -1c
+.RI "void \fBFrame\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBpos_t\fP w, \fBpos_t\fP h)"
+.br
+.ti -1c
+.RI "void \fBRectPixelMask\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBmask_t\fP mask)"
+.br
+.ti -1c
+.RI "void \fBRectPixelMask\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBword\fP size, \fBmask_t\fP mask)"
+.br
+.ti -1c
+.RI "void \fBRectPixelMaskAligned\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBword\fP size, \fBmask_t\fP mask)"
+.br
+.ti -1c
+.RI "void \fBRectPixelMask\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBmask_t\fP *maskv, \fBword\fP maskc)"
+.br
+.ti -1c
+.RI "void \fBRectPixelMask\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBword\fP size, \fBmask_t\fP *maskv, \fBword\fP maskc)"
+.br
+.ti -1c
+.RI "void \fBRectPixelMaskAligned\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBword\fP size, \fBmask_t\fP *maskv, \fBword\fP maskc)"
+.br
+.ti -1c
+.RI "\fBRGBA_t\fP \fBreadPixel\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y)"
+.br
+.ti -1c
+.RI "void \fBsetPixel\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y)"
+.br
+.ti -1c
+.RI "void \fBsetPixel\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBword\fP size)"
+.br
+.ti -1c
+.RI "void \fBsetPixelAligned\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBword\fP size)"
+.br
+.ti -1c
+.RI "void \fBPixelMask\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBmask_t\fP mask)"
+.br
+.ti -1c
+.RI "void \fBPixelMask\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBword\fP size, \fBmask_t\fP mask)"
+.br
+.ti -1c
+.RI "void \fBPixelMaskAligned\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBword\fP size, \fBmask_t\fP mask)"
+.br
+.ti -1c
+.RI "void \fBPixelMask\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBmask_t\fP *maskv, \fBword\fP maskc)"
+.br
+.ti -1c
+.RI "void \fBPixelMask\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBword\fP size, \fBmask_t\fP *maskv, \fBword\fP maskc)"
+.br
+.ti -1c
+.RI "void \fBPixelMaskAligned\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBword\fP size, \fBmask_t\fP *maskv, \fBword\fP maskc)"
+.br
+.ti -1c
+.RI "void \fBPrintCharacterAt\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBustring_element\fP ch)"
+.br
+.ti -1c
+.RI "void \fBPrintCharacterAt\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBustring_element\fP ch, \fBword\fP size)"
+.br
+.ti -1c
+.RI "void \fBprint\fP (\fBwindow\fP *, \fBustring_element\fP ch)"
+.br
+.ti -1c
+.RI "void \fBprint\fP (\fBwindow\fP *, \fBustring_element\fP *str)"
+.br
+.ti -1c
+.RI "void \fBprint\fP (\fBwindow\fP *, \fBconststring\fP str)"
+.br
+.ti -1c
+.RI "void \fBprint\fP (\fBwindow\fP *, \fBmem_t\fP *str, \fBword\fP str_c)"
+.br
+.ti -1c
+.RI "void \fBsetCursorPos\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y)"
+.br
+.ti -1c
+.RI "void \fBGetFontFromFile\fP (\fBwindow\fP *, \fBstd::PATH\fP &)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void BBP::std::R2D::background (\fBwindow\fP * window, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b)"
+
+.PP
+Definition at line 220 of file R2D\&.cpp\&.
+.PP
+.nf
+221         {
+222             RGBA_t colour = R2D::convertUCHARtoINT(r, g, b, 255);
+223             for (std::index_t n = 0; n < window->width * window->height; n++)
+224                 write(&window->backBuffer, colour, n);
+225         }
+.fi
+.PP
+References BBP::std::window::backBuffer, convertUCHARtoINT(), BBP::std::window::height, BBP::Locale::Japanese::n, BBP::std::window::width, and BBP::std::write()\&.
+.PP
+Referenced by newWindow()\&.
+.SS "void BBP::std::R2D::background (\fBwindow\fP * window, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b, \fBchan_t\fP a)"
+
+.PP
+Definition at line 226 of file R2D\&.cpp\&.
+.PP
+.nf
+227         {
+228             RGBA_t colour = R2D::convertUCHARtoINT(r, g, b, a);
+229             for (std::index_t n = 0; n < window->width * window->height; n++)
+230                 window->backBuffer\&.data[n] = colour;
+231         }
+.fi
+.PP
+References BBP::Locale::Japanese::a, BBP::std::window::backBuffer, convertUCHARtoINT(), BBP::std::PAGE< T >::data, BBP::std::window::height, BBP::Locale::Japanese::n, and BBP::std::window::width\&.
+.SS "void BBP::std::R2D::background (\fBwindow\fP * window, \fBRGBA_t\fP rgb)"
+
+.PP
+Definition at line 232 of file R2D\&.cpp\&.
+.PP
+.nf
+233         {
+234             for (std::index_t n = 0; n < window->width * window->height; n++)
+235                 window->backBuffer\&.data[n] = rgba;
+236         }
+.fi
+.PP
+References BBP::std::window::backBuffer, BBP::std::PAGE< T >::data, BBP::std::window::height, BBP::Locale::Japanese::n, and BBP::std::window::width\&.
+.SS "void BBP::std::R2D::background (\fBwindow\fP * window, \fBRGBA_t\fP rgb, \fBchan_t\fP a)"
+
+.PP
+Definition at line 237 of file R2D\&.cpp\&.
+.PP
+.nf
+238         {
+239             RGBA_t colour = (rgb & ~0xFF) ^ a;
+240             for (std::index_t n = 0; n < window->width * window->height; n++)
+241                 window->backBuffer\&.data[n] = colour;
+242         }
+.fi
+.PP
+References BBP::Locale::Japanese::a, BBP::std::window::backBuffer, BBP::std::PAGE< T >::data, BBP::std::window::height, BBP::Locale::Japanese::n, and BBP::std::window::width\&.
+.SS "void BBP::std::R2D::Box (\fBwindow\fP * window, \fBpos_t\fP x, \fBpos_t\fP y, \fBpos_t\fP w, \fBpos_t\fP h)"
+
+.PP
+Definition at line 395 of file R2D\&.cpp\&.
+.PP
+.nf
+396         {
+397             for (std::index_t Y = y; Y < y + h; Y++)
+398                 R2D::Hrule(window, x, x + w, Y, window->Fill\&.R, window->Fill\&.G, window->Fill\&.B);
+399         }
+.fi
+.PP
+References BBP::std::colour::B, BBP::std::window::Fill, BBP::std::colour::G, Hrule(), and BBP::std::colour::R\&.
+.PP
+Referenced by Rect(), setPixel(), and setPixelAligned()\&.
+.SS "void BBP::std::R2D::convertINTtoUCHAR (\fBchan_t\fP * r, \fBchan_t\fP * g, \fBchan_t\fP * b, \fBchan_t\fP * a, \fBRGBA_t\fP rgba)"
+
+.PP
+Definition at line 48 of file R2D\&.cpp\&.
+.PP
+.nf
+49         {
+50             *r = (rgba >> 24) & 0xFF;
+51             *g = (rgba >> 16) & 0xFF;
+52             *b = (rgba >> 8) & 0xFF;
+53             *a = (rgba) & 0xFF;
+54         }
+.fi
+.PP
+References BBP::Locale::Japanese::a\&.
+.SS "void BBP::std::R2D::convertINTtoUCHAR (\fBchan_t\fP * r, \fBchan_t\fP * g, \fBchan_t\fP * b, \fBRGBA_t\fP rgb)"
+
+.PP
+Definition at line 42 of file R2D\&.cpp\&.
+.PP
+.nf
+43         {
+44             *r = (rgb >> 24) & 0xFF;
+45             *g = (rgb >> 16) & 0xFF;
+46             *b = (rgb >> 8) & 0xFF;
+47         }
+.fi
+.PP
+Referenced by fill(), and stroke()\&.
+.SS "\fBRGBA_t\fP BBP::std::R2D::convertUCHARtoINT (\fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b, \fBchan_t\fP a)"
+
+.PP
+Definition at line 37 of file R2D\&.cpp\&.
+.PP
+.nf
+38         {
+39             int ret = (r << 24) | (g << 16) | (b << 8) | a;
+40             return ret;
+41         }
+.fi
+.PP
+References BBP::Locale::Japanese::a, and BBP::userspace::ret\&.
+.PP
+Referenced by background(), fill(), Hrule(), stroke(), and Vrule()\&.
+.SS "void BBP::std::R2D::fill (\fBwindow\fP * window, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b)"
+
+.PP
+Definition at line 94 of file R2D\&.cpp\&.
+.PP
+.nf
+95         {
+96             window->Fill\&.R = r;
+97             window->Fill\&.G = g;
+98             window->Fill\&.B = b;
+99             window->Fill\&.RGBA = convertUCHARtoINT(r, g, b, window->Fill\&.A);
+100             window->doFill = true;
+101         }
+.fi
+.PP
+References BBP::std::colour::A, BBP::std::colour::B, convertUCHARtoINT(), BBP::std::window::doFill, BBP::std::window::Fill, BBP::std::colour::G, BBP::std::colour::R, and BBP::std::colour::RGBA\&.
+.PP
+Referenced by BBP::std::execute()\&.
+.SS "void BBP::std::R2D::fill (\fBwindow\fP * window, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b, \fBchan_t\fP a)"
+
+.PP
+Definition at line 102 of file R2D\&.cpp\&.
+.PP
+.nf
+103         {
+104             window->Fill\&.R = r;
+105             window->Fill\&.G = g;
+106             window->Fill\&.B = b;
+107             window->Fill\&.A = a;
+108             window->Fill\&.RGBA = convertUCHARtoINT(r, g, b, a);
+109             window->doFill = true;
+110         }
+.fi
+.PP
+References BBP::std::colour::A, BBP::Locale::Japanese::a, BBP::std::colour::B, convertUCHARtoINT(), BBP::std::window::doFill, BBP::std::window::Fill, BBP::std::colour::G, BBP::std::colour::R, and BBP::std::colour::RGBA\&.
+.SS "void BBP::std::R2D::fill (\fBwindow\fP * window, \fBRGBA_t\fP rgb)"
+
+.PP
+Definition at line 111 of file R2D\&.cpp\&.
+.PP
+.nf
+112         {
+113             window->Fill\&.RGBA = rgb;
+114             convertINTtoUCHAR(&(window->Fill\&.R), &(window->Fill\&.G), &(window->Fill\&.B), rgb);
+115             window->doFill = true;
+116         }
+.fi
+.PP
+References BBP::std::colour::B, convertINTtoUCHAR(), BBP::std::window::doFill, BBP::std::window::Fill, BBP::std::colour::G, BBP::std::colour::R, and BBP::std::colour::RGBA\&.
+.SS "void BBP::std::R2D::fill (\fBwindow\fP * window, \fBRGBA_t\fP rgb, \fBchan_t\fP a)"
+
+.PP
+Definition at line 117 of file R2D\&.cpp\&.
+.PP
+.nf
+118         {
+119             convertINTtoUCHAR(&(window->Fill\&.R), &(window->Fill\&.G), &(window->Fill\&.B), rgb);
+120             window->Fill\&.A = a;
+121             window->Fill\&.RGBA = convertUCHARtoINT(window->Fill\&.R, window->Fill\&.G, window->Fill\&.B, a);
+122             window->doFill = true;
+123         }
+.fi
+.PP
+References BBP::std::colour::A, BBP::Locale::Japanese::a, BBP::std::colour::B, convertINTtoUCHAR(), convertUCHARtoINT(), BBP::std::window::doFill, BBP::std::window::Fill, BBP::std::colour::G, BBP::std::colour::R, and BBP::std::colour::RGBA\&.
+.SS "void BBP::std::R2D::Frame (\fBwindow\fP * window, \fBpos_t\fP x, \fBpos_t\fP y, \fBpos_t\fP w, \fBpos_t\fP h)"
+
+.PP
+Definition at line 401 of file R2D\&.cpp\&.
+.PP
+.nf
+402         {
+403             R2D::Hrule(window, x, x + w, y);
+404             R2D::Hrule(window, x, x + w, y + h);
+405 
+406             R2D::Vrule(window, y, y + h, x);
+407             R2D::Vrule(window, y, y + h, x + w);
+408         }
+.fi
+.PP
+References Hrule(), and Vrule()\&.
+.PP
+Referenced by Rect()\&.
+.SS "void BBP::std::R2D::GetFontFromFile (\fBwindow\fP * window, \fBstd::PATH\fP & path)"
+
+.PP
+Definition at line 167 of file R2D\&.cpp\&.
+.PP
+.nf
+168         {
+169             // If window pointer is invalid, do nothing\&.
+170             if (window == nullptr)
+171                 return;
+172 
+173             // Open file from path
+174             BBP::std::FILE fontFile(path);
+175 
+176             byte *data = (byte *)fontFile\&.b()\&.page->data;
+177 
+178             // Font is now in fontFile\&. From this, we can now obtain pointers to the data
+179             size_t nums = data[0];
+180             RGBA_t *font = (RGBA_t *)read_a(fontFile\&.b()\&.page, 4);
+181             ustring_element *mapping = (ustring_element *)read_ar(fontFile\&.b()\&.page, 4 + nums * 8);
+182 
+183             // First find the \0 character from ROM
+184             int nullCharacterIndex = 0;
+185             for (std::index_t i = 0; i < nums; i++)
+186             {
+187                 if (mapping[i]) // If the character is not '\0', continue
+188                     continue;
+189                 nullCharacterIndex = i; // \0 found!
+190                 break;
+191             }
+192             // Then write that font map to each character
+193             for (std::index_t i = 0; i < 256; i++)
+194                 window->fontMapping[i] = nullCharacterIndex;
+195 
+196             // Then overwrite the known fonts from the map
+197             for (std::index_t i = 0; i < nums; i++)
+198                 window->fontMapping[mapping[i]] = i;
+199 
+200             // If there is another font stored in window, clear it
+201             if (window->typeFace\&.data)
+202                 vmem\&.free(window->typeFace\&.data);
+203 
+204             // Then allocate typeface
+205             window->typeFace = BBP::std::PAGE<mask_t>(2 * nums, (mask_t *)vmem\&.calloc(2 * nums, sizeof(mask_t)));
+206 
+207             // Copy data
+208             for (BBP::std::index_t idx = 0; idx < window->typeFace\&.dataSize; idx++)
+209             {
+210                 // TODO: Not compiler agnostic! Needs to be changed\&.
+211                 word swapped = __builtin_bswap32(font[idx]);
+212                 window->typeFace\&.data[idx] = swapped;
+213             }
+214 
+215             // Since everything has been copied, close the font file
+216             fontFile\&.close();
+217         }
+.fi
+.PP
+References BBP::std::FILE::b(), BBP::std::ResourceManager::calloc(), BBP::std::FILE::close(), BBP::std::PAGE< T >::data, BBP::std::PAGE< T >::dataSize, BBP::std::window::fontMapping, BBP::std::ResourceManager::free(), BBP::Locale::Japanese::i, BBP::std::Stack< K >::page, BBP::std::read_a(), BBP::std::read_ar(), BBP::std::window::typeFace, and BBP::std::vmem\&.
+.SS "void BBP::std::R2D::Hrule (\fBwindow\fP * window, \fBpos_t\fP x1, \fBpos_t\fP x2, \fBpos_t\fP y)"
+
+.PP
+Definition at line 244 of file R2D\&.cpp\&.
+.PP
+.nf
+245         {
+246             RGBA_t colour = R2D::convertUCHARtoINT(window->Stroke\&.R, window->Stroke\&.G, window->Stroke\&.B, window->Stroke\&.A);
+247             for (std::index_t i = x1; i < x2; i++)
+248                 window->backBuffer\&.data[i + window->width * y] = colour;
+249         }
+.fi
+.PP
+References BBP::std::colour::A, BBP::std::colour::B, BBP::std::window::backBuffer, convertUCHARtoINT(), BBP::std::PAGE< T >::data, BBP::std::colour::G, BBP::Locale::Japanese::i, BBP::std::colour::R, BBP::std::window::Stroke, and BBP::std::window::width\&.
+.PP
+Referenced by Box(), and Frame()\&.
+.SS "void BBP::std::R2D::Hrule (\fBwindow\fP * window, \fBpos_t\fP x1, \fBpos_t\fP x2, \fBpos_t\fP y, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b)"
+
+.PP
+Definition at line 258 of file R2D\&.cpp\&.
+.PP
+.nf
+259         {
+260             RGBA_t colour = R2D::convertUCHARtoINT(r, g, b, 255);
+261             for (std::index_t i = x1; i < x2; i++)
+262                 window->backBuffer\&.data[i + window->width * y] = colour;
+263         }
+.fi
+.PP
+References BBP::std::window::backBuffer, convertUCHARtoINT(), BBP::std::PAGE< T >::data, BBP::Locale::Japanese::i, and BBP::std::window::width\&.
+.SS "void BBP::std::R2D::Hrule (\fBwindow\fP * window, \fBpos_t\fP x1, \fBpos_t\fP x2, \fBpos_t\fP y, \fBRGBA_t\fP rgb)"
+
+.PP
+Definition at line 272 of file R2D\&.cpp\&.
+.PP
+.nf
+273         {
+274             for (std::index_t i = x1; i < x2; i++)
+275                 window->backBuffer\&.data[i + window->width * y] = rgb;
+276         }
+.fi
+.PP
+References BBP::std::window::backBuffer, BBP::std::PAGE< T >::data, BBP::Locale::Japanese::i, and BBP::std::window::width\&.
+.SS "void BBP::std::R2D::Line (\fBwindow\fP * window, int x1, int y1, int x2, int y2)"
+
+.PP
+Definition at line 330 of file R2D\&.cpp\&.
+.PP
+.nf
+331         {
+332             int steep = absolute(y1 - y0) > absolute(x1 - x0);
+333 
+334             // swap the co-ordinates if slope > 1 or we
+335             // draw backwards
+336             if (steep)
+337             {
+338                 swap(&x0, &y0);
+339                 swap(&x1, &y1);
+340             }
+341             if (x0 > x1)
+342             {
+343                 swap(&x0, &x1);
+344                 swap(&y0, &y1);
+345             }
+346 
+347             //compute the slope
+348             float dx = x1 - x0;
+349             float dy = y1 - y0;
+350             float gradient = dy / dx;
+351             if (dx == 0\&.0)
+352                 gradient = 1;
+353 
+354             int xpxl1 = x0;
+355             int xpxl2 = x1;
+356             float intersectY = y0;
+357 
+358             // main loop
+359             if (steep)
+360             {
+361                 int x;
+362                 for (x = xpxl1; x <= xpxl2; x++)
+363                 {
+364                     // pixel coverage is determined by fractional
+365                     // part of y co-ordinate
+366                     R2D::setPixel(window, iPartOfNumber(intersectY), x);
+367                     R2D::setPixel(window, iPartOfNumber(intersectY) - 1, x);
+368                     intersectY += gradient;
+369                 }
+370             }
+371             else
+372             {
+373                 int x;
+374                 for (x = xpxl1; x <= xpxl2; x++)
+375                 {
+376                     // pixel coverage is determined by fractional
+377                     // part of y co-ordinate
+378                     R2D::setPixel(window, x, iPartOfNumber(intersectY));
+379                     R2D::setPixel(window, x, iPartOfNumber(intersectY) - 1);
+380                     intersectY += gradient;
+381                 }
+382             }
+383 
+384         }
+.fi
+.PP
+References BBP::std::absolute(), BBP::std::iPartOfNumber(), setPixel(), and BBP::std::swap()\&.
+.SS "void BBP::std::R2D::Line (\fBwindow\fP *, int x1, int y1, int x2, int y2, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b)"
+
+.SS "void BBP::std::R2D::Line (\fBwindow\fP *, int x1, int y1, int x2, int y2, \fBRGBA_t\fP rgb)"
+
+.SS "void BBP::std::R2D::newWindow (\fBwindow\fP * window, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b)"
+
+.PP
+Definition at line 159 of file R2D\&.cpp\&.
+.PP
+.nf
+160         {
+161             if (window == nullptr)
+162                 return;
+163 
+164             R2D::background(window, r, g, b);
+165         }
+.fi
+.PP
+References background()\&.
+.SS "void BBP::std::R2D::newWindow (\fBwindow\fP * window, \fBpos_t\fP width, \fBpos_t\fP height, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b)"
+
+.PP
+Definition at line 130 of file R2D\&.cpp\&.
+.PP
+.nf
+131         {
+132             if (window == nullptr)
+133                 return;
+134 
+135             // If dimensions match last window, no need to re-allocate memory
+136             if (window->width != width || window->height != height)
+137             {
+138                 // Check if backbuffer is actually allocated
+139                 if (window->backBuffer\&.data)
+140                     vmem\&.free(window->backBuffer\&.data);
+141 
+142                 // Allocate new backbuffer\&.
+143                 window->backBuffer = std::PAGE<RGBA_t>(width * height, (RGBA_t *)vmem\&.calloc(width * height, sizeof(RGBA_t)));
+144             }
+145 
+146             // If nothing was stored last time, then we might as well just re-alloc
+147             if ((width && !window->width) || (height && !window->height))
+148             {
+149                 // Allocate new backbuffer\&.
+150                 //window->backBuffer = std::PAGE<int>(width * height, (int *)vmem\&.calloc(width * height, sizeof(int)));
+151             }
+152             
+153             window->width = width;
+154             window->height = height;
+155 
+156             R2D::background(window, r, g, b);
+157         }
+.fi
+.PP
+References BBP::std::window::backBuffer, background(), BBP::std::ResourceManager::calloc(), BBP::std::PAGE< T >::data, BBP::std::ResourceManager::free(), BBP::std::window::height, BBP::std::vmem, and BBP::std::window::width\&.
+.SS "void BBP::std::R2D::noFill (\fBwindow\fP * window)"
+
+.PP
+Definition at line 125 of file R2D\&.cpp\&.
+.PP
+.nf
+126         {
+127             window->doFill = false;
+128         }
+.fi
+.PP
+References BBP::std::window::doFill\&.
+.SS "void BBP::std::R2D::noStroke (\fBwindow\fP * window)"
+
+.PP
+Definition at line 84 of file R2D\&.cpp\&.
+.PP
+.nf
+85         {
+86             window->doStroke = false;
+87         }
+.fi
+.PP
+References BBP::std::window::doStroke\&.
+.SS "void BBP::std::R2D::PixelMask (\fBwindow\fP * window, \fBpos_t\fP x, \fBpos_t\fP y, \fBmask_t\fP * maskv, \fBword\fP maskc)"
+
+.PP
+Definition at line 493 of file R2D\&.cpp\&.
+.PP
+.nf
+494         {
+495             for (std::index_t i = 0; i < maskc; i++)
+496                 PixelMask(window, x, y + i, maskv[i]);
+497         }
+.fi
+.PP
+References BBP::Locale::Japanese::i, and PixelMask()\&.
+.SS "void BBP::std::R2D::PixelMask (\fBwindow\fP * window, \fBpos_t\fP x, \fBpos_t\fP y, \fBmask_t\fP mask)"
+
+.PP
+Definition at line 472 of file R2D\&.cpp\&.
+.PP
+.nf
+473         {
+474             for (std::index_t i = 0; i < 32; i++)
+475                 if ((mask >> (i)) & 0x1)
+476                     setPixel(window, x + i, y);
+477         }
+.fi
+.PP
+References BBP::Locale::Japanese::i, and setPixel()\&.
+.PP
+Referenced by PixelMask()\&.
+.SS "void BBP::std::R2D::PixelMask (\fBwindow\fP * window, \fBpos_t\fP x, \fBpos_t\fP y, \fBword\fP size, \fBmask_t\fP * maskv, \fBword\fP maskc)"
+
+.PP
+Definition at line 499 of file R2D\&.cpp\&.
+.PP
+.nf
+500         {
+501             for (std::index_t i = 0; i < maskc; i++)
+502                 PixelMask(window, x, y + i * size, size, maskv[i]);
+503         }
+.fi
+.PP
+References BBP::Locale::Japanese::i, and PixelMask()\&.
+.SS "void BBP::std::R2D::PixelMask (\fBwindow\fP * window, \fBpos_t\fP x, \fBpos_t\fP y, \fBword\fP size, \fBmask_t\fP mask)"
+
+.PP
+Definition at line 479 of file R2D\&.cpp\&.
+.PP
+.nf
+480         {
+481             for (std::index_t i = 0; i < 32; i++)
+482                 if ((mask >> (i)) & 0x1)
+483                     setPixel(window, x + i * size, y, size);
+484         }
+.fi
+.PP
+References BBP::Locale::Japanese::i, and setPixel()\&.
+.SS "void BBP::std::R2D::PixelMaskAligned (\fBwindow\fP * window, \fBpos_t\fP x, \fBpos_t\fP y, \fBword\fP size, \fBmask_t\fP * maskv, \fBword\fP maskc)"
+
+.PP
+Definition at line 505 of file R2D\&.cpp\&.
+.PP
+.nf
+506         {
+507             for (std::index_t i = 0; i < maskc; i++)
+508                 PixelMaskAligned(window, x, y + i * size, size, maskv[i]);
+509         }
+.fi
+.PP
+References BBP::Locale::Japanese::i, and PixelMaskAligned()\&.
+.SS "void BBP::std::R2D::PixelMaskAligned (\fBwindow\fP * window, \fBpos_t\fP x, \fBpos_t\fP y, \fBword\fP size, \fBmask_t\fP mask)"
+
+.PP
+Definition at line 486 of file R2D\&.cpp\&.
+.PP
+.nf
+487         {
+488             for (std::index_t i = 0; i < 32; i++)
+489                 if ((mask >> (i)) & 0x1)
+490                     setPixelAligned(window, x + i * size, y, size);
+491         }
+.fi
+.PP
+References BBP::Locale::Japanese::i, and setPixelAligned()\&.
+.PP
+Referenced by PixelMaskAligned()\&.
+.SS "void BBP::std::R2D::print (\fBwindow\fP * window, \fBconststring\fP str)"
+
+.PP
+Definition at line 552 of file R2D\&.cpp\&.
+.PP
+.nf
+553         {
+554             ustring_element *str_ptr = (ustring_element *)str;
+555             while (*str_ptr)
+556             {
+557                 R2D::print(window, (ustring_element)(*str_ptr));
+558                 str_ptr++;
+559             }
+560         }
+.fi
+.PP
+References print()\&.
+.SS "void BBP::std::R2D::print (\fBwindow\fP *, \fBmem_t\fP * str, \fBword\fP str_c)"
+
+.SS "void BBP::std::R2D::print (\fBwindow\fP *, \fBustring_element\fP * str)"
+
+.SS "void BBP::std::R2D::print (\fBwindow\fP * window, \fBustring_element\fP ch)"
+
+.PP
+Definition at line 523 of file R2D\&.cpp\&.
+.PP
+.nf
+524         {
+525             // TODO expand
+526 #ifdef BBP_DEBUG
+527             BBP::Debug::printToConsole(ch);
+528 #endif
+529             switch (ch)
+530             {
+531             case '\n':
+532                 window->coloumn = 0;
+533                 window->line++;
+534                 return;
+535             default:
+536                 R2D::PrintCharacterAt(window, window->cursorPosX + window->fontSize * window->fontSpacing * window->coloumn++, window->cursorPosY + window->fontSize * window->fontSpacing * window->line * 2, ch, window->fontSize);
+537                 break;
+538             }
+539 
+540         }
+.fi
+.PP
+References BBP::std::window::coloumn, BBP::std::window::cursorPosX, BBP::std::window::cursorPosY, BBP::std::window::fontSize, BBP::std::window::fontSpacing, BBP::std::window::line, and PrintCharacterAt()\&.
+.PP
+Referenced by print()\&.
+.SS "void BBP::std::R2D::PrintCharacterAt (\fBwindow\fP * window, \fBpos_t\fP x, \fBpos_t\fP y, \fBustring_element\fP ch)"
+
+.PP
+Definition at line 512 of file R2D\&.cpp\&.
+.PP
+.nf
+513         {
+514             
+515             R2D::RectPixelMask(window, x, y, window->typeFace\&.data + window->fontMapping[ch] * 2, 2);
+516         }
+.fi
+.PP
+References BBP::std::PAGE< T >::data, BBP::std::window::fontMapping, RectPixelMask(), and BBP::std::window::typeFace\&.
+.PP
+Referenced by print()\&.
+.SS "void BBP::std::R2D::PrintCharacterAt (\fBwindow\fP * window, \fBpos_t\fP x, \fBpos_t\fP y, \fBustring_element\fP ch, \fBword\fP size)"
+
+.PP
+Definition at line 518 of file R2D\&.cpp\&.
+.PP
+.nf
+519         {
+520             R2D::RectPixelMask(window, x, y, size, window->typeFace\&.data + window->fontMapping[ch] * 2, 2);
+521         }
+.fi
+.PP
+References BBP::std::PAGE< T >::data, BBP::std::window::fontMapping, RectPixelMask(), and BBP::std::window::typeFace\&.
+.SS "\fBRGBA_t\fP BBP::std::R2D::readPixel (\fBwindow\fP * window, \fBpos_t\fP x, \fBpos_t\fP y)"
+
+.PP
+Definition at line 452 of file R2D\&.cpp\&.
+.PP
+.nf
+453         {
+454             return window->backBuffer\&.data[window->width * y + x];
+455         }
+.fi
+.PP
+References BBP::std::window::backBuffer, BBP::std::PAGE< T >::data, and BBP::std::window::width\&.
+.SS "void BBP::std::R2D::Rect (\fBwindow\fP * window, \fBpos_t\fP x, \fBpos_t\fP y, \fBpos_t\fP w, \fBpos_t\fP h)"
+
+.PP
+Definition at line 386 of file R2D\&.cpp\&.
+.PP
+.nf
+387         {
+388             if (window->doFill)
+389                 R2D::Box(window, x, y, w, h);
+390             if (window->doStroke)
+391                 for (std::index_t i = 0; i < window->strokeWeight; i++)
+392                     R2D::Frame(window, x + i, y + i, w - i * 2, h - i * 2);
+393         }
+.fi
+.PP
+References Box(), BBP::std::window::doFill, BBP::std::window::doStroke, Frame(), BBP::Locale::Japanese::i, and BBP::std::window::strokeWeight\&.
+.SS "void BBP::std::R2D::RectPixelMask (\fBwindow\fP * window, \fBpos_t\fP x, \fBpos_t\fP y, \fBmask_t\fP * maskv, \fBword\fP maskc)"
+
+.PP
+Definition at line 434 of file R2D\&.cpp\&.
+.PP
+.nf
+435         {
+436             for (std::index_t i = 0; i < maskc; i++)
+437                 RectPixelMask(window, x, y + i * 4, maskv[i]);
+438         }
+.fi
+.PP
+References BBP::Locale::Japanese::i, and RectPixelMask()\&.
+.SS "void BBP::std::R2D::RectPixelMask (\fBwindow\fP * window, \fBpos_t\fP x, \fBpos_t\fP y, \fBmask_t\fP mask)"
+
+.PP
+Definition at line 410 of file R2D\&.cpp\&.
+.PP
+.nf
+411         {
+412             for (int X = 0; X < 8; X++)
+413                 for (int Y = 0; Y < 4; Y++)
+414                     if ((mask >> (31 - (7 - X) - Y * 8)) & 0x1)
+415                         setPixel(window, x + X, y + Y);
+416         }
+.fi
+.PP
+References setPixel()\&.
+.PP
+Referenced by PrintCharacterAt(), and RectPixelMask()\&.
+.SS "void BBP::std::R2D::RectPixelMask (\fBwindow\fP * window, \fBpos_t\fP x, \fBpos_t\fP y, \fBword\fP size, \fBmask_t\fP * maskv, \fBword\fP maskc)"
+
+.PP
+Definition at line 440 of file R2D\&.cpp\&.
+.PP
+.nf
+441         {
+442             for (std::index_t i = 0; i < maskc; i++)
+443                 RectPixelMask(window, x, y + i * size * 4, size, maskv[i]);
+444         }
+.fi
+.PP
+References BBP::Locale::Japanese::i, and RectPixelMask()\&.
+.SS "void BBP::std::R2D::RectPixelMask (\fBwindow\fP * window, \fBpos_t\fP x, \fBpos_t\fP y, \fBword\fP size, \fBmask_t\fP mask)"
+
+.PP
+Definition at line 418 of file R2D\&.cpp\&.
+.PP
+.nf
+419         {
+420             for (int X = 0; X < 8; X++)
+421                 for (int Y = 0; Y < 4; Y++)
+422                     if ((mask >> (31 - (7 - X) - Y * 8)) & 0x1)
+423                         setPixel(window, x + X * size, y + Y * size, size);
+424         }
+.fi
+.PP
+References setPixel()\&.
+.SS "void BBP::std::R2D::RectPixelMaskAligned (\fBwindow\fP * window, \fBpos_t\fP x, \fBpos_t\fP y, \fBword\fP size, \fBmask_t\fP * maskv, \fBword\fP maskc)"
+
+.PP
+Definition at line 446 of file R2D\&.cpp\&.
+.PP
+.nf
+447         {
+448             for (std::index_t i = 0; i < maskc; i++)
+449                 RectPixelMaskAligned(window, x, y + i * size * 4, size, maskv[i]);
+450         }
+.fi
+.PP
+References BBP::Locale::Japanese::i, and RectPixelMaskAligned()\&.
+.SS "void BBP::std::R2D::RectPixelMaskAligned (\fBwindow\fP * window, \fBpos_t\fP x, \fBpos_t\fP y, \fBword\fP size, \fBmask_t\fP mask)"
+
+.PP
+Definition at line 426 of file R2D\&.cpp\&.
+.PP
+.nf
+427         {
+428             for (int X = 0; X < 8; X++)
+429                 for (int Y = 0; Y < 4; Y++)
+430                     if ((mask >> (31 - (7 - X) - Y * 8)) & 0x1)
+431                         setPixelAligned(window, x + X * size, y + Y * size, size);
+432         }
+.fi
+.PP
+References setPixelAligned()\&.
+.PP
+Referenced by RectPixelMaskAligned()\&.
+.SS "void BBP::std::R2D::setCursorPos (\fBwindow\fP * window, \fBpos_t\fP x, \fBpos_t\fP y)"
+
+.PP
+Definition at line 569 of file R2D\&.cpp\&.
+.PP
+.nf
+570         {
+571             window->cursorPosX = x;
+572             window->cursorPosY = y;
+573             window->coloumn = 0;
+574             window->line = 0;
+575         }
+.fi
+.PP
+References BBP::std::window::coloumn, BBP::std::window::cursorPosX, BBP::std::window::cursorPosY, and BBP::std::window::line\&.
+.SS "void BBP::std::R2D::setPixel (\fBwindow\fP * window, \fBpos_t\fP x, \fBpos_t\fP y)\fC [inline]\fP"
+
+.PP
+Definition at line 457 of file R2D\&.cpp\&.
+.PP
+.nf
+458         {
+459             window->backBuffer\&.data[window->width * y + x] = window->Stroke\&.RGBA;
+460         }
+.fi
+.PP
+References BBP::std::window::backBuffer, BBP::std::PAGE< T >::data, BBP::std::colour::RGBA, BBP::std::window::Stroke, and BBP::std::window::width\&.
+.PP
+Referenced by Line(), PixelMask(), and RectPixelMask()\&.
+.SS "void BBP::std::R2D::setPixel (\fBwindow\fP * window, \fBpos_t\fP x, \fBpos_t\fP y, \fBword\fP size)\fC [inline]\fP"
+
+.PP
+Definition at line 462 of file R2D\&.cpp\&.
+.PP
+.nf
+463         {
+464             R2D::Box(window, x, y, size, size);
+465         }
+.fi
+.PP
+References Box()\&.
+.SS "void BBP::std::R2D::setPixelAligned (\fBwindow\fP * window, \fBpos_t\fP x, \fBpos_t\fP y, \fBword\fP size)\fC [inline]\fP"
+
+.PP
+Definition at line 467 of file R2D\&.cpp\&.
+.PP
+.nf
+468         {
+469             R2D::Box(window, x * size, y * size, size, size);
+470         }
+.fi
+.PP
+References Box()\&.
+.PP
+Referenced by PixelMaskAligned(), and RectPixelMaskAligned()\&.
+.SS "void BBP::std::R2D::stroke (\fBwindow\fP * window, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b)"
+
+.PP
+Definition at line 57 of file R2D\&.cpp\&.
+.PP
+.nf
+58         {
+59             window->Stroke\&.R = r;
+60             window->Stroke\&.G = g;
+61             window->Stroke\&.B = b;
+62             window->Stroke\&.RGBA = convertUCHARtoINT(r, g, b, window->Stroke\&.A);
+63         }
+.fi
+.PP
+References BBP::std::colour::A, BBP::std::colour::B, convertUCHARtoINT(), BBP::std::colour::G, BBP::std::colour::R, BBP::std::colour::RGBA, and BBP::std::window::Stroke\&.
+.SS "void BBP::std::R2D::stroke (\fBwindow\fP * window, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b, \fBchan_t\fP a)"
+
+.PP
+Definition at line 64 of file R2D\&.cpp\&.
+.PP
+.nf
+65         {
+66             window->Stroke\&.R = r;
+67             window->Stroke\&.G = g;
+68             window->Stroke\&.B = b;
+69             window->Stroke\&.A = a;
+70             window->Stroke\&.RGBA = convertUCHARtoINT(r, g, b, a);
+71         }
+.fi
+.PP
+References BBP::std::colour::A, BBP::Locale::Japanese::a, BBP::std::colour::B, convertUCHARtoINT(), BBP::std::colour::G, BBP::std::colour::R, BBP::std::colour::RGBA, and BBP::std::window::Stroke\&.
+.SS "void BBP::std::R2D::stroke (\fBwindow\fP * window, \fBRGBA_t\fP rgb)"
+
+.PP
+Definition at line 72 of file R2D\&.cpp\&.
+.PP
+.nf
+73         {
+74             window->Stroke\&.RGBA = rgb;
+75             convertINTtoUCHAR(&(window->Stroke\&.R), &(window->Stroke\&.G), &(window->Stroke\&.B), rgb);
+76         }
+.fi
+.PP
+References BBP::std::colour::B, convertINTtoUCHAR(), BBP::std::colour::G, BBP::std::colour::R, BBP::std::colour::RGBA, and BBP::std::window::Stroke\&.
+.SS "void BBP::std::R2D::stroke (\fBwindow\fP * window, \fBRGBA_t\fP rgb, \fBchan_t\fP a)"
+
+.PP
+Definition at line 77 of file R2D\&.cpp\&.
+.PP
+.nf
+78         {
+79             convertINTtoUCHAR(&(window->Stroke\&.R), &(window->Stroke\&.G), &(window->Stroke\&.B), rgb);
+80             window->Stroke\&.A = a;
+81             window->Stroke\&.RGBA = convertUCHARtoINT(window->Stroke\&.R, window->Stroke\&.G, window->Stroke\&.B, a);
+82         }
+.fi
+.PP
+References BBP::std::colour::A, BBP::Locale::Japanese::a, BBP::std::colour::B, convertINTtoUCHAR(), convertUCHARtoINT(), BBP::std::colour::G, BBP::std::colour::R, BBP::std::colour::RGBA, and BBP::std::window::Stroke\&.
+.SS "void BBP::std::R2D::strokeWeight (\fBwindow\fP * window, \fBword\fP weight)"
+
+.PP
+Definition at line 89 of file R2D\&.cpp\&.
+.PP
+.nf
+90         {
+91             window->strokeWeight = weight;
+92         }
+.fi
+.PP
+References BBP::std::window::strokeWeight\&.
+.SS "void BBP::std::R2D::Vrule (\fBwindow\fP * window, \fBpos_t\fP y1, \fBpos_t\fP y2, \fBpos_t\fP x)"
+
+.PP
+Definition at line 251 of file R2D\&.cpp\&.
+.PP
+.nf
+252         {
+253             RGBA_t colour = R2D::convertUCHARtoINT(window->Stroke\&.R, window->Stroke\&.G, window->Stroke\&.B, window->Stroke\&.A);
+254             for (std::index_t i = y1; i < y2; i++)
+255                 window->backBuffer\&.data[x + window->width * i] = colour;
+256         }
+.fi
+.PP
+References BBP::std::colour::A, BBP::std::colour::B, BBP::std::window::backBuffer, convertUCHARtoINT(), BBP::std::PAGE< T >::data, BBP::std::colour::G, BBP::Locale::Japanese::i, BBP::std::colour::R, BBP::std::window::Stroke, and BBP::std::window::width\&.
+.PP
+Referenced by Frame()\&.
+.SS "void BBP::std::R2D::Vrule (\fBwindow\fP * window, \fBpos_t\fP y1, \fBpos_t\fP y2, \fBpos_t\fP x, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b)"
+
+.PP
+Definition at line 265 of file R2D\&.cpp\&.
+.PP
+.nf
+266         {
+267             RGBA_t colour = R2D::convertUCHARtoINT(r, g, b, 255);
+268             for (std::index_t i = y1; i < y2; i++)
+269                 window->backBuffer\&.data[x + window->width * i] = colour;
+270         }
+.fi
+.PP
+References BBP::std::window::backBuffer, convertUCHARtoINT(), BBP::std::PAGE< T >::data, BBP::Locale::Japanese::i, and BBP::std::window::width\&.
+.SS "void BBP::std::R2D::Vrule (\fBwindow\fP * window, \fBpos_t\fP y1, \fBpos_t\fP y2, \fBpos_t\fP x, \fBRGBA_t\fP rgb)"
+
+.PP
+Definition at line 278 of file R2D\&.cpp\&.
+.PP
+.nf
+279         {
+280             for (std::index_t i = y1; i < y2; i++)
+281                 window->backBuffer\&.data[x + window->width * i] = rgb;
+282         }
+.fi
+.PP
+References BBP::std::window::backBuffer, BBP::std::PAGE< T >::data, BBP::Locale::Japanese::i, and BBP::std::window::width\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

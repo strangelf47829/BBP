@@ -1,0 +1,47 @@
+.TH "ELSA.h" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ELSA.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Lex\&.h'\fP
+.br
+\fC#include 'ELSABackend\&.h'\fP
+.br
+\fC#include 'Instructions\&.h'\fP
+.br
+\fC#include 'Opcodes\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "class \fBBBP::esa::esaProcessor\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBBBP\fP"
+.br
+.ti -1c
+.RI " \fBBBP::esa\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBBBP::esa::ELSA_TYPE\fP : uint32_t { \fBBBP::esa::UNKOWN_T\fP, \fBBBP::esa::SYMBOL_T\fP, \fBBBP::esa::PROCEDURE_T\fP, \fBBBP::esa::INSTRUCTION_T\fP }"
+.br
+.ti -1c
+.RI "enum \fBBBP::esa::SYMBOL_TYPE\fP : uint32_t { \fBBBP::esa::SYMTACC_VIRTUAL\fP = 0b1, \fBBBP::esa::SYMTACC_STATIC\fP = SYMTACC_VIRTUAL << 1, \fBBBP::esa::SYMTMOD_EXTERN\fP = SYMTACC_STATIC << 1, \fBBBP::esa::SYMTMOD_CONST\fP = SYMTMOD_EXTERN << 1, \fBBBP::esa::SYMTMOD_STATIC\fP = SYMTMOD_CONST << 1, \fBBBP::esa::SYMTSZ_NIL\fP = SYMTMOD_STATIC << 1, \fBBBP::esa::SYMTSZ_DN\fP = SYMTSZ_NIL << 1, \fBBBP::esa::SYMTSZ_DB\fP = SYMTSZ_DN << 1, \fBBBP::esa::SYMTSZ_DH\fP = SYMTSZ_DB << 1, \fBBBP::esa::SYMTSZ_DI\fP = SYMTSZ_DH << 1, \fBBBP::esa::SYMTSZ_DA\fP = SYMTSZ_DI << 1, \fBBBP::esa::SYMTSZ_DW\fP = SYMTSZ_DA << 1 }"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

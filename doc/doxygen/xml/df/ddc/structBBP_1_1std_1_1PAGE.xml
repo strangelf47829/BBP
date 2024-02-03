@@ -1,0 +1,610 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="df/ddc/structBBP_1_1std_1_1PAGE" kind="struct" language="C++" prot="public">
+    <compoundname>BBP::std::PAGE</compoundname>
+    <derivedcompoundref refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE" prot="public" virt="virtual">BBP::std::STATIC_PAGE&lt; T, K &gt;</derivedcompoundref>
+    <includes refid="de/d5c/Memory_8h" local="no">Memory.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="df/ddc/structBBP_1_1std_1_1PAGE_1a3b5c962d781f42d8dc36949061c308ab" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">size_t</ref></type>
+        <definition>size_t BBP::std::PAGE&lt; T &gt;::dataSize</definition>
+        <argsstring></argsstring>
+        <name>dataSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Memory.h" line="35" column="8" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Memory.h" bodystart="35" bodyend="-1"/>
+        <referencedby refid="df/d72/namespaceBBP_1_1esa_1a54588e10bc829ad5d640e64e1356d3ce" compoundref="da/d4c/Actions_8cpp" startline="570" endline="885">BBP::esa::TOKEN</referencedby>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a6356368fbf1217095c3ed89086288606" compoundref="d6/d3f/Backend_8cpp" startline="92" endline="210">BBP::esa::esaProcessor::buildSymbol</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a9be7c78361492e5f615263fac98a6fe8" compoundref="d9/d1d/ELFHeader_8cpp" startline="42" endline="218">BBP::std::ELF::ELFBuilder::ELFBuilder</referencedby>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1aed2f4d7f4f3f2df0d78efbe0e0a6b18a" compoundref="d4/d83/Frontend_8cpp" startline="506" endline="545">BBP::esa::esaProcessor::addReservedIdentifier</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1aec7ebe885d0c8a1b5bf5b98b4d08a4ef" compoundref="de/db8/R2D_8cpp" startline="167" endline="217">BBP::std::R2D::GetFontFromFile</referencedby>
+        <referencedby refid="d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder_1a5db7526e463f6505a4e2ce93f005ced0" compoundref="d6/d8a/SectionBuilder_8cpp" startline="3" endline="35">BBP::std::ELF::SectionBuilder::Append</referencedby>
+        <referencedby refid="d9/d6f/namespaceBBP_1ac0a46562b554fd736c409bf2c645c9ba" compoundref="df/d6c/Shell_8cpp" startline="18" endline="93">BBP::shell</referencedby>
+        <referencedby refid="de/d21/classBBP_1_1std_1_1Stack_1a4b4f719f8f4c0c213a11fc81bf2d929a" compoundref="db/d61/Stack_8hxx" startline="125" endline="148">BBP::std::Stack&lt; BBP::std::DIRECTORY &gt;::Extend</referencedby>
+        <referencedby refid="db/db7/Start_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="db/db7/Start_8cpp" startline="22" endline="138">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="df/ddc/structBBP_1_1std_1_1PAGE_1a34a405792bd6c28ec010833acc6ee2f2" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">size_t</ref></type>
+        <definition>size_t BBP::std::PAGE&lt; T &gt;::bytes</definition>
+        <argsstring></argsstring>
+        <name>bytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Memory.h" line="36" column="8" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Memory.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="d8/da2/structBBP_1_1userspace_1_1register__t_1a829a6ca1c1ed5c99d3e3d42e14f29764" compoundref="d9/de4/Registers_8cpp" startline="107" endline="129">BBP::userspace::register_t::register_t</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="df/ddc/structBBP_1_1std_1_1PAGE_1ae3ed5c6be788a903036a151ac69cd2d9" prot="public" static="no" mutable="no">
+        <type><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">PAGE</ref>&lt; T &gt; *</type>
+        <definition>PAGE&lt;T&gt;* BBP::std::PAGE&lt; T &gt;::prevPage</definition>
+        <argsstring></argsstring>
+        <name>prevPage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Memory.h" line="38" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Memory.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a2eea354e4d1578fe320884a693aaaea6" compoundref="de/d02/BinaryExecutables_8cpp" startline="4" endline="88">BBP::userspace::BinaryExecutable::loadExecutable</referencedby>
+        <referencedby refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a28be13bcd4204fcd3f95601b6c82a51b" compoundref="de/d02/BinaryExecutables_8cpp" startline="254" endline="263">BBP::userspace::BinaryExecutable::loadTLS</referencedby>
+        <referencedby refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a8e2d0b0de64b559b165176370cb37ec0" compoundref="de/d02/BinaryExecutables_8cpp" startline="266" endline="275">BBP::userspace::BinaryExecutable::unloadTLS</referencedby>
+        <referencedby refid="de/d21/classBBP_1_1std_1_1Stack_1a4b4f719f8f4c0c213a11fc81bf2d929a" compoundref="db/d61/Stack_8hxx" startline="125" endline="148">BBP::std::Stack&lt; BBP::std::DIRECTORY &gt;::Extend</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="df/ddc/structBBP_1_1std_1_1PAGE_1a8d21ebf8bb4b9485b67e17698ff1f890" prot="public" static="no" mutable="no">
+        <type><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">PAGE</ref>&lt; T &gt; *</type>
+        <definition>PAGE&lt;T&gt;* BBP::std::PAGE&lt; T &gt;::nextPage</definition>
+        <argsstring></argsstring>
+        <name>nextPage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Memory.h" line="39" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Memory.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a2eea354e4d1578fe320884a693aaaea6" compoundref="de/d02/BinaryExecutables_8cpp" startline="4" endline="88">BBP::userspace::BinaryExecutable::loadExecutable</referencedby>
+        <referencedby refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a28be13bcd4204fcd3f95601b6c82a51b" compoundref="de/d02/BinaryExecutables_8cpp" startline="254" endline="263">BBP::userspace::BinaryExecutable::loadTLS</referencedby>
+        <referencedby refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable_1a8e2d0b0de64b559b165176370cb37ec0" compoundref="de/d02/BinaryExecutables_8cpp" startline="266" endline="275">BBP::userspace::BinaryExecutable::unloadTLS</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a0e05c3b97f4227c9924841c5e170ae82" compoundref="d9/d1d/ELFHeader_8cpp" startline="222" endline="266">BBP::std::ELF::ELFBuilder::close</referencedby>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1ae01ddb10fbfd377916502391ab3aa362" compoundref="d6/d69/Processor_8cpp" startline="175" endline="220">BBP::esa::esaProcessor::trim</referencedby>
+        <referencedby refid="de/d21/classBBP_1_1std_1_1Stack_1a4b4f719f8f4c0c213a11fc81bf2d929a" compoundref="db/d61/Stack_8hxx" startline="125" endline="148">BBP::std::Stack&lt; BBP::std::DIRECTORY &gt;::Extend</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="df/ddc/structBBP_1_1std_1_1PAGE_1a1ce02e31f319282c829fa96e887df0d8" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae05c88ad8c36bd02dd1fd949e8b5cab2" kindref="member">mem_t</ref> *</type>
+        <definition>mem_t* BBP::std::PAGE&lt; T &gt;::raw</definition>
+        <argsstring></argsstring>
+        <name>raw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Memory.h" line="42" column="7" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Memory.h" bodystart="42" bodyend="-1"/>
+        <referencedby refid="d9/d6f/namespaceBBP_1ac0a46562b554fd736c409bf2c645c9ba" compoundref="df/d6c/Shell_8cpp" startline="18" endline="93">BBP::shell</referencedby>
+        <referencedby refid="db/db7/Start_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="db/db7/Start_8cpp" startline="22" endline="138">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" prot="public" static="no" mutable="no">
+        <type>T *</type>
+        <definition>T* BBP::std::PAGE&lt; T &gt;::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Memory.h" line="43" column="3" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Memory.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="df/d72/namespaceBBP_1_1esa_1a54588e10bc829ad5d640e64e1356d3ce" compoundref="da/d4c/Actions_8cpp" startline="570" endline="885">BBP::esa::TOKEN</referencedby>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1af184289074f27f191666564995b2c6d8" compoundref="de/dec/Auxiliary_8cpp" startline="242" endline="343">BBP::esa::esaProcessor::includeFile</referencedby>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1ada73c0b220f39b769e10d29bdd45ce39" compoundref="d6/d3f/Backend_8cpp" startline="7" endline="12">BBP::esa::esaProcessor::saveIdentifier</referencedby>
+        <referencedby refid="d9/d6f/namespaceBBP_1acdc8259ae9919d6dad925d6ead142a50" compoundref="d7/d40/badapple_8cpp" startline="33" endline="70">BBP::badapple_main</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a9be7c78361492e5f615263fac98a6fe8" compoundref="d9/d1d/ELFHeader_8cpp" startline="42" endline="218">BBP::std::ELF::ELFBuilder::ELFBuilder</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a0e05c3b97f4227c9924841c5e170ae82" compoundref="d9/d1d/ELFHeader_8cpp" startline="222" endline="266">BBP::std::ELF::ELFBuilder::close</referencedby>
+        <referencedby refid="dc/dc2/ELFHeaderGettersSetters_8cpp_1a30c9bdfc3c40be8b6fd32ff1fe987970" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="3" endline="6">readByte</referencedby>
+        <referencedby refid="dc/dc2/ELFHeaderGettersSetters_8cpp_1a789c9ae67fcdb3a6f5454f8d99ca6b0b" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="7" endline="10">writeByte</referencedby>
+        <referencedby refid="dc/dc2/ELFHeaderGettersSetters_8cpp_1a62c709dfb84d60f5f9043c4f1a417079" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="11" endline="19">readHalfWord</referencedby>
+        <referencedby refid="dc/dc2/ELFHeaderGettersSetters_8cpp_1acbe729fa579c7b45c89ccca710affab7" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="20" endline="35">writeHalfWord</referencedby>
+        <referencedby refid="dc/dc2/ELFHeaderGettersSetters_8cpp_1aa966c175861f53f0da77aef07282ab12" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="36" endline="46">readWord</referencedby>
+        <referencedby refid="dc/dc2/ELFHeaderGettersSetters_8cpp_1a662f29a4070b37792137073a799f1775" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="47" endline="68">writeWord</referencedby>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1aafa51bc36e198e57ac71a6d97d1f07dd" compoundref="d0/d00/FileSys_8h" startline="262" endline="280">BBP::std::fprintf</referencedby>
+        <referencedby refid="d9/db7/namespaceBBP_1_1std_1_1Driver_1affc18526448cf9c01bfb96ffd83aed81" compoundref="df/d3f/Graphics_8cpp" startline="13" endline="47">BBP::std::Driver::initializeGraphics</referencedby>
+        <referencedby refid="d9/db7/namespaceBBP_1_1std_1_1Driver_1af890afe53347748ccc3240bab4225a98" compoundref="df/d3f/Graphics_8cpp" startline="49" endline="72">BBP::std::Driver::drawWindow</referencedby>
+        <referencedby refid="d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_1a4680b8ff161430dbdab858d709b24a25" compoundref="d2/d15/Lexer_8cpp" startline="815" endline="881">BBP::std::Lexer::lex_context::Log</referencedby>
+        <referencedby refid="d8/dea/classBBP_1_1std_1_1PATH_1a80a557105fdce73fd255af94f5c33e1d" compoundref="d5/dbb/Path_8cpp" startline="126" endline="177">BBP::std::PATH::makeAbsolutePath</referencedby>
+        <referencedby refid="d8/dea/classBBP_1_1std_1_1PATH_1a634c986ae803f84b7796a7802cc995b3" compoundref="d5/dbb/Path_8cpp" startline="179" endline="250">BBP::std::PATH::resolveAbsolutes</referencedby>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1ae01ddb10fbfd377916502391ab3aa362" compoundref="d6/d69/Processor_8cpp" startline="175" endline="220">BBP::esa::esaProcessor::trim</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1abd452b23f01af75984864049dd13670b" compoundref="de/db8/R2D_8cpp" startline="130" endline="157">BBP::std::R2D::newWindow</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1aec7ebe885d0c8a1b5bf5b98b4d08a4ef" compoundref="de/db8/R2D_8cpp" startline="167" endline="217">BBP::std::R2D::GetFontFromFile</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a2643b9e013a1bc6c016bb960a1cca9c4" compoundref="de/db8/R2D_8cpp" startline="226" endline="231">BBP::std::R2D::background</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acc6674c3e336f1e429b0bc23f9955ca6" compoundref="de/db8/R2D_8cpp" startline="244" endline="249">BBP::std::R2D::Hrule</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a3f3e793215cc7ab1073d7169dd042c9c" compoundref="de/db8/R2D_8cpp" startline="251" endline="256">BBP::std::R2D::Vrule</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1aaa5e3978968fc3b485e6425d0a0f6f41" compoundref="de/db8/R2D_8cpp" startline="452" endline="455">BBP::std::R2D::readPixel</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acc11e125c7028e2c4834c7577a853818" compoundref="de/db8/R2D_8cpp" startline="457" endline="460">BBP::std::R2D::setPixel</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1aa40574bb9ba2fcd8a63d1a0438d78aa3" compoundref="de/db8/R2D_8cpp" startline="512" endline="516">BBP::std::R2D::PrintCharacterAt</referencedby>
+        <referencedby refid="de/dfe/namespaceBBP_1_1userspace_1a9122f01317e629b0ae11a837667f1224" compoundref="d9/de4/Registers_8cpp" startline="7" endline="74">BBP::userspace::setRegister</referencedby>
+        <referencedby refid="d9/d6f/namespaceBBP_1ac0a46562b554fd736c409bf2c645c9ba" compoundref="df/d6c/Shell_8cpp" startline="18" endline="93">BBP::shell</referencedby>
+        <referencedby refid="de/d21/classBBP_1_1std_1_1Stack_1a4b4f719f8f4c0c213a11fc81bf2d929a" compoundref="db/d61/Stack_8hxx" startline="125" endline="148">BBP::std::Stack&lt; BBP::std::DIRECTORY &gt;::Extend</referencedby>
+        <referencedby refid="db/db7/Start_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="db/db7/Start_8cpp" startline="22" endline="138">main</referencedby>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1a0732a2d69fc0a894ca5e9b017c6fe01e" compoundref="de/d6d/Strings_8cpp" startline="125" endline="147">BBP::std::strcmp</referencedby>
+        <referencedby refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1a1b80807f61133aed0d6cad53f74330c7" compoundref="d8/df1/ThreadState_8cpp" startline="33" endline="47">BBP::userspace::HyperVisor::destroyThread</referencedby>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" compoundref="d0/d6f/EMULATOR_2tterm_8cpp" startline="11" endline="27">BBP::std::printf</referencedby>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1a6a109a05fa6ce27ce54f04a3d7f699d3" compoundref="d0/d6f/EMULATOR_2tterm_8cpp" startline="29" endline="45">BBP::std::putf</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="df/ddc/structBBP_1_1std_1_1PAGE_1a4d8d38013243d5b6ed71bae9cf46b272" prot="public" static="no" mutable="no">
+        <type>union BBP::std::PAGE::@0</type>
+        <definition>union BBP::std::PAGE::@0 BBP::std::PAGE&lt; T &gt;::@1</definition>
+        <argsstring></argsstring>
+        <name>@1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Memory.h" line="44" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="df/ddc/structBBP_1_1std_1_1PAGE_1af9a5521fb19a11cc4a8508affedee6aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BBP::std::PAGE&lt; T &gt;::PAGE</definition>
+        <argsstring>(size_t Size, T *dat)</argsstring>
+        <name>PAGE</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">size_t</ref></type>
+          <declname>Size</declname>
+        </param>
+        <param>
+          <type>T *</type>
+          <declname>dat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Memory.h" line="46" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Memory.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="df/ddc/structBBP_1_1std_1_1PAGE_1a441f2061f6374798411cbc677508cdd0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BBP::std::PAGE&lt; T &gt;::PAGE</definition>
+        <argsstring>()</argsstring>
+        <name>PAGE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Memory.h" line="47" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Memory.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="20">
+        <label>BBP::std::STATIC_PAGE&lt; BBP::userspace::MemoryRegion, 8 &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="2" relation="template-instance">
+          <edgelabel>&lt; BBP::userspace::MemoryRegion, 8 &gt;</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>BBP::std::STATIC_PAGE&lt; std::byte, registerCount *4 &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="2" relation="template-instance">
+          <edgelabel>&lt; std::byte, registerCount *4 &gt;</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>BBP::std::STATIC_PAGE&lt; std::Lexer::lex_keywordhandle, 32 &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="2" relation="template-instance">
+          <edgelabel>&lt; std::Lexer::lex_keywordhandle, 32 &gt;</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BBP::std::STATIC_PAGE&lt; 128 &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="2" relation="template-instance">
+          <edgelabel>&lt; 128 &gt;</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>BBP::std::STATIC_PAGE&lt; std::index_t, 128 &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="2" relation="template-instance">
+          <edgelabel>&lt; std::index_t, 128 &gt;</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>BBP::std::STATIC_PAGE&lt; BBP::userspace::Thread, threadCount &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="2" relation="template-instance">
+          <edgelabel>&lt; BBP::userspace::Thread, threadCount &gt;</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>BBP::std::PAGE&lt; K &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; K &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>BBP::std::STATIC_PAGE&lt; std::word, generalStackSize &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="2" relation="template-instance">
+          <edgelabel>&lt; std::word, generalStackSize &gt;</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>BBP::std::PAGE&lt; BBP::userspace::MemoryRegion &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; BBP::userspace::MemoryRegion &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="28">
+        <label>BBP::std::PAGE&lt; BBP::std::Lexer::lex_keyword &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; BBP::std::Lexer::lex_keyword &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>BBP::std::STATIC_PAGE&lt; BBP::userspace::Instruction::Arg, 256 &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="2" relation="template-instance">
+          <edgelabel>&lt; BBP::userspace::Instruction::Arg, 256 &gt;</edgelabel>
+        </childnode>
+        <childnode refid="46" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>BBP::std::STATIC_PAGE&lt; std::hash_t, 256 &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="2" relation="template-instance">
+          <edgelabel>&lt; std::hash_t, 256 &gt;</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>BBP::std::PAGE&lt; std::Lexer::lex_keywordhandle &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; std::Lexer::lex_keywordhandle &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="32">
+        <label>BBP::std::PAGE&lt; std::string_element &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; std::string_element &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="39">
+        <label>BBP::std::PAGE&lt; std::byte &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; std::byte &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="46">
+        <label>BBP::std::PAGE&lt; BBP::userspace::Instruction::Arg &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; BBP::userspace::Instruction::Arg &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="45">
+        <label>BBP::std::PAGE&lt; RGBA_t &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; RGBA_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="40">
+        <label>BBP::std::PAGE&lt; BBP::std::ELF::SectionBuilder &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; BBP::std::ELF::SectionBuilder &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="34">
+        <label>BBP::std::PAGE&lt; string_element &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; string_element &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>BBP::std::STATIC_PAGE&lt; std::word, 256 &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="2" relation="template-instance">
+          <edgelabel>&lt; std::word, 256 &gt;</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>BBP::std::STATIC_PAGE&lt; 1024 &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="2" relation="template-instance">
+          <edgelabel>&lt; 1024 &gt;</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>BBP::std::STATIC_PAGE&lt; std::word, argumentStackSize &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="2" relation="template-instance">
+          <edgelabel>&lt; std::word, argumentStackSize &gt;</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>BBP::std::STATIC_PAGE&lt; std::index_t, 32 &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="2" relation="template-instance">
+          <edgelabel>&lt; std::index_t, 32 &gt;</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>BBP::std::STATIC_PAGE&lt; void *, max_allocations &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="2" relation="template-instance">
+          <edgelabel>&lt; void *, max_allocations &gt;</edgelabel>
+        </childnode>
+        <childnode refid="38" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>BBP::std::PAGE&lt; BBP::std::DIRECTORY &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; BBP::std::DIRECTORY &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="31">
+        <label>BBP::std::PAGE&lt; max_path_length &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; max_path_length &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="33">
+        <label>BBP::std::PAGE&lt; std::halfword &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; std::halfword &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>BBP::std::STATIC_PAGE&lt; std::string_element, 100 &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="2" relation="template-instance">
+          <edgelabel>&lt; std::string_element, 100 &gt;</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>BBP::std::PAGE&lt; BBP::std::FILE &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; BBP::std::FILE &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>BBP::std::STATIC_PAGE&lt; std::byte, 512 &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="2" relation="template-instance">
+          <edgelabel>&lt; std::byte, 512 &gt;</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>BBP::std::PAGE&lt; mask_t &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; mask_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="37">
+        <label>BBP::std::PAGE&lt; BBP::std::AbstractGCEntry * &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; BBP::std::AbstractGCEntry * &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BBP::std::STATIC_PAGE&lt; T &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>BBP::std::PAGE&lt; BBP::std::ELF::SymbolBuilder &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; BBP::std::ELF::SymbolBuilder &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>BBP::std::PAGE&lt; 1024 &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; 1024 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="25">
+        <label>BBP::std::PAGE&lt; 128 &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; 128 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="42">
+        <label>BBP::std::PAGE&lt; std::hash_t &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; std::hash_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="29">
+        <label>BBP::std::PAGE&lt; BBP::userspace::Thread &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; BBP::userspace::Thread &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>BBP::std::STATIC_PAGE&lt; BBP::std::Lexer::lex_keyword, 256 &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="2" relation="template-instance">
+          <edgelabel>&lt; BBP::std::Lexer::lex_keyword, 256 &gt;</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>BBP::std::PAGE&lt; void * &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; void * &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="22">
+        <label>BBP::std::PAGE&lt; std::index_t &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; std::index_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>BBP::std::PAGE&lt; T &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+      </node>
+      <node id="36">
+        <label>BBP::std::PAGE&lt; BBP::std::ELF::SegmentBuilder &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; BBP::std::ELF::SegmentBuilder &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>BBP::std::STATIC_PAGE&lt; BBP::std::AbstractGCEntry *, max_objects &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="2" relation="template-instance">
+          <edgelabel>&lt; BBP::std::AbstractGCEntry *, max_objects &gt;</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>BBP::std::STATIC_PAGE&lt; max_path_length &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="2" relation="template-instance">
+          <edgelabel>&lt; max_path_length &gt;</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>BBP::std::PAGE&lt; std::word &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; std::word &gt;</edgelabel>
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>T</label>
+      </node>
+      <node id="4">
+        <label>word</label>
+      </node>
+      <node id="6">
+        <label>mem_t *</label>
+      </node>
+      <node id="3">
+        <label>PAGE&lt; T &gt; *</label>
+      </node>
+      <node id="2">
+        <label>anonymous:+@1</label>
+      </node>
+      <node id="1">
+        <label>BBP::std::PAGE&lt; T &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Memory.h" line="34" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Memory.h" bodystart="33" bodyend="50"/>
+    <listofallmembers>
+      <member refid="df/ddc/structBBP_1_1std_1_1PAGE_1a34a405792bd6c28ec010833acc6ee2f2" prot="public" virt="non-virtual"><scope>BBP::std::PAGE</scope><name>bytes</name></member>
+      <member refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" prot="public" virt="non-virtual"><scope>BBP::std::PAGE</scope><name>data</name></member>
+      <member refid="df/ddc/structBBP_1_1std_1_1PAGE_1a3b5c962d781f42d8dc36949061c308ab" prot="public" virt="non-virtual"><scope>BBP::std::PAGE</scope><name>dataSize</name></member>
+      <member refid="df/ddc/structBBP_1_1std_1_1PAGE_1a8d21ebf8bb4b9485b67e17698ff1f890" prot="public" virt="non-virtual"><scope>BBP::std::PAGE</scope><name>nextPage</name></member>
+      <member refid="df/ddc/structBBP_1_1std_1_1PAGE_1af9a5521fb19a11cc4a8508affedee6aa" prot="public" virt="non-virtual"><scope>BBP::std::PAGE</scope><name>PAGE</name></member>
+      <member refid="df/ddc/structBBP_1_1std_1_1PAGE_1a441f2061f6374798411cbc677508cdd0" prot="public" virt="non-virtual"><scope>BBP::std::PAGE</scope><name>PAGE</name></member>
+      <member refid="df/ddc/structBBP_1_1std_1_1PAGE_1ae3ed5c6be788a903036a151ac69cd2d9" prot="public" virt="non-virtual"><scope>BBP::std::PAGE</scope><name>prevPage</name></member>
+      <member refid="df/ddc/structBBP_1_1std_1_1PAGE_1a1ce02e31f319282c829fa96e887df0d8" prot="public" virt="non-virtual"><scope>BBP::std::PAGE</scope><name>raw</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

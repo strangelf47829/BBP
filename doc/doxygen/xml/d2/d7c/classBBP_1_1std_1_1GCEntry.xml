@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d2/d7c/classBBP_1_1std_1_1GCEntry" kind="class" language="C++" prot="public">
+    <compoundname>BBP::std::GCEntry</compoundname>
+    <basecompoundref refid="d7/def/structBBP_1_1std_1_1AbstractGCEntry" prot="public" virt="non-virtual">BBP::std::AbstractGCEntry</basecompoundref>
+    <includes refid="d0/d33/Resources_8h" local="no">Resources.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d2/d7c/classBBP_1_1std_1_1GCEntry_1a1d1a334b5861c06c63cb2a2db1a4e8e6" prot="public" static="no" mutable="no">
+        <type>T *</type>
+        <definition>T* BBP::std::GCEntry&lt; T &gt;::ptr</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Resources.h" line="32" column="3" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Resources.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="d2/d7c/classBBP_1_1std_1_1GCEntry_1af80c9897951e6229f91ae2554c264fb8" compoundref="d0/d33/Resources_8h" startline="36" endline="39">BBP::std::GCEntry&lt; T &gt;::markDeleted</referencedby>
+        <referencedby refid="d2/d7c/classBBP_1_1std_1_1GCEntry_1afa6c2ef133c16df72eb3e05fa7908151" compoundref="d0/d33/Resources_8h" startline="40" endline="43">BBP::std::GCEntry&lt; T &gt;::_delete</referencedby>
+        <referencedby refid="d2/d7c/classBBP_1_1std_1_1GCEntry_1a4db27cb70a72b3d7e3e776f087ba55c4" compoundref="d0/d33/Resources_8h" startline="44" endline="47">BBP::std::GCEntry&lt; T &gt;::getRawPtr</referencedby>
+        <referencedby refid="d6/d73/classBBP_1_1std_1_1ResourceManager_1aea4091636b0010fa96b46859b119c515" compoundref="d0/d33/Resources_8h" startline="62" endline="81">BBP::std::ResourceManager::add_object</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d2/d7c/classBBP_1_1std_1_1GCEntry_1a097311bf0c5aba62e8b59697b2f511ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual BBP::std::GCEntry&lt; T &gt;::~GCEntry</definition>
+        <argsstring>()</argsstring>
+        <name>~GCEntry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Resources.h" line="33" column="9" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Resources.h" bodystart="33" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/d7c/classBBP_1_1std_1_1GCEntry_1af80c9897951e6229f91ae2554c264fb8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void BBP::std::GCEntry&lt; T &gt;::markDeleted</definition>
+        <argsstring>()</argsstring>
+        <name>markDeleted</name>
+        <reimplements refid="d7/def/structBBP_1_1std_1_1AbstractGCEntry_1ab803afdfbfe3e26ce6a2c381cf6091d5">markDeleted</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Resources.h" line="36" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Resources.h" bodystart="36" bodyend="39"/>
+        <references refid="d2/d7c/classBBP_1_1std_1_1GCEntry_1a1d1a334b5861c06c63cb2a2db1a4e8e6" compoundref="d0/d33/Resources_8h" startline="32">BBP::std::GCEntry&lt; T &gt;::ptr</references>
+      </memberdef>
+      <memberdef kind="function" id="d2/d7c/classBBP_1_1std_1_1GCEntry_1afa6c2ef133c16df72eb3e05fa7908151" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void BBP::std::GCEntry&lt; T &gt;::_delete</definition>
+        <argsstring>()</argsstring>
+        <name>_delete</name>
+        <reimplements refid="d7/def/structBBP_1_1std_1_1AbstractGCEntry_1a35cbd7c3762260ba27df3634b310b77b">_delete</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Resources.h" line="40" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Resources.h" bodystart="40" bodyend="43"/>
+        <references refid="d2/d7c/classBBP_1_1std_1_1GCEntry_1a1d1a334b5861c06c63cb2a2db1a4e8e6" compoundref="d0/d33/Resources_8h" startline="32">BBP::std::GCEntry&lt; T &gt;::ptr</references>
+      </memberdef>
+      <memberdef kind="function" id="d2/d7c/classBBP_1_1std_1_1GCEntry_1a4db27cb70a72b3d7e3e776f087ba55c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void *</type>
+        <definition>void* BBP::std::GCEntry&lt; T &gt;::getRawPtr</definition>
+        <argsstring>()</argsstring>
+        <name>getRawPtr</name>
+        <reimplements refid="d7/def/structBBP_1_1std_1_1AbstractGCEntry_1a57b0dc53c6c4c8f9c691d13cf34a5721">getRawPtr</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Resources.h" line="44" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Resources.h" bodystart="44" bodyend="47"/>
+        <references refid="d2/d7c/classBBP_1_1std_1_1GCEntry_1a1d1a334b5861c06c63cb2a2db1a4e8e6" compoundref="d0/d33/Resources_8h" startline="32">BBP::std::GCEntry&lt; T &gt;::ptr</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BBP::std::AbstractGCEntry</label>
+        <link refid="d7/def/structBBP_1_1std_1_1AbstractGCEntry"/>
+      </node>
+      <node id="1">
+        <label>BBP::std::GCEntry&lt; T &gt;</label>
+        <link refid="d2/d7c/classBBP_1_1std_1_1GCEntry"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>BBP::std::AbstractGCEntry</label>
+        <link refid="d7/def/structBBP_1_1std_1_1AbstractGCEntry"/>
+      </node>
+      <node id="1">
+        <label>BBP::std::GCEntry&lt; T &gt;</label>
+        <link refid="d2/d7c/classBBP_1_1std_1_1GCEntry"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>T *</label>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Resources.h" line="30" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Resources.h" bodystart="29" bodyend="48"/>
+    <listofallmembers>
+      <member refid="d2/d7c/classBBP_1_1std_1_1GCEntry_1afa6c2ef133c16df72eb3e05fa7908151" prot="public" virt="virtual"><scope>BBP::std::GCEntry</scope><name>_delete</name></member>
+      <member refid="d2/d7c/classBBP_1_1std_1_1GCEntry_1a4db27cb70a72b3d7e3e776f087ba55c4" prot="public" virt="virtual"><scope>BBP::std::GCEntry</scope><name>getRawPtr</name></member>
+      <member refid="d2/d7c/classBBP_1_1std_1_1GCEntry_1af80c9897951e6229f91ae2554c264fb8" prot="public" virt="virtual"><scope>BBP::std::GCEntry</scope><name>markDeleted</name></member>
+      <member refid="d2/d7c/classBBP_1_1std_1_1GCEntry_1a1d1a334b5861c06c63cb2a2db1a4e8e6" prot="public" virt="non-virtual"><scope>BBP::std::GCEntry</scope><name>ptr</name></member>
+      <member refid="d7/def/structBBP_1_1std_1_1AbstractGCEntry_1aae987edc86de3193b2bd0f9266c09876" prot="public" virt="virtual"><scope>BBP::std::GCEntry</scope><name>~AbstractGCEntry</name></member>
+      <member refid="d2/d7c/classBBP_1_1std_1_1GCEntry_1a097311bf0c5aba62e8b59697b2f511ba" prot="public" virt="virtual"><scope>BBP::std::GCEntry</scope><name>~GCEntry</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

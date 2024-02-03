@@ -1,0 +1,142 @@
+\hypertarget{structBBP_1_1std_1_1ELF_1_1SymbolEntry}{}\doxysection{B\+BP\+::std\+::E\+LF\+::Symbol\+Entry Struct Reference}
+\label{structBBP_1_1std_1_1ELF_1_1SymbolEntry}\index{BBP::std::ELF::SymbolEntry@{BBP::std::ELF::SymbolEntry}}
+
+
+{\ttfamily \#include $<$E\+L\+F32.\+h$>$}
+
+
+
+Collaboration diagram for B\+BP\+::std\+::E\+LF\+::Symbol\+Entry\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d52/structBBP_1_1std_1_1ELF_1_1SymbolEntry__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_ae104641b17c021a901add93f7bc5d808}{std\+::word}} \mbox{\hyperlink{structBBP_1_1std_1_1ELF_1_1SymbolEntry_a2445f9e7fbff9ea1adc814ca45327030}{st\+\_\+name}} = 0
+\begin{DoxyCompactList}\small\item\em Name of the symbol (relative to string table (string table is a section!)) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std\+::address\+\_\+t}} \mbox{\hyperlink{structBBP_1_1std_1_1ELF_1_1SymbolEntry_a4367bb091bdd4306f1d8e597c2931856}{st\+\_\+value}} = 0
+\begin{DoxyCompactList}\small\item\em Value of symbol (So for example where \textquotesingle{}main\textquotesingle{} starts) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_ae104641b17c021a901add93f7bc5d808}{std\+::word}} \mbox{\hyperlink{structBBP_1_1std_1_1ELF_1_1SymbolEntry_afb2ed34c2addc40a302b019dcc53420c}{st\+\_\+size}} = 0
+\begin{DoxyCompactList}\small\item\em The size of whatever this symbol is (for example the size of \textquotesingle{}main\textquotesingle{}) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a4926ba934876e4a1028b9abb47edbc56}{std\+::byte}} \mbox{\hyperlink{structBBP_1_1std_1_1ELF_1_1SymbolEntry_acae8a39cd82e0150243e4c70cd429ba6}{st\+\_\+info}} = 0
+\begin{DoxyCompactList}\small\item\em 0x.\+0 -\/ Local, 0x.\+1 -\/ Global, 0x.\+2 -\/ Weak, 0x0. -\/ no type, 0x1. -\/ object, 0x2. -\/ function \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a4926ba934876e4a1028b9abb47edbc56}{std\+::byte}} \mbox{\hyperlink{structBBP_1_1std_1_1ELF_1_1SymbolEntry_abc86c2e94b4cc82eeccfd462773b308c}{st\+\_\+other}} = 0
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a8adbd1d0e37ca1d674470ea445a255a3}{std\+::halfword}} \mbox{\hyperlink{structBBP_1_1std_1_1ELF_1_1SymbolEntry_af35058e4296bd07c13b2b08fa2f9eaa1}{st\+\_\+shndx}} = 0
+\begin{DoxyCompactList}\small\item\em the section to which the symbol is relative \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a0a3e77ef427182bf2ac13459c7fdf8a5}{std\+::dword}} \mbox{\hyperlink{structBBP_1_1std_1_1ELF_1_1SymbolEntry_a6bfa0ae08967d89697e2581670d79e14}{st\+\_\+size}} = 0
+\begin{DoxyCompactList}\small\item\em The size of whatever this symbol is (for example the size of \textquotesingle{}main\textquotesingle{}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 212 of file E\+L\+F32.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structBBP_1_1std_1_1ELF_1_1SymbolEntry_acae8a39cd82e0150243e4c70cd429ba6}\label{structBBP_1_1std_1_1ELF_1_1SymbolEntry_acae8a39cd82e0150243e4c70cd429ba6}} 
+\index{BBP::std::ELF::SymbolEntry@{BBP::std::ELF::SymbolEntry}!st\_info@{st\_info}}
+\index{st\_info@{st\_info}!BBP::std::ELF::SymbolEntry@{BBP::std::ELF::SymbolEntry}}
+\doxysubsubsection{\texorpdfstring{st\_info}{st\_info}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a4926ba934876e4a1028b9abb47edbc56}{std\+::byte}} B\+B\+P\+::std\+::\+E\+L\+F\+::\+Symbol\+Entry\+::st\+\_\+info = 0}
+
+
+
+0x.\+0 -\/ Local, 0x.\+1 -\/ Global, 0x.\+2 -\/ Weak, 0x0. -\/ no type, 0x1. -\/ object, 0x2. -\/ function 
+
+
+
+Definition at line 216 of file E\+L\+F32.\+h.
+
+\mbox{\Hypertarget{structBBP_1_1std_1_1ELF_1_1SymbolEntry_a2445f9e7fbff9ea1adc814ca45327030}\label{structBBP_1_1std_1_1ELF_1_1SymbolEntry_a2445f9e7fbff9ea1adc814ca45327030}} 
+\index{BBP::std::ELF::SymbolEntry@{BBP::std::ELF::SymbolEntry}!st\_name@{st\_name}}
+\index{st\_name@{st\_name}!BBP::std::ELF::SymbolEntry@{BBP::std::ELF::SymbolEntry}}
+\doxysubsubsection{\texorpdfstring{st\_name}{st\_name}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_ae104641b17c021a901add93f7bc5d808}{std\+::word}} B\+B\+P\+::std\+::\+E\+L\+F\+::\+Symbol\+Entry\+::st\+\_\+name = 0}
+
+
+
+Name of the symbol (relative to string table (string table is a section!)) 
+
+Name of the symbol (relative to string table (string table is a section!) 
+
+Definition at line 213 of file E\+L\+F32.\+h.
+
+\mbox{\Hypertarget{structBBP_1_1std_1_1ELF_1_1SymbolEntry_abc86c2e94b4cc82eeccfd462773b308c}\label{structBBP_1_1std_1_1ELF_1_1SymbolEntry_abc86c2e94b4cc82eeccfd462773b308c}} 
+\index{BBP::std::ELF::SymbolEntry@{BBP::std::ELF::SymbolEntry}!st\_other@{st\_other}}
+\index{st\_other@{st\_other}!BBP::std::ELF::SymbolEntry@{BBP::std::ELF::SymbolEntry}}
+\doxysubsubsection{\texorpdfstring{st\_other}{st\_other}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a4926ba934876e4a1028b9abb47edbc56}{std\+::byte}} B\+B\+P\+::std\+::\+E\+L\+F\+::\+Symbol\+Entry\+::st\+\_\+other = 0}
+
+
+
+Definition at line 217 of file E\+L\+F32.\+h.
+
+\mbox{\Hypertarget{structBBP_1_1std_1_1ELF_1_1SymbolEntry_af35058e4296bd07c13b2b08fa2f9eaa1}\label{structBBP_1_1std_1_1ELF_1_1SymbolEntry_af35058e4296bd07c13b2b08fa2f9eaa1}} 
+\index{BBP::std::ELF::SymbolEntry@{BBP::std::ELF::SymbolEntry}!st\_shndx@{st\_shndx}}
+\index{st\_shndx@{st\_shndx}!BBP::std::ELF::SymbolEntry@{BBP::std::ELF::SymbolEntry}}
+\doxysubsubsection{\texorpdfstring{st\_shndx}{st\_shndx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a8adbd1d0e37ca1d674470ea445a255a3}{std\+::halfword}} B\+B\+P\+::std\+::\+E\+L\+F\+::\+Symbol\+Entry\+::st\+\_\+shndx = 0}
+
+
+
+the section to which the symbol is relative 
+
+
+
+Definition at line 218 of file E\+L\+F32.\+h.
+
+\mbox{\Hypertarget{structBBP_1_1std_1_1ELF_1_1SymbolEntry_a6bfa0ae08967d89697e2581670d79e14}\label{structBBP_1_1std_1_1ELF_1_1SymbolEntry_a6bfa0ae08967d89697e2581670d79e14}} 
+\index{BBP::std::ELF::SymbolEntry@{BBP::std::ELF::SymbolEntry}!st\_size@{st\_size}}
+\index{st\_size@{st\_size}!BBP::std::ELF::SymbolEntry@{BBP::std::ELF::SymbolEntry}}
+\doxysubsubsection{\texorpdfstring{st\_size}{st\_size}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a0a3e77ef427182bf2ac13459c7fdf8a5}{std\+::dword}} B\+B\+P\+::std\+::\+E\+L\+F\+::\+Symbol\+Entry\+::st\+\_\+size = 0}
+
+
+
+The size of whatever this symbol is (for example the size of \textquotesingle{}main\textquotesingle{}) 
+
+
+
+Definition at line 188 of file E\+L\+F64.\+h.
+
+\mbox{\Hypertarget{structBBP_1_1std_1_1ELF_1_1SymbolEntry_afb2ed34c2addc40a302b019dcc53420c}\label{structBBP_1_1std_1_1ELF_1_1SymbolEntry_afb2ed34c2addc40a302b019dcc53420c}} 
+\index{BBP::std::ELF::SymbolEntry@{BBP::std::ELF::SymbolEntry}!st\_size@{st\_size}}
+\index{st\_size@{st\_size}!BBP::std::ELF::SymbolEntry@{BBP::std::ELF::SymbolEntry}}
+\doxysubsubsection{\texorpdfstring{st\_size}{st\_size}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_ae104641b17c021a901add93f7bc5d808}{std\+::word}} B\+B\+P\+::std\+::\+E\+L\+F\+::\+Symbol\+Entry\+::st\+\_\+size = 0}
+
+
+
+The size of whatever this symbol is (for example the size of \textquotesingle{}main\textquotesingle{}) 
+
+
+
+Definition at line 215 of file E\+L\+F32.\+h.
+
+\mbox{\Hypertarget{structBBP_1_1std_1_1ELF_1_1SymbolEntry_a4367bb091bdd4306f1d8e597c2931856}\label{structBBP_1_1std_1_1ELF_1_1SymbolEntry_a4367bb091bdd4306f1d8e597c2931856}} 
+\index{BBP::std::ELF::SymbolEntry@{BBP::std::ELF::SymbolEntry}!st\_value@{st\_value}}
+\index{st\_value@{st\_value}!BBP::std::ELF::SymbolEntry@{BBP::std::ELF::SymbolEntry}}
+\doxysubsubsection{\texorpdfstring{st\_value}{st\_value}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a03632bff3fd98378d63d18e829a72de1}{std\+::address\+\_\+t}} B\+B\+P\+::std\+::\+E\+L\+F\+::\+Symbol\+Entry\+::st\+\_\+value = 0}
+
+
+
+Value of symbol (So for example where \textquotesingle{}main\textquotesingle{} starts) 
+
+Value of symbol (So for example where \textquotesingle{}main\textquotesingle{} starts. 
+
+Definition at line 214 of file E\+L\+F32.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ELF32_8h}{E\+L\+F32.\+h}}\item 
+\mbox{\hyperlink{ELF64_8h}{E\+L\+F64.\+h}}\end{DoxyCompactItemize}

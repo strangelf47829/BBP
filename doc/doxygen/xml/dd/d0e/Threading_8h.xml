@@ -1,0 +1,463 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dd/d0e/Threading_8h" kind="file" language="C++">
+    <compoundname>Threading.h</compoundname>
+    <includes refid="db/de5/ELF_8h" local="yes">ELF.h</includes>
+    <includes refid="d0/dcf/BinaryExecutable_8h" local="yes">BinaryExecutable.h</includes>
+    <includes refid="de/d5c/Memory_8h" local="yes">Memory.h</includes>
+    <includes refid="d7/d2a/Registers_8h" local="yes">Registers.h</includes>
+    <includes refid="d9/dd5/Instructions_8h" local="yes">Instructions.h</includes>
+    <includedby refid="de/dd1/Smile_8cpp" local="yes">Smile.cpp</includedby>
+    <includedby refid="d0/dde/Hyperv_8h" local="yes">Hyperv.h</includedby>
+    <includedby refid="da/d78/StateMachine_8h" local="yes">StateMachine.h</includedby>
+    <includedby refid="d5/d95/InstructionCycle_8cpp" local="yes">InstructionCycle.cpp</includedby>
+    <includedby refid="d4/d56/lvalue_8cpp" local="yes">lvalue.cpp</includedby>
+    <includedby refid="d9/de4/Registers_8cpp" local="yes">Registers.cpp</includedby>
+    <includedby refid="d1/d5d/rvalue_8cpp" local="yes">rvalue.cpp</includedby>
+    <includedby refid="d8/df1/ThreadState_8cpp" local="yes">ThreadState.cpp</includedby>
+    <includedby refid="d6/db1/xvalue_8cpp" local="yes">xvalue.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>Memory.h</label>
+        <link refid="de/d5c/Memory_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Strings.h</label>
+        <link refid="de/d53/Strings_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Resources.h</label>
+        <link refid="d0/d33/Resources_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>ELF32.h</label>
+        <link refid="d1/d5d/ELF32_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Stack.hxx</label>
+        <link refid="db/d61/Stack_8hxx"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Memory.hxx</label>
+        <link refid="d5/d4e/Memory_8hxx"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>errno.h</label>
+        <link refid="d8/dc2/errno_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Registers.h</label>
+        <link refid="d7/d2a/Registers_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Instructions.h</label>
+        <link refid="d9/dd5/Instructions_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Signal.h</label>
+        <link refid="d0/def/Signal_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Except.h</label>
+        <link refid="dc/d88/Except_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+        <link refid="df/dd8/stdint_8h"/>
+      </node>
+      <node id="4">
+        <label>stddef.h</label>
+        <link refid="d3/dce/stddef_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>BinaryExecutable.h</label>
+        <link refid="d0/dcf/BinaryExecutable_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ELF.h</label>
+        <link refid="db/de5/ELF_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Stack.h</label>
+        <link refid="dc/db6/Stack_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>Smile.cpp</label>
+        <link refid="de/dd1/Smile_8cpp"/>
+      </node>
+      <node id="1">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Registers.cpp</label>
+        <link refid="d9/de4/Registers_8cpp"/>
+      </node>
+      <node id="12">
+        <label>InstructionCycle.cpp</label>
+        <link refid="d5/d95/InstructionCycle_8cpp"/>
+      </node>
+      <node id="4">
+        <label>RAE.h</label>
+        <link refid="db/d6a/RAE_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>StateMachine.cpp</label>
+        <link refid="d6/d82/StateMachine_8cpp"/>
+      </node>
+      <node id="7">
+        <label>lvalue.cpp</label>
+        <link refid="d4/d56/lvalue_8cpp"/>
+      </node>
+      <node id="3">
+        <label>Hyperv.h</label>
+        <link refid="d0/dde/Hyperv_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>ThreadState.cpp</label>
+        <link refid="d8/df1/ThreadState_8cpp"/>
+      </node>
+      <node id="5">
+        <label>StateMachine.h</label>
+        <link refid="da/d78/StateMachine_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>rvalue.cpp</label>
+        <link refid="d1/d5d/rvalue_8cpp"/>
+      </node>
+      <node id="6">
+        <label>ValueCategories.h</label>
+        <link refid="d8/da7/ValueCategories_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>xvalue.cpp</label>
+        <link refid="d6/db1/xvalue_8cpp"/>
+      </node>
+      <node id="9">
+        <label>StateMachineOpcodes.cpp</label>
+        <link refid="df/d1c/StateMachineOpcodes_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d5/d8b/structBBP_1_1userspace_1_1Thread" prot="public">BBP::userspace::Thread</innerclass>
+    <innernamespace refid="d9/d6f/namespaceBBP">BBP</innernamespace>
+    <innernamespace refid="de/dfe/namespaceBBP_1_1userspace">BBP::userspace</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>BBP_LIB_THREADING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BBP_LIB_THREADING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>header<sp/>provides<sp/>RAE<sp/>with<sp/>data<sp/>structures<sp/>to<sp/>do<sp/>threading.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="db/de5/ELF_8h" kindref="compound">ELF.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d0/dcf/BinaryExecutable_8h" kindref="compound">BinaryExecutable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="de/d5c/Memory_8h" kindref="compound">Memory.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d7/d2a/Registers_8h" kindref="compound">Registers.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d9/dd5/Instructions_8h" kindref="compound">Instructions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="d9/d6f/namespaceBBP" kindref="compound">BBP</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">userspace</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="de/dfe/namespaceBBP_1_1userspace_1ada35073b18ce8a7b788f5bd62ffd477d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a4926ba934876e4a1028b9abb47edbc56" kindref="member">std::byte</ref><sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1ada35073b18ce8a7b788f5bd62ffd477d" kindref="member">pid_t</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor" kindref="compound">HyperVisor</ref>;</highlight></codeline>
+<codeline lineno="20" refid="d5/d8b/structBBP_1_1userspace_1_1Thread" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread" kindref="compound">Thread</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>the<sp/>executable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1abb9f013e6a43d9115398c80089cc51cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable" kindref="compound">BinaryExecutable</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1abb9f013e6a43d9115398c80089cc51cc" kindref="member">executable</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TLS<sp/>Data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a3a10ca160e21d3bc7861efa30c646878" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="df/ddc/structBBP_1_1std_1_1PAGE" kindref="compound">std::PAGE&lt;std::string_element&gt;</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a3a10ca160e21d3bc7861efa30c646878" kindref="member">TLS</ref>;</highlight></codeline>
+<codeline lineno="27" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a394454a84d38c5917f1b3232c195b4d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager" kindref="compound">std::ResourceManager</ref><sp/>*<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a394454a84d38c5917f1b3232c195b4d2" kindref="member">allocator</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Flag<sp/>to<sp/>if<sp/>the<sp/>thread<sp/>is<sp/>active<sp/>or<sp/>not</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a8aed65eed4cf774feb635b04e3aceaad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a8aed65eed4cf774feb635b04e3aceaad" kindref="member">active</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Registers<sp/>go<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1af634ec4314a2c740f524c20c4619a03f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1af634ec4314a2c740f524c20c4619a03f" kindref="member">registerCount</ref><sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="34" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ab68a4a9cab34d2ae41e973f114343b69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE" kindref="compound">std::STATIC_PAGE&lt;std::byte, registerCount * 4&gt;</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ab68a4a9cab34d2ae41e973f114343b69" kindref="member">registerData</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Current<sp/>instruction</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1aa25d65c649d9afaab483456e6ab9455f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d0/dfc/structBBP_1_1userspace_1_1Instruction" kindref="compound">userspace::Instruction</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1aa25d65c649d9afaab483456e6ab9455f" kindref="member">instruction</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a7e6c9bb100607a256739439ae762bcf4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a7e6c9bb100607a256739439ae762bcf4" kindref="member">eax</ref>;</highlight></codeline>
+<codeline lineno="40" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a091c686ebf3ee419ab3b1f27c75d6243" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a091c686ebf3ee419ab3b1f27c75d6243" kindref="member">ax</ref>;</highlight></codeline>
+<codeline lineno="41" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ae0583745bd1abc773575e4213c90d197" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ae0583745bd1abc773575e4213c90d197" kindref="member">ah</ref>;</highlight></codeline>
+<codeline lineno="42" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a2737b31d9bd9aebef036986824f4b7e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a2737b31d9bd9aebef036986824f4b7e1" kindref="member">al</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a587439c6e965a29e92ae6428ab5d6573" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a587439c6e965a29e92ae6428ab5d6573" kindref="member">ecx</ref>;</highlight></codeline>
+<codeline lineno="45" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a10f73778efd5361812c3ba7cd72680ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a10f73778efd5361812c3ba7cd72680ca" kindref="member">cx</ref>;</highlight></codeline>
+<codeline lineno="46" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ae453514b7d75c9379a24cc67f1adc8d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ae453514b7d75c9379a24cc67f1adc8d7" kindref="member">ch</ref>;</highlight></codeline>
+<codeline lineno="47" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a5ca06241d37ede20dc012df55d697d04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a5ca06241d37ede20dc012df55d697d04" kindref="member">cl</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a8ddc89699f73970b78d7bd570de2062a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a8ddc89699f73970b78d7bd570de2062a" kindref="member">edx</ref>;</highlight></codeline>
+<codeline lineno="50" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a017137975e004e47f82719cd1b84b936" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a017137975e004e47f82719cd1b84b936" kindref="member">dx</ref>;</highlight></codeline>
+<codeline lineno="51" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a6da7b540e94efb88eca16e0ae16c4180" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a6da7b540e94efb88eca16e0ae16c4180" kindref="member">dh</ref>;</highlight></codeline>
+<codeline lineno="52" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a193a79614154aabe79a861c99dc6363a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a193a79614154aabe79a861c99dc6363a" kindref="member">dl</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a5ac8ac8a7fec67daea31b9663f519504" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a5ac8ac8a7fec67daea31b9663f519504" kindref="member">ebx</ref>;</highlight></codeline>
+<codeline lineno="55" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1abb41185d93313b98b7a8d460cdd038e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1abb41185d93313b98b7a8d460cdd038e3" kindref="member">bx</ref>;</highlight></codeline>
+<codeline lineno="56" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a2e6356168cfa3143e001cf33c01d5f6c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a2e6356168cfa3143e001cf33c01d5f6c" kindref="member">bh</ref>;</highlight></codeline>
+<codeline lineno="57" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ab9a8b34e80698113ea98c804146a4cf8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ab9a8b34e80698113ea98c804146a4cf8" kindref="member">bl</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a025c51e88d747354aa4d7c21b09d26fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a025c51e88d747354aa4d7c21b09d26fc" kindref="member">esi</ref>;</highlight></codeline>
+<codeline lineno="60" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ac28099912b7547b9e4c1f2c0cd3ce073" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ac28099912b7547b9e4c1f2c0cd3ce073" kindref="member">six</ref>;</highlight></codeline>
+<codeline lineno="61" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1acb1abf2f2f46649035aacd5253d1b003" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1acb1abf2f2f46649035aacd5253d1b003" kindref="member">sih</ref>;</highlight></codeline>
+<codeline lineno="62" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a8686af4436ad154156d0e551d03a8cc1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a8686af4436ad154156d0e551d03a8cc1" kindref="member">sil</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a6c50e9093b5d2641c2a031121037e81f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a6c50e9093b5d2641c2a031121037e81f" kindref="member">edi</ref>;</highlight></codeline>
+<codeline lineno="65" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a5281beaa825637fea5b9242a7c523e17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a5281beaa825637fea5b9242a7c523e17" kindref="member">dix</ref>;</highlight></codeline>
+<codeline lineno="66" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a5343dcec3d6a75a94b7b937582aa6cdd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a5343dcec3d6a75a94b7b937582aa6cdd" kindref="member">dih</ref>;</highlight></codeline>
+<codeline lineno="67" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a0357fd60d4bba2f4048acfebe1dc42e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a0357fd60d4bba2f4048acfebe1dc42e0" kindref="member">dil</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a40b4d770802e9e0131c5a18debf59d2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a40b4d770802e9e0131c5a18debf59d2c" kindref="member">tix</ref>;</highlight></codeline>
+<codeline lineno="70" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a143b0e8e4ce8fe16587de158de104ffc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a143b0e8e4ce8fe16587de158de104ffc" kindref="member">st</ref>;</highlight></codeline>
+<codeline lineno="71" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ae7b2f6497a115fe0a96b2e0725cc9464" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ae7b2f6497a115fe0a96b2e0725cc9464" kindref="member">ob</ref>;</highlight></codeline>
+<codeline lineno="72" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a47c6d08f5243c58fc2b19ca9c6c9bb9e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a47c6d08f5243c58fc2b19ca9c6c9bb9e" kindref="member">tb</ref>;</highlight></codeline>
+<codeline lineno="73" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ac7d0bc05b62b9f5fbe7a9a6d237eb80b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ac7d0bc05b62b9f5fbe7a9a6d237eb80b" kindref="member">ct</ref>;</highlight></codeline>
+<codeline lineno="74" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a16bb4264aa352e4909154f607dafc1e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a16bb4264aa352e4909154f607dafc1e9" kindref="member">pp</ref>;</highlight></codeline>
+<codeline lineno="75" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a837030f550670fb800bd30f67985dbd4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a837030f550670fb800bd30f67985dbd4" kindref="member">tp</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1acc978723c18ec669365f9f0390e7c086" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1acc978723c18ec669365f9f0390e7c086" kindref="member">ssx</ref>;</highlight></codeline>
+<codeline lineno="78" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ab885e6aaf110ac74312312318b04ae55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ab885e6aaf110ac74312312318b04ae55" kindref="member">hv</ref>;</highlight></codeline>
+<codeline lineno="79" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a1d56f597933907ebc3d65c3a80b250bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a1d56f597933907ebc3d65c3a80b250bd" kindref="member">ho</ref>;</highlight></codeline>
+<codeline lineno="80" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a428a6f838b2835b36a9f2e638e82150f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a428a6f838b2835b36a9f2e638e82150f" kindref="member">ht</ref>;</highlight></codeline>
+<codeline lineno="81" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ad07ed768cf5b70972f30cd96ac28dc9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ad07ed768cf5b70972f30cd96ac28dc9a" kindref="member">ss</ref>;</highlight></codeline>
+<codeline lineno="82" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a46b4c25e0f16726bf83f0049bc3f3479" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a46b4c25e0f16726bf83f0049bc3f3479" kindref="member">cs</ref>;</highlight></codeline>
+<codeline lineno="83" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a893cf64b5a97a0a980afe0450c8cce91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a893cf64b5a97a0a980afe0450c8cce91" kindref="member">sf</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1afa1fbba683a0ad21146264ab3014001f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1afa1fbba683a0ad21146264ab3014001f" kindref="member">sui</ref>;</highlight></codeline>
+<codeline lineno="86" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a27803495fb9a05bbf1a96da61a2cc6da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a27803495fb9a05bbf1a96da61a2cc6da" kindref="member">asi</ref>;</highlight></codeline>
+<codeline lineno="87" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a497c0ca0bd3b1016e05ce36f4149dfa0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a497c0ca0bd3b1016e05ce36f4149dfa0" kindref="member">gsi</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a9c9b4ca599f0708782fb29a88d1bffcc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a9c9b4ca599f0708782fb29a88d1bffcc" kindref="member">eip</ref>;</highlight></codeline>
+<codeline lineno="90" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a8e0978ddfbdc0673b38431c5c681ee6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a8e0978ddfbdc0673b38431c5c681ee6d" kindref="member">ip</ref>;</highlight></codeline>
+<codeline lineno="91" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ad59b710fa833f7129f167a75b08904f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ad59b710fa833f7129f167a75b08904f8" kindref="member">ih</ref>;</highlight></codeline>
+<codeline lineno="92" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ab6031eb2c6310b4a1b4d92578a5f7bb7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ab6031eb2c6310b4a1b4d92578a5f7bb7" kindref="member">il</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1abec3c72369208cfdb29f29f2ced5b57f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1abec3c72369208cfdb29f29f2ced5b57f" kindref="member">sip</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Argument<sp/>and<sp/>general<sp/>Stack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1adc9e77b3108d37b6140ff1f5bcb5203c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1adc9e77b3108d37b6140ff1f5bcb5203c" kindref="member">argumentStackSize</ref><sp/>=<sp/>255;</highlight></codeline>
+<codeline lineno="98" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1acddcff8c8565ea660899235873fdd355" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1acddcff8c8565ea660899235873fdd355" kindref="member">generalStackSize</ref><sp/>=<sp/>255;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Argument<sp/>/<sp/>General<sp/>page</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a093cc06d44e264c27566de843f2d2443" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE" kindref="compound">std::STATIC_PAGE&lt;std::word, argumentStackSize&gt;</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a093cc06d44e264c27566de843f2d2443" kindref="member">argumentPage</ref>;</highlight></codeline>
+<codeline lineno="102" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a40f934e8485b154194f9954ab699408c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE" kindref="compound">std::STATIC_PAGE&lt;std::word, generalStackSize&gt;</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a40f934e8485b154194f9954ab699408c" kindref="member">generalPage</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Argument<sp/>/<sp/>General<sp/>Stack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a7f501bc2a1da05b4e671150313c90509" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::word&gt;</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a7f501bc2a1da05b4e671150313c90509" kindref="member">argumentStack</ref>;</highlight></codeline>
+<codeline lineno="106" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a400920f6c43b4b0b406080b31e9216ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack&lt;std::word&gt;</ref><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a400920f6c43b4b0b406080b31e9216ad" kindref="member">generalStack</ref>;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Signal<sp/>handling<sp/>stuff<sp/>goes<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Flag<sp/>handling<sp/>goes<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fault<sp/>handling<sp/>goes<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a9dc94f1901ced80975a29a5ce5be05b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a9dc94f1901ced80975a29a5ce5be05b5" kindref="member">Thread</ref>()</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a7e6c9bb100607a256739439ae762bcf4" kindref="member">eax</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3caf5c2e07d3f735d583cc8e3b8d01f6a55" kindref="member">thirtyTwoBit</ref>),</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a091c686ebf3ee419ab3b1f27c75d6243" kindref="member">ax</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3cab436c703fc83b5d75f4616b0718a82de" kindref="member">sixteenBit</ref>),</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ae0583745bd1abc773575e4213c90d197" kindref="member">ah</ref>(*this,<sp/>0,<sp/>1,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3ca70adf354187040d59043d48cc011e7c8" kindref="member">eightBit</ref>),</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a2737b31d9bd9aebef036986824f4b7e1" kindref="member">al</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3ca70adf354187040d59043d48cc011e7c8" kindref="member">eightBit</ref>),</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a587439c6e965a29e92ae6428ab5d6573" kindref="member">ecx</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3caf5c2e07d3f735d583cc8e3b8d01f6a55" kindref="member">thirtyTwoBit</ref>),</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a10f73778efd5361812c3ba7cd72680ca" kindref="member">cx</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3cab436c703fc83b5d75f4616b0718a82de" kindref="member">sixteenBit</ref>),</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ae453514b7d75c9379a24cc67f1adc8d7" kindref="member">ch</ref>(*this,<sp/>0,<sp/>1,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3ca70adf354187040d59043d48cc011e7c8" kindref="member">eightBit</ref>),</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a5ca06241d37ede20dc012df55d697d04" kindref="member">cl</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3ca70adf354187040d59043d48cc011e7c8" kindref="member">eightBit</ref>),</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a8ddc89699f73970b78d7bd570de2062a" kindref="member">edx</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3caf5c2e07d3f735d583cc8e3b8d01f6a55" kindref="member">thirtyTwoBit</ref>),</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a017137975e004e47f82719cd1b84b936" kindref="member">dx</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3cab436c703fc83b5d75f4616b0718a82de" kindref="member">sixteenBit</ref>),</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a6da7b540e94efb88eca16e0ae16c4180" kindref="member">dh</ref>(*this,<sp/>0,<sp/>1,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3ca70adf354187040d59043d48cc011e7c8" kindref="member">eightBit</ref>),</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a193a79614154aabe79a861c99dc6363a" kindref="member">dl</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3ca70adf354187040d59043d48cc011e7c8" kindref="member">eightBit</ref>),</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a5ac8ac8a7fec67daea31b9663f519504" kindref="member">ebx</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3caf5c2e07d3f735d583cc8e3b8d01f6a55" kindref="member">thirtyTwoBit</ref>),</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1abb41185d93313b98b7a8d460cdd038e3" kindref="member">bx</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3cab436c703fc83b5d75f4616b0718a82de" kindref="member">sixteenBit</ref>),</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a2e6356168cfa3143e001cf33c01d5f6c" kindref="member">bh</ref>(*this,<sp/>0,<sp/>1,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3ca70adf354187040d59043d48cc011e7c8" kindref="member">eightBit</ref>),</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ab9a8b34e80698113ea98c804146a4cf8" kindref="member">bl</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3ca70adf354187040d59043d48cc011e7c8" kindref="member">eightBit</ref>),</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a025c51e88d747354aa4d7c21b09d26fc" kindref="member">esi</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3caf5c2e07d3f735d583cc8e3b8d01f6a55" kindref="member">thirtyTwoBit</ref>),</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ac28099912b7547b9e4c1f2c0cd3ce073" kindref="member">six</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3cab436c703fc83b5d75f4616b0718a82de" kindref="member">sixteenBit</ref>),</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1acb1abf2f2f46649035aacd5253d1b003" kindref="member">sih</ref>(*this,<sp/>0,<sp/>1,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3ca70adf354187040d59043d48cc011e7c8" kindref="member">eightBit</ref>),</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a8686af4436ad154156d0e551d03a8cc1" kindref="member">sil</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3ca70adf354187040d59043d48cc011e7c8" kindref="member">eightBit</ref>),</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a6c50e9093b5d2641c2a031121037e81f" kindref="member">edi</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3caf5c2e07d3f735d583cc8e3b8d01f6a55" kindref="member">thirtyTwoBit</ref>),</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a5281beaa825637fea5b9242a7c523e17" kindref="member">dix</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3cab436c703fc83b5d75f4616b0718a82de" kindref="member">sixteenBit</ref>),</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a5343dcec3d6a75a94b7b937582aa6cdd" kindref="member">dih</ref>(*this,<sp/>0,<sp/>1,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3ca70adf354187040d59043d48cc011e7c8" kindref="member">eightBit</ref>),</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a0357fd60d4bba2f4048acfebe1dc42e0" kindref="member">dil</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3ca70adf354187040d59043d48cc011e7c8" kindref="member">eightBit</ref>),</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a40b4d770802e9e0131c5a18debf59d2c" kindref="member">tix</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3caf5c2e07d3f735d583cc8e3b8d01f6a55" kindref="member">thirtyTwoBit</ref>),</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a143b0e8e4ce8fe16587de158de104ffc" kindref="member">st</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3cab436c703fc83b5d75f4616b0718a82de" kindref="member">sixteenBit</ref>),</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ae7b2f6497a115fe0a96b2e0725cc9464" kindref="member">ob</ref>(*this,<sp/>0,<sp/>1,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3ca70adf354187040d59043d48cc011e7c8" kindref="member">eightBit</ref>),</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a47c6d08f5243c58fc2b19ca9c6c9bb9e" kindref="member">tb</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3ca70adf354187040d59043d48cc011e7c8" kindref="member">eightBit</ref>),</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ac7d0bc05b62b9f5fbe7a9a6d237eb80b" kindref="member">ct</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3caf5c2e07d3f735d583cc8e3b8d01f6a55" kindref="member">thirtyTwoBit</ref>),</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a16bb4264aa352e4909154f607dafc1e9" kindref="member">pp</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3cab436c703fc83b5d75f4616b0718a82de" kindref="member">sixteenBit</ref>),</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a837030f550670fb800bd30f67985dbd4" kindref="member">tp</ref>(*this,<sp/>0,<sp/>1,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3ca70adf354187040d59043d48cc011e7c8" kindref="member">eightBit</ref>),</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1acc978723c18ec669365f9f0390e7c086" kindref="member">ssx</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3caf5c2e07d3f735d583cc8e3b8d01f6a55" kindref="member">thirtyTwoBit</ref>),</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ab885e6aaf110ac74312312318b04ae55" kindref="member">hv</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3cab436c703fc83b5d75f4616b0718a82de" kindref="member">sixteenBit</ref>),</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a1d56f597933907ebc3d65c3a80b250bd" kindref="member">ho</ref>(*this,<sp/>0,<sp/>1,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3ca70adf354187040d59043d48cc011e7c8" kindref="member">eightBit</ref>),</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a428a6f838b2835b36a9f2e638e82150f" kindref="member">ht</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3ca70adf354187040d59043d48cc011e7c8" kindref="member">eightBit</ref>),</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ad07ed768cf5b70972f30cd96ac28dc9a" kindref="member">ss</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3caf5c2e07d3f735d583cc8e3b8d01f6a55" kindref="member">thirtyTwoBit</ref>),</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a46b4c25e0f16726bf83f0049bc3f3479" kindref="member">cs</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3cab436c703fc83b5d75f4616b0718a82de" kindref="member">sixteenBit</ref>),</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a893cf64b5a97a0a980afe0450c8cce91" kindref="member">sf</ref>(*this,<sp/>0,<sp/>1,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3ca70adf354187040d59043d48cc011e7c8" kindref="member">eightBit</ref>),</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1afa1fbba683a0ad21146264ab3014001f" kindref="member">sui</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3caf5c2e07d3f735d583cc8e3b8d01f6a55" kindref="member">thirtyTwoBit</ref>),</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a27803495fb9a05bbf1a96da61a2cc6da" kindref="member">asi</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3cab436c703fc83b5d75f4616b0718a82de" kindref="member">sixteenBit</ref>),</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a497c0ca0bd3b1016e05ce36f4149dfa0" kindref="member">gsi</ref>(*this,<sp/>0,<sp/>1,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3ca70adf354187040d59043d48cc011e7c8" kindref="member">eightBit</ref>),</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a9c9b4ca599f0708782fb29a88d1bffcc" kindref="member">eip</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3caf5c2e07d3f735d583cc8e3b8d01f6a55" kindref="member">thirtyTwoBit</ref>),</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a8e0978ddfbdc0673b38431c5c681ee6d" kindref="member">ip</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3cab436c703fc83b5d75f4616b0718a82de" kindref="member">sixteenBit</ref>),</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ad59b710fa833f7129f167a75b08904f8" kindref="member">ih</ref>(*this,<sp/>0,<sp/>1,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3ca70adf354187040d59043d48cc011e7c8" kindref="member">eightBit</ref>),</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1ab6031eb2c6310b4a1b4d92578a5f7bb7" kindref="member">il</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3ca70adf354187040d59043d48cc011e7c8" kindref="member">eightBit</ref>),</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1abec3c72369208cfdb29f29f2ced5b57f" kindref="member">sip</ref>(*this,<sp/>0,<sp/>0,<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a75564e71e81ee3485ccf1b43cb104f3caf5c2e07d3f735d583cc8e3b8d01f6a55" kindref="member">thirtyTwoBit</ref>),</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a7f501bc2a1da05b4e671150313c90509" kindref="member">argumentStack</ref>(&amp;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a093cc06d44e264c27566de843f2d2443" kindref="member">argumentPage</ref>,<sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1adc9e77b3108d37b6140ff1f5bcb5203c" kindref="member">argumentStackSize</ref>),</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a400920f6c43b4b0b406080b31e9216ad" kindref="member">generalStack</ref>(&amp;<ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1a40f934e8485b154194f9954ab699408c" kindref="member">generalPage</ref>,<sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1acddcff8c8565ea660899235873fdd355" kindref="member">generalStackSize</ref>)</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread_1aa15f2f907088e626d6d6fa1d0da01eb9" kindref="member">LogInstruction</ref>();</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Threading.h"/>
+  </compounddef>
+</doxygen>

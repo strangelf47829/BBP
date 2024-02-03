@@ -1,0 +1,251 @@
+#include "../include/FileSys.h"
+#include "../include/stdio.h"
+#include "../include/Signal.h"
+
+BBP::std::PATH::PATH(std::VOLUME *v, std::string path) : PATH(v, path.data)
+{
+
+}
+
+
+BBP::std::PATH::PATH(std::VOLUME *v, std::conststring path)
+{
+	// Save the volume this path is relative to
+	this->relativeTo = v;
+
+	// Save the allocator 
+	this->allocator = std::activemem;
+
+	// Get string length
+	std::size_t pathLength = std::strlen(path);
+
+	// Create new strings
+	this->rawPath = std::string(pathLength + 2, (std::string_element *)activemem->calloc(pathLength + 2, sizeof(std::string_element)));
+	this->_path = std::string(pathLength + 2, (std::string_element *)activemem->calloc(pathLength + 2, sizeof(std::string_element)));
+
+	// Save strings
+	std::strcpy(&rawPath, path);
+	std::strcpy(&_path, path);
+
+	// Set null terminators
+	std::write(&rawPath, '\0', pathLength);
+	std::write(&_path, '\0', pathLength);
+	std::write(&rawPath, '\0', pathLength + 1);
+	std::write(&_path, '\0', pathLength + 1);
+
+	// Set last seperator to last nullstring
+	fileNameStartIndex = pathLength;
+
+	// Find last '/'
+	for (std::index_t index = 0; index < pathLength; index++)
+	{
+		// Get character
+		char c = __UNSAFE__(std::read)(&_path, index);
+
+		// If character c is not '/' or '\', continue
+		if (c != '/' && c != '\\')
+			continue;
+
+		// Save the location of fileNameStartIndex
+		this->fileNameStartIndex = index;
+	}
+
+	// If there exists a 
+	if (fileNameStartIndex != pathLength)
+	{
+		// Copy over
+		for (std::index_t index = fileNameStartIndex + 1; index < pathLength; index++)
+			std::write(&_path, std::read(&rawPath, index), index + 1);
+
+		// Then overwrite last seperator 
+		std::write(&_path, '/', fileNameStartIndex);
+		std::write(&_path, '\0', fileNameStartIndex + 1);
+	}
+
+	
+}
+
+BBP::std::PATH::~PATH()
+{
+	// Free strings
+	allocator->free(_path.data);
+	allocator->free(rawPath.data);
+}
+
+BBP::std::c_string BBP::std::PATH::fileName()
+{
+	return std::read_a(&_path, fileNameStartIndex + 2);
+}
+
+BBP::std::c_string BBP::std::PATH::pathName()
+{
+	return std::read_a(&_path, 0);
+}
+
+BBP::std::c_string BBP::std::PATH::relName()
+{
+	return std::read_a(&rawPath, 0);
+}
+
+bool BBP::std::PATH::isRelativeToRoot()
+{
+	// Get first character
+	char first = __UNSAFE__(std::read)(&_path, 0);
+
+	// Check if char is '~'
+	return first == '~';
+}
+
+BBP::std::PATH BBP::std::PATH::absolutePath(std::PATH *dir)
+{
+
+	// Check if dir is relative to root
+	bool isRelToRootDir = isRelativeToRoot();
+
+	// If is relative to root dir ...
+	if (isRelToRootDir)
+	{
+		
+	}
+
+	// Check if volume is not nil
+	
+
+	// Create string which would fit both relative dir and dir
+	std::c_string relStr;
+	std::c_string thisStr = rawPath.data;
+
+	if (isRelToRootDir)
+	{
+		if (relativeTo == nullptr)
+			throw std::exception("Could not find absoulte path of directory because volume was not set.", 1);
+
+		relStr = relativeTo->volumePath.rawPath.data;
+	}
+	else
+	{
+		if (dir == nullptr)
+			throw std::exception("Could not find absoulte path of directory because relative dir was not set.", 1);
+
+		relStr = dir->pathName();
+	}
+
+	size_t relDirLength = std::strlen(relStr);
+	size_t thisDirLength = std::strlen(thisStr);
+
+	size_t pathLength = relDirLength + thisDirLength + 1;
+
+	// Create buffer where combined path will live
+	std::c_string combinedPath = (std::string_element *)activemem->calloc(pathLength + 1, sizeof(std::string_element));
+
+	if (isRelToRootDir)
+		std::sprintf(combinedPath, "%s%s", relStr, thisStr + 1);
+	else
+		std::sprintf(combinedPath, "%s%s", relStr, thisStr);
+
+	// Create path
+	PATH tmp = PATH(relativeTo, combinedPath);
+
+	// Free combinedPath
+	activemem->free(combinedPath);
+
+	return PATH(relativeTo, tmp.relName());
+}
+
+BBP::std::PATH &BBP::std::PATH::sanitize()
+{
+	std::index_t lastlastSeparator = 0;
+	std::index_t lastSeparator = 0;
+
+	for (index_t index = 0; index < _path.dataSize; index++)
+	{
+		// Read character
+		char c = std::read(&rawPath, index);
+		
+		// Check if next character is valid to read
+		char nextC = std::read(&rawPath, index + 1);		
+
+		// If nextC is null (end of string), break out
+		if (nextC == 0)
+			break;
+
+		// If character is '/', set seperator here and continue
+		if (c == '/')
+		{
+			// If the next character is also a '/', then move everything after index left
+			if (nextC == '/')
+			{
+				for (std::index_t idx = index;; idx++)
+				{
+					char cc = std::read(&rawPath, idx + 1);
+					std::write(&rawPath, cc, idx);
+					if (!cc)
+						break;
+				}
+				lastlastSeparator = lastSeparator;
+				lastSeparator = index;
+				this->fileNameStartIndex = index;
+				index--;
+				continue;
+			}
+
+
+			lastlastSeparator = lastSeparator;
+			lastSeparator = index;
+			this->fileNameStartIndex = index;
+			continue;
+		}
+
+		// If 'c' is not '.', continue
+		if (c != '.')
+			continue;
+
+		
+
+		// If nextC is not a ., but is a '/' instead, move everything back by 2
+		if (nextC != '.')
+		{
+			for (std::index_t idx = index;; idx++)
+			{
+				char cc = std::read(&rawPath, idx + 2);
+				std::write(&rawPath, cc, idx);
+				if (!cc)
+					break;
+			}
+			index--;
+			continue;
+		}
+
+		for (std::index_t idx = 0;; idx++)
+		{
+			char cc = std::read(&rawPath, index + idx + 2);
+			std::write(&rawPath, cc, lastlastSeparator + idx);
+			if (!cc)
+				break;
+		}
+		lastlastSeparator = 0;
+		lastSeparator = 0;
+
+		index = 0;
+	}
+
+
+	// Now that rawPath has been sanitized, copy data over into _path
+	std::strcpy(&_path, rawPath.data);
+
+	// Also get the size of rawPath.data
+	size_t pathLength = std::strlen(rawPath);
+
+	// Copy over
+	for (std::index_t index = fileNameStartIndex + 1; index < pathLength; index++)
+		std::write(&_path, std::read(&rawPath, index), index + 1);
+
+	// Terminate string
+	std::write(&_path, '\0', pathLength + 1);
+
+	// Then overwrite last seperator 
+	std::write(&_path, '/', fileNameStartIndex);
+	std::write(&_path, '\0', fileNameStartIndex + 1);
+
+	return *this;
+}

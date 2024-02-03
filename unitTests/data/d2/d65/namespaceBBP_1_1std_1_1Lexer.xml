@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d2/d65/namespaceBBP_1_1std_1_1Lexer" kind="namespace" language="C++">
+    <compoundname>BBP::std::Lexer</compoundname>
+    <innerclass refid="d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context" prot="public">BBP::std::Lexer::lex_context</innerclass>
+    <innerclass refid="db/dca/structBBP_1_1std_1_1Lexer_1_1lex__debugInfo" prot="public">BBP::std::Lexer::lex_debugInfo</innerclass>
+    <innerclass refid="d3/d91/structBBP_1_1std_1_1Lexer_1_1lex__keyword" prot="public">BBP::std::Lexer::lex_keyword</innerclass>
+    <innerclass refid="d5/d76/structBBP_1_1std_1_1Lexer_1_1lex__thing" prot="public">BBP::std::Lexer::lex_thing</innerclass>
+    <innerclass refid="d9/d95/unionBBP_1_1std_1_1Lexer_1_1numerical__t" prot="public">BBP::std::Lexer::numerical_t</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="d2/d65/namespaceBBP_1_1std_1_1Lexer_1a0919309b6b3d20eb4cc50dad9e959613" prot="public" static="no">
+        <type><ref refid="d9/d6f/namespaceBBP_1a3558ab6953f5ed22d4c90a0e747bfc04" kindref="member">uint32_t</ref></type>
+        <definition>typedef uint32_t BBP::std::Lexer::lex_type</definition>
+        <argsstring></argsstring>
+        <name>lex_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" line="16" column="18" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d2/d65/namespaceBBP_1_1std_1_1Lexer_1a7972d8a1a2243d0b19691b5040b39379" prot="public" static="no">
+        <type><ref refid="d9/d6f/namespaceBBP_1a3558ab6953f5ed22d4c90a0e747bfc04" kindref="member">uint32_t</ref></type>
+        <definition>typedef uint32_t BBP::std::Lexer::lex_specialty</definition>
+        <argsstring></argsstring>
+        <name>lex_specialty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" line="19" column="18" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d2/d65/namespaceBBP_1_1std_1_1Lexer_1ab09b4f6b0c27fd16d1ade7bab2b6c431" prot="public" static="no">
+        <type><ref refid="d9/d6f/namespaceBBP_1a3558ab6953f5ed22d4c90a0e747bfc04" kindref="member">uint32_t</ref></type>
+        <definition>typedef uint32_t BBP::std::Lexer::lex_keywordhandle</definition>
+        <argsstring></argsstring>
+        <name>lex_keywordhandle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" line="22" column="18" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d2/d65/namespaceBBP_1_1std_1_1Lexer_1a5c5128439a2bf81c48cd2f977f2b3f40" prot="public" static="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">std::conststring</ref>(*</type>
+        <definition>typedef std::conststring(* BBP::std::Lexer::lex_action) (lex_context *, std::index_t, lex_keywordhandle)</definition>
+        <argsstring>)(lex_context *, std::index_t, lex_keywordhandle)</argsstring>
+        <name>lex_action</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" line="25" column="9" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Lex.h" line="12" column="1"/>
+  </compounddef>
+</doxygen>

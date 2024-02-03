@@ -1,0 +1,657 @@
+\hypertarget{classBBP_1_1std_1_1Stack}{}\doxysection{B\+BP\+::std\+::Stack$<$ K $>$ Class Template Reference}
+\label{classBBP_1_1std_1_1Stack}\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+
+
+{\ttfamily \#include $<$Stack.\+h$>$}
+
+
+
+Inheritance diagram for B\+BP\+::std\+::Stack$<$ K $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d40/classBBP_1_1std_1_1Stack__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for B\+BP\+::std\+::Stack$<$ K $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d30/classBBP_1_1std_1_1Stack__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a64efed21ad317ae0bf94d025de408605}{Iterator}} = void($\ast$)(K \&)
+\item 
+using \mbox{\hyperlink{classBBP_1_1std_1_1Stack_ac4bff5854bfb1d7e168fc46e9ff7f0c7}{Predicate}} = bool($\ast$)(K \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack_a8e1d01f86a2a53884afa6409e907c2f1}{Stack}} (\mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{P\+A\+GE}}$<$ K $>$ $\ast$\+\_\+page)
+\item 
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack_ae489b0256b2add75816b35b7ebaf1613}{Stack}} (\mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{P\+A\+GE}}$<$ K $>$ $\ast$\+\_\+page, \mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{size\+\_\+t}} max)
+\item 
+{\footnotesize template$<$int N$>$ }\\\mbox{\hyperlink{classBBP_1_1std_1_1Stack_a49ad838d49b7f52fdbc308b7b9106cd0}{Stack}} (\mbox{\hyperlink{structBBP_1_1std_1_1STATIC__PAGE}{S\+T\+A\+T\+I\+C\+\_\+\+P\+A\+GE}}$<$ K, N $>$ $\ast$\+\_\+page)
+\item 
+{\footnotesize template$<$int N$>$ }\\\mbox{\hyperlink{classBBP_1_1std_1_1Stack_a17b43148ac641825cd5cf9efcd0df9ae}{Stack}} (\mbox{\hyperlink{structBBP_1_1std_1_1STATIC__PAGE}{S\+T\+A\+T\+I\+C\+\_\+\+P\+A\+GE}}$<$ K, N $>$ $\ast$\+\_\+page, \mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{size\+\_\+t}} max)
+\item 
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a8d19bc2f830f72bd25727b41979de021}{operator$<$$<$}} (K value)
+\item 
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack_adf3ff221c692972347ea334d007da4fb}{operator$>$$>$}} (K \&value)
+\item 
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack_ae6e1627a74280e8f8c9ab1c4bf053462}{operator$<$=}} (K value)
+\item 
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a2438b5918618976f30c3512037d987ce}{operator$>$=}} (K \&value)
+\item 
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a0130c9118ae0c4802d35c0a094311c12}{operator$>$$>$}} (\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ \&)
+\item 
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a9cca09e173921658db58e2a4ca8c8a42}{operator$<$$<$}} (\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ \&)
+\item 
+K \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a42f8fad3c66f0d7026bcd081fcd401e7}{operator+=}} (\mbox{\hyperlink{namespaceBBP_1_1std_a09c2478fc1c6c40cd9c195abdfa4b84a}{std\+::s\+\_\+offset\+\_\+t}} offset)
+\item 
+K \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack_ae9fbcbaf4b3d75bf8d664eb1cb73ffce}{operator\%=}} (\mbox{\hyperlink{namespaceBBP_1_1std_a09c2478fc1c6c40cd9c195abdfa4b84a}{std\+::s\+\_\+offset\+\_\+t}} offset)
+\item 
+K \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a4a0a0bbb8783b49135716a1a28f42125}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}})
+\item 
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a370763394876da6f2cd48878755ceb1f}{operator++}} ()
+\item 
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a5c38aeadecf0e79334ae07b7aa205091}{operator-\/-\/}} ()
+\item 
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a2a8fd467416463b2606b3ca0dfa1d306}{operator++}} (int a)
+\item 
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a675a80c3a04b2c93cddca6395fd5625c}{operator-\/-\/}} (int a)
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a4b4f719f8f4c0c213a11fc81bf2d929a}{Extend}} (\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager}{std\+::\+Resource\+Manager}} $\ast$, \mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{size\+\_\+t}})
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1Stack_af634fcf9694db9550d929e1d65998984}{foreach}} (\mbox{\hyperlink{classBBP_1_1std_1_1Stack_a64efed21ad317ae0bf94d025de408605}{Iterator}})
+\item 
+bool \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a2adcd35954408a0e5a503e87f263a50b}{all}} (\mbox{\hyperlink{classBBP_1_1std_1_1Stack_ac4bff5854bfb1d7e168fc46e9ff7f0c7}{Predicate}})
+\item 
+bool \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a2101f38fbf210dd57d4fba1721357e6a}{any}} (\mbox{\hyperlink{classBBP_1_1std_1_1Stack_ac4bff5854bfb1d7e168fc46e9ff7f0c7}{Predicate}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{P\+A\+GE}}$<$ K $>$ $\ast$ \mbox{\hyperlink{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}{page}}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{size\+\_\+t}} \mbox{\hyperlink{classBBP_1_1std_1_1Stack_af6e3fecce1efb9635ba76706c25e08c8}{max\+\_\+elements}}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{index\+\_\+t}} \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a752abbe63aa4dc1f0e3f13cacd9feb20}{at\+Element}}
+\item 
+void($\ast$ \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a14dc7eb377f345c44025fcc38fd9aaa8}{read\+From}} )(\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ $\ast$)
+\item 
+void($\ast$ \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a32ce717db41d8608a8659a0ebac0ae16}{write\+To}} )(\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ $\ast$)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename K$>$\newline
+class B\+B\+P\+::std\+::\+Stack$<$ K $>$}
+
+
+
+Definition at line 14 of file Stack.\+h.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_a64efed21ad317ae0bf94d025de408605}\label{classBBP_1_1std_1_1Stack_a64efed21ad317ae0bf94d025de408605}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{Iterator}{Iterator}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+using \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::\mbox{\hyperlink{classBBP_1_1std_1_1Stack_a64efed21ad317ae0bf94d025de408605}{Iterator}} =  void ($\ast$)(K \&)}
+
+
+
+Definition at line 74 of file Stack.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_ac4bff5854bfb1d7e168fc46e9ff7f0c7}\label{classBBP_1_1std_1_1Stack_ac4bff5854bfb1d7e168fc46e9ff7f0c7}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!Predicate@{Predicate}}
+\index{Predicate@{Predicate}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{Predicate}{Predicate}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+using \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::\mbox{\hyperlink{classBBP_1_1std_1_1Stack_ac4bff5854bfb1d7e168fc46e9ff7f0c7}{Predicate}} =  bool ($\ast$)(K \&)}
+
+
+
+Definition at line 75 of file Stack.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_a8e1d01f86a2a53884afa6409e907c2f1}\label{classBBP_1_1std_1_1Stack_a8e1d01f86a2a53884afa6409e907c2f1}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!Stack@{Stack}}
+\index{Stack@{Stack}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{Stack()}{Stack()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{P\+A\+GE}}$<$ K $>$ $\ast$}]{\+\_\+page }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 19 of file Stack.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19 : \mbox{\hyperlink{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}{page}}(\_page), \mbox{\hyperlink{classBBP_1_1std_1_1Stack_af6e3fecce1efb9635ba76706c25e08c8}{max\_elements}}(\mbox{\hyperlink{namespaceBBP_1_1std_a3f8c5c3d25a021fbc386bafabc41a719}{std::seqlen}}(*\_page)), \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a752abbe63aa4dc1f0e3f13cacd9feb20}{atElement}}(0), \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a14dc7eb377f345c44025fcc38fd9aaa8}{readFrom}}(\textcolor{keyword}{nullptr}), \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a32ce717db41d8608a8659a0ebac0ae16}{writeTo}}(\textcolor{keyword}{nullptr}) \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_ae489b0256b2add75816b35b7ebaf1613}\label{classBBP_1_1std_1_1Stack_ae489b0256b2add75816b35b7ebaf1613}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!Stack@{Stack}}
+\index{Stack@{Stack}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{Stack()}{Stack()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{P\+A\+GE}}$<$ K $>$ $\ast$}]{\+\_\+page,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{size\+\_\+t}}}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 20 of file Stack.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20 : \mbox{\hyperlink{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}{page}}(\_page), \mbox{\hyperlink{classBBP_1_1std_1_1Stack_af6e3fecce1efb9635ba76706c25e08c8}{max\_elements}}(max), \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a752abbe63aa4dc1f0e3f13cacd9feb20}{atElement}}(0), \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a14dc7eb377f345c44025fcc38fd9aaa8}{readFrom}}(\textcolor{keyword}{nullptr}), \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a32ce717db41d8608a8659a0ebac0ae16}{writeTo}}(\textcolor{keyword}{nullptr}) \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_a49ad838d49b7f52fdbc308b7b9106cd0}\label{classBBP_1_1std_1_1Stack_a49ad838d49b7f52fdbc308b7b9106cd0}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!Stack@{Stack}}
+\index{Stack@{Stack}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{Stack()}{Stack()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+template$<$int N$>$ \\
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBBP_1_1std_1_1STATIC__PAGE}{S\+T\+A\+T\+I\+C\+\_\+\+P\+A\+GE}}$<$ K, N $>$ $\ast$}]{\+\_\+page }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 24 of file Stack.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24 : \mbox{\hyperlink{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}{page}}(\_page), \mbox{\hyperlink{classBBP_1_1std_1_1Stack_af6e3fecce1efb9635ba76706c25e08c8}{max\_elements}}(\mbox{\hyperlink{namespaceBBP_1_1std_a3f8c5c3d25a021fbc386bafabc41a719}{std::seqlen}}(*\_page)), \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a752abbe63aa4dc1f0e3f13cacd9feb20}{atElement}}(0), \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a14dc7eb377f345c44025fcc38fd9aaa8}{readFrom}}(\textcolor{keyword}{nullptr}), \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a32ce717db41d8608a8659a0ebac0ae16}{writeTo}}(\textcolor{keyword}{nullptr}) \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_a17b43148ac641825cd5cf9efcd0df9ae}\label{classBBP_1_1std_1_1Stack_a17b43148ac641825cd5cf9efcd0df9ae}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!Stack@{Stack}}
+\index{Stack@{Stack}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{Stack()}{Stack()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+template$<$int N$>$ \\
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBBP_1_1std_1_1STATIC__PAGE}{S\+T\+A\+T\+I\+C\+\_\+\+P\+A\+GE}}$<$ K, N $>$ $\ast$}]{\+\_\+page,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{size\+\_\+t}}}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 26 of file Stack.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26 : \mbox{\hyperlink{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}{page}}(\_page), \mbox{\hyperlink{classBBP_1_1std_1_1Stack_af6e3fecce1efb9635ba76706c25e08c8}{max\_elements}}(max), \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a752abbe63aa4dc1f0e3f13cacd9feb20}{atElement}}(0), \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a14dc7eb377f345c44025fcc38fd9aaa8}{readFrom}}(\textcolor{keyword}{nullptr}), \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a32ce717db41d8608a8659a0ebac0ae16}{writeTo}}(\textcolor{keyword}{nullptr}) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_a2adcd35954408a0e5a503e87f263a50b}\label{classBBP_1_1std_1_1Stack_a2adcd35954408a0e5a503e87f263a50b}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!all@{all}}
+\index{all@{all}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{all()}{all()}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+bool \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::all (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBBP_1_1std_1_1Stack_ac4bff5854bfb1d7e168fc46e9ff7f0c7}{Predicate}}}]{lambda }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 158 of file Stack.\+hxx.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{159         \{}
+\DoxyCodeLine{160             \textcolor{keywordtype}{bool} result = \textcolor{keyword}{true};}
+\DoxyCodeLine{161             \textcolor{keywordflow}{for} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} index = 0; index < \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a752abbe63aa4dc1f0e3f13cacd9feb20}{atElement}}; index++)}
+\DoxyCodeLine{162                 result \&= lambda(\mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{read}}(\mbox{\hyperlink{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}{page}}, index));}
+\DoxyCodeLine{163             \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{164         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_a2101f38fbf210dd57d4fba1721357e6a}\label{classBBP_1_1std_1_1Stack_a2101f38fbf210dd57d4fba1721357e6a}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!any@{any}}
+\index{any@{any}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{any()}{any()}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+bool \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::any (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBBP_1_1std_1_1Stack_ac4bff5854bfb1d7e168fc46e9ff7f0c7}{Predicate}}}]{lambda }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 167 of file Stack.\+hxx.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{168         \{}
+\DoxyCodeLine{169             \textcolor{keywordtype}{bool} result = \textcolor{keyword}{true};}
+\DoxyCodeLine{170             \textcolor{keywordflow}{for} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} index = 0; index < \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a752abbe63aa4dc1f0e3f13cacd9feb20}{atElement}}; index++)}
+\DoxyCodeLine{171                 result |= lambda(\mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{read}}(\mbox{\hyperlink{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}{page}}, index));}
+\DoxyCodeLine{172             \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{173         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_a4b4f719f8f4c0c213a11fc81bf2d929a}\label{classBBP_1_1std_1_1Stack_a4b4f719f8f4c0c213a11fc81bf2d929a}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!Extend@{Extend}}
+\index{Extend@{Extend}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{Extend()}{Extend()}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+void \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::Extend (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBBP_1_1std_1_1ResourceManager}{std\+::\+Resource\+Manager}} $\ast$}]{allocator,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{size\+\_\+t}}}]{by }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 125 of file Stack.\+hxx.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{126         \{}
+\DoxyCodeLine{127             \textcolor{comment}{// Create temporary string}}
+\DoxyCodeLine{128             std::PAGE<K> temp(*\mbox{\hyperlink{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}{page}});}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130             \textcolor{comment}{// Save size}}
+\DoxyCodeLine{131             \textcolor{keywordtype}{size\_t} oldSize = \mbox{\hyperlink{classBBP_1_1std_1_1Stack_af6e3fecce1efb9635ba76706c25e08c8}{max\_elements}};}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133             \textcolor{comment}{// Now create a new page}}
+\DoxyCodeLine{134             *\mbox{\hyperlink{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}{page}} = std::PAGE<K>(\mbox{\hyperlink{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}{page}}-\/>\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a3b5c962d781f42d8dc36949061c308ab}{dataSize}} + by, (K *)allocator-\/>calloc(\mbox{\hyperlink{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}{page}}-\/>\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a3b5c962d781f42d8dc36949061c308ab}{dataSize}} + by, \textcolor{keyword}{sizeof}(K)));}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136             \textcolor{comment}{// Copy old data into data}}
+\DoxyCodeLine{137             \mbox{\hyperlink{namespaceBBP_1_1std_a997d77887946462f3e071f11465abfae}{memcpy}}(temp, *\mbox{\hyperlink{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}{page}}, oldSize);}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139             \textcolor{comment}{// Then free old string}}
+\DoxyCodeLine{140             allocator-\/>free(temp.data);}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142             \textcolor{comment}{// Then save the prev and next pages}}
+\DoxyCodeLine{143             \mbox{\hyperlink{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}{page}}-\/>\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_ae3ed5c6be788a903036a151ac69cd2d9}{prevPage}} = temp.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_ae3ed5c6be788a903036a151ac69cd2d9}{prevPage}};}
+\DoxyCodeLine{144             \mbox{\hyperlink{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}{page}}-\/>\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a8d21ebf8bb4b9485b67e17698ff1f890}{nextPage}} = temp.\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a8d21ebf8bb4b9485b67e17698ff1f890}{nextPage}};}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146             \textcolor{comment}{// Update stack length}}
+\DoxyCodeLine{147             \mbox{\hyperlink{classBBP_1_1std_1_1Stack_af6e3fecce1efb9635ba76706c25e08c8}{max\_elements}} = \mbox{\hyperlink{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}{page}}-\/>\mbox{\hyperlink{structBBP_1_1std_1_1PAGE_a3b5c962d781f42d8dc36949061c308ab}{dataSize}};}
+\DoxyCodeLine{148         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_af634fcf9694db9550d929e1d65998984}\label{classBBP_1_1std_1_1Stack_af634fcf9694db9550d929e1d65998984}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!foreach@{foreach}}
+\index{foreach@{foreach}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{foreach()}{foreach()}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+void \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::foreach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBBP_1_1std_1_1Stack_a64efed21ad317ae0bf94d025de408605}{Iterator}}}]{lambda }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 151 of file Stack.\+hxx.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{152         \{}
+\DoxyCodeLine{153             \textcolor{keywordflow}{for} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} index = 0; index < \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a752abbe63aa4dc1f0e3f13cacd9feb20}{atElement}}; index++)}
+\DoxyCodeLine{154                 lambda(\mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{read}}(\mbox{\hyperlink{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}{page}},index));}
+\DoxyCodeLine{155         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_ae9fbcbaf4b3d75bf8d664eb1cb73ffce}\label{classBBP_1_1std_1_1Stack_ae9fbcbaf4b3d75bf8d664eb1cb73ffce}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!operator\%=@{operator\%=}}
+\index{operator\%=@{operator\%=}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{operator\%=()}{operator\%=()}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+K \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::operator\%= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_a09c2478fc1c6c40cd9c195abdfa4b84a}{std\+::s\+\_\+offset\+\_\+t}}}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 118 of file Stack.\+hxx.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{119         \{}
+\DoxyCodeLine{120             \textcolor{comment}{// Just read unsafely and return directly.}}
+\DoxyCodeLine{121             \textcolor{keywordflow}{return} \mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\_\_UNSAFE\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}})(\mbox{\hyperlink{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}{page}}, \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a752abbe63aa4dc1f0e3f13cacd9feb20}{atElement}} + offset);}
+\DoxyCodeLine{122         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_a370763394876da6f2cd48878755ceb1f}\label{classBBP_1_1std_1_1Stack_a370763394876da6f2cd48878755ceb1f}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::operator++\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 13 of file Stack.\+hxx.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14         \{}
+\DoxyCodeLine{15             this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1Stack_a752abbe63aa4dc1f0e3f13cacd9feb20}{atElement}}++;}
+\DoxyCodeLine{16             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{17         \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d21/classBBP_1_1std_1_1Stack_a370763394876da6f2cd48878755ceb1f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_a2a8fd467416463b2606b3ca0dfa1d306}\label{classBBP_1_1std_1_1Stack_a2a8fd467416463b2606b3ca0dfa1d306}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$K$>$\& \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 51 of file Stack.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52             \{}
+\DoxyCodeLine{53                 \mbox{\hyperlink{namespaceBBP_1_1Locale_1_1Japanese_a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a}{a}} = \mbox{\hyperlink{namespaceBBP_1_1Locale_1_1Japanese_a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a}{a}};}
+\DoxyCodeLine{54                 this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1Stack_a370763394876da6f2cd48878755ceb1f}{operator++}}();}
+\DoxyCodeLine{55                 \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{56             \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_a42f8fad3c66f0d7026bcd081fcd401e7}\label{classBBP_1_1std_1_1Stack_a42f8fad3c66f0d7026bcd081fcd401e7}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+K \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::operator+= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_a09c2478fc1c6c40cd9c195abdfa4b84a}{std\+::s\+\_\+offset\+\_\+t}}}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 108 of file Stack.\+hxx.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{109         \{}
+\DoxyCodeLine{110             \textcolor{comment}{// Check bounds of offset}}
+\DoxyCodeLine{111             \textcolor{keywordflow}{if} ((\mbox{\hyperlink{classBBP_1_1std_1_1Stack_a752abbe63aa4dc1f0e3f13cacd9feb20}{atElement}} < offset \&\& offset < 0) || \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a752abbe63aa4dc1f0e3f13cacd9feb20}{atElement}} + offset >= \mbox{\hyperlink{classBBP_1_1std_1_1Stack_af6e3fecce1efb9635ba76706c25e08c8}{max\_elements}})}
+\DoxyCodeLine{112                 \textcolor{keywordflow}{throw} \mbox{\hyperlink{namespaceBBP_1_1std_a750ba4c285e0788e84722a30a776b913}{std::exception}}(\textcolor{stringliteral}{"Cannot peek element from stack: offset index exceeds stack page bounds."}, \mbox{\hyperlink{errno_8h_add669d31505a077f769cff8e66c780b3}{EPERM}});}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114             \textcolor{keywordflow}{return} \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}}(\mbox{\hyperlink{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}{page}}, \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a752abbe63aa4dc1f0e3f13cacd9feb20}{atElement}} + offset);}
+\DoxyCodeLine{115         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_a5c38aeadecf0e79334ae07b7aa205091}\label{classBBP_1_1std_1_1Stack_a5c38aeadecf0e79334ae07b7aa205091}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::operator-\/-\/\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 20 of file Stack.\+hxx.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21         \{}
+\DoxyCodeLine{22             this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1Stack_a752abbe63aa4dc1f0e3f13cacd9feb20}{atElement}}-\/-\/;}
+\DoxyCodeLine{23             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{24         \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d21/classBBP_1_1std_1_1Stack_a5c38aeadecf0e79334ae07b7aa205091_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_a675a80c3a04b2c93cddca6395fd5625c}\label{classBBP_1_1std_1_1Stack_a675a80c3a04b2c93cddca6395fd5625c}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$K$>$\& \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 57 of file Stack.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58             \{}
+\DoxyCodeLine{59                 \mbox{\hyperlink{namespaceBBP_1_1Locale_1_1Japanese_a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a}{a}} = \mbox{\hyperlink{namespaceBBP_1_1Locale_1_1Japanese_a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a}{a}};}
+\DoxyCodeLine{60                 this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1Stack_a5c38aeadecf0e79334ae07b7aa205091}{operator-\/-\/}}();}
+\DoxyCodeLine{61                 \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{62             \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_a8d19bc2f830f72bd25727b41979de021}\label{classBBP_1_1std_1_1Stack_a8d19bc2f830f72bd25727b41979de021}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{K}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 27 of file Stack.\+hxx.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{28         \{}
+\DoxyCodeLine{29             \textcolor{comment}{// Check if stack has space}}
+\DoxyCodeLine{30             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Stack_a752abbe63aa4dc1f0e3f13cacd9feb20}{atElement}} >= \mbox{\hyperlink{classBBP_1_1std_1_1Stack_af6e3fecce1efb9635ba76706c25e08c8}{max\_elements}})}
+\DoxyCodeLine{31                 \textcolor{keywordflow}{throw} \mbox{\hyperlink{namespaceBBP_1_1std_a750ba4c285e0788e84722a30a776b913}{std::exception}}(\textcolor{stringliteral}{"Cannot add value to stack: maximum elements reached."}, \mbox{\hyperlink{errno_8h_add669d31505a077f769cff8e66c780b3}{EPERM}});}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33             \textcolor{comment}{// Write to page}}
+\DoxyCodeLine{34             \mbox{\hyperlink{namespaceBBP_1_1std_aa63573041786d49b7cdb2eec8a921a6a}{std::write}}(\mbox{\hyperlink{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}{page}}, value, \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a752abbe63aa4dc1f0e3f13cacd9feb20}{atElement}});}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36             \textcolor{comment}{// Advance one position}}
+\DoxyCodeLine{37             this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1Stack_a370763394876da6f2cd48878755ceb1f}{operator++}}();}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{40         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_a9cca09e173921658db58e2a4ca8c8a42}\label{classBBP_1_1std_1_1Stack_a9cca09e173921658db58e2a4ca8c8a42}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 59 of file Stack.\+hxx.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{60         \{}
+\DoxyCodeLine{61             \textcolor{keywordtype}{char} c = 0;}
+\DoxyCodeLine{62             value >> c;}
+\DoxyCodeLine{63             *\textcolor{keyword}{this} << c;}
+\DoxyCodeLine{64             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{65         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_ae6e1627a74280e8f8c9ab1c4bf053462}\label{classBBP_1_1std_1_1Stack_ae6e1627a74280e8f8c9ab1c4bf053462}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::operator$<$= (\begin{DoxyParamCaption}\item[{K}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 77 of file Stack.\+hxx.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{78         \{}
+\DoxyCodeLine{79             \textcolor{comment}{// Write to page without safety}}
+\DoxyCodeLine{80             \mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\_\_UNSAFE\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_aa63573041786d49b7cdb2eec8a921a6a}{std::write}})(\mbox{\hyperlink{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}{page}}, value, \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a752abbe63aa4dc1f0e3f13cacd9feb20}{atElement}});}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82             \textcolor{comment}{// Advance one position}}
+\DoxyCodeLine{83             this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1Stack_a370763394876da6f2cd48878755ceb1f}{operator++}}();}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{86         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_a2438b5918618976f30c3512037d987ce}\label{classBBP_1_1std_1_1Stack_a2438b5918618976f30c3512037d987ce}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::operator$>$= (\begin{DoxyParamCaption}\item[{K \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 89 of file Stack.\+hxx.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{90         \{}
+\DoxyCodeLine{91             \textcolor{comment}{// Decrement by one position}}
+\DoxyCodeLine{92             this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1Stack_a5c38aeadecf0e79334ae07b7aa205091}{operator-\/-\/}}();}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94             \textcolor{comment}{// Read value without safety}}
+\DoxyCodeLine{95             value = \mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\_\_UNSAFE\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}})(\mbox{\hyperlink{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}{page}}, \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a752abbe63aa4dc1f0e3f13cacd9feb20}{atElement}});}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{98         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_adf3ff221c692972347ea334d007da4fb}\label{classBBP_1_1std_1_1Stack_adf3ff221c692972347ea334d007da4fb}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::operator$>$$>$ (\begin{DoxyParamCaption}\item[{K \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 43 of file Stack.\+hxx.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44         \{}
+\DoxyCodeLine{45             \textcolor{comment}{// Check if stack has anything}}
+\DoxyCodeLine{46             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Stack_a752abbe63aa4dc1f0e3f13cacd9feb20}{atElement}} == 0)}
+\DoxyCodeLine{47                 \textcolor{keywordflow}{throw} \mbox{\hyperlink{namespaceBBP_1_1std_a750ba4c285e0788e84722a30a776b913}{std::exception}}(\textcolor{stringliteral}{"Cannot read from stack: stack is empty."}, \mbox{\hyperlink{errno_8h_add669d31505a077f769cff8e66c780b3}{EPERM}});}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49             \textcolor{comment}{// Decrement by one position}}
+\DoxyCodeLine{50             this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1Stack_a5c38aeadecf0e79334ae07b7aa205091}{operator-\/-\/}}();}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52             \textcolor{comment}{// Read value}}
+\DoxyCodeLine{53             value = \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}}(\mbox{\hyperlink{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}{page}}, \mbox{\hyperlink{classBBP_1_1std_1_1Stack_a752abbe63aa4dc1f0e3f13cacd9feb20}{atElement}});}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{56         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_a0130c9118ae0c4802d35c0a094311c12}\label{classBBP_1_1std_1_1Stack_a0130c9118ae0c4802d35c0a094311c12}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::operator$>$$>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 68 of file Stack.\+hxx.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69         \{}
+\DoxyCodeLine{70             \textcolor{keywordtype}{char} c = 0;}
+\DoxyCodeLine{71             *\textcolor{keyword}{this} >> c;}
+\DoxyCodeLine{72             value << c;}
+\DoxyCodeLine{73             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{74         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_a4a0a0bbb8783b49135716a1a28f42125}\label{classBBP_1_1std_1_1Stack_a4a0a0bbb8783b49135716a1a28f42125}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+K \& \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}}}]{access }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 101 of file Stack.\+hxx.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{102         \{}
+\DoxyCodeLine{103             \textcolor{keywordflow}{return} \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{read}}(this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}{page}}, access);}
+\DoxyCodeLine{104         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_a752abbe63aa4dc1f0e3f13cacd9feb20}\label{classBBP_1_1std_1_1Stack_a752abbe63aa4dc1f0e3f13cacd9feb20}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!atElement@{atElement}}
+\index{atElement@{atElement}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{atElement}{atElement}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{index\+\_\+t}} \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::at\+Element}
+
+
+
+Definition at line 67 of file Stack.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_af6e3fecce1efb9635ba76706c25e08c8}\label{classBBP_1_1std_1_1Stack_af6e3fecce1efb9635ba76706c25e08c8}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!max\_elements@{max\_elements}}
+\index{max\_elements@{max\_elements}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{max\_elements}{max\_elements}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+\mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{size\+\_\+t}} \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::max\+\_\+elements}
+
+
+
+Definition at line 66 of file Stack.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}\label{classBBP_1_1std_1_1Stack_aaacd32840edd56a62471a2aedbbe85dc}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!page@{page}}
+\index{page@{page}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{page}{page}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+\mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{P\+A\+GE}}$<$K$>$$\ast$ \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::page}
+
+
+
+Definition at line 64 of file Stack.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_a14dc7eb377f345c44025fcc38fd9aaa8}\label{classBBP_1_1std_1_1Stack_a14dc7eb377f345c44025fcc38fd9aaa8}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!readFrom@{readFrom}}
+\index{readFrom@{readFrom}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{readFrom}{readFrom}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+void($\ast$ \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::read\+From) (\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ $\ast$)}
+
+
+
+Definition at line 71 of file Stack.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1Stack_a32ce717db41d8608a8659a0ebac0ae16}\label{classBBP_1_1std_1_1Stack_a32ce717db41d8608a8659a0ebac0ae16}} 
+\index{BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}!writeTo@{writeTo}}
+\index{writeTo@{writeTo}!BBP::std::Stack$<$ K $>$@{BBP::std::Stack$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{writeTo}{writeTo}}
+{\footnotesize\ttfamily template$<$typename K $>$ \\
+void($\ast$ \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{B\+B\+P\+::std\+::\+Stack}}$<$ K $>$\+::write\+To) (\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{Stack}}$<$ K $>$ $\ast$)}
+
+
+
+Definition at line 72 of file Stack.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Stack_8h}{Stack.\+h}}\item 
+\mbox{\hyperlink{Stack_8hxx}{Stack.\+hxx}}\end{DoxyCompactItemize}

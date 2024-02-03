@@ -1,0 +1,1316 @@
+.TH "Actions.h" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Actions.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include '\&.\&./include/Lex\&.h'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBBBP\fP"
+.br
+.ti -1c
+.RI " \fBBBP::esa\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBACTION\fP(name)   \fBBBP::std::conststring\fP kw_##name (\fBBBP::std::Lexer::lex_context\fP *, \fBBBP::std::index_t\fP, \fBBBP::std::Lexer::lex_keywordhandle\fP)"
+.br
+.ti -1c
+.RI "#define \fBTOKEN\fP(name)   \fBBBP::std::conststring\fP tk_##name (\fBBBP::std::Lexer::lex_context\fP *, \fBBBP::std::index_t\fP, \fBBBP::std::Lexer::lex_keywordhandle\fP)"
+.br
+.ti -1c
+.RI "#define \fBPRAGMA\fP(name)   \fBBBP::std::conststring\fP pragma_##name (\fBBBP::std::Lexer::lex_context\fP *, \fBBBP::std::index_t\fP, \fBBBP::std::Lexer::lex_keywordhandle\fP)"
+.br
+.ti -1c
+.RI "#define \fBINSTRUCTION\fP(name)   \fBBBP::std::conststring\fP mn_##name (\fBBBP::std::Lexer::lex_context\fP *, \fBBBP::std::index_t\fP, \fBBBP::std::Lexer::lex_keywordhandle\fP)"
+.br
+.ti -1c
+.RI "#define \fBINCLUDE_HANDLE\fP   0"
+.br
+.ti -1c
+.RI "#define \fBHANDLER_HANDLE\fP   1"
+.br
+.ti -1c
+.RI "#define \fBDEFINE_HANDLE\fP   2"
+.br
+.ti -1c
+.RI "#define \fBUNDEF_HANDLE\fP   3"
+.br
+.ti -1c
+.RI "#define \fBIFNDEF_HANDLE\fP   4"
+.br
+.ti -1c
+.RI "#define \fBIFDEF_HANDLE\fP   5"
+.br
+.ti -1c
+.RI "#define \fBENDIF_HANDLE\fP   6"
+.br
+.ti -1c
+.RI "#define \fBELSE_HANDLE\fP   7"
+.br
+.ti -1c
+.RI "#define \fBATOMIC_HANDLE\fP   8"
+.br
+.ti -1c
+.RI "#define \fBHANDOVER_HANDLE\fP   9"
+.br
+.ti -1c
+.RI "#define \fBCONTINUE_HANDLE\fP   10"
+.br
+.ti -1c
+.RI "#define \fBSTATIC_HANDLE\fP   11"
+.br
+.ti -1c
+.RI "#define \fBCONST_HANDLE\fP   12"
+.br
+.ti -1c
+.RI "#define \fBVIRTUAL_HANDLE\fP   13"
+.br
+.ti -1c
+.RI "#define \fBEXTERN_HANDLE\fP   14"
+.br
+.ti -1c
+.RI "#define \fBPROCEDURE_HANDLE\fP   15"
+.br
+.ti -1c
+.RI "#define \fBEND_HANDLE\fP   16"
+.br
+.ti -1c
+.RI "#define \fBLABEL_HANDLE\fP   17"
+.br
+.ti -1c
+.RI "#define \fBCARRIAGERETURN_HANDLE\fP   18"
+.br
+.ti -1c
+.RI "#define \fBNEWLINE_HANDLE\fP   19"
+.br
+.ti -1c
+.RI "#define \fBSEMICOLON_HANDLE\fP   20"
+.br
+.ti -1c
+.RI "#define \fBOPENBRACKET_HANDLE\fP   21"
+.br
+.ti -1c
+.RI "#define \fBCLOSEBRACKET_HANDLE\fP   22"
+.br
+.ti -1c
+.RI "#define \fBCOMMA_HANDLE\fP   23"
+.br
+.ti -1c
+.RI "#define \fBOPENSQBRACKET_HANDLE\fP   24"
+.br
+.ti -1c
+.RI "#define \fBCLOSESQBRACKET_HANDLE\fP   25"
+.br
+.ti -1c
+.RI "#define \fBOPENCURLBRACKET_HANDLE\fP   26"
+.br
+.ti -1c
+.RI "#define \fBCLOSECURLBRACKET_HANDLE\fP   27"
+.br
+.ti -1c
+.RI "#define \fBPERCENT_HANDLE\fP   28"
+.br
+.ti -1c
+.RI "#define \fBOPENANGLEBRACKET_HANDLE\fP   29"
+.br
+.ti -1c
+.RI "#define \fBCLOSEANGLEBRACKET_HANDLE\fP   30"
+.br
+.ti -1c
+.RI "#define \fBDOUBLEQUOTES_HANDLE\fP   31"
+.br
+.ti -1c
+.RI "#define \fBSINGLEQUOTES_HANDLE\fP   32"
+.br
+.ti -1c
+.RI "#define \fBCOLON_HANDLE\fP   33"
+.br
+.ti -1c
+.RI "#define \fBBACKSLASH_HANDLE\fP   34"
+.br
+.ti -1c
+.RI "#define \fBDN_HANDLE\fP   35"
+.br
+.ti -1c
+.RI "#define \fBDB_HANDLE\fP   36"
+.br
+.ti -1c
+.RI "#define \fBDH_HANDLE\fP   37"
+.br
+.ti -1c
+.RI "#define \fBDI_HANDLE\fP   38"
+.br
+.ti -1c
+.RI "#define \fBDA_HANDLE\fP   39"
+.br
+.ti -1c
+.RI "#define \fBDW_HANDLE\fP   40"
+.br
+.ti -1c
+.RI "#define \fBNIL_HANDLE\fP   41"
+.br
+.ti -1c
+.RI "#define \fBPUSH_HANDLE\fP   42"
+.br
+.ti -1c
+.RI "#define \fBPOP_HANDLE\fP   43"
+.br
+.ti -1c
+.RI "#define \fBPOPA_HANDLE\fP   44"
+.br
+.ti -1c
+.RI "#define \fBRET_HANDLE\fP   45"
+.br
+.ti -1c
+.RI "#define \fBCALL_HANDLE\fP   46"
+.br
+.ti -1c
+.RI "#define \fBCALLP_HANDLE\fP   47"
+.br
+.ti -1c
+.RI "#define \fBSYSCALL_HANDLE\fP   48"
+.br
+.ti -1c
+.RI "#define \fBMOVB_HANDLE\fP   49"
+.br
+.ti -1c
+.RI "#define \fBMOVH_HANDLE\fP   50"
+.br
+.ti -1c
+.RI "#define \fBMOVW_HANDLE\fP   51"
+.br
+.ti -1c
+.RI "#define \fBMOVA_HANDLE\fP   52"
+.br
+.ti -1c
+.RI "#define \fBMOVBH_HANDLE\fP   53"
+.br
+.ti -1c
+.RI "#define \fBMOVBW_HANDLE\fP   54"
+.br
+.ti -1c
+.RI "#define \fBMOVBA_HANDLE\fP   55"
+.br
+.ti -1c
+.RI "#define \fBMOVHB_HANDLE\fP   56"
+.br
+.ti -1c
+.RI "#define \fBMOVHW_HANDLE\fP   57"
+.br
+.ti -1c
+.RI "#define \fBMOVHA_HANDLE\fP   58"
+.br
+.ti -1c
+.RI "#define \fBMOVWB_HANDLE\fP   59"
+.br
+.ti -1c
+.RI "#define \fBMOVWH_HANDLE\fP   60"
+.br
+.ti -1c
+.RI "#define \fBMOVWA_HANDLE\fP   61"
+.br
+.ti -1c
+.RI "#define \fBMOVAB_HANDLE\fP   62"
+.br
+.ti -1c
+.RI "#define \fBMOVAH_HANDLE\fP   63"
+.br
+.ti -1c
+.RI "#define \fBMOVAW_HANDLE\fP   64"
+.br
+.ti -1c
+.RI "#define \fBINC_HANDLE\fP   65"
+.br
+.ti -1c
+.RI "#define \fBDEC_HANDLE\fP   66"
+.br
+.ti -1c
+.RI "#define \fBNEG_HANDLE\fP   67"
+.br
+.ti -1c
+.RI "#define \fBADD_HANDLE\fP   68"
+.br
+.ti -1c
+.RI "#define \fBSUB_HANDLE\fP   69"
+.br
+.ti -1c
+.RI "#define \fBMUL_HANDLE\fP   70"
+.br
+.ti -1c
+.RI "#define \fBDIV_HANDLE\fP   71"
+.br
+.ti -1c
+.RI "#define \fBMOD_HANDLE\fP   72"
+.br
+.ti -1c
+.RI "#define \fBINCF_HANDLE\fP   73"
+.br
+.ti -1c
+.RI "#define \fBDECF_HANDLE\fP   74"
+.br
+.ti -1c
+.RI "#define \fBNEGF_HANDLE\fP   75"
+.br
+.ti -1c
+.RI "#define \fBADDF_HANDLE\fP   76"
+.br
+.ti -1c
+.RI "#define \fBSUBF_HANDLE\fP   77"
+.br
+.ti -1c
+.RI "#define \fBMULF_HANDLE\fP   78"
+.br
+.ti -1c
+.RI "#define \fBDIVF_HANDLE\fP   79"
+.br
+.ti -1c
+.RI "#define \fBMODF_HANDLE\fP   80"
+.br
+.ti -1c
+.RI "#define \fBADDFF_HANDLE\fP   81"
+.br
+.ti -1c
+.RI "#define \fBSUBFF_HANDLE\fP   82"
+.br
+.ti -1c
+.RI "#define \fBMULFF_HANDLE\fP   83"
+.br
+.ti -1c
+.RI "#define \fBDIVFF_HANDLE\fP   84"
+.br
+.ti -1c
+.RI "#define \fBMODFF_HANDLE\fP   85"
+.br
+.ti -1c
+.RI "#define \fBADDIF_HANDLE\fP   86"
+.br
+.ti -1c
+.RI "#define \fBSUBIF_HANDLE\fP   87"
+.br
+.ti -1c
+.RI "#define \fBMULIF_HANDLE\fP   88"
+.br
+.ti -1c
+.RI "#define \fBDIVIF_HANDLE\fP   89"
+.br
+.ti -1c
+.RI "#define \fBMODIF_HANDLE\fP   90"
+.br
+.ti -1c
+.RI "#define \fBLBS_HANDLE\fP   91"
+.br
+.ti -1c
+.RI "#define \fBRBS_HANDLE\fP   92"
+.br
+.ti -1c
+.RI "#define \fBOR_HANDLE\fP   93"
+.br
+.ti -1c
+.RI "#define \fBXOR_HANDLE\fP   94"
+.br
+.ti -1c
+.RI "#define \fBAND_HANDLE\fP   95"
+.br
+.ti -1c
+.RI "#define \fBNOT_HANDLE\fP   96"
+.br
+.ti -1c
+.RI "#define \fBORB_HANDLE\fP   97"
+.br
+.ti -1c
+.RI "#define \fBXORB_HANDLE\fP   98"
+.br
+.ti -1c
+.RI "#define \fBANDB_HANDLE\fP   99"
+.br
+.ti -1c
+.RI "#define \fBNOTB_HANDLE\fP   100"
+.br
+.ti -1c
+.RI "#define \fBLBSIP_HANDLE\fP   101"
+.br
+.ti -1c
+.RI "#define \fBRBSIP_HANDLE\fP   102"
+.br
+.ti -1c
+.RI "#define \fBORIP_HANDLE\fP   103"
+.br
+.ti -1c
+.RI "#define \fBXORIP_HANDLE\fP   104"
+.br
+.ti -1c
+.RI "#define \fBANDIP_HANDLE\fP   105"
+.br
+.ti -1c
+.RI "#define \fBNOTIP_HANDLE\fP   106"
+.br
+.ti -1c
+.RI "#define \fBORBIP_HANDLE\fP   107"
+.br
+.ti -1c
+.RI "#define \fBXORBIP_HANDLE\fP   108"
+.br
+.ti -1c
+.RI "#define \fBANDBIP_HANDLE\fP   109"
+.br
+.ti -1c
+.RI "#define \fBNOTBIP_HANDLE\fP   110"
+.br
+.ti -1c
+.RI "#define \fBCOMP_HANDLE\fP   111"
+.br
+.ti -1c
+.RI "#define \fBFLAG_HANDLE\fP   112"
+.br
+.ti -1c
+.RI "#define \fBROUTINE_HANDLE\fP   113"
+.br
+.ti -1c
+.RI "#define \fBJMP_HANDLE\fP   114"
+.br
+.ti -1c
+.RI "#define \fBJLZ_HANDLE\fP   115"
+.br
+.ti -1c
+.RI "#define \fBJGZ_HANDLE\fP   116"
+.br
+.ti -1c
+.RI "#define \fBJEZ_HANDLE\fP   117"
+.br
+.ti -1c
+.RI "#define \fBJLT_HANDLE\fP   118"
+.br
+.ti -1c
+.RI "#define \fBJGT_HANDLE\fP   119"
+.br
+.ti -1c
+.RI "#define \fBJLZN_HANDLE\fP   120"
+.br
+.ti -1c
+.RI "#define \fBJGZN_HANDLE\fP   121"
+.br
+.ti -1c
+.RI "#define \fBJEZN_HANDLE\fP   122"
+.br
+.ti -1c
+.RI "#define \fBJLTN_HANDLE\fP   123"
+.br
+.ti -1c
+.RI "#define \fBJGTN_HANDLE\fP   124"
+.br
+.ti -1c
+.RI "#define \fBJMPR_HANDLE\fP   125"
+.br
+.ti -1c
+.RI "#define \fBJLZR_HANDLE\fP   126"
+.br
+.ti -1c
+.RI "#define \fBJGZR_HANDLE\fP   127"
+.br
+.ti -1c
+.RI "#define \fBJEZR_HANDLE\fP   128"
+.br
+.ti -1c
+.RI "#define \fBJLTR_HANDLE\fP   129"
+.br
+.ti -1c
+.RI "#define \fBJGTR_HANDLE\fP   130"
+.br
+.ti -1c
+.RI "#define \fBJLZNR_HANDLE\fP   131"
+.br
+.ti -1c
+.RI "#define \fBJGZNR_HANDLE\fP   132"
+.br
+.ti -1c
+.RI "#define \fBJEZNR_HANDLE\fP   133"
+.br
+.ti -1c
+.RI "#define \fBJLTNR_HANDLE\fP   134"
+.br
+.ti -1c
+.RI "#define \fBJGTNR_HANDLE\fP   135"
+.br
+.ti -1c
+.RI "#define \fBPAGE_HANDLE\fP   136"
+.br
+.ti -1c
+.RI "#define \fBPAGEAW_HANDLE\fP   137"
+.br
+.ti -1c
+.RI "#define \fBPAGEAR_HANDLE\fP   138"
+.br
+.ti -1c
+.RI "#define \fBPAGEW_HANDLE\fP   139"
+.br
+.ti -1c
+.RI "#define \fBPAGER_HANDLE\fP   140"
+.br
+.ti -1c
+.RI "#define \fBPALLOC_HANDLE\fP   141"
+.br
+.ti -1c
+.RI "#define \fBPFREE_HANDLE\fP   142"
+.br
+.ti -1c
+.RI "#define \fBPAGES_HANDLE\fP   143"
+.br
+.ti -1c
+.RI "#define \fBPAGEBC_HANDLE\fP   144"
+.br
+.ti -1c
+.RI "#define \fBPASSIGN_HANDLE\fP   145"
+.br
+.ti -1c
+.RI "#define \fBSIGNAL_HANDLE\fP   146"
+.br
+.ti -1c
+.RI "#define \fBSIGNALF_HANDLE\fP   147"
+.br
+.ti -1c
+.RI "#define \fBHLT_HANDLE\fP   148"
+.br
+.ti -1c
+.RI "#define \fBHCF_HANDLE\fP   149"
+.br
+.ti -1c
+.RI "#define \fBHBU_HANDLE\fP   150"
+.br
+.ti -1c
+.RI "#define \fBACTION\fP(name)   \fBBBP::std::conststring\fP BBP::esa::kw_##name (\fBBBP::std::Lexer::lex_context\fP *context, \fBBBP::std::index_t\fP index, \fBBBP::std::Lexer::lex_keywordhandle\fP handle)"
+.br
+.ti -1c
+.RI "#define \fBTOKEN\fP(name)   \fBBBP::std::conststring\fP BBP::esa::tk_##name (\fBBBP::std::Lexer::lex_context\fP *context, \fBBBP::std::index_t\fP index, \fBBBP::std::Lexer::lex_keywordhandle\fP handle)"
+.br
+.ti -1c
+.RI "#define \fBPRAGMA\fP(name)   \fBBBP::std::conststring\fP BBP::esa::pragma_##name (\fBBBP::std::Lexer::lex_context\fP *context, \fBBBP::std::index_t\fP index, \fBBBP::std::Lexer::lex_keywordhandle\fP handle)"
+.br
+.ti -1c
+.RI "#define \fBINSTRUCTION\fP(name)   \fBBBP::std::conststring\fP BBP::esa::mn_##name (\fBBBP::std::Lexer::lex_context\fP *context, \fBBBP::std::index_t\fP index, \fBBBP::std::Lexer::lex_keywordhandle\fP handle)"
+.br
+.ti -1c
+.RI "#define \fBAUX\fP(name)   \fBBBP::std::conststring\fP BBP::esa::##name (\fBBBP::std::Lexer::lex_context\fP *, \fBBBP::std::index_t\fP, \fBBBP::std::Lexer::lex_keywordhandle\fP)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBBP::esa::PRAGMA\fP (include)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::PRAGMA\fP (handler)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::PRAGMA\fP (define)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::PRAGMA\fP (undef)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::PRAGMA\fP (ifndef)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::PRAGMA\fP (ifdef)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::PRAGMA\fP (endif)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::PRAGMA\fP (else)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::PRAGMA\fP (atomic)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::PRAGMA\fP (handover)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::PRAGMA\fP (continue)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::ACTION\fP (static)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::ACTION\fP (const)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::ACTION\fP (virtual)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::ACTION\fP (extern)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::ACTION\fP (procedure)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::ACTION\fP (end)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::ACTION\fP (endroutine)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::TOKEN\fP (newline)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::TOKEN\fP (semicolon)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::TOKEN\fP (openDelimiter)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::TOKEN\fP (closeDelimiter)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::TOKEN\fP (comma)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::TOKEN\fP (caret)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::TOKEN\fP (doubleQuote)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::TOKEN\fP (singleQuote)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::TOKEN\fP (colon)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::TOKEN\fP (backslash)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::TOKEN\fP (size)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (nil)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (stack)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (ctrl)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (mem)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (inc)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (dec)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (neg)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (add)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (sub)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (mul)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (div)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (mod)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (lbs)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (rbs)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (or)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (xor)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (and)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (not)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (flag)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (jmp)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (jmpc)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (jmpz)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (page)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (signal)"
+.br
+.ti -1c
+.RI "\fBBBP::esa::INSTRUCTION\fP (halt)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ACTION(name)   \fBBBP::std::conststring\fP kw_##name (\fBBBP::std::Lexer::lex_context\fP *, \fBBBP::std::index_t\fP, \fBBBP::std::Lexer::lex_keywordhandle\fP)"
+
+.PP
+Definition at line 273 of file Actions\&.h\&.
+.SS "#define ACTION(name)   \fBBBP::std::conststring\fP BBP::esa::kw_##name (\fBBBP::std::Lexer::lex_context\fP *context, \fBBBP::std::index_t\fP index, \fBBBP::std::Lexer::lex_keywordhandle\fP handle)"
+
+.PP
+Definition at line 273 of file Actions\&.h\&.
+.SS "#define ADD_HANDLE   68"
+
+.PP
+Definition at line 97 of file Actions\&.h\&.
+.SS "#define ADDF_HANDLE   76"
+
+.PP
+Definition at line 105 of file Actions\&.h\&.
+.SS "#define ADDFF_HANDLE   81"
+
+.PP
+Definition at line 110 of file Actions\&.h\&.
+.SS "#define ADDIF_HANDLE   86"
+
+.PP
+Definition at line 115 of file Actions\&.h\&.
+.SS "#define AND_HANDLE   95"
+
+.PP
+Definition at line 125 of file Actions\&.h\&.
+.SS "#define ANDB_HANDLE   99"
+
+.PP
+Definition at line 129 of file Actions\&.h\&.
+.SS "#define ANDBIP_HANDLE   109"
+
+.PP
+Definition at line 139 of file Actions\&.h\&.
+.SS "#define ANDIP_HANDLE   105"
+
+.PP
+Definition at line 135 of file Actions\&.h\&.
+.SS "#define ATOMIC_HANDLE   8"
+
+.PP
+Definition at line 19 of file Actions\&.h\&.
+.SS "#define AUX(name)   \fBBBP::std::conststring\fP BBP::esa::##name (\fBBBP::std::Lexer::lex_context\fP *, \fBBBP::std::index_t\fP, \fBBBP::std::Lexer::lex_keywordhandle\fP)"
+
+.PP
+Definition at line 277 of file Actions\&.h\&.
+.SS "#define BACKSLASH_HANDLE   34"
+
+.PP
+Definition at line 47 of file Actions\&.h\&.
+.SS "#define CALL_HANDLE   46"
+
+.PP
+Definition at line 66 of file Actions\&.h\&.
+.SS "#define CALLP_HANDLE   47"
+
+.PP
+Definition at line 67 of file Actions\&.h\&.
+.SS "#define CARRIAGERETURN_HANDLE   18"
+
+.PP
+Definition at line 31 of file Actions\&.h\&.
+.SS "#define CLOSEANGLEBRACKET_HANDLE   30"
+
+.PP
+Definition at line 43 of file Actions\&.h\&.
+.SS "#define CLOSEBRACKET_HANDLE   22"
+
+.PP
+Definition at line 35 of file Actions\&.h\&.
+.SS "#define CLOSECURLBRACKET_HANDLE   27"
+
+.PP
+Definition at line 40 of file Actions\&.h\&.
+.SS "#define CLOSESQBRACKET_HANDLE   25"
+
+.PP
+Definition at line 38 of file Actions\&.h\&.
+.SS "#define COLON_HANDLE   33"
+
+.PP
+Definition at line 46 of file Actions\&.h\&.
+.SS "#define COMMA_HANDLE   23"
+
+.PP
+Definition at line 36 of file Actions\&.h\&.
+.SS "#define COMP_HANDLE   111"
+
+.PP
+Definition at line 143 of file Actions\&.h\&.
+.SS "#define CONST_HANDLE   12"
+
+.PP
+Definition at line 24 of file Actions\&.h\&.
+.SS "#define CONTINUE_HANDLE   10"
+
+.PP
+Definition at line 21 of file Actions\&.h\&.
+.SS "#define DA_HANDLE   39"
+
+.PP
+Definition at line 53 of file Actions\&.h\&.
+.SS "#define DB_HANDLE   36"
+
+.PP
+Definition at line 50 of file Actions\&.h\&.
+.SS "#define DEC_HANDLE   66"
+
+.PP
+Definition at line 95 of file Actions\&.h\&.
+.SS "#define DECF_HANDLE   74"
+
+.PP
+Definition at line 103 of file Actions\&.h\&.
+.SS "#define DEFINE_HANDLE   2"
+
+.PP
+Definition at line 13 of file Actions\&.h\&.
+.SS "#define DH_HANDLE   37"
+
+.PP
+Definition at line 51 of file Actions\&.h\&.
+.SS "#define DI_HANDLE   38"
+
+.PP
+Definition at line 52 of file Actions\&.h\&.
+.SS "#define DIV_HANDLE   71"
+
+.PP
+Definition at line 100 of file Actions\&.h\&.
+.SS "#define DIVF_HANDLE   79"
+
+.PP
+Definition at line 108 of file Actions\&.h\&.
+.SS "#define DIVFF_HANDLE   84"
+
+.PP
+Definition at line 113 of file Actions\&.h\&.
+.SS "#define DIVIF_HANDLE   89"
+
+.PP
+Definition at line 118 of file Actions\&.h\&.
+.SS "#define DN_HANDLE   35"
+
+.PP
+Definition at line 49 of file Actions\&.h\&.
+.SS "#define DOUBLEQUOTES_HANDLE   31"
+
+.PP
+Definition at line 44 of file Actions\&.h\&.
+.SS "#define DW_HANDLE   40"
+
+.PP
+Definition at line 54 of file Actions\&.h\&.
+.SS "#define ELSE_HANDLE   7"
+
+.PP
+Definition at line 18 of file Actions\&.h\&.
+.SS "#define END_HANDLE   16"
+
+.PP
+Definition at line 28 of file Actions\&.h\&.
+.SS "#define ENDIF_HANDLE   6"
+
+.PP
+Definition at line 17 of file Actions\&.h\&.
+.SS "#define EXTERN_HANDLE   14"
+
+.PP
+Definition at line 26 of file Actions\&.h\&.
+.SS "#define FLAG_HANDLE   112"
+
+.PP
+Definition at line 144 of file Actions\&.h\&.
+.SS "#define HANDLER_HANDLE   1"
+
+.PP
+Definition at line 12 of file Actions\&.h\&.
+.SS "#define HANDOVER_HANDLE   9"
+
+.PP
+Definition at line 20 of file Actions\&.h\&.
+.SS "#define HBU_HANDLE   150"
+
+.PP
+Definition at line 192 of file Actions\&.h\&.
+.SS "#define HCF_HANDLE   149"
+
+.PP
+Definition at line 191 of file Actions\&.h\&.
+.SS "#define HLT_HANDLE   148"
+
+.PP
+Definition at line 190 of file Actions\&.h\&.
+.SS "#define IFDEF_HANDLE   5"
+
+.PP
+Definition at line 16 of file Actions\&.h\&.
+.SS "#define IFNDEF_HANDLE   4"
+
+.PP
+Definition at line 15 of file Actions\&.h\&.
+.SS "#define INC_HANDLE   65"
+
+.PP
+Definition at line 94 of file Actions\&.h\&.
+.SS "#define INCF_HANDLE   73"
+
+.PP
+Definition at line 102 of file Actions\&.h\&.
+.SS "#define INCLUDE_HANDLE   0"
+
+.PP
+Definition at line 11 of file Actions\&.h\&.
+.SS "#define INSTRUCTION(name)   \fBBBP::std::conststring\fP mn_##name (\fBBBP::std::Lexer::lex_context\fP *, \fBBBP::std::index_t\fP, \fBBBP::std::Lexer::lex_keywordhandle\fP)"
+
+.PP
+Definition at line 276 of file Actions\&.h\&.
+.SS "#define INSTRUCTION(name)   \fBBBP::std::conststring\fP BBP::esa::mn_##name (\fBBBP::std::Lexer::lex_context\fP *context, \fBBBP::std::index_t\fP index, \fBBBP::std::Lexer::lex_keywordhandle\fP handle)"
+
+.PP
+Definition at line 276 of file Actions\&.h\&.
+.SS "#define JEZ_HANDLE   117"
+
+.PP
+Definition at line 153 of file Actions\&.h\&.
+.SS "#define JEZN_HANDLE   122"
+
+.PP
+Definition at line 158 of file Actions\&.h\&.
+.SS "#define JEZNR_HANDLE   133"
+
+.PP
+Definition at line 169 of file Actions\&.h\&.
+.SS "#define JEZR_HANDLE   128"
+
+.PP
+Definition at line 164 of file Actions\&.h\&.
+.SS "#define JGT_HANDLE   119"
+
+.PP
+Definition at line 155 of file Actions\&.h\&.
+.SS "#define JGTN_HANDLE   124"
+
+.PP
+Definition at line 160 of file Actions\&.h\&.
+.SS "#define JGTNR_HANDLE   135"
+
+.PP
+Definition at line 171 of file Actions\&.h\&.
+.SS "#define JGTR_HANDLE   130"
+
+.PP
+Definition at line 166 of file Actions\&.h\&.
+.SS "#define JGZ_HANDLE   116"
+
+.PP
+Definition at line 152 of file Actions\&.h\&.
+.SS "#define JGZN_HANDLE   121"
+
+.PP
+Definition at line 157 of file Actions\&.h\&.
+.SS "#define JGZNR_HANDLE   132"
+
+.PP
+Definition at line 168 of file Actions\&.h\&.
+.SS "#define JGZR_HANDLE   127"
+
+.PP
+Definition at line 163 of file Actions\&.h\&.
+.SS "#define JLT_HANDLE   118"
+
+.PP
+Definition at line 154 of file Actions\&.h\&.
+.SS "#define JLTN_HANDLE   123"
+
+.PP
+Definition at line 159 of file Actions\&.h\&.
+.SS "#define JLTNR_HANDLE   134"
+
+.PP
+Definition at line 170 of file Actions\&.h\&.
+.SS "#define JLTR_HANDLE   129"
+
+.PP
+Definition at line 165 of file Actions\&.h\&.
+.SS "#define JLZ_HANDLE   115"
+
+.PP
+Definition at line 151 of file Actions\&.h\&.
+.SS "#define JLZN_HANDLE   120"
+
+.PP
+Definition at line 156 of file Actions\&.h\&.
+.SS "#define JLZNR_HANDLE   131"
+
+.PP
+Definition at line 167 of file Actions\&.h\&.
+.SS "#define JLZR_HANDLE   126"
+
+.PP
+Definition at line 162 of file Actions\&.h\&.
+.SS "#define JMP_HANDLE   114"
+
+.PP
+Definition at line 150 of file Actions\&.h\&.
+.SS "#define JMPR_HANDLE   125"
+
+.PP
+Definition at line 161 of file Actions\&.h\&.
+.SS "#define LABEL_HANDLE   17"
+
+.PP
+Definition at line 29 of file Actions\&.h\&.
+.SS "#define LBS_HANDLE   91"
+
+.PP
+Definition at line 121 of file Actions\&.h\&.
+.SS "#define LBSIP_HANDLE   101"
+
+.PP
+Definition at line 131 of file Actions\&.h\&.
+.SS "#define MOD_HANDLE   72"
+
+.PP
+Definition at line 101 of file Actions\&.h\&.
+.SS "#define MODF_HANDLE   80"
+
+.PP
+Definition at line 109 of file Actions\&.h\&.
+.SS "#define MODFF_HANDLE   85"
+
+.PP
+Definition at line 114 of file Actions\&.h\&.
+.SS "#define MODIF_HANDLE   90"
+
+.PP
+Definition at line 119 of file Actions\&.h\&.
+.SS "#define MOVA_HANDLE   52"
+
+.PP
+Definition at line 74 of file Actions\&.h\&.
+.SS "#define MOVAB_HANDLE   62"
+
+.PP
+Definition at line 88 of file Actions\&.h\&.
+.SS "#define MOVAH_HANDLE   63"
+
+.PP
+Definition at line 89 of file Actions\&.h\&.
+.SS "#define MOVAW_HANDLE   64"
+
+.PP
+Definition at line 90 of file Actions\&.h\&.
+.SS "#define MOVB_HANDLE   49"
+
+.PP
+Definition at line 71 of file Actions\&.h\&.
+.SS "#define MOVBA_HANDLE   55"
+
+.PP
+Definition at line 78 of file Actions\&.h\&.
+.SS "#define MOVBH_HANDLE   53"
+
+.PP
+Definition at line 76 of file Actions\&.h\&.
+.SS "#define MOVBW_HANDLE   54"
+
+.PP
+Definition at line 77 of file Actions\&.h\&.
+.SS "#define MOVH_HANDLE   50"
+
+.PP
+Definition at line 72 of file Actions\&.h\&.
+.SS "#define MOVHA_HANDLE   58"
+
+.PP
+Definition at line 82 of file Actions\&.h\&.
+.SS "#define MOVHB_HANDLE   56"
+
+.PP
+Definition at line 80 of file Actions\&.h\&.
+.SS "#define MOVHW_HANDLE   57"
+
+.PP
+Definition at line 81 of file Actions\&.h\&.
+.SS "#define MOVW_HANDLE   51"
+
+.PP
+Definition at line 73 of file Actions\&.h\&.
+.SS "#define MOVWA_HANDLE   61"
+
+.PP
+Definition at line 86 of file Actions\&.h\&.
+.SS "#define MOVWB_HANDLE   59"
+
+.PP
+Definition at line 84 of file Actions\&.h\&.
+.SS "#define MOVWH_HANDLE   60"
+
+.PP
+Definition at line 85 of file Actions\&.h\&.
+.SS "#define MUL_HANDLE   70"
+
+.PP
+Definition at line 99 of file Actions\&.h\&.
+.SS "#define MULF_HANDLE   78"
+
+.PP
+Definition at line 107 of file Actions\&.h\&.
+.SS "#define MULFF_HANDLE   83"
+
+.PP
+Definition at line 112 of file Actions\&.h\&.
+.SS "#define MULIF_HANDLE   88"
+
+.PP
+Definition at line 117 of file Actions\&.h\&.
+.SS "#define NEG_HANDLE   67"
+
+.PP
+Definition at line 96 of file Actions\&.h\&.
+.SS "#define NEGF_HANDLE   75"
+
+.PP
+Definition at line 104 of file Actions\&.h\&.
+.SS "#define NEWLINE_HANDLE   19"
+
+.PP
+Definition at line 32 of file Actions\&.h\&.
+.SS "#define NIL_HANDLE   41"
+
+.PP
+Definition at line 57 of file Actions\&.h\&.
+.SS "#define NOT_HANDLE   96"
+
+.PP
+Definition at line 126 of file Actions\&.h\&.
+.SS "#define NOTB_HANDLE   100"
+
+.PP
+Definition at line 130 of file Actions\&.h\&.
+.SS "#define NOTBIP_HANDLE   110"
+
+.PP
+Definition at line 140 of file Actions\&.h\&.
+.SS "#define NOTIP_HANDLE   106"
+
+.PP
+Definition at line 136 of file Actions\&.h\&.
+.SS "#define OPENANGLEBRACKET_HANDLE   29"
+
+.PP
+Definition at line 42 of file Actions\&.h\&.
+.SS "#define OPENBRACKET_HANDLE   21"
+
+.PP
+Definition at line 34 of file Actions\&.h\&.
+.SS "#define OPENCURLBRACKET_HANDLE   26"
+
+.PP
+Definition at line 39 of file Actions\&.h\&.
+.SS "#define OPENSQBRACKET_HANDLE   24"
+
+.PP
+Definition at line 37 of file Actions\&.h\&.
+.SS "#define OR_HANDLE   93"
+
+.PP
+Definition at line 123 of file Actions\&.h\&.
+.SS "#define ORB_HANDLE   97"
+
+.PP
+Definition at line 127 of file Actions\&.h\&.
+.SS "#define ORBIP_HANDLE   107"
+
+.PP
+Definition at line 137 of file Actions\&.h\&.
+.SS "#define ORIP_HANDLE   103"
+
+.PP
+Definition at line 133 of file Actions\&.h\&.
+.SS "#define PAGE_HANDLE   136"
+
+.PP
+Definition at line 174 of file Actions\&.h\&.
+.SS "#define PAGEAR_HANDLE   138"
+
+.PP
+Definition at line 176 of file Actions\&.h\&.
+.SS "#define PAGEAW_HANDLE   137"
+
+.PP
+Definition at line 175 of file Actions\&.h\&.
+.SS "#define PAGEBC_HANDLE   144"
+
+.PP
+Definition at line 182 of file Actions\&.h\&.
+.SS "#define PAGER_HANDLE   140"
+
+.PP
+Definition at line 178 of file Actions\&.h\&.
+.SS "#define PAGES_HANDLE   143"
+
+.PP
+Definition at line 181 of file Actions\&.h\&.
+.SS "#define PAGEW_HANDLE   139"
+
+.PP
+Definition at line 177 of file Actions\&.h\&.
+.SS "#define PALLOC_HANDLE   141"
+
+.PP
+Definition at line 179 of file Actions\&.h\&.
+.SS "#define PASSIGN_HANDLE   145"
+
+.PP
+Definition at line 183 of file Actions\&.h\&.
+.SS "#define PERCENT_HANDLE   28"
+
+.PP
+Definition at line 41 of file Actions\&.h\&.
+.SS "#define PFREE_HANDLE   142"
+
+.PP
+Definition at line 180 of file Actions\&.h\&.
+.SS "#define POP_HANDLE   43"
+
+.PP
+Definition at line 61 of file Actions\&.h\&.
+.SS "#define POPA_HANDLE   44"
+
+.PP
+Definition at line 62 of file Actions\&.h\&.
+.SS "#define PRAGMA(name)   \fBBBP::std::conststring\fP pragma_##name (\fBBBP::std::Lexer::lex_context\fP *, \fBBBP::std::index_t\fP, \fBBBP::std::Lexer::lex_keywordhandle\fP)"
+
+.PP
+Definition at line 275 of file Actions\&.h\&.
+.SS "#define PRAGMA(name)   \fBBBP::std::conststring\fP BBP::esa::pragma_##name (\fBBBP::std::Lexer::lex_context\fP *context, \fBBBP::std::index_t\fP index, \fBBBP::std::Lexer::lex_keywordhandle\fP handle)"
+
+.PP
+Definition at line 275 of file Actions\&.h\&.
+.SS "#define PROCEDURE_HANDLE   15"
+
+.PP
+Definition at line 27 of file Actions\&.h\&.
+.SS "#define PUSH_HANDLE   42"
+
+.PP
+Definition at line 60 of file Actions\&.h\&.
+.SS "#define RBS_HANDLE   92"
+
+.PP
+Definition at line 122 of file Actions\&.h\&.
+.SS "#define RBSIP_HANDLE   102"
+
+.PP
+Definition at line 132 of file Actions\&.h\&.
+.SS "#define RET_HANDLE   45"
+
+.PP
+Definition at line 65 of file Actions\&.h\&.
+.SS "#define ROUTINE_HANDLE   113"
+
+.PP
+Definition at line 147 of file Actions\&.h\&.
+.SS "#define SEMICOLON_HANDLE   20"
+
+.PP
+Definition at line 33 of file Actions\&.h\&.
+.SS "#define SIGNAL_HANDLE   146"
+
+.PP
+Definition at line 186 of file Actions\&.h\&.
+.SS "#define SIGNALF_HANDLE   147"
+
+.PP
+Definition at line 187 of file Actions\&.h\&.
+.SS "#define SINGLEQUOTES_HANDLE   32"
+
+.PP
+Definition at line 45 of file Actions\&.h\&.
+.SS "#define STATIC_HANDLE   11"
+
+.PP
+Definition at line 23 of file Actions\&.h\&.
+.SS "#define SUB_HANDLE   69"
+
+.PP
+Definition at line 98 of file Actions\&.h\&.
+.SS "#define SUBF_HANDLE   77"
+
+.PP
+Definition at line 106 of file Actions\&.h\&.
+.SS "#define SUBFF_HANDLE   82"
+
+.PP
+Definition at line 111 of file Actions\&.h\&.
+.SS "#define SUBIF_HANDLE   87"
+
+.PP
+Definition at line 116 of file Actions\&.h\&.
+.SS "#define SYSCALL_HANDLE   48"
+
+.PP
+Definition at line 68 of file Actions\&.h\&.
+.SS "#define TOKEN(name)   \fBBBP::std::conststring\fP tk_##name (\fBBBP::std::Lexer::lex_context\fP *, \fBBBP::std::index_t\fP, \fBBBP::std::Lexer::lex_keywordhandle\fP)"
+
+.PP
+Definition at line 274 of file Actions\&.h\&.
+.SS "#define TOKEN(name)   \fBBBP::std::conststring\fP BBP::esa::tk_##name (\fBBBP::std::Lexer::lex_context\fP *context, \fBBBP::std::index_t\fP index, \fBBBP::std::Lexer::lex_keywordhandle\fP handle)"
+
+.PP
+Definition at line 274 of file Actions\&.h\&.
+.SS "#define UNDEF_HANDLE   3"
+
+.PP
+Definition at line 14 of file Actions\&.h\&.
+.SS "#define VIRTUAL_HANDLE   13"
+
+.PP
+Definition at line 25 of file Actions\&.h\&.
+.SS "#define XOR_HANDLE   94"
+
+.PP
+Definition at line 124 of file Actions\&.h\&.
+.SS "#define XORB_HANDLE   98"
+
+.PP
+Definition at line 128 of file Actions\&.h\&.
+.SS "#define XORBIP_HANDLE   108"
+
+.PP
+Definition at line 138 of file Actions\&.h\&.
+.SS "#define XORIP_HANDLE   104"
+
+.PP
+Definition at line 134 of file Actions\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

@@ -1,0 +1,58 @@
+.TH "BBP::std::DirectoryNode" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BBP::std::DirectoryNode
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <FileSys\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBVOLUME\fP * \fBvolume\fP"
+.br
+.ti -1c
+.RI "\fBPATH\fP \fBpath\fP"
+.br
+.ti -1c
+.RI "\fBDIRECTORY\fP * \fBparent\fP"
+.br
+.ti -1c
+.RI "\fBstd::Stack\fP< \fBDIRECTORY\fP > \fBsubDirectories\fP"
+.br
+.ti -1c
+.RI "\fBstd::Stack\fP< \fBFILE\fP > \fBfiles\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 244 of file FileSys\&.h\&.
+.SH "Field Documentation"
+.PP 
+.SS "\fBstd::Stack\fP<\fBFILE\fP> BBP::std::DirectoryNode::files"
+
+.PP
+Definition at line 257 of file FileSys\&.h\&.
+.SS "\fBDIRECTORY\fP* BBP::std::DirectoryNode::parent"
+
+.PP
+Definition at line 253 of file FileSys\&.h\&.
+.SS "\fBPATH\fP BBP::std::DirectoryNode::path"
+
+.PP
+Definition at line 250 of file FileSys\&.h\&.
+.SS "\fBstd::Stack\fP<\fBDIRECTORY\fP> BBP::std::DirectoryNode::subDirectories"
+
+.PP
+Definition at line 254 of file FileSys\&.h\&.
+.SS "\fBVOLUME\fP* BBP::std::DirectoryNode::volume"
+
+.PP
+Definition at line 247 of file FileSys\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

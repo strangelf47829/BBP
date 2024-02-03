@@ -1,0 +1,1412 @@
+.TH "BBP::std::Lexer::lex_context" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BBP::std::Lexer::lex_context
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Lex\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBlex_context\fP ()"
+.br
+.ti -1c
+.RI "void \fBtranslateUnit\fP (\fBstd::PATH\fP &)"
+.br
+.ti -1c
+.RI "void \fBparseFile\fP ()"
+.br
+.ti -1c
+.RI "void \fBparseFile\fP (\fBstd::PATH\fP &)"
+.br
+.ti -1c
+.RI "void \fBexecuteKeywordAction\fP (\fBlex_keywordhandle\fP, \fBlex_keyword\fP *&)"
+.br
+.ti -1c
+.RI "void \fBexecuteSpecialFunction\fP (\fBstd::index_t\fP a, \fBstd::index_t\fP b)"
+.br
+.ti -1c
+.RI "bool \fBisWhitespace\fP (char)"
+.br
+.ti -1c
+.RI "bool \fBisNewLine\fP (char)"
+.br
+.ti -1c
+.RI "char \fBisBinaryNumeral\fP (char)"
+.br
+.ti -1c
+.RI "char \fBisOctalNumeral\fP (char)"
+.br
+.ti -1c
+.RI "char \fBisDecimalNumeral\fP (char)"
+.br
+.ti -1c
+.RI "char \fBisHexadecimalNumeral\fP (char)"
+.br
+.ti -1c
+.RI "char \fBisNumericalBase\fP (\fBstd::string_element\fP, \fBstd::byte\fP &)"
+.br
+.ti -1c
+.RI "bool \fBtryParseNumerical\fP (\fBstd::index_t\fP from, \fBstd::index_t\fP to, bool &isFloat, float &fresult, int &iresult)"
+.br
+.ti -1c
+.RI "void \fBmoveToEndOfLastWord\fP (bool stopAtNewLine)"
+.br
+.ti -1c
+.RI "void \fBmoveToStartOfLastWord\fP (bool stopAtNewLine)"
+.br
+.ti -1c
+.RI "void \fBmoveToEndOfThisWord\fP (bool stopAtNewLine)"
+.br
+.ti -1c
+.RI "void \fBmoveToStartOfThisWord\fP (bool stopAtNewLine)"
+.br
+.ti -1c
+.RI "void \fBmoveToEndOfNextWord\fP (bool stopAtNewLine)"
+.br
+.ti -1c
+.RI "void \fBmoveToStartOfNextWord\fP (bool stopAtNewLine)"
+.br
+.ti -1c
+.RI "bool \fBmoveToAndHashThisWord\fP (\fBstd::hash_t\fP &, char)"
+.br
+.ti -1c
+.RI "bool \fBmoveToAndHashNextWord\fP (\fBstd::hash_t\fP &, char)"
+.br
+.ti -1c
+.RI "void \fBcalculateDebugPosition\fP ()"
+.br
+.ti -1c
+.RI "\fBlex_keywordhandle\fP \fBmoveToNextKeyword\fP ()"
+.br
+.ti -1c
+.RI "void \fBresetInfo\fP (\fBlex_debugInfo\fP &info)"
+.br
+.ti -1c
+.RI "void \fBLog\fP (\fBlex_debugInfo\fP &info)"
+.br
+.ti -1c
+.RI "void \fBLog\fP (\fBstd::conststring\fP msg)"
+.br
+.ti -1c
+.RI "void \fBLog\fP (\fBstd::conststring\fP from, \fBstd::conststring\fP msg, \fBstd::conststring\fP name)"
+.br
+.ti -1c
+.RI "void \fBLogError\fP (\fBstd::conststring\fP from, \fBstd::conststring\fP msg, \fBstd::conststring\fP name)"
+.br
+.ti -1c
+.RI "void \fBLogNote\fP (\fBstd::conststring\fP from, \fBstd::conststring\fP msg, \fBstd::conststring\fP name)"
+.br
+.ti -1c
+.RI "void \fBLogWarning\fP (\fBstd::conststring\fP from, \fBstd::conststring\fP msg, \fBstd::conststring\fP name)"
+.br
+.ti -1c
+.RI "void \fBLogAbort\fP (\fBstd::conststring\fP from, \fBstd::conststring\fP msg, \fBstd::conststring\fP name)"
+.br
+.ti -1c
+.RI "void \fBHighlight\fP (\fBlex_debugInfo\fP info)"
+.br
+.in -1c
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBstd::static_string\fP< 128 > \fBactiveFile\fP"
+.br
+.ti -1c
+.RI "\fBstd::PAGE\fP< \fBstring_element\fP > \fBdata\fP"
+.br
+.ti -1c
+.RI "\fBstd::size_t\fP \fBdataSize\fP"
+.br
+.ti -1c
+.RI "\fBstd::index_t\fP \fBatPosition\fP"
+.br
+.ti -1c
+.RI "\fBstd::STATIC_PAGE\fP< \fBlex_keyword\fP, 256 > \fBkeywords\fP"
+.br
+.ti -1c
+.RI "\fBstd::Stack\fP< \fBlex_keyword\fP > \fBkeywordStack\fP"
+.br
+.ti -1c
+.RI "bool \fBinhibitSpecialFunctions\fP"
+.br
+.ti -1c
+.RI "\fBstd::conststring\fP(* \fBonUnkown\fP )(\fBindex_t\fP, \fBindex_t\fP)"
+.br
+.ti -1c
+.RI "\fBstd::conststring\fP(* \fBonNumericalLiteral\fP )(\fBnumerical_t\fP numerical, bool isFloat)"
+.br
+.ti -1c
+.RI "\fBindex_t\fP \fBlastWhiteSpace\fP"
+.br
+.ti -1c
+.RI "char \fBcommentDepth\fP"
+.br
+.ti -1c
+.RI "char \fBliteralDepth\fP"
+.br
+.ti -1c
+.RI "\fBlex_debugInfo\fP \fBdebugInformation\fP"
+.br
+.ti -1c
+.RI "bool \fBabort\fP"
+.br
+.ti -1c
+.RI "bool \fBillformed\fP"
+.br
+.ti -1c
+.RI "\fBstd::static_string\fP< 1024 > \fBusrpathPage\fP"
+.br
+.ti -1c
+.RI "\fBstd::static_string\fP< 1024 > \fBsyspathPage\fP"
+.br
+.ti -1c
+.RI "\fBstd::Stack\fP< \fBstd::string_element\fP > \fBusrpaths\fP"
+.br
+.ti -1c
+.RI "\fBstd::Stack\fP< \fBstd::string_element\fP > \fBsyspaths\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 98 of file Lex\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "BBP::std::Lexer::lex_context::lex_context ()"
+
+.PP
+Definition at line 955 of file Lexer\&.cpp\&.
+.PP
+.nf
+956     : keywordStack(&keywords, 64),
+957     usrpaths(&usrpathPage, usrpathPage\&.dataSize),
+958     syspaths(&syspathPage, syspathPage\&.dataSize),
+959     abort(false),
+960     atPosition(0),
+961     commentDepth(0),
+962     literalDepth(0),
+963     dataSize(0),
+964     lastWhiteSpace(0),
+965     inhibitSpecialFunctions(false)
+966 {
+967 
+968 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void BBP::std::Lexer::lex_context::calculateDebugPosition ()"
+
+.PP
+Definition at line 659 of file Lexer\&.cpp\&.
+.PP
+.nf
+660 {
+661     // TODO: You are telling me that this is the most inefficient part of the whole program? O(N^2) worst case? Really?
+662 
+663     // To store position
+664     std::index_t pos = 0;
+665 
+666     // Reset debug info
+667     debugInformation\&.coloumn = 0;
+668     debugInformation\&.line = 1;
+669 
+670     if (activeFile\&.data[0] == '\0')
+671         return;
+672 
+673     // Catch up to where we are, counting the newlines and stuff
+674     while (pos < atPosition && pos < dataSize)
+675     {
+676         char c = __UNSAFE__(read)(&data, pos++);
+677         
+678         if (isNewLine(c))
+679         {
+680             debugInformation\&.line++;
+681             debugInformation\&.coloumn = 0;
+682         }
+683         else
+684         {
+685             debugInformation\&.coloumn++;
+686         }
+687 
+688     }
+689 
+690 }
+.fi
+.PP
+References __UNSAFE__, and BBP::std::read()\&.
+.SS "void BBP::std::Lexer::lex_context::executeKeywordAction (\fBLexer::lex_keywordhandle\fP handle, \fBLexer::lex_keyword\fP *& keyword)"
+
+.PP
+Definition at line 58 of file Lexer\&.cpp\&.
+.PP
+.nf
+59 {
+60     // If keyword is nullptr, do nothing
+61     if (keyword == nullptr)
+62         return;
+63 
+64     // Otherwise, if action exists, execute it\&.
+65     if (keyword->action)
+66     {
+67         // Call action
+68         debugInformation\&.msg = keyword->action(this, atPosition - keyword->length, handle);
+69 
+70         // if msg exists, log error
+71         if (debugInformation\&.msg)
+72         {
+73             Log(debugInformation);
+74             resetInfo(debugInformation);
+75         }
+76 
+77     }
+78 }
+.fi
+.PP
+References BBP::std::Lexer::lex_keyword::action, and BBP::std::Lexer::lex_keyword::length\&.
+.SS "void BBP::std::Lexer::lex_context::executeSpecialFunction (\fBstd::index_t\fP a, \fBstd::index_t\fP b)"
+
+.PP
+Definition at line 213 of file Lexer\&.cpp\&.
+.PP
+.nf
+214 {
+215     // If special functions are inhibited, do nothing
+216     if (inhibitSpecialFunctions)
+217         return;
+218 
+219     // Check if it is number
+220     {
+221         // Check for number
+222         bool isFloat = false;
+223         int iresult = 0;
+224         float fresult = 0;
+225 
+226         // Try to parse
+227         bool isNumber = tryParseNumerical(from, to, isFloat, fresult, iresult);
+228 
+229         // If a number, run and debug\&.
+230         if (isNumber && onNumericalLiteral)
+231         {
+232             // Build numerical
+233             numerical_t number;
+234 
+235             if (isFloat)
+236                 number\&.f = fresult;
+237             else
+238                 number\&.i = iresult;
+239 
+240             // Call action
+241             debugInformation\&.msg = onNumericalLiteral(number, isFloat);
+242 
+243             // if msg exists, log error
+244             if (debugInformation\&.msg)
+245             {
+246                 Log(debugInformation);
+247                 resetInfo(debugInformation);
+248             }
+249             return;
+250         }
+251         else if (isNumber)
+252         {
+253             Log("ELSA", "WNumerical found, but no action is defined\&.", "-Wmissing-function");
+254             return;
+255         }
+256     }
+257 
+258     // Nothing found, call unkown
+259     if (onUnkown)
+260     {
+261         // Call action
+262         debugInformation\&.msg = onUnkown(to, from);
+263 
+264         // if msg exists, log error
+265         if (debugInformation\&.msg)
+266         {
+267             Log(debugInformation);
+268             resetInfo(debugInformation);
+269         }
+270         return;
+271     }
+272     Log("ELSA", "WUnkown sequence found, but no action is defined\&.", "-Wmissing-function");
+273 }
+.fi
+.PP
+References BBP::std::Lexer::numerical_t::f, BBP::std::Lexer::numerical_t::i, and BBP::Locale::Japanese::to\&.
+.SS "void BBP::std::Lexer::lex_context::Highlight (\fBlex_debugInfo\fP info)"
+
+.PP
+Definition at line 865 of file Lexer\&.cpp\&.
+.PP
+.nf
+866 {
+867 
+868     // This pointer traverses the highlighted text
+869     std::index_t highlitingText = info\&.highlight;
+870 
+871     bool isSingleLine = true;
+872     unsigned int length = 0;
+873     unsigned int linelength = 0;
+874     unsigned int runningLength = 0;
+875 
+876     std::index_t line = info\&.line;
+877     std::index_t character = info\&.character;
+878     std::index_t coloumn = info\&.coloumn;
+879 
+880     char c = 0;
+881 
+882     // Continue highlighting until end of string
+883     while ((std::read(&this->data, highlitingText) && !info\&.highlightLength) || (info\&.highlightLength && runningLength < info\&.highlightLength))
+884     {
+885         // Print location information
+886         if (info\&.showWhere)
+887         {
+888             if (info\&.showLinesAndColoumns)
+889                 std::putf(std::STDOUT, "%5u |\t\e[0;96m", line);
+890             else
+891                 std::putf(std::STDOUT, "%4u~ |\t\e[0;96m", character);
+892         }
+893         // Continue highlighting until end of string
+894         while ((!info\&.highlightLength) || (info\&.highlightLength && runningLength < info\&.highlightLength))
+895         {
+896 
+897             // Get character to be highlighted
+898             c = std::read(&this->data, highlitingText++);
+899 
+900             // If character is null, break
+901             if (c == 0)
+902                 goto end; // break out of nested whiles
+903 
+904             character++;
+905             coloumn++;
+906             linelength++;
+907             runningLength++;
+908 
+909             // if character is newline, continue
+910             if (isNewLine(c))
+911             {
+912                 // If c is not '\n', just continue
+913                 if (c != '\n')
+914                     continue;
+915                 // Else, increment line and coloumn info
+916                 line += 1;
+917                 character = 0;
+918                 std::STDOUT << "\e[0;37m" <<= endl;
+919                 isSingleLine = false;
+920                 length = (length < linelength) ? linelength - 1 : length;
+921                 linelength = 0;
+922                 break;
+923             }
+924 
+925             // Print character to screen
+926             std::STDOUT << c;
+927             length = (length < linelength) ? linelength : length;
+928 
+929         }
+930 
+931     }
+932 
+933     end:
+934 
+935     // Emit last new line
+936     if (c != '\n')
+937         std::STDOUT << "\e[0;37m\n      | \e[0;96m";
+938     else if (runningLength > 1)
+939         std::STDOUT << "\e[0;37m      | \e[0;96m";
+940 
+941     for (unsigned int index = 0; index < length; index++)
+942     {
+943         if (isSingleLine)
+944             std::STDOUT << "^";
+945         else
+946             std::STDOUT << "~";
+947     }
+948     std::STDOUT << "\e[0;37m" <<= std::endl;
+949     
+950 
+951 }
+.fi
+.PP
+References BBP::std::Lexer::lex_debugInfo::character, BBP::std::Lexer::lex_debugInfo::coloumn, BBP::std::endl, BBP::std::Lexer::lex_debugInfo::highlight, BBP::std::Lexer::lex_debugInfo::highlightLength, BBP::std::Lexer::lex_debugInfo::line, BBP::std::putf(), BBP::std::read(), BBP::std::Lexer::lex_debugInfo::showLinesAndColoumns, BBP::std::Lexer::lex_debugInfo::showWhere, and BBP::std::STDOUT\&.
+.SS "char BBP::std::Lexer::lex_context::isBinaryNumeral (char c)"
+
+.PP
+Definition at line 333 of file Lexer\&.cpp\&.
+.PP
+.nf
+334 {
+335     switch (c)
+336     {
+337     case '0':
+338         return 10;
+339     case '1':
+340         return 11;
+341     default:
+342         return 0;
+343     }
+344 }
+.fi
+.SS "char BBP::std::Lexer::lex_context::isDecimalNumeral (char c)"
+
+.PP
+Definition at line 371 of file Lexer\&.cpp\&.
+.PP
+.nf
+372 {
+373     switch (c)
+374     {
+375     case '0':
+376         return 10;
+377     case '1':
+378         return 11;
+379     case '2':
+380         return 12;
+381     case '3':
+382         return 13;
+383     case '4':
+384         return 14;
+385     case '5':
+386         return 15;
+387     case '6':
+388         return 16;
+389     case '7':
+390         return 17;
+391     case '8':
+392         return 18;
+393     case '9':
+394         return 19;
+395     default:
+396         return 0;
+397     }
+398 }
+.fi
+.SS "char BBP::std::Lexer::lex_context::isHexadecimalNumeral (char c)"
+
+.PP
+Definition at line 400 of file Lexer\&.cpp\&.
+.PP
+.nf
+401 {
+402     switch (c)
+403     {
+404     case '0':
+405         return 10;
+406     case '1':
+407         return 11;
+408     case '2':
+409         return 12;
+410     case '3':
+411         return 13;
+412     case '4':
+413         return 14;
+414     case '5':
+415         return 15;
+416     case '6':
+417         return 16;
+418     case '7':
+419         return 17;
+420     case '8':
+421         return 18;
+422     case '9':
+423         return 19;
+424     case 'A':
+425     case 'a':
+426         return 20;
+427     case 'B':
+428     case 'b':
+429         return 21;
+430     case 'C':
+431     case 'c':
+432         return 22;
+433     case 'D':
+434     case 'd':
+435         return 23;
+436     case 'E':
+437     case 'e':
+438         return 24;
+439     case 'F':
+440     case 'f':
+441         return 25;
+442     default:
+443         return 0;
+444     }
+445 }
+.fi
+.SS "bool BBP::std::Lexer::lex_context::isNewLine (char c)"
+
+.PP
+Definition at line 328 of file Lexer\&.cpp\&.
+.PP
+.nf
+329 {
+330     return (c == '\n' || c == '\r');
+331 }
+.fi
+.PP
+Referenced by BBP::esa::esaProcessor::ExpectDelimiters()\&.
+.SS "char BBP::std::Lexer::lex_context::isNumericalBase (\fBstd::string_element\fP c, \fBstd::byte\fP & base)"
+
+.PP
+Definition at line 447 of file Lexer\&.cpp\&.
+.PP
+.nf
+448 {
+449     switch (c)
+450     {
+451     case 'b':
+452         base = 2;
+453         return 30;
+454     case 'o':
+455         base = 8;
+456         return 31;
+457     case 'f':
+458         base = 10;
+459         return 32;
+460     case 'x':
+461         base = 16;
+462         return 33;
+463     default:
+464         base = 0;
+465         return 0;
+466     }
+467 }
+.fi
+.SS "char BBP::std::Lexer::lex_context::isOctalNumeral (char c)"
+
+.PP
+Definition at line 346 of file Lexer\&.cpp\&.
+.PP
+.nf
+347 {
+348     switch (c)
+349     {
+350     case '0':
+351         return 10;
+352     case '1':
+353         return 11;
+354     case '2':
+355         return 12;
+356     case '3':
+357         return 13;
+358     case '4':
+359         return 14;
+360     case '5':
+361         return 15;
+362     case '6':
+363         return 16;
+364     case '7':
+365         return 17;
+366     default:
+367         return 0;
+368     }
+369 }
+.fi
+.SS "bool BBP::std::Lexer::lex_context::isWhitespace (char c)"
+
+.PP
+Definition at line 323 of file Lexer\&.cpp\&.
+.PP
+.nf
+324 {
+325     return (c == ' ' || c == '\n' || c == '\r' || c == '\t' || c == 1 || c == 2);
+326 }
+.fi
+.SS "void BBP::std::Lexer::lex_context::Log (\fBlex_debugInfo\fP & info)"
+
+.PP
+Definition at line 797 of file Lexer\&.cpp\&.
+.PP
+.nf
+798 {
+799 
+800     
+801 
+802     if (info\&.showWhere)
+803     {
+804         // Reset debug position
+805         if (activeFile\&.data[0] != '\0')
+806             calculateDebugPosition();
+807 
+808         if (info\&.procedure\&.data)
+809         {
+810             if (info\&.procedure\&.data[0] != '\0')
+811             {
+812                 if (activeFile\&.data[0] == '\0')
+813                     std::printf("(<Binary>): In procedure: `\e[0;97m%s\e[0;37m`:\n", info\&.procedure\&.data);
+814                 else
+815                     std::printf("\e[0;97m%s:\e[0;37m In procedure: `\e[0;97m%s\e[0;37m`:\n", activeFile\&.data, info\&.procedure\&.data);
+816             }
+817         }
+818 
+819         if (info\&.showLinesAndColoumns)
+820         {
+821             if (activeFile\&.data[0] == '\0')
+822                 std::putf(std::STDOUT, "(<Binary>:%u:%u): ", info\&.coloumn, info\&.line);
+823             else
+824                 std::putf(std::STDOUT, "\e[0;97m%s:%u:%u:\e[0;37m ", activeFile\&.data, info\&.coloumn, info\&.line);
+825         }
+826         else
+827         {
+828             if (activeFile\&.data[0] == '\0')
+829                 std::putf(std::STDOUT, "(<Binary>~%4u): ", info\&.character);
+830             else
+831                 std::putf(std::STDOUT, "\e[0;97m%s~%4u:\e[0;37m ", activeFile\&.data, info\&.character);
+832         }
+833     }
+834 
+835     Log(nullptr, info\&.msg, info\&.errName);
+836     
+837 
+838     if (info\&.highlightmsg)
+839     {
+840         if (info\&.showWhere)
+841         {
+842             if (info\&.showLinesAndColoumns)
+843             {
+844                 if (activeFile\&.data[0] == '\0')
+845                     std::putf(std::STDOUT, "(<Binary>:%u:%u): ", info\&.coloumn, info\&.line);
+846                 else
+847                     std::putf(std::STDOUT, "(%s:%u:%u): ", activeFile\&.data, info\&.coloumn, info\&.line);
+848             }
+849             else
+850             {
+851                 if (activeFile\&.data[0] == '\0')
+852                     std::putf(std::STDOUT, "(<Binary>~%4u): ", info\&.character);
+853                 else
+854                     std::putf(std::STDOUT, "(%s~%4u): ", activeFile\&.data, info\&.character);
+855             }
+856         }
+857         Log(info\&.highlightmsg);
+858         Highlight(info);
+859     }
+860 
+861     std::putf(std::STDOUT, "\n");
+862 
+863 }
+.fi
+.PP
+References BBP::std::Lexer::lex_debugInfo::character, BBP::std::Lexer::lex_debugInfo::coloumn, BBP::std::PAGE< T >::data, BBP::std::Lexer::lex_debugInfo::errName, BBP::std::Lexer::lex_debugInfo::highlightmsg, BBP::std::Lexer::lex_debugInfo::line, BBP::std::Lexer::lex_debugInfo::msg, BBP::std::printf(), BBP::std::Lexer::lex_debugInfo::procedure, BBP::std::putf(), BBP::std::Lexer::lex_debugInfo::showLinesAndColoumns, BBP::std::Lexer::lex_debugInfo::showWhere, and BBP::std::STDOUT\&.
+.PP
+Referenced by translateUnit()\&.
+.SS "void BBP::std::Lexer::lex_context::Log (\fBstd::conststring\fP from, \fBstd::conststring\fP msg, \fBstd::conststring\fP name)"
+
+.SS "void BBP::std::Lexer::lex_context::Log (\fBstd::conststring\fP msg)"
+
+.SS "void BBP::std::Lexer::lex_context::LogAbort (\fBstd::conststring\fP from, \fBstd::conststring\fP msg, \fBstd::conststring\fP name)"
+
+.PP
+Definition at line 740 of file Lexer\&.cpp\&.
+.PP
+.nf
+741 {
+742     if (from)
+743         std::STDOUT << "\e[0;30;101m" << from << "\e[0;37m: " << msg;
+744     else
+745         std::STDOUT << "\e[0;30;101mfatal error\e[0;37m: " << msg;
+746     if (name)
+747         std::STDOUT << " [\e[0;30;101m" << name << "\e[0;37m]" <<= endl;
+748     else
+749         std::STDOUT <<= endl;
+750 }
+.fi
+.PP
+References BBP::std::endl, and BBP::std::STDOUT\&.
+.SS "void BBP::std::Lexer::lex_context::LogError (\fBstd::conststring\fP from, \fBstd::conststring\fP msg, \fBstd::conststring\fP name)"
+
+.PP
+Definition at line 704 of file Lexer\&.cpp\&.
+.PP
+.nf
+705 {
+706     if (from)
+707         std::STDOUT << "\e[0;31m" << from << "\e[0;37m: " << msg;
+708     else
+709         std::STDOUT << "\e[0;31merror\e[0;37m: " << msg;
+710     if (name)
+711         std::STDOUT << " [\e[0;31m" << name << "\e[0;37m]" <<= endl;
+712     else
+713         std::STDOUT <<= endl;
+714 }
+.fi
+.PP
+References BBP::std::endl, and BBP::std::STDOUT\&.
+.SS "void BBP::std::Lexer::lex_context::LogNote (\fBstd::conststring\fP from, \fBstd::conststring\fP msg, \fBstd::conststring\fP name)"
+
+.PP
+Definition at line 716 of file Lexer\&.cpp\&.
+.PP
+.nf
+717 {
+718     if (from)
+719         std::STDOUT << "\e[0;36m" << from << "\e[0;37m: " << msg;
+720     else
+721         std::STDOUT << "\e[0;96mnote\e[0;37m: " << msg;
+722     if (name)
+723         std::STDOUT << " [\e[0;36m" << name << "\e[0;37m]" <<= endl;
+724     else
+725         std::STDOUT <<= endl;
+726 }
+.fi
+.PP
+References BBP::std::endl, and BBP::std::STDOUT\&.
+.SS "void BBP::std::Lexer::lex_context::LogWarning (\fBstd::conststring\fP from, \fBstd::conststring\fP msg, \fBstd::conststring\fP name)"
+
+.PP
+Definition at line 728 of file Lexer\&.cpp\&.
+.PP
+.nf
+729 {
+730     if (from)
+731         std::STDOUT << "\e[0;35m" << from << "\e[0;37m: " << msg;
+732     else
+733         std::STDOUT << "\e[0;35mwarning\e[0;37m: " << msg;
+734     if (name)
+735         std::STDOUT << " [\e[0;35m" << name << "\e[0;37m]" <<= endl;
+736     else
+737         std::STDOUT <<= endl;
+738 }
+.fi
+.PP
+References BBP::std::endl, and BBP::std::STDOUT\&.
+.SS "bool BBP::std::Lexer::lex_context::moveToAndHashNextWord (\fBstd::hash_t\fP & hash, char stop)"
+
+.PP
+Definition at line 604 of file Lexer\&.cpp\&.
+.PP
+.nf
+605 {
+606     // Returns true when it hashed anything, false otherwise\&.
+607     // Move back one position
+608     atPosition--;
+609 
+610     // Move to start of next word
+611     moveToStartOfNextWord(true);
+612 
+613     return moveToAndHashThisWord(hash, stop);
+614 }
+.fi
+.PP
+References BBP::Locale::Japanese::hash\&.
+.SS "bool BBP::std::Lexer::lex_context::moveToAndHashThisWord (\fBstd::hash_t\fP & hash, char stop)"
+
+.PP
+Definition at line 616 of file Lexer\&.cpp\&.
+.PP
+.nf
+617 {
+618 
+619     // Check if character is newline
+620     if (isNewLine(__UNSAFE__(std::read)(&data, atPosition)) || atPosition + 1 >= dataSize)
+621         return false;
+622 
+623     // Calculate size of macro, hash, and index
+624     std::word Power = 1;
+625     std::index_t idx = 0;
+626     bool isOnlyWhitespace = true;
+627 
+628     // Now calculate running hash
+629     for (; idx < dataSize; idx++)
+630     {
+631         // Get character at index
+632         std::string_element c = __UNSAFE__(std::read)(&data, atPosition + idx);
+633 
+634         // Keep isOnlyWhiteSpace updated
+635         isOnlyWhitespace &= (isWhitespace(c) || c == 0);
+636 
+637         // If asked to stop here, we stop\&. We also stop for whitespaces\&.
+638         if (c == stop || (!isOnlyWhitespace && isWhitespace(c) && stop == '\n'))
+639             break;
+640 
+641         // If we are at end character, error\&.
+642         if (c == 0)
+643             return false;
+644 
+645         // Run the hashing algorithm
+646         std::strhsh(hash, Power, c);
+647     }
+648 
+649     // Move to end here
+650     moveToEndOfThisWord(true);
+651 
+652 
+653     // If macro is only whitespace, there isn't really anything to do\&.
+654     if (isOnlyWhitespace)
+655         return false;
+656     return true;
+657 }
+.fi
+.PP
+References __UNSAFE__, BBP::Locale::Japanese::hash, BBP::std::read(), and BBP::std::strhsh()\&.
+.SS "void BBP::std::Lexer::lex_context::moveToEndOfLastWord (bool stopAtNewLine)"
+
+.PP
+Definition at line 543 of file Lexer\&.cpp\&.
+.PP
+.nf
+544 {
+545     // Move until start of this word
+546     moveToStartOfThisWord(stopAtNewLine);
+547 
+548     // While possible, move back one character until no whitespace is found
+549     while (--atPosition < dataSize)
+550     {
+551         char c = __UNSAFE__(read)(&data, atPosition);
+552         if (!isWhitespace(c) || (isNewLine(c) && stopAtNewLine))
+553         {
+554             if (isNewLine(c))
+555                 atPosition++;
+556             break;
+557         }
+558     }
+559 }
+.fi
+.PP
+References __UNSAFE__, and BBP::std::read()\&.
+.SS "void BBP::std::Lexer::lex_context::moveToEndOfNextWord (bool stopAtNewLine)"
+
+.PP
+Definition at line 586 of file Lexer\&.cpp\&.
+.PP
+.nf
+587 {
+588     moveToStartOfNextWord(stopAtNewLine);
+589     moveToEndOfThisWord(stopAtNewLine);
+590 }
+.fi
+.SS "void BBP::std::Lexer::lex_context::moveToEndOfThisWord (bool stopAtNewLine)"
+
+.PP
+Definition at line 566 of file Lexer\&.cpp\&.
+.PP
+.nf
+567 {
+568     // While possible, move forward one character until whitespace is found
+569     while (++atPosition < dataSize)
+570     {
+571         char c = __UNSAFE__(read)(&data, atPosition);
+572         if (isWhitespace(c))
+573             break;
+574     }
+575     atPosition--;
+576 }
+.fi
+.PP
+References __UNSAFE__, and BBP::std::read()\&.
+.SS "\fBBBP::std::Lexer::lex_keywordhandle\fP BBP::std::Lexer::lex_context::moveToNextKeyword ()"
+
+.PP
+Definition at line 81 of file Lexer\&.cpp\&.
+.PP
+.nf
+82 {
+83 
+84     lex_keywordhandle handle = 0;
+85     size_t kwCount = keywordStack\&.atElement;
+86 
+87     // These flags keep track of if any non-whitespace sequence had any meaning\&.
+88     bool hasFoundMeaningfulToken = false;
+89     std::index_t foundAt = 0;
+90 
+91     // Loop until something is found
+92     while (atPosition < dataSize && !abort)
+93     {
+94         // Get character
+95         char character = std::read(&data, atPosition++);
+96         debugInformation\&.coloumn++;
+97 
+98 
+99         if (isWhitespace(character))
+100         {
+101             // If the lexer has previously found meaningful text but now sees a whitespace, do some stuff\&.
+102             // Only do this when not intentionally skipping over meaningful tokens (such as comments, literals)\&.
+103             if (hasFoundMeaningfulToken && !commentDepth && !literalDepth && onUnkown)
+104             {
+105                 // Call action
+106                 executeSpecialFunction(foundAt, atPosition - 1);
+107 
+108                 // Reset flag 
+109                 hasFoundMeaningfulToken = false;
+110 
+111                 // If need to abort, break out\&.
+112                 if (abort)
+113                     return keywordStack\&.atElement + 1;
+114             }
+115         }
+116         else
+117         {
+118             if (!hasFoundMeaningfulToken)
+119                 foundAt = atPosition - 1;
+120             hasFoundMeaningfulToken = true;
+121         }
+122 
+123         if (character == '\n')
+124         {
+125             debugInformation\&.coloumn = 0;
+126             debugInformation\&.line++;
+127         }
+128 
+129         // Mask each keyword word
+130         for (handle = 0; handle < kwCount; handle++)
+131         {
+132             
+133             // Get a handle on the keyword
+134             lex_keyword *keyword = &read(&keywords, handle);
+135 
+136             // If inside a literal context, and the word is not forced to be evalated,
+137             if ((literalDepth && !keyword->forceParseOutsideLiterals) && !keyword->forceEvaluation)
+138             {
+139                 // Continue only if keyword's mask equals literal depth
+140                 if (literalDepth != keyword->considerLiteralDepth && !keyword->forceParseInLiterals)
+141                     continue;
+142             }
+143 
+144             // If inside a comment context, and the word is not forced to be evalated,
+145             if ((commentDepth && !keyword->forceParseOutsideComments) && !keyword->forceEvaluation)
+146             {
+147                 // Continue only if keyword's mask equals comment depth
+148                 if (commentDepth != keyword->considerCommentDepth && !keyword->forceParseInComments)
+149                     continue;
+150             }
+151 
+152             // Operate on keywords mask based on current character
+153             keyword->mask +=
+154                 (character == keyword->word[keyword->mask]) ?
+155                 1 :
+156                 -keyword->mask;
+157 
+158             // Check if we are in white space, if so, reset flag and stop searching, since it is no use\&.
+159             // This must occur after mask code, since otherwise "whi le" would register as "while", unless
+160             // the keyword consists of whitespaces\&.
+161             if (isWhitespace(character))
+162             {
+163 
+164                 lastWhiteSpace = atPosition;
+165 
+166                 // Check each character in the word
+167                 for (index_t idx = 0; idx < keyword->length; idx++)
+168                     if (!isWhitespace(keyword->word[idx]))
+169                         continue; // If any of these are not whitespaces, skip
+170             }
+171 
+172             // If the mask is not the same as the length of the keyword, the keyword is not found   
+173             if (keyword->mask != keyword->length)
+174                 continue;
+175 
+176             // If keyword needs to be treated like a delimiter, do that here\&.
+177             if (keyword->actAsDelimiter)
+178             {
+179                 // Check for any prefixed things here\&.
+180                 if (atPosition - lastWhiteSpace > keyword->length && onUnkown && !literalDepth && !commentDepth)
+181                 {
+182                     // Call action
+183                     executeSpecialFunction(lastWhiteSpace, atPosition - keyword->length);
+184 
+185                     // If need to abort, break out\&.
+186                     if (abort)
+187                         return keywordStack\&.atElement + 1;
+188                 }
+189 
+190                 lastWhiteSpace = atPosition;
+191             }
+192 
+193             // Something was found anyway\&.
+194             hasFoundMeaningfulToken = false;
+195 
+196             // Check if keyword is infixed\&. Delimiters can, however, be infixed\&.
+197             if (atPosition - lastWhiteSpace > keyword->length && !keyword->actAsDelimiter)
+198                 continue;
+199 
+200             // Reset mask, since keywords may come after eachother\&.
+201             keyword->mask = 0;
+202 
+203             // Keyword found, return that\&.
+204             return handle;
+205         }
+206     }
+207 
+208     // Nothing was found, return invalid handle
+209     return kwCount;
+210 
+211 }
+.fi
+.PP
+References BBP::std::Lexer::lex_keyword::actAsDelimiter, BBP::std::Lexer::lex_keyword::considerCommentDepth, BBP::std::Lexer::lex_keyword::considerLiteralDepth, BBP::std::Lexer::lex_keyword::forceEvaluation, BBP::std::Lexer::lex_keyword::forceParseInComments, BBP::std::Lexer::lex_keyword::forceParseInLiterals, BBP::std::Lexer::lex_keyword::forceParseOutsideComments, BBP::std::Lexer::lex_keyword::forceParseOutsideLiterals, BBP::esa::keywords, BBP::std::Lexer::lex_keyword::length, BBP::std::Lexer::lex_keyword::mask, BBP::std::read(), and BBP::std::Lexer::lex_keyword::word\&.
+.PP
+Referenced by BBP::esa::esaProcessor::ExpectDelimiters()\&.
+.SS "void BBP::std::Lexer::lex_context::moveToStartOfLastWord (bool stopAtNewLine)"
+
+.PP
+Definition at line 560 of file Lexer\&.cpp\&.
+.PP
+.nf
+561 {
+562     moveToEndOfLastWord(stopAtNewLine);
+563     moveToStartOfThisWord(stopAtNewLine);
+564 }
+.fi
+.SS "void BBP::std::Lexer::lex_context::moveToStartOfNextWord (bool stopAtNewLine)"
+
+.PP
+Definition at line 591 of file Lexer\&.cpp\&.
+.PP
+.nf
+592 {
+593     moveToEndOfThisWord(stopAtNewLine);
+594 
+595     // While possible, move forward one character until no whitespace is found
+596     while (++atPosition < dataSize)
+597     {
+598         char c = __UNSAFE__(read)(&data, atPosition);
+599         if (!isWhitespace(c) || (isNewLine(c) && stopAtNewLine))
+600             break;
+601     }
+602 }
+.fi
+.PP
+References __UNSAFE__, and BBP::std::read()\&.
+.SS "void BBP::std::Lexer::lex_context::moveToStartOfThisWord (bool stopAtNewLine)"
+
+.PP
+Definition at line 577 of file Lexer\&.cpp\&.
+.PP
+.nf
+578 {
+579     // While possible, move backward one character until whitespace is found
+580     while (--atPosition < dataSize)
+581         if (isWhitespace(__UNSAFE__(read)(&data, atPosition)))
+582             break;
+583     atPosition++;
+584 }
+.fi
+.PP
+References __UNSAFE__, and BBP::std::read()\&.
+.SS "void BBP::std::Lexer::lex_context::parseFile ()"
+
+.PP
+Definition at line 275 of file Lexer\&.cpp\&.
+.PP
+.nf
+276 {
+277     // Reset debug information
+278     debugInformation\&.line = 1;
+279 
+280     // While within bounds\&.\&.\&.
+281     while (atPosition < dataSize)
+282     {
+283         // Calculate the amount of keywords\&.
+284         size_t kwCount = keywordStack\&.atElement;
+285 
+286         // Find the next keyword
+287         lex_keywordhandle handle = moveToNextKeyword();
+288 
+289         if (abort)
+290         {
+291             Log(activeFile\&.data, "ECompilation terminated\&.", nullptr);
+292             return;
+293         }
+294 
+295         // If no keyword is found, exit out\&.
+296         if (handle == kwCount)
+297             break;
+298 
+299         // Otherwise, get keyword pointer
+300         lex_keyword *keyword = &__UNSAFE__(read)(&keywords, handle);
+301 
+302         // Then execute the keyword action
+303         executeKeywordAction(handle, keyword);
+304 
+305         if (abort)
+306         {
+307             Log(activeFile\&.data, "ECompilation terminated\&.", nullptr);
+308             return;
+309         }
+310 
+311     }
+312 
+313     // Do final checks
+314     if (literalDepth)
+315         Log("lexer", "EExpected literal termination before 'EOF'", nullptr);
+316     if (commentDepth)
+317         Log("lexer", "EExpected comment termination before 'EOF'", nullptr);
+318 
+319     literalDepth = 0;
+320     commentDepth = 0;
+321 }
+.fi
+.PP
+References __UNSAFE__, BBP::esa::keywords, and BBP::std::read()\&.
+.PP
+Referenced by BBP::esa::esaProcessor::includeFile(), and translateUnit()\&.
+.SS "void BBP::std::Lexer::lex_context::parseFile (\fBstd::PATH\fP & file)"
+
+.PP
+Definition at line 25 of file Lexer\&.cpp\&.
+.PP
+.nf
+26 {
+27     // Read the file
+28     std::FILE source(file);
+29 
+30     // Read the data from the file
+31     data = *source\&.b()\&.page;
+32 
+33     // Calculate data size
+34     dataSize = std::seqlen(data);
+35 
+36     // Set string
+37     std::c_string name = file\&.fileName();
+38     strcpy(&activeFile, name);
+39 
+40     // Reset flags
+41     commentDepth = 0;
+42     literalDepth = 0;
+43     atPosition = 0;
+44 
+45     // Parse everything
+46     parseFile();
+47 
+48     // Close file
+49     source\&.close();
+50 
+51     // Clear file data
+52     data = PAGE<string_element>(0, nullptr);
+53 
+54     // Reset file name
+55     strcpy(&activeFile, "");
+56 }
+.fi
+.PP
+References BBP::std::FILE::b(), BBP::std::FILE::close(), BBP::std::PATH::fileName(), BBP::std::Stack< K >::page, BBP::std::seqlen(), and BBP::std::strcpy()\&.
+.SS "void BBP::std::Lexer::lex_context::resetInfo (\fBlex_debugInfo\fP & info)"
+
+.PP
+Definition at line 694 of file Lexer\&.cpp\&.
+.PP
+.nf
+695 {
+696     info\&.showLinesAndColoumns = true;
+697     info\&.showWhere = true;
+698     info\&.highlightmsg = nullptr;
+699     info\&.highlight = 0;
+700     info\&.errName = nullptr;
+701     info\&.highlightLength = 0;
+702 }
+.fi
+.PP
+References BBP::std::Lexer::lex_debugInfo::errName, BBP::std::Lexer::lex_debugInfo::highlight, BBP::std::Lexer::lex_debugInfo::highlightLength, BBP::std::Lexer::lex_debugInfo::highlightmsg, BBP::std::Lexer::lex_debugInfo::showLinesAndColoumns, and BBP::std::Lexer::lex_debugInfo::showWhere\&.
+.PP
+Referenced by BBP::esa::esaProcessor::includeFile()\&.
+.SS "void BBP::std::Lexer::lex_context::translateUnit (\fBstd::PATH\fP & file)"
+
+.PP
+Definition at line 5 of file Lexer\&.cpp\&.
+.PP
+.nf
+6 {
+7     // Reset user paths
+8     usrpaths\&.atElement = 0;
+9     usrpaths <<= file\&.pathName();
+10     usrpaths <<= workingDirectory->relName();
+11 
+12     // Parse the source file\&.
+13     parseFile(file);
+14 
+15     // Check if ill-formed
+16     if (illformed)
+17     {
+18         debugInformation\&.showLinesAndColoumns = false;
+19         Log(file\&.relName(), "ETranslation unit failed to compile\&.", nullptr);
+20         return;
+21     }
+22 
+23 }
+.fi
+.PP
+References BBP::std::Stack< K >::atElement, debugInformation, illformed, Log(), parseFile(), BBP::std::PATH::pathName(), BBP::std::PATH::relName(), BBP::std::Lexer::lex_debugInfo::showLinesAndColoumns, usrpaths, and BBP::std::workingDirectory\&.
+.SS "bool BBP::std::Lexer::lex_context::tryParseNumerical (\fBstd::index_t\fP from, \fBstd::index_t\fP to, bool & isFloat, float & fresult, int & iresult)"
+
+.PP
+Definition at line 469 of file Lexer\&.cpp\&.
+.PP
+.nf
+470 {
+471     // Define some variables to idk, figure it out goddamn 
+472     std::byte base; 
+473     std::string_element firstCharacter = std::read(&data, from);
+474     bool hasPrefix = (isNumericalBase(firstCharacter, base) != 0);
+475 
+476     // If base is 0, it means the first character is not a valid numerical character\&.
+477     if (base == 0 && !isDecimalNumeral(firstCharacter))
+478         return false;
+479     else if (base == 0)
+480         base = 10;
+481 
+482     // This is used for the float
+483     float divideBy = 1;
+484 
+485     // Loop over each character now
+486     for (std::index_t idx = from + hasPrefix; idx < to; idx++)
+487     {
+488         // Fetch a character
+489         std::string_element c = std::read(&data, idx);
+490 
+491         // If the character is a dot, switch over to float mode\&.
+492         if (c == '\&.' && !isFloat)
+493         {
+494             isFloat = true;
+495             continue;
+496         }
+497         else if (c == '\&.')
+498             return false; // Since isFloat must be true, a return value of zero still gives a unique return value\&.
+499         // TODO: Explain wtf that means\&.
+500 
+501         // If character is not numerical number based on base type, return
+502         std::byte number = 0;
+503         switch (base)
+504         {
+505         case 2:
+506             number = isBinaryNumeral(c);
+507             break;
+508         case 8:
+509             number = isOctalNumeral(c);
+510             break;
+511         case 10:
+512             number = isDecimalNumeral(c);
+513             break;
+514         case 16:
+515             number = isHexadecimalNumeral(c);
+516             break;
+517         }
+518 
+519         // If not a number, return false\&.
+520         if (number == 0)
+521             return false;
+522 
+523         // If not a float, increment both accordingly
+524         if (!isFloat)
+525         {
+526             iresult = (iresult * base) + (number - 10);
+527             fresult = (fresult * base) + (number - 10);
+528             divideBy *= base;
+529         }
+530         else
+531         {
+532             fresult += (number - 10) / divideBy;
+533             divideBy *= base;
+534         }
+535     }
+536 
+537     // Done
+538     return true;
+539 }
+.fi
+.PP
+References BBP::std::read(), and BBP::Locale::Japanese::to\&.
+.SH "Field Documentation"
+.PP 
+.SS "bool BBP::std::Lexer::lex_context::abort"
+
+.PP
+Definition at line 147 of file Lex\&.h\&.
+.SS "\fBstd::static_string\fP<128> BBP::std::Lexer::lex_context::activeFile"
+
+.PP
+Definition at line 117 of file Lex\&.h\&.
+.PP
+Referenced by BBP::esa::esaProcessor::includeFile()\&.
+.SS "\fBstd::index_t\fP BBP::std::Lexer::lex_context::atPosition"
+
+.PP
+Definition at line 124 of file Lex\&.h\&.
+.PP
+Referenced by BBP::esa::esaProcessor::ExpectDelimiters(), and BBP::esa::esaProcessor::includeFile()\&.
+.SS "char BBP::std::Lexer::lex_context::commentDepth"
+
+.PP
+Definition at line 140 of file Lex\&.h\&.
+.PP
+Referenced by BBP::esa::esaProcessor::includeFile()\&.
+.SS "\fBstd::PAGE\fP<\fBstring_element\fP> BBP::std::Lexer::lex_context::data"
+
+.PP
+Definition at line 120 of file Lex\&.h\&.
+.PP
+Referenced by BBP::esa::esaProcessor::includeFile(), and BBP::esa::esaProcessor::saveIdentifier()\&.
+.SS "\fBstd::size_t\fP BBP::std::Lexer::lex_context::dataSize"
+
+.PP
+Definition at line 121 of file Lex\&.h\&.
+.PP
+Referenced by BBP::esa::esaProcessor::includeFile()\&.
+.SS "\fBlex_debugInfo\fP BBP::std::Lexer::lex_context::debugInformation"
+
+.PP
+Definition at line 144 of file Lex\&.h\&.
+.PP
+Referenced by BBP::esa::esaProcessor::ExpectDelimiters(), BBP::esa::esaProcessor::includeFile(), BBP::esa::INSTRUCTION(), and translateUnit()\&.
+.SS "bool BBP::std::Lexer::lex_context::illformed"
+
+.PP
+Definition at line 148 of file Lex\&.h\&.
+.PP
+Referenced by translateUnit()\&.
+.SS "bool BBP::std::Lexer::lex_context::inhibitSpecialFunctions"
+
+.PP
+Definition at line 133 of file Lex\&.h\&.
+.SS "\fBstd::STATIC_PAGE\fP<\fBlex_keyword\fP, 256> BBP::std::Lexer::lex_context::keywords"
+
+.PP
+Definition at line 127 of file Lex\&.h\&.
+.SS "\fBstd::Stack\fP<\fBlex_keyword\fP> BBP::std::Lexer::lex_context::keywordStack"
+
+.PP
+Definition at line 130 of file Lex\&.h\&.
+.PP
+Referenced by BBP::esa::esaProcessor::esaProcessor(), and BBP::esa::esaProcessor::ExpectDelimiters()\&.
+.SS "\fBindex_t\fP BBP::std::Lexer::lex_context::lastWhiteSpace"
+
+.PP
+Definition at line 138 of file Lex\&.h\&.
+.SS "char BBP::std::Lexer::lex_context::literalDepth"
+
+.PP
+Definition at line 141 of file Lex\&.h\&.
+.PP
+Referenced by BBP::esa::esaProcessor::includeFile()\&.
+.SS "\fBstd::conststring\fP(* BBP::std::Lexer::lex_context::onNumericalLiteral) (\fBnumerical_t\fP numerical, bool isFloat)"
+
+.PP
+Definition at line 135 of file Lex\&.h\&.
+.SS "\fBstd::conststring\fP(* BBP::std::Lexer::lex_context::onUnkown) (\fBindex_t\fP, \fBindex_t\fP)"
+
+.PP
+Definition at line 134 of file Lex\&.h\&.
+.SS "\fBstd::static_string\fP<1024> BBP::std::Lexer::lex_context::syspathPage"
+
+.PP
+Definition at line 152 of file Lex\&.h\&.
+.SS "\fBstd::Stack\fP<\fBstd::string_element\fP> BBP::std::Lexer::lex_context::syspaths"
+
+.PP
+Definition at line 154 of file Lex\&.h\&.
+.PP
+Referenced by BBP::esa::esaProcessor::includeFile()\&.
+.SS "\fBstd::static_string\fP<1024> BBP::std::Lexer::lex_context::usrpathPage"
+
+.PP
+Definition at line 151 of file Lex\&.h\&.
+.SS "\fBstd::Stack\fP<\fBstd::string_element\fP> BBP::std::Lexer::lex_context::usrpaths"
+
+.PP
+Definition at line 153 of file Lex\&.h\&.
+.PP
+Referenced by BBP::esa::esaProcessor::includeFile(), and translateUnit()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

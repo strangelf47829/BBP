@@ -1,0 +1,89 @@
+\hypertarget{MINGW64_2tterm_8cpp}{}\doxysection{tterm.\+cpp File Reference}
+\label{MINGW64_2tterm_8cpp}\index{tterm.cpp@{tterm.cpp}}
+{\ttfamily \#include \char`\"{}../include/stdio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/\+Graphics.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../build/include/\+S\+D\+L.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+Include dependency graph for M\+I\+N\+G\+W64/tterm.cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dd1/MINGW64_2tterm_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{MINGW64_2tterm_8cpp_a6f762346f9b3ee9e4887d897b256eb80}{input\+Thread}} (void $\ast$data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+S\+D\+L\+\_\+\+Thread $\ast$ \mbox{\hyperlink{MINGW64_2tterm_8cpp_acf12fd02d718d8c4907145316b1063aa}{thr}}
+\item 
+volatile bool \mbox{\hyperlink{MINGW64_2tterm_8cpp_ae1fd54bdbfbc12c29816883afaa80969}{listen\+For\+Input}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{MINGW64_2tterm_8cpp_a6f762346f9b3ee9e4887d897b256eb80}\label{MINGW64_2tterm_8cpp_a6f762346f9b3ee9e4887d897b256eb80}} 
+\index{MINGW64/tterm.cpp@{MINGW64/tterm.cpp}!inputThread@{inputThread}}
+\index{inputThread@{inputThread}!MINGW64/tterm.cpp@{MINGW64/tterm.cpp}}
+\doxysubsubsection{\texorpdfstring{inputThread()}{inputThread()}}
+{\footnotesize\ttfamily int input\+Thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 82 of file M\+I\+N\+G\+W64/tterm.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{83 \{}
+\DoxyCodeLine{84     SDL\_Event event;}
+\DoxyCodeLine{85     \textcolor{keywordflow}{while} (\mbox{\hyperlink{MINGW64_2tterm_8cpp_ae1fd54bdbfbc12c29816883afaa80969}{listenForInput}}) \{}
+\DoxyCodeLine{86         \textcolor{keywordflow}{while} (SDL\_PollEvent(\&event)) \{}
+\DoxyCodeLine{87             \mbox{\hyperlink{namespaceBBP_1_1std_a8d46784954bec3eed0277416001174a5}{::std::printf}}(\textcolor{stringliteral}{"Hello!"});}
+\DoxyCodeLine{88             \textcolor{keywordflow}{if} (event.type == SDL\_KEYDOWN) \{}
+\DoxyCodeLine{89                 SDL\_Keycode keyCode = \textcolor{keyword}{event}.key.keysym.sym;}
+\DoxyCodeLine{90                 \mbox{\hyperlink{namespaceBBP_1_1std_a0e604b25e277316ba6a6d604812bbee3}{BBP::std::STDIN}} << (char)keyCode;}
+\DoxyCodeLine{91             \}}
+\DoxyCodeLine{92         \}}
+\DoxyCodeLine{93     \}}
+\DoxyCodeLine{94     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{95 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d7e/MINGW64_2tterm_8cpp_a6f762346f9b3ee9e4887d897b256eb80_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{MINGW64_2tterm_8cpp_ae1fd54bdbfbc12c29816883afaa80969}\label{MINGW64_2tterm_8cpp_ae1fd54bdbfbc12c29816883afaa80969}} 
+\index{MINGW64/tterm.cpp@{MINGW64/tterm.cpp}!listenForInput@{listenForInput}}
+\index{listenForInput@{listenForInput}!MINGW64/tterm.cpp@{MINGW64/tterm.cpp}}
+\doxysubsubsection{\texorpdfstring{listenForInput}{listenForInput}}
+{\footnotesize\ttfamily volatile bool listen\+For\+Input = false}
+
+
+
+Definition at line 80 of file M\+I\+N\+G\+W64/tterm.\+cpp.
+
+\mbox{\Hypertarget{MINGW64_2tterm_8cpp_acf12fd02d718d8c4907145316b1063aa}\label{MINGW64_2tterm_8cpp_acf12fd02d718d8c4907145316b1063aa}} 
+\index{MINGW64/tterm.cpp@{MINGW64/tterm.cpp}!thr@{thr}}
+\index{thr@{thr}!MINGW64/tterm.cpp@{MINGW64/tterm.cpp}}
+\doxysubsubsection{\texorpdfstring{thr}{thr}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Thread$\ast$ thr}
+
+
+
+Definition at line 79 of file M\+I\+N\+G\+W64/tterm.\+cpp.
+

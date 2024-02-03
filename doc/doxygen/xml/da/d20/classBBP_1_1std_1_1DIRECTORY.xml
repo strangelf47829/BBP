@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="da/d20/classBBP_1_1std_1_1DIRECTORY" kind="class" language="C++" prot="public">
+    <compoundname>BBP::std::DIRECTORY</compoundname>
+    <includes refid="d0/d00/FileSys_8h" local="no">FileSys.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="da/d20/classBBP_1_1std_1_1DIRECTORY_1a3644852521ea4957331ccd275c8a7182" prot="private" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a64e230700a3e0a1b00128beb2598b138" kindref="member">noderef_t</ref></type>
+        <definition>noderef_t BBP::std::DIRECTORY::node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="155" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="da/d20/classBBP_1_1std_1_1DIRECTORY_1a2030a0f343a1889575ab796694e2e330" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d3/d99/structBBP_1_1std_1_1DirectoryNode" kindref="compound">DirectoryNode</ref> *</type>
+        <definition>DirectoryNode* BBP::std::DIRECTORY::getNode</definition>
+        <argsstring>()</argsstring>
+        <name>getNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="156" column="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>BBP::std::DIRECTORY</label>
+        <link refid="da/d20/classBBP_1_1std_1_1DIRECTORY"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-node</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>unsigned int</label>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="149" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" bodystart="148" bodyend="157"/>
+    <listofallmembers>
+      <member refid="da/d20/classBBP_1_1std_1_1DIRECTORY_1a2030a0f343a1889575ab796694e2e330" prot="private" virt="non-virtual"><scope>BBP::std::DIRECTORY</scope><name>getNode</name></member>
+      <member refid="da/d20/classBBP_1_1std_1_1DIRECTORY_1a3644852521ea4957331ccd275c8a7182" prot="private" virt="non-virtual"><scope>BBP::std::DIRECTORY</scope><name>node</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

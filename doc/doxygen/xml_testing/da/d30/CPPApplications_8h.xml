@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="da/d30/CPPApplications_8h" kind="file" language="C++">
+    <compoundname>CPPApplications.h</compoundname>
+    <includedby refid="d7/d40/badapple_8cpp" local="yes">badapple.cpp</includedby>
+    <includedby refid="dc/d9b/Logout_8cpp" local="yes">Logout.cpp</includedby>
+    <includedby refid="d3/da0/neofetch_8cpp" local="yes">neofetch.cpp</includedby>
+    <includedby refid="df/d6c/Shell_8cpp" local="yes">Shell.cpp</includedby>
+    <includedby refid="de/dd1/Smile_8cpp" local="yes">Smile.cpp</includedby>
+    <includedby refid="d6/dc6/Executable_8cpp" local="yes">Executable.cpp</includedby>
+    <invincdepgraph>
+      <node id="5">
+        <label>Shell.cpp</label>
+        <link refid="df/d6c/Shell_8cpp"/>
+      </node>
+      <node id="7">
+        <label>Executable.cpp</label>
+        <link refid="d6/dc6/Executable_8cpp"/>
+      </node>
+      <node id="3">
+        <label>Logout.cpp</label>
+        <link refid="dc/d9b/Logout_8cpp"/>
+      </node>
+      <node id="6">
+        <label>Smile.cpp</label>
+        <link refid="de/dd1/Smile_8cpp"/>
+      </node>
+      <node id="2">
+        <label>badapple.cpp</label>
+        <link refid="d7/d40/badapple_8cpp"/>
+      </node>
+      <node id="1">
+        <label>CPPApplications.h</label>
+        <link refid="da/d30/CPPApplications_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>neofetch.cpp</label>
+        <link refid="d3/da0/neofetch_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="d9/d6f/namespaceBBP">BBP</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/CPPApplications.h"/>
+  </compounddef>
+</doxygen>

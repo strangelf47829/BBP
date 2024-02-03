@@ -1,0 +1,1104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d0/d71/classBBP_1_1userspace_1_1StateMachine" kind="class" language="C++" prot="public">
+    <compoundname>BBP::userspace::StateMachine</compoundname>
+    <includes refid="da/d78/StateMachine_8h" local="no">StateMachine.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1abfa987ee7430b8375e73a1d4a73756e3" prot="private" static="no" mutable="no">
+        <type><ref refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor" kindref="compound">userspace::HyperVisor</ref> *</type>
+        <definition>userspace::HyperVisor* BBP::userspace::StateMachine::activeHypervisor</definition>
+        <argsstring></argsstring>
+        <name>activeHypervisor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="14" column="23" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" bodystart="14" bodyend="-1"/>
+        <referencedby refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a2cd3b496a9c0a4427e6538746a100365" compoundref="d6/d82/StateMachine_8cpp" startline="3" endline="6">setActiveHypervisor</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a547a13aa0d84f9ed8d6ad913949fe25e" prot="private" static="no" mutable="no">
+        <type><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread" kindref="compound">userspace::Thread</ref> *</type>
+        <definition>userspace::Thread* BBP::userspace::StateMachine::activeThread</definition>
+        <argsstring></argsstring>
+        <name>activeThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="15" column="19" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a30d888750fb9eb20f67dc1b5ff8e427a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::NIL</definition>
+        <argsstring>()</argsstring>
+        <name>NIL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="18" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="6" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a22dc0b90bb396bc64f840871236dd1a0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::STACK</definition>
+        <argsstring>()</argsstring>
+        <name>STACK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="19" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="11" bodyend="68"/>
+        <references refid="d0/def/Signal_8h_1a82e69d819748cab5933309bba1999f7c" compoundref="d0/def/Signal_8h" startline="9">__SIGNAL__</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1a5ae89d54a3bffdc3b16b2fdd5690f9bfa01e0c9147c3dd6b6da1d8bdb73e0808e" compoundref="d1/d12/Opcodes_8h" startline="44">BBP::userspace::argument</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1a5ae89d54a3bffdc3b16b2fdd5690f9bfa05135a5035a6d0b4cc267284705c403a" compoundref="d1/d12/Opcodes_8h" startline="43">BBP::userspace::pop</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1a5ae89d54a3bffdc3b16b2fdd5690f9bfa65d42b7577f04dc5027e2d63ca9b6a7c" compoundref="d1/d12/Opcodes_8h" startline="42">BBP::userspace::push</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1add07926a91c5970f2faffcc64a68283c" compoundref="d0/def/Signal_8h" startline="31">BBP::std::SIGILL</references>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a841a18636f26543608cdfff67ddf849b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::CTRL</definition>
+        <argsstring>()</argsstring>
+        <name>CTRL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="20" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a7ce447a639666f293754379521d10854" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::MEM</definition>
+        <argsstring>()</argsstring>
+        <name>MEM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="21" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a053a5e64ac11292e240d4a749473416d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::INC</definition>
+        <argsstring>()</argsstring>
+        <name>INC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="22" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a2f0106d7eaadfd0b849cc785b34cc4c5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::DEC</definition>
+        <argsstring>()</argsstring>
+        <name>DEC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="23" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1aebb9ab151379e6eb67c8c133acae2aa5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::NEG</definition>
+        <argsstring>()</argsstring>
+        <name>NEG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="24" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1afeca0d00202fdd2cfb2ce6f5676bf1b8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::ADD</definition>
+        <argsstring>()</argsstring>
+        <name>ADD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="25" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="89" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1ac145c06aac13b4e6da5de44b9e865a6e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::SUB</definition>
+        <argsstring>()</argsstring>
+        <name>SUB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="26" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="93" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a8af7562aca14c46b64c0f69a93bb747b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::MUL</definition>
+        <argsstring>()</argsstring>
+        <name>MUL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="27" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="97" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a23a31f3f4d9fc123b2f30d84daccc8c5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::DIV</definition>
+        <argsstring>()</argsstring>
+        <name>DIV</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="28" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="101" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a723bacadb3d811e3d589791769798e4d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::MOD</definition>
+        <argsstring>()</argsstring>
+        <name>MOD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="29" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="105" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1aa666b8309c29ea2ce18db82696b504a8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::LBS</definition>
+        <argsstring>()</argsstring>
+        <name>LBS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="30" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="109" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a731ac578faf957270b07ce802bbdb350" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::RBS</definition>
+        <argsstring>()</argsstring>
+        <name>RBS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="31" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="113" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a18ca8b937a06641e8c72b012077cb10a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::OR</definition>
+        <argsstring>()</argsstring>
+        <name>OR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="32" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="117" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a95ff726718554b9f0991312822d2dcd5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::XOR</definition>
+        <argsstring>()</argsstring>
+        <name>XOR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="33" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="121" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a692712985249e1ab42af2b09066726b2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::AND</definition>
+        <argsstring>()</argsstring>
+        <name>AND</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="34" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="125" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a3db26a64b860dcb2d859b10ed07b5dc3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::NOT</definition>
+        <argsstring>()</argsstring>
+        <name>NOT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="35" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="129" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1ae6d0077a11b0f30f983f616e4632b365" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::FLAG</definition>
+        <argsstring>()</argsstring>
+        <name>FLAG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="36" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="133" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a3547f7fce3de408e8597c8037a56df18" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::JMP</definition>
+        <argsstring>()</argsstring>
+        <name>JMP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="37" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="137" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a8d47e5ed615a46080f6f729beac4cc7d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::JMPZ</definition>
+        <argsstring>()</argsstring>
+        <name>JMPZ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="38" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="141" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a2a591c09d572e1c787a0f6e47a6e6fc2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::JMPC</definition>
+        <argsstring>()</argsstring>
+        <name>JMPC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="39" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="145" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a3faac0df9be4f682a3d9f8cb364a6fbd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::PAGE</definition>
+        <argsstring>()</argsstring>
+        <name>PAGE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="40" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="149" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a1e99dfb332b7e32cf928207c09b11620" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::SIGNAL</definition>
+        <argsstring>()</argsstring>
+        <name>SIGNAL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="41" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="153" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1ae7e0a358e21641ea5d1e58c9f1c40418" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::HALT</definition>
+        <argsstring>()</argsstring>
+        <name>HALT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="42" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachineOpcodes.cpp" bodystart="157" bodyend="160"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a2cd3b496a9c0a4427e6538746a100365" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::setActiveHypervisor</definition>
+        <argsstring>(userspace::HyperVisor *)</argsstring>
+        <name>setActiveHypervisor</name>
+        <param>
+          <type><ref refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor" kindref="compound">userspace::HyperVisor</ref> *</type>
+          <defname>hyperv</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="47" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachine.cpp" bodystart="3" bodyend="6"/>
+        <references refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1abfa987ee7430b8375e73a1d4a73756e3" compoundref="da/d78/StateMachine_8h" startline="14">activeHypervisor</references>
+        <referencedby refid="d9/d6f/namespaceBBP_1a0ba2e2ff83f9f917f9811058a5d02a0b" compoundref="de/dd1/Smile_8cpp" startline="26" endline="218">BBP::smile_main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1aa1e972d83c8e7af057feac1922b389c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::setActiveThread</definition>
+        <argsstring>(userspace::Thread *)</argsstring>
+        <name>setActiveThread</name>
+        <param>
+          <type><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread" kindref="compound">userspace::Thread</ref> *</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="48" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachine.cpp" bodystart="8" bodyend="11"/>
+        <referencedby refid="d9/d6f/namespaceBBP_1a0ba2e2ff83f9f917f9811058a5d02a0b" compoundref="de/dd1/Smile_8cpp" startline="26" endline="218">BBP::smile_main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a5a294cc50280a273753e3289e5407cd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::cycleThread</definition>
+        <argsstring>()</argsstring>
+        <name>cycleThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="51" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachine.cpp" bodystart="13" bodyend="32"/>
+        <references refid="dd/d98/namespaceBBP_1_1std_1ace14a8680f46b3c05954e4d1f03ab1fe" compoundref="d6/dc6/Executable_8cpp" startline="14" endline="118">BBP::std::execute</references>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea69f972cf160b631cca4c040d85eecc6e" compoundref="d4/d54/Locale_8h" startline="67">BBP::Locale::Japanese::i</references>
+        <referencedby refid="d9/d6f/namespaceBBP_1a0ba2e2ff83f9f917f9811058a5d02a0b" compoundref="de/dd1/Smile_8cpp" startline="26" endline="218">BBP::smile_main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1aed94fbf4303e0f50cbe8610b24348ed9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::userspace::StateMachine::execute</definition>
+        <argsstring>()</argsstring>
+        <name>execute</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="54" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachine.cpp" bodystart="34" bodyend="123"/>
+        <references refid="d0/def/Signal_8h_1a82e69d819748cab5933309bba1999f7c" compoundref="d0/def/Signal_8h" startline="9">__SIGNAL__</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691a31fba354be51d98e40a75e88e11a293e" compoundref="d1/d12/Opcodes_8h" startline="20">BBP::userspace::ADD</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691aa3672aab0eb2717bfd4a0a3f4cd8135b" compoundref="d1/d12/Opcodes_8h" startline="29">BBP::userspace::AND</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691ac4bd4c2be49f7c793b2025eb2379f59c" compoundref="d1/d12/Opcodes_8h" startline="15">BBP::userspace::CTRL</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691a4975717c5b7de961aa3fcf1f2690b5ba" compoundref="d1/d12/Opcodes_8h" startline="18">BBP::userspace::DEC</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691ad2feed1314bf9d1e43a3f382e1afc1fa" compoundref="d1/d12/Opcodes_8h" startline="23">BBP::userspace::DIV</references>
+        <references refid="d8/dc2/errno_8h_1a4d0b1b435ec441e7d50a430b83df5832" compoundref="d8/dc2/errno_8h" startline="20">ENOEXEC</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a750ba4c285e0788e84722a30a776b913" compoundref="d4/df4/Except_8cpp" startline="7" endline="18">BBP::std::exception</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691a78578e2e0b0e7c0e99b9d48489b83c02" compoundref="d1/d12/Opcodes_8h" startline="31">BBP::userspace::FLAG</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691ac6219858935b2de28af17f6280f848f1" compoundref="d1/d12/Opcodes_8h" startline="37">BBP::userspace::HALT</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691a592ce73ed5f6e686b27a44d909d24ae0" compoundref="d1/d12/Opcodes_8h" startline="17">BBP::userspace::INC</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691a0f2ef7601744e481cbeecea29273e013" compoundref="d1/d12/Opcodes_8h" startline="32">BBP::userspace::JMP</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691a3a4a4fd749e067f5f4e78a432eeaa07b" compoundref="d1/d12/Opcodes_8h" startline="34">BBP::userspace::JMPC</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691a30b41f67bf353662a64f6e21e3720150" compoundref="d1/d12/Opcodes_8h" startline="33">BBP::userspace::JMPZ</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691a5f1acd965891c3cfc8f2ec8eb66fac11" compoundref="d1/d12/Opcodes_8h" startline="25">BBP::userspace::LBS</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691acb9eb4cb0f810e6763dd620485993e59" compoundref="d1/d12/Opcodes_8h" startline="16">BBP::userspace::MEM</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691ad721f5699f34b6288288e51f91b646df" compoundref="d1/d12/Opcodes_8h" startline="24">BBP::userspace::MOD</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691abe98b8b65bf740fc5b65c57490ad4879" compoundref="d1/d12/Opcodes_8h" startline="22">BBP::userspace::MUL</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691abf155ac270a840df98346ed46321f7f5" compoundref="d1/d12/Opcodes_8h" startline="19">BBP::userspace::NEG</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691aa516454107541de807cb2176c679457c" compoundref="d1/d12/Opcodes_8h" startline="13">BBP::userspace::NIL</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691a9d74cd38fdbdda67ddcd0a1003ac0a88" compoundref="d1/d12/Opcodes_8h" startline="30">BBP::userspace::NOT</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691ab2c7589f4792e790c21a1e4d50ea8664" compoundref="d1/d12/Opcodes_8h" startline="27">BBP::userspace::OR</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691a6e50810a4eaad4ef38ade05f38e8a163" compoundref="d1/d12/Opcodes_8h" startline="35">BBP::userspace::PAGE</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691a9015fc5c5da2c8fe355622464acaa764" compoundref="d1/d12/Opcodes_8h" startline="26">BBP::userspace::RBS</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1add07926a91c5970f2faffcc64a68283c" compoundref="d0/def/Signal_8h" startline="31">BBP::std::SIGILL</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691a067b4613bb02600633a9163ad50771a0" compoundref="d1/d12/Opcodes_8h" startline="36">BBP::userspace::SIGNAL</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691a916bf0664dedd693601ed3551050cfa9" compoundref="d1/d12/Opcodes_8h" startline="14">BBP::userspace::STACK</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691ab9b6928fbbeb6cc0a8e4fb2156b0fa4e" compoundref="d1/d12/Opcodes_8h" startline="21">BBP::userspace::SUB</references>
+        <references refid="de/dfe/namespaceBBP_1_1userspace_1af865efb4e239132478b2f72e99fdd691a05cee0b3ea76de8e8dbae527c93c1c45" compoundref="d1/d12/Opcodes_8h" startline="28">BBP::userspace::XOR</references>
+      </memberdef>
+      <memberdef kind="function" id="d0/d71/classBBP_1_1userspace_1_1StateMachine_1aa56ef9d93d0c958c0c243213fc25c714" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread" kindref="compound">Thread</ref> &amp;</type>
+        <definition>BBP::userspace::Thread &amp; BBP::userspace::StateMachine::getActiveThread</definition>
+        <argsstring>()</argsstring>
+        <name>getActiveThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="57" column="8" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/StateMachine.cpp" bodystart="125" bodyend="133"/>
+        <references refid="d8/dc2/errno_8h_1a4d0b1b435ec441e7d50a430b83df5832" compoundref="d8/dc2/errno_8h" startline="20">ENOEXEC</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a750ba4c285e0788e84722a30a776b913" compoundref="d4/df4/Except_8cpp" startline="7" endline="18">BBP::std::exception</references>
+        <referencedby refid="d8/d04/classBBP_1_1userspace_1_1lvalue_1a8148d4fec076833a89cc9d3ff6758c92" compoundref="d4/d56/lvalue_8cpp" startline="51" endline="366">BBP::userspace::lvalue::dereference</referencedby>
+        <referencedby refid="d8/d04/classBBP_1_1userspace_1_1lvalue_1a613afac910aadefe91088ae6764ee035" compoundref="d4/d56/lvalue_8cpp" startline="368" endline="389">BBP::userspace::lvalue::resolve</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>BBP::userspace::Thread</label>
+        <link refid="d5/d8b/structBBP_1_1userspace_1_1Thread"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+argumentPage</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+registerData</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>+instruction</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+generalStackSize</edgelabel>
+          <edgelabel>+argumentStackSize</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>+generalStack</edgelabel>
+          <edgelabel>+argumentStack</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>+TLS</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>+active</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>+allocator</edgelabel>
+        </childnode>
+        <childnode refid="38" relation="usage">
+          <edgelabel>+executable</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>+dl</edgelabel>
+          <edgelabel>+cl</edgelabel>
+          <edgelabel>+six</edgelabel>
+          <edgelabel>+bl</edgelabel>
+          <edgelabel>+tix</edgelabel>
+          <edgelabel>+sih</edgelabel>
+          <edgelabel>+al</edgelabel>
+          <edgelabel>+ht</edgelabel>
+          <edgelabel>+dix</edgelabel>
+          <edgelabel>+tp</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="44" relation="usage">
+          <edgelabel>+generalPage</edgelabel>
+        </childnode>
+        <childnode refid="45" relation="usage">
+          <edgelabel>+registerCount</edgelabel>
+        </childnode>
+      </node>
+      <node id="45">
+        <label>size_t</label>
+      </node>
+      <node id="15">
+        <label>byte *</label>
+      </node>
+      <node id="33">
+        <label>void * *</label>
+      </node>
+      <node id="39">
+        <label>BBP::std::STATIC_PAGE&lt; BBP::userspace::MemoryRegion, 8 &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="40" relation="public-inheritance">
+        </childnode>
+        <childnode refid="41" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="template-instance">
+          <edgelabel>&lt; BBP::userspace::MemoryRegion, 8 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>T</label>
+      </node>
+      <node id="34">
+        <label>void *</label>
+      </node>
+      <node id="13">
+        <label>BBP::std::STATIC_PAGE&lt; std::byte, registerCount *4 &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="template-instance">
+          <edgelabel>&lt; std::byte, registerCount *4 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>BBP::std::ResourceManager</label>
+        <link refid="d6/d73/classBBP_1_1std_1_1ResourceManager"/>
+        <childnode refid="31" relation="usage">
+          <edgelabel>-allocations</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>-invalidAllocationIndex</edgelabel>
+          <edgelabel>-invalidObjectIndex</edgelabel>
+          <edgelabel>-nextObjectAvailable</edgelabel>
+          <edgelabel>-nextAllocationAvailable</edgelabel>
+          <edgelabel>+totalAllocations</edgelabel>
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>-objects</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>word</label>
+      </node>
+      <node id="1">
+        <label>BBP::userspace::StateMachine</label>
+        <link refid="d0/d71/classBBP_1_1userspace_1_1StateMachine"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-activeThread</edgelabel>
+        </childnode>
+        <childnode refid="46" relation="usage">
+          <edgelabel>-activeHypervisor</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>mem_t *</label>
+      </node>
+      <node id="47">
+        <label>BBP::std::STATIC_PAGE&lt; BBP::userspace::Thread, threadCount &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="48" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="template-instance">
+          <edgelabel>&lt; BBP::userspace::Thread, threadCount &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="26">
+        <label>BBP::std::PAGE&lt; K &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="27" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="template-instance">
+          <edgelabel>&lt; K &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>PAGE&lt; T &gt; *</label>
+      </node>
+      <node id="44">
+        <label>BBP::std::STATIC_PAGE&lt; std::word, generalStackSize &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="template-instance">
+          <edgelabel>&lt; std::word, generalStackSize &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>BBP::userspace::Instruction</label>
+        <link refid="d0/dfc/structBBP_1_1userspace_1_1Instruction"/>
+        <childnode refid="18" relation="usage">
+          <edgelabel>+args</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>+header</edgelabel>
+        </childnode>
+      </node>
+      <node id="40">
+        <label>BBP::std::PAGE&lt; BBP::userspace::MemoryRegion &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="41" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="template-instance">
+          <edgelabel>&lt; BBP::userspace::MemoryRegion &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="22">
+        <label>BBP::userspace::Instruction::Head</label>
+        <link refid="d5/d1c/structBBP_1_1userspace_1_1Instruction_1_1Head"/>
+        <childnode refid="19" relation="usage">
+          <edgelabel>+args</edgelabel>
+          <edgelabel>+flags</edgelabel>
+          <edgelabel>+suffix</edgelabel>
+          <edgelabel>+opcode</edgelabel>
+          <edgelabel>+prefix</edgelabel>
+        </childnode>
+      </node>
+      <node id="28">
+        <label>BBP::std::PAGE&lt; std::string_element &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="template-instance">
+          <edgelabel>&lt; std::string_element &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>BBP::std::PAGE&lt; std::byte &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="template-instance">
+          <edgelabel>&lt; std::byte &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="37">
+        <label>BBP::std::AbstractGCEntry</label>
+        <link refid="d7/def/structBBP_1_1std_1_1AbstractGCEntry"/>
+      </node>
+      <node id="5">
+        <label>anonymous:+@1</label>
+      </node>
+      <node id="21">
+        <label>unsigned int</label>
+      </node>
+      <node id="12">
+        <label>BBP::std::STATIC_PAGE&lt; T, K &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>byte</label>
+      </node>
+      <node id="41">
+        <label>BBP::userspace::MemoryRegion</label>
+        <link refid="d3/de6/structBBP_1_1userspace_1_1MemoryRegion"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>+writeable</edgelabel>
+          <edgelabel>+allocated</edgelabel>
+          <edgelabel>+executable</edgelabel>
+          <edgelabel>+readable</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+virtualMemoryHead</edgelabel>
+          <edgelabel>+size</edgelabel>
+          <edgelabel>+physicalMemoryHead</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BBP::std::STATIC_PAGE&lt; std::word, argumentStackSize &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="template-instance">
+          <edgelabel>&lt; std::word, argumentStackSize &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="29">
+        <label>string_element *</label>
+      </node>
+      <node id="31">
+        <label>BBP::std::STATIC_PAGE&lt; void *, max_allocations &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="32" relation="public-inheritance">
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="template-instance">
+          <edgelabel>&lt; void *, max_allocations &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>uint8_t</label>
+      </node>
+      <node id="27">
+        <label>K *</label>
+      </node>
+      <node id="43">
+        <label>registerSize</label>
+      </node>
+      <node id="46">
+        <label>BBP::userspace::HyperVisor</label>
+        <link refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor"/>
+        <childnode refid="38" relation="usage">
+          <edgelabel>+sharedlib</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+activeThreadCount</edgelabel>
+          <edgelabel>+activeThread</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>+threadCount</edgelabel>
+        </childnode>
+        <childnode refid="47" relation="usage">
+          <edgelabel>+threads</edgelabel>
+        </childnode>
+      </node>
+      <node id="36">
+        <label>BBP::std::PAGE&lt; BBP::std::AbstractGCEntry * &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="template-instance">
+          <edgelabel>&lt; BBP::std::AbstractGCEntry * &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="25">
+        <label>BBP::std::Stack&lt; K &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="24" relation="usage">
+          <edgelabel>+readFrom</edgelabel>
+          <edgelabel>+writeTo</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+atElement</edgelabel>
+          <edgelabel>+max_elements</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>+page</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>BBP::userspace::Instruction::Arg</label>
+        <link refid="d5/d9e/structBBP_1_1userspace_1_1Instruction_1_1Arg"/>
+        <childnode refid="19" relation="usage">
+          <edgelabel>+trailerCount</edgelabel>
+          <edgelabel>+offset</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>+anyvalue</edgelabel>
+          <edgelabel>+dereferenced</edgelabel>
+          <edgelabel>+referenced</edgelabel>
+          <edgelabel>+isLiteralArg</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>+data</edgelabel>
+          <edgelabel>+trailers</edgelabel>
+        </childnode>
+      </node>
+      <node id="42">
+        <label>BBP::userspace::register_t</label>
+        <link refid="d8/da2/structBBP_1_1userspace_1_1register__t"/>
+        <childnode refid="43" relation="usage">
+          <edgelabel>+size</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+index</edgelabel>
+          <edgelabel>+offset</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+owner</edgelabel>
+        </childnode>
+      </node>
+      <node id="23">
+        <label>BBP::std::Stack&lt; std::word &gt;</label>
+        <link refid="de/d21/classBBP_1_1std_1_1Stack"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+page</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>+readFrom</edgelabel>
+          <edgelabel>+writeTo</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+atElement</edgelabel>
+          <edgelabel>+max_elements</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="template-instance">
+          <edgelabel>&lt; std::word &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="48">
+        <label>BBP::std::PAGE&lt; BBP::userspace::Thread &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+        <childnode refid="48" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="template-instance">
+          <edgelabel>&lt; BBP::userspace::Thread &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="38">
+        <label>BBP::userspace::BinaryExecutable</label>
+        <link refid="d0/dc2/classBBP_1_1userspace_1_1BinaryExecutable"/>
+        <childnode refid="28" relation="usage">
+          <edgelabel>+BinaryData</edgelabel>
+          <edgelabel>-TLSData</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>-allocated</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>-allocator</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="usage">
+          <edgelabel>+mapping</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+totalSize</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>word *</label>
+      </node>
+      <node id="20">
+        <label>bool</label>
+      </node>
+      <node id="32">
+        <label>BBP::std::PAGE&lt; void * &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="33" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="template-instance">
+          <edgelabel>&lt; void * &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="24">
+        <label>void(*)(Stack&lt; K &gt; *)</label>
+      </node>
+      <node id="9">
+        <label>BBP::std::PAGE&lt; T &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+      </node>
+      <node id="35">
+        <label>BBP::std::STATIC_PAGE&lt; BBP::std::AbstractGCEntry *, max_objects &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="36" relation="public-inheritance">
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="template-instance">
+          <edgelabel>&lt; BBP::std::AbstractGCEntry *, max_objects &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>BBP::std::PAGE&lt; std::word &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="template-instance">
+          <edgelabel>&lt; std::word &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" line="13" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/StateMachine.h" bodystart="12" bodyend="60"/>
+    <listofallmembers>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1abfa987ee7430b8375e73a1d4a73756e3" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>activeHypervisor</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a547a13aa0d84f9ed8d6ad913949fe25e" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>activeThread</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1afeca0d00202fdd2cfb2ce6f5676bf1b8" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>ADD</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a692712985249e1ab42af2b09066726b2" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>AND</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a841a18636f26543608cdfff67ddf849b" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>CTRL</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a5a294cc50280a273753e3289e5407cd3" prot="public" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>cycleThread</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a2f0106d7eaadfd0b849cc785b34cc4c5" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>DEC</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a23a31f3f4d9fc123b2f30d84daccc8c5" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>DIV</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1aed94fbf4303e0f50cbe8610b24348ed9" prot="public" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>execute</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1ae6d0077a11b0f30f983f616e4632b365" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>FLAG</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1aa56ef9d93d0c958c0c243213fc25c714" prot="public" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>getActiveThread</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1ae7e0a358e21641ea5d1e58c9f1c40418" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>HALT</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a053a5e64ac11292e240d4a749473416d" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>INC</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a3547f7fce3de408e8597c8037a56df18" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>JMP</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a2a591c09d572e1c787a0f6e47a6e6fc2" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>JMPC</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a8d47e5ed615a46080f6f729beac4cc7d" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>JMPZ</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1aa666b8309c29ea2ce18db82696b504a8" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>LBS</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a7ce447a639666f293754379521d10854" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>MEM</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a723bacadb3d811e3d589791769798e4d" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>MOD</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a8af7562aca14c46b64c0f69a93bb747b" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>MUL</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1aebb9ab151379e6eb67c8c133acae2aa5" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>NEG</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a30d888750fb9eb20f67dc1b5ff8e427a" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>NIL</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a3db26a64b860dcb2d859b10ed07b5dc3" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>NOT</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a18ca8b937a06641e8c72b012077cb10a" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>OR</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a3faac0df9be4f682a3d9f8cb364a6fbd" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>PAGE</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a731ac578faf957270b07ce802bbdb350" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>RBS</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a2cd3b496a9c0a4427e6538746a100365" prot="public" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>setActiveHypervisor</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1aa1e972d83c8e7af057feac1922b389c8" prot="public" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>setActiveThread</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a1e99dfb332b7e32cf928207c09b11620" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>SIGNAL</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a22dc0b90bb396bc64f840871236dd1a0" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>STACK</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1ac145c06aac13b4e6da5de44b9e865a6e" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>SUB</name></member>
+      <member refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a95ff726718554b9f0991312822d2dcd5" prot="private" virt="non-virtual"><scope>BBP::userspace::StateMachine</scope><name>XOR</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

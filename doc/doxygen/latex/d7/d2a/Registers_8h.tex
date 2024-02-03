@@ -1,0 +1,47 @@
+\hypertarget{Registers_8h}{}\doxysection{Registers.\+h File Reference}
+\label{Registers_8h}\index{Registers.h@{Registers.h}}
+{\ttfamily \#include \char`\"{}stddef.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Memory.\+h\char`\"{}}\newline
+Include dependency graph for Registers.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{d7/d14/Registers_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d53/Registers_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structBBP_1_1userspace_1_1register__t}{B\+B\+P\+::userspace\+::register\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceBBP}{B\+BP}}
+\item 
+ \mbox{\hyperlink{namespaceBBP_1_1userspace}{B\+B\+P\+::userspace}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceBBP_1_1userspace_a75564e71e81ee3485ccf1b43cb104f3c}{B\+B\+P\+::userspace\+::register\+Size}} \+: std\+::byte \{ \mbox{\hyperlink{namespaceBBP_1_1userspace_a75564e71e81ee3485ccf1b43cb104f3ca70adf354187040d59043d48cc011e7c8}{B\+B\+P\+::userspace\+::eight\+Bit}} = 1, 
+\mbox{\hyperlink{namespaceBBP_1_1userspace_a75564e71e81ee3485ccf1b43cb104f3cab436c703fc83b5d75f4616b0718a82de}{B\+B\+P\+::userspace\+::sixteen\+Bit}} = 2, 
+\mbox{\hyperlink{namespaceBBP_1_1userspace_a75564e71e81ee3485ccf1b43cb104f3caf5c2e07d3f735d583cc8e3b8d01f6a55}{B\+B\+P\+::userspace\+::thirty\+Two\+Bit}} = 4, 
+\mbox{\hyperlink{namespaceBBP_1_1userspace_a75564e71e81ee3485ccf1b43cb104f3cafcd0dfe87e8360e371f26ee752cca405}{B\+B\+P\+::userspace\+::address\+Size}} = 8
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespaceBBP_1_1userspace_a9122f01317e629b0ae11a837667f1224}{B\+B\+P\+::userspace\+::set\+Register}} (register\+\_\+t \&reg, std\+::word w)
+\item 
+std\+::word \mbox{\hyperlink{namespaceBBP_1_1userspace_a484d19b0d23141290394e25753c95bfb}{B\+B\+P\+::userspace\+::read\+Register}} (register\+\_\+t \&reg)
+\end{DoxyCompactItemize}

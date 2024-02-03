@@ -1,0 +1,143 @@
+#ifndef BBP_STDLIB_FILESYS_H
+#define BBP_STDLIB_FILESYS_H
+
+#include "Resources.h"
+#include "Strings.h"
+
+namespace BBP
+{
+	namespace std
+	{
+		class VOLUME;
+		class DIRECTORY;
+		class FILE;
+
+		struct FD
+		{
+			// Get page
+			std::PAGE<std::mem_t> Vector;
+
+			// Vector Size info 
+			std::size_t BlockCount;
+			std::size_t BlockSize;
+
+			// File size count
+			std::size_t fileSize;
+
+			// File name
+			std::string fileName;
+
+		};
+
+		struct DD
+		{
+			// Path to directory
+			std::string path;
+
+			// Stored files
+			std::size_t fileCount;
+			std::PAGE<FILE> files;
+
+			// Stored directories
+			std::size_t directoryCount;
+			std::PAGE<DIRECTORY> directories;
+
+			bool exists;
+			bool is_symbolic;
+
+		};
+
+		extern VOLUME primary;
+
+		class DIRECTORY
+		{
+		public:
+			
+			// The structure that holds the directory information
+			DD DirectoryDescriptor;
+
+			// The volume this directory is in
+			VOLUME *volume;
+
+			// Parent directory
+			DIRECTORY *parent;
+
+			// Lazy load the argument
+			void hold(std::conststring);
+
+			// Actually load the data
+			DIRECTORY &info();
+			DIRECTORY &info(std::conststring path);
+
+			// Navigate to root
+			DIRECTORY &root();
+
+			// Move around within the directory
+			DIRECTORY &navigate(std::conststring path);
+			FILE &file(std::conststring path);
+
+			// Close the directory descriptor
+			void close();
+
+			void addVirtualFile(std::conststring, std::PAGE<std::mem_t>);
+
+			// Constructor
+			DIRECTORY() : volume(&primary), is_populated(false) {}
+			DIRECTORY(VOLUME *v) : volume(v), is_populated(false) {}
+
+			bool is_populated;
+
+		};
+
+		class VOLUME
+		{
+		public:
+			// The path this volume is in (such as '/' or 'C:/')
+			std::string path;
+
+			// The label of this volume (Such as 'Windows')
+			std::string label;
+
+			// Constructors
+			VOLUME(std::conststring);
+
+			// Root directory
+			DIRECTORY rootDir;
+			DIRECTORY &root();
+
+		};
+
+		
+
+		class FILE
+		{
+		public:
+
+			FD FileDescriptor;
+
+			FILE() : FileDescriptor({std::PAGE<std::mem_t>(), 0, 0, 0, std::string()}), is_open(false) {}
+			FILE(std::conststring fileName) { open(fileName); }
+			FILE(std::conststring fileName, int mode) { open(fileName, mode); }
+
+			void hold(std::conststring);
+
+			void open();
+			void open(int mode);
+			void open(std::conststring fileName);
+			void open(std::conststring fileName, int mode);
+
+			void close();
+
+			void write(std::conststring fileName);
+
+			bool is_open = false;
+			bool is_virt = false;
+
+		};
+
+		
+
+	}
+}
+
+#endif

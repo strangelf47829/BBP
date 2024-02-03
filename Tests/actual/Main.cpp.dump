@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<dumps>
+  <platform name="Native" char_bit="8" short_bit="16" int_bit="32" long_bit="64" long_long_bit="64" pointer_bit="64"/>
+  <rawtokens>
+    <file index="0" name="Main.cpp"/>
+    <tok fileIndex="0" linenr="2" column="1" str="int"/>
+    <tok fileIndex="0" linenr="2" column="5" str="a"/>
+    <tok fileIndex="0" linenr="2" column="7" str="="/>
+    <tok fileIndex="0" linenr="2" column="9" str="0"/>
+    <tok fileIndex="0" linenr="2" column="10" str=";"/>
+    <tok fileIndex="0" linenr="4" column="1" str="int"/>
+    <tok fileIndex="0" linenr="4" column="5" str="main"/>
+    <tok fileIndex="0" linenr="4" column="9" str="("/>
+    <tok fileIndex="0" linenr="4" column="10" str=")"/>
+    <tok fileIndex="0" linenr="5" column="1" str="{"/>
+    <tok fileIndex="0" linenr="7" column="2" str="if"/>
+    <tok fileIndex="0" linenr="7" column="5" str="("/>
+    <tok fileIndex="0" linenr="7" column="6" str="a"/>
+    <tok fileIndex="0" linenr="7" column="7" str=")"/>
+    <tok fileIndex="0" linenr="8" column="3" str="return"/>
+    <tok fileIndex="0" linenr="8" column="10" str="1"/>
+    <tok fileIndex="0" linenr="8" column="11" str=";"/>
+    <tok fileIndex="0" linenr="10" column="2" str="a"/>
+    <tok fileIndex="0" linenr="10" column="3" str="++"/>
+    <tok fileIndex="0" linenr="10" column="5" str=";"/>
+    <tok fileIndex="0" linenr="11" column="2" str="return"/>
+    <tok fileIndex="0" linenr="11" column="9" str="0"/>
+    <tok fileIndex="0" linenr="11" column="10" str=";"/>
+    <tok fileIndex="0" linenr="13" column="1" str="}"/>
+  </rawtokens>
+  <suppressions>
+  </suppressions>
+<dump cfg="">
+  <standards>
+    <c version="c11"/>
+    <cpp version="c++20"/>
+  </standards>
+  <directivelist>
+  </directivelist>
+  <tokenlist>
+    <token id="0x7fffd7e72080" file="Main.cpp" linenr="2" column="1" str="int" scope="0x7fffd7e775c0" type="name"/>
+    <token id="0x7fffd7e720e0" file="Main.cpp" linenr="2" column="5" str="a" scope="0x7fffd7e775c0" type="name" varId="1" variable="0x7fffd7e77ab0" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fffd7e71e50" file="Main.cpp" linenr="2" column="7" str=";" scope="0x7fffd7e775c0"/>
+    <token id="0x7fffd7e76800" file="Main.cpp" linenr="2" column="5" str="a" scope="0x7fffd7e775c0" type="name" varId="1" variable="0x7fffd7e77ab0" astParent="0x7fffd7e76920" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fffd7e76920" file="Main.cpp" linenr="2" column="7" str="=" scope="0x7fffd7e775c0" type="op" isAssignmentOp="True" astOperand1="0x7fffd7e76800" astOperand2="0x7fffd7e71eb0" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fffd7e71eb0" file="Main.cpp" linenr="2" column="9" str="0" scope="0x7fffd7e775c0" type="number" isInt="True" values="0x7fffd7e73f80" astParent="0x7fffd7e76920" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fffd7e71800" file="Main.cpp" linenr="2" column="10" str=";" scope="0x7fffd7e775c0"/>
+    <token id="0x7fffd7e71860" file="Main.cpp" linenr="4" column="1" str="int" scope="0x7fffd7e775c0" type="name"/>
+    <token id="0x7fffd7e711f0" file="Main.cpp" linenr="4" column="5" str="main" scope="0x7fffd7e775c0" type="name" function="0x7fffd7e77730" astParent="0x7fffd7e71250"/>
+    <token id="0x7fffd7e71250" file="Main.cpp" linenr="4" column="9" str="(" scope="0x7fffd7e775c0" link="0x7fffd7e74190" astOperand1="0x7fffd7e711f0" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fffd7e74190" file="Main.cpp" linenr="4" column="10" str=")" scope="0x7fffd7e775c0" link="0x7fffd7e71250"/>
+    <token id="0x7fffd7e741f0" file="Main.cpp" linenr="5" column="1" str="{" scope="0x7fffd7e777d0" link="0x7fffd7e6f310"/>
+    <token id="0x7fffd7e74570" file="Main.cpp" linenr="7" column="2" str="if" scope="0x7fffd7e777d0" type="name" astParent="0x7fffd7e745d0"/>
+    <token id="0x7fffd7e745d0" file="Main.cpp" linenr="7" column="5" str="(" scope="0x7fffd7e777d0" link="0x7fffd7e73be0" astOperand1="0x7fffd7e74570" astOperand2="0x7fffd7e73b80"/>
+    <token id="0x7fffd7e73b80" file="Main.cpp" linenr="7" column="6" str="a" scope="0x7fffd7e777d0" type="name" varId="1" variable="0x7fffd7e77ab0" astParent="0x7fffd7e745d0" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fffd7e73be0" file="Main.cpp" linenr="7" column="7" str=")" scope="0x7fffd7e777d0" link="0x7fffd7e745d0"/>
+    <token id="0x7fffd7e765c0" file="Main.cpp" linenr="7" column="0" str="{" scope="0x7fffd7e77940" link="0x7fffd7e766e0"/>
+    <token id="0x7fffd7e73130" file="Main.cpp" linenr="8" column="3" str="return" scope="0x7fffd7e77940" type="name" astOperand1="0x7fffd7e73190" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fffd7e73190" file="Main.cpp" linenr="8" column="10" str="1" scope="0x7fffd7e77940" type="number" isInt="True" values="0x7fffd7e73530" astParent="0x7fffd7e73130" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fffd7e72950" file="Main.cpp" linenr="8" column="11" str=";" scope="0x7fffd7e77940"/>
+    <token id="0x7fffd7e766e0" file="Main.cpp" linenr="8" column="0" str="}" scope="0x7fffd7e77940" link="0x7fffd7e765c0"/>
+    <token id="0x7fffd7e729b0" file="Main.cpp" linenr="10" column="2" str="a" scope="0x7fffd7e777d0" type="name" varId="1" variable="0x7fffd7e77ab0" values="0x7fffd7e6a1f0" astParent="0x7fffd7e72570" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fffd7e72570" file="Main.cpp" linenr="10" column="3" str="++" scope="0x7fffd7e777d0" type="op" values="0x7fffd7e6de20" astOperand1="0x7fffd7e729b0" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fffd7e725d0" file="Main.cpp" linenr="10" column="5" str=";" scope="0x7fffd7e777d0"/>
+    <token id="0x7fffd7e73550" file="Main.cpp" linenr="11" column="2" str="return" scope="0x7fffd7e777d0" type="name" astOperand1="0x7fffd7e735b0" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fffd7e735b0" file="Main.cpp" linenr="11" column="9" str="0" scope="0x7fffd7e777d0" type="number" isInt="True" values="0x7fffd7e73320" astParent="0x7fffd7e73550" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fffd7e6f2b0" file="Main.cpp" linenr="11" column="10" str=";" scope="0x7fffd7e777d0"/>
+    <token id="0x7fffd7e6f310" file="Main.cpp" linenr="13" column="1" str="}" scope="0x7fffd7e777d0" link="0x7fffd7e741f0"/>
+  </tokenlist>
+  <scopes>
+    <scope id="0x7fffd7e775c0" type="Global">
+      <functionList>
+        <function id="0x7fffd7e77730" tokenDef="0x7fffd7e711f0" name="main" type="Function"/>
+      </functionList>
+      <varlist>
+        <var id="0x7fffd7e77ab0"/>
+      </varlist>
+    </scope>
+    <scope id="0x7fffd7e777d0" type="Function" className="main" bodyStart="0x7fffd7e741f0" bodyEnd="0x7fffd7e6f310" nestedIn="0x7fffd7e775c0" function="0x7fffd7e77730"/>
+    <scope id="0x7fffd7e77940" type="If" bodyStart="0x7fffd7e765c0" bodyEnd="0x7fffd7e766e0" nestedIn="0x7fffd7e777d0"/>
+  </scopes>
+  <variables>
+    <var id="0x7fffd7e77ab0" nameToken="0x7fffd7e720e0" typeStartToken="0x7fffd7e72080" typeEndToken="0x7fffd7e72080" access="Global" scope="0x7fffd7e775c0" constness="0" isArgument="false" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+  </variables>
+  <valueflow>
+    <values id="0x7fffd7e73f80">
+      <value intvalue="0" known="true"/>
+    </values>
+    <values id="0x7fffd7e73530">
+      <value intvalue="1" known="true"/>
+    </values>
+    <values id="0x7fffd7e6a1f0">
+      <value intvalue="0" condition-line="7" known="true"/>
+    </values>
+    <values id="0x7fffd7e6de20">
+      <value intvalue="0" condition-line="7" known="true"/>
+    </values>
+    <values id="0x7fffd7e73320">
+      <value intvalue="0" known="true"/>
+    </values>
+  </valueflow>
+</dump>
+</dumps>

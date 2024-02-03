@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dc/dc2/ELFHeaderGettersSetters_8cpp" kind="file" language="C++">
+    <compoundname>ELFHeaderGettersSetters.cpp</compoundname>
+    <includes refid="db/de5/ELF_8h" local="yes">../include/ELF.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>Memory.h</label>
+        <link refid="de/d5c/Memory_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Strings.h</label>
+        <link refid="de/d53/Strings_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Resources.h</label>
+        <link refid="d0/d33/Resources_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>ELF32.h</label>
+        <link refid="d1/d5d/ELF32_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Stack.hxx</label>
+        <link refid="db/d61/Stack_8hxx"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Memory.hxx</label>
+        <link refid="d5/d4e/Memory_8hxx"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>errno.h</label>
+        <link refid="d8/dc2/errno_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Signal.h</label>
+        <link refid="d0/def/Signal_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Except.h</label>
+        <link refid="dc/d88/Except_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ELFHeaderGettersSetters.cpp</label>
+        <link refid="dc/dc2/ELFHeaderGettersSetters_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+        <link refid="df/dd8/stdint_8h"/>
+      </node>
+      <node id="4">
+        <label>stddef.h</label>
+        <link refid="d3/dce/stddef_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../include/ELF.h</label>
+        <link refid="db/de5/ELF_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Stack.h</label>
+        <link refid="dc/db6/Stack_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dc/dc2/ELFHeaderGettersSetters_8cpp_1a30c9bdfc3c40be8b6fd32ff1fe987970" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a4926ba934876e4a1028b9abb47edbc56" kindref="member">BBP::std::byte</ref></type>
+        <definition>BBP::std::byte readByte</definition>
+        <argsstring>(BBP::std::ELF::ELFBuilder *elf, BBP::std::offset_t offset)</argsstring>
+        <name>readByte</name>
+        <param>
+          <type><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder" kindref="compound">BBP::std::ELF::ELFBuilder</ref> *</type>
+          <declname>elf</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aba0804f0534bca779731a6e8f2d3b123" kindref="member">BBP::std::offset_t</ref></type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/ELFHeaderGettersSetters.cpp" line="3" column="16" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/ELFHeaderGettersSetters.cpp" bodystart="3" bodyend="6"/>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ae617b962ff1bbb33b4436c0131fc9266" compoundref="db/de5/ELF_8h" startline="33">BBP::std::ELF::ELFBuilder::file</references>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a83d5af2fc078db5b80fdd88e3c9820cf" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="71" endline="71">BBP::std::ELF::ELFBuilder::ident</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/dc2/ELFHeaderGettersSetters_8cpp_1a789c9ae67fcdb3a6f5454f8d99ca6b0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void writeByte</definition>
+        <argsstring>(BBP::std::ELF::ELFBuilder *elf, BBP::std::byte byte, BBP::std::offset_t offset)</argsstring>
+        <name>writeByte</name>
+        <param>
+          <type><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder" kindref="compound">BBP::std::ELF::ELFBuilder</ref> *</type>
+          <declname>elf</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a4926ba934876e4a1028b9abb47edbc56" kindref="member">BBP::std::byte</ref></type>
+          <declname>byte</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aba0804f0534bca779731a6e8f2d3b123" kindref="member">BBP::std::offset_t</ref></type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/ELFHeaderGettersSetters.cpp" line="7" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/ELFHeaderGettersSetters.cpp" bodystart="7" bodyend="10"/>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ae617b962ff1bbb33b4436c0131fc9266" compoundref="db/de5/ELF_8h" startline="33">BBP::std::ELF::ELFBuilder::file</references>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ae4da0b2f40130bacd1c9d32fedeefb5c" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="72" endline="72">BBP::std::ELF::ELFBuilder::ident</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/dc2/ELFHeaderGettersSetters_8cpp_1a62c709dfb84d60f5f9043c4f1a417079" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a8adbd1d0e37ca1d674470ea445a255a3" kindref="member">BBP::std::halfword</ref></type>
+        <definition>BBP::std::halfword readHalfWord</definition>
+        <argsstring>(BBP::std::ELF::ELFBuilder *elf, BBP::std::offset_t offset)</argsstring>
+        <name>readHalfWord</name>
+        <param>
+          <type><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder" kindref="compound">BBP::std::ELF::ELFBuilder</ref> *</type>
+          <declname>elf</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aba0804f0534bca779731a6e8f2d3b123" kindref="member">BBP::std::offset_t</ref></type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/ELFHeaderGettersSetters.cpp" line="11" column="20" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/ELFHeaderGettersSetters.cpp" bodystart="11" bodyend="19"/>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a" compoundref="d4/d54/Locale_8h" startline="65">BBP::Locale::Japanese::a</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a663656de6f599bbaaecd7851c922cb2c" compoundref="db/de5/ELF_8h" startline="36">BBP::std::ELF::ELFBuilder::Endian</references>
+        <references refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ae617b962ff1bbb33b4436c0131fc9266" compoundref="db/de5/ELF_8h" startline="33">BBP::std::ELF::ELFBuilder::file</references>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a9ba08ee7f68e4afe0096dac9cc115607" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="95" endline="95">BBP::std::ELF::ELFBuilder::ehsize</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a8331ad88c01e561d7a65e9a09ae356ca" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="77" endline="77">BBP::std::ELF::ELFBuilder::machine</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1acac63e64243d4126380dc890683bfa66" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="98" endline="98">BBP::std::ELF::ELFBuilder::phentsize</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a3f5be41608ef64c87d0c48cdaab4b6f8" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="101" endline="101">BBP::std::ELF::ELFBuilder::phnum</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1abbc0f11da49eb83a92059c2ff412e49d" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="104" endline="104">BBP::std::ELF::ELFBuilder::shentsize</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a00013d07c04c5454c55732f076b6b205" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="107" endline="107">BBP::std::ELF::ELFBuilder::shnum</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a627eb7c3bd51fe7629ae609c52382a67" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="110" endline="110">BBP::std::ELF::ELFBuilder::shstrndx</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1afc691ed888793002bc1eeac36be461c5" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="74" endline="74">BBP::std::ELF::ELFBuilder::type</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/dc2/ELFHeaderGettersSetters_8cpp_1acbe729fa579c7b45c89ccca710affab7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void writeHalfWord</definition>
+        <argsstring>(BBP::std::ELF::ELFBuilder *elf, BBP::std::halfword halfword, BBP::std::offset_t offset)</argsstring>
+        <name>writeHalfWord</name>
+        <param>
+          <type><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder" kindref="compound">BBP::std::ELF::ELFBuilder</ref> *</type>
+          <declname>elf</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a8adbd1d0e37ca1d674470ea445a255a3" kindref="member">BBP::std::halfword</ref></type>
+          <declname>halfword</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aba0804f0534bca779731a6e8f2d3b123" kindref="member">BBP::std::offset_t</ref></type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/ELFHeaderGettersSetters.cpp" line="20" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/ELFHeaderGettersSetters.cpp" bodystart="20" bodyend="35"/>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a" compoundref="d4/d54/Locale_8h" startline="65">BBP::Locale::Japanese::a</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a663656de6f599bbaaecd7851c922cb2c" compoundref="db/de5/ELF_8h" startline="36">BBP::std::ELF::ELFBuilder::Endian</references>
+        <references refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ae617b962ff1bbb33b4436c0131fc9266" compoundref="db/de5/ELF_8h" startline="33">BBP::std::ELF::ELFBuilder::file</references>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ab6187004421a14a10cd48057d6f3eb81" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="96" endline="96">BBP::std::ELF::ELFBuilder::ehsize</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a6e562b9a500b2478ae838c87c3fb3477" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="78" endline="78">BBP::std::ELF::ELFBuilder::machine</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a773d8f5044ec6ff3bb7d96d06e9a2235" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="99" endline="99">BBP::std::ELF::ELFBuilder::phentsize</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1aaad7fe20a039b19f13d1ac9b52f7e791" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="102" endline="102">BBP::std::ELF::ELFBuilder::phnum</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1abcf3e28a84675d78e7bae97cea68228b" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="105" endline="105">BBP::std::ELF::ELFBuilder::shentsize</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a8d89e03e60382bb740ddf3a22f58bbf3" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="108" endline="108">BBP::std::ELF::ELFBuilder::shnum</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ab3f0fcac2e1f61141516894d6c17d911" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="111" endline="111">BBP::std::ELF::ELFBuilder::shstrndx</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a52a3e49cef06ce764a539769dca4eae5" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="75" endline="75">BBP::std::ELF::ELFBuilder::type</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/dc2/ELFHeaderGettersSetters_8cpp_1aa966c175861f53f0da77aef07282ab12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">BBP::std::word</ref></type>
+        <definition>BBP::std::word readWord</definition>
+        <argsstring>(BBP::std::ELF::ELFBuilder *elf, BBP::std::offset_t offset)</argsstring>
+        <name>readWord</name>
+        <param>
+          <type><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder" kindref="compound">BBP::std::ELF::ELFBuilder</ref> *</type>
+          <declname>elf</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aba0804f0534bca779731a6e8f2d3b123" kindref="member">BBP::std::offset_t</ref></type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/ELFHeaderGettersSetters.cpp" line="36" column="16" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/ELFHeaderGettersSetters.cpp" bodystart="36" bodyend="46"/>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a" compoundref="d4/d54/Locale_8h" startline="65">BBP::Locale::Japanese::a</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a663656de6f599bbaaecd7851c922cb2c" compoundref="db/de5/ELF_8h" startline="36">BBP::std::ELF::ELFBuilder::Endian</references>
+        <references refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ae617b962ff1bbb33b4436c0131fc9266" compoundref="db/de5/ELF_8h" startline="33">BBP::std::ELF::ELFBuilder::file</references>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a875594f682445c582dfa17432639a68c" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="83" endline="83">BBP::std::ELF::ELFBuilder::entry</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a393508aee1aab2a178951be96366a4d5" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="92" endline="92">BBP::std::ELF::ELFBuilder::flags</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a831146e80b722eacb7767a22507da6b5" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="86" endline="86">BBP::std::ELF::ELFBuilder::phoff</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a5604c352d9c887660d677ff048e13153" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="89" endline="89">BBP::std::ELF::ELFBuilder::shoff</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a4259ab8567b1a91eae57637b069f6580" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="80" endline="80">BBP::std::ELF::ELFBuilder::version</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/dc2/ELFHeaderGettersSetters_8cpp_1a662f29a4070b37792137073a799f1775" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void writeWord</definition>
+        <argsstring>(BBP::std::ELF::ELFBuilder *elf, BBP::std::word word, BBP::std::offset_t offset)</argsstring>
+        <name>writeWord</name>
+        <param>
+          <type><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder" kindref="compound">BBP::std::ELF::ELFBuilder</ref> *</type>
+          <declname>elf</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">BBP::std::word</ref></type>
+          <declname>word</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1aba0804f0534bca779731a6e8f2d3b123" kindref="member">BBP::std::offset_t</ref></type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/ELFHeaderGettersSetters.cpp" line="47" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/ELFHeaderGettersSetters.cpp" bodystart="47" bodyend="68"/>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a" compoundref="d4/d54/Locale_8h" startline="65">BBP::Locale::Japanese::a</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a663656de6f599bbaaecd7851c922cb2c" compoundref="db/de5/ELF_8h" startline="36">BBP::std::ELF::ELFBuilder::Endian</references>
+        <references refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1ae617b962ff1bbb33b4436c0131fc9266" compoundref="db/de5/ELF_8h" startline="33">BBP::std::ELF::ELFBuilder::file</references>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a212c16462e7dcd629ba82ece4cf3ef62" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="84" endline="84">BBP::std::ELF::ELFBuilder::entry</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a8881867962e73abd45a54474ce909cf1" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="93" endline="93">BBP::std::ELF::ELFBuilder::flags</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1aeb1d6badd15ac5e2e536760279ab0943" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="87" endline="87">BBP::std::ELF::ELFBuilder::phoff</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a11874eb0a4b5a9b1d2bcf3579b6becbe" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="90" endline="90">BBP::std::ELF::ELFBuilder::shoff</referencedby>
+        <referencedby refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1aff0f9a0e5110f287d5a5ef5b36c9cc5d" compoundref="dc/dc2/ELFHeaderGettersSetters_8cpp" startline="81" endline="81">BBP::std::ELF::ELFBuilder::version</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/ELF/ELFHeaderGettersSetters.cpp"/>
+  </compounddef>
+</doxygen>

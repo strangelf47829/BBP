@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d6/dc6/Executable_8cpp" kind="file" language="C++">
+    <compoundname>Executable.cpp</compoundname>
+    <includes refid="de/da9/Executable_8h" local="yes">../include/Executable.h</includes>
+    <includes refid="da/d30/CPPApplications_8h" local="yes">../include/CPPApplications.h</includes>
+    <includes refid="d6/dd1/stdio_8h" local="yes">../include/stdio.h</includes>
+    <includes refid="d2/dd1/Graphics_8h" local="yes">../include/Graphics.h</includes>
+    <includes refid="d2/d4f/OS_8h" local="yes">../include/OS.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>Memory.h</label>
+        <link refid="de/d5c/Memory_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Executable.cpp</label>
+        <link refid="d6/dc6/Executable_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../include/Executable.h</label>
+        <link refid="de/da9/Executable_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../include/Strings.h</label>
+        <link refid="de/d53/Strings_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Resources.h</label>
+        <link refid="d0/d33/Resources_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Stack.hxx</label>
+        <link refid="db/d61/Stack_8hxx"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Memory.hxx</label>
+        <link refid="d5/d4e/Memory_8hxx"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>../include/OS.h</label>
+        <link refid="d2/d4f/OS_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>FileSys.h</label>
+        <link refid="d0/d00/FileSys_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>../include/Graphics.h</label>
+        <link refid="d2/dd1/Graphics_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>../include/stdio.h</label>
+        <link refid="d6/dd1/stdio_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>errno.h</label>
+        <link refid="d8/dc2/errno_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Signal.h</label>
+        <link refid="d0/def/Signal_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Except.h</label>
+        <link refid="dc/d88/Except_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+        <link refid="df/dd8/stdint_8h"/>
+      </node>
+      <node id="5">
+        <label>stddef.h</label>
+        <link refid="d3/dce/stddef_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>../include/CPPApplications.h</label>
+        <link refid="da/d30/CPPApplications_8h"/>
+      </node>
+      <node id="10">
+        <label>Stack.h</label>
+        <link refid="dc/db6/Stack_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d6/dc6/Executable_8cpp_1afad60d2ac9a163fb5709a1859a0882e2" prot="public" static="no" mutable="no">
+        <type><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">BBP::std::Stack</ref>&lt; <ref refid="d7/db6/structBBP_1_1std_1_1executableFrame" kindref="compound">BBP::std::executableFrame</ref> &gt; <ref refid="dd/d98/namespaceBBP_1_1std_1acc2eacdb4240f375a4fa48dbcc79a39b" kindref="member">BBP::std::Processes</ref> &amp;</type>
+        <definition>BBP::std::Stack&lt;BBP::std::executableFrame&gt; BBP::std::Processes&amp; procFrames</definition>
+        <argsstring></argsstring>
+        <name>procFrames</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/stdlib/Executable.cpp" line="10" column="17" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/stdlib/Executable.cpp" bodystart="10" bodyend="-1"/>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1ace14a8680f46b3c05954e4d1f03ab1fe" compoundref="d6/dc6/Executable_8cpp" startline="14" endline="118">BBP::std::execute</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d6/dc6/Executable_8cpp_1a6f4b27ad496631c786f56716b74acf67" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a75edfece8c204f2652788b7bb75a7bd5" kindref="member">BBP::std::PID_t</ref></type>
+        <definition>BBP::std::PID_t pidCounter</definition>
+        <argsstring></argsstring>
+        <name>pidCounter</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/stdlib/Executable.cpp" line="120" column="17" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/stdlib/Executable.cpp" bodystart="120" bodyend="-1"/>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1a944d73360eb8ebade3c1e252ecf1eedc" compoundref="d6/dc6/Executable_8cpp" startline="121" endline="124">BBP::std::getNextAvailablePID</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;../include/Executable.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/CPPApplications.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/stdio.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/Graphics.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/OS.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="dd/d98/namespaceBBP_1_1std_1ac61033216dba0a78b0f6a0504bd65de7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d5/d10/structBBP_1_1std_1_1Executable" kindref="compound">BBP::std::Executable</ref><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ac61033216dba0a78b0f6a0504bd65de7" kindref="member">BBP::std::executables</ref>[]<sp/>=<sp/>{{<ref refid="d9/d6f/namespaceBBP_1ad05ebc9ee4f15f3b8aa702c90586393f" kindref="member">shell_main</ref>,<sp/></highlight><highlight class="stringliteral">&quot;/proc/shell&quot;</highlight><highlight class="normal">}};</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="dd/d98/namespaceBBP_1_1std_1a82065f2c7e2f2a512c6917817bc5d347" refkind="member"><highlight class="normal"><ref refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE" kindref="compound">BBP::std::STATIC_PAGE&lt;BBP::std::executableFrame, 12&gt;</ref><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a82065f2c7e2f2a512c6917817bc5d347" kindref="member">BBP::std::procFrames</ref>;</highlight></codeline>
+<codeline lineno="10" refid="d6/dc6/Executable_8cpp_1afad60d2ac9a163fb5709a1859a0882e2" refkind="member"><highlight class="normal"><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">BBP::std::Stack&lt;BBP::std::executableFrame&gt;</ref><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1acc2eacdb4240f375a4fa48dbcc79a39b" kindref="member">BBP::std::Processes</ref>(&amp;<ref refid="d6/dc6/Executable_8cpp_1afad60d2ac9a163fb5709a1859a0882e2" kindref="member">procFrames</ref>);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="dd/d98/namespaceBBP_1_1std_1ad173139c517afe0689703f2ffce8ff95" refkind="member"><highlight class="normal"><ref refid="dd/d98/namespaceBBP_1_1std_1a75edfece8c204f2652788b7bb75a7bd5" kindref="member">BBP::std::PID_t</ref><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ad173139c517afe0689703f2ffce8ff95" kindref="member">BBP::std::activeExecutable</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="dd/d98/namespaceBBP_1_1std_1ace14a8680f46b3c05954e4d1f03ab1fe" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ace14a8680f46b3c05954e4d1f03ab1fe" kindref="member">BBP::std::execute</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1a8be34f3cea8a96fceaaac40e4934944a" kindref="member">std::executable_main</ref><sp/>mainFunc,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Find<sp/>a<sp/>new<sp/>PID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a75edfece8c204f2652788b7bb75a7bd5" kindref="member">PID_t</ref><sp/>procPID<sp/>=<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a944d73360eb8ebade3c1e252ecf1eedc" kindref="member">getNextAvailablePID</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>new<sp/>process<sp/>stack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d7/db6/structBBP_1_1std_1_1executableFrame" kindref="compound">executableFrame</ref><sp/>procFrame<sp/>=<sp/><ref refid="de/dfe/namespaceBBP_1_1userspace_1a61a881cf9970daa1511345a803c18049a021cd4115ae18e6da8708aaf8dfbe942" kindref="member">std::read</ref>(&amp;<ref refid="d6/dc6/Executable_8cpp_1afad60d2ac9a163fb5709a1859a0882e2" kindref="member">procFrames</ref>,<sp/>procPID);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>pid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>procFrame.<ref refid="d7/db6/structBBP_1_1std_1_1executableFrame_1aad4d82c3754c369d17bdc106ee96bf57" kindref="member">PID</ref><sp/>=<sp/>procPID;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>process<sp/>memory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>procFrame.<ref refid="d7/db6/structBBP_1_1std_1_1executableFrame_1af75c3b37d6132ee361e14558067fedde" kindref="member">pmem</ref><sp/>=<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae2638cc9dc88324f52ad018fe65b591f" kindref="member">BBP::std::progmem</ref>.<ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager_1aea4091636b0010fa96b46859b119c515" kindref="member">add_object</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager" kindref="compound">std::ResourceManager</ref>());</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Swap<sp/>that<sp/>in<sp/>for<sp/>the<sp/>old<sp/>activemem</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager" kindref="compound">BBP::std::ResourceManager</ref><sp/>*oldActiveMem<sp/>=<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa4b7f66aef4bb8963e9fec9370186362" kindref="member">BBP::std::activemem</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa4b7f66aef4bb8963e9fec9370186362" kindref="member">BBP::std::activemem</ref><sp/>=<sp/>procFrame.<ref refid="d7/db6/structBBP_1_1std_1_1executableFrame_1af75c3b37d6132ee361e14558067fedde" kindref="member">pmem</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Store<sp/>old<sp/>active<sp/>executable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a75edfece8c204f2652788b7bb75a7bd5" kindref="member">PID_t</ref><sp/>oldActiveExecutable<sp/>=<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ad173139c517afe0689703f2ffce8ff95" kindref="member">std::activeExecutable</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>active<sp/>executable<sp/>to<sp/>this<sp/>one</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ad173139c517afe0689703f2ffce8ff95" kindref="member">std::activeExecutable</ref><sp/>=<sp/>procPID;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Run<sp/>main<sp/>function<sp/>in<sp/>try<sp/>block</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>&apos;Is<sp/>executing&apos;<sp/>flag<sp/>to<sp/>true</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>procFrame.<ref refid="d7/db6/structBBP_1_1std_1_1executableFrame_1ad58d1004734295f1b178d8bf0c7d7c2f" kindref="member">isExecuting</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Acually<sp/>execute<sp/>the<sp/>program</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BBP::std::__errno<sp/>=<sp/>mainFunc(argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reset<sp/>the<sp/>&apos;is<sp/>executing&apos;<sp/>flag</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>procFrame.<ref refid="d7/db6/structBBP_1_1std_1_1executableFrame_1ad58d1004734295f1b178d8bf0c7d7c2f" kindref="member">isExecuting</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reset<sp/>terminal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3c0f7be0e430e039686fe4f39671dda" kindref="member">BBP::std::kernelDisplay</ref>.<ref refid="db/d2b/structBBP_1_1std_1_1window_1a7b1763f76820bdf7523a92187c575c4a" kindref="member">fontSize</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa3c0f7be0e430e039686fe4f39671dda" kindref="member">BBP::std::kernelDisplay</ref>.<ref refid="db/d2b/structBBP_1_1std_1_1window_1a4620071899508871297f6960ee6c3b27" kindref="member">fontSpacing</ref><sp/>=<sp/>6;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a985d2f37aa59f400c93963bafdc25e54" kindref="member">BBP::std::R2D::fill</ref>(&amp;<ref refid="dd/d98/namespaceBBP_1_1std_1aa3c0f7be0e430e039686fe4f39671dda" kindref="member">BBP::std::kernelDisplay</ref>,<sp/>0xFFFFFFFF);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d8/d77/structBBP_1_1std_1_1SIGNAL" kindref="compound">std::SIGNAL</ref><sp/>&amp;signal)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(signal.<ref refid="d8/d77/structBBP_1_1std_1_1SIGNAL_1aad1752c120f3f4b6ab57fd6755134269" kindref="member">_sig</ref>)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa4086b8fff90e492c3a5765b3cb39441" kindref="member">BBP::std::SIGSHTDN</ref>:</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>System<sp/>shutdown,<sp/>rethrow<sp/>signal,<sp/>but<sp/>before<sp/>doing<sp/>that,<sp/>reset<sp/>the<sp/>state<sp/>of<sp/>this<sp/>program</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Garbage<sp/>collection</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>procFrame.<ref refid="d7/db6/structBBP_1_1std_1_1executableFrame_1af75c3b37d6132ee361e14558067fedde" kindref="member">pmem</ref>-&gt;<ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager_1a8e0f86cd9da420b4a60eebda495b8309" kindref="member">deleteAll</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>procFrame.<ref refid="d7/db6/structBBP_1_1std_1_1executableFrame_1af75c3b37d6132ee361e14558067fedde" kindref="member">pmem</ref>-&gt;<ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager_1a9e71b44bf2fa37404996f41b7755bec3" kindref="member">freeAll</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Delete<sp/>garbage<sp/>collector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae2638cc9dc88324f52ad018fe65b591f" kindref="member">BBP::std::progmem</ref>.<ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager_1aabf2f3fcf4ce22bfeefe3a1496f79c89" kindref="member">_delete</ref>(procFrame.<ref refid="d7/db6/structBBP_1_1std_1_1executableFrame_1af75c3b37d6132ee361e14558067fedde" kindref="member">pmem</ref>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Restore<sp/>active<sp/>mem<sp/>and<sp/>active<sp/>proc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa4b7f66aef4bb8963e9fec9370186362" kindref="member">BBP::std::activemem</ref><sp/>=<sp/>oldActiveMem;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ad173139c517afe0689703f2ffce8ff95" kindref="member">BBP::std::activeExecutable</ref><sp/>=<sp/>oldActiveExecutable;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">BBP::std::printf</ref>(</highlight><highlight class="stringliteral">&quot;[bbp]<sp/>Program<sp/>terminated<sp/>after<sp/>receiving<sp/>signal<sp/>%u&quot;</highlight><highlight class="normal">,<sp/>signal.<ref refid="d8/d77/structBBP_1_1std_1_1SIGNAL_1aad1752c120f3f4b6ab57fd6755134269" kindref="member">_sig</ref>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(signal.<ref refid="d8/d77/structBBP_1_1std_1_1SIGNAL_1aad1752c120f3f4b6ab57fd6755134269" kindref="member">_sig</ref><sp/>==<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1add07926a91c5970f2faffcc64a68283c" kindref="member">std::SIGILL</ref>)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">BBP::std::printf</ref>(</highlight><highlight class="stringliteral">&quot;<sp/>(SIGILL).&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">BBP::std::printf</ref>(</highlight><highlight class="stringliteral">&quot;\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(std::except<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a750ba4c285e0788e84722a30a776b913" kindref="member">exception</ref>)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">BBP::std::printf</ref>(</highlight><highlight class="stringliteral">&quot;[bbp]<sp/>Uncaught<sp/>exception:<sp/>halting<sp/>program.\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a66376ec3b30a50cc25df09f23fdd6733" kindref="member">std::STDOUT</ref><sp/>&lt;&lt;=<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a4eb11df4d80a8a9c26ee099360e6597e" kindref="member">std::STDERR</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(...)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">BBP::std::printf</ref>(</highlight><highlight class="stringliteral">&quot;[bbp]<sp/>Program<sp/>terminated<sp/>after<sp/>uncaught<sp/>object.\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(std::__errno<sp/>&amp;&amp;<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a4eb11df4d80a8a9c26ee099360e6597e" kindref="member">std::STDERR</ref>[0])</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">BBP::std::printf</ref>(</highlight><highlight class="stringliteral">&quot;Program<sp/>terminated<sp/>with<sp/>code<sp/>%d:<sp/>%s\n\r&quot;</highlight><highlight class="normal">,<sp/>std::__errno,<sp/>&amp;<ref refid="dd/d98/namespaceBBP_1_1std_1a4eb11df4d80a8a9c26ee099360e6597e" kindref="member">std::STDERR</ref>[0]);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print<sp/>stuff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//std::printf(&quot;(%p)<sp/>Allocated<sp/>a<sp/>total<sp/>of<sp/>%u<sp/>bytes<sp/>during<sp/>runtime.\n&quot;,<sp/>procFrame.pmem,<sp/>procFrame.pmem-&gt;totalAllocations);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Garbage<sp/>collection</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">BBP::std::size_t</ref><sp/>deletedCount<sp/>=<sp/>procFrame.<ref refid="d7/db6/structBBP_1_1std_1_1executableFrame_1af75c3b37d6132ee361e14558067fedde" kindref="member">pmem</ref>-&gt;<ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager_1a8e0f86cd9da420b4a60eebda495b8309" kindref="member">deleteAll</ref>();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">BBP::std::size_t</ref><sp/>freedCount<sp/>=<sp/>procFrame.<ref refid="d7/db6/structBBP_1_1std_1_1executableFrame_1af75c3b37d6132ee361e14558067fedde" kindref="member">pmem</ref>-&gt;<ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager_1a9e71b44bf2fa37404996f41b7755bec3" kindref="member">freeAll</ref>();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(deletedCount<sp/>||<sp/>freedCount)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">printf</ref>(</highlight><highlight class="stringliteral">&quot;\nNot<sp/>all<sp/>memory<sp/>on<sp/>the<sp/>heap<sp/>was<sp/>released.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">printf</ref>(</highlight><highlight class="stringliteral">&quot;\tAmount<sp/>of<sp/>blocks<sp/>free&apos;d:<sp/>%u\n&quot;</highlight><highlight class="normal">,<sp/>freedCount);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">printf</ref>(</highlight><highlight class="stringliteral">&quot;\tAmount<sp/>of<sp/>objects<sp/>delete&apos;d:<sp/>%u\n&quot;</highlight><highlight class="normal">,<sp/>deletedCount);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Delete<sp/>garbage<sp/>collector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae2638cc9dc88324f52ad018fe65b591f" kindref="member">BBP::std::progmem</ref>.<ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager_1aabf2f3fcf4ce22bfeefe3a1496f79c89" kindref="member">_delete</ref>(procFrame.<ref refid="d7/db6/structBBP_1_1std_1_1executableFrame_1af75c3b37d6132ee361e14558067fedde" kindref="member">pmem</ref>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Restore<sp/>active<sp/>mem<sp/>and<sp/>active<sp/>proc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa4b7f66aef4bb8963e9fec9370186362" kindref="member">BBP::std::activemem</ref><sp/>=<sp/>oldActiveMem;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ad173139c517afe0689703f2ffce8ff95" kindref="member">BBP::std::activeExecutable</ref><sp/>=<sp/>oldActiveExecutable;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="d6/dc6/Executable_8cpp_1a6f4b27ad496631c786f56716b74acf67" refkind="member"><highlight class="normal"><ref refid="dd/d98/namespaceBBP_1_1std_1a75edfece8c204f2652788b7bb75a7bd5" kindref="member">BBP::std::PID_t</ref><sp/><ref refid="d6/dc6/Executable_8cpp_1a6f4b27ad496631c786f56716b74acf67" kindref="member">pidCounter</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="121" refid="dd/d98/namespaceBBP_1_1std_1a944d73360eb8ebade3c1e252ecf1eedc" refkind="member"><highlight class="normal"><ref refid="dd/d98/namespaceBBP_1_1std_1a75edfece8c204f2652788b7bb75a7bd5" kindref="member">BBP::std::PID_t</ref><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a944d73360eb8ebade3c1e252ecf1eedc" kindref="member">BBP::std::getNextAvailablePID</ref>()</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d6/dc6/Executable_8cpp_1a6f4b27ad496631c786f56716b74acf67" kindref="member">pidCounter</ref>++;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="dd/d98/namespaceBBP_1_1std_1aa4dc45e65f9885f143b9d0f63882214d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa4dc45e65f9885f143b9d0f63882214d" kindref="member">BBP::std::exit</ref>()</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" kindref="member">printf</ref>(</highlight><highlight class="stringliteral">&quot;\n\r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d0/def/Signal_8h_1a82e69d819748cab5933309bba1999f7c" kindref="member">__SIGNAL__</ref>(<ref refid="dd/d98/namespaceBBP_1_1std_1a001afe63e629e1636d59c8c592ba5302" kindref="member">SIGABRT</ref>);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/stdlib/Executable.cpp"/>
+  </compounddef>
+</doxygen>

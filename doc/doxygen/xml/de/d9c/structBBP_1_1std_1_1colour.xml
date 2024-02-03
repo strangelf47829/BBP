@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="de/d9c/structBBP_1_1std_1_1colour" kind="struct" language="C++" prot="public">
+    <compoundname>BBP::std::colour</compoundname>
+    <includes refid="d2/dd1/Graphics_8h" local="no">Graphics.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="de/d9c/structBBP_1_1std_1_1colour_1a266b18a4d7f867e04a130a0dfdd459a1" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+        <definition>chan_t BBP::std::colour::R</definition>
+        <argsstring></argsstring>
+        <name>R</name>
+        <initializer>= 0xFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="32" column="8" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a950bda48471d587efcad3dff57541550" compoundref="de/db8/R2D_8cpp" startline="57" endline="63">BBP::std::R2D::stroke</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a985d2f37aa59f400c93963bafdc25e54" compoundref="de/db8/R2D_8cpp" startline="94" endline="101">BBP::std::R2D::fill</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acc6674c3e336f1e429b0bc23f9955ca6" compoundref="de/db8/R2D_8cpp" startline="244" endline="249">BBP::std::R2D::Hrule</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a3f3e793215cc7ab1073d7169dd042c9c" compoundref="de/db8/R2D_8cpp" startline="251" endline="256">BBP::std::R2D::Vrule</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acea93c05ea4bbf9b38158ac0682a74cd" compoundref="de/db8/R2D_8cpp" startline="395" endline="399">BBP::std::R2D::Box</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="de/d9c/structBBP_1_1std_1_1colour_1a17ab02cc13e1f6543a463ad27c77d2b6" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+        <definition>chan_t BBP::std::colour::G</definition>
+        <argsstring></argsstring>
+        <name>G</name>
+        <initializer>= 0xFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="33" column="8" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a950bda48471d587efcad3dff57541550" compoundref="de/db8/R2D_8cpp" startline="57" endline="63">BBP::std::R2D::stroke</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a985d2f37aa59f400c93963bafdc25e54" compoundref="de/db8/R2D_8cpp" startline="94" endline="101">BBP::std::R2D::fill</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acc6674c3e336f1e429b0bc23f9955ca6" compoundref="de/db8/R2D_8cpp" startline="244" endline="249">BBP::std::R2D::Hrule</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a3f3e793215cc7ab1073d7169dd042c9c" compoundref="de/db8/R2D_8cpp" startline="251" endline="256">BBP::std::R2D::Vrule</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acea93c05ea4bbf9b38158ac0682a74cd" compoundref="de/db8/R2D_8cpp" startline="395" endline="399">BBP::std::R2D::Box</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="de/d9c/structBBP_1_1std_1_1colour_1ac69073fa61911139d17da5785b266bb1" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+        <definition>chan_t BBP::std::colour::B</definition>
+        <argsstring></argsstring>
+        <name>B</name>
+        <initializer>= 0xFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="34" column="8" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a950bda48471d587efcad3dff57541550" compoundref="de/db8/R2D_8cpp" startline="57" endline="63">BBP::std::R2D::stroke</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a985d2f37aa59f400c93963bafdc25e54" compoundref="de/db8/R2D_8cpp" startline="94" endline="101">BBP::std::R2D::fill</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acc6674c3e336f1e429b0bc23f9955ca6" compoundref="de/db8/R2D_8cpp" startline="244" endline="249">BBP::std::R2D::Hrule</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a3f3e793215cc7ab1073d7169dd042c9c" compoundref="de/db8/R2D_8cpp" startline="251" endline="256">BBP::std::R2D::Vrule</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acea93c05ea4bbf9b38158ac0682a74cd" compoundref="de/db8/R2D_8cpp" startline="395" endline="399">BBP::std::R2D::Box</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="de/d9c/structBBP_1_1std_1_1colour_1a8a050a17731358934a17e04deeeb996e" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1aa3d36d959c295593fa4b44d53b99ee9f" kindref="member">chan_t</ref></type>
+        <definition>chan_t BBP::std::colour::A</definition>
+        <argsstring></argsstring>
+        <name>A</name>
+        <initializer>= 0xFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="35" column="8" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" bodystart="35" bodyend="-1"/>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a950bda48471d587efcad3dff57541550" compoundref="de/db8/R2D_8cpp" startline="57" endline="63">BBP::std::R2D::stroke</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a985d2f37aa59f400c93963bafdc25e54" compoundref="de/db8/R2D_8cpp" startline="94" endline="101">BBP::std::R2D::fill</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acc6674c3e336f1e429b0bc23f9955ca6" compoundref="de/db8/R2D_8cpp" startline="244" endline="249">BBP::std::R2D::Hrule</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a3f3e793215cc7ab1073d7169dd042c9c" compoundref="de/db8/R2D_8cpp" startline="251" endline="256">BBP::std::R2D::Vrule</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="de/d9c/structBBP_1_1std_1_1colour_1ace320712be2e6308522ee50474d89692" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a0a4d524bbf0dc9d32ca8d9b8bf0db1c8" kindref="member">RGBA_t</ref></type>
+        <definition>RGBA_t BBP::std::colour::RGBA</definition>
+        <argsstring></argsstring>
+        <name>RGBA</name>
+        <initializer>= 0xFFFFFFFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="36" column="8" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a950bda48471d587efcad3dff57541550" compoundref="de/db8/R2D_8cpp" startline="57" endline="63">BBP::std::R2D::stroke</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1a985d2f37aa59f400c93963bafdc25e54" compoundref="de/db8/R2D_8cpp" startline="94" endline="101">BBP::std::R2D::fill</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1acc11e125c7028e2c4834c7577a853818" compoundref="de/db8/R2D_8cpp" startline="457" endline="460">BBP::std::R2D::setPixel</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>unsigned int</label>
+      </node>
+      <node id="2">
+        <label>byte</label>
+      </node>
+      <node id="1">
+        <label>BBP::std::colour</label>
+        <link refid="de/d9c/structBBP_1_1std_1_1colour"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+A</edgelabel>
+          <edgelabel>+R</edgelabel>
+          <edgelabel>+B</edgelabel>
+          <edgelabel>+G</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+RGBA</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="31" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" bodystart="30" bodyend="37"/>
+    <listofallmembers>
+      <member refid="de/d9c/structBBP_1_1std_1_1colour_1a8a050a17731358934a17e04deeeb996e" prot="public" virt="non-virtual"><scope>BBP::std::colour</scope><name>A</name></member>
+      <member refid="de/d9c/structBBP_1_1std_1_1colour_1ac69073fa61911139d17da5785b266bb1" prot="public" virt="non-virtual"><scope>BBP::std::colour</scope><name>B</name></member>
+      <member refid="de/d9c/structBBP_1_1std_1_1colour_1a17ab02cc13e1f6543a463ad27c77d2b6" prot="public" virt="non-virtual"><scope>BBP::std::colour</scope><name>G</name></member>
+      <member refid="de/d9c/structBBP_1_1std_1_1colour_1a266b18a4d7f867e04a130a0dfdd459a1" prot="public" virt="non-virtual"><scope>BBP::std::colour</scope><name>R</name></member>
+      <member refid="de/d9c/structBBP_1_1std_1_1colour_1ace320712be2e6308522ee50474d89692" prot="public" virt="non-virtual"><scope>BBP::std::colour</scope><name>RGBA</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

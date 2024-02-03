@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d1/d5d/rvalue_8cpp" kind="file" language="C++">
+    <compoundname>rvalue.cpp</compoundname>
+    <includes refid="d8/da7/ValueCategories_8h" local="yes">../include/ValueCategories.h</includes>
+    <includes refid="d6/dd1/stdio_8h" local="yes">../include/stdio.h</includes>
+    <includes refid="d1/d12/Opcodes_8h" local="yes">../include/Opcodes.h</includes>
+    <includes refid="dd/d0e/Threading_8h" local="yes">../include/Threading.h</includes>
+    <includes refid="da/d78/StateMachine_8h" local="yes">../include/StateMachine.h</includes>
+    <incdepgraph>
+      <node id="10">
+        <label>Memory.h</label>
+        <link refid="de/d5c/Memory_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Opcodes.h</label>
+        <link refid="d1/d12/Opcodes_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Strings.h</label>
+        <link refid="de/d53/Strings_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>Resources.h</label>
+        <link refid="d0/d33/Resources_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>ELF32.h</label>
+        <link refid="d1/d5d/ELF32_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Stack.hxx</label>
+        <link refid="db/d61/Stack_8hxx"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Memory.hxx</label>
+        <link refid="d5/d4e/Memory_8hxx"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>RAE.h</label>
+        <link refid="db/d6a/RAE_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>../include/stdio.h</label>
+        <link refid="d6/dd1/stdio_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>errno.h</label>
+        <link refid="d8/dc2/errno_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>Hyperv.h</label>
+        <link refid="d0/dde/Hyperv_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Registers.h</label>
+        <link refid="d7/d2a/Registers_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Instructions.h</label>
+        <link refid="d9/dd5/Instructions_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>StateMachine.h</label>
+        <link refid="da/d78/StateMachine_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>rvalue.cpp</label>
+        <link refid="d1/d5d/rvalue_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Signal.h</label>
+        <link refid="d0/def/Signal_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Except.h</label>
+        <link refid="dc/d88/Except_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+        <link refid="df/dd8/stdint_8h"/>
+      </node>
+      <node id="4">
+        <label>stddef.h</label>
+        <link refid="d3/dce/stddef_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>BinaryExecutable.h</label>
+        <link refid="d0/dcf/BinaryExecutable_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ELF.h</label>
+        <link refid="db/de5/ELF_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../include/ValueCategories.h</label>
+        <link refid="d8/da7/ValueCategories_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Stack.h</label>
+        <link refid="dc/db6/Stack_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;../include/ValueCategories.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/stdio.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/Opcodes.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/Threading.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/StateMachine.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="d1/da1/classBBP_1_1userspace_1_1rvalue_1a4c3e343c68fa8babb020b4b7a7b2f561" refkind="member"><highlight class="normal"><ref refid="d1/da1/classBBP_1_1userspace_1_1rvalue_1a4c3e343c68fa8babb020b4b7a7b2f561" kindref="member">BBP::userspace::rvalue::rvalue</ref>()</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="d1/da1/classBBP_1_1userspace_1_1rvalue_1a21dbd2a11af7fe2f9d3032c7a39b6881" refkind="member"><highlight class="normal"><ref refid="d1/da1/classBBP_1_1userspace_1_1rvalue_1a4c3e343c68fa8babb020b4b7a7b2f561" kindref="member">BBP::userspace::rvalue::rvalue</ref>(<ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">userspace::StateMachine</ref><sp/>&amp;<ref refid="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" kindref="member">state</ref>,<sp/><ref refid="d5/d9e/structBBP_1_1userspace_1_1Instruction_1_1Arg" kindref="compound">userspace::Instruction::Arg</ref><sp/>&amp;arg)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="d1/da1/classBBP_1_1userspace_1_1rvalue_1a369fbfacc243cf5c91f253b6e961765b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d1/da1/classBBP_1_1userspace_1_1rvalue_1a369fbfacc243cf5c91f253b6e961765b" kindref="member">BBP::userspace::rvalue::dereference</ref>(<ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">userspace::StateMachine</ref><sp/>&amp;<ref refid="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" kindref="member">state</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref><sp/>lvalueFor)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="d1/da1/classBBP_1_1userspace_1_1rvalue_1adc7299c2a7bf5238ccb70ad414d0fda6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d1/da1/classBBP_1_1userspace_1_1rvalue_1adc7299c2a7bf5238ccb70ad414d0fda6" kindref="member">BBP::userspace::rvalue::reference</ref>(<ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">userspace::StateMachine</ref><sp/>&amp;<ref refid="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" kindref="member">state</ref>,<sp/><ref refid="d4/d87/classBBP_1_1userspace_1_1pvalue" kindref="compound">pvalue</ref><sp/>&amp;)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="d1/da1/classBBP_1_1userspace_1_1rvalue_1a23fefd203bb4a17be52d0b4c51672b8c" refkind="member"><highlight class="normal"><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">BBP::std::word</ref><sp/><ref refid="d1/da1/classBBP_1_1userspace_1_1rvalue_1a23fefd203bb4a17be52d0b4c51672b8c" kindref="member">BBP::userspace::rvalue::resolve</ref>(<ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">userspace::StateMachine</ref><sp/>&amp;<ref refid="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" kindref="member">state</ref>)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/RAE/rvalue.cpp"/>
+  </compounddef>
+</doxygen>

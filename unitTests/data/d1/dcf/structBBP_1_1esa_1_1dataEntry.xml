@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d1/dcf/structBBP_1_1esa_1_1dataEntry" kind="struct" language="C++" prot="public">
+    <compoundname>BBP::esa::dataEntry</compoundname>
+    <includes refid="d5/dfd/ELSABackend_8h" local="no">ELSABackend.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d1/dcf/structBBP_1_1esa_1_1dataEntry_1ab6572c55c1f1f9381e0b8f525fb4f6a7" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">std::conststring</ref></type>
+        <definition>std::conststring BBP::esa::dataEntry::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELSABackend.h" line="16" column="18" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELSABackend.h" bodystart="16" bodyend="-1"/>
+        <referencedby refid="d0/dbe/classBBP_1_1esa_1_1BinaryApplication_1aae12c360f177a00ed49d6a3280951a67" compoundref="d9/d9b/Builder_8cpp" startline="16" endline="60">BBP::esa::BinaryApplication::addDataToSection</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dcf/structBBP_1_1esa_1_1dataEntry_1a082e86443d75e53eac21d8907510a3b2" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref></type>
+        <definition>std::size_t BBP::esa::dataEntry::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELSABackend.h" line="19" column="13" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELSABackend.h" bodystart="19" bodyend="-1"/>
+        <referencedby refid="d0/dbe/classBBP_1_1esa_1_1BinaryApplication_1aae12c360f177a00ed49d6a3280951a67" compoundref="d9/d9b/Builder_8cpp" startline="16" endline="60">BBP::esa::BinaryApplication::addDataToSection</referencedby>
+        <referencedby refid="d0/dbe/classBBP_1_1esa_1_1BinaryApplication_1addb7c5388abf47164e9041129185748c" compoundref="d9/d9b/Builder_8cpp" startline="62" endline="77">BBP::esa::BinaryApplication::addSymbol</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dcf/structBBP_1_1esa_1_1dataEntry_1af83b1b785c3358d3beb0905ba50c1712" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a95c149a6e963e567bd059eb11aef4ac8" kindref="member">std::c_string</ref></type>
+        <definition>std::c_string BBP::esa::dataEntry::elfData</definition>
+        <argsstring></argsstring>
+        <name>elfData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELSABackend.h" line="22" column="15" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELSABackend.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="d0/dbe/classBBP_1_1esa_1_1BinaryApplication_1aae12c360f177a00ed49d6a3280951a67" compoundref="d9/d9b/Builder_8cpp" startline="16" endline="60">BBP::esa::BinaryApplication::addDataToSection</referencedby>
+        <referencedby refid="d0/dbe/classBBP_1_1esa_1_1BinaryApplication_1a2aab74057b13ed7c631a8cf3ebf96d16" compoundref="d9/d9b/Builder_8cpp" startline="132" endline="166">BBP::esa::BinaryApplication::emitSymbol</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dcf/structBBP_1_1esa_1_1dataEntry_1a1925e2de0eb8458e499e1c95ec33f546" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1aba0804f0534bca779731a6e8f2d3b123" kindref="member">std::offset_t</ref></type>
+        <definition>std::offset_t BBP::esa::dataEntry::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELSABackend.h" line="25" column="15" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELSABackend.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="d0/dbe/classBBP_1_1esa_1_1BinaryApplication_1aae12c360f177a00ed49d6a3280951a67" compoundref="d9/d9b/Builder_8cpp" startline="16" endline="60">BBP::esa::BinaryApplication::addDataToSection</referencedby>
+        <referencedby refid="d0/dbe/classBBP_1_1esa_1_1BinaryApplication_1a2aab74057b13ed7c631a8cf3ebf96d16" compoundref="d9/d9b/Builder_8cpp" startline="132" endline="166">BBP::esa::BinaryApplication::emitSymbol</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dcf/structBBP_1_1esa_1_1dataEntry_1a8c1459b17d8748706b0a17ceca6d4dbe" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref></type>
+        <definition>std::index_t BBP::esa::dataEntry::symbol</definition>
+        <argsstring></argsstring>
+        <name>symbol</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELSABackend.h" line="28" column="14" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELSABackend.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="d0/dbe/classBBP_1_1esa_1_1BinaryApplication_1addb7c5388abf47164e9041129185748c" compoundref="d9/d9b/Builder_8cpp" startline="62" endline="77">BBP::esa::BinaryApplication::addSymbol</referencedby>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a553f28a74233c3b7f4268343e1037f55" compoundref="d6/d3f/Backend_8cpp" startline="210" endline="289">BBP::esa::esaProcessor::emitProcedure</referencedby>
+        <referencedby refid="d0/dbe/classBBP_1_1esa_1_1BinaryApplication_1a2aab74057b13ed7c631a8cf3ebf96d16" compoundref="d9/d9b/Builder_8cpp" startline="132" endline="166">BBP::esa::BinaryApplication::emitSymbol</referencedby>
+        <referencedby refid="d0/dbe/classBBP_1_1esa_1_1BinaryApplication_1adf380f7751bf6f0f640ae6beaa678470" compoundref="d9/d9b/Builder_8cpp" startline="95" endline="100">BBP::esa::BinaryApplication::setSource</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dcf/structBBP_1_1esa_1_1dataEntry_1a9e8cb2136bb35ff0ada70bf212cd1862" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a4926ba934876e4a1028b9abb47edbc56" kindref="member">std::byte</ref></type>
+        <definition>std::byte BBP::esa::dataEntry::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELSABackend.h" line="31" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELSABackend.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="d0/dbe/classBBP_1_1esa_1_1BinaryApplication_1addb7c5388abf47164e9041129185748c" compoundref="d9/d9b/Builder_8cpp" startline="62" endline="77">BBP::esa::BinaryApplication::addSymbol</referencedby>
+        <referencedby refid="d0/dbe/classBBP_1_1esa_1_1BinaryApplication_1a1937e2e6c48c065edd37d61fc2c6f812" compoundref="d2/d8c/EABI_8cpp" startline="5" endline="91">BBP::esa::BinaryApplication::mangle</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dcf/structBBP_1_1esa_1_1dataEntry_1a5febf031a1b593d9461aa8cb38cb20fa" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1ad29f433a1c033a551d50291e7d3f50b4" kindref="member">std::hash_t</ref></type>
+        <definition>std::hash_t BBP::esa::dataEntry::hash</definition>
+        <argsstring></argsstring>
+        <name>hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELSABackend.h" line="34" column="13" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELSABackend.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d1/dcf/structBBP_1_1esa_1_1dataEntry_1afc78ac98ae2c2889270bba3b285352b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BBP::esa::dataEntry::dataEntry</definition>
+        <argsstring>(std::conststring msg, std::size_t len)</argsstring>
+        <name>dataEntry</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">std::conststring</ref></type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref></type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELSABackend.h" line="36" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELSABackend.h" bodystart="36" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dcf/structBBP_1_1esa_1_1dataEntry_1a9f846daa8f060bd289323d01455c5acc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BBP::esa::dataEntry::dataEntry</definition>
+        <argsstring>(std::conststring msg, std::size_t len, std::byte _type)</argsstring>
+        <name>dataEntry</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">std::conststring</ref></type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref></type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a4926ba934876e4a1028b9abb47edbc56" kindref="member">std::byte</ref></type>
+          <declname>_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELSABackend.h" line="46" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELSABackend.h" bodystart="46" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>BBP::esa::dataEntry</label>
+        <link refid="d1/dcf/structBBP_1_1esa_1_1dataEntry"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELSABackend.h" line="14" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELSABackend.h" bodystart="13" bodyend="56"/>
+    <listofallmembers>
+      <member refid="d1/dcf/structBBP_1_1esa_1_1dataEntry_1ab6572c55c1f1f9381e0b8f525fb4f6a7" prot="public" virt="non-virtual"><scope>BBP::esa::dataEntry</scope><name>data</name></member>
+      <member refid="d1/dcf/structBBP_1_1esa_1_1dataEntry_1afc78ac98ae2c2889270bba3b285352b7" prot="public" virt="non-virtual"><scope>BBP::esa::dataEntry</scope><name>dataEntry</name></member>
+      <member refid="d1/dcf/structBBP_1_1esa_1_1dataEntry_1a9f846daa8f060bd289323d01455c5acc" prot="public" virt="non-virtual"><scope>BBP::esa::dataEntry</scope><name>dataEntry</name></member>
+      <member refid="d1/dcf/structBBP_1_1esa_1_1dataEntry_1af83b1b785c3358d3beb0905ba50c1712" prot="public" virt="non-virtual"><scope>BBP::esa::dataEntry</scope><name>elfData</name></member>
+      <member refid="d1/dcf/structBBP_1_1esa_1_1dataEntry_1a5febf031a1b593d9461aa8cb38cb20fa" prot="public" virt="non-virtual"><scope>BBP::esa::dataEntry</scope><name>hash</name></member>
+      <member refid="d1/dcf/structBBP_1_1esa_1_1dataEntry_1a1925e2de0eb8458e499e1c95ec33f546" prot="public" virt="non-virtual"><scope>BBP::esa::dataEntry</scope><name>offset</name></member>
+      <member refid="d1/dcf/structBBP_1_1esa_1_1dataEntry_1a082e86443d75e53eac21d8907510a3b2" prot="public" virt="non-virtual"><scope>BBP::esa::dataEntry</scope><name>size</name></member>
+      <member refid="d1/dcf/structBBP_1_1esa_1_1dataEntry_1a8c1459b17d8748706b0a17ceca6d4dbe" prot="public" virt="non-virtual"><scope>BBP::esa::dataEntry</scope><name>symbol</name></member>
+      <member refid="d1/dcf/structBBP_1_1esa_1_1dataEntry_1a9e8cb2136bb35ff0ada70bf212cd1862" prot="public" virt="non-virtual"><scope>BBP::esa::dataEntry</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

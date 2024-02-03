@@ -1,0 +1,314 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d8/da7/ValueCategories_8h" kind="file" language="C++">
+    <compoundname>ValueCategories.h</compoundname>
+    <includes refid="d9/dd5/Instructions_8h" local="yes">Instructions.h</includes>
+    <includes refid="da/d78/StateMachine_8h" local="yes">StateMachine.h</includes>
+    <includedby refid="d4/d56/lvalue_8cpp" local="yes">lvalue.cpp</includedby>
+    <includedby refid="d1/d5d/rvalue_8cpp" local="yes">rvalue.cpp</includedby>
+    <includedby refid="df/d1c/StateMachineOpcodes_8cpp" local="yes">StateMachineOpcodes.cpp</includedby>
+    <includedby refid="d6/db1/xvalue_8cpp" local="yes">xvalue.cpp</includedby>
+    <incdepgraph>
+      <node id="9">
+        <label>Memory.h</label>
+        <link refid="de/d5c/Memory_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Opcodes.h</label>
+        <link refid="d1/d12/Opcodes_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Strings.h</label>
+        <link refid="de/d53/Strings_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Resources.h</label>
+        <link refid="d0/d33/Resources_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>ELF32.h</label>
+        <link refid="d1/d5d/ELF32_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Stack.hxx</label>
+        <link refid="db/d61/Stack_8hxx"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Memory.hxx</label>
+        <link refid="d5/d4e/Memory_8hxx"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>RAE.h</label>
+        <link refid="db/d6a/RAE_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>errno.h</label>
+        <link refid="d8/dc2/errno_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Hyperv.h</label>
+        <link refid="d0/dde/Hyperv_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>Registers.h</label>
+        <link refid="d7/d2a/Registers_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Instructions.h</label>
+        <link refid="d9/dd5/Instructions_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>StateMachine.h</label>
+        <link refid="da/d78/StateMachine_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Signal.h</label>
+        <link refid="d0/def/Signal_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Except.h</label>
+        <link refid="dc/d88/Except_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+        <link refid="df/dd8/stdint_8h"/>
+      </node>
+      <node id="3">
+        <label>stddef.h</label>
+        <link refid="d3/dce/stddef_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>BinaryExecutable.h</label>
+        <link refid="d0/dcf/BinaryExecutable_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ELF.h</label>
+        <link refid="db/de5/ELF_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ValueCategories.h</label>
+        <link refid="d8/da7/ValueCategories_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Stack.h</label>
+        <link refid="dc/db6/Stack_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>lvalue.cpp</label>
+        <link refid="d4/d56/lvalue_8cpp"/>
+      </node>
+      <node id="3">
+        <label>rvalue.cpp</label>
+        <link refid="d1/d5d/rvalue_8cpp"/>
+      </node>
+      <node id="1">
+        <label>ValueCategories.h</label>
+        <link refid="d8/da7/ValueCategories_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>xvalue.cpp</label>
+        <link refid="d6/db1/xvalue_8cpp"/>
+      </node>
+      <node id="4">
+        <label>StateMachineOpcodes.cpp</label>
+        <link refid="df/d1c/StateMachineOpcodes_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d4/d87/classBBP_1_1userspace_1_1pvalue" prot="public">BBP::userspace::pvalue</innerclass>
+    <innerclass refid="d1/da1/classBBP_1_1userspace_1_1rvalue" prot="public">BBP::userspace::rvalue</innerclass>
+    <innerclass refid="d8/d04/classBBP_1_1userspace_1_1lvalue" prot="public">BBP::userspace::lvalue</innerclass>
+    <innerclass refid="dc/d6d/classBBP_1_1userspace_1_1xvalue" prot="public">BBP::userspace::xvalue</innerclass>
+    <innernamespace refid="d9/d6f/namespaceBBP">BBP</innernamespace>
+    <innernamespace refid="de/dfe/namespaceBBP_1_1userspace">BBP::userspace</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>BBP_LIB_VALUECATEGORIES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BBP_LIB_VALUECATEGORIES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d9/dd5/Instructions_8h" kindref="compound">Instructions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="da/d78/StateMachine_8h" kindref="compound">StateMachine.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="d9/d6f/namespaceBBP" kindref="compound">BBP</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">userspace</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="d4/d87/classBBP_1_1userspace_1_1pvalue" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d4/d87/classBBP_1_1userspace_1_1pvalue" kindref="compound">pvalue</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Functions<sp/>used<sp/>to<sp/>reference,<sp/>dereference,<sp/>and<sp/>resolve<sp/>a<sp/>value<sp/>for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d4/d87/classBBP_1_1userspace_1_1pvalue_1a76d1fe37965aa866f92e8683c767d57c" kindref="member">dereference</ref>(<ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">userspace::StateMachine</ref><sp/>&amp;<ref refid="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" kindref="member">state</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref><sp/><ref refid="d4/d87/classBBP_1_1userspace_1_1pvalue_1ab92bee3a8f6bc51e5b461b0c13c87bfd" kindref="member">resolve</ref>(<ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">userspace::StateMachine</ref><sp/>&amp;<ref refid="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" kindref="member">state</ref>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="d1/da1/classBBP_1_1userspace_1_1rvalue" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d1/da1/classBBP_1_1userspace_1_1rvalue" kindref="compound">rvalue</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="d4/d87/classBBP_1_1userspace_1_1pvalue" kindref="compound">pvalue</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="25" refid="d1/da1/classBBP_1_1userspace_1_1rvalue_1a3e0a04a8492f1119a633a0f06863cea8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d1/da1/classBBP_1_1userspace_1_1rvalue_1a3e0a04a8492f1119a633a0f06863cea8" kindref="member">hiho</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d1/da1/classBBP_1_1userspace_1_1rvalue_1a4c3e343c68fa8babb020b4b7a7b2f561" kindref="member">rvalue</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d1/da1/classBBP_1_1userspace_1_1rvalue_1a4c3e343c68fa8babb020b4b7a7b2f561" kindref="member">rvalue</ref>(<ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">userspace::StateMachine</ref><sp/>&amp;<ref refid="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" kindref="member">state</ref>,<sp/><ref refid="d5/d9e/structBBP_1_1userspace_1_1Instruction_1_1Arg" kindref="compound">userspace::Instruction::Arg</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Functions<sp/>to<sp/>reference<sp/>and<sp/>dereference</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d1/da1/classBBP_1_1userspace_1_1rvalue_1a369fbfacc243cf5c91f253b6e961765b" kindref="member">dereference</ref>(<ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">userspace::StateMachine</ref><sp/>&amp;<ref refid="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" kindref="member">state</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d1/da1/classBBP_1_1userspace_1_1rvalue_1adc7299c2a7bf5238ccb70ad414d0fda6" kindref="member">reference</ref>(<ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">userspace::StateMachine</ref><sp/>&amp;<ref refid="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" kindref="member">state</ref>,<sp/><ref refid="d4/d87/classBBP_1_1userspace_1_1pvalue" kindref="compound">pvalue</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Functions<sp/>to<sp/>resolve</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref><sp/><ref refid="d1/da1/classBBP_1_1userspace_1_1rvalue_1a23fefd203bb4a17be52d0b4c51672b8c" kindref="member">resolve</ref>(<ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">userspace::StateMachine</ref><sp/>&amp;<ref refid="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" kindref="member">state</ref>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="d8/d04/classBBP_1_1userspace_1_1lvalue" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d8/d04/classBBP_1_1userspace_1_1lvalue" kindref="compound">lvalue</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="d4/d87/classBBP_1_1userspace_1_1pvalue" kindref="compound">pvalue</ref></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Register<sp/>lvalues</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="d8/d04/classBBP_1_1userspace_1_1lvalue_1ace29071288d57ed260e3c4def955b639" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/da2/structBBP_1_1userspace_1_1register__t" kindref="compound">register_t</ref><sp/>*<ref refid="d8/d04/classBBP_1_1userspace_1_1lvalue_1ace29071288d57ed260e3c4def955b639" kindref="member">_register</ref>;</highlight></codeline>
+<codeline lineno="43" refid="d8/d04/classBBP_1_1userspace_1_1lvalue_1a4f608b6c9d67370868b513d0a613e369" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d8/d04/classBBP_1_1userspace_1_1lvalue_1a4f608b6c9d67370868b513d0a613e369" kindref="member">isRegister</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Binary<sp/>lvalues</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="d8/d04/classBBP_1_1userspace_1_1lvalue_1a2b34d6fbb5e7e920adb8cefab86724fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref><sp/><ref refid="d8/d04/classBBP_1_1userspace_1_1lvalue_1a2b34d6fbb5e7e920adb8cefab86724fc" kindref="member">PhysicalAddress</ref>;</highlight></codeline>
+<codeline lineno="47" refid="d8/d04/classBBP_1_1userspace_1_1lvalue_1a004b8d67fe4057480dbf9a483d9d9f17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref><sp/><ref refid="d8/d04/classBBP_1_1userspace_1_1lvalue_1a004b8d67fe4057480dbf9a483d9d9f17" kindref="member">VirtualMemory</ref>;</highlight></codeline>
+<codeline lineno="48" refid="d8/d04/classBBP_1_1userspace_1_1lvalue_1af0d58a58e337a8860b7be9f1606e1bfe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d8/d04/classBBP_1_1userspace_1_1lvalue_1af0d58a58e337a8860b7be9f1606e1bfe" kindref="member">isAddress</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constructors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/d04/classBBP_1_1userspace_1_1lvalue_1a298d2412e3fb2a9f20db16f5007b1237" kindref="member">lvalue</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d8/d04/classBBP_1_1userspace_1_1lvalue_1a298d2412e3fb2a9f20db16f5007b1237" kindref="member">lvalue</ref>(<ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">userspace::StateMachine</ref><sp/>&amp;<ref refid="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" kindref="member">state</ref>,<sp/><ref refid="d5/d9e/structBBP_1_1userspace_1_1Instruction_1_1Arg" kindref="compound">userspace::Instruction::Arg</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Functions<sp/>to<sp/>reference<sp/>and<sp/>dereference</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d8/d04/classBBP_1_1userspace_1_1lvalue_1a8148d4fec076833a89cc9d3ff6758c92" kindref="member">dereference</ref>(<ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">userspace::StateMachine</ref><sp/>&amp;<ref refid="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" kindref="member">state</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d8/d04/classBBP_1_1userspace_1_1lvalue_1a2e0677fec41b6afc029ebc5ab17c0d34" kindref="member">reference</ref>(<ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">userspace::StateMachine</ref><sp/>&amp;<ref refid="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" kindref="member">state</ref>,<sp/><ref refid="d4/d87/classBBP_1_1userspace_1_1pvalue" kindref="compound">pvalue</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Functions<sp/>to<sp/>resolve</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref><sp/><ref refid="d8/d04/classBBP_1_1userspace_1_1lvalue_1a613afac910aadefe91088ae6764ee035" kindref="member">resolve</ref>(<ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">userspace::StateMachine</ref><sp/>&amp;<ref refid="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" kindref="member">state</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="dc/d6d/classBBP_1_1userspace_1_1xvalue" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="dc/d6d/classBBP_1_1userspace_1_1xvalue" kindref="compound">xvalue</ref><sp/>:<sp/><ref refid="d8/d04/classBBP_1_1userspace_1_1lvalue" kindref="compound">lvalue</ref>,<sp/><ref refid="d1/da1/classBBP_1_1userspace_1_1rvalue" kindref="compound">rvalue</ref></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dc/d6d/classBBP_1_1userspace_1_1xvalue_1a3e3d516aa10fcb79e02eefd52a681a79" kindref="member">xvalue</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dc/d6d/classBBP_1_1userspace_1_1xvalue_1a3e3d516aa10fcb79e02eefd52a681a79" kindref="member">xvalue</ref>(<ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">userspace::StateMachine</ref><sp/>&amp;<ref refid="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" kindref="member">state</ref>,<sp/><ref refid="d5/d9e/structBBP_1_1userspace_1_1Instruction_1_1Arg" kindref="compound">userspace::Instruction::Arg</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Functions<sp/>to<sp/>reference<sp/>and<sp/>dereference</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/d6d/classBBP_1_1userspace_1_1xvalue_1a07cbbdfeddb7d414dbe5987a55bbf83f" kindref="member">dereference</ref>(<ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">userspace::StateMachine</ref><sp/>&amp;<ref refid="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" kindref="member">state</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref>);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/d6d/classBBP_1_1userspace_1_1xvalue_1ad7fd8cc3e8842ec7a764486f9d2afcf3" kindref="member">reference</ref>(<ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">userspace::StateMachine</ref><sp/>&amp;<ref refid="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" kindref="member">state</ref>,<sp/><ref refid="d4/d87/classBBP_1_1userspace_1_1pvalue" kindref="compound">pvalue</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Functions<sp/>to<sp/>resolve</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref><sp/><ref refid="dc/d6d/classBBP_1_1userspace_1_1xvalue_1a684b5ded4d4fc02eb6bf8e44fa380550" kindref="member">resolve</ref>(<ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">userspace::StateMachine</ref><sp/>&amp;<ref refid="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" kindref="member">state</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ValueCategories.h"/>
+  </compounddef>
+</doxygen>

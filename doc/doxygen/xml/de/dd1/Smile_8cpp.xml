@@ -1,0 +1,608 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="de/dd1/Smile_8cpp" kind="file" language="C++">
+    <compoundname>Smile.cpp</compoundname>
+    <includes refid="d6/dd1/stdio_8h" local="yes">../include/stdio.h</includes>
+    <includes refid="d0/def/Signal_8h" local="yes">../include/Signal.h</includes>
+    <includes refid="d0/d33/Resources_8h" local="yes">../include/Resources.h</includes>
+    <includes refid="db/de5/ELF_8h" local="yes">../include/ELF.h</includes>
+    <includes refid="d0/d00/FileSys_8h" local="yes">../include/FileSys.h</includes>
+    <includes refid="df/d80/Lex_8h" local="yes">../include/Lex.h</includes>
+    <includes refid="da/d30/CPPApplications_8h" local="yes">../include/CPPApplications.h</includes>
+    <includes refid="de/da9/Executable_8h" local="yes">../include/Executable.h</includes>
+    <includes refid="db/d39/System_8h" local="yes">../include/System.h</includes>
+    <includes refid="d2/dd1/Graphics_8h" local="yes">../include/Graphics.h</includes>
+    <includes refid="d2/d4f/OS_8h" local="yes">../include/OS.h</includes>
+    <includes refid="d4/d54/Locale_8h" local="yes">../include/Locale.h</includes>
+    <includes refid="df/d71/ELSA_8h" local="yes">../include/ELSA.h</includes>
+    <includes refid="dd/d0e/Threading_8h" local="yes">../include/Threading.h</includes>
+    <includes refid="d0/dde/Hyperv_8h" local="yes">../include/Hyperv.h</includes>
+    <includes refid="da/d78/StateMachine_8h" local="yes">../include/StateMachine.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>Memory.h</label>
+        <link refid="de/d5c/Memory_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Smile.cpp</label>
+        <link refid="de/dd1/Smile_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>../include/Executable.h</label>
+        <link refid="de/da9/Executable_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>ELSABackend.h</label>
+        <link refid="d5/dfd/ELSABackend_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>../include/Threading.h</label>
+        <link refid="dd/d0e/Threading_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>Opcodes.h</label>
+        <link refid="d1/d12/Opcodes_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Strings.h</label>
+        <link refid="de/d53/Strings_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Resources.h</label>
+        <link refid="d0/d33/Resources_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>ELF32.h</label>
+        <link refid="d1/d5d/ELF32_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Stack.hxx</label>
+        <link refid="db/d61/Stack_8hxx"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Memory.hxx</label>
+        <link refid="d5/d4e/Memory_8hxx"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>../include/OS.h</label>
+        <link refid="d2/d4f/OS_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>../include/FileSys.h</label>
+        <link refid="d0/d00/FileSys_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>RAE.h</label>
+        <link refid="db/d6a/RAE_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>../include/Graphics.h</label>
+        <link refid="d2/dd1/Graphics_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../include/stdio.h</label>
+        <link refid="d6/dd1/stdio_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>errno.h</label>
+        <link refid="d8/dc2/errno_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>../include/Hyperv.h</label>
+        <link refid="d0/dde/Hyperv_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>Registers.h</label>
+        <link refid="d7/d2a/Registers_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>Instructions.h</label>
+        <link refid="d9/dd5/Instructions_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>../include/StateMachine.h</label>
+        <link refid="da/d78/StateMachine_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Signal.h</label>
+        <link refid="d0/def/Signal_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Except.h</label>
+        <link refid="dc/d88/Except_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>../include/Lex.h</label>
+        <link refid="df/d80/Lex_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>../include/Locale.h</label>
+        <link refid="d4/d54/Locale_8h"/>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+        <link refid="df/dd8/stdint_8h"/>
+      </node>
+      <node id="5">
+        <label>stddef.h</label>
+        <link refid="d3/dce/stddef_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>../include/CPPApplications.h</label>
+        <link refid="da/d30/CPPApplications_8h"/>
+      </node>
+      <node id="29">
+        <label>BinaryExecutable.h</label>
+        <link refid="d0/dcf/BinaryExecutable_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>../include/System.h</label>
+        <link refid="db/d39/System_8h"/>
+      </node>
+      <node id="14">
+        <label>../include/ELF.h</label>
+        <link refid="db/de5/ELF_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Stack.h</label>
+        <link refid="dc/db6/Stack_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>../include/ELSA.h</label>
+        <link refid="df/d71/ELSA_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="de/dd1/Smile_8cpp_1a8eebc81fca40281d6c650be442ca9034" prot="public" static="no" mutable="no">
+        <type>const <ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">BBP::std::size_t</ref></type>
+        <definition>const BBP::std::size_t points</definition>
+        <argsstring></argsstring>
+        <name>points</name>
+        <initializer>= 8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Applications/Smile.cpp" line="19" column="24" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Applications/Smile.cpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/dd1/Smile_8cpp_1a00ca08a68f73e32151c8c455421bb97c" prot="public" static="no" mutable="no">
+        <type>const <ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">BBP::std::pos_t</ref></type>
+        <definition>const BBP::std::pos_t xpoints[]</definition>
+        <argsstring>[]</argsstring>
+        <name>xpoints</name>
+        <initializer>= { 700, 750, 800, 850, 850, 800, 750, 700 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Applications/Smile.cpp" line="20" column="23" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Applications/Smile.cpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/dd1/Smile_8cpp_1aa60e2b08db516c3929cdac2de4eb0962" prot="public" static="no" mutable="no">
+        <type>const <ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">BBP::std::pos_t</ref></type>
+        <definition>const BBP::std::pos_t ypoints[]</definition>
+        <argsstring>[]</argsstring>
+        <name>ypoints</name>
+        <initializer>= { 400, 350, 350, 400, 450, 500, 500, 450 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Applications/Smile.cpp" line="21" column="23" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Applications/Smile.cpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/dd1/Smile_8cpp_1ac1c65e573fd14a668360a2ca271b98ac" prot="public" static="no" mutable="no">
+        <type><ref refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor" kindref="compound">BBP::userspace::HyperVisor</ref></type>
+        <definition>BBP::userspace::HyperVisor hypervisor</definition>
+        <argsstring></argsstring>
+        <name>hypervisor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Applications/Smile.cpp" line="23" column="28" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Applications/Smile.cpp" bodystart="23" bodyend="-1"/>
+        <referencedby refid="d9/d6f/namespaceBBP_1a0ba2e2ff83f9f917f9811058a5d02a0b" compoundref="de/dd1/Smile_8cpp" startline="26" endline="218">BBP::smile_main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" prot="public" static="no" mutable="no">
+        <type><ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">BBP::userspace::StateMachine</ref></type>
+        <definition>BBP::userspace::StateMachine state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Applications/Smile.cpp" line="24" column="30" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Applications/Smile.cpp" bodystart="24" bodyend="-1"/>
+        <referencedby refid="d8/d04/classBBP_1_1userspace_1_1lvalue_1abc09790e147b6868c34917efd0478372" compoundref="d4/d56/lvalue_8cpp" startline="12" endline="48">BBP::userspace::lvalue::lvalue</referencedby>
+        <referencedby refid="d8/d04/classBBP_1_1userspace_1_1lvalue_1a8148d4fec076833a89cc9d3ff6758c92" compoundref="d4/d56/lvalue_8cpp" startline="51" endline="366">BBP::userspace::lvalue::dereference</referencedby>
+        <referencedby refid="d8/d04/classBBP_1_1userspace_1_1lvalue_1a613afac910aadefe91088ae6764ee035" compoundref="d4/d56/lvalue_8cpp" startline="368" endline="389">BBP::userspace::lvalue::resolve</referencedby>
+        <referencedby refid="d9/d6f/namespaceBBP_1a0ba2e2ff83f9f917f9811058a5d02a0b" compoundref="de/dd1/Smile_8cpp" startline="26" endline="218">BBP::smile_main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;../include/stdio.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/Signal.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/Resources.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/ELF.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/FileSys.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/Lex.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/CPPApplications.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/Executable.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/System.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/Graphics.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/OS.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/System.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/Locale.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/ELSA.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/Threading.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/Hyperv.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/StateMachine.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="de/dd1/Smile_8cpp_1a8eebc81fca40281d6c650be442ca9034" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">BBP::std::size_t</ref><sp/><ref refid="de/dd1/Smile_8cpp_1a8eebc81fca40281d6c650be442ca9034" kindref="member">points</ref><sp/>=<sp/>8;</highlight></codeline>
+<codeline lineno="20" refid="de/dd1/Smile_8cpp_1a00ca08a68f73e32151c8c455421bb97c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">BBP::std::pos_t</ref><sp/><ref refid="de/dd1/Smile_8cpp_1a00ca08a68f73e32151c8c455421bb97c" kindref="member">xpoints</ref>[]<sp/>=<sp/>{<sp/>700,<sp/>750,<sp/>800,<sp/>850,<sp/>850,<sp/>800,<sp/>750,<sp/>700<sp/>};</highlight></codeline>
+<codeline lineno="21" refid="de/dd1/Smile_8cpp_1aa60e2b08db516c3929cdac2de4eb0962" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dd/d98/namespaceBBP_1_1std_1ab2f51272b20a4acd0576451209aba920" kindref="member">BBP::std::pos_t</ref><sp/><ref refid="de/dd1/Smile_8cpp_1aa60e2b08db516c3929cdac2de4eb0962" kindref="member">ypoints</ref>[]<sp/>=<sp/>{<sp/>400,<sp/>350,<sp/>350,<sp/>400,<sp/>450,<sp/>500,<sp/>500,<sp/>450<sp/>};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="de/dd1/Smile_8cpp_1ac1c65e573fd14a668360a2ca271b98ac" refkind="member"><highlight class="normal"><ref refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor" kindref="compound">BBP::userspace::HyperVisor</ref><sp/><ref refid="de/dd1/Smile_8cpp_1ac1c65e573fd14a668360a2ca271b98ac" kindref="member">hypervisor</ref>;</highlight></codeline>
+<codeline lineno="24" refid="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" refkind="member"><highlight class="normal"><ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine" kindref="compound">BBP::userspace::StateMachine</ref><sp/><ref refid="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" kindref="member">state</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="d9/d6f/namespaceBBP_1a0ba2e2ff83f9f917f9811058a5d02a0b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/d6f/namespaceBBP_1a0ba2e2ff83f9f917f9811058a5d02a0b" kindref="member">BBP::smile_main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/><sp/><sp/><sp/>std::window<sp/>*w<sp/>=<sp/>&amp;BBP::std::kernelDisplay;</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"></highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/><sp/><sp/><sp/>for<sp/>(std::index_t<sp/>idx<sp/>=<sp/>0;<sp/>idx<sp/>&lt;<sp/>points<sp/>-<sp/>1;<sp/>idx++)</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::R2D::Line(w,<sp/>xpoints[idx],<sp/>ypoints[idx],<sp/>xpoints[idx<sp/>+<sp/>1],<sp/>ypoints[idx<sp/>+<sp/>1]);</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/><sp/><sp/>std::R2D::Line(w,<sp/>xpoints[0],<sp/>ypoints[0],<sp/>xpoints[points<sp/>-<sp/>1],<sp/>ypoints[points<sp/>-<sp/>1]);</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"></highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/><sp/><sp/><sp/>std::R2D::Line(w,<sp/>770,<sp/>405,<sp/>770,<sp/>420);</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/><sp/><sp/><sp/>std::R2D::Line(w,<sp/>780,<sp/>405,<sp/>780,<sp/>420);</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"></highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/><sp/><sp/><sp/>std::R2D::Line(w,<sp/>740,<sp/>470,<sp/>810,<sp/>470);</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/><sp/><sp/><sp/>std::R2D::Line(w,<sp/>740,<sp/>470,<sp/>735,<sp/>465);</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/><sp/><sp/><sp/>std::R2D::Line(w,<sp/>810,<sp/>470,<sp/>815,<sp/>465);</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"></highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="comment"></highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/><sp/><sp/><sp/>std::pos_t<sp/>xo<sp/>=<sp/>w-&gt;cursorPosX;</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/><sp/><sp/><sp/>std::pos_t<sp/>yo<sp/>=<sp/>w-&gt;cursorPosY;</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/><sp/><sp/><sp/>std::pos_t<sp/>co<sp/>=<sp/>w-&gt;coloumn;</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/><sp/><sp/><sp/>std::pos_t<sp/>lo<sp/>=<sp/>w-&gt;line;</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"></highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/><sp/><sp/><sp/>w-&gt;fontSize<sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/><sp/><sp/><sp/>w-&gt;cursorPosX<sp/>=<sp/>500;</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/><sp/><sp/><sp/>w-&gt;cursorPosY<sp/>=<sp/>200;</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/><sp/>w-&gt;coloumn<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/><sp/>w-&gt;line<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/><sp/><sp/><sp/>const<sp/>char<sp/>*hello<sp/>=<sp/>&quot;\xe1\xe1!\n&quot;;</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"></highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/><sp/><sp/><sp/>std::R2D::print(w,<sp/>hello);</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"></highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/><sp/><sp/><sp/>w-&gt;fontSize<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/><sp/><sp/><sp/>w-&gt;cursorPosX<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/><sp/><sp/><sp/>w-&gt;cursorPosY<sp/>=<sp/>yo;</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/><sp/><sp/><sp/>w-&gt;coloumn<sp/>=<sp/>co;</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/><sp/><sp/><sp/>w-&gt;line<sp/>=<sp/>lo;</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>EmbeddabLe<sp/>Simple<sp/>Assembler</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Roger<sp/>Bemelmans</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dea/classBBP_1_1std_1_1PATH" kindref="compound">std::PATH</ref><sp/>testFile(</highlight><highlight class="stringliteral">&quot;/boot/ELSA.esa&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dea/classBBP_1_1std_1_1PATH" kindref="compound">std::PATH</ref><sp/>dstFile(</highlight><highlight class="stringliteral">&quot;/boot/ELSA.o&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Compile<sp/>source</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/d72/namespaceBBP_1_1esa_1ac6718a2ca4ad0a1b180fa889565881d1" kindref="member">esa::processor</ref>.<ref refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a63f090f895980cdf3c56e9f52e5d6a63" kindref="member">translate</ref>(testFile,<sp/>dstFile);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>try<sp/>and<sp/>deconstruct<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/dbd/classBBP_1_1std_1_1FILE" kindref="compound">std::FILE</ref><sp/>compiledFile(dstFile);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>processor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder" kindref="compound">std::ELF::ELFBuilder</ref><sp/>compiled(compiledFile.<ref refid="d4/dbd/classBBP_1_1std_1_1FILE_1ae42065d3c2135f0bd24a3402c7a85921" kindref="member">b</ref>().<ref refid="de/d21/classBBP_1_1std_1_1Stack_1aaacd32840edd56a62471a2aedbbe85dc" kindref="member">page</ref>,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa4b7f66aef4bb8963e9fec9370186362" kindref="member">std::activemem</ref>);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>we<sp/>can<sp/>do<sp/>whatever</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref><sp/>index<sp/>=<sp/>0;<sp/>index<sp/>&lt;<sp/>compiled.<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1afd53f05b8a749e95f61a08366c6b7cb6" kindref="member">symbolCount</ref>;<sp/>index++)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>symbol<sp/>stuff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//if<sp/>(compiled.symbols[index].info()<sp/>&amp;<sp/>std::ELF::SYM_FUNC)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>std::printf(&quot;Symbol<sp/>%u<sp/>is<sp/>a<sp/>function.\n&quot;,<sp/>index);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>zero-th<sp/>thread</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d8b/structBBP_1_1userspace_1_1Thread" kindref="compound">userspace::Thread</ref><sp/>*t<sp/>=<sp/><ref refid="de/dd1/Smile_8cpp_1ac1c65e573fd14a668360a2ca271b98ac" kindref="member">hypervisor</ref>.<ref refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1ad9a896aeb26e67c14605bc5885d4338a" kindref="member">spawnThread</ref>(compiled,<sp/><ref refid="dd/d98/namespaceBBP_1_1std_1aa4b7f66aef4bb8963e9fec9370186362" kindref="member">std::activemem</ref>);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Unload<sp/>binary<sp/>since<sp/>we<sp/>have<sp/>a<sp/>copy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>compiled.<ref refid="d3/d63/classBBP_1_1std_1_1ELF_1_1ELFBuilder_1a0e05c3b97f4227c9924841c5e170ae82" kindref="member">close</ref>();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>compiledFile.<ref refid="d4/dbd/classBBP_1_1std_1_1FILE_1a0a06d09de567928faea10565289627c6" kindref="member">close</ref>();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>active<sp/>hypervisor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" kindref="member">state</ref>.<ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a2cd3b496a9c0a4427e6538746a100365" kindref="member">setActiveHypervisor</ref>(&amp;<ref refid="de/dd1/Smile_8cpp_1ac1c65e573fd14a668360a2ca271b98ac" kindref="member">hypervisor</ref>);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" kindref="member">state</ref>.<ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1aa1e972d83c8e7af057feac1922b389c8" kindref="member">setActiveThread</ref>(t);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Cycle<sp/>a<sp/>single<sp/>thread</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/dd1/Smile_8cpp_1a06db5103abddb53ccb11f2121e18d0ba" kindref="member">state</ref>.<ref refid="d0/d71/classBBP_1_1userspace_1_1StateMachine_1a5a294cc50280a273753e3289e5407cd3" kindref="member">cycleThread</ref>();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Close</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/dd1/Smile_8cpp_1ac1c65e573fd14a668360a2ca271b98ac" kindref="member">hypervisor</ref>.<ref refid="d8/d9c/classBBP_1_1userspace_1_1HyperVisor_1a1b80807f61133aed0d6cad53f74330c7" kindref="member">destroyThread</ref>(0);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"></highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/><sp/><sp/><sp/>std::PATH<sp/>bootPath(&quot;/boot/test.lua&quot;);</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/><sp/><sp/><sp/>lua::initializeParser();</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/><sp/><sp/><sp/>lua::luaParser.parseFile(bootPath);</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"></highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>Emit<sp/>header</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"><sp/><sp/><sp/><sp/>builder.emitHeader();</highlight></codeline>
+<codeline lineno="133"><highlight class="comment"></highlight></codeline>
+<codeline lineno="134"><highlight class="comment"><sp/><sp/><sp/><sp/>builder.shstrtab<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="135"><highlight class="comment"><sp/><sp/><sp/><sp/>builder.strtab<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"><sp/><sp/><sp/><sp/>builder.symtab<sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"></highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/><sp/><sp/><sp/>builder.sections[0].type(std::ELF::SHT_NILL);</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"></highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/><sp/><sp/><sp/>builder._shstrtab().Append(64);</highlight></codeline>
+<codeline lineno="141"><highlight class="comment"><sp/><sp/><sp/><sp/>builder._shstrtab().stack++;</highlight></codeline>
+<codeline lineno="142"><highlight class="comment"><sp/><sp/><sp/><sp/>builder._shstrtab().stack<sp/>&lt;&lt;=<sp/>&quot;.shstrtab&quot;;</highlight></codeline>
+<codeline lineno="143"><highlight class="comment"><sp/><sp/><sp/><sp/>builder._shstrtab().type(std::ELF::SHT_STRTAB);</highlight></codeline>
+<codeline lineno="144"><highlight class="comment"><sp/><sp/><sp/><sp/>builder._shstrtab().name(1);</highlight></codeline>
+<codeline lineno="145"><highlight class="comment"></highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/><sp/><sp/><sp/>builder._strtab().Append(64);</highlight></codeline>
+<codeline lineno="147"><highlight class="comment"><sp/><sp/><sp/><sp/>builder._strtab().name(builder._shstrtab().stack.atElement);</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"><sp/><sp/><sp/><sp/>builder._shstrtab().stack<sp/>&lt;&lt;=<sp/>&quot;.strtab&quot;;</highlight></codeline>
+<codeline lineno="149"><highlight class="comment"><sp/><sp/><sp/><sp/>builder._strtab().type(std::ELF::SHT_STRTAB);</highlight></codeline>
+<codeline lineno="150"><highlight class="comment"></highlight></codeline>
+<codeline lineno="151"><highlight class="comment"><sp/><sp/><sp/><sp/>builder._symtab().Append(32);</highlight></codeline>
+<codeline lineno="152"><highlight class="comment"><sp/><sp/><sp/><sp/>builder._symtab().type(std::ELF::SHT_SYMTAB);</highlight></codeline>
+<codeline lineno="153"><highlight class="comment"><sp/><sp/><sp/><sp/>builder._symtab().name(builder._shstrtab().stack.atElement);</highlight></codeline>
+<codeline lineno="154"><highlight class="comment"><sp/><sp/><sp/><sp/>builder._symtab().info(builder.strtab);</highlight></codeline>
+<codeline lineno="155"><highlight class="comment"><sp/><sp/><sp/><sp/>builder._symtab().link(builder.strtab);</highlight></codeline>
+<codeline lineno="156"><highlight class="comment"><sp/><sp/><sp/><sp/>builder._symtab().entsize(16);</highlight></codeline>
+<codeline lineno="157"><highlight class="comment"><sp/><sp/><sp/><sp/>builder._strtab().stack++;</highlight></codeline>
+<codeline lineno="158"><highlight class="comment"><sp/><sp/><sp/><sp/>builder._shstrtab().stack<sp/>&lt;&lt;=<sp/>&quot;.symtab&quot;;</highlight></codeline>
+<codeline lineno="159"><highlight class="comment"></highlight></codeline>
+<codeline lineno="160"><highlight class="comment"><sp/><sp/><sp/><sp/>builder.shstrndx(1);</highlight></codeline>
+<codeline lineno="161"><highlight class="comment"></highlight></codeline>
+<codeline lineno="162"><highlight class="comment"><sp/><sp/><sp/><sp/>builder._shstrtab().Extend(16);</highlight></codeline>
+<codeline lineno="163"><highlight class="comment"></highlight></codeline>
+<codeline lineno="164"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="167"><highlight class="comment"><sp/><sp/><sp/><sp/>std::ELF::ELFBuilder<sp/>builder(std::activemem,<sp/>0,<sp/>13,<sp/>3);</highlight></codeline>
+<codeline lineno="168"><highlight class="comment"><sp/><sp/><sp/><sp/>std::Stack&lt;std::string_element&gt;<sp/>builderStack(&amp;builder.file,<sp/>std::seqlen(builder.file));</highlight></codeline>
+<codeline lineno="169"><highlight class="comment"><sp/><sp/><sp/><sp/>std::FILE<sp/>file(builderStack,<sp/>&quot;/bin/test.o&quot;);</highlight></codeline>
+<codeline lineno="170"><highlight class="comment"></highlight></codeline>
+<codeline lineno="171"><highlight class="comment"><sp/><sp/><sp/><sp/>const<sp/>char<sp/>*msg<sp/>=<sp/>&quot;Hello,<sp/>world!&quot;;</highlight></codeline>
+<codeline lineno="172"><highlight class="comment"></highlight></codeline>
+<codeline lineno="173"><highlight class="comment"><sp/><sp/><sp/><sp/>builder.formStandard(24,<sp/>14,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="174"><highlight class="comment"></highlight></codeline>
+<codeline lineno="175"><highlight class="comment"><sp/><sp/><sp/><sp/>builder.renameSymbol(1,<sp/>&quot;Hello&quot;);</highlight></codeline>
+<codeline lineno="176"><highlight class="comment"><sp/><sp/><sp/><sp/>builder.renameSymbol(2,<sp/>&quot;HoHo&quot;);</highlight></codeline>
+<codeline lineno="177"><highlight class="comment"></highlight></codeline>
+<codeline lineno="178"><highlight class="comment"><sp/><sp/><sp/><sp/>builder._data().stack<sp/>&lt;&lt;=<sp/>&quot;Hello,<sp/>World!&quot;;</highlight></codeline>
+<codeline lineno="179"><highlight class="comment"></highlight></codeline>
+<codeline lineno="180"><highlight class="comment"><sp/><sp/><sp/><sp/>file.writeFileToDisk();</highlight></codeline>
+<codeline lineno="181"><highlight class="comment"><sp/><sp/><sp/><sp/>builder.close();</highlight></codeline>
+<codeline lineno="182"><highlight class="comment"><sp/><sp/><sp/><sp/>file.close();</highlight></codeline>
+<codeline lineno="183"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="186"><highlight class="comment"></highlight></codeline>
+<codeline lineno="187"><highlight class="comment"><sp/><sp/><sp/><sp/>std::ESAM::dataEntry<sp/>data(&quot;Hello,<sp/>World!&quot;,<sp/>std::ELF::SYM_OBJECT<sp/>|<sp/>std::ELF::SYM_GLOBAL);</highlight></codeline>
+<codeline lineno="188"><highlight class="comment"><sp/><sp/><sp/><sp/>std::ESAM::dataEntry<sp/>data2(&quot;4<sp/>+<sp/>5<sp/>is<sp/>%d\n&quot;,<sp/>std::ELF::SYM_OBJECT<sp/>|<sp/>std::ELF::SYM_GLOBAL);</highlight></codeline>
+<codeline lineno="189"><highlight class="comment"></highlight></codeline>
+<codeline lineno="190"><highlight class="comment"><sp/><sp/><sp/><sp/>std::ESAM::dataEntry<sp/>program(&quot;\x32\xa1\xa2&quot;,<sp/>std::ELF::SYM_FILE<sp/>|<sp/>std::ELF::SYM_GLOBAL);</highlight></codeline>
+<codeline lineno="191"><highlight class="comment"><sp/><sp/><sp/><sp/>std::ESAM::dataEntry<sp/>program2(&quot;\xFF\xFF\xFF&quot;,<sp/>std::ELF::SYM_SECTION<sp/>|<sp/>std::ELF::SYM_GLOBAL);</highlight></codeline>
+<codeline lineno="192"><highlight class="comment"></highlight></codeline>
+<codeline lineno="193"><highlight class="comment"></highlight></codeline>
+<codeline lineno="194"><highlight class="comment"><sp/><sp/><sp/><sp/>std::ESAM::BinaryApplication<sp/>application(&quot;/bin/test.o&quot;,<sp/>0,<sp/>0,<sp/>4);</highlight></codeline>
+<codeline lineno="195"><highlight class="comment"><sp/><sp/><sp/><sp/>application.setSource(&quot;/home/test.esa&quot;);</highlight></codeline>
+<codeline lineno="196"><highlight class="comment"><sp/><sp/><sp/><sp/>application.emitSymbol(application.builder.rodata,<sp/>data,<sp/>&quot;myString&quot;);</highlight></codeline>
+<codeline lineno="197"><highlight class="comment"><sp/><sp/><sp/><sp/>application.emitSymbol(application.builder.rodata,<sp/>data2,<sp/>&quot;fmtString&quot;);</highlight></codeline>
+<codeline lineno="198"><highlight class="comment"><sp/><sp/><sp/><sp/>application.emitSymbol(application.builder.text,<sp/>program,<sp/>&quot;_ZfooIi&quot;);</highlight></codeline>
+<codeline lineno="199"><highlight class="comment"><sp/><sp/><sp/><sp/>application.emitSymbol(application.builder.text,<sp/>program2,<sp/>&quot;_ZfffIi&quot;);</highlight></codeline>
+<codeline lineno="200"><highlight class="comment"><sp/><sp/><sp/><sp/>application.save();</highlight></codeline>
+<codeline lineno="201"><highlight class="comment"><sp/><sp/><sp/><sp/>application.close();</highlight></codeline>
+<codeline lineno="202"><highlight class="comment"></highlight></codeline>
+<codeline lineno="203"><highlight class="comment"><sp/><sp/><sp/><sp/>std::ESAM::BinaryApplication<sp/>application2(&quot;/bin/test2.o&quot;,<sp/>0,<sp/>0,<sp/>4);</highlight></codeline>
+<codeline lineno="204"><highlight class="comment"><sp/><sp/><sp/><sp/>application2.setSource(&quot;/home/test.esa&quot;);</highlight></codeline>
+<codeline lineno="205"><highlight class="comment"><sp/><sp/><sp/><sp/>application2.emitSymbol(application2.builder.rodata,<sp/>data,<sp/>&quot;myString&quot;);</highlight></codeline>
+<codeline lineno="206"><highlight class="comment"><sp/><sp/><sp/><sp/>application2.emitSymbol(application2.builder.rodata,<sp/>data2,<sp/>&quot;fmtString&quot;);</highlight></codeline>
+<codeline lineno="207"><highlight class="comment"><sp/><sp/><sp/><sp/>application2.emitSymbol(application2.builder.text,<sp/>program,<sp/>&quot;_ZfooIi&quot;);</highlight></codeline>
+<codeline lineno="208"><highlight class="comment"><sp/><sp/><sp/><sp/>application2.emitSymbol(application2.builder.text,<sp/>program2,<sp/>&quot;_ZfffIi&quot;);</highlight></codeline>
+<codeline lineno="209"><highlight class="comment"><sp/><sp/><sp/><sp/>application2.appendSymbols(1);</highlight></codeline>
+<codeline lineno="210"><highlight class="comment"><sp/><sp/><sp/><sp/>application2.emitSymbol(application2.builder.text,<sp/>program2,<sp/>&quot;_ZfofIi&quot;);</highlight></codeline>
+<codeline lineno="211"><highlight class="comment"><sp/><sp/><sp/><sp/>application2.save();</highlight></codeline>
+<codeline lineno="212"><highlight class="comment"><sp/><sp/><sp/><sp/>application2.close();</highlight></codeline>
+<codeline lineno="213"><highlight class="comment"></highlight></codeline>
+<codeline lineno="214"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/Applications/Smile.cpp"/>
+  </compounddef>
+</doxygen>

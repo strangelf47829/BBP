@@ -25,6 +25,10 @@ LPPDIR= $(SOURCEDIR)/LPP
 LPPINSTALLDIR= $(TOPDIR)/build/bin/
 LPP_FLAGS= $(INT_FLAGS)
 
+BUFFERSDIR= $(SOURCEDIR)/Buffers
+BUFFERSINSTALLDIR= $(TOPDIR)/build/bin/
+BUFFERS_FLAGS= $(INT_FLAGS)
+
 BBPDIR= $(SOURCEDIR)/src
 BBPINSTALLDIR= $(TOPDIR)/build/bin/
 
@@ -43,38 +47,43 @@ EXT_FLAGS=
 MODULE=
 LIB=
 
-LIBS= lib/libELF.a lib/libLPP.a lib/libLexer.a lib/liblua.a lib/libBBPRing0.a lib/libBBPRing0libs.a
+LIBS= lib/libELF.a lib/libLPP.a lib/libLexer.a lib/liblua.a lib/libBBPRing0.a lib/libBBPRing0libs.a lib/libBuffers.a
 
-all: LUA ELF LEXER LPP RING0
+FORCE:
 
 %.a: MODULE = $(basename $(subst lib/lib,,$@))
 %.a: CAPS = $(shell echo $(MODULE) | tr a-z A-Z)
-%.a:
+%.a: FORCE
 	@echo === Compiling $(MODULE) $(CAPS) for $(PLAT) ===
 	@cd $($(CAPS)DIR); make $(PLAT) --no-print-directory "EXT_CXFLAGS= $($(CAPS)_FLAGS)";
 	@cp $($(CAPS)INSTALLDIR)/lib$(MODULE).a lib/lib$(MODULE).a
 	@echo === Module $(CAPS) COMPILATION COMPLETED. ===
 
-BUILD: $(LIBS)
-	$(file > $(PLAT).bin,Compiled at $(shell date))
 
-%.bin:
+BUILD:
+	@make $(LIBS)
+	$(file > $(PLAT).log,Compiled at $(shell date))
+
+.PRECIOUS: %.log
+%.log:
 	@make --no-print-directory clean_all;
-	make BUILD "PLAT= $(basename $@)"
-
-%.plat: %.bin
 	
 
+%.plat: %.log
+	make BUILD "PLAT= $(basename $@)"
 
+clean:
+	@echo === Cleaning ===
+	$(file > dummy.log,dummy)
+	@rm -f $(LIBS) *.log
 
-clean_all:
+clean_all: clean
 	@echo === Cleaning all ===
 	@cd $(LUADIR); make clean
 	@cd $(BBPDIR); make clean
 	@cd $(ELFDIR); make clean
 	@cd $(LEXERDIR); make clean
-	$(file > dummy.bin,dummy)
-	@rm -f $(LIBS) *.bin
+	@cd $(LPPDIR); make clean
 
 
-.SECONDARY: $(PLAT).bin
+.SECONDARY: $(PLAT).log

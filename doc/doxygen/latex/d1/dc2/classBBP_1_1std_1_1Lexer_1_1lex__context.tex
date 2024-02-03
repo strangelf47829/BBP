@@ -1,0 +1,1815 @@
+\hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context}{}\doxysection{B\+BP\+::std\+::Lexer\+::lex\+\_\+context Class Reference}
+\label{classBBP_1_1std_1_1Lexer_1_1lex__context}\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+
+
+{\ttfamily \#include $<$Lex.\+h$>$}
+
+
+
+Collaboration diagram for B\+BP\+::std\+::Lexer\+::lex\+\_\+context\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d5b/classBBP_1_1std_1_1Lexer_1_1lex__context__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_aaa63103687431a43e23c35cfed011411}{lex\+\_\+context}} ()
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a4395935c27b686c8c04bd1234f595685}{translate\+Unit}} (\mbox{\hyperlink{classBBP_1_1std_1_1PATH}{std\+::\+P\+A\+TH}} \&)
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5cd38f62146186672890a2a20e8e4fee}{parse\+File}} ()
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_aec4c5d7614d9bdcd3575f4d0c9b52312}{parse\+File}} (\mbox{\hyperlink{classBBP_1_1std_1_1PATH}{std\+::\+P\+A\+TH}} \&)
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a9ea6297d4895c1023d5c85e2ad6b80b0}{execute\+Keyword\+Action}} (\mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{lex\+\_\+keywordhandle}}, \mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__keyword}{lex\+\_\+keyword}} $\ast$\&)
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a8a9bd06e1b0bbcf991fb6fce2470c4f7}{execute\+Special\+Function}} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} a, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} \mbox{\hyperlink{MINGW64_2Graphics_8cpp_a148e3876077787926724625411d6e7a9}{b}})
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}} \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a2133be7be7c93fd9e9d60c2125c970ae}{on\+Unkown}} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{index\+\_\+t}}, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{index\+\_\+t}})
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}} \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a2c27a853ee1c8b49893c74927c4e98bc}{on\+Numerical\+Literal}} (\mbox{\hyperlink{unionBBP_1_1std_1_1Lexer_1_1numerical__t}{numerical\+\_\+t}} numerical, bool is\+Float)
+\item 
+bool \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ab10154f72fb28be7553637f79d6adc40}{is\+Whitespace}} (char)
+\item 
+bool \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a4bf2b10c8db466d9a88fc2b42e28ab7e}{is\+New\+Line}} (char)
+\item 
+char \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad7bad9296f4dffdd28dfe8d54be57886}{is\+Binary\+Numeral}} (char)
+\item 
+char \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a06aa3edce2c709be4a30342a74a53b66}{is\+Octal\+Numeral}} (char)
+\item 
+char \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a538f7eb0cab3e11a435775eb587ba471}{is\+Decimal\+Numeral}} (char)
+\item 
+char \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a16e4e121c7507615c798a72ba0dcbd4a}{is\+Hexadecimal\+Numeral}} (char)
+\item 
+char \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a9d2106c7a808fe48c767b50d58b10169}{is\+Numerical\+Base}} (\mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std\+::string\+\_\+element}}, \mbox{\hyperlink{namespaceBBP_1_1std_a4926ba934876e4a1028b9abb47edbc56}{std\+::byte}} \&)
+\item 
+bool \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_aab7ac89d9a0fbcf5298392da3c28be1e}{try\+Parse\+Numerical}} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} from, \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} to, bool \&is\+Float, float \&fresult, int \&iresult)
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a40706684fe9f6dc38f62865da75793ca}{move\+To\+End\+Of\+Last\+Word}} (bool stop\+At\+New\+Line)
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a341d64a1a8633b5c24b5eb698c183f19}{move\+To\+Start\+Of\+Last\+Word}} (bool stop\+At\+New\+Line)
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_af2c3a9213cc6e7b66573f7ca083ddae7}{move\+To\+End\+Of\+This\+Word}} (bool stop\+At\+New\+Line)
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a8f4659d1fbb31d488f7c5b0300741485}{move\+To\+Start\+Of\+This\+Word}} (bool stop\+At\+New\+Line)
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a1489abe65153ed9795d26f3cce61f48e}{move\+To\+End\+Of\+Next\+Word}} (bool stop\+At\+New\+Line)
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a57b4ede056112f658312ac6de5b1a183}{move\+To\+Start\+Of\+Next\+Word}} (bool stop\+At\+New\+Line)
+\item 
+bool \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a280648bcad760d6d31da9c37b99e3a02}{move\+To\+And\+Hash\+This\+Word}} (\mbox{\hyperlink{namespaceBBP_1_1std_ad29f433a1c033a551d50291e7d3f50b4}{std\+::hash\+\_\+t}} \&, char)
+\item 
+bool \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_aaad37e5fb34b89c653ea90a4f8132cae}{move\+To\+And\+Hash\+Next\+Word}} (\mbox{\hyperlink{namespaceBBP_1_1std_ad29f433a1c033a551d50291e7d3f50b4}{std\+::hash\+\_\+t}} \&, char)
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad8f2919d448f1c9b319938ec88fb0502}{calculate\+Debug\+Position}} ()
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{lex\+\_\+keywordhandle}} \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a8249caecef89f688455c2a73135b0fc7}{move\+To\+Next\+Keyword}} ()
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a11c0c6d9eebae9ff33957ed4be00ff1b}{reset\+Info}} (\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo}{lex\+\_\+debug\+Info}} \&info)
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a4680b8ff161430dbdab858d709b24a25}{Log}} (\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo}{lex\+\_\+debug\+Info}} \&info)
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a34c965ceea81fc0436d74c60a68613c7}{Log}} (\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}} msg)
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a70793d13e012c5e84cdbf082d57a56c6}{Log}} (\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}} from, \mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}} msg, \mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}} name)
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ac7c94506bed90fd42cf22a9bda6225f5}{Log\+Error}} (\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}} from, \mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}} msg, \mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}} name)
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a1fe735040a4c2154929d06b91bb27f91}{Log\+Note}} (\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}} from, \mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}} msg, \mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}} name)
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a19b5de0ff0ebcf35c680702557c42f28}{Log\+Warning}} (\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}} from, \mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}} msg, \mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}} name)
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a13c9765604b0ce2bc27f0aa9971f12d5}{Log\+Abort}} (\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}} from, \mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}} msg, \mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}} name)
+\item 
+void \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a1916906e1493d4fc2ca87610d02dcf7e}{Highlight}} (\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo}{lex\+\_\+debug\+Info}} info)
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_aa628d4212b7e43b58f01273f47ecf4c6}{std\+::static\+\_\+string}}$<$ 128 $>$ \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a18f7530891a334f547429090620161a0}{active\+File}}
+\item 
+\mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{std\+::\+P\+A\+GE}}$<$ \mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{string\+\_\+element}} $>$ \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a142c7a1b792ab62212927587a0aa8f87}{data}}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std\+::size\+\_\+t}} \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5cf8e1ba39f2a942fb7c421e16e2d110}{data\+Size}}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{at\+Position}}
+\item 
+\mbox{\hyperlink{structBBP_1_1std_1_1STATIC__PAGE}{std\+::\+S\+T\+A\+T\+I\+C\+\_\+\+P\+A\+GE}}$<$ \mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__keyword}{lex\+\_\+keyword}}, 256 $>$ \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5bbad6ef5e6ad4de5b9ba16ff72483ba}{keywords}}
+\item 
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{std\+::\+Stack}}$<$ \mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__keyword}{lex\+\_\+keyword}} $>$ \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae44b9b00f1ba64a04618d9cbb6358994}{keyword\+Stack}}
+\item 
+bool \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_af83e069d11599f29a9e510d8a350c71e}{inhibit\+Special\+Functions}}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{index\+\_\+t}} \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a2095e84753a94f2db22e3d48fc4d2f1c}{last\+White\+Space}}
+\item 
+char \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a07495ee1f7d2448f66cd3eab88fb2678}{comment\+Depth}}
+\item 
+char \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ac2d532a2467ca11090dd26491a44ffe7}{literal\+Depth}}
+\item 
+\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo}{lex\+\_\+debug\+Info}} \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}{debug\+Information}}
+\item 
+bool \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a121d2d089bf62f4d0e6343e0198cea4c}{abort}}
+\item 
+bool \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a42c97b027ed4056cf26297610cf45a49}{illformed}}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_aa628d4212b7e43b58f01273f47ecf4c6}{std\+::static\+\_\+string}}$<$ 1024 $>$ \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a58b880e5e1c0749387ab698d8522c677}{usrpath\+Page}}
+\item 
+\mbox{\hyperlink{namespaceBBP_1_1std_aa628d4212b7e43b58f01273f47ecf4c6}{std\+::static\+\_\+string}}$<$ 1024 $>$ \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a6e1c536f660c456acaf5a245b61068e1}{syspath\+Page}}
+\item 
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{std\+::\+Stack}}$<$ \mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std\+::string\+\_\+element}} $>$ \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5c8aa3675b2e2225645701364d075e3f}{usrpaths}}
+\item 
+\mbox{\hyperlink{classBBP_1_1std_1_1Stack}{std\+::\+Stack}}$<$ \mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std\+::string\+\_\+element}} $>$ \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a33f165b5bd78c9ae8188f49afe99307c}{syspaths}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 98 of file Lex.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_aaa63103687431a43e23c35cfed011411}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_aaa63103687431a43e23c35cfed011411}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!lex\_context@{lex\_context}}
+\index{lex\_context@{lex\_context}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{lex\_context()}{lex\_context()}}
+{\footnotesize\ttfamily B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::lex\+\_\+context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 973 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{974     : \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae44b9b00f1ba64a04618d9cbb6358994}{keywordStack}}(\&\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5bbad6ef5e6ad4de5b9ba16ff72483ba}{keywords}}, 64),}
+\DoxyCodeLine{975     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5c8aa3675b2e2225645701364d075e3f}{usrpaths}}(\&\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a58b880e5e1c0749387ab698d8522c677}{usrpathPage}}, \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a58b880e5e1c0749387ab698d8522c677}{usrpathPage}}.dataSize),}
+\DoxyCodeLine{976     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a33f165b5bd78c9ae8188f49afe99307c}{syspaths}}(\&\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a6e1c536f660c456acaf5a245b61068e1}{syspathPage}}, \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a6e1c536f660c456acaf5a245b61068e1}{syspathPage}}.dataSize),}
+\DoxyCodeLine{977     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a121d2d089bf62f4d0e6343e0198cea4c}{abort}}(\textcolor{keyword}{false}),}
+\DoxyCodeLine{978     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}}(0),}
+\DoxyCodeLine{979     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a07495ee1f7d2448f66cd3eab88fb2678}{commentDepth}}(0),}
+\DoxyCodeLine{980     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ac2d532a2467ca11090dd26491a44ffe7}{literalDepth}}(0),}
+\DoxyCodeLine{981     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5cf8e1ba39f2a942fb7c421e16e2d110}{dataSize}}(0),}
+\DoxyCodeLine{982     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a2095e84753a94f2db22e3d48fc4d2f1c}{lastWhiteSpace}}(0),}
+\DoxyCodeLine{983     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_af83e069d11599f29a9e510d8a350c71e}{inhibitSpecialFunctions}}(\textcolor{keyword}{false})}
+\DoxyCodeLine{984 \{}
+\DoxyCodeLine{985 }
+\DoxyCodeLine{986 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_ad8f2919d448f1c9b319938ec88fb0502}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_ad8f2919d448f1c9b319938ec88fb0502}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!calculateDebugPosition@{calculateDebugPosition}}
+\index{calculateDebugPosition@{calculateDebugPosition}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{calculateDebugPosition()}{calculateDebugPosition()}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::calculate\+Debug\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 677 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{678 \{}
+\DoxyCodeLine{679     \textcolor{comment}{// TODO: You are telling me that this is the most inefficient part of the whole program? O(N\string^2) worst case? Really?}}
+\DoxyCodeLine{680 }
+\DoxyCodeLine{681     \textcolor{comment}{// To store position}}
+\DoxyCodeLine{682     \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} pos = 0;}
+\DoxyCodeLine{683 }
+\DoxyCodeLine{684     \textcolor{comment}{// Reset debug info}}
+\DoxyCodeLine{685     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}{debugInformation}}.\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo_a4ab78e38d6907502a55caa55378ea820}{coloumn}} = 0;}
+\DoxyCodeLine{686     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}{debugInformation}}.\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo_abdbf2b604c4a1538ccd682e8cd3efe12}{line}} = 1;}
+\DoxyCodeLine{687 }
+\DoxyCodeLine{688     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a18f7530891a334f547429090620161a0}{activeFile}}.data[0] == \textcolor{charliteral}{'\(\backslash\)0'})}
+\DoxyCodeLine{689         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{690 }
+\DoxyCodeLine{691     \textcolor{comment}{// Catch up to where we are, counting the newlines and stuff}}
+\DoxyCodeLine{692     \textcolor{keywordflow}{while} (pos < \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}} \&\& pos < \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5cf8e1ba39f2a942fb7c421e16e2d110}{dataSize}})}
+\DoxyCodeLine{693     \{}
+\DoxyCodeLine{694         \textcolor{keywordtype}{char} c = \mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\_\_UNSAFE\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{read}})(\&\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a142c7a1b792ab62212927587a0aa8f87}{data}}, pos++);}
+\DoxyCodeLine{695         }
+\DoxyCodeLine{696         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a4bf2b10c8db466d9a88fc2b42e28ab7e}{isNewLine}}(c))}
+\DoxyCodeLine{697         \{}
+\DoxyCodeLine{698             \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}{debugInformation}}.\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo_abdbf2b604c4a1538ccd682e8cd3efe12}{line}}++;}
+\DoxyCodeLine{699             \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}{debugInformation}}.\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo_a4ab78e38d6907502a55caa55378ea820}{coloumn}} = 0;}
+\DoxyCodeLine{700         \}}
+\DoxyCodeLine{701         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{702         \{}
+\DoxyCodeLine{703             \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}{debugInformation}}.\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo_a4ab78e38d6907502a55caa55378ea820}{coloumn}}++;}
+\DoxyCodeLine{704         \}}
+\DoxyCodeLine{705 }
+\DoxyCodeLine{706     \}}
+\DoxyCodeLine{707 }
+\DoxyCodeLine{708 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_ad8f2919d448f1c9b319938ec88fb0502_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a9ea6297d4895c1023d5c85e2ad6b80b0}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a9ea6297d4895c1023d5c85e2ad6b80b0}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!executeKeywordAction@{executeKeywordAction}}
+\index{executeKeywordAction@{executeKeywordAction}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{executeKeywordAction()}{executeKeywordAction()}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::execute\+Keyword\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{Lexer\+::lex\+\_\+keywordhandle}}}]{handle,  }\item[{\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__keyword}{Lexer\+::lex\+\_\+keyword}} $\ast$\&}]{keyword }\end{DoxyParamCaption})}
+
+
+
+Definition at line 58 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{59 \{}
+\DoxyCodeLine{60     \textcolor{comment}{// If keyword is nullptr, do nothing}}
+\DoxyCodeLine{61     \textcolor{keywordflow}{if} (keyword == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{62         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64     \textcolor{comment}{// Otherwise, if action exists, execute it.}}
+\DoxyCodeLine{65     \textcolor{keywordflow}{if} (keyword-\/>action)}
+\DoxyCodeLine{66     \{}
+\DoxyCodeLine{67         \textcolor{comment}{// Call action}}
+\DoxyCodeLine{68         \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}{debugInformation}}.\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo_a369f061c2434314cdda8ac2e266cc3bd}{msg}} = keyword-\/>action(\textcolor{keyword}{this}, \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}} -\/ keyword-\/>length, handle);}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70         \textcolor{comment}{// if msg exists, log error}}
+\DoxyCodeLine{71         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}{debugInformation}}.\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo_a369f061c2434314cdda8ac2e266cc3bd}{msg}})}
+\DoxyCodeLine{72         \{}
+\DoxyCodeLine{73             \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a4680b8ff161430dbdab858d709b24a25}{Log}}(\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}{debugInformation}});}
+\DoxyCodeLine{74             \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a11c0c6d9eebae9ff33957ed4be00ff1b}{resetInfo}}(\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}{debugInformation}});}
+\DoxyCodeLine{75         \}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77     \}}
+\DoxyCodeLine{78 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a8a9bd06e1b0bbcf991fb6fce2470c4f7}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a8a9bd06e1b0bbcf991fb6fce2470c4f7}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!executeSpecialFunction@{executeSpecialFunction}}
+\index{executeSpecialFunction@{executeSpecialFunction}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{executeSpecialFunction()}{executeSpecialFunction()}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::execute\+Special\+Function (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}}}]{a,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}}}]{b }\end{DoxyParamCaption})}
+
+
+
+Definition at line 213 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{214 \{}
+\DoxyCodeLine{215     \textcolor{comment}{// If special functions are inhibited, do nothing}}
+\DoxyCodeLine{216     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_af83e069d11599f29a9e510d8a350c71e}{inhibitSpecialFunctions}})}
+\DoxyCodeLine{217         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{218 }
+\DoxyCodeLine{219     \textcolor{comment}{// Check if it is number}}
+\DoxyCodeLine{220     \{}
+\DoxyCodeLine{221         \textcolor{comment}{// Check for number}}
+\DoxyCodeLine{222         \textcolor{keywordtype}{bool} isFloat = \textcolor{keyword}{false};}
+\DoxyCodeLine{223         \textcolor{keywordtype}{int} iresult = 0;}
+\DoxyCodeLine{224         \textcolor{keywordtype}{float} fresult = 0;}
+\DoxyCodeLine{225 }
+\DoxyCodeLine{226         \textcolor{comment}{// Try to parse}}
+\DoxyCodeLine{227         \textcolor{keywordtype}{bool} isNumber = \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_aab7ac89d9a0fbcf5298392da3c28be1e}{tryParseNumerical}}(from, \mbox{\hyperlink{namespaceBBP_1_1Locale_1_1Japanese_a02c028a34a00f11967f61a67255e0e6ea11fa7c1430d2163f97611f3b123269d4}{to}}, isFloat, fresult, iresult);}
+\DoxyCodeLine{228 }
+\DoxyCodeLine{229         \textcolor{comment}{// If a number, run and debug.}}
+\DoxyCodeLine{230         \textcolor{keywordflow}{if} (isNumber)}
+\DoxyCodeLine{231         \{}
+\DoxyCodeLine{232             \textcolor{comment}{// Build numerical}}
+\DoxyCodeLine{233             numerical\_t number;}
+\DoxyCodeLine{234 }
+\DoxyCodeLine{235             \textcolor{keywordflow}{if} (isFloat)}
+\DoxyCodeLine{236                 number.f = fresult;}
+\DoxyCodeLine{237             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{238                 number.i = iresult;}
+\DoxyCodeLine{239 }
+\DoxyCodeLine{240             \textcolor{comment}{// Call action}}
+\DoxyCodeLine{241             \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}{debugInformation}}.\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo_a369f061c2434314cdda8ac2e266cc3bd}{msg}} = \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a2c27a853ee1c8b49893c74927c4e98bc}{onNumericalLiteral}}(number, isFloat);}
+\DoxyCodeLine{242 }
+\DoxyCodeLine{243             \textcolor{comment}{// if msg exists, log error}}
+\DoxyCodeLine{244             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}{debugInformation}}.\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo_a369f061c2434314cdda8ac2e266cc3bd}{msg}})}
+\DoxyCodeLine{245             \{}
+\DoxyCodeLine{246                 \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a4680b8ff161430dbdab858d709b24a25}{Log}}(\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}{debugInformation}});}
+\DoxyCodeLine{247                 \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a11c0c6d9eebae9ff33957ed4be00ff1b}{resetInfo}}(\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}{debugInformation}});}
+\DoxyCodeLine{248             \}}
+\DoxyCodeLine{249             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{250         \}}
+\DoxyCodeLine{251         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (isNumber)}
+\DoxyCodeLine{252         \{}
+\DoxyCodeLine{253             \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a4680b8ff161430dbdab858d709b24a25}{Log}}(\textcolor{stringliteral}{"ELSA"}, \textcolor{stringliteral}{"WNumerical found, but no action is defined."}, \textcolor{stringliteral}{"-\/Wmissing-\/function"});}
+\DoxyCodeLine{254             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{255         \}}
+\DoxyCodeLine{256     \}}
+\DoxyCodeLine{257 }
+\DoxyCodeLine{258     \textcolor{comment}{// Nothing found, call unkown}}
+\DoxyCodeLine{259     \textcolor{comment}{// Call action}}
+\DoxyCodeLine{260     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}{debugInformation}}.\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo_a369f061c2434314cdda8ac2e266cc3bd}{msg}} = \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a2133be7be7c93fd9e9d60c2125c970ae}{onUnkown}}(\mbox{\hyperlink{namespaceBBP_1_1Locale_1_1Japanese_a02c028a34a00f11967f61a67255e0e6ea11fa7c1430d2163f97611f3b123269d4}{to}}, from);}
+\DoxyCodeLine{261 }
+\DoxyCodeLine{262     \textcolor{comment}{// if msg exists, log error}}
+\DoxyCodeLine{263     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}{debugInformation}}.\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo_a369f061c2434314cdda8ac2e266cc3bd}{msg}})}
+\DoxyCodeLine{264     \{}
+\DoxyCodeLine{265         \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a4680b8ff161430dbdab858d709b24a25}{Log}}(\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}{debugInformation}});}
+\DoxyCodeLine{266         \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a11c0c6d9eebae9ff33957ed4be00ff1b}{resetInfo}}(\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}{debugInformation}});}
+\DoxyCodeLine{267     \}}
+\DoxyCodeLine{268     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{269 }
+\DoxyCodeLine{270     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a4680b8ff161430dbdab858d709b24a25}{Log}}(\textcolor{stringliteral}{"ELSA"}, \textcolor{stringliteral}{"WUnkown sequence found, but no action is defined."}, \textcolor{stringliteral}{"-\/Wmissing-\/function"});}
+\DoxyCodeLine{271 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a1916906e1493d4fc2ca87610d02dcf7e}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a1916906e1493d4fc2ca87610d02dcf7e}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!Highlight@{Highlight}}
+\index{Highlight@{Highlight}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{Highlight()}{Highlight()}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::\+Highlight (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo}{lex\+\_\+debug\+Info}}}]{info }\end{DoxyParamCaption})}
+
+
+
+Definition at line 883 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{884 \{}
+\DoxyCodeLine{885 }
+\DoxyCodeLine{886     \textcolor{comment}{// This pointer traverses the highlighted text}}
+\DoxyCodeLine{887     \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} highlitingText = info.highlight;}
+\DoxyCodeLine{888 }
+\DoxyCodeLine{889     \textcolor{keywordtype}{bool} isSingleLine = \textcolor{keyword}{true};}
+\DoxyCodeLine{890     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} length = 0;}
+\DoxyCodeLine{891     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} linelength = 0;}
+\DoxyCodeLine{892     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} runningLength = 0;}
+\DoxyCodeLine{893 }
+\DoxyCodeLine{894     \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} line = info.line;}
+\DoxyCodeLine{895     \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} character = info.character;}
+\DoxyCodeLine{896     \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} coloumn = info.coloumn;}
+\DoxyCodeLine{897 }
+\DoxyCodeLine{898     \textcolor{keywordtype}{char} c = 0;}
+\DoxyCodeLine{899 }
+\DoxyCodeLine{900     \textcolor{comment}{// Continue highlighting until end of string}}
+\DoxyCodeLine{901     \textcolor{keywordflow}{while} ((\mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}}(\&this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a142c7a1b792ab62212927587a0aa8f87}{data}}, highlitingText) \&\& !info.highlightLength) || (info.highlightLength \&\& runningLength < info.highlightLength))}
+\DoxyCodeLine{902     \{}
+\DoxyCodeLine{903         \textcolor{comment}{// Print location information}}
+\DoxyCodeLine{904         \textcolor{keywordflow}{if} (info.showWhere)}
+\DoxyCodeLine{905         \{}
+\DoxyCodeLine{906             \textcolor{keywordflow}{if} (info.showLinesAndColoumns)}
+\DoxyCodeLine{907                 \mbox{\hyperlink{namespaceBBP_1_1std_a6a109a05fa6ce27ce54f04a3d7f699d3}{std::putf}}(\mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}}, \textcolor{stringliteral}{"\%5u |\(\backslash\)t\(\backslash\)e[0;96m"}, line);}
+\DoxyCodeLine{908             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{909                 \mbox{\hyperlink{namespaceBBP_1_1std_a6a109a05fa6ce27ce54f04a3d7f699d3}{std::putf}}(\mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}}, \textcolor{stringliteral}{"\%4u\string~ |\(\backslash\)t\(\backslash\)e[0;96m"}, character);}
+\DoxyCodeLine{910         \}}
+\DoxyCodeLine{911         \textcolor{comment}{// Continue highlighting until end of string}}
+\DoxyCodeLine{912         \textcolor{keywordflow}{while} ((!info.highlightLength) || (info.highlightLength \&\& runningLength < info.highlightLength))}
+\DoxyCodeLine{913         \{}
+\DoxyCodeLine{914 }
+\DoxyCodeLine{915             \textcolor{comment}{// Get character to be highlighted}}
+\DoxyCodeLine{916             c = \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}}(\&this-\/>\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a142c7a1b792ab62212927587a0aa8f87}{data}}, highlitingText++);}
+\DoxyCodeLine{917 }
+\DoxyCodeLine{918             \textcolor{comment}{// If character is null, break}}
+\DoxyCodeLine{919             \textcolor{keywordflow}{if} (c == 0)}
+\DoxyCodeLine{920                 \textcolor{keywordflow}{goto} end; \textcolor{comment}{// break out of nested whiles}}
+\DoxyCodeLine{921 }
+\DoxyCodeLine{922             character++;}
+\DoxyCodeLine{923             coloumn++;}
+\DoxyCodeLine{924             linelength++;}
+\DoxyCodeLine{925             runningLength++;}
+\DoxyCodeLine{926 }
+\DoxyCodeLine{927             \textcolor{comment}{// if character is newline, continue}}
+\DoxyCodeLine{928             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a4bf2b10c8db466d9a88fc2b42e28ab7e}{isNewLine}}(c))}
+\DoxyCodeLine{929             \{}
+\DoxyCodeLine{930                 \textcolor{comment}{// If c is not '\(\backslash\)n', just continue}}
+\DoxyCodeLine{931                 \textcolor{keywordflow}{if} (c != \textcolor{charliteral}{'\(\backslash\)n'})}
+\DoxyCodeLine{932                     \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{933                 \textcolor{comment}{// Else, increment line and coloumn info}}
+\DoxyCodeLine{934                 line += 1;}
+\DoxyCodeLine{935                 character = 0;}
+\DoxyCodeLine{936                 \mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}} << \textcolor{stringliteral}{"\(\backslash\)e[0;37m"} <<= \mbox{\hyperlink{namespaceBBP_1_1std_a92a50044907ba5f40a39efe0bce958d6}{endl}};}
+\DoxyCodeLine{937                 isSingleLine = \textcolor{keyword}{false};}
+\DoxyCodeLine{938                 length = (length < linelength) ? linelength -\/ 1 : length;}
+\DoxyCodeLine{939                 linelength = 0;}
+\DoxyCodeLine{940                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{941             \}}
+\DoxyCodeLine{942 }
+\DoxyCodeLine{943             \textcolor{comment}{// Print character to screen}}
+\DoxyCodeLine{944             \mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}} << c;}
+\DoxyCodeLine{945             length = (length < linelength) ? linelength : length;}
+\DoxyCodeLine{946 }
+\DoxyCodeLine{947         \}}
+\DoxyCodeLine{948 }
+\DoxyCodeLine{949     \}}
+\DoxyCodeLine{950 }
+\DoxyCodeLine{951     end:}
+\DoxyCodeLine{952 }
+\DoxyCodeLine{953     \textcolor{comment}{// Emit last new line}}
+\DoxyCodeLine{954     \textcolor{keywordflow}{if} (c != \textcolor{charliteral}{'\(\backslash\)n'})}
+\DoxyCodeLine{955         \mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}} << \textcolor{stringliteral}{"\(\backslash\)e[0;37m\(\backslash\)n      | \(\backslash\)e[0;96m"};}
+\DoxyCodeLine{956     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (runningLength > 1)}
+\DoxyCodeLine{957         \mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}} << \textcolor{stringliteral}{"\(\backslash\)e[0;37m      | \(\backslash\)e[0;96m"};}
+\DoxyCodeLine{958 }
+\DoxyCodeLine{959     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} index = 0; index < length; index++)}
+\DoxyCodeLine{960     \{}
+\DoxyCodeLine{961         \textcolor{keywordflow}{if} (isSingleLine)}
+\DoxyCodeLine{962             \mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}} << \textcolor{stringliteral}{"\string^"};}
+\DoxyCodeLine{963         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{964             \mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}} << \textcolor{stringliteral}{"\string~"};}
+\DoxyCodeLine{965     \}}
+\DoxyCodeLine{966     \mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}} << \textcolor{stringliteral}{"\(\backslash\)e[0;37m"} <<= \mbox{\hyperlink{namespaceBBP_1_1std_a92a50044907ba5f40a39efe0bce958d6}{std::endl}};}
+\DoxyCodeLine{967     }
+\DoxyCodeLine{968 }
+\DoxyCodeLine{969 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_a1916906e1493d4fc2ca87610d02dcf7e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_ad7bad9296f4dffdd28dfe8d54be57886}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_ad7bad9296f4dffdd28dfe8d54be57886}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!isBinaryNumeral@{isBinaryNumeral}}
+\index{isBinaryNumeral@{isBinaryNumeral}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{isBinaryNumeral()}{isBinaryNumeral()}}
+{\footnotesize\ttfamily char B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::is\+Binary\+Numeral (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 331 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{332 \{}
+\DoxyCodeLine{333     \textcolor{keywordflow}{switch} (c)}
+\DoxyCodeLine{334     \{}
+\DoxyCodeLine{335     \textcolor{keywordflow}{case} \textcolor{charliteral}{'0'}:}
+\DoxyCodeLine{336         \textcolor{keywordflow}{return} 10;}
+\DoxyCodeLine{337     \textcolor{keywordflow}{case} \textcolor{charliteral}{'1'}:}
+\DoxyCodeLine{338         \textcolor{keywordflow}{return} 11;}
+\DoxyCodeLine{339     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{340         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{341     \}}
+\DoxyCodeLine{342 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a538f7eb0cab3e11a435775eb587ba471}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a538f7eb0cab3e11a435775eb587ba471}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!isDecimalNumeral@{isDecimalNumeral}}
+\index{isDecimalNumeral@{isDecimalNumeral}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{isDecimalNumeral()}{isDecimalNumeral()}}
+{\footnotesize\ttfamily char B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::is\+Decimal\+Numeral (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 369 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{370 \{}
+\DoxyCodeLine{371     \textcolor{keywordflow}{switch} (c)}
+\DoxyCodeLine{372     \{}
+\DoxyCodeLine{373     \textcolor{keywordflow}{case} \textcolor{charliteral}{'0'}:}
+\DoxyCodeLine{374         \textcolor{keywordflow}{return} 10;}
+\DoxyCodeLine{375     \textcolor{keywordflow}{case} \textcolor{charliteral}{'1'}:}
+\DoxyCodeLine{376         \textcolor{keywordflow}{return} 11;}
+\DoxyCodeLine{377     \textcolor{keywordflow}{case} \textcolor{charliteral}{'2'}:}
+\DoxyCodeLine{378         \textcolor{keywordflow}{return} 12;}
+\DoxyCodeLine{379     \textcolor{keywordflow}{case} \textcolor{charliteral}{'3'}:}
+\DoxyCodeLine{380         \textcolor{keywordflow}{return} 13;}
+\DoxyCodeLine{381     \textcolor{keywordflow}{case} \textcolor{charliteral}{'4'}:}
+\DoxyCodeLine{382         \textcolor{keywordflow}{return} 14;}
+\DoxyCodeLine{383     \textcolor{keywordflow}{case} \textcolor{charliteral}{'5'}:}
+\DoxyCodeLine{384         \textcolor{keywordflow}{return} 15;}
+\DoxyCodeLine{385     \textcolor{keywordflow}{case} \textcolor{charliteral}{'6'}:}
+\DoxyCodeLine{386         \textcolor{keywordflow}{return} 16;}
+\DoxyCodeLine{387     \textcolor{keywordflow}{case} \textcolor{charliteral}{'7'}:}
+\DoxyCodeLine{388         \textcolor{keywordflow}{return} 17;}
+\DoxyCodeLine{389     \textcolor{keywordflow}{case} \textcolor{charliteral}{'8'}:}
+\DoxyCodeLine{390         \textcolor{keywordflow}{return} 18;}
+\DoxyCodeLine{391     \textcolor{keywordflow}{case} \textcolor{charliteral}{'9'}:}
+\DoxyCodeLine{392         \textcolor{keywordflow}{return} 19;}
+\DoxyCodeLine{393     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{394         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{395     \}}
+\DoxyCodeLine{396 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a16e4e121c7507615c798a72ba0dcbd4a}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a16e4e121c7507615c798a72ba0dcbd4a}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!isHexadecimalNumeral@{isHexadecimalNumeral}}
+\index{isHexadecimalNumeral@{isHexadecimalNumeral}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{isHexadecimalNumeral()}{isHexadecimalNumeral()}}
+{\footnotesize\ttfamily char B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::is\+Hexadecimal\+Numeral (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 398 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{399 \{}
+\DoxyCodeLine{400     \textcolor{keywordflow}{switch} (c)}
+\DoxyCodeLine{401     \{}
+\DoxyCodeLine{402     \textcolor{keywordflow}{case} \textcolor{charliteral}{'0'}:}
+\DoxyCodeLine{403         \textcolor{keywordflow}{return} 10;}
+\DoxyCodeLine{404     \textcolor{keywordflow}{case} \textcolor{charliteral}{'1'}:}
+\DoxyCodeLine{405         \textcolor{keywordflow}{return} 11;}
+\DoxyCodeLine{406     \textcolor{keywordflow}{case} \textcolor{charliteral}{'2'}:}
+\DoxyCodeLine{407         \textcolor{keywordflow}{return} 12;}
+\DoxyCodeLine{408     \textcolor{keywordflow}{case} \textcolor{charliteral}{'3'}:}
+\DoxyCodeLine{409         \textcolor{keywordflow}{return} 13;}
+\DoxyCodeLine{410     \textcolor{keywordflow}{case} \textcolor{charliteral}{'4'}:}
+\DoxyCodeLine{411         \textcolor{keywordflow}{return} 14;}
+\DoxyCodeLine{412     \textcolor{keywordflow}{case} \textcolor{charliteral}{'5'}:}
+\DoxyCodeLine{413         \textcolor{keywordflow}{return} 15;}
+\DoxyCodeLine{414     \textcolor{keywordflow}{case} \textcolor{charliteral}{'6'}:}
+\DoxyCodeLine{415         \textcolor{keywordflow}{return} 16;}
+\DoxyCodeLine{416     \textcolor{keywordflow}{case} \textcolor{charliteral}{'7'}:}
+\DoxyCodeLine{417         \textcolor{keywordflow}{return} 17;}
+\DoxyCodeLine{418     \textcolor{keywordflow}{case} \textcolor{charliteral}{'8'}:}
+\DoxyCodeLine{419         \textcolor{keywordflow}{return} 18;}
+\DoxyCodeLine{420     \textcolor{keywordflow}{case} \textcolor{charliteral}{'9'}:}
+\DoxyCodeLine{421         \textcolor{keywordflow}{return} 19;}
+\DoxyCodeLine{422     \textcolor{keywordflow}{case} \textcolor{charliteral}{'A'}:}
+\DoxyCodeLine{423     \textcolor{keywordflow}{case} \textcolor{charliteral}{'a'}:}
+\DoxyCodeLine{424         \textcolor{keywordflow}{return} 20;}
+\DoxyCodeLine{425     \textcolor{keywordflow}{case} \textcolor{charliteral}{'B'}:}
+\DoxyCodeLine{426     \textcolor{keywordflow}{case} \textcolor{charliteral}{'b'}:}
+\DoxyCodeLine{427         \textcolor{keywordflow}{return} 21;}
+\DoxyCodeLine{428     \textcolor{keywordflow}{case} \textcolor{charliteral}{'C'}:}
+\DoxyCodeLine{429     \textcolor{keywordflow}{case} \textcolor{charliteral}{'c'}:}
+\DoxyCodeLine{430         \textcolor{keywordflow}{return} 22;}
+\DoxyCodeLine{431     \textcolor{keywordflow}{case} \textcolor{charliteral}{'D'}:}
+\DoxyCodeLine{432     \textcolor{keywordflow}{case} \textcolor{charliteral}{'d'}:}
+\DoxyCodeLine{433         \textcolor{keywordflow}{return} 23;}
+\DoxyCodeLine{434     \textcolor{keywordflow}{case} \textcolor{charliteral}{'E'}:}
+\DoxyCodeLine{435     \textcolor{keywordflow}{case} \textcolor{charliteral}{'e'}:}
+\DoxyCodeLine{436         \textcolor{keywordflow}{return} 24;}
+\DoxyCodeLine{437     \textcolor{keywordflow}{case} \textcolor{charliteral}{'F'}:}
+\DoxyCodeLine{438     \textcolor{keywordflow}{case} \textcolor{charliteral}{'f'}:}
+\DoxyCodeLine{439         \textcolor{keywordflow}{return} 25;}
+\DoxyCodeLine{440     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{441         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{442     \}}
+\DoxyCodeLine{443 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a4bf2b10c8db466d9a88fc2b42e28ab7e}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a4bf2b10c8db466d9a88fc2b42e28ab7e}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!isNewLine@{isNewLine}}
+\index{isNewLine@{isNewLine}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{isNewLine()}{isNewLine()}}
+{\footnotesize\ttfamily bool B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::is\+New\+Line (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 326 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{327 \{}
+\DoxyCodeLine{328     \textcolor{keywordflow}{return} (c == \textcolor{charliteral}{'\(\backslash\)n'} || c == \textcolor{charliteral}{'\(\backslash\)r'});}
+\DoxyCodeLine{329 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_a4bf2b10c8db466d9a88fc2b42e28ab7e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a9d2106c7a808fe48c767b50d58b10169}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a9d2106c7a808fe48c767b50d58b10169}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!isNumericalBase@{isNumericalBase}}
+\index{isNumericalBase@{isNumericalBase}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{isNumericalBase()}{isNumericalBase()}}
+{\footnotesize\ttfamily char B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::is\+Numerical\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std\+::string\+\_\+element}}}]{c,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_a4926ba934876e4a1028b9abb47edbc56}{std\+::byte}} \&}]{base }\end{DoxyParamCaption})}
+
+
+
+Definition at line 445 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{446 \{}
+\DoxyCodeLine{447     \textcolor{keywordflow}{switch} (c)}
+\DoxyCodeLine{448     \{}
+\DoxyCodeLine{449     \textcolor{keywordflow}{case} \textcolor{charliteral}{'b'}:}
+\DoxyCodeLine{450         base = 2;}
+\DoxyCodeLine{451         \textcolor{keywordflow}{return} 30;}
+\DoxyCodeLine{452     \textcolor{keywordflow}{case} \textcolor{charliteral}{'o'}:}
+\DoxyCodeLine{453         base = 8;}
+\DoxyCodeLine{454         \textcolor{keywordflow}{return} 31;}
+\DoxyCodeLine{455     \textcolor{keywordflow}{case} \textcolor{charliteral}{'f'}:}
+\DoxyCodeLine{456         base = 10;}
+\DoxyCodeLine{457         \textcolor{keywordflow}{return} 32;}
+\DoxyCodeLine{458     \textcolor{keywordflow}{case} \textcolor{charliteral}{'x'}:}
+\DoxyCodeLine{459         base = 16;}
+\DoxyCodeLine{460         \textcolor{keywordflow}{return} 33;}
+\DoxyCodeLine{461     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{462         base = 0;}
+\DoxyCodeLine{463         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{464     \}}
+\DoxyCodeLine{465 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a06aa3edce2c709be4a30342a74a53b66}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a06aa3edce2c709be4a30342a74a53b66}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!isOctalNumeral@{isOctalNumeral}}
+\index{isOctalNumeral@{isOctalNumeral}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{isOctalNumeral()}{isOctalNumeral()}}
+{\footnotesize\ttfamily char B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::is\+Octal\+Numeral (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 344 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{345 \{}
+\DoxyCodeLine{346     \textcolor{keywordflow}{switch} (c)}
+\DoxyCodeLine{347     \{}
+\DoxyCodeLine{348     \textcolor{keywordflow}{case} \textcolor{charliteral}{'0'}:}
+\DoxyCodeLine{349         \textcolor{keywordflow}{return} 10;}
+\DoxyCodeLine{350     \textcolor{keywordflow}{case} \textcolor{charliteral}{'1'}:}
+\DoxyCodeLine{351         \textcolor{keywordflow}{return} 11;}
+\DoxyCodeLine{352     \textcolor{keywordflow}{case} \textcolor{charliteral}{'2'}:}
+\DoxyCodeLine{353         \textcolor{keywordflow}{return} 12;}
+\DoxyCodeLine{354     \textcolor{keywordflow}{case} \textcolor{charliteral}{'3'}:}
+\DoxyCodeLine{355         \textcolor{keywordflow}{return} 13;}
+\DoxyCodeLine{356     \textcolor{keywordflow}{case} \textcolor{charliteral}{'4'}:}
+\DoxyCodeLine{357         \textcolor{keywordflow}{return} 14;}
+\DoxyCodeLine{358     \textcolor{keywordflow}{case} \textcolor{charliteral}{'5'}:}
+\DoxyCodeLine{359         \textcolor{keywordflow}{return} 15;}
+\DoxyCodeLine{360     \textcolor{keywordflow}{case} \textcolor{charliteral}{'6'}:}
+\DoxyCodeLine{361         \textcolor{keywordflow}{return} 16;}
+\DoxyCodeLine{362     \textcolor{keywordflow}{case} \textcolor{charliteral}{'7'}:}
+\DoxyCodeLine{363         \textcolor{keywordflow}{return} 17;}
+\DoxyCodeLine{364     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{365         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{366     \}}
+\DoxyCodeLine{367 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_ab10154f72fb28be7553637f79d6adc40}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_ab10154f72fb28be7553637f79d6adc40}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!isWhitespace@{isWhitespace}}
+\index{isWhitespace@{isWhitespace}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{isWhitespace()}{isWhitespace()}}
+{\footnotesize\ttfamily bool B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::is\+Whitespace (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 321 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{322 \{}
+\DoxyCodeLine{323     \textcolor{keywordflow}{return} (c == \textcolor{charliteral}{' '} || c == \textcolor{charliteral}{'\(\backslash\)n'} || c == \textcolor{charliteral}{'\(\backslash\)r'} || c == \textcolor{charliteral}{'\(\backslash\)t'} || c == 1 || c == 2);}
+\DoxyCodeLine{324 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a4680b8ff161430dbdab858d709b24a25}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a4680b8ff161430dbdab858d709b24a25}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!Log@{Log}}
+\index{Log@{Log}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{Log()}{Log()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::\+Log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo}{lex\+\_\+debug\+Info}} \&}]{info }\end{DoxyParamCaption})}
+
+
+
+Definition at line 815 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{816 \{}
+\DoxyCodeLine{817 }
+\DoxyCodeLine{818     }
+\DoxyCodeLine{819 }
+\DoxyCodeLine{820     \textcolor{keywordflow}{if} (info.showWhere)}
+\DoxyCodeLine{821     \{}
+\DoxyCodeLine{822         \textcolor{comment}{// Reset debug position}}
+\DoxyCodeLine{823         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a18f7530891a334f547429090620161a0}{activeFile}}.data[0] != \textcolor{charliteral}{'\(\backslash\)0'})}
+\DoxyCodeLine{824             \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad8f2919d448f1c9b319938ec88fb0502}{calculateDebugPosition}}();}
+\DoxyCodeLine{825 }
+\DoxyCodeLine{826         \textcolor{keywordflow}{if} (info.procedure.data)}
+\DoxyCodeLine{827         \{}
+\DoxyCodeLine{828             \textcolor{keywordflow}{if} (info.procedure.data[0] != \textcolor{charliteral}{'\(\backslash\)0'})}
+\DoxyCodeLine{829             \{}
+\DoxyCodeLine{830                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a18f7530891a334f547429090620161a0}{activeFile}}.data[0] == \textcolor{charliteral}{'\(\backslash\)0'})}
+\DoxyCodeLine{831                     \mbox{\hyperlink{namespaceBBP_1_1std_a8d46784954bec3eed0277416001174a5}{std::printf}}(\textcolor{stringliteral}{"(<Binary>): In procedure: `\(\backslash\)e[0;97m\%s\(\backslash\)e[0;37m`:\(\backslash\)n"}, info.procedure.data);}
+\DoxyCodeLine{832                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{833                     \mbox{\hyperlink{namespaceBBP_1_1std_a8d46784954bec3eed0277416001174a5}{std::printf}}(\textcolor{stringliteral}{"\(\backslash\)e[0;97m\%s:\(\backslash\)e[0;37m In procedure: `\(\backslash\)e[0;97m\%s\(\backslash\)e[0;37m`:\(\backslash\)n"}, \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a18f7530891a334f547429090620161a0}{activeFile}}.data, info.procedure.data);}
+\DoxyCodeLine{834             \}}
+\DoxyCodeLine{835         \}}
+\DoxyCodeLine{836 }
+\DoxyCodeLine{837         \textcolor{keywordflow}{if} (info.showLinesAndColoumns)}
+\DoxyCodeLine{838         \{}
+\DoxyCodeLine{839             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a18f7530891a334f547429090620161a0}{activeFile}}.data[0] == \textcolor{charliteral}{'\(\backslash\)0'})}
+\DoxyCodeLine{840                 \mbox{\hyperlink{namespaceBBP_1_1std_a6a109a05fa6ce27ce54f04a3d7f699d3}{std::putf}}(\mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}}, \textcolor{stringliteral}{"(<Binary>:\%u:\%u): "}, info.coloumn, info.line);}
+\DoxyCodeLine{841             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{842                 \mbox{\hyperlink{namespaceBBP_1_1std_a6a109a05fa6ce27ce54f04a3d7f699d3}{std::putf}}(\mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}}, \textcolor{stringliteral}{"\(\backslash\)e[0;97m\%s:\%u:\%u:\(\backslash\)e[0;37m "}, \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a18f7530891a334f547429090620161a0}{activeFile}}.data, info.coloumn, info.line);}
+\DoxyCodeLine{843         \}}
+\DoxyCodeLine{844         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{845         \{}
+\DoxyCodeLine{846             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a18f7530891a334f547429090620161a0}{activeFile}}.data[0] == \textcolor{charliteral}{'\(\backslash\)0'})}
+\DoxyCodeLine{847                 \mbox{\hyperlink{namespaceBBP_1_1std_a6a109a05fa6ce27ce54f04a3d7f699d3}{std::putf}}(\mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}}, \textcolor{stringliteral}{"(<Binary>\string~\%4u): "}, info.character);}
+\DoxyCodeLine{848             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{849                 \mbox{\hyperlink{namespaceBBP_1_1std_a6a109a05fa6ce27ce54f04a3d7f699d3}{std::putf}}(\mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}}, \textcolor{stringliteral}{"\(\backslash\)e[0;97m\%s\string~\%4u:\(\backslash\)e[0;37m "}, \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a18f7530891a334f547429090620161a0}{activeFile}}.data, info.character);}
+\DoxyCodeLine{850         \}}
+\DoxyCodeLine{851     \}}
+\DoxyCodeLine{852 }
+\DoxyCodeLine{853     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a4680b8ff161430dbdab858d709b24a25}{Log}}(\textcolor{keyword}{nullptr}, info.msg, info.errName);}
+\DoxyCodeLine{854     }
+\DoxyCodeLine{855 }
+\DoxyCodeLine{856     \textcolor{keywordflow}{if} (info.highlightmsg)}
+\DoxyCodeLine{857     \{}
+\DoxyCodeLine{858         \textcolor{keywordflow}{if} (info.showWhere)}
+\DoxyCodeLine{859         \{}
+\DoxyCodeLine{860             \textcolor{keywordflow}{if} (info.showLinesAndColoumns)}
+\DoxyCodeLine{861             \{}
+\DoxyCodeLine{862                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a18f7530891a334f547429090620161a0}{activeFile}}.data[0] == \textcolor{charliteral}{'\(\backslash\)0'})}
+\DoxyCodeLine{863                     \mbox{\hyperlink{namespaceBBP_1_1std_a6a109a05fa6ce27ce54f04a3d7f699d3}{std::putf}}(\mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}}, \textcolor{stringliteral}{"(<Binary>:\%u:\%u): "}, info.coloumn, info.line);}
+\DoxyCodeLine{864                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{865                     \mbox{\hyperlink{namespaceBBP_1_1std_a6a109a05fa6ce27ce54f04a3d7f699d3}{std::putf}}(\mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}}, \textcolor{stringliteral}{"(\%s:\%u:\%u): "}, \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a18f7530891a334f547429090620161a0}{activeFile}}.data, info.coloumn, info.line);}
+\DoxyCodeLine{866             \}}
+\DoxyCodeLine{867             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{868             \{}
+\DoxyCodeLine{869                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a18f7530891a334f547429090620161a0}{activeFile}}.data[0] == \textcolor{charliteral}{'\(\backslash\)0'})}
+\DoxyCodeLine{870                     \mbox{\hyperlink{namespaceBBP_1_1std_a6a109a05fa6ce27ce54f04a3d7f699d3}{std::putf}}(\mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}}, \textcolor{stringliteral}{"(<Binary>\string~\%4u): "}, info.character);}
+\DoxyCodeLine{871                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{872                     \mbox{\hyperlink{namespaceBBP_1_1std_a6a109a05fa6ce27ce54f04a3d7f699d3}{std::putf}}(\mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}}, \textcolor{stringliteral}{"(\%s\string~\%4u): "}, \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a18f7530891a334f547429090620161a0}{activeFile}}.data, info.character);}
+\DoxyCodeLine{873             \}}
+\DoxyCodeLine{874         \}}
+\DoxyCodeLine{875         \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a4680b8ff161430dbdab858d709b24a25}{Log}}(info.highlightmsg);}
+\DoxyCodeLine{876         \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a1916906e1493d4fc2ca87610d02dcf7e}{Highlight}}(info);}
+\DoxyCodeLine{877     \}}
+\DoxyCodeLine{878 }
+\DoxyCodeLine{879     \mbox{\hyperlink{namespaceBBP_1_1std_a6a109a05fa6ce27ce54f04a3d7f699d3}{std::putf}}(\mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}}, \textcolor{stringliteral}{"\(\backslash\)n"});}
+\DoxyCodeLine{880 }
+\DoxyCodeLine{881 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_a4680b8ff161430dbdab858d709b24a25_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_a4680b8ff161430dbdab858d709b24a25_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a70793d13e012c5e84cdbf082d57a56c6}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a70793d13e012c5e84cdbf082d57a56c6}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!Log@{Log}}
+\index{Log@{Log}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{Log()}{Log()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::\+Log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}}}]{from,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}}}]{msg,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}}}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a34c965ceea81fc0436d74c60a68613c7}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a34c965ceea81fc0436d74c60a68613c7}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!Log@{Log}}
+\index{Log@{Log}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{Log()}{Log()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::\+Log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}}}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a13c9765604b0ce2bc27f0aa9971f12d5}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a13c9765604b0ce2bc27f0aa9971f12d5}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!LogAbort@{LogAbort}}
+\index{LogAbort@{LogAbort}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{LogAbort()}{LogAbort()}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::\+Log\+Abort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}}}]{from,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}}}]{msg,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}}}]{name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 758 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{759 \{}
+\DoxyCodeLine{760     \textcolor{keywordflow}{if} (from)}
+\DoxyCodeLine{761         \mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}} << \textcolor{stringliteral}{"\(\backslash\)e[0;30;101m"} << from << \textcolor{stringliteral}{"\(\backslash\)e[0;37m: "} << msg;}
+\DoxyCodeLine{762     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{763         \mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}} << \textcolor{stringliteral}{"\(\backslash\)e[0;30;101mfatal error\(\backslash\)e[0;37m: "} << msg;}
+\DoxyCodeLine{764     \textcolor{keywordflow}{if} (name)}
+\DoxyCodeLine{765         \mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}} << \textcolor{stringliteral}{" [\(\backslash\)e[0;30;101m"} << name << \textcolor{stringliteral}{"\(\backslash\)e[0;37m]"} <<= \mbox{\hyperlink{namespaceBBP_1_1std_a92a50044907ba5f40a39efe0bce958d6}{endl}};}
+\DoxyCodeLine{766     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{767         \mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}} <<= \mbox{\hyperlink{namespaceBBP_1_1std_a92a50044907ba5f40a39efe0bce958d6}{endl}};}
+\DoxyCodeLine{768 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_ac7c94506bed90fd42cf22a9bda6225f5}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_ac7c94506bed90fd42cf22a9bda6225f5}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!LogError@{LogError}}
+\index{LogError@{LogError}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{LogError()}{LogError()}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::\+Log\+Error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}}}]{from,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}}}]{msg,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}}}]{name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 722 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{723 \{}
+\DoxyCodeLine{724     \textcolor{keywordflow}{if} (from)}
+\DoxyCodeLine{725         \mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}} << \textcolor{stringliteral}{"\(\backslash\)e[0;31m"} << from << \textcolor{stringliteral}{"\(\backslash\)e[0;37m: "} << msg;}
+\DoxyCodeLine{726     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{727         \mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}} << \textcolor{stringliteral}{"\(\backslash\)e[0;31merror\(\backslash\)e[0;37m: "} << msg;}
+\DoxyCodeLine{728     \textcolor{keywordflow}{if} (name)}
+\DoxyCodeLine{729         \mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}} << \textcolor{stringliteral}{" [\(\backslash\)e[0;31m"} << name << \textcolor{stringliteral}{"\(\backslash\)e[0;37m]"} <<= \mbox{\hyperlink{namespaceBBP_1_1std_a92a50044907ba5f40a39efe0bce958d6}{endl}};}
+\DoxyCodeLine{730     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{731         \mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}} <<= \mbox{\hyperlink{namespaceBBP_1_1std_a92a50044907ba5f40a39efe0bce958d6}{endl}};}
+\DoxyCodeLine{732 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a1fe735040a4c2154929d06b91bb27f91}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a1fe735040a4c2154929d06b91bb27f91}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!LogNote@{LogNote}}
+\index{LogNote@{LogNote}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{LogNote()}{LogNote()}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::\+Log\+Note (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}}}]{from,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}}}]{msg,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}}}]{name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 734 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{735 \{}
+\DoxyCodeLine{736     \textcolor{keywordflow}{if} (from)}
+\DoxyCodeLine{737         \mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}} << \textcolor{stringliteral}{"\(\backslash\)e[0;36m"} << from << \textcolor{stringliteral}{"\(\backslash\)e[0;37m: "} << msg;}
+\DoxyCodeLine{738     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{739         \mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}} << \textcolor{stringliteral}{"\(\backslash\)e[0;96mnote\(\backslash\)e[0;37m: "} << msg;}
+\DoxyCodeLine{740     \textcolor{keywordflow}{if} (name)}
+\DoxyCodeLine{741         \mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}} << \textcolor{stringliteral}{" [\(\backslash\)e[0;36m"} << name << \textcolor{stringliteral}{"\(\backslash\)e[0;37m]"} <<= \mbox{\hyperlink{namespaceBBP_1_1std_a92a50044907ba5f40a39efe0bce958d6}{endl}};}
+\DoxyCodeLine{742     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{743         \mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}} <<= \mbox{\hyperlink{namespaceBBP_1_1std_a92a50044907ba5f40a39efe0bce958d6}{endl}};}
+\DoxyCodeLine{744 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a19b5de0ff0ebcf35c680702557c42f28}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a19b5de0ff0ebcf35c680702557c42f28}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!LogWarning@{LogWarning}}
+\index{LogWarning@{LogWarning}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{LogWarning()}{LogWarning()}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::\+Log\+Warning (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}}}]{from,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}}}]{msg,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{std\+::conststring}}}]{name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 746 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{747 \{}
+\DoxyCodeLine{748     \textcolor{keywordflow}{if} (from)}
+\DoxyCodeLine{749         \mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}} << \textcolor{stringliteral}{"\(\backslash\)e[0;35m"} << from << \textcolor{stringliteral}{"\(\backslash\)e[0;37m: "} << msg;}
+\DoxyCodeLine{750     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{751         \mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}} << \textcolor{stringliteral}{"\(\backslash\)e[0;35mwarning\(\backslash\)e[0;37m: "} << msg;}
+\DoxyCodeLine{752     \textcolor{keywordflow}{if} (name)}
+\DoxyCodeLine{753         \mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}} << \textcolor{stringliteral}{" [\(\backslash\)e[0;35m"} << name << \textcolor{stringliteral}{"\(\backslash\)e[0;37m]"} <<= \mbox{\hyperlink{namespaceBBP_1_1std_a92a50044907ba5f40a39efe0bce958d6}{endl}};}
+\DoxyCodeLine{754     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{755         \mbox{\hyperlink{namespaceBBP_1_1std_a66376ec3b30a50cc25df09f23fdd6733}{std::STDOUT}} <<= \mbox{\hyperlink{namespaceBBP_1_1std_a92a50044907ba5f40a39efe0bce958d6}{endl}};}
+\DoxyCodeLine{756 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_aaad37e5fb34b89c653ea90a4f8132cae}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_aaad37e5fb34b89c653ea90a4f8132cae}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!moveToAndHashNextWord@{moveToAndHashNextWord}}
+\index{moveToAndHashNextWord@{moveToAndHashNextWord}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{moveToAndHashNextWord()}{moveToAndHashNextWord()}}
+{\footnotesize\ttfamily bool B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::move\+To\+And\+Hash\+Next\+Word (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_ad29f433a1c033a551d50291e7d3f50b4}{std\+::hash\+\_\+t}} \&}]{hash,  }\item[{char}]{stop }\end{DoxyParamCaption})}
+
+
+
+Definition at line 622 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{623 \{}
+\DoxyCodeLine{624     \textcolor{comment}{// Returns true when it hashed anything, false otherwise.}}
+\DoxyCodeLine{625     \textcolor{comment}{// Move back one position}}
+\DoxyCodeLine{626     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}}-\/-\/;}
+\DoxyCodeLine{627 }
+\DoxyCodeLine{628     \textcolor{comment}{// Move to start of next word}}
+\DoxyCodeLine{629     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a57b4ede056112f658312ac6de5b1a183}{moveToStartOfNextWord}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{630 }
+\DoxyCodeLine{631     \textcolor{keywordflow}{return} \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a280648bcad760d6d31da9c37b99e3a02}{moveToAndHashThisWord}}(\mbox{\hyperlink{namespaceBBP_1_1Locale_1_1Japanese_a02c028a34a00f11967f61a67255e0e6ea964920435d98b78e3d9898c14fdf2d48}{hash}}, stop);}
+\DoxyCodeLine{632 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a280648bcad760d6d31da9c37b99e3a02}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a280648bcad760d6d31da9c37b99e3a02}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!moveToAndHashThisWord@{moveToAndHashThisWord}}
+\index{moveToAndHashThisWord@{moveToAndHashThisWord}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{moveToAndHashThisWord()}{moveToAndHashThisWord()}}
+{\footnotesize\ttfamily bool B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::move\+To\+And\+Hash\+This\+Word (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_ad29f433a1c033a551d50291e7d3f50b4}{std\+::hash\+\_\+t}} \&}]{hash,  }\item[{char}]{stop }\end{DoxyParamCaption})}
+
+
+
+Definition at line 634 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{635 \{}
+\DoxyCodeLine{636 }
+\DoxyCodeLine{637     \textcolor{comment}{// Check if character is newline}}
+\DoxyCodeLine{638     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a4bf2b10c8db466d9a88fc2b42e28ab7e}{isNewLine}}(\mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\_\_UNSAFE\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}})(\&\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a142c7a1b792ab62212927587a0aa8f87}{data}}, \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}})) || \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}} + 1 >= \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5cf8e1ba39f2a942fb7c421e16e2d110}{dataSize}})}
+\DoxyCodeLine{639         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{640 }
+\DoxyCodeLine{641     \textcolor{comment}{// Calculate size of macro, hash, and index}}
+\DoxyCodeLine{642     \mbox{\hyperlink{namespaceBBP_1_1std_ae104641b17c021a901add93f7bc5d808}{std::word}} Power = 1;}
+\DoxyCodeLine{643     \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} idx = 0;}
+\DoxyCodeLine{644     \textcolor{keywordtype}{bool} isOnlyWhitespace = \textcolor{keyword}{true};}
+\DoxyCodeLine{645 }
+\DoxyCodeLine{646     \textcolor{comment}{// Now calculate running hash}}
+\DoxyCodeLine{647     \textcolor{keywordflow}{for} (; idx < \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5cf8e1ba39f2a942fb7c421e16e2d110}{dataSize}}; idx++)}
+\DoxyCodeLine{648     \{}
+\DoxyCodeLine{649         \textcolor{comment}{// Get character at index}}
+\DoxyCodeLine{650         \mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std::string\_element}} c = \mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\_\_UNSAFE\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}})(\&\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a142c7a1b792ab62212927587a0aa8f87}{data}}, \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}} + idx);}
+\DoxyCodeLine{651 }
+\DoxyCodeLine{652         \textcolor{comment}{// Keep isOnlyWhiteSpace updated}}
+\DoxyCodeLine{653         isOnlyWhitespace \&= (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ab10154f72fb28be7553637f79d6adc40}{isWhitespace}}(c) || c == 0);}
+\DoxyCodeLine{654 }
+\DoxyCodeLine{655         \textcolor{comment}{// If asked to stop here, we stop. We also stop for whitespaces.}}
+\DoxyCodeLine{656         \textcolor{keywordflow}{if} (c == stop || (!isOnlyWhitespace \&\& \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ab10154f72fb28be7553637f79d6adc40}{isWhitespace}}(c) \&\& stop == \textcolor{charliteral}{'\(\backslash\)n'}))}
+\DoxyCodeLine{657             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{658 }
+\DoxyCodeLine{659         \textcolor{comment}{// If we are at end character, error.}}
+\DoxyCodeLine{660         \textcolor{keywordflow}{if} (c == 0)}
+\DoxyCodeLine{661             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{662 }
+\DoxyCodeLine{663         \textcolor{comment}{// Run the hashing algorithm}}
+\DoxyCodeLine{664         \mbox{\hyperlink{namespaceBBP_1_1std_a53a0c211ad7056be924a561f9ebc8739}{std::strhsh}}(\mbox{\hyperlink{namespaceBBP_1_1Locale_1_1Japanese_a02c028a34a00f11967f61a67255e0e6ea964920435d98b78e3d9898c14fdf2d48}{hash}}, Power, c);}
+\DoxyCodeLine{665     \}}
+\DoxyCodeLine{666 }
+\DoxyCodeLine{667     \textcolor{comment}{// Move to end here}}
+\DoxyCodeLine{668     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_af2c3a9213cc6e7b66573f7ca083ddae7}{moveToEndOfThisWord}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{669 }
+\DoxyCodeLine{670 }
+\DoxyCodeLine{671     \textcolor{comment}{// If macro is only whitespace, there isn't really anything to do.}}
+\DoxyCodeLine{672     \textcolor{keywordflow}{if} (isOnlyWhitespace)}
+\DoxyCodeLine{673         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{674     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{675 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_a280648bcad760d6d31da9c37b99e3a02_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a40706684fe9f6dc38f62865da75793ca}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a40706684fe9f6dc38f62865da75793ca}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!moveToEndOfLastWord@{moveToEndOfLastWord}}
+\index{moveToEndOfLastWord@{moveToEndOfLastWord}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{moveToEndOfLastWord()}{moveToEndOfLastWord()}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::move\+To\+End\+Of\+Last\+Word (\begin{DoxyParamCaption}\item[{bool}]{stop\+At\+New\+Line }\end{DoxyParamCaption})}
+
+
+
+Definition at line 561 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{562 \{}
+\DoxyCodeLine{563     \textcolor{comment}{// Move until start of this word}}
+\DoxyCodeLine{564     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a8f4659d1fbb31d488f7c5b0300741485}{moveToStartOfThisWord}}(stopAtNewLine);}
+\DoxyCodeLine{565 }
+\DoxyCodeLine{566     \textcolor{comment}{// While possible, move back one character until no whitespace is found}}
+\DoxyCodeLine{567     \textcolor{keywordflow}{while} (-\/-\/\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}} < \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5cf8e1ba39f2a942fb7c421e16e2d110}{dataSize}})}
+\DoxyCodeLine{568     \{}
+\DoxyCodeLine{569         \textcolor{keywordtype}{char} c = \mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\_\_UNSAFE\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{read}})(\&\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a142c7a1b792ab62212927587a0aa8f87}{data}}, \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}});}
+\DoxyCodeLine{570         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ab10154f72fb28be7553637f79d6adc40}{isWhitespace}}(c) || (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a4bf2b10c8db466d9a88fc2b42e28ab7e}{isNewLine}}(c) \&\& stopAtNewLine))}
+\DoxyCodeLine{571         \{}
+\DoxyCodeLine{572             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a4bf2b10c8db466d9a88fc2b42e28ab7e}{isNewLine}}(c))}
+\DoxyCodeLine{573                 \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}}++;}
+\DoxyCodeLine{574             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{575         \}}
+\DoxyCodeLine{576     \}}
+\DoxyCodeLine{577 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_a40706684fe9f6dc38f62865da75793ca_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a1489abe65153ed9795d26f3cce61f48e}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a1489abe65153ed9795d26f3cce61f48e}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!moveToEndOfNextWord@{moveToEndOfNextWord}}
+\index{moveToEndOfNextWord@{moveToEndOfNextWord}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{moveToEndOfNextWord()}{moveToEndOfNextWord()}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::move\+To\+End\+Of\+Next\+Word (\begin{DoxyParamCaption}\item[{bool}]{stop\+At\+New\+Line }\end{DoxyParamCaption})}
+
+
+
+Definition at line 604 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{605 \{}
+\DoxyCodeLine{606     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a57b4ede056112f658312ac6de5b1a183}{moveToStartOfNextWord}}(stopAtNewLine);}
+\DoxyCodeLine{607     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_af2c3a9213cc6e7b66573f7ca083ddae7}{moveToEndOfThisWord}}(stopAtNewLine);}
+\DoxyCodeLine{608 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_af2c3a9213cc6e7b66573f7ca083ddae7}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_af2c3a9213cc6e7b66573f7ca083ddae7}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!moveToEndOfThisWord@{moveToEndOfThisWord}}
+\index{moveToEndOfThisWord@{moveToEndOfThisWord}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{moveToEndOfThisWord()}{moveToEndOfThisWord()}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::move\+To\+End\+Of\+This\+Word (\begin{DoxyParamCaption}\item[{bool}]{stop\+At\+New\+Line }\end{DoxyParamCaption})}
+
+
+
+Definition at line 584 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{585 \{}
+\DoxyCodeLine{586     \textcolor{comment}{// While possible, move forward one character until whitespace is found}}
+\DoxyCodeLine{587     \textcolor{keywordflow}{while} (++\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}} < \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5cf8e1ba39f2a942fb7c421e16e2d110}{dataSize}})}
+\DoxyCodeLine{588     \{}
+\DoxyCodeLine{589         \textcolor{keywordtype}{char} c = \mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\_\_UNSAFE\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{read}})(\&\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a142c7a1b792ab62212927587a0aa8f87}{data}}, \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}});}
+\DoxyCodeLine{590         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ab10154f72fb28be7553637f79d6adc40}{isWhitespace}}(c))}
+\DoxyCodeLine{591             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{592     \}}
+\DoxyCodeLine{593     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}}-\/-\/;}
+\DoxyCodeLine{594 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_af2c3a9213cc6e7b66573f7ca083ddae7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a8249caecef89f688455c2a73135b0fc7}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a8249caecef89f688455c2a73135b0fc7}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!moveToNextKeyword@{moveToNextKeyword}}
+\index{moveToNextKeyword@{moveToNextKeyword}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{moveToNextKeyword()}{moveToNextKeyword()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+keywordhandle}} B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::move\+To\+Next\+Keyword (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 81 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82 \{}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84     \mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{lex\_keywordhandle}} handle = 0;}
+\DoxyCodeLine{85     \textcolor{keywordtype}{size\_t} kwCount = \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae44b9b00f1ba64a04618d9cbb6358994}{keywordStack}}.atElement;}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87     \textcolor{comment}{// These flags keep track of if any non-\/whitespace sequence had any meaning.}}
+\DoxyCodeLine{88     \textcolor{keywordtype}{bool} hasFoundMeaningfulToken = \textcolor{keyword}{false};}
+\DoxyCodeLine{89     \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} foundAt = 0;}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91     \textcolor{comment}{// Loop until something is found}}
+\DoxyCodeLine{92     \textcolor{keywordflow}{while} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}} < \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5cf8e1ba39f2a942fb7c421e16e2d110}{dataSize}} \&\& !\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a121d2d089bf62f4d0e6343e0198cea4c}{abort}})}
+\DoxyCodeLine{93     \{}
+\DoxyCodeLine{94         \textcolor{comment}{// Get character}}
+\DoxyCodeLine{95         \textcolor{keywordtype}{char} character = \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}}(\&\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a142c7a1b792ab62212927587a0aa8f87}{data}}, \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}}++);}
+\DoxyCodeLine{96         \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}{debugInformation}}.\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo_a4ab78e38d6907502a55caa55378ea820}{coloumn}}++;}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ab10154f72fb28be7553637f79d6adc40}{isWhitespace}}(character))}
+\DoxyCodeLine{100         \{}
+\DoxyCodeLine{101             \textcolor{comment}{// If the lexer has previously found meaningful text but now sees a whitespace, do some stuff.}}
+\DoxyCodeLine{102             \textcolor{comment}{// Only do this when not intentionally skipping over meaningful tokens (such as comments, literals).}}
+\DoxyCodeLine{103             \textcolor{keywordflow}{if} (hasFoundMeaningfulToken \&\& !\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a07495ee1f7d2448f66cd3eab88fb2678}{commentDepth}} \&\& !\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ac2d532a2467ca11090dd26491a44ffe7}{literalDepth}})}
+\DoxyCodeLine{104             \{}
+\DoxyCodeLine{105                 \textcolor{comment}{// Call action}}
+\DoxyCodeLine{106                 \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a8a9bd06e1b0bbcf991fb6fce2470c4f7}{executeSpecialFunction}}(foundAt, \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}} -\/ 1);}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108                 \textcolor{comment}{// Reset flag }}
+\DoxyCodeLine{109                 hasFoundMeaningfulToken = \textcolor{keyword}{false};}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111                 \textcolor{comment}{// If need to abort, break out.}}
+\DoxyCodeLine{112                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a121d2d089bf62f4d0e6343e0198cea4c}{abort}})}
+\DoxyCodeLine{113                     \textcolor{keywordflow}{return} \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae44b9b00f1ba64a04618d9cbb6358994}{keywordStack}}.atElement + 1;}
+\DoxyCodeLine{114             \}}
+\DoxyCodeLine{115         \}}
+\DoxyCodeLine{116         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{117         \{}
+\DoxyCodeLine{118             \textcolor{keywordflow}{if} (!hasFoundMeaningfulToken)}
+\DoxyCodeLine{119                 foundAt = \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}} -\/ 1;}
+\DoxyCodeLine{120             hasFoundMeaningfulToken = \textcolor{keyword}{true};}
+\DoxyCodeLine{121         \}}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123         \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'\(\backslash\)n'})}
+\DoxyCodeLine{124         \{}
+\DoxyCodeLine{125             \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}{debugInformation}}.\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo_a4ab78e38d6907502a55caa55378ea820}{coloumn}} = 0;}
+\DoxyCodeLine{126             \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}{debugInformation}}.\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo_abdbf2b604c4a1538ccd682e8cd3efe12}{line}}++;}
+\DoxyCodeLine{127         \}}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129         \textcolor{comment}{// Mask each keyword word}}
+\DoxyCodeLine{130         \textcolor{keywordflow}{for} (handle = 0; handle < kwCount; handle++)}
+\DoxyCodeLine{131         \{}
+\DoxyCodeLine{132             }
+\DoxyCodeLine{133             \textcolor{comment}{// Get a handle on the keyword}}
+\DoxyCodeLine{134             lex\_keyword *keyword = \&\mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{read}}(\&\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5bbad6ef5e6ad4de5b9ba16ff72483ba}{keywords}}, handle);}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136             \textcolor{comment}{// If inside a literal context, and the word is not forced to be evalated,}}
+\DoxyCodeLine{137             \textcolor{keywordflow}{if} ((\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ac2d532a2467ca11090dd26491a44ffe7}{literalDepth}} \&\& !keyword-\/>forceParseOutsideLiterals) \&\& !keyword-\/>forceEvaluation)}
+\DoxyCodeLine{138             \{}
+\DoxyCodeLine{139                 \textcolor{comment}{// Continue only if keyword's mask equals literal depth}}
+\DoxyCodeLine{140                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ac2d532a2467ca11090dd26491a44ffe7}{literalDepth}} != keyword-\/>considerLiteralDepth \&\& !keyword-\/>forceParseInLiterals)}
+\DoxyCodeLine{141                     \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{142             \}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144             \textcolor{comment}{// If inside a comment context, and the word is not forced to be evalated,}}
+\DoxyCodeLine{145             \textcolor{keywordflow}{if} ((\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a07495ee1f7d2448f66cd3eab88fb2678}{commentDepth}} \&\& !keyword-\/>forceParseOutsideComments) \&\& !keyword-\/>forceEvaluation)}
+\DoxyCodeLine{146             \{}
+\DoxyCodeLine{147                 \textcolor{comment}{// Continue only if keyword's mask equals comment depth}}
+\DoxyCodeLine{148                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a07495ee1f7d2448f66cd3eab88fb2678}{commentDepth}} != keyword-\/>considerCommentDepth \&\& !keyword-\/>forceParseInComments)}
+\DoxyCodeLine{149                     \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{150             \}}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152             \textcolor{comment}{// Operate on keywords mask based on current character}}
+\DoxyCodeLine{153             keyword-\/>mask +=}
+\DoxyCodeLine{154                 (character == keyword-\/>word[keyword-\/>mask]) ?}
+\DoxyCodeLine{155                 1 :}
+\DoxyCodeLine{156                 -\/keyword-\/>mask;}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158             \textcolor{comment}{// Check if we are in white space, if so, reset flag and stop searching, since it is no use.}}
+\DoxyCodeLine{159             \textcolor{comment}{// This must occur after mask code, since otherwise "whi le" would register as "while", unless}}
+\DoxyCodeLine{160             \textcolor{comment}{// the keyword consists of whitespaces.}}
+\DoxyCodeLine{161             if (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ab10154f72fb28be7553637f79d6adc40}{isWhitespace}}(character))}
+\DoxyCodeLine{162             \{}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{164                 \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a2095e84753a94f2db22e3d48fc4d2f1c}{lastWhiteSpace}} = \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}};}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166                 \textcolor{comment}{// Check each character in the word}}
+\DoxyCodeLine{167                 \textcolor{keywordflow}{for} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{index\_t}} idx = 0; idx < keyword-\/>length; idx++)}
+\DoxyCodeLine{168                     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ab10154f72fb28be7553637f79d6adc40}{isWhitespace}}(keyword-\/>word[idx]))}
+\DoxyCodeLine{169                         \textcolor{keywordflow}{continue}; \textcolor{comment}{// If any of these are not whitespaces, skip}}
+\DoxyCodeLine{170             \}}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172             \textcolor{comment}{// If the mask is not the same as the length of the keyword, the keyword is not found   }}
+\DoxyCodeLine{173             \textcolor{keywordflow}{if} (keyword-\/>mask != keyword-\/>length)}
+\DoxyCodeLine{174                 \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176             \textcolor{comment}{// If keyword needs to be treated like a delimiter, do that here.}}
+\DoxyCodeLine{177             \textcolor{keywordflow}{if} (keyword-\/>actAsDelimiter)}
+\DoxyCodeLine{178             \{}
+\DoxyCodeLine{179                 \textcolor{comment}{// Check for any prefixed things here.}}
+\DoxyCodeLine{180                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}} -\/ \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a2095e84753a94f2db22e3d48fc4d2f1c}{lastWhiteSpace}} > keyword-\/>length \&\& !\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ac2d532a2467ca11090dd26491a44ffe7}{literalDepth}} \&\& !\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a07495ee1f7d2448f66cd3eab88fb2678}{commentDepth}})}
+\DoxyCodeLine{181                 \{}
+\DoxyCodeLine{182                     \textcolor{comment}{// Call action}}
+\DoxyCodeLine{183                     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a8a9bd06e1b0bbcf991fb6fce2470c4f7}{executeSpecialFunction}}(\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a2095e84753a94f2db22e3d48fc4d2f1c}{lastWhiteSpace}}, \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}} -\/ keyword-\/>length);}
+\DoxyCodeLine{184 }
+\DoxyCodeLine{185                     \textcolor{comment}{// If need to abort, break out.}}
+\DoxyCodeLine{186                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a121d2d089bf62f4d0e6343e0198cea4c}{abort}})}
+\DoxyCodeLine{187                         \textcolor{keywordflow}{return} \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae44b9b00f1ba64a04618d9cbb6358994}{keywordStack}}.atElement + 1;}
+\DoxyCodeLine{188                 \}}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{190                 \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a2095e84753a94f2db22e3d48fc4d2f1c}{lastWhiteSpace}} = \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}};}
+\DoxyCodeLine{191             \}}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193             \textcolor{comment}{// Something was found anyway.}}
+\DoxyCodeLine{194             hasFoundMeaningfulToken = \textcolor{keyword}{false};}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196             \textcolor{comment}{// Check if keyword is infixed. Delimiters can, however, be infixed.}}
+\DoxyCodeLine{197             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}} -\/ \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a2095e84753a94f2db22e3d48fc4d2f1c}{lastWhiteSpace}} > keyword-\/>length \&\& !keyword-\/>actAsDelimiter)}
+\DoxyCodeLine{198                 \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200             \textcolor{comment}{// Reset mask, since keywords may come after eachother.}}
+\DoxyCodeLine{201             keyword-\/>mask = 0;}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{203             \textcolor{comment}{// Keyword found, return that.}}
+\DoxyCodeLine{204             \textcolor{keywordflow}{return} handle;}
+\DoxyCodeLine{205         \}}
+\DoxyCodeLine{206     \}}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{208     \textcolor{comment}{// Nothing was found, return invalid handle}}
+\DoxyCodeLine{209     \textcolor{keywordflow}{return} kwCount;}
+\DoxyCodeLine{210 }
+\DoxyCodeLine{211 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_a8249caecef89f688455c2a73135b0fc7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_a8249caecef89f688455c2a73135b0fc7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a341d64a1a8633b5c24b5eb698c183f19}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a341d64a1a8633b5c24b5eb698c183f19}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!moveToStartOfLastWord@{moveToStartOfLastWord}}
+\index{moveToStartOfLastWord@{moveToStartOfLastWord}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{moveToStartOfLastWord()}{moveToStartOfLastWord()}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::move\+To\+Start\+Of\+Last\+Word (\begin{DoxyParamCaption}\item[{bool}]{stop\+At\+New\+Line }\end{DoxyParamCaption})}
+
+
+
+Definition at line 578 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{579 \{}
+\DoxyCodeLine{580     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a40706684fe9f6dc38f62865da75793ca}{moveToEndOfLastWord}}(stopAtNewLine);}
+\DoxyCodeLine{581     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a8f4659d1fbb31d488f7c5b0300741485}{moveToStartOfThisWord}}(stopAtNewLine);}
+\DoxyCodeLine{582 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a57b4ede056112f658312ac6de5b1a183}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a57b4ede056112f658312ac6de5b1a183}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!moveToStartOfNextWord@{moveToStartOfNextWord}}
+\index{moveToStartOfNextWord@{moveToStartOfNextWord}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{moveToStartOfNextWord()}{moveToStartOfNextWord()}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::move\+To\+Start\+Of\+Next\+Word (\begin{DoxyParamCaption}\item[{bool}]{stop\+At\+New\+Line }\end{DoxyParamCaption})}
+
+
+
+Definition at line 609 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{610 \{}
+\DoxyCodeLine{611     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_af2c3a9213cc6e7b66573f7ca083ddae7}{moveToEndOfThisWord}}(stopAtNewLine);}
+\DoxyCodeLine{612 }
+\DoxyCodeLine{613     \textcolor{comment}{// While possible, move forward one character until no whitespace is found}}
+\DoxyCodeLine{614     \textcolor{keywordflow}{while} (++\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}} < \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5cf8e1ba39f2a942fb7c421e16e2d110}{dataSize}})}
+\DoxyCodeLine{615     \{}
+\DoxyCodeLine{616         \textcolor{keywordtype}{char} c = \mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\_\_UNSAFE\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{read}})(\&\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a142c7a1b792ab62212927587a0aa8f87}{data}}, \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}});}
+\DoxyCodeLine{617         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ab10154f72fb28be7553637f79d6adc40}{isWhitespace}}(c) || (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a4bf2b10c8db466d9a88fc2b42e28ab7e}{isNewLine}}(c) \&\& stopAtNewLine))}
+\DoxyCodeLine{618             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{619     \}}
+\DoxyCodeLine{620 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_a57b4ede056112f658312ac6de5b1a183_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a8f4659d1fbb31d488f7c5b0300741485}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a8f4659d1fbb31d488f7c5b0300741485}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!moveToStartOfThisWord@{moveToStartOfThisWord}}
+\index{moveToStartOfThisWord@{moveToStartOfThisWord}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{moveToStartOfThisWord()}{moveToStartOfThisWord()}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::move\+To\+Start\+Of\+This\+Word (\begin{DoxyParamCaption}\item[{bool}]{stop\+At\+New\+Line }\end{DoxyParamCaption})}
+
+
+
+Definition at line 595 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{596 \{}
+\DoxyCodeLine{597     \textcolor{comment}{// While possible, move backward one character until whitespace is found}}
+\DoxyCodeLine{598     \textcolor{keywordflow}{while} (-\/-\/\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}} < \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5cf8e1ba39f2a942fb7c421e16e2d110}{dataSize}})}
+\DoxyCodeLine{599         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ab10154f72fb28be7553637f79d6adc40}{isWhitespace}}(\mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\_\_UNSAFE\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{read}})(\&\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a142c7a1b792ab62212927587a0aa8f87}{data}}, \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}})))}
+\DoxyCodeLine{600             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{601     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}}++;}
+\DoxyCodeLine{602 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_a8f4659d1fbb31d488f7c5b0300741485_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a2c27a853ee1c8b49893c74927c4e98bc}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a2c27a853ee1c8b49893c74927c4e98bc}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!onNumericalLiteral@{onNumericalLiteral}}
+\index{onNumericalLiteral@{onNumericalLiteral}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{onNumericalLiteral()}{onNumericalLiteral()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{B\+B\+P\+::std\+::conststring}} B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::on\+Numerical\+Literal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unionBBP_1_1std_1_1Lexer_1_1numerical__t}{numerical\+\_\+t}}}]{numerical,  }\item[{bool}]{is\+Float }\end{DoxyParamCaption})}
+
+
+
+Definition at line 145 of file Processor.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{146 \{}
+\DoxyCodeLine{147     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{namespaceBBP_1_1esa_ac6718a2ca4ad0a1b180fa889565881d1}{BBP::esa::processor}}.lineIsDefiningInstruction)}
+\DoxyCodeLine{148         \textcolor{keywordflow}{return} \mbox{\hyperlink{namespaceBBP_1_1esa_ac6718a2ca4ad0a1b180fa889565881d1}{BBP::esa::processor}}.\mbox{\hyperlink{classBBP_1_1esa_1_1esaProcessor_a85ea0ce6c3fe59531cc7dac6c94a5fd8}{numerical}}(numerical, isFloat);}
+\DoxyCodeLine{149     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespaceBBP_1_1esa_ac6718a2ca4ad0a1b180fa889565881d1}{BBP::esa::processor}}.\mbox{\hyperlink{classBBP_1_1esa_1_1esaProcessor_a8884b186d1988809313a4114f644364e}{numericalArgument}}(numerical, isFloat);}
+\DoxyCodeLine{150 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_a2c27a853ee1c8b49893c74927c4e98bc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a2133be7be7c93fd9e9d60c2125c970ae}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a2133be7be7c93fd9e9d60c2125c970ae}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!onUnkown@{onUnkown}}
+\index{onUnkown@{onUnkown}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{onUnkown()}{onUnkown()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_ae95e98217b6c3191605f0d7dd5f483a9}{B\+B\+P\+::std\+::conststring}} B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::on\+Unkown (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{index\+\_\+t}}}]{from,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{index\+\_\+t}}}]{to }\end{DoxyParamCaption})}
+
+
+
+Definition at line 137 of file Processor.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{138 \{}
+\DoxyCodeLine{139     \textcolor{comment}{// If not defining an instruction, do this}}
+\DoxyCodeLine{140     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{namespaceBBP_1_1esa_ac6718a2ca4ad0a1b180fa889565881d1}{BBP::esa::processor}}.lineIsDefiningInstruction)}
+\DoxyCodeLine{141         \textcolor{keywordflow}{return} \mbox{\hyperlink{namespaceBBP_1_1esa_ac6718a2ca4ad0a1b180fa889565881d1}{BBP::esa::processor}}.\mbox{\hyperlink{classBBP_1_1esa_1_1esaProcessor_af38a06bf937bacbc5db9413c2c9db248}{unkown}}(from, \mbox{\hyperlink{namespaceBBP_1_1Locale_1_1Japanese_a02c028a34a00f11967f61a67255e0e6ea11fa7c1430d2163f97611f3b123269d4}{to}});}
+\DoxyCodeLine{142     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespaceBBP_1_1esa_ac6718a2ca4ad0a1b180fa889565881d1}{BBP::esa::processor}}.\mbox{\hyperlink{classBBP_1_1esa_1_1esaProcessor_a57d3e592694b8e7468ce2bbaecfea887}{resolve}}(from, \mbox{\hyperlink{namespaceBBP_1_1Locale_1_1Japanese_a02c028a34a00f11967f61a67255e0e6ea11fa7c1430d2163f97611f3b123269d4}{to}});}
+\DoxyCodeLine{143 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_a2133be7be7c93fd9e9d60c2125c970ae_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a5cd38f62146186672890a2a20e8e4fee}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a5cd38f62146186672890a2a20e8e4fee}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!parseFile@{parseFile}}
+\index{parseFile@{parseFile}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{parseFile()}{parseFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::parse\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 273 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{274 \{}
+\DoxyCodeLine{275     \textcolor{comment}{// Reset debug information}}
+\DoxyCodeLine{276     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}{debugInformation}}.\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo_abdbf2b604c4a1538ccd682e8cd3efe12}{line}} = 1;}
+\DoxyCodeLine{277 }
+\DoxyCodeLine{278     \textcolor{comment}{// While within bounds...}}
+\DoxyCodeLine{279     \textcolor{keywordflow}{while} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}} < \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5cf8e1ba39f2a942fb7c421e16e2d110}{dataSize}})}
+\DoxyCodeLine{280     \{}
+\DoxyCodeLine{281         \textcolor{comment}{// Calculate the amount of keywords.}}
+\DoxyCodeLine{282         \textcolor{keywordtype}{size\_t} kwCount = \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae44b9b00f1ba64a04618d9cbb6358994}{keywordStack}}.atElement;}
+\DoxyCodeLine{283 }
+\DoxyCodeLine{284         \textcolor{comment}{// Find the next keyword}}
+\DoxyCodeLine{285         \mbox{\hyperlink{namespaceBBP_1_1std_1_1Lexer_ab09b4f6b0c27fd16d1ade7bab2b6c431}{lex\_keywordhandle}} handle = \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a8249caecef89f688455c2a73135b0fc7}{moveToNextKeyword}}();}
+\DoxyCodeLine{286 }
+\DoxyCodeLine{287         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a121d2d089bf62f4d0e6343e0198cea4c}{abort}})}
+\DoxyCodeLine{288         \{}
+\DoxyCodeLine{289             \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a4680b8ff161430dbdab858d709b24a25}{Log}}(\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a18f7530891a334f547429090620161a0}{activeFile}}.data, \textcolor{stringliteral}{"ECompilation terminated."}, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{290             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{291         \}}
+\DoxyCodeLine{292 }
+\DoxyCodeLine{293         \textcolor{comment}{// If no keyword is found, exit out.}}
+\DoxyCodeLine{294         \textcolor{keywordflow}{if} (handle == kwCount)}
+\DoxyCodeLine{295             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{296 }
+\DoxyCodeLine{297         \textcolor{comment}{// Otherwise, get keyword pointer}}
+\DoxyCodeLine{298         lex\_keyword *keyword = \&\mbox{\hyperlink{stddef_8h_abe45653ace4e77c9ae4612de5535ff1d}{\_\_UNSAFE\_\_}}(\mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{read}})(\&\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5bbad6ef5e6ad4de5b9ba16ff72483ba}{keywords}}, handle);}
+\DoxyCodeLine{299 }
+\DoxyCodeLine{300         \textcolor{comment}{// Then execute the keyword action}}
+\DoxyCodeLine{301         \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a9ea6297d4895c1023d5c85e2ad6b80b0}{executeKeywordAction}}(handle, keyword);}
+\DoxyCodeLine{302 }
+\DoxyCodeLine{303         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a121d2d089bf62f4d0e6343e0198cea4c}{abort}})}
+\DoxyCodeLine{304         \{}
+\DoxyCodeLine{305             \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a4680b8ff161430dbdab858d709b24a25}{Log}}(\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a18f7530891a334f547429090620161a0}{activeFile}}.data, \textcolor{stringliteral}{"ECompilation terminated."}, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{306             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{307         \}}
+\DoxyCodeLine{308 }
+\DoxyCodeLine{309     \}}
+\DoxyCodeLine{310 }
+\DoxyCodeLine{311     \textcolor{comment}{// Do final checks}}
+\DoxyCodeLine{312     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ac2d532a2467ca11090dd26491a44ffe7}{literalDepth}})}
+\DoxyCodeLine{313         \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a4680b8ff161430dbdab858d709b24a25}{Log}}(\textcolor{stringliteral}{"lexer"}, \textcolor{stringliteral}{"EExpected literal termination before 'EOF'"}, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{314     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a07495ee1f7d2448f66cd3eab88fb2678}{commentDepth}})}
+\DoxyCodeLine{315         \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a4680b8ff161430dbdab858d709b24a25}{Log}}(\textcolor{stringliteral}{"lexer"}, \textcolor{stringliteral}{"EExpected comment termination before 'EOF'"}, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{316 }
+\DoxyCodeLine{317     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ac2d532a2467ca11090dd26491a44ffe7}{literalDepth}} = 0;}
+\DoxyCodeLine{318     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a07495ee1f7d2448f66cd3eab88fb2678}{commentDepth}} = 0;}
+\DoxyCodeLine{319 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_a5cd38f62146186672890a2a20e8e4fee_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_a5cd38f62146186672890a2a20e8e4fee_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_aec4c5d7614d9bdcd3575f4d0c9b52312}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_aec4c5d7614d9bdcd3575f4d0c9b52312}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!parseFile@{parseFile}}
+\index{parseFile@{parseFile}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{parseFile()}{parseFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::parse\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBBP_1_1std_1_1PATH}{std\+::\+P\+A\+TH}} \&}]{file }\end{DoxyParamCaption})}
+
+
+
+Definition at line 25 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27     \textcolor{comment}{// Read the file}}
+\DoxyCodeLine{28     std::FILE source(file);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{comment}{// Read the data from the file}}
+\DoxyCodeLine{31     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a142c7a1b792ab62212927587a0aa8f87}{data}} = *source.b().page;}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{comment}{// Calculate data size}}
+\DoxyCodeLine{34     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5cf8e1ba39f2a942fb7c421e16e2d110}{dataSize}} = \mbox{\hyperlink{namespaceBBP_1_1std_a3f8c5c3d25a021fbc386bafabc41a719}{std::seqlen}}(\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a142c7a1b792ab62212927587a0aa8f87}{data}});}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{comment}{// Set string}}
+\DoxyCodeLine{37     \mbox{\hyperlink{namespaceBBP_1_1std_a95c149a6e963e567bd059eb11aef4ac8}{std::c\_string}} name = file.fileName();}
+\DoxyCodeLine{38     \mbox{\hyperlink{namespaceBBP_1_1std_ad340be18a81465c75a58f55b151fbd85}{strcpy}}(\&\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a18f7530891a334f547429090620161a0}{activeFile}}, name);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{comment}{// Reset flags}}
+\DoxyCodeLine{41     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a07495ee1f7d2448f66cd3eab88fb2678}{commentDepth}} = 0;}
+\DoxyCodeLine{42     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ac2d532a2467ca11090dd26491a44ffe7}{literalDepth}} = 0;}
+\DoxyCodeLine{43     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}{atPosition}} = 0;}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{comment}{// Parse everything}}
+\DoxyCodeLine{46     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5cd38f62146186672890a2a20e8e4fee}{parseFile}}();}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{comment}{// Close file}}
+\DoxyCodeLine{49     source.close();}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \textcolor{comment}{// Clear file data}}
+\DoxyCodeLine{52     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a142c7a1b792ab62212927587a0aa8f87}{data}} = PAGE<string\_element>(0, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     \textcolor{comment}{// Reset file name}}
+\DoxyCodeLine{55     \mbox{\hyperlink{namespaceBBP_1_1std_ad340be18a81465c75a58f55b151fbd85}{strcpy}}(\&\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a18f7530891a334f547429090620161a0}{activeFile}}, \textcolor{stringliteral}{""});}
+\DoxyCodeLine{56 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_aec4c5d7614d9bdcd3575f4d0c9b52312_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a11c0c6d9eebae9ff33957ed4be00ff1b}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a11c0c6d9eebae9ff33957ed4be00ff1b}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!resetInfo@{resetInfo}}
+\index{resetInfo@{resetInfo}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{resetInfo()}{resetInfo()}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::reset\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo}{lex\+\_\+debug\+Info}} \&}]{info }\end{DoxyParamCaption})}
+
+
+
+Definition at line 712 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{713 \{}
+\DoxyCodeLine{714     info.showLinesAndColoumns = \textcolor{keyword}{true};}
+\DoxyCodeLine{715     info.showWhere = \textcolor{keyword}{true};}
+\DoxyCodeLine{716     info.highlightmsg = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{717     info.highlight = 0;}
+\DoxyCodeLine{718     info.errName = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{719     info.highlightLength = 0;}
+\DoxyCodeLine{720 \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_a11c0c6d9eebae9ff33957ed4be00ff1b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a4395935c27b686c8c04bd1234f595685}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a4395935c27b686c8c04bd1234f595685}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!translateUnit@{translateUnit}}
+\index{translateUnit@{translateUnit}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{translateUnit()}{translateUnit()}}
+{\footnotesize\ttfamily void B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::translate\+Unit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBBP_1_1std_1_1PATH}{std\+::\+P\+A\+TH}} \&}]{file }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7     \textcolor{comment}{// Reset user paths}}
+\DoxyCodeLine{8     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5c8aa3675b2e2225645701364d075e3f}{usrpaths}}.\mbox{\hyperlink{classBBP_1_1std_1_1Stack_a752abbe63aa4dc1f0e3f13cacd9feb20}{atElement}} = 0;}
+\DoxyCodeLine{9     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5c8aa3675b2e2225645701364d075e3f}{usrpaths}} <<= file.pathName();}
+\DoxyCodeLine{10     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5c8aa3675b2e2225645701364d075e3f}{usrpaths}} <<= \mbox{\hyperlink{namespaceBBP_1_1std_ac1cb8213f09bf1f77b2e1793adf0b862}{workingDirectory}}-\/>\mbox{\hyperlink{classBBP_1_1std_1_1PATH_a57ccb35da441b837888a28f111999d37}{relName}}();}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12     \textcolor{comment}{// Parse the source file.}}
+\DoxyCodeLine{13     \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a5cd38f62146186672890a2a20e8e4fee}{parseFile}}(file);}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \textcolor{comment}{// Check if ill-\/formed}}
+\DoxyCodeLine{16     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a42c97b027ed4056cf26297610cf45a49}{illformed}})}
+\DoxyCodeLine{17     \{}
+\DoxyCodeLine{18         \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}{debugInformation}}.\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo_a22619b20aaad74e08d20c62e0660da50}{showLinesAndColoumns}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{19         \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a4680b8ff161430dbdab858d709b24a25}{Log}}(file.relName(), \textcolor{stringliteral}{"ETranslation unit failed to compile."}, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{20         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{21     \}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_a4395935c27b686c8c04bd1234f595685_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_aab7ac89d9a0fbcf5298392da3c28be1e}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_aab7ac89d9a0fbcf5298392da3c28be1e}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!tryParseNumerical@{tryParseNumerical}}
+\index{tryParseNumerical@{tryParseNumerical}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{tryParseNumerical()}{tryParseNumerical()}}
+{\footnotesize\ttfamily bool B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::try\+Parse\+Numerical (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}}}]{from,  }\item[{\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}}}]{to,  }\item[{bool \&}]{is\+Float,  }\item[{float \&}]{fresult,  }\item[{int \&}]{iresult }\end{DoxyParamCaption})}
+
+
+
+Definition at line 467 of file Lexer.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{468 \{}
+\DoxyCodeLine{469     \textcolor{comment}{// Define some variables to idk, figure it out goddamn }}
+\DoxyCodeLine{470     \mbox{\hyperlink{namespaceBBP_1_1std_a4926ba934876e4a1028b9abb47edbc56}{std::byte}} base; }
+\DoxyCodeLine{471     \mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std::string\_element}} firstCharacter = \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}}(\&\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a142c7a1b792ab62212927587a0aa8f87}{data}}, from);}
+\DoxyCodeLine{472     }
+\DoxyCodeLine{473     \textcolor{comment}{// If first character is '-\/', outcome is opposite signed}}
+\DoxyCodeLine{474     \textcolor{keywordtype}{int} sign = 1;}
+\DoxyCodeLine{475     \textcolor{keywordflow}{while} (firstCharacter == \textcolor{charliteral}{'-\/'})}
+\DoxyCodeLine{476     \{}
+\DoxyCodeLine{477         \textcolor{comment}{// Check if 'from' isn't to. (I.E., '-\/-\/-\/-\/-\/-\/-\/-\/-\/')}}
+\DoxyCodeLine{478         \textcolor{keywordflow}{if} (from >= \mbox{\hyperlink{namespaceBBP_1_1Locale_1_1Japanese_a02c028a34a00f11967f61a67255e0e6ea11fa7c1430d2163f97611f3b123269d4}{to}})}
+\DoxyCodeLine{479             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{480 }
+\DoxyCodeLine{481         \textcolor{comment}{// advance one character and save result in firstCharacter}}
+\DoxyCodeLine{482         firstCharacter = \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}}(\&\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a142c7a1b792ab62212927587a0aa8f87}{data}}, ++from);}
+\DoxyCodeLine{483 }
+\DoxyCodeLine{484         \textcolor{comment}{// Flip sign}}
+\DoxyCodeLine{485         sign *= -\/1;}
+\DoxyCodeLine{486     \}}
+\DoxyCodeLine{487     }
+\DoxyCodeLine{488     \textcolor{comment}{// Check if has prefix}}
+\DoxyCodeLine{489     \textcolor{keywordtype}{bool} hasPrefix = (\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a9d2106c7a808fe48c767b50d58b10169}{isNumericalBase}}(firstCharacter, base) != 0);}
+\DoxyCodeLine{490 }
+\DoxyCodeLine{491     \textcolor{comment}{// If base is 0, it means the first character is not a valid numerical character.}}
+\DoxyCodeLine{492     \textcolor{keywordflow}{if} (base == 0 \&\& !\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a538f7eb0cab3e11a435775eb587ba471}{isDecimalNumeral}}(firstCharacter))}
+\DoxyCodeLine{493         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{494     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (base == 0)}
+\DoxyCodeLine{495         base = 10;}
+\DoxyCodeLine{496 }
+\DoxyCodeLine{497     \textcolor{comment}{// This is used for the float}}
+\DoxyCodeLine{498     \textcolor{keywordtype}{float} divideBy = 1;}
+\DoxyCodeLine{499 }
+\DoxyCodeLine{500     \textcolor{comment}{// Loop over each character now}}
+\DoxyCodeLine{501     \textcolor{keywordflow}{for} (\mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std::index\_t}} idx = from + hasPrefix; idx < \mbox{\hyperlink{namespaceBBP_1_1Locale_1_1Japanese_a02c028a34a00f11967f61a67255e0e6ea11fa7c1430d2163f97611f3b123269d4}{to}}; idx++)}
+\DoxyCodeLine{502     \{}
+\DoxyCodeLine{503         \textcolor{comment}{// Fetch a character}}
+\DoxyCodeLine{504         \mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std::string\_element}} c = \mbox{\hyperlink{namespaceBBP_1_1std_a1d232f50fc4e569e79449970f1b4bb9e}{std::read}}(\&\mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a142c7a1b792ab62212927587a0aa8f87}{data}}, idx);}
+\DoxyCodeLine{505 }
+\DoxyCodeLine{506         \textcolor{comment}{// If the character is a dot, switch over to float mode.}}
+\DoxyCodeLine{507         \textcolor{keywordflow}{if} (c == \textcolor{charliteral}{'.'} \&\& !isFloat)}
+\DoxyCodeLine{508         \{}
+\DoxyCodeLine{509             isFloat = \textcolor{keyword}{true};}
+\DoxyCodeLine{510             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{511         \}}
+\DoxyCodeLine{512         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (c == \textcolor{charliteral}{'.'})}
+\DoxyCodeLine{513             \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// Since isFloat must be true, a return value of zero still gives a unique return value.}}
+\DoxyCodeLine{514         \textcolor{comment}{// TODO: Explain wtf that means.}}
+\DoxyCodeLine{515 }
+\DoxyCodeLine{516         \textcolor{comment}{// If character is not numerical number based on base type, return}}
+\DoxyCodeLine{517         \mbox{\hyperlink{namespaceBBP_1_1std_a4926ba934876e4a1028b9abb47edbc56}{std::byte}} number = 0;}
+\DoxyCodeLine{518         \textcolor{keywordflow}{switch} (base)}
+\DoxyCodeLine{519         \{}
+\DoxyCodeLine{520         \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{521             number = \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_ad7bad9296f4dffdd28dfe8d54be57886}{isBinaryNumeral}}(c);}
+\DoxyCodeLine{522             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{523         \textcolor{keywordflow}{case} 8:}
+\DoxyCodeLine{524             number = \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a06aa3edce2c709be4a30342a74a53b66}{isOctalNumeral}}(c);}
+\DoxyCodeLine{525             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{526         \textcolor{keywordflow}{case} 10:}
+\DoxyCodeLine{527             number = \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a538f7eb0cab3e11a435775eb587ba471}{isDecimalNumeral}}(c);}
+\DoxyCodeLine{528             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{529         \textcolor{keywordflow}{case} 16:}
+\DoxyCodeLine{530             number = \mbox{\hyperlink{classBBP_1_1std_1_1Lexer_1_1lex__context_a16e4e121c7507615c798a72ba0dcbd4a}{isHexadecimalNumeral}}(c);}
+\DoxyCodeLine{531             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{532         \}}
+\DoxyCodeLine{533 }
+\DoxyCodeLine{534         \textcolor{comment}{// If not a number, return false.}}
+\DoxyCodeLine{535         \textcolor{keywordflow}{if} (number == 0)}
+\DoxyCodeLine{536             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{537 }
+\DoxyCodeLine{538         \textcolor{comment}{// If not a float, increment both accordingly}}
+\DoxyCodeLine{539         \textcolor{keywordflow}{if} (!isFloat)}
+\DoxyCodeLine{540         \{}
+\DoxyCodeLine{541             iresult = (iresult * base) + (number -\/ 10);}
+\DoxyCodeLine{542             fresult = (fresult * base) + (number -\/ 10);}
+\DoxyCodeLine{543             divideBy *= base;}
+\DoxyCodeLine{544         \}}
+\DoxyCodeLine{545         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{546         \{}
+\DoxyCodeLine{547             fresult += (number -\/ 10) / divideBy;}
+\DoxyCodeLine{548             divideBy *= base;}
+\DoxyCodeLine{549         \}}
+\DoxyCodeLine{550     \}}
+\DoxyCodeLine{551 }
+\DoxyCodeLine{552     iresult *= sign;}
+\DoxyCodeLine{553     fresult *= sign;}
+\DoxyCodeLine{554 }
+\DoxyCodeLine{555     \textcolor{comment}{// Done}}
+\DoxyCodeLine{556     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{557 \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_aab7ac89d9a0fbcf5298392da3c28be1e_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a121d2d089bf62f4d0e6343e0198cea4c}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a121d2d089bf62f4d0e6343e0198cea4c}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!abort@{abort}}
+\index{abort@{abort}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{abort}{abort}}
+{\footnotesize\ttfamily bool B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::abort}
+
+
+
+Definition at line 147 of file Lex.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a18f7530891a334f547429090620161a0}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a18f7530891a334f547429090620161a0}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!activeFile@{activeFile}}
+\index{activeFile@{activeFile}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{activeFile}{activeFile}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_aa628d4212b7e43b58f01273f47ecf4c6}{std\+::static\+\_\+string}}$<$128$>$ B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::active\+File}
+
+
+
+Definition at line 117 of file Lex.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_ad41d8972ba6f4bb4561c0e9d5e005b34}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!atPosition@{atPosition}}
+\index{atPosition@{atPosition}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{atPosition}{atPosition}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{std\+::index\+\_\+t}} B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::at\+Position}
+
+
+
+Definition at line 124 of file Lex.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a07495ee1f7d2448f66cd3eab88fb2678}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a07495ee1f7d2448f66cd3eab88fb2678}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!commentDepth@{commentDepth}}
+\index{commentDepth@{commentDepth}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{commentDepth}{commentDepth}}
+{\footnotesize\ttfamily char B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::comment\+Depth}
+
+
+
+Definition at line 140 of file Lex.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a142c7a1b792ab62212927587a0aa8f87}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a142c7a1b792ab62212927587a0aa8f87}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!data@{data}}
+\index{data@{data}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structBBP_1_1std_1_1PAGE}{std\+::\+P\+A\+GE}}$<$\mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{string\+\_\+element}}$>$ B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::data}
+
+
+
+Definition at line 120 of file Lex.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a5cf8e1ba39f2a942fb7c421e16e2d110}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a5cf8e1ba39f2a942fb7c421e16e2d110}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!dataSize@{dataSize}}
+\index{dataSize@{dataSize}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{dataSize}{dataSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_abd480c5a3803a8d9621cfdc79b051a7c}{std\+::size\+\_\+t}} B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::data\+Size}
+
+
+
+Definition at line 121 of file Lex.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_ae5eed825129c76c1fcdb60647803deab}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!debugInformation@{debugInformation}}
+\index{debugInformation@{debugInformation}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{debugInformation}{debugInformation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__debugInfo}{lex\+\_\+debug\+Info}} B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::debug\+Information}
+
+
+
+Definition at line 144 of file Lex.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a42c97b027ed4056cf26297610cf45a49}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a42c97b027ed4056cf26297610cf45a49}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!illformed@{illformed}}
+\index{illformed@{illformed}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{illformed}{illformed}}
+{\footnotesize\ttfamily bool B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::illformed}
+
+
+
+Definition at line 148 of file Lex.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_af83e069d11599f29a9e510d8a350c71e}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_af83e069d11599f29a9e510d8a350c71e}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!inhibitSpecialFunctions@{inhibitSpecialFunctions}}
+\index{inhibitSpecialFunctions@{inhibitSpecialFunctions}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{inhibitSpecialFunctions}{inhibitSpecialFunctions}}
+{\footnotesize\ttfamily bool B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::inhibit\+Special\+Functions}
+
+
+
+Definition at line 133 of file Lex.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a5bbad6ef5e6ad4de5b9ba16ff72483ba}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a5bbad6ef5e6ad4de5b9ba16ff72483ba}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!keywords@{keywords}}
+\index{keywords@{keywords}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{keywords}{keywords}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structBBP_1_1std_1_1STATIC__PAGE}{std\+::\+S\+T\+A\+T\+I\+C\+\_\+\+P\+A\+GE}}$<$\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__keyword}{lex\+\_\+keyword}}, 256$>$ B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::keywords}
+
+
+
+Definition at line 127 of file Lex.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_ae44b9b00f1ba64a04618d9cbb6358994}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_ae44b9b00f1ba64a04618d9cbb6358994}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!keywordStack@{keywordStack}}
+\index{keywordStack@{keywordStack}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{keywordStack}{keywordStack}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{std\+::\+Stack}}$<$\mbox{\hyperlink{structBBP_1_1std_1_1Lexer_1_1lex__keyword}{lex\+\_\+keyword}}$>$ B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::keyword\+Stack}
+
+
+
+Definition at line 130 of file Lex.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a2095e84753a94f2db22e3d48fc4d2f1c}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a2095e84753a94f2db22e3d48fc4d2f1c}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!lastWhiteSpace@{lastWhiteSpace}}
+\index{lastWhiteSpace@{lastWhiteSpace}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{lastWhiteSpace}{lastWhiteSpace}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_a4e12dc72cb7f796de80bc851c86c658e}{index\+\_\+t}} B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::last\+White\+Space}
+
+
+
+Definition at line 138 of file Lex.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_ac2d532a2467ca11090dd26491a44ffe7}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_ac2d532a2467ca11090dd26491a44ffe7}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!literalDepth@{literalDepth}}
+\index{literalDepth@{literalDepth}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{literalDepth}{literalDepth}}
+{\footnotesize\ttfamily char B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::literal\+Depth}
+
+
+
+Definition at line 141 of file Lex.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a6e1c536f660c456acaf5a245b61068e1}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a6e1c536f660c456acaf5a245b61068e1}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!syspathPage@{syspathPage}}
+\index{syspathPage@{syspathPage}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{syspathPage}{syspathPage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_aa628d4212b7e43b58f01273f47ecf4c6}{std\+::static\+\_\+string}}$<$1024$>$ B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::syspath\+Page}
+
+
+
+Definition at line 152 of file Lex.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a33f165b5bd78c9ae8188f49afe99307c}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a33f165b5bd78c9ae8188f49afe99307c}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!syspaths@{syspaths}}
+\index{syspaths@{syspaths}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{syspaths}{syspaths}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{std\+::\+Stack}}$<$\mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std\+::string\+\_\+element}}$>$ B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::syspaths}
+
+
+
+Definition at line 154 of file Lex.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a58b880e5e1c0749387ab698d8522c677}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a58b880e5e1c0749387ab698d8522c677}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!usrpathPage@{usrpathPage}}
+\index{usrpathPage@{usrpathPage}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{usrpathPage}{usrpathPage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceBBP_1_1std_aa628d4212b7e43b58f01273f47ecf4c6}{std\+::static\+\_\+string}}$<$1024$>$ B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::usrpath\+Page}
+
+
+
+Definition at line 151 of file Lex.\+h.
+
+\mbox{\Hypertarget{classBBP_1_1std_1_1Lexer_1_1lex__context_a5c8aa3675b2e2225645701364d075e3f}\label{classBBP_1_1std_1_1Lexer_1_1lex__context_a5c8aa3675b2e2225645701364d075e3f}} 
+\index{BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}!usrpaths@{usrpaths}}
+\index{usrpaths@{usrpaths}!BBP::std::Lexer::lex\_context@{BBP::std::Lexer::lex\_context}}
+\doxysubsubsection{\texorpdfstring{usrpaths}{usrpaths}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBBP_1_1std_1_1Stack}{std\+::\+Stack}}$<$\mbox{\hyperlink{namespaceBBP_1_1std_aa4895fd7a0ffe3b69a98a63605dd421e}{std\+::string\+\_\+element}}$>$ B\+B\+P\+::std\+::\+Lexer\+::lex\+\_\+context\+::usrpaths}
+
+
+
+Definition at line 153 of file Lex.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Lex_8h}{Lex.\+h}}\item 
+\mbox{\hyperlink{Processor_8cpp}{Processor.\+cpp}}\item 
+\mbox{\hyperlink{Lexer_8cpp}{Lexer.\+cpp}}\end{DoxyCompactItemize}

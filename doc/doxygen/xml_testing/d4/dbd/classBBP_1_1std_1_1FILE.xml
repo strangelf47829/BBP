@@ -1,0 +1,545 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d4/dbd/classBBP_1_1std_1_1FILE" kind="class" language="C++" prot="public">
+    <compoundname>BBP::std::FILE</compoundname>
+    <includes refid="d0/d00/FileSys_8h" local="no">FileSys.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d4/dbd/classBBP_1_1std_1_1FILE_1a4cc6d1954c3b4a450546f08281fb3e1f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BBP::std::FILE::_is_on_disk</definition>
+        <argsstring></argsstring>
+        <name>_is_on_disk</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="140" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" bodystart="140" bodyend="-1"/>
+        <referencedby refid="d4/dbd/classBBP_1_1std_1_1FILE_1a416594fb841611d072c639a32a273f36" compoundref="d0/d00/FileSys_8h" startline="115" endline="115">on_disk</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dbd/classBBP_1_1std_1_1FILE_1ada68d797700456f2a70af62c8d26cf01" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BBP::std::FILE::_dealloc_page</definition>
+        <argsstring></argsstring>
+        <name>_dealloc_page</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="141" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dbd/classBBP_1_1std_1_1FILE_1ada2d970c06f0ba46ff538b177d0f955f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BBP::std::FILE::_loaded_intomem</definition>
+        <argsstring></argsstring>
+        <name>_loaded_intomem</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="142" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dbd/classBBP_1_1std_1_1FILE_1a5e14d5a3780ccc517aa1118209f630d8" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BBP::std::FILE::_unload_inode</definition>
+        <argsstring></argsstring>
+        <name>_unload_inode</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="143" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/dbd/classBBP_1_1std_1_1FILE_1a643ff1b3da8be4801daaaf0f028875e0" prot="private" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a64e230700a3e0a1b00128beb2598b138" kindref="member">noderef_t</ref></type>
+        <definition>noderef_t BBP::std::FILE::node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="145" column="11" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1a286d9d0aca6078e4eb09362f8acaee22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BBP::std::FILE::FILE</definition>
+        <argsstring>()</argsstring>
+        <name>FILE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="104" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/File.cpp" bodystart="4" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1aa5c9afde2a4904368e27716b4a8e1eed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BBP::std::FILE::FILE</definition>
+        <argsstring>(std::PATH)</argsstring>
+        <name>FILE</name>
+        <param>
+          <type><ref refid="d8/dea/classBBP_1_1std_1_1PATH" kindref="compound">std::PATH</ref></type>
+          <defname>path</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="105" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/File.cpp" bodystart="55" bodyend="84"/>
+        <references refid="dd/d98/namespaceBBP_1_1std_1aa60abaeb09636beab2b015bd36bd00f3">BBP::std::activemem</references>
+        <references refid="d8/dc2/errno_8h_1a03e689f378f643d16ea7537918528a48" compoundref="d8/dc2/errno_8h" startline="14">ENOENT</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a750ba4c285e0788e84722a30a776b913" compoundref="d4/df4/Except_8cpp" startline="7" endline="18">BBP::std::exception</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a7c2cf948f284453f293b08b6d7b726ff">BBP::std::fileTable</references>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1abb0bdd4716fd2e57f0d46e7fe26c7adc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BBP::std::FILE::FILE</definition>
+        <argsstring>(std::conststring)</argsstring>
+        <name>FILE</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">std::conststring</ref></type>
+          <defname>_path</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="106" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/File.cpp" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1a559d5f29d593814cb3379046cd1f6318" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BBP::std::FILE::FILE</definition>
+        <argsstring>(std::Stack&lt; std::string_element &gt; &amp;data, std::conststring path)</argsstring>
+        <name>FILE</name>
+        <param>
+          <type><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack</ref>&lt; <ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">std::string_element</ref> &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">std::conststring</ref></type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="108" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/File.cpp" bodystart="10" bodyend="27"/>
+        <references refid="d8/dc2/errno_8h_1a0a3bef9e5c47e42917692b5dae3b5498" compoundref="d8/dc2/errno_8h" startline="29">EEXIST</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a750ba4c285e0788e84722a30a776b913" compoundref="d4/df4/Except_8cpp" startline="7" endline="18">BBP::std::exception</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a7c2cf948f284453f293b08b6d7b726ff">BBP::std::fileTable</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a6f9282bf6fa21b21a6bc47ca34968b12">BBP::std::primaryVolume</references>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1a75f50f01820a6cb9d377336aacfd975b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dc/d3b/structBBP_1_1std_1_1FileNode" kindref="compound">FileNode</ref> *</type>
+        <definition>BBP::std::FileNode * BBP::std::FILE::data</definition>
+        <argsstring>()</argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="110" column="10" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/File.cpp" bodystart="141" bodyend="144"/>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a7c2cf948f284453f293b08b6d7b726ff">BBP::std::fileTable</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a1d232f50fc4e569e79449970f1b4bb9e">BBP::std::read</references>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1aafa51bc36e198e57ac71a6d97d1f07dd" compoundref="d0/d00/FileSys_8h" startline="262" endline="280">BBP::std::fprintf</referencedby>
+        <referencedby refid="d9/d6f/namespaceBBP_1ac0a46562b554fd736c409bf2c645c9ba" compoundref="df/d6c/Shell_8cpp" startline="18" endline="93">BBP::shell</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1ae42065d3c2135f0bd24a3402c7a85921" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="de/d21/classBBP_1_1std_1_1Stack" kindref="compound">std::Stack</ref>&lt; <ref refid="dd/d98/namespaceBBP_1_1std_1aa4895fd7a0ffe3b69a98a63605dd421e" kindref="member">std::string_element</ref> &gt; &amp;</type>
+        <definition>BBP::std::Stack&lt; BBP::std::string_element &gt; &amp; BBP::std::FILE::b</definition>
+        <argsstring>()</argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="112" column="12" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/File.cpp" bodystart="168" bodyend="171"/>
+        <referencedby refid="d9/d6f/namespaceBBP_1acdc8259ae9919d6dad925d6ead142a50" compoundref="d7/d40/badapple_8cpp" startline="33" endline="70">BBP::badapple_main</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1aec7ebe885d0c8a1b5bf5b98b4d08a4ef" compoundref="de/db8/R2D_8cpp" startline="167" endline="217">BBP::std::R2D::GetFontFromFile</referencedby>
+        <referencedby refid="d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_1aec4c5d7614d9bdcd3575f4d0c9b52312" compoundref="d2/d15/Lexer_8cpp" startline="25" endline="56">BBP::std::Lexer::lex_context::parseFile</referencedby>
+        <referencedby refid="d9/d6f/namespaceBBP_1a0ba2e2ff83f9f917f9811058a5d02a0b" compoundref="de/dd1/Smile_8cpp" startline="21" endline="306">BBP::smile_main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1a327ef0f05d0b57b4a2b5a67cfeb2165d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BBP::std::FILE::is_open</definition>
+        <argsstring>()</argsstring>
+        <name>is_open</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="114" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/File.cpp" bodystart="161" bodyend="166"/>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a7c2cf948f284453f293b08b6d7b726ff">BBP::std::fileTable</references>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1aafa51bc36e198e57ac71a6d97d1f07dd" compoundref="d0/d00/FileSys_8h" startline="262" endline="280">BBP::std::fprintf</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1a416594fb841611d072c639a32a273f36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BBP::std::FILE::on_disk</definition>
+        <argsstring>()</argsstring>
+        <name>on_disk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="115" column="13" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" bodystart="115" bodyend="115"/>
+        <references refid="d4/dbd/classBBP_1_1std_1_1FILE_1a4cc6d1954c3b4a450546f08281fb3e1f" compoundref="d0/d00/FileSys_8h" startline="140">_is_on_disk</references>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1a0a06d09de567928faea10565289627c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::FILE::close</definition>
+        <argsstring>()</argsstring>
+        <name>close</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="117" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/File.cpp" bodystart="146" bodyend="159"/>
+        <references refid="d6/d73/classBBP_1_1std_1_1ResourceManager_1aabf2f3fcf4ce22bfeefe3a1496f79c89" compoundref="db/d83/Resources_8cpp" startline="108" endline="123">BBP::std::ResourceManager::_delete</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1aa60abaeb09636beab2b015bd36bd00f3">BBP::std::activemem</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a7c2cf948f284453f293b08b6d7b726ff">BBP::std::fileTable</references>
+        <references refid="d6/d73/classBBP_1_1std_1_1ResourceManager_1a88b2740fa8c5b5e30e6ef08cb8c7d883" compoundref="db/d83/Resources_8cpp" startline="57" endline="72">BBP::std::ResourceManager::free</references>
+        <referencedby refid="d9/d6f/namespaceBBP_1acdc8259ae9919d6dad925d6ead142a50" compoundref="d7/d40/badapple_8cpp" startline="33" endline="70">BBP::badapple_main</referencedby>
+        <referencedby refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1aec7ebe885d0c8a1b5bf5b98b4d08a4ef" compoundref="de/db8/R2D_8cpp" startline="167" endline="217">BBP::std::R2D::GetFontFromFile</referencedby>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1af184289074f27f191666564995b2c6d8" compoundref="de/dec/Auxiliary_8cpp" startline="242" endline="343">BBP::esa::esaProcessor::includeFile</referencedby>
+        <referencedby refid="d1/dc2/classBBP_1_1std_1_1Lexer_1_1lex__context_1aec4c5d7614d9bdcd3575f4d0c9b52312" compoundref="d2/d15/Lexer_8cpp" startline="25" endline="56">BBP::std::Lexer::lex_context::parseFile</referencedby>
+        <referencedby refid="d9/d6f/namespaceBBP_1a0ba2e2ff83f9f917f9811058a5d02a0b" compoundref="de/dd1/Smile_8cpp" startline="21" endline="306">BBP::smile_main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1afa777a975006e09f52e8ba06ad8e3f46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d4/dbd/classBBP_1_1std_1_1FILE" kindref="compound">FILE</ref> &amp;</type>
+        <definition>BBP::std::FILE &amp; BBP::std::FILE::write</definition>
+        <argsstring>(std::conststring str)</argsstring>
+        <name>write</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">std::conststring</ref></type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="119" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/File.cpp" bodystart="173" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1a3eadf10876d18fbc31e052cf21750870" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d4/dbd/classBBP_1_1std_1_1FILE" kindref="compound">FILE</ref> &amp;</type>
+        <definition>BBP::std::FILE &amp; BBP::std::FILE::write</definition>
+        <argsstring>(std::c_string &amp;str)</argsstring>
+        <name>write</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a95c149a6e963e567bd059eb11aef4ac8" kindref="member">std::c_string</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="120" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/File.cpp" bodystart="179" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1a6d7c68c28a73ab38e81b051b0ff94f26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d4/dbd/classBBP_1_1std_1_1FILE" kindref="compound">FILE</ref> &amp;</type>
+        <definition>BBP::std::FILE &amp; BBP::std::FILE::write</definition>
+        <argsstring>(std::string &amp;str)</argsstring>
+        <name>write</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1afb582024987be6020cff7542cd771ae7" kindref="member">std::string</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="121" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/File.cpp" bodystart="185" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1a18e35117a9605e8d05f1ef583050f510" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d4/dbd/classBBP_1_1std_1_1FILE" kindref="compound">FILE</ref> &amp;</type>
+        <definition>BBP::std::FILE &amp; BBP::std::FILE::finish</definition>
+        <argsstring>(std::conststring str)</argsstring>
+        <name>finish</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">std::conststring</ref></type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="122" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/File.cpp" bodystart="191" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1a7fa49b46754e7511ca979f26bf30b4cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d4/dbd/classBBP_1_1std_1_1FILE" kindref="compound">FILE</ref> &amp;</type>
+        <definition>BBP::std::FILE &amp; BBP::std::FILE::finish</definition>
+        <argsstring>(std::c_string &amp;str)</argsstring>
+        <name>finish</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1a95c149a6e963e567bd059eb11aef4ac8" kindref="member">std::c_string</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="123" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/File.cpp" bodystart="197" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1ae6dd640f427b528ee984cd2f423efd48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d4/dbd/classBBP_1_1std_1_1FILE" kindref="compound">FILE</ref> &amp;</type>
+        <definition>BBP::std::FILE &amp; BBP::std::FILE::finish</definition>
+        <argsstring>(std::string &amp;str)</argsstring>
+        <name>finish</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1afb582024987be6020cff7542cd771ae7" kindref="member">std::string</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="124" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/File.cpp" bodystart="203" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1a0090603ed90b033e086799fab27bbb03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d4/dbd/classBBP_1_1std_1_1FILE" kindref="compound">FILE</ref> &amp;</type>
+        <definition>BBP::std::FILE &amp; BBP::std::FILE::finish</definition>
+        <argsstring>()</argsstring>
+        <name>finish</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="125" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/File.cpp" bodystart="209" bodyend="213"/>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a92a50044907ba5f40a39efe0bce958d6" compoundref="de/d53/Strings_8h" startline="139">BBP::std::endl</references>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1a3a5b41cabd443a6357ec9b127b6779f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BBP::std::FILE::doesFileExistOnDisk</definition>
+        <argsstring>(std::PATH &amp;)</argsstring>
+        <name>doesFileExistOnDisk</name>
+        <param>
+          <type><ref refid="d8/dea/classBBP_1_1std_1_1PATH" kindref="compound">std::PATH</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="127" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1a03ba90461c28ee4b40e553ef6e490d09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref></type>
+        <definition>std::size_t BBP::std::FILE::getFileSizeFromDisk</definition>
+        <argsstring>(std::PATH &amp;)</argsstring>
+        <name>getFileSizeFromDisk</name>
+        <param>
+          <type><ref refid="d8/dea/classBBP_1_1std_1_1PATH" kindref="compound">std::PATH</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="128" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1a4c82983776bfb246ac53fdc85110f9ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1abd480c5a3803a8d9621cfdc79b051a7c" kindref="member">std::size_t</ref></type>
+        <definition>std::size_t BBP::std::FILE::readFileFromDisk</definition>
+        <argsstring>(std::FileNode *, std::PATH &amp;)</argsstring>
+        <name>readFileFromDisk</name>
+        <param>
+          <type><ref refid="dc/d3b/structBBP_1_1std_1_1FileNode" kindref="compound">std::FileNode</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="d8/dea/classBBP_1_1std_1_1PATH" kindref="compound">std::PATH</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="129" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1a436d6ad8f47c99bdfc47fda45d4c9bee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::FILE::writeFileToDisk</definition>
+        <argsstring>(std::PATH &amp;)</argsstring>
+        <name>writeFileToDisk</name>
+        <param>
+          <type><ref refid="d8/dea/classBBP_1_1std_1_1PATH" kindref="compound">std::PATH</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="130" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1afa2220c5f84d85f20ce69a03e5933128" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::FILE::writeFileToDisk</definition>
+        <argsstring>()</argsstring>
+        <name>writeFileToDisk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="131" column="6"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1a246ab9b5564d7b5fb82509eacf9c5d8e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref></type>
+        <definition>BBP::std::index_t BBP::std::FILE::checkIfIsOpen</definition>
+        <argsstring>(std::conststring path)</argsstring>
+        <name>checkIfIsOpen</name>
+        <param>
+          <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae95e98217b6c3191605f0d7dd5f483a9" kindref="member">std::conststring</ref></type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="136" column="14" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/File.cpp" bodystart="92" bodyend="116"/>
+        <references refid="d3/dce/stddef_8h_1abe45653ace4e77c9ae4612de5535ff1d" compoundref="d3/dce/stddef_8h" startline="6">__UNSAFE__</references>
+        <references refid="dc/d3b/structBBP_1_1std_1_1FileNode_1a63628044bad7cefbed0b9dac6992fb02" compoundref="d0/d00/FileSys_8h" startline="167">BBP::std::FileNode::filePathHash</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a7c2cf948f284453f293b08b6d7b726ff">BBP::std::fileTable</references>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6ea964920435d98b78e3d9898c14fdf2d48" compoundref="d4/d54/Locale_8h" startline="21">BBP::Locale::Japanese::hash</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a1d232f50fc4e569e79449970f1b4bb9e">BBP::std::read</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a53a0c211ad7056be924a561f9ebc8739" compoundref="de/d6d/Strings_8cpp" startline="467" endline="470">BBP::std::strhsh</references>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1a40ac25a8ae2b6fb12dd18d29a2cb2ebf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a4e12dc72cb7f796de80bc851c86c658e" kindref="member">std::index_t</ref></type>
+        <definition>BBP::std::index_t BBP::std::FILE::findClosedFile</definition>
+        <argsstring>()</argsstring>
+        <name>findClosedFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="137" column="14" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/File.cpp" bodystart="118" bodyend="139"/>
+        <references refid="d3/dce/stddef_8h_1abe45653ace4e77c9ae4612de5535ff1d" compoundref="d3/dce/stddef_8h" startline="6">__UNSAFE__</references>
+        <references refid="dc/d3b/structBBP_1_1std_1_1FileNode_1a63628044bad7cefbed0b9dac6992fb02" compoundref="d0/d00/FileSys_8h" startline="167">BBP::std::FileNode::filePathHash</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a7c2cf948f284453f293b08b6d7b726ff">BBP::std::fileTable</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a1d232f50fc4e569e79449970f1b4bb9e">BBP::std::read</references>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/classBBP_1_1std_1_1FILE_1a785a13b9aac16963608a19e872ee3dc9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::FILE::getINodeIndex</definition>
+        <argsstring>(std::PATH &amp;)</argsstring>
+        <name>getINodeIndex</name>
+        <param>
+          <type><ref refid="d8/dea/classBBP_1_1std_1_1PATH" kindref="compound">std::PATH</ref> &amp;</type>
+          <defname>path</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="139" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/File/File.cpp" bodystart="29" bodyend="53"/>
+        <references refid="d8/dc2/errno_8h_1a5554094b3fb4bb6ebeb0157cb3f82a55" compoundref="d8/dc2/errno_8h" startline="35">ENFILE</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a750ba4c285e0788e84722a30a776b913" compoundref="d4/df4/Except_8cpp" startline="7" endline="18">BBP::std::exception</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a7c2cf948f284453f293b08b6d7b726ff">BBP::std::fileTable</references>
+        <references refid="d8/dea/classBBP_1_1std_1_1PATH_1a80a557105fdce73fd255af94f5c33e1d" compoundref="d5/dbb/Path_8cpp" startline="126" endline="177">BBP::std::PATH::makeAbsolutePath</references>
+        <references refid="d8/dea/classBBP_1_1std_1_1PATH_1a57ccb35da441b837888a28f111999d37" compoundref="d5/dbb/Path_8cpp" startline="58" endline="64">BBP::std::PATH::relName</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1afbb239bf4b02ea1a0545667a584d9922">BBP::std::workingDirectory</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>BBP::std::FILE</label>
+        <link refid="d4/dbd/classBBP_1_1std_1_1FILE"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" line="101" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/FileSys.h" bodystart="100" bodyend="146"/>
+    <listofallmembers>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1ada68d797700456f2a70af62c8d26cf01" prot="private" virt="non-virtual"><scope>BBP::std::FILE</scope><name>_dealloc_page</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1a4cc6d1954c3b4a450546f08281fb3e1f" prot="private" virt="non-virtual"><scope>BBP::std::FILE</scope><name>_is_on_disk</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1ada2d970c06f0ba46ff538b177d0f955f" prot="private" virt="non-virtual"><scope>BBP::std::FILE</scope><name>_loaded_intomem</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1a5e14d5a3780ccc517aa1118209f630d8" prot="private" virt="non-virtual"><scope>BBP::std::FILE</scope><name>_unload_inode</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1ae42065d3c2135f0bd24a3402c7a85921" prot="public" virt="non-virtual"><scope>BBP::std::FILE</scope><name>b</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1a246ab9b5564d7b5fb82509eacf9c5d8e" prot="private" virt="non-virtual"><scope>BBP::std::FILE</scope><name>checkIfIsOpen</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1a0a06d09de567928faea10565289627c6" prot="public" virt="non-virtual"><scope>BBP::std::FILE</scope><name>close</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1a75f50f01820a6cb9d377336aacfd975b" prot="public" virt="non-virtual"><scope>BBP::std::FILE</scope><name>data</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1a3a5b41cabd443a6357ec9b127b6779f3" prot="public" virt="non-virtual"><scope>BBP::std::FILE</scope><name>doesFileExistOnDisk</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1a286d9d0aca6078e4eb09362f8acaee22" prot="public" virt="non-virtual"><scope>BBP::std::FILE</scope><name>FILE</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1aa5c9afde2a4904368e27716b4a8e1eed" prot="public" virt="non-virtual"><scope>BBP::std::FILE</scope><name>FILE</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1abb0bdd4716fd2e57f0d46e7fe26c7adc" prot="public" virt="non-virtual"><scope>BBP::std::FILE</scope><name>FILE</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1a559d5f29d593814cb3379046cd1f6318" prot="public" virt="non-virtual"><scope>BBP::std::FILE</scope><name>FILE</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1a40ac25a8ae2b6fb12dd18d29a2cb2ebf" prot="private" virt="non-virtual"><scope>BBP::std::FILE</scope><name>findClosedFile</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1a18e35117a9605e8d05f1ef583050f510" prot="public" virt="non-virtual"><scope>BBP::std::FILE</scope><name>finish</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1a7fa49b46754e7511ca979f26bf30b4cc" prot="public" virt="non-virtual"><scope>BBP::std::FILE</scope><name>finish</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1ae6dd640f427b528ee984cd2f423efd48" prot="public" virt="non-virtual"><scope>BBP::std::FILE</scope><name>finish</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1a0090603ed90b033e086799fab27bbb03" prot="public" virt="non-virtual"><scope>BBP::std::FILE</scope><name>finish</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1a03ba90461c28ee4b40e553ef6e490d09" prot="public" virt="non-virtual"><scope>BBP::std::FILE</scope><name>getFileSizeFromDisk</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1a785a13b9aac16963608a19e872ee3dc9" prot="private" virt="non-virtual"><scope>BBP::std::FILE</scope><name>getINodeIndex</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1a327ef0f05d0b57b4a2b5a67cfeb2165d" prot="public" virt="non-virtual"><scope>BBP::std::FILE</scope><name>is_open</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1a643ff1b3da8be4801daaaf0f028875e0" prot="private" virt="non-virtual"><scope>BBP::std::FILE</scope><name>node</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1a416594fb841611d072c639a32a273f36" prot="public" virt="non-virtual"><scope>BBP::std::FILE</scope><name>on_disk</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1a4c82983776bfb246ac53fdc85110f9ac" prot="public" virt="non-virtual"><scope>BBP::std::FILE</scope><name>readFileFromDisk</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1afa777a975006e09f52e8ba06ad8e3f46" prot="public" virt="non-virtual"><scope>BBP::std::FILE</scope><name>write</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1a3eadf10876d18fbc31e052cf21750870" prot="public" virt="non-virtual"><scope>BBP::std::FILE</scope><name>write</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1a6d7c68c28a73ab38e81b051b0ff94f26" prot="public" virt="non-virtual"><scope>BBP::std::FILE</scope><name>write</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1a436d6ad8f47c99bdfc47fda45d4c9bee" prot="public" virt="non-virtual"><scope>BBP::std::FILE</scope><name>writeFileToDisk</name></member>
+      <member refid="d4/dbd/classBBP_1_1std_1_1FILE_1afa2220c5f84d85f20ce69a03e5933128" prot="public" virt="non-virtual"><scope>BBP::std::FILE</scope><name>writeFileToDisk</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

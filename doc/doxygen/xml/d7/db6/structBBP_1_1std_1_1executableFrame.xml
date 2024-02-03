@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d7/db6/structBBP_1_1std_1_1executableFrame" kind="struct" language="C++" prot="public">
+    <compoundname>BBP::std::executableFrame</compoundname>
+    <includes refid="de/da9/Executable_8h" local="no">Executable.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d7/db6/structBBP_1_1std_1_1executableFrame_1aad4d82c3754c369d17bdc106ee96bf57" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a75edfece8c204f2652788b7bb75a7bd5" kindref="member">PID_t</ref></type>
+        <definition>PID_t BBP::std::executableFrame::PID</definition>
+        <argsstring></argsstring>
+        <name>PID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" line="37" column="7" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1ace14a8680f46b3c05954e4d1f03ab1fe" compoundref="d6/dc6/Executable_8cpp" startline="14" endline="118">BBP::std::execute</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d7/db6/structBBP_1_1std_1_1executableFrame_1af75c3b37d6132ee361e14558067fedde" prot="public" static="no" mutable="no">
+        <type><ref refid="d6/d73/classBBP_1_1std_1_1ResourceManager" kindref="compound">std::ResourceManager</ref> *</type>
+        <definition>std::ResourceManager* BBP::std::executableFrame::pmem</definition>
+        <argsstring></argsstring>
+        <name>pmem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" line="40" column="22" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1ace14a8680f46b3c05954e4d1f03ab1fe" compoundref="d6/dc6/Executable_8cpp" startline="14" endline="118">BBP::std::execute</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d7/db6/structBBP_1_1std_1_1executableFrame_1a2d2b8e40c859fa6bbac332c3dff5eabc" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BBP::std::executableFrame::isActiveFrame</definition>
+        <argsstring></argsstring>
+        <name>isActiveFrame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" line="43" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/db6/structBBP_1_1std_1_1executableFrame_1ad58d1004734295f1b178d8bf0c7d7c2f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BBP::std::executableFrame::isExecuting</definition>
+        <argsstring></argsstring>
+        <name>isExecuting</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" line="46" column="6" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" bodystart="46" bodyend="-1"/>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1ace14a8680f46b3c05954e4d1f03ab1fe" compoundref="d6/dc6/Executable_8cpp" startline="14" endline="118">BBP::std::execute</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d7/db6/structBBP_1_1std_1_1executableFrame_1a10b4c35eb5e80d7a45777d52b1b0eb15" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BBP::std::executableFrame::argc</definition>
+        <argsstring></argsstring>
+        <name>argc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" line="49" column="5" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="7">
+        <label>void * *</label>
+      </node>
+      <node id="14">
+        <label>T</label>
+      </node>
+      <node id="15">
+        <label>void *</label>
+      </node>
+      <node id="4">
+        <label>BBP::std::ResourceManager</label>
+        <link refid="d6/d73/classBBP_1_1std_1_1ResourceManager"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-allocations</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-invalidAllocationIndex</edgelabel>
+          <edgelabel>-invalidObjectIndex</edgelabel>
+          <edgelabel>-nextObjectAvailable</edgelabel>
+          <edgelabel>-nextAllocationAvailable</edgelabel>
+          <edgelabel>+totalAllocations</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>-objects</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>word</label>
+      </node>
+      <node id="10">
+        <label>mem_t *</label>
+      </node>
+      <node id="12">
+        <label>PAGE&lt; T &gt; *</label>
+      </node>
+      <node id="1">
+        <label>BBP::std::executableFrame</label>
+        <link refid="d7/db6/structBBP_1_1std_1_1executableFrame"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+argc</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+isExecuting</edgelabel>
+          <edgelabel>+isActiveFrame</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+pmem</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>+PID</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>BBP::std::AbstractGCEntry</label>
+        <link refid="d7/def/structBBP_1_1std_1_1AbstractGCEntry"/>
+      </node>
+      <node id="8">
+        <label>anonymous:+@1</label>
+      </node>
+      <node id="9">
+        <label>unsigned int</label>
+      </node>
+      <node id="16">
+        <label>BBP::std::STATIC_PAGE&lt; T, K &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>int</label>
+      </node>
+      <node id="5">
+        <label>BBP::std::STATIC_PAGE&lt; void *, max_allocations &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="template-instance">
+          <edgelabel>&lt; void *, max_allocations &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>uint8_t</label>
+      </node>
+      <node id="18">
+        <label>BBP::std::PAGE&lt; BBP::std::AbstractGCEntry * &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="template-instance">
+          <edgelabel>&lt; BBP::std::AbstractGCEntry * &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>bool</label>
+      </node>
+      <node id="6">
+        <label>BBP::std::PAGE&lt; void * &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="template-instance">
+          <edgelabel>&lt; void * &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>BBP::std::PAGE&lt; T &gt;</label>
+        <link refid="df/ddc/structBBP_1_1std_1_1PAGE"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+@1</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+nextPage</edgelabel>
+          <edgelabel>+prevPage</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+dataSize</edgelabel>
+          <edgelabel>+bytes</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>BBP::std::STATIC_PAGE&lt; BBP::std::AbstractGCEntry *, max_objects &gt;</label>
+        <link refid="d4/dea/structBBP_1_1std_1_1STATIC__PAGE"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>+static_data</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="template-instance">
+          <edgelabel>&lt; BBP::std::AbstractGCEntry *, max_objects &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" line="35" column="1" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" bodystart="34" bodyend="51"/>
+    <listofallmembers>
+      <member refid="d7/db6/structBBP_1_1std_1_1executableFrame_1a10b4c35eb5e80d7a45777d52b1b0eb15" prot="public" virt="non-virtual"><scope>BBP::std::executableFrame</scope><name>argc</name></member>
+      <member refid="d7/db6/structBBP_1_1std_1_1executableFrame_1a2d2b8e40c859fa6bbac332c3dff5eabc" prot="public" virt="non-virtual"><scope>BBP::std::executableFrame</scope><name>isActiveFrame</name></member>
+      <member refid="d7/db6/structBBP_1_1std_1_1executableFrame_1ad58d1004734295f1b178d8bf0c7d7c2f" prot="public" virt="non-virtual"><scope>BBP::std::executableFrame</scope><name>isExecuting</name></member>
+      <member refid="d7/db6/structBBP_1_1std_1_1executableFrame_1aad4d82c3754c369d17bdc106ee96bf57" prot="public" virt="non-virtual"><scope>BBP::std::executableFrame</scope><name>PID</name></member>
+      <member refid="d7/db6/structBBP_1_1std_1_1executableFrame_1af75c3b37d6132ee361e14558067fedde" prot="public" virt="non-virtual"><scope>BBP::std::executableFrame</scope><name>pmem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

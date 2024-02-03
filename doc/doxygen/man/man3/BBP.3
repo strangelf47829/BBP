@@ -1,0 +1,841 @@
+.TH "BBP" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BBP
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBesa\fP"
+.br
+.ti -1c
+.RI " \fBLocale\fP"
+.br
+.ti -1c
+.RI " \fBstd\fP"
+.br
+.ti -1c
+.RI " \fBuserspace\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef signed char \fBint8_t\fP"
+.br
+.ti -1c
+.RI "typedef short \fBint16_t\fP"
+.br
+.ti -1c
+.RI "typedef int \fBint32_t\fP"
+.br
+.ti -1c
+.RI "typedef long long \fBint64_t\fP"
+.br
+.ti -1c
+.RI "typedef unsigned char \fBuint8_t\fP"
+.br
+.ti -1c
+.RI "typedef unsigned short \fBuint16_t\fP"
+.br
+.ti -1c
+.RI "typedef unsigned int \fBuint32_t\fP"
+.br
+.ti -1c
+.RI "typedef unsigned long long \fBuint64_t\fP"
+.br
+.ti -1c
+.RI "typedef signed char \fBint_least8_t\fP"
+.br
+.ti -1c
+.RI "typedef short \fBint_least16_t\fP"
+.br
+.ti -1c
+.RI "typedef int \fBint_least32_t\fP"
+.br
+.ti -1c
+.RI "typedef long long \fBint_least64_t\fP"
+.br
+.ti -1c
+.RI "typedef unsigned char \fBuint_least8_t\fP"
+.br
+.ti -1c
+.RI "typedef unsigned short \fBuint_least16_t\fP"
+.br
+.ti -1c
+.RI "typedef unsigned int \fBuint_least32_t\fP"
+.br
+.ti -1c
+.RI "typedef unsigned long long \fBuint_least64_t\fP"
+.br
+.ti -1c
+.RI "typedef signed char \fBint_fast8_t\fP"
+.br
+.ti -1c
+.RI "typedef int \fBint_fast16_t\fP"
+.br
+.ti -1c
+.RI "typedef int \fBint_fast32_t\fP"
+.br
+.ti -1c
+.RI "typedef long long \fBint_fast64_t\fP"
+.br
+.ti -1c
+.RI "typedef unsigned char \fBuint_fast8_t\fP"
+.br
+.ti -1c
+.RI "typedef unsigned int \fBuint_fast16_t\fP"
+.br
+.ti -1c
+.RI "typedef unsigned int \fBuint_fast32_t\fP"
+.br
+.ti -1c
+.RI "typedef unsigned long long \fBuint_fast64_t\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBshell\fP (\fBBBP::std::string\fP &str)"
+.br
+.ti -1c
+.RI "int \fBshell\fP (const char *ss)"
+.br
+.ti -1c
+.RI "int \fBshell_main\fP (int argc, char **argv)"
+.br
+.ti -1c
+.RI "int \fBboot_main\fP (int, char **)"
+.br
+.ti -1c
+.RI "int \fBlogout_main\fP (int, char **)"
+.br
+.ti -1c
+.RI "int \fBneofetch_main\fP (int, char **)"
+.br
+.ti -1c
+.RI "int \fBbadapple_main\fP (int, char **)"
+.br
+.ti -1c
+.RI "int \fBsmile_main\fP (int, char **)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBBBP::std::static_string\fP< 509 > \fBlinePage\fP"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef short \fBBBP::int16_t\fP"
+
+.PP
+Definition at line 8 of file stdint\&.h\&.
+.SS "typedef int \fBBBP::int32_t\fP"
+
+.PP
+Definition at line 9 of file stdint\&.h\&.
+.SS "typedef long long \fBBBP::int64_t\fP"
+
+.PP
+Definition at line 11 of file stdint\&.h\&.
+.SS "typedef signed char \fBBBP::int8_t\fP"
+
+.PP
+Definition at line 7 of file stdint\&.h\&.
+.SS "typedef int \fBBBP::int_fast16_t\fP"
+
+.PP
+Definition at line 34 of file stdint\&.h\&.
+.SS "typedef int \fBBBP::int_fast32_t\fP"
+
+.PP
+Definition at line 35 of file stdint\&.h\&.
+.SS "typedef long long \fBBBP::int_fast64_t\fP"
+
+.PP
+Definition at line 37 of file stdint\&.h\&.
+.SS "typedef signed char \fBBBP::int_fast8_t\fP"
+
+.PP
+Definition at line 33 of file stdint\&.h\&.
+.SS "typedef short \fBBBP::int_least16_t\fP"
+
+.PP
+Definition at line 21 of file stdint\&.h\&.
+.SS "typedef int \fBBBP::int_least32_t\fP"
+
+.PP
+Definition at line 22 of file stdint\&.h\&.
+.SS "typedef long long \fBBBP::int_least64_t\fP"
+
+.PP
+Definition at line 24 of file stdint\&.h\&.
+.SS "typedef signed char \fBBBP::int_least8_t\fP"
+
+.PP
+Definition at line 20 of file stdint\&.h\&.
+.SS "typedef unsigned short \fBBBP::uint16_t\fP"
+
+.PP
+Definition at line 14 of file stdint\&.h\&.
+.SS "typedef unsigned int \fBBBP::uint32_t\fP"
+
+.PP
+Definition at line 15 of file stdint\&.h\&.
+.SS "typedef unsigned long long \fBBBP::uint64_t\fP"
+
+.PP
+Definition at line 17 of file stdint\&.h\&.
+.SS "typedef unsigned char \fBBBP::uint8_t\fP"
+
+.PP
+Definition at line 13 of file stdint\&.h\&.
+.SS "typedef unsigned int \fBBBP::uint_fast16_t\fP"
+
+.PP
+Definition at line 40 of file stdint\&.h\&.
+.SS "typedef unsigned int \fBBBP::uint_fast32_t\fP"
+
+.PP
+Definition at line 41 of file stdint\&.h\&.
+.SS "typedef unsigned long long \fBBBP::uint_fast64_t\fP"
+
+.PP
+Definition at line 43 of file stdint\&.h\&.
+.SS "typedef unsigned char \fBBBP::uint_fast8_t\fP"
+
+.PP
+Definition at line 39 of file stdint\&.h\&.
+.SS "typedef unsigned short \fBBBP::uint_least16_t\fP"
+
+.PP
+Definition at line 27 of file stdint\&.h\&.
+.SS "typedef unsigned int \fBBBP::uint_least32_t\fP"
+
+.PP
+Definition at line 28 of file stdint\&.h\&.
+.SS "typedef unsigned long long \fBBBP::uint_least64_t\fP"
+
+.PP
+Definition at line 30 of file stdint\&.h\&.
+.SS "typedef unsigned char \fBBBP::uint_least8_t\fP"
+
+.PP
+Definition at line 26 of file stdint\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "int BBP::badapple_main (int argc, char ** argv)"
+
+.PP
+Definition at line 33 of file badapple\&.cpp\&.
+.PP
+.nf
+34 {
+35 
+36     char *fileName = (char *)BBP::std::activemem->calloc(34, sizeof(char));
+37 
+38 
+39     BBP::std::ResourceManager *oldMem = BBP::std::activemem;
+40     BBP::std::activemem = &framePage;
+41 
+42     for (unsigned int i = 1; i < FRAMECOUNT + 1; i += 1)
+43     {
+44         BBP::std::sprintf(fileName, "/home/bapple/ascii/%04u\&.txt", i);
+45         
+46 
+47         std::FILE frame(fileName);
+48 
+49         ::std::printf("%s", frame\&.b()\&.page->data);
+50         
+51 
+52         frame\&.close();
+53 
+54         std::delay(1000 / FRAMERATE);
+55         std::printf("\033[2J\033[1;1H");
+56         system("clear");
+57         
+58         if (i % 50 == 0)
+59             BBP::std::activemem->deleteAll();
+60 
+61 
+62 
+63     }
+64 
+65     BBP::std::activemem->deleteAll();
+66 
+67     BBP::std::activemem = oldMem;
+68     std::activemem->free(fileName);
+69     return 0;
+70 }
+.fi
+.PP
+References BBP::std::activemem, BBP::std::FILE::b(), BBP::std::FILE::close(), BBP::std::PAGE< T >::data, BBP::std::delay(), BBP::std::ResourceManager::deleteAll(), FRAMECOUNT, framePage, FRAMERATE, BBP::std::ResourceManager::free(), BBP::Locale::Japanese::i, BBP::std::Stack< K >::page, BBP::std::printf(), and BBP::std::sprintf()\&.
+.SS "int BBP::boot_main (int, char **)"
+
+.SS "int BBP::logout_main (int argc, char ** argv)"
+
+.PP
+Definition at line 10 of file Logout\&.cpp\&.
+.PP
+.nf
+11 {
+12     __SIGNAL__(SIGSHTDN);
+13 }
+.fi
+.PP
+References __SIGNAL__, and BBP::std::SIGSHTDN\&.
+.SS "int BBP::neofetch_main (int argc, char ** argv)"
+
+.PP
+Definition at line 17 of file neofetch\&.cpp\&.
+.PP
+.nf
+18 {
+19 
+20     //std::printf(RED "BBBBBBBBBBBBBBBBB   BBBBBBBBBBBBBBBBB" NORM "\n");
+21     //std::printf(RED "B::::::::::::::::B  B::::::::::::::::B" NORM "\n");
+22     //std::printf(RED "B::::::BBBBBB:::::B B::::::BBBBBB:::::B" NORM "\n");
+23     //std::printf(RED "BB:::::B     B:::::BBB:::::B     B:::::B" NORM "\n");
+24     //std::printf(RED "  B::::B     B:::::B  B::::B     B:::::B" NORM "\n");
+25     //std::printf(RED "  B::::B     B:::::B  B::::B     B:::::B" NORM "\n");
+26     //std::printf(RED "  B::::BBBBBB:::::B   B::::BBBBBB:::::B" NORM "\n");
+27     //std::printf(RED "  B:::::::::::::BB    B:::::::::::::BB" NORM "\n");
+28     //std::printf(RED "  B::::BBBBBB:::::B   B::::BBBBBB:::::B" NORM "\n");
+29     //std::printf(RED "  B::::B     B:::::B  B::::B     B:::::B" NORM "\n");
+30     //std::printf(RED "  B::::B     B:::::B  B::::B     B:::::B" NORM "\n");
+31     //std::printf(RED "  B::::B     B:::::B  B::::B     B:::::B" NORM "\n");
+32     //std::printf(RED "BB:::::BBBBBB::::::BBB:::::BBBBBB::::::B" NORM "\n");
+33     //std::printf(RED "B:::::::::::::::::B B:::::::::::::::::B" NORM "\n");
+34     //std::printf(RED "B::::::::::::::::B  B::::::::::::::::B" NORM "\n");
+35     //std::printf(RED "BBBBBBBBBBBBBBBBB   BBBBBBBBBBBBBBBBB" NORM "\n");
+36 
+37     std::printf(RED "        66666666    " NORM "         000000000          77777777777777777777" NORM "\n");
+38     std::printf(RED "       6::::::6     " NORM "       00:::::::::00        7::::::::::::::::::7" NORM "     " RED HOSTNAME NORM "\n");
+39     std::printf(RED "      6::::::6      " NORM "     00:::::::::::::00      7::::::::::::::::::7" NORM "     ---------- " "\n");
+40     std::printf(RED "     6::::::6       " NORM "    0:::::::000:::::::0     777777777777:::::::7" NORM "     " RED "OS: " NORM OS "\n");
+41     std::printf(RED "    6::::::6        " NORM "    0::::::0   0::::::0                7::::::7 " NORM "     " RED "Kernel: " NORM KERNEL "\n");
+42     std::printf(RED "   6::::::6         " NORM "    0:::::0     0:::::0               7::::::7  " NORM "     " RED "Shell: " NORM SHELL "\n");
+43     std::printf(RED "  6::::::6          " NORM "    0:::::0     0:::::0              7::::::7   " NORM "     " RED "Terminal: " NORM TERMINAL "\n");
+44     std::printf(RED " 6::::::::66666     " NORM "    0:::::0 000 0:::::0             7::::::7    " NORM "     " RED "CPU: " NORM CPU "\n");
+45     std::printf(RED "6::::::::::::::66   " NORM "    0:::::0 000 0:::::0            7::::::7     " NORM "     " RED "Awesome: " NORM "Yes" "\n");
+46     std::printf(RED "6::::::66666:::::6  " NORM "    0:::::0     0:::::0           7::::::7      " NORM "\n");
+47     std::printf(RED "6:::::6     6:::::6 " NORM "    0:::::0     0:::::0          7::::::7       " NORM "\n");
+48     std::printf(RED "6:::::6     6:::::6 " NORM "    0::::::0   0::::::0         7::::::7        " NORM "\n");
+49     std::printf(RED "6::::::66666::::::6 " NORM "    0:::::::000:::::::0        7::::::7         " NORM "\n");
+50     std::printf(RED " 66:::::::::::::66  " NORM "     00:::::::::::::00        7::::::7          " NORM "\n");
+51     std::printf(RED "   66:::::::::66    " NORM "       00:::::::::00         7::::::7           " NORM "\n");
+52     std::printf(RED "     666666666      " NORM "         000000000          77777777            " NORM "\n");
+53 
+54 
+55     return 0;
+56 }
+.fi
+.PP
+References CPU, HOSTNAME, KERNEL, NORM, OS, BBP::std::printf(), RED, SHELL, and TERMINAL\&.
+.SS "int BBP::shell (\fBBBP::std::string\fP & str)"
+
+.PP
+Definition at line 18 of file Shell\&.cpp\&.
+.PP
+.nf
+19     {
+20         // Get the first command line arg
+21         std::c_string command = std::read_a(&str, 0);
+22         
+23         // Then go until space
+24         for (std::index_t index = 0; index < str\&.dataSize; index++)
+25         {
+26             // Read char at index index
+27             std::string_element c = std::read(&str, index);
+28 
+29             // Check if 'c' is a space
+30             if (c != ' ')
+31                 continue;
+32             
+33             str\&.data[index] = 0;
+34             break;
+35 
+36         }
+37 
+38         // If string is just empty, do nothing
+39         if (command[0] == 0)
+40             return 0;
+41 
+42         // Create paths
+43         std::PATH procPath("/proc/exec/");
+44         procPath\&.makeAbsolutePath(std::workingDirectory);
+45         std::PATH executable(command);
+46         executable\&.makeAbsolutePath(&procPath);
+47 
+48         
+49 
+50         try 
+51         {
+52             // Create file, if it exists, no error will be thrown\&. Otherwise, an error will be thrown\&.
+53             std::FILE executableFile(executable);
+54 
+55             // The file exists\&. Check if the page has the correct magic numbers\&.
+56             std::mem_t magic0 = std::read_r(executableFile\&.data()->fileData\&.page, BBP_EXEC_MAGIC0IDX);
+57             std::mem_t magic1 = std::read_r(executableFile\&.data()->fileData\&.page, BBP_EXEC_MAGIC1IDX);
+58             std::mem_t magic2 = std::read_r(executableFile\&.data()->fileData\&.page, BBP_EXEC_MAGIC2IDX);
+59             std::mem_t magic3 = std::read_r(executableFile\&.data()->fileData\&.page, BBP_EXEC_MAGIC3IDX);
+60 
+61             // If the magic matches up, this file is an executable\&.
+62             bool isMachineCodeExecutable = (magic0 == BBP_EXEC_MAGIC0) && (magic1 == BBP_EXEC_MAGIC1) && (magic2 == BBP_EXEC_MAGIC2) && (magic3 == BBP_EXEC_MAGIC3);
+63             
+64             if (isMachineCodeExecutable)
+65             {
+66                 // This file is an executable in machine code format\&. Extract the function from the page, and execute\&.
+67                 std::executable_main _entry = ((std::executable_main *)executableFile\&.data()->fileData\&.page->raw)[0];
+68                 std::execute(_entry, 0, nullptr);
+69             }
+70             else
+71             {
+72                 std::printf("%s: Exec format error\&.\n", command);
+73             }
+74 
+75             return std::__errno;
+76 
+77         }
+78         catch (std::except const &e)
+79         {
+80             switch (std::__errno)
+81             {
+82             case ENOENT:
+83                 std::printf("%s: command not found\&.\n", command);
+84                 std::__errno = 0;
+85                 return -1;
+86                 break;
+87             default:
+88                 // Unkown error, rethrow
+89                 throw;
+90             }
+91         }
+92 
+93     }
+.fi
+.PP
+References BBP_EXEC_MAGIC0, BBP_EXEC_MAGIC0IDX, BBP_EXEC_MAGIC1, BBP_EXEC_MAGIC1IDX, BBP_EXEC_MAGIC2, BBP_EXEC_MAGIC2IDX, BBP_EXEC_MAGIC3, BBP_EXEC_MAGIC3IDX, BBP::std::PAGE< T >::data, BBP::std::FILE::data(), BBP::std::PAGE< T >::dataSize, BBP::Locale::Japanese::e, ENOENT, BBP::std::execute(), BBP::std::FileNode::fileData, BBP::std::PATH::makeAbsolutePath(), BBP::std::Stack< K >::page, BBP::std::printf(), BBP::std::PAGE< T >::raw, BBP::std::read(), BBP::std::read_a(), BBP::std::read_r(), and BBP::std::workingDirectory\&.
+.PP
+Referenced by shell(), and shell_main()\&.
+.SS "int BBP::shell (const char * ss)"
+
+.PP
+Definition at line 95 of file Shell\&.cpp\&.
+.PP
+.nf
+96     {
+97         // Get string length
+98         std::size_t strL = std::strlen(ss);
+99 
+100         // Create new string of that size
+101         std::string str(strL + 1, (std::string_element *)BBP::std::activemem->calloc(strL + 1, sizeof(std::string_element)));
+102 
+103         // Copy string
+104         std::strcpy(&str, ss);
+105 
+106         // save shell return value
+107         int s = shell(str);
+108 
+109         // Free string mem
+110         BBP::std::activemem->free(str\&.data);
+111 
+112         // Return shell result
+113         return s;
+114 
+115     }
+.fi
+.PP
+References BBP::std::activemem, BBP::std::PAGE< T >::data, BBP::std::ResourceManager::free(), shell(), BBP::std::strcpy(), and BBP::std::strlen()\&.
+.SS "int BBP::shell_main (int argc, char ** argv)"
+
+.PP
+Definition at line 120 of file Shell\&.cpp\&.
+.PP
+.nf
+121     {
+122         // This surpresses the g++ unused parameters warnings
+123         argc = argc;
+124         argv = argv;
+125 
+126         int count = 0;
+127         bool doLoop = true;
+128 
+129         shell("elsa");
+130         return 0;
+131 
+132         while (true)
+133         {
+134             std::printf("\e[0;92m" HOSTNAME "\e[0;37m:\e[1;34m%s\e[0;37m$ ", std::workingDirectory->relName());
+135 
+136             while (doLoop)
+137             {
+138                 std::getC();
+139                 if (std::STDIN\&.atElement)
+140                 {
+141                     char c = 0;
+142                     char del = 0x08;
+143                     std::STDIN >> c;
+144 
+145                     //std::printf("0x%02x ", c);
+146 
+147                     switch (c)
+148                     {
+149                     case 0x0a:
+150                     case 0x0d:
+151                         doLoop = false;
+152                         
+153                         break;
+154 
+155                     case 12:
+156                         // Screen clear
+157                         std::printf("\033[2J\033[1;1H");
+158                         std::printf("\e[0;92m" HOSTNAME "\e[0;37m:\e[1;34m%s\e[0;37m$ ", std::workingDirectory->relName());
+159                         break;
+160 
+161                     case 0x7f:
+162                         
+163                         if (line\&.atElement)
+164                         {
+165                             std::STDOUT <<= del;
+166                             std::STDOUT <<= ' ';
+167                             std::STDOUT <<= del;
+168                             line--;
+169                         }
+170 
+171                         break;
+172                     default:
+173                         std::STDOUT <<= c;
+174                         line << c;
+175                         break;
+176                     }
+177                 }
+178             }
+179             line << '\0';
+180             std::printf("\n");
+181             shell(linePage);
+182             line\&.atElement = 0;
+183             count++;
+184             doLoop = true;
+185         }
+186 
+187 
+188         return 0;
+189     }
+.fi
+.PP
+References BBP::std::getC(), HOSTNAME, linePage, BBP::std::printf(), shell(), BBP::std::STDIN, BBP::std::STDOUT, and BBP::std::workingDirectory\&.
+.SS "int BBP::smile_main (int argc, char ** argv)"
+
+.PP
+Definition at line 21 of file Smile\&.cpp\&.
+.PP
+.nf
+22 {
+23     /*
+24     
+25     std::window *w = &BBP::std::kernelDisplay;
+26 
+27     for (std::index_t idx = 0; idx < points - 1; idx++)
+28         std::R2D::Line(w, xpoints[idx], ypoints[idx], xpoints[idx + 1], ypoints[idx + 1]);
+29     std::R2D::Line(w, xpoints[0], ypoints[0], xpoints[points - 1], ypoints[points - 1]);
+30 
+31     std::R2D::Line(w, 770, 405, 770, 420);
+32     std::R2D::Line(w, 780, 405, 780, 420);
+33 
+34     std::R2D::Line(w, 740, 470, 810, 470);
+35     std::R2D::Line(w, 740, 470, 735, 465);
+36     std::R2D::Line(w, 810, 470, 815, 465);
+37 
+38     
+39 
+40     std::pos_t xo = w->cursorPosX;
+41     std::pos_t yo = w->cursorPosY;
+42     std::pos_t co = w->coloumn;
+43     std::pos_t lo = w->line;
+44 
+45     w->fontSize = 5;
+46     w->cursorPosX = 500;
+47     w->cursorPosY = 200;
+48     w->coloumn = 0;
+49     w->line = 0;
+50     const char *hello = "\xe1\xe1!\n";
+51 
+52     std::R2D::print(w, hello);
+53 
+54     w->fontSize = 0;
+55     w->cursorPosX = 0;
+56     w->cursorPosY = yo;
+57     w->coloumn = co;
+58     w->line = lo;
+59     
+60     */
+61 
+62     std::PATH testFile("/boot/ELSA\&.esa");
+63     std::PATH dstFile("/boot/ELSA\&.o");
+64 
+65     // Compile source
+66     esa::processor\&.translate(testFile, dstFile);
+67 
+68     // Now try and deconstruct it
+69     std::FILE compiledFile(dstFile);
+70 
+71     // Get processor
+72     std::ELF::ELFBuilder compiled(compiledFile\&.b()\&.page, std::activemem);
+73 
+74     // Now we can do whatever
+75     for (std::index_t index = 0; index < compiled\&.symbolCount; index++)
+76     {
+77         // Check symbol stuff
+78         if (compiled\&.symbols[index]\&.info() & std::ELF::SYM_FUNC)
+79             std::printf("Symbol %u is a function\&.\n", index);
+80     }
+81 
+82     // Spawn thread
+83     userspace::Thread t;
+84     userspace::setRegister(t\&.eip, 0);
+85 
+86     for (std::byte ii = 0; ii < 16; ii++)
+87     {
+88 
+89         // Get Instruction pointer
+90         std::word instructionIndex = userspace::readRegister(t\&.eip);
+91 
+92         // Instruction header
+93         std::offset_t textAt = compiled\&._text()\&.offset();
+94         std::byte prefix = compiled\&.file\&.data[textAt + instructionIndex * 4 + 0];
+95         std::byte opcode = compiled\&.file\&.data[textAt + instructionIndex * 4 + 1];
+96         std::byte suffix = compiled\&.file\&.data[textAt + instructionIndex * 4 + 2];
+97         std::byte args = compiled\&.file\&.data[textAt + instructionIndex * 4 + 3];
+98 
+99         // Decode stuff
+100         std::printf("\&.text+0x%04x:\t0x%02x %02x %02x %02x\n\t", instructionIndex * 4, prefix, opcode, suffix, args);
+101 
+102         for (std::byte idx = 0; idx < args; idx++)
+103             if (prefix & (1 << idx))
+104                 std::printf("r");
+105             else
+106                 std::printf("c");
+107 
+108         std::printf(" ");
+109 
+110         switch (opcode)
+111         {
+112         case userspace::NIL:
+113             std::printf("NIL");
+114             break;
+115         case userspace::STACK:
+116             std::printf("STACK");
+117             break;
+118         case userspace::CTRL:
+119             std::printf("CTRL");
+120             break;
+121         case userspace::MEM:
+122             std::printf("MEM");
+123             break;
+124         case userspace::INC:
+125             std::printf("INC");
+126             break;
+127         case userspace::DEC:
+128             std::printf("DEC");
+129             break;
+130         case userspace::NEG:
+131             std::printf("NEG");
+132             break;
+133         case userspace::ADD:
+134             std::printf("ADD");
+135             break;
+136         case userspace::SUB:
+137             std::printf("SUB");
+138             break;
+139         case userspace::MUL:
+140             std::printf("MUL");
+141             break;
+142         case userspace::DIV:
+143             std::printf("DIV");
+144             break;
+145         case userspace::MOD:
+146             std::printf("MOD");
+147             break;
+148         case userspace::LBS:
+149             std::printf("LBS");
+150             break;
+151         case userspace::RBS:
+152             std::printf("RBS");
+153             break;
+154         case userspace::OR:
+155             std::printf("OR");
+156             break;
+157         case userspace::XOR:
+158             std::printf("XOR");
+159             break;
+160         case userspace::AND:
+161             std::printf("AND");
+162             break;
+163         case userspace::NOT:
+164             std::printf("NOT");
+165             break;
+166         case userspace::FLAG:
+167             std::printf("FLAG");
+168             break;
+169         case userspace::JMP:
+170             std::printf("JMP");
+171             break;
+172         case userspace::JMPZ:
+173             std::printf("JMPZ");
+174             break;
+175         case userspace::JMPC:
+176             std::printf("JMPC");
+177             break;
+178         case userspace::PAGE:
+179             std::printf("PAGE");
+180             break;
+181         case userspace::SIGNAL:
+182             std::printf("SIGNAL");
+183             break;
+184         case userspace::HALT:
+185             std::printf("HALT");
+186             break;
+187         default:
+188             std::printf("(error)");
+189         }
+190 
+191 
+192         std::printf("\t(%u args)\n", args);
+193 
+194 
+195         // Increase pointer
+196         userspace::setRegister(t\&.eip, instructionIndex + 1);
+197 
+198     }
+199     
+200 
+201     // Close
+202     compiled\&.close();
+203     compiledFile\&.close();
+204 
+205     __SIGNAL__(SIGILL);
+206 
+207 
+208     /*
+209 
+210     std::PATH bootPath("/boot/test\&.lua");
+211     lua::initializeParser();
+212     lua::luaParser\&.parseFile(bootPath);
+213 
+214     */
+215 
+216 
+217 
+218     /*
+219     // Emit header
+220     builder\&.emitHeader();
+221 
+222     builder\&.shstrtab = 1;
+223     builder\&.strtab = 2;
+224     builder\&.symtab = 3;
+225 
+226     builder\&.sections[0]\&.type(std::ELF::SHT_NILL);
+227 
+228     builder\&._shstrtab()\&.Append(64);
+229     builder\&._shstrtab()\&.stack++;
+230     builder\&._shstrtab()\&.stack <<= "\&.shstrtab";
+231     builder\&._shstrtab()\&.type(std::ELF::SHT_STRTAB);
+232     builder\&._shstrtab()\&.name(1);
+233 
+234     builder\&._strtab()\&.Append(64);
+235     builder\&._strtab()\&.name(builder\&._shstrtab()\&.stack\&.atElement);
+236     builder\&._shstrtab()\&.stack <<= "\&.strtab";
+237     builder\&._strtab()\&.type(std::ELF::SHT_STRTAB);
+238 
+239     builder\&._symtab()\&.Append(32);
+240     builder\&._symtab()\&.type(std::ELF::SHT_SYMTAB);
+241     builder\&._symtab()\&.name(builder\&._shstrtab()\&.stack\&.atElement);
+242     builder\&._symtab()\&.info(builder\&.strtab);
+243     builder\&._symtab()\&.link(builder\&.strtab);
+244     builder\&._symtab()\&.entsize(16);
+245     builder\&._strtab()\&.stack++;
+246     builder\&._shstrtab()\&.stack <<= "\&.symtab";
+247 
+248     builder\&.shstrndx(1);
+249 
+250     builder\&._shstrtab()\&.Extend(16);
+251 
+252     */
+253     
+254     /*
+255     std::ELF::ELFBuilder builder(std::activemem, 0, 13, 3);
+256     std::Stack<std::string_element> builderStack(&builder\&.file, std::seqlen(builder\&.file));
+257     std::FILE file(builderStack, "/bin/test\&.o");
+258 
+259     const char *msg = "Hello, world!";
+260 
+261     builder\&.formStandard(24, 14, 0, 0);
+262 
+263     builder\&.renameSymbol(1, "Hello");
+264     builder\&.renameSymbol(2, "HoHo");
+265 
+266     builder\&._data()\&.stack <<= "Hello, World!";
+267 
+268     file\&.writeFileToDisk();
+269     builder\&.close();
+270     file\&.close();
+271     */
+272 
+273     /*
+274 
+275     std::ESAM::dataEntry data("Hello, World!", std::ELF::SYM_OBJECT | std::ELF::SYM_GLOBAL);
+276     std::ESAM::dataEntry data2("4 + 5 is %d\n", std::ELF::SYM_OBJECT | std::ELF::SYM_GLOBAL);
+277 
+278     std::ESAM::dataEntry program("\x32\xa1\xa2", std::ELF::SYM_FILE | std::ELF::SYM_GLOBAL);
+279     std::ESAM::dataEntry program2("\xFF\xFF\xFF", std::ELF::SYM_SECTION | std::ELF::SYM_GLOBAL);
+280 
+281 
+282     std::ESAM::BinaryApplication application("/bin/test\&.o", 0, 0, 4);
+283     application\&.setSource("/home/test\&.esa");
+284     application\&.emitSymbol(application\&.builder\&.rodata, data, "myString");
+285     application\&.emitSymbol(application\&.builder\&.rodata, data2, "fmtString");
+286     application\&.emitSymbol(application\&.builder\&.text, program, "_ZfooIi");
+287     application\&.emitSymbol(application\&.builder\&.text, program2, "_ZfffIi");
+288     application\&.save();
+289     application\&.close();
+290 
+291     std::ESAM::BinaryApplication application2("/bin/test2\&.o", 0, 0, 4);
+292     application2\&.setSource("/home/test\&.esa");
+293     application2\&.emitSymbol(application2\&.builder\&.rodata, data, "myString");
+294     application2\&.emitSymbol(application2\&.builder\&.rodata, data2, "fmtString");
+295     application2\&.emitSymbol(application2\&.builder\&.text, program, "_ZfooIi");
+296     application2\&.emitSymbol(application2\&.builder\&.text, program2, "_ZfffIi");
+297     application2\&.appendSymbols(1);
+298     application2\&.emitSymbol(application2\&.builder\&.text, program2, "_ZfofIi");
+299     application2\&.save();
+300     application2\&.close();
+301 
+302     */
+303 
+304 
+305     return 0;
+306 }
+.fi
+.PP
+References __SIGNAL__, BBP::std::ELF::ELFBuilder::_text(), BBP::std::activemem, BBP::userspace::ADD, BBP::userspace::AND, BBP::std::FILE::b(), BBP::std::FILE::close(), BBP::std::ELF::ELFBuilder::close(), BBP::userspace::CTRL, BBP::std::PAGE< T >::data, BBP::userspace::DEC, BBP::userspace::DIV, BBP::userspace::Thread::eip, BBP::std::ELF::ELFBuilder::file, BBP::userspace::FLAG, BBP::userspace::HALT, BBP::userspace::INC, BBP::userspace::JMP, BBP::userspace::JMPC, BBP::userspace::JMPZ, BBP::userspace::LBS, BBP::userspace::MEM, BBP::userspace::MOD, BBP::userspace::MUL, BBP::userspace::NEG, BBP::userspace::NIL, BBP::userspace::NOT, BBP::std::ELF::SectionBuilder::offset(), BBP::userspace::OR, BBP::userspace::PAGE, BBP::std::Stack< K >::page, BBP::std::printf(), BBP::esa::processor, BBP::userspace::RBS, BBP::userspace::readRegister(), BBP::userspace::setRegister(), BBP::std::SIGILL, BBP::userspace::SIGNAL, BBP::userspace::STACK, BBP::userspace::SUB, BBP::std::ELF::SYM_FUNC, BBP::std::ELF::ELFBuilder::symbolCount, BBP::std::ELF::ELFBuilder::symbols, BBP::esa::esaProcessor::translate(), and BBP::userspace::XOR\&.
+.SH "Variable Documentation"
+.PP 
+.SS "\fBBBP::std::Stack\fP< \fBBBP::std::string_element\fP > line & BBP::linePage"
+
+.PP
+Definition at line 117 of file Shell\&.cpp\&.
+.PP
+Referenced by shell_main()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.

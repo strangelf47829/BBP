@@ -1,0 +1,156 @@
+#ifndef BBP_STDLIB_LOCALE_H
+#define BBP_STDLIB_LOCALE_H
+
+
+
+//template <char... chars>
+//constexpr const char *operator""_ff() {
+//    return reencode(std::string_view{ chars... });
+//}
+namespace BBP
+{
+	namespace Locale
+	{
+		namespace Japanese
+		{
+			enum B607_Hiragana
+			{
+				space = 0x20,
+				exclamationpoint = 0x21,
+				doublequotes = 0x22,
+				hash = 0x23,
+				dollar = 0x24,
+				percent = 0x25,
+				quote = 0x27,
+				openbracket = 0xcf,
+				closebracket = 0xd0,
+				asterisk = 0x2a,
+				plus = 0x2b,
+				comma = 0x2c,
+				hyphen = 0xcd,
+				period = 0xce,
+				forwardslash = 0x2f,
+				zero = 0x30,
+				one = 0x31,
+				two = 0x32,
+				three = 0x33,
+				four = 0x34,
+				five = 0x35,
+				six = 0x36,
+				seven = 0x37,
+				eight = 0x38,
+				nine = 0x39,
+				colon = 0x3a,
+				semicolon = 0x3b,
+				openingcurlybracket = 0x3c,
+				equals = 0x3d,
+				closingcurlybracket = 0x3e,
+				questionmark = 0x3f,
+				at = 0x40,
+				openingcurlybrace = 0x7b,
+				pipe = 0x7c,
+				closingcurlybrace = 0x7d,
+				tilde = 0x7e,
+				openingsquarebracket = 0x5b,
+				closingsquarebracket = 0x5d,
+				backslash = 0x5c,
+				nil = 0x00,
+				underscore = 0x5f,
+				caret = 0x5e,
+				ampersand = 0x26,
+				returncarriage = 0x0d,
+				tab = 0x09,
+
+				A = 0xd5,
+				a = 0xd6,
+				I = 0xd7,
+				i = 0xd8,
+				U = 0xd9,
+				u = 0xda,
+				E = 0xdb,
+				e = 0xdc,
+				O = 0xdd,
+				o = 0xde,
+				ka = 0x8a,
+				ki = 0x8c,
+				ku = 0xdf,
+				ke = 0xe0,
+				ko = 0xe1,
+				ga = 0x8b,
+				gi = 0x8d,
+				gu = 0x8f,
+				ge = 0x8e,
+				go = 0x90,
+				sa = 0x91,
+				shi = 0x93,
+				su = 0x95,
+				se = 0x97,
+				so = 0x99,
+				za = 0x92,
+				ji = 0x94,
+				zu = 0x96,
+				ze = 0x98,
+				zo = 0x9a,
+				ta = 0x9b,
+				chi = 0xa1,
+				Tsu = 0x9d,
+				tsu = 0x9f,
+				te = 0xa2,
+				to = 0xa4,
+				da = 0x9c,
+				dji = 0x9e,
+				dzu = 0xa0,
+				de = 0xa3,
+				Do = 0xa5,
+
+				na = 0xa6,
+				ni = 0xa7,
+				nu = 0xa8,
+				ne = 0xa9,
+				no = 0xaa,
+
+				ha = 0xab,
+				hi = 0xae,
+				fu = 0xe2,
+				he = 0xb3,
+				ho = 0xb6,
+				ba = 0xac,
+				bi = 0xaf,
+				bu = 0xb1,
+				be = 0xb4,
+				bo = 0xb7,
+				pa = 0xad,
+				pi = 0xb0,
+				pu = 0xb2,
+				pe = 0xb5,
+				po = 0xb8,
+
+				ma = 0xb9,
+				mi = 0xba,
+				mu = 0xbb,
+				me = 0xbc,
+				mo = 0xbd,
+
+				Ya = 0xbe,
+				Yu = 0xc0,
+				Yo = 0xc2,
+				ya = 0xbf,
+				yu = 0xc1,
+				yo = 0xc3,
+
+				ra = 0xc4,
+				ri = 0xc5,
+				ru = 0xc6,
+				re = 0xc7,
+				ro = 0xc8,
+
+				Wa = 0xc9,
+				Wo = 0xca,
+				wa = 0xcb,
+				n = 0xcc
+			};
+		}
+	}
+}
+
+#endif

@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d9/db7/namespaceBBP_1_1std_1_1Driver" kind="namespace" language="C++">
+    <compoundname>BBP::std::Driver</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d9/db7/namespaceBBP_1_1std_1_1Driver_1af890afe53347748ccc3240bab4225a98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::Driver::drawWindow</definition>
+        <argsstring>(window *)</argsstring>
+        <name>drawWindow</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>wind</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="88" column="13" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env/Graphics.cpp" bodystart="49" bodyend="72" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="88" declcolumn="13"/>
+        <references refid="d6/d2d/namespaceBBP_1_1Locale_1_1Japanese_1a02c028a34a00f11967f61a67255e0e6eae479854b0f07c879bcf8c41663f5177a" compoundref="d4/d54/Locale_8h" startline="65">BBP::Locale::Japanese::a</references>
+        <references refid="df/d3f/Graphics_8cpp_1a148e3876077787926724625411d6e7a9" compoundref="df/d3f/Graphics_8cpp" startline="9">b</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ab9b99c1461c6a8dfd2b29b9b4385289e" compoundref="d2/dd1/Graphics_8h" startline="41">BBP::std::window::backBuffer</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="df/d3f/Graphics_8cpp_1a71867e609034d4dbd6d0ad8d84540e59" compoundref="df/d3f/Graphics_8cpp" startline="8">g</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1a3868ca4815a37a5aa822eb9c6dd3d91c" compoundref="d2/dd1/Graphics_8h" startline="44">BBP::std::window::height</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a370f972c44b9f597cdda3e119899f60f">BBP::std::last</references>
+        <references refid="df/d3f/Graphics_8cpp_1acab531abaa74a7e664e3986f2522b33a" compoundref="df/d3f/Graphics_8cpp" startline="7">r</references>
+        <references refid="df/d3f/Graphics_8cpp_1a966da7a60c4ea3ba301e26ccc5efe452" compoundref="df/d3f/Graphics_8cpp" startline="5">renderer</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ac9dc99ea7caf78da1c83e3fa1c7219aa" compoundref="d2/dd1/Graphics_8h" startline="43">BBP::std::window::width</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1a2e7001af636de4e777cbde6c3dc988ca" compoundref="d2/dd1/Graphics_8h" startline="46">BBP::std::window::xPos</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1afa1b435a139018dd919057b3b2c4028f" compoundref="d2/dd1/Graphics_8h" startline="47">BBP::std::window::yPos</references>
+        <referencedby refid="dd/d98/namespaceBBP_1_1std_1aacd39619cb9601c160fd4df069d49ee9" compoundref="d7/d67/tterm_8cpp" startline="10" endline="33">BBP::std::print_to_terminal</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d9/db7/namespaceBBP_1_1std_1_1Driver_1affc18526448cf9c01bfb96ffd83aed81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BBP::std::Driver::initializeGraphics</definition>
+        <argsstring>(window *, int width, int height)</argsstring>
+        <name>initializeGraphics</name>
+        <param>
+          <type><ref refid="db/d2b/structBBP_1_1std_1_1window" kindref="compound">window</ref> *</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="90" column="12" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env/Graphics.cpp" bodystart="13" bodyend="47" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="90" declcolumn="12"/>
+        <references refid="df/d3f/Graphics_8cpp_1aa6e721a97183db093899a7a38ff00ba2" compoundref="df/d3f/Graphics_8cpp" startline="4">_window</references>
+        <references refid="db/d2b/structBBP_1_1std_1_1window_1ab9b99c1461c6a8dfd2b29b9b4385289e" compoundref="d2/dd1/Graphics_8h" startline="41">BBP::std::window::backBuffer</references>
+        <references refid="df/ddc/structBBP_1_1std_1_1PAGE_1a02cc2cb6b1940e10fb3b4defba203ac6" compoundref="de/d5c/Memory_8h" startline="43">BBP::std::PAGE&lt; T &gt;::data</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a0d9f6105cb70d5bbf4ea7a9c5f317b18" compoundref="df/d3f/Graphics_8cpp" startline="11">BBP::std::gINIT</references>
+        <references refid="dc/da1/namespaceBBP_1_1std_1_1R2D_1abd452b23f01af75984864049dd13670b" compoundref="de/db8/R2D_8cpp" startline="130" endline="157">BBP::std::R2D::newWindow</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a8d46784954bec3eed0277416001174a5" compoundref="d0/d6f/EMULATOR_2tterm_8cpp" startline="11" endline="27">BBP::std::printf</references>
+        <references refid="df/d3f/Graphics_8cpp_1a966da7a60c4ea3ba301e26ccc5efe452" compoundref="df/d3f/Graphics_8cpp" startline="5">renderer</references>
+        <referencedby refid="db/db7/Start_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="db/db7/Start_8cpp" startline="22" endline="138">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d9/db7/namespaceBBP_1_1std_1_1Driver_1afdd73d9627318511baf99a3392dd0b7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BBP::std::Driver::destructGraphics</definition>
+        <argsstring>()</argsstring>
+        <name>destructGraphics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="91" column="13" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/env/Graphics.cpp" bodystart="74" bodyend="81" declfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" declline="91" declcolumn="13"/>
+        <references refid="df/d3f/Graphics_8cpp_1aa6e721a97183db093899a7a38ff00ba2" compoundref="df/d3f/Graphics_8cpp" startline="4">_window</references>
+        <references refid="dd/d98/namespaceBBP_1_1std_1a0d9f6105cb70d5bbf4ea7a9c5f317b18" compoundref="df/d3f/Graphics_8cpp" startline="11">BBP::std::gINIT</references>
+        <references refid="df/d3f/Graphics_8cpp_1a966da7a60c4ea3ba301e26ccc5efe452" compoundref="df/d3f/Graphics_8cpp" startline="5">renderer</references>
+        <referencedby refid="db/db7/Start_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="db/db7/Start_8cpp" startline="22" endline="138">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Graphics.h" line="87" column="1"/>
+  </compounddef>
+</doxygen>

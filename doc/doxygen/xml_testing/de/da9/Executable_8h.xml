@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="de/da9/Executable_8h" kind="file" language="C++">
+    <compoundname>Executable.h</compoundname>
+    <includes refid="de/d53/Strings_8h" local="yes">../include/Strings.h</includes>
+    <includedby refid="d7/d40/badapple_8cpp" local="yes">badapple.cpp</includedby>
+    <includedby refid="dc/d9b/Logout_8cpp" local="yes">Logout.cpp</includedby>
+    <includedby refid="d3/da0/neofetch_8cpp" local="yes">neofetch.cpp</includedby>
+    <includedby refid="df/d6c/Shell_8cpp" local="yes">Shell.cpp</includedby>
+    <includedby refid="de/dd1/Smile_8cpp" local="yes">Smile.cpp</includedby>
+    <includedby refid="d6/dc6/Executable_8cpp" local="yes">Executable.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>Memory.h</label>
+        <link refid="de/d5c/Memory_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Executable.h</label>
+        <link refid="de/da9/Executable_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../include/Strings.h</label>
+        <link refid="de/d53/Strings_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Resources.h</label>
+        <link refid="d0/d33/Resources_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Stack.hxx</label>
+        <link refid="db/d61/Stack_8hxx"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Memory.hxx</label>
+        <link refid="d5/d4e/Memory_8hxx"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>errno.h</label>
+        <link refid="d8/dc2/errno_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Signal.h</label>
+        <link refid="d0/def/Signal_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Except.h</label>
+        <link refid="dc/d88/Except_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+        <link refid="df/dd8/stdint_8h"/>
+      </node>
+      <node id="4">
+        <label>stddef.h</label>
+        <link refid="d3/dce/stddef_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Stack.h</label>
+        <link refid="dc/db6/Stack_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>Shell.cpp</label>
+        <link refid="df/d6c/Shell_8cpp"/>
+      </node>
+      <node id="7">
+        <label>Executable.cpp</label>
+        <link refid="d6/dc6/Executable_8cpp"/>
+      </node>
+      <node id="3">
+        <label>Logout.cpp</label>
+        <link refid="dc/d9b/Logout_8cpp"/>
+      </node>
+      <node id="6">
+        <label>Smile.cpp</label>
+        <link refid="de/dd1/Smile_8cpp"/>
+      </node>
+      <node id="1">
+        <label>Executable.h</label>
+        <link refid="de/da9/Executable_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>badapple.cpp</label>
+        <link refid="d7/d40/badapple_8cpp"/>
+      </node>
+      <node id="4">
+        <label>neofetch.cpp</label>
+        <link refid="d3/da0/neofetch_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d5/d10/structBBP_1_1std_1_1Executable" prot="public">BBP::std::Executable</innerclass>
+    <innerclass refid="d7/db6/structBBP_1_1std_1_1executableFrame" prot="public">BBP::std::executableFrame</innerclass>
+    <innernamespace refid="d9/d6f/namespaceBBP">BBP</innernamespace>
+    <innernamespace refid="dd/d98/namespaceBBP_1_1std">BBP::std</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="de/da9/Executable_8h_1a189b977bce41f28b79b93ee49d865464" prot="public" static="no">
+        <name>BBP_EXEC_MAGIC0</name>
+        <initializer>0xBB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" line="6" column="9" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="de/da9/Executable_8h_1a10e28214a4fe2b9e7f9a6f30f67b73fa" prot="public" static="no">
+        <name>BBP_EXEC_MAGIC1</name>
+        <initializer>0x66</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" line="7" column="9" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="de/da9/Executable_8h_1a498a6d3b3a4e3199972bad1bd23e5e10" prot="public" static="no">
+        <name>BBP_EXEC_MAGIC2</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" line="8" column="9" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="de/da9/Executable_8h_1a0c96c678ebe827291be2d49c15185b26" prot="public" static="no">
+        <name>BBP_EXEC_MAGIC3</name>
+        <initializer>0x77</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" line="9" column="9" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="de/da9/Executable_8h_1ac126b4aa1240953826a3d8a98137a6a1" prot="public" static="no">
+        <name>BBP_EXEC_MAGIC0IDX</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" line="11" column="9" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="de/da9/Executable_8h_1ac5e1f51fb84fe0b3e5a895a7853034e0" prot="public" static="no">
+        <name>BBP_EXEC_MAGIC1IDX</name>
+        <initializer>9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" line="12" column="9" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="de/da9/Executable_8h_1ac6465393b9b9f30cb7cdc709dbe24162" prot="public" static="no">
+        <name>BBP_EXEC_MAGIC2IDX</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" line="13" column="9" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="de/da9/Executable_8h_1a647a624bb6e5d68230288b5e271cf15f" prot="public" static="no">
+        <name>BBP_EXEC_MAGIC3IDX</name>
+        <initializer>11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" line="14" column="9" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/Executable.h"/>
+  </compounddef>
+</doxygen>

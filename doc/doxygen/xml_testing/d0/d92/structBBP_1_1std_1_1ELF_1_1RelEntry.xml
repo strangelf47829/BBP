@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d0/d92/structBBP_1_1std_1_1ELF_1_1RelEntry" kind="struct" language="C++" prot="public">
+    <compoundname>BBP::std::ELF::RelEntry</compoundname>
+    <includes refid="d1/d5d/ELF32_8h" local="no">ELF32.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d0/d92/structBBP_1_1std_1_1ELF_1_1RelEntry_1a4e19edcd7b607e8bcfb57fa5d247f253" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1a03632bff3fd98378d63d18e829a72de1" kindref="member">std::address_t</ref></type>
+        <definition>std::address_t BBP::std::ELF::RelEntry::r_offset</definition>
+        <argsstring></argsstring>
+        <name>r_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" line="222" column="15" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" bodystart="222" bodyend="-1"/>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a8d460cabf300a0edc2357eacdae4646e" compoundref="d6/d3f/Backend_8cpp" startline="74" endline="88">BBP::esa::esaProcessor::emitRelocation</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d0/d92/structBBP_1_1std_1_1ELF_1_1RelEntry_1ac88294b6c1306ba9d6af4f040546a793" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d98/namespaceBBP_1_1std_1ae104641b17c021a901add93f7bc5d808" kindref="member">std::word</ref></type>
+        <definition>std::word BBP::std::ELF::RelEntry::r_info</definition>
+        <argsstring></argsstring>
+        <name>r_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" line="223" column="10" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" bodystart="223" bodyend="-1"/>
+        <referencedby refid="db/d1d/classBBP_1_1esa_1_1esaProcessor_1a8d460cabf300a0edc2357eacdae4646e" compoundref="d6/d3f/Backend_8cpp" startline="74" endline="88">BBP::esa::esaProcessor::emitRelocation</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>BBP::std::ELF::RelEntry</label>
+        <link refid="d0/d92/structBBP_1_1std_1_1ELF_1_1RelEntry"/>
+      </node>
+    </collaborationgraph>
+    <location file="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" line="221" column="15" bodyfile="/mnt/c/Users/stran/Documents/23IN01/Design/Software/BBP/Source/include/ELF32.h" bodystart="221" bodyend="224"/>
+    <listofallmembers>
+      <member refid="d0/d92/structBBP_1_1std_1_1ELF_1_1RelEntry_1ac88294b6c1306ba9d6af4f040546a793" prot="public" virt="non-virtual"><scope>BBP::std::ELF::RelEntry</scope><name>r_info</name></member>
+      <member refid="d0/d92/structBBP_1_1std_1_1ELF_1_1RelEntry_1a4e19edcd7b607e8bcfb57fa5d247f253" prot="public" virt="non-virtual"><scope>BBP::std::ELF::RelEntry</scope><name>r_offset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

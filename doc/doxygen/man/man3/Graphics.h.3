@@ -1,0 +1,251 @@
+.TH "Graphics.h" 3 "Fri Jan 26 2024" "Version 0.2.0" "BBP Embedded kernel" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Graphics.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Memory\&.h'\fP
+.br
+\fC#include 'Resources\&.h'\fP
+.br
+\fC#include 'FileSys\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBBBP::std::colour\fP"
+.br
+.ti -1c
+.RI "struct \fBBBP::std::window\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBBBP\fP"
+.br
+.ti -1c
+.RI " \fBBBP::std\fP"
+.br
+.ti -1c
+.RI " \fBBBP::std::Driver\fP"
+.br
+.ti -1c
+.RI " \fBBBP::std::R2D\fP"
+.br
+.ti -1c
+.RI " \fBBBP::std::R3D\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef word \fBBBP::std::RGBA_t\fP"
+.br
+.ti -1c
+.RI "typedef byte \fBBBP::std::chan_t\fP"
+.br
+.ti -1c
+.RI "typedef word \fBBBP::std::pos_t\fP"
+.br
+.ti -1c
+.RI "typedef word \fBBBP::std::mask_t\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBBBP::std::Driver::drawWindow\fP (window *)"
+.br
+.ti -1c
+.RI "int \fBBBP::std::Driver::initializeGraphics\fP (window *, int width, int height)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::Driver::destructGraphics\fP ()"
+.br
+.ti -1c
+.RI "\fBRGBA_t\fP \fBBBP::std::R2D::convertUCHARtoINT\fP (\fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b, \fBchan_t\fP a)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::convertINTtoUCHAR\fP (\fBchan_t\fP *r, \fBchan_t\fP *g, \fBchan_t\fP *b, \fBRGBA_t\fP rgb)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::convertINTtoUCHAR\fP (\fBchan_t\fP *r, \fBchan_t\fP *g, \fBchan_t\fP *b, \fBchan_t\fP *a, \fBRGBA_t\fP rgba)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::newWindow\fP (\fBwindow\fP *, \fBpos_t\fP width, \fBpos_t\fP height, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::newWindow\fP (\fBwindow\fP *, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::background\fP (\fBwindow\fP *, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::background\fP (\fBwindow\fP *, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b, \fBchan_t\fP a)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::background\fP (\fBwindow\fP *, \fBRGBA_t\fP rgb)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::background\fP (\fBwindow\fP *, \fBRGBA_t\fP rgb, \fBchan_t\fP a)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::stroke\fP (\fBwindow\fP *, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::stroke\fP (\fBwindow\fP *, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b, \fBchan_t\fP a)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::stroke\fP (\fBwindow\fP *, \fBRGBA_t\fP rgb)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::stroke\fP (\fBwindow\fP *, \fBRGBA_t\fP rgb, \fBchan_t\fP a)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::strokeWeight\fP (\fBwindow\fP *, word weight)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::noStroke\fP (\fBwindow\fP *)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::fill\fP (\fBwindow\fP *, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::fill\fP (\fBwindow\fP *, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b, \fBchan_t\fP a)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::fill\fP (\fBwindow\fP *, \fBRGBA_t\fP rgb)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::fill\fP (\fBwindow\fP *, \fBRGBA_t\fP rgb, \fBchan_t\fP a)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::noFill\fP (\fBwindow\fP *)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::Line\fP (\fBwindow\fP *, int x1, int y1, int x2, int y2)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::Hrule\fP (\fBwindow\fP *, \fBpos_t\fP x1, \fBpos_t\fP x2, \fBpos_t\fP y)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::Vrule\fP (\fBwindow\fP *, \fBpos_t\fP y1, \fBpos_t\fP y2, \fBpos_t\fP x)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::Line\fP (window *, int x1, int y1, int x2, int y2, chan_t r, chan_t g, chan_t b)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::Hrule\fP (\fBwindow\fP *, \fBpos_t\fP x1, \fBpos_t\fP x2, \fBpos_t\fP y, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::Vrule\fP (\fBwindow\fP *, \fBpos_t\fP y1, \fBpos_t\fP y2, \fBpos_t\fP x, \fBchan_t\fP r, \fBchan_t\fP g, \fBchan_t\fP b)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::Line\fP (window *, int x1, int y1, int x2, int y2, RGBA_t rgb)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::Hrule\fP (\fBwindow\fP *, \fBpos_t\fP x1, \fBpos_t\fP x2, \fBpos_t\fP y, \fBRGBA_t\fP rgb)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::Vrule\fP (\fBwindow\fP *, \fBpos_t\fP y1, \fBpos_t\fP y2, \fBpos_t\fP x, \fBRGBA_t\fP rgb)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::Rect\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBpos_t\fP w, \fBpos_t\fP h)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::Box\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBpos_t\fP w, \fBpos_t\fP h)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::Frame\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBpos_t\fP w, \fBpos_t\fP h)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::RectPixelMask\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBmask_t\fP mask)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::RectPixelMask\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, word size, \fBmask_t\fP mask)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::RectPixelMaskAligned\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, word size, \fBmask_t\fP mask)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::RectPixelMask\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBmask_t\fP *maskv, word maskc)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::RectPixelMask\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, word size, \fBmask_t\fP *maskv, word maskc)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::RectPixelMaskAligned\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, word size, \fBmask_t\fP *maskv, word maskc)"
+.br
+.ti -1c
+.RI "\fBRGBA_t\fP \fBBBP::std::R2D::readPixel\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::setPixel\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::setPixel\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, word size)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::setPixelAligned\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, word size)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::PixelMask\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBmask_t\fP mask)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::PixelMask\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, word size, \fBmask_t\fP mask)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::PixelMaskAligned\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, word size, \fBmask_t\fP mask)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::PixelMask\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBmask_t\fP *maskv, word maskc)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::PixelMask\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, word size, \fBmask_t\fP *maskv, word maskc)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::PixelMaskAligned\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, word size, \fBmask_t\fP *maskv, word maskc)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::PrintCharacterAt\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBustring_element\fP ch)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::PrintCharacterAt\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y, \fBustring_element\fP ch, word size)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::print\fP (\fBwindow\fP *, \fBustring_element\fP ch)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::print\fP (window *, ustring_element *str)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::print\fP (\fBwindow\fP *, conststring str)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::print\fP (window *, mem_t *str, word str_c)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::setCursorPos\fP (\fBwindow\fP *, \fBpos_t\fP x, \fBpos_t\fP y)"
+.br
+.ti -1c
+.RI "void \fBBBP::std::R2D::GetFontFromFile\fP (\fBwindow\fP *, std::PATH &)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "bool \fBBBP::std::gINIT\fP"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for BBP Embedded kernel from the source code\&.
