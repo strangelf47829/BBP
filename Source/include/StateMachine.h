@@ -9,6 +9,7 @@ namespace BBP
 {
 	namespace userspace
 	{
+
 		class StateMachine
 		{
 			userspace::HyperVisor *activeHypervisor;
@@ -41,7 +42,19 @@ namespace BBP
 			void SIGNAL();
 			void HALT();
 
+			// Used to update arithmetic functions
+			void Compare(std::word&);
+			void Compare(std::word&, std::word&);
+
 		public:
+
+			// Used to define arithmetic operations done on variables
+			using arithmeticOperation = std::word(*)(std::word&, std::word&);
+
+			// First argument is lvalue to write result to. Second and third argument are arguments for the operation
+			std::word Operate(arithmeticOperation, std::word&, std::word&);
+			std::word MathOperate(arithmeticOperation ii_, arithmeticOperation fi_, arithmeticOperation if_, arithmeticOperation ff_, std::word);
+			void LogicOperate(arithmeticOperation nominal, arithmeticOperation binary);
 
 			// Set active threads
 			void setActiveHypervisor(userspace::HyperVisor *);

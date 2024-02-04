@@ -1,89 +1,51 @@
-## TODO Implement stuff here
+#########################################
+#  Module make utility                  #
+#                                       #
+#########################################
+#  Module: Master BBP Compiler tool     #
 
+# =========== Platform
+PLAT= UBUNTU
 
-PLATS= x86 arm x86Debug
-PLAT= x86Debug
+# =========== Module target details
+MODULE= BBP
+MODULE_SRC= Applications ELF ELSA env_UBUNTU File Graphics Parser RAE stdlib
 
-TOPDIR= ..
-SOURCEDIR= $(TOPDIR)/Source
+# ========
+# END OF MODULE SETTINGS.
+# ========
 
-INT_FLAGS= "-DBBP_ARCH_$(PLAT)" $(EXT_FLAGS)
+# =========== Platform specific stuff
+CC= gcc
+CXX= g++
+AR= ar
+RANLIB= ranlib
 
-LUADIR= $(SOURCEDIR)/LUA
-LUAINSTALLDIR= $(SOURCEDIR)/LUA
-LUA_FLAGS= "-DBBP_ARCH_$(PLAT)"
+# =========== Compiler / Linker flags
+CFLAGS=
+CXXFLAGS= -g
+ARFLAGS=
+LDFLAGS=
 
-ELFDIR= $(SOURCEDIR)/ELF
-ELFINSTALLDIR= $(TOPDIR)/build/bin/
-ELF_FLAGS= $(INT_FLAGS)
+# ========
+# END OF MODULE CONFIGURATION.
+# ========
+MODULE_DIRS= $(foreach var,$(MODULE_SRC),../Source/$(var))
 
-LEXERDIR= $(SOURCEDIR)/Lexer
-LEXERINSTALLDIR= $(TOPDIR)/build/bin/
-LEXER_FLAGS= $(INT_FLAGS)
+.PHONY: $(MODULE_DIRS)
 
-LPPDIR= $(SOURCEDIR)/LPP
-LPPINSTALLDIR= $(TOPDIR)/build/bin/
-LPP_FLAGS= $(INT_FLAGS)
+default: build
 
-BUFFERSDIR= $(SOURCEDIR)/Buffers
-BUFFERSINSTALLDIR= $(TOPDIR)/build/bin/
-BUFFERS_FLAGS= $(INT_FLAGS)
+$(MODULE_DIRS):
+	@cd $@; make EXTCXXFLAGS="$(CXXFLAGS)" --no-print-directory
+	@cp $(patsubst %,%/libmodule.a,$@) ./bin/lib$(notdir $@).a
 
-BBPDIR= $(SOURCEDIR)/src
-BBPINSTALLDIR= $(TOPDIR)/build/bin/
+build: $(MODULE_DIRS)
+	@echo "Compiled everything"
+	@g++ -Wl,--start-group $(patsubst %, bin/lib%.a, $(notdir $(MODULE_DIRS))) -Wl,--end-group -pthread
 
-BBPRING0DIR= $(BBPDIR)
-BBPRING0INSTALLDIR= $(BBPINSTALLDIR)
-BBPRING0_FLAGS= $(INT_FLAGS)
+clean: $(patsubst %,%.clean,$(notdir $(MODULE_DIRS)))
+	rm bin/*; rm a.out
 
-BBPRING0LIBSDIR= $(BBPDIR)
-BBPRING0LIBSINSTALLDIR= $(BBPINSTALLDIR)
-BBPRING0LIBS_FLAGS= $(INT_FLAGS)
-
-
-
-EXT_FLAGS=
-
-MODULE=
-LIB=
-
-LIBS= lib/libELF.a lib/libLPP.a lib/libLexer.a lib/liblua.a lib/libBBPRing0.a lib/libBBPRing0libs.a lib/libBuffers.a
-
-FORCE:
-
-%.a: MODULE = $(basename $(subst lib/lib,,$@))
-%.a: CAPS = $(shell echo $(MODULE) | tr a-z A-Z)
-%.a: FORCE
-	@echo === Compiling $(MODULE) $(CAPS) for $(PLAT) ===
-	@cd $($(CAPS)DIR); make $(PLAT) --no-print-directory "EXT_CXFLAGS= $($(CAPS)_FLAGS)";
-	@cp $($(CAPS)INSTALLDIR)/lib$(MODULE).a lib/lib$(MODULE).a
-	@echo === Module $(CAPS) COMPILATION COMPLETED. ===
-
-
-BUILD:
-	@make $(LIBS)
-	$(file > $(PLAT).log,Compiled at $(shell date))
-
-.PRECIOUS: %.log
-%.log:
-	@make --no-print-directory clean_all;
-	
-
-%.plat: %.log
-	make BUILD "PLAT= $(basename $@)"
-
-clean:
-	@echo === Cleaning ===
-	$(file > dummy.log,dummy)
-	@rm -f $(LIBS) *.log
-
-clean_all: clean
-	@echo === Cleaning all ===
-	@cd $(LUADIR); make clean
-	@cd $(BBPDIR); make clean
-	@cd $(ELFDIR); make clean
-	@cd $(LEXERDIR); make clean
-	@cd $(LPPDIR); make clean
-
-
-.SECONDARY: $(PLAT).log
+%.clean:
+	@cd ../Source/$(patsubst %.clean,%,$@); make clean --no-print-directory

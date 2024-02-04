@@ -29,11 +29,15 @@ namespace BBP
 			std::index_t index;		// In words
 			std::offset_t offset;	// In bytes. Total 'index' in bytes is: index * 4 + offset
 
+			// Does the user have write permissions?
+			bool readonly;
+
+		public:
 			register_t() = delete;
 			register_t(register_t &) = delete;
 			register_t(register_t &&) = delete;
 
-			register_t(Thread &thread, std::index_t index_, std::offset_t offset_, registerSize size_);
+			register_t(Thread &thread, std::index_t index_, std::offset_t offset_, registerSize size_, bool readonly_);
 
 		};
 

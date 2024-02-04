@@ -33,10 +33,6 @@ namespace BBP
 		class BinaryExecutable
 		{
 
-			// Functions to get index of virtual page
-			std::index_t findIndexOfVirtualMemory(std::address_t);
-			std::index_t findIndexOfPhysicalMemory(std::address_t);
-
 			// Where this binary was allocated
 			std::ResourceManager *allocator;
 
@@ -47,6 +43,10 @@ namespace BBP
 			std::PAGE<std::string_element> TLSData;
 
 		public:
+
+			// Functions to get index of virtual page
+			std::index_t findIndexOfVirtualMemory(std::address_t);
+			std::index_t findIndexOfPhysicalMemory(std::address_t);
 			
 			// The binary file as is
 			std::PAGE<std::string_element> BinaryData;

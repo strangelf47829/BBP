@@ -114,3 +114,36 @@ void BBP::userspace::xvalue::assign(userspace::StateMachine &state, pvalue &assi
 	// Uninitialized
 	__SIGNAL__(SIGSEGV);
 }
+
+bool BBP::userspace::xvalue::canUserExecuteFrom(userspace::StateMachine& state)
+{
+	if (isLvalue)
+		return lval.canUserExecuteFrom(state);
+	else if (isRvalue)
+		return rval.canUserExecuteFrom(state);
+
+	// Uninitialized
+	__SIGNAL__(SIGSEGV);
+}
+
+bool BBP::userspace::xvalue::canUserReadFrom(userspace::StateMachine& state)
+{
+	if (isLvalue)
+		return lval.canUserReadFrom(state);
+	else if (isRvalue)
+		return rval.canUserReadFrom(state);
+
+	// Uninitialized
+	__SIGNAL__(SIGSEGV);
+}
+
+bool BBP::userspace::xvalue::canUserWriteTo(userspace::StateMachine& state)
+{
+	if (isLvalue)
+		return lval.canUserWriteTo(state);
+	else if (isRvalue)
+		return rval.canUserWriteTo(state);
+
+	// Uninitialized
+	__SIGNAL__(SIGSEGV);
+}

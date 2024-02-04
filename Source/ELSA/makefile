@@ -49,7 +49,7 @@ default: generic
 
 $(MODULE_A): $(MODULE_O)
 	@echo
-	$(AR) $(ARFLAGS) $@ $(MODULE_O)
+	$(AR) $(ARFLAGS) libmodule.a $(MODULE_O)
 	@echo "+=======================+"
 	@echo "|=+= Module Compiled =+=|"
 	@echo "+=======================+"

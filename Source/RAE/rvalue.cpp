@@ -104,3 +104,21 @@ void BBP::userspace::rvalue::assign(userspace::StateMachine &state, pvalue &assi
 	// Cannot assign to rvalue
 	__SIGNAL__(SIGSEGV);
 }
+
+bool BBP::userspace::rvalue::canUserExecuteFrom(userspace::StateMachine& state)
+{
+	// rvalues can never be executed
+	return false;
+}
+
+bool BBP::userspace::rvalue::canUserReadFrom(userspace::StateMachine& state)
+{
+	// Rvalues can always be read from
+	return true;
+}
+
+bool BBP::userspace::rvalue::canUserWriteTo(userspace::StateMachine& state)
+{
+	// rvalues cannot be written to
+	return false;
+}

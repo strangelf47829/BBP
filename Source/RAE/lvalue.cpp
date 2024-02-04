@@ -143,3 +143,76 @@ void BBP::userspace::lvalue::assign(userspace::StateMachine &state, pvalue &assi
 		std::write(&state.getActiveThread().executable.BinaryData, byteToWrite, PhysicalAddress + atByte);
 	}
 }
+
+
+bool BBP::userspace::lvalue::canUserExecuteFrom(userspace::StateMachine& state)
+{
+	// If value is register, return false
+	if (isRegister)
+		return false;
+
+	// If not address, throw signal for uninitialized data
+	if (!isAddress)
+	{
+		__SIGNAL__(SIGSEGV);
+	}
+
+	// Get page permissions
+	std::index_t page = state.getActiveThread().executable.findIndexOfVirtualMemory(VirtualMemory);
+
+	// Check for error
+	if (page >= state.getActiveThread().executable.mapping.dataSize)
+	{
+		__SIGNAL__(SIGSEGV);
+	}
+
+	return state.getActiveThread().executable.mapping.static_data[page].executable;
+}
+
+bool BBP::userspace::lvalue::canUserReadFrom(userspace::StateMachine& state)
+{
+	// If value is register, return true
+	if (isRegister)
+		return true;
+
+	// If not address, throw signal for uninitialized data
+	if (!isAddress)
+	{
+		__SIGNAL__(SIGSEGV);
+	}
+
+	// Get page permissions
+	std::index_t page = state.getActiveThread().executable.findIndexOfVirtualMemory(VirtualMemory);
+
+	// Check for error
+	if (page >= state.getActiveThread().executable.mapping.dataSize)
+	{
+		__SIGNAL__(SIGSEGV);
+	}
+
+	return state.getActiveThread().executable.mapping.static_data[page].readable;
+}
+
+bool BBP::userspace::lvalue::canUserWriteTo(userspace::StateMachine& state)
+{
+	// If value is register, return register readonly
+	if (isRegister)
+		return !_register->readonly;
+
+	// If not address, throw signal for uninitialized data
+	if (!isAddress)
+	{
+		__SIGNAL__(SIGSEGV);
+	}
+
+	// Get page permissions
+	std::index_t page = state.getActiveThread().executable.findIndexOfVirtualMemory(VirtualMemory);
+
+	// Check for error
+	if (page >= state.getActiveThread().executable.mapping.dataSize)
+	{
+		__SIGNAL__(SIGSEGV);
+	}
+
+	return state.getActiveThread().executable.mapping.static_data[page].writeable;
+}

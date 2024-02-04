@@ -77,6 +77,9 @@ void BBP::std::execute(std::executable_main mainFunc, int argc, char **argv)
 			if (signal._sig == std::SIGILL)
 				BBP::std::printf(" (SIGILL).");
 
+			if (signal._sig == std::SIGSEGV)
+				BBP::std::printf(" (SIGSEGV).");
+
 			BBP::std::printf("\r\n");
 			break;
 		}

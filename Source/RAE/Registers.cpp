@@ -104,7 +104,7 @@ BBP::std::word BBP::userspace::readRegister(register_t &reg)
 	return complete;
 }
 
-BBP::userspace::register_t::register_t(Thread &thread, std::index_t index_, std::offset_t offset_, registerSize size_)
+BBP::userspace::register_t::register_t(Thread &thread, std::index_t index_, std::offset_t offset_, registerSize size_, bool readonly_)
 {
 	// Set sizes
 	size = size_;
@@ -126,4 +126,7 @@ BBP::userspace::register_t::register_t(Thread &thread, std::index_t index_, std:
 	std::write(&thread.registerData, initializeWith, index_ * 4 + offset_ + 1);
 	std::write(&thread.registerData, initializeWith, index_ * 4 + offset_ + 2);
 	std::write(&thread.registerData, initializeWith, index_ * 4 + offset_ + 3);
+
+	// Also set read permissions
+	readonly = readonly_;
 }

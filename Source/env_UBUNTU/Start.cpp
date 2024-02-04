@@ -8,8 +8,6 @@
 #include "../include/Graphics.h"
 #include "../include/OS.h"
 
-#define SDL_MAIN_HANDLED
-#include "../../build/include/SDL.h"
 
 BBP::std::ResourceManager BBP::std::progmem;
 BBP::std::ResourceManager *BBP::std::activemem;
@@ -43,11 +41,11 @@ int main()
 
 	BBP::std::Driver::initializeGraphics(&BBP::std::kernelDisplay, 1000, 800);
 
-	BBP::std::PATH path("/bin/font");
-	BBP::std::R2D::GetFontFromFile(&BBP::std::kernelDisplay, path);
+	//BBP::std::PATH path("/bin/font");
+	//BBP::std::R2D::GetFontFromFile(&BBP::std::kernelDisplay, path);
 
-	BBP::std::kernelDisplay.fontSize = 2;
-	BBP::std::kernelDisplay.fontSpacing = 6;
+	//BBP::std::kernelDisplay.fontSize = 2;
+	//BBP::std::kernelDisplay.fontSpacing = 6;
 	
 
 	// Initialize system clock

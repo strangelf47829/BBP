@@ -8,8 +8,8 @@
 PLAT= generic
 
 # =========== Module target details
-MODULE= Apps
-MODULE_SRC= Shell.cpp Logout.cpp neofetch.cpp badapple.cpp Smile.cpp
+MODULE= Applications
+MODULE_SRC= Shell.cpp Logout.cpp neofetch.cpp badapple.cpp Smile.cpp Boot.cpp
 
 # ========
 # END OF MODULE SETTINGS.
@@ -49,15 +49,15 @@ default: generic
 
 $(MODULE_A): $(MODULE_O)
 	@echo
-	$(AR) $(ARFLAGS) $@ $(MODULE_O)
+	$(AR) $(ARFLAGS) libmodule.a $(MODULE_O)
 	@echo "+=======================+"
 	@echo "|=+= Module Compiled =+=|"
 	@echo "+=======================+"
 
 
 %.o: %.cpp
+	@echo "	       $(MODULE) +=+ Compiling $^..."
 	@$(CXX) $^ -o $@ $(CXXFLAGS)
-	@echo "        $(MODULE) +=+ Compiling $^..."
 
 %.log:
 	@echo
@@ -71,12 +71,9 @@ $(MODULE_A): $(MODULE_O)
 	@rm -f *.a *.o
 	@echo "Hehe" >> $@
 	@make $(PLAT) --no-print-directory
-	@echo 
+	@echo
 
 generic: $(MODULE).$(PLAT).log $(MODULE_A)
-
-
-
 
 clean:
 	@echo Cleaning files for module $(MODULE)...

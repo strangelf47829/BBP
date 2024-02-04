@@ -15,7 +15,7 @@ namespace BBP
 		{
 		public:
 			// Thread info
-			static constexpr std::size_t threadCount = 16;
+			static constexpr std::size_t threadCount = 8;
 			std::size_t activeThreadCount = 0;
 			std::index_t activeThread = 0;
 

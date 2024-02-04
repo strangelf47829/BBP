@@ -32,6 +32,11 @@ namespace BBP
 			virtual std::address_t getOwnPhysicalAddress() = 0;
 			virtual std::address_t getOwnVirtualAddress() = 0;
 
+			// User page protections
+			virtual bool canUserWriteTo(userspace::StateMachine& state) = 0;
+			virtual bool canUserReadFrom(userspace::StateMachine& state) = 0;
+			virtual bool canUserExecuteFrom(userspace::StateMachine& state) = 0;
+
 		};
 
 		class rvalue : public virtual pvalue
@@ -60,6 +65,11 @@ namespace BBP
 			// Functions to resolve
 			std::address_t getOwnPhysicalAddress();
 			std::address_t getOwnVirtualAddress();
+
+			// User page protections
+			bool canUserWriteTo(userspace::StateMachine& state);
+			bool canUserReadFrom(userspace::StateMachine& state);
+			bool canUserExecuteFrom(userspace::StateMachine& state);
 		};
 
 		class lvalue : public virtual pvalue
@@ -90,6 +100,11 @@ namespace BBP
 			// Functions to resolve
 			std::address_t getOwnPhysicalAddress();
 			std::address_t getOwnVirtualAddress();
+
+			// User page protections
+			bool canUserWriteTo(userspace::StateMachine& state);
+			bool canUserReadFrom(userspace::StateMachine& state);
+			bool canUserExecuteFrom(userspace::StateMachine& state);
 		};
 
 
@@ -102,6 +117,7 @@ namespace BBP
 
 			lvalue lval;
 			rvalue rval;
+			
 
 		public:
 			xvalue();
@@ -118,6 +134,11 @@ namespace BBP
 			// Functions to resolve
 			std::address_t getOwnPhysicalAddress();
 			std::address_t getOwnVirtualAddress();
+
+			// User page protections
+			bool canUserWriteTo(userspace::StateMachine& state);
+			bool canUserReadFrom(userspace::StateMachine& state);
+			bool canUserExecuteFrom(userspace::StateMachine& state);
 
 		};
 

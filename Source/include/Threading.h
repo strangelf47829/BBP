@@ -112,69 +112,7 @@ namespace BBP
 
 			// Fault handling goes here
 
-			Thread()
-				: eax(*this, 0, 0, thirtyTwoBit),
-				   ax(*this, 0, 0, sixteenBit),
-				   ah(*this, 0, 1, eightBit),
-				   al(*this, 0, 0, eightBit),
-
-				ecx(*this, 1, 0, thirtyTwoBit),
-				 cx(*this, 1, 0, sixteenBit),
-				 ch(*this, 1, 1, eightBit),
-				 cl(*this, 1, 0, eightBit),
-
-				edx(*this, 2, 0, thirtyTwoBit),
-				dx(*this, 2, 0, sixteenBit),
-				dh(*this, 2, 1, eightBit),
-				dl(*this, 2, 0, eightBit),
-
-				ebx(*this, 3, 0, thirtyTwoBit),
-				 bx(*this, 3, 0, sixteenBit),
-				 bh(*this, 3, 1, eightBit),
-				 bl(*this, 3, 0, eightBit),
-
-				esi(*this, 4, 0, thirtyTwoBit),
-				six(*this, 4, 0, sixteenBit),
-				sih(*this, 4, 1, eightBit),
-				sil(*this, 4, 0, eightBit),
-
-				edi(*this, 5, 0, thirtyTwoBit),
-				dix(*this, 5, 0, sixteenBit),
-				dih(*this, 5, 1, eightBit),
-				dil(*this, 5, 0, eightBit),
-
-				tix(*this, 6, 0, thirtyTwoBit),
-				 st(*this, 6, 2, sixteenBit),
-				 ob(*this, 6, 2, eightBit),
-				 tb(*this, 6, 3, eightBit),
-				 ct(*this, 6, 0, sixteenBit),
-				 pp(*this, 6, 0, eightBit),
-				 tp(*this, 6, 1, eightBit),
-
-				ssx(*this, 8, 0, thirtyTwoBit),
-				 hv(*this, 8, 2, sixteenBit),
-				 ho(*this, 8, 2, eightBit),
-				 ht(*this, 8, 3, eightBit),
-				 ss(*this, 8, 0, sixteenBit),
-				 cs(*this, 8, 0, eightBit),
-				 sf(*this, 8, 1, eightBit),
-
-				sui(*this, 9, 0, thirtyTwoBit),
-				asi(*this, 9, 0, sixteenBit),
-				gsi(*this, 9, 2, sixteenBit),
-			
-				eip(*this, 10, 0, thirtyTwoBit),
-				 ip(*this, 10, 0, sixteenBit),
-				 ih(*this, 10, 1, eightBit),
-				 il(*this, 10, 0, eightBit),
-
-				sip(*this, 11, 0, thirtyTwoBit),
-
-				argumentStack(&argumentPage, argumentStackSize),
-				generalStack(&generalPage, generalStackSize)
-			{
-
-			}
+			Thread();
 
 			void LogInstruction();
 		};

@@ -16,11 +16,8 @@
 #include "../include/Hyperv.h"
 #include "../include/StateMachine.h"
 
-const BBP::std::size_t points = 8;
-const BBP::std::pos_t xpoints[] = { 700, 750, 800, 850, 850, 800, 750, 700 };
-const BBP::std::pos_t ypoints[] = { 400, 350, 350, 400, 450, 500, 500, 450 };
-
 BBP::userspace::HyperVisor hypervisor;
+BBP::userspace::HyperVisor hypervisor2;
 BBP::userspace::StateMachine state;
 
 int BBP::smile_main(int argc, char **argv)
