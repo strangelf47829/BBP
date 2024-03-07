@@ -31,6 +31,7 @@ namespace BBP
 			std::conststring numerical(std::Lexer::numerical_t numerical, bool isFloat);
 			std::conststring numericalArgument(std::Lexer::numerical_t numerical, bool isFloat);
 			void reserveRegisters();
+			void reserveBuiltins();
 
 			// Linker stuff
 			void emitRelocation(std::index_t);

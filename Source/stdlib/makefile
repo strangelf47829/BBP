@@ -9,7 +9,7 @@ PLAT= generic
 
 # =========== Module target details
 MODULE= stdlib
-MODULE_SRC= Except.cpp Resources.cpp stdint.cpp stdio.cpp Strings.cpp Executable.cpp
+MODULE_SRC= Except.cpp Resources.cpp stdint.cpp stdio.cpp Strings.cpp Executable.cpp DynamicPage.cpp Signal.cpp
 
 # ========
 # END OF MODULE SETTINGS.

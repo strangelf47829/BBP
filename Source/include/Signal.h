@@ -3,11 +3,6 @@
 
 #include "stddef.h"
 
-// Invalid signal
-
-
-#define __SIGNAL__(sig) BBP::std::__errno = BBP::std::sig + BBP::std::SIGADJ; throw BBP::std::SIGNAL(BBP::std::sig)
-
 namespace BBP
 {
 	namespace std
@@ -24,6 +19,8 @@ namespace BBP
 			}
 		};
 
+		void raise(signal_t);
+
 		constexpr signal_t SIGINV = 1;
 		constexpr signal_t SIGTERM = 2;
 		constexpr signal_t SIGSEGV = 3;
@@ -33,6 +30,7 @@ namespace BBP
 		constexpr signal_t SIGFPE = 7;
 		constexpr signal_t SIGSHTDN = 8; // Shut down the system
 		constexpr signal_t SIGTHREXP = 9; // Signal thread exception. 
+		constexpr signal_t SIGEND = 10; // Signals the end of a process by reaching the end
 		constexpr signal_t SIGADJ = 150;
 	}
 }

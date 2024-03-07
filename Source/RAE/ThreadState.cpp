@@ -8,6 +8,10 @@ BBP::userspace::pid_t BBP::userspace::HyperVisor::allocateThread()
 
 BBP::userspace::Thread *BBP::userspace::HyperVisor::spawnThread(std::ELF::ELFBuilder &binary, std::ResourceManager *allocator)
 {
+	// Check if the ELF file is an executable
+	if (binary.type() != std::ELF::ET_EXEC)
+		std::exception("Cannot execute binary: not an executable.", ENOEXEC);
+
 	// Get next available PID
 	pid_t threadPID = allocateThread();
 
@@ -23,8 +27,15 @@ BBP::userspace::Thread *BBP::userspace::HyperVisor::spawnThread(std::ELF::ELFBui
 	t->executable.createTLS(t->TLS);
 	t->allocator = allocator;
 
-	// Set eip
+	// Set EIP point
 	userspace::setRegister(t->eip, binary.entry());
+
+	// Reset argument and general stack
+	t->argumentStack.atElement = 0;
+	t->generalStack.atElement = 0;
+
+	// Add dummy EIP, return object, and argument count.
+	t->argumentStack << binary.entry() << binary.entry() << 0;
 
 	// Return thread
 	return t;

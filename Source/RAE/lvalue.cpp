@@ -1,7 +1,8 @@
+#include "../include/StateMachine.h"
 #include "../include/ValueCategories.h"
 #include "../include/Opcodes.h"
 #include "../include/Threading.h"
-#include "../include/StateMachine.h"
+
 
 
 BBP::userspace::lvalue::lvalue()
@@ -9,20 +10,21 @@ BBP::userspace::lvalue::lvalue()
 
 }
 
+BBP::userspace::lvalue::lvalue(userspace::StateMachine &state, std::word address)
+{
+	dereference(state, address);
+}
+
 BBP::userspace::lvalue::lvalue(userspace::StateMachine &state, userspace::Instruction::Arg &arg)
 {
 
 	// If argument is not an L value, signal error
 	if (isArgumentLValue(arg) == false)
-	{
-		__SIGNAL__(SIGILL);
-	}
+		std::raise(std::SIGILL);
 
 	// Expect one trailer
 	if (arg.trailerCount < 1)
-	{
-		__SIGNAL__(SIGILL);
-	}
+		std::raise(std::SIGILL);
 
 	// So it is referenced. Check where
 	std::address_t lvalueFor = arg.data;
@@ -92,7 +94,7 @@ BBP::std::address_t BBP::userspace::lvalue::getOwnPhysicalAddress()
 		return PhysicalAddress;
 
 	// Cannot get physical address of register.
-	__SIGNAL__(SIGSEGV);
+	std::raise(std::SIGSEGV);
 }
 
 BBP::std::address_t BBP::userspace::lvalue::getOwnVirtualAddress()
@@ -108,9 +110,7 @@ BBP::std::word BBP::userspace::lvalue::resolve(userspace::StateMachine &state)
 	{
 		// If invalid register, throw sigsegv
 		if (_register == nullptr)
-		{
-			__SIGNAL__(SIGSEGV);
-		}
+			std::raise(std::SIGSEGV);
 
 		// Return data
 		return readRegister(*_register);
@@ -121,7 +121,7 @@ BBP::std::word BBP::userspace::lvalue::resolve(userspace::StateMachine &state)
 		return std::read(&state.getActiveThread().executable.BinaryData, PhysicalAddress);
 
 	// If not anything, SIGSEGV
-	__SIGNAL__(SIGSEGV);
+	std::raise(std::SIGSEGV);
 }
 
 void BBP::userspace::lvalue::assign(userspace::StateMachine &state, pvalue &assignee, std::byte bytes)
@@ -144,6 +144,11 @@ void BBP::userspace::lvalue::assign(userspace::StateMachine &state, pvalue &assi
 	}
 }
 
+void BBP::userspace::lvalue::assign(userspace::StateMachine &state, std::word data, std::byte bytes)
+{
+	rvalue val(data);
+	assign(state, val, bytes);
+}
 
 bool BBP::userspace::lvalue::canUserExecuteFrom(userspace::StateMachine& state)
 {
@@ -153,18 +158,14 @@ bool BBP::userspace::lvalue::canUserExecuteFrom(userspace::StateMachine& state)
 
 	// If not address, throw signal for uninitialized data
 	if (!isAddress)
-	{
-		__SIGNAL__(SIGSEGV);
-	}
+		std::raise(std::SIGSEGV);
 
 	// Get page permissions
 	std::index_t page = state.getActiveThread().executable.findIndexOfVirtualMemory(VirtualMemory);
 
 	// Check for error
 	if (page >= state.getActiveThread().executable.mapping.dataSize)
-	{
-		__SIGNAL__(SIGSEGV);
-	}
+		std::raise(std::SIGSEGV);
 
 	return state.getActiveThread().executable.mapping.static_data[page].executable;
 }
@@ -177,18 +178,14 @@ bool BBP::userspace::lvalue::canUserReadFrom(userspace::StateMachine& state)
 
 	// If not address, throw signal for uninitialized data
 	if (!isAddress)
-	{
-		__SIGNAL__(SIGSEGV);
-	}
+		std::raise(std::SIGSEGV);
 
 	// Get page permissions
 	std::index_t page = state.getActiveThread().executable.findIndexOfVirtualMemory(VirtualMemory);
 
 	// Check for error
 	if (page >= state.getActiveThread().executable.mapping.dataSize)
-	{
-		__SIGNAL__(SIGSEGV);
-	}
+		std::raise(std::SIGSEGV);
 
 	return state.getActiveThread().executable.mapping.static_data[page].readable;
 }
@@ -201,18 +198,14 @@ bool BBP::userspace::lvalue::canUserWriteTo(userspace::StateMachine& state)
 
 	// If not address, throw signal for uninitialized data
 	if (!isAddress)
-	{
-		__SIGNAL__(SIGSEGV);
-	}
+		std::raise(std::SIGSEGV);
 
 	// Get page permissions
 	std::index_t page = state.getActiveThread().executable.findIndexOfVirtualMemory(VirtualMemory);
 
 	// Check for error
 	if (page >= state.getActiveThread().executable.mapping.dataSize)
-	{
-		__SIGNAL__(SIGSEGV);
-	}
+		std::raise(std::SIGSEGV);
 
 	return state.getActiveThread().executable.mapping.static_data[page].writeable;
 }

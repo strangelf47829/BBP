@@ -30,11 +30,11 @@ namespace BBP
 		"jgzr$","jezr$","jltr$","jgtr$","jlznr$","jgznr$","jeznr$",
 		"jltnr$","jgtnr$","page$","pageaw$","pagear$","pagew$",
 		"pager$","palloc$","pfree$","pages$","pagebc$","passign$",
-		"signal$","signalf$","hlt$","hcf$","hbu$"};
+		"signal$","signalf$","hlt$","hcf$","hbu$", "palign$"};
 
 		static constexpr std::size_t keywordCount = 18;
 		static constexpr std::size_t tokenCount = 23;
-		static constexpr std::size_t mnemonicsCount = 110;
+		static constexpr std::size_t mnemonicsCount = 111;
 
 		static const std::Lexer::lex_action keywordActions[] = { pragma_include, pragma_handler, pragma_define, pragma_undef, pragma_ifndef, pragma_ifdef, pragma_endif, pragma_else,
 																pragma_atomic, pragma_handover, pragma_continue, kw_static, kw_const, kw_virtual, kw_extern, kw_procedure, kw_end, kw_endroutine };
@@ -59,31 +59,31 @@ namespace BBP
 	mn_jmpz,mn_jmpz,mn_jmpc,mn_jmpc,mn_page,mn_page,\
 	mn_page,mn_page,mn_page,mn_page,mn_page,\
 	mn_page,mn_page,mn_page,mn_signal,mn_signal,\
-	mn_halt,mn_halt,mn_halt};
+	mn_halt,mn_halt,mn_halt,mn_page};
 
-		static const char flags[23][8] = { {true, false, false, false, false, true, 0, 0},
-											{true, false, false, false, false, true, 0, 0},
-											{false, false, false, true, false, true, 0, 0},
-											{false, false, false, false, false, true, 0, 0},
-											{false, false, false, false, false, true, 0, 0},
-											{false, false, false, false, false, true, 0, 0},
-											{false, false, false, false, false, true, 0, 0},
-											{false, false, false, false, false, true, 0, 0},
-											{false, false, false, false, false, true, 0, 0},
-											{false, false, false, false, false, true, 0, 0},
-											{false, false, false, false, false, true, 0, 0},
-											{false, false, false, false, false, true, 0, 0},
-											{false, false, false, false, false, true, 0, 0},
-											{false, false, false, false, true, true, 0, 1},
-											{false, false, false, false, true, true, 0, 2},
-											{false, false, false, false, false, true, 0, 0},
-											{false, false, true, false, false, true, 0, 0},
-											{false, false, false, false, false, false, 0, 0},
-											{false, false, false, false, false, false, 0, 0},
-											{false, false, false, false, false, false, 0, 0},
-											{false, false, false, false, false, false, 0, 0},
-											{false, false, false, false, false, false, 0, 0},
-											{false, false, false, false, false, false, 0, 0} };
+		static const char flags[23][9] = { {true, false, false, false, false, true, true, 0, 0},
+											{true, false, false, false, false, true, true, 0, 0},
+											{false, false, false, true, false, true, true, 0, 0},
+											{false, false, false, false, false, true, true, 0, 0},
+											{false, false, false, false, false, true, true, 0, 0},
+											{false, false, false, false, false, true, true, 0, 0},
+											{false, false, false, false, false, true, true, 0, 0},
+											{false, false, false, false, false, true, true, 0, 0},
+											{false, false, false, false, false, true, true, 0, 0},
+											{false, false, false, false, false, true, true, 0, 0},
+											{false, false, false, false, false, true, true, 0, 0},
+											{false, false, false, false, false, true, true, 0, 0},
+											{false, false, false, false, false, true, true, 0, 0},
+											{false, false, false, false, true, true, true, 0, 1},
+											{false, false, false, false, true, true, true, 0, 2},
+											{false, false, false, false, false, true, true, 0, 0},
+											{false, false, true, false, false, true, true, 0, 0},
+											{false, false, false, false, false, false, false, 0, 0},
+											{false, false, false, false, false, false, false, 0, 0},
+											{false, false, false, false, false, false, false, 0, 0},
+											{false, false, false, false, false, false, false, 0, 0},
+											{false, false, false, false, false, false, false, 0, 0},
+											{false, false, false, false, false, false, false, 0, 0} };
 
 		esaProcessor processor;
 	}
@@ -105,16 +105,16 @@ BBP::esa::esaProcessor::esaProcessor()
 
 	// Read all keywords into parser
 	for (unsigned int k = 0; k < keywordCount; k++)
-		esaParser.keywordStack[k] = { keywords[k], std::strlen(keywords[k]), 0, keywordActions[k], false, false, false, false, false, false, 0, 0 };
+		esaParser.keywordStack[k] = { keywords[k], std::strlen(keywords[k]), 0, keywordActions[k], false, false, false, false, false, false, false, 0, 0 };
 
 	// Read instructions into parser
 	for (unsigned int k = 0; k < mnemonicsCount; k++)
-		esaParser.keywordStack[k + keywordCount + tokenCount] = { mnemonics[k], std::strlen(mnemonics[k]), 0, mnemonicsActions[k], false, false, false, false, false, false, 0, 0 };
+		esaParser.keywordStack[k + keywordCount + tokenCount] = { mnemonics[k], std::strlen(mnemonics[k]), 0, mnemonicsActions[k], false, false, false, false, false, false, false, 0, 0 };
 
 	// Read tokens into parser
 	for (unsigned int k = 0; k < tokenCount; k++)
 		esaParser.keywordStack[k + keywordCount] = { tokens[k], std::strlen(tokens[k]), 0, tokenActions[k],
-																	(bool)flags[k][0], (bool)flags[k][1], (bool)flags[k][2], (bool)flags[k][3], (bool)flags[k][4], (bool)flags[k][5], flags[k][6], flags[k][7] };
+																	(bool)flags[k][0], (bool)flags[k][1], (bool)flags[k][2], (bool)flags[k][3], (bool)flags[k][4], (bool)flags[k][5], (bool)flags[k][6], flags[k][7], flags[k][8] };
 
 	// Manually set some stuff
 	esaParser.keywordStack[ELSE_HANDLE].considerCommentDepth = 4;
@@ -132,13 +132,14 @@ BBP::esa::esaProcessor::esaProcessor()
 
 	// Add reserved identifier
 	reserveRegisters();
+	reserveBuiltins();
 }
 
 BBP::std::conststring BBP::std::Lexer::lex_context::onUnkown(BBP::std::index_t from, BBP::std::index_t to)
 {
 	// If not defining an instruction, do this
 	if (!BBP::esa::processor.lineIsDefiningInstruction)
-		return BBP::esa::processor.unkown(from, to);
+		return BBP::esa::processor.unkown(to, from);
 	return BBP::esa::processor.resolve(from, to);
 }
 

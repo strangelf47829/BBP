@@ -46,6 +46,7 @@ namespace BBP
 			PAGE(size_t Size, T* dat) : dataSize(Size), bytes(Size * (sizeof(T) / sizeof(mem_t))), prevPage(nullptr), nextPage(nullptr), data(dat) {}
 			PAGE() : dataSize(0), bytes(0), prevPage(0), nextPage(0), data(nullptr) {}
 
+			T &operator[](std::index_t idx);
 
 		};
 
@@ -58,6 +59,49 @@ namespace BBP
 			{
 				static_assert(K <= max_page_static_size, "Static page cannot hold more than max_page_static_size items!");
 			}
+		};
+
+		// The dynamic page stores a page to either a 2, 4, 8, 16, or 32 bits 
+		struct DYN_PAGE : virtual PAGE<std::word>
+		{
+			// This struct is used to store the alignment types used.
+			enum Alignment : std::byte
+			{
+				Unallocated = 0,
+				Crumb = 2,
+				Nibble = 4,
+				Byte = 8,
+				HalfWord = 16,
+				Word = 32
+			} alignment;
+			
+			// Helper function to calculate a bunch of stuff
+			void calculateIndicies(std::index_t, std::index_t &bottom, std::index_t &top, std::offset_t &bitOffset);
+
+			// '[]' is used to read, function is used to write
+			std::word operator[](std::index_t idx);
+			void write(std::index_t, std::word);
+
+			// Resize pages dynamically
+			Alignment getAlignment();
+			void setAlignment(Alignment);
+
+			// Used to manipulate data within this page
+			std::word getMask();
+			std::word getMask(std::byte);
+			std::word truncate(std::word);
+			std::word truncate(std::word, std::byte);
+
+
+			// Delete old constructors since they are no longer valid.
+			DYN_PAGE(std::size_t, std::word *) = delete;
+
+			// Specify new constructors
+			DYN_PAGE(std::size_t size, std::word *, Alignment align, bool WPerm);
+			DYN_PAGE();
+
+			bool canUserWrite;
+
 		};
 		
 		// Write 'data' at 'index'

@@ -29,6 +29,9 @@ namespace BBP
 		typedef const string_element *conststring;
 		typedef const ustring_element *uconststring;
 
+		/* Strings known at compile time for constant expressions */
+		typedef const char *const constexprstring;
+
 		/* The absolute longest size of a string */
 		const size_t max_string_length = 0xFFFF;
 
@@ -69,7 +72,24 @@ namespace BBP
 		hash_t strhsh(c_string str);
 		hash_t strhsh(conststring str);
 
+		/*
 		constexpr inline std::hash_t operator ""_hash(const char *str, long unsigned int hehe) 
+		{
+			
+		}
+
+		*/
+
+		constexpr inline std::size_t static_length(constexprstring string)
+		{
+
+			// Calculate length
+			std::size_t length = 0;
+			for (length = 0; string[length]; length++);
+			return length;
+		}
+
+		constexpr inline std::hash_t static_hash(constexprstring stringToHash)
 		{
 			// Hashing constants
 			const int p = 31;
@@ -80,17 +100,22 @@ namespace BBP
 			uint32_t Power = 1;
 
 			// Get the size of the string
-			std::size_t length = hehe;
+			std::size_t length = static_length(stringToHash);
 
 			// Actual hashing algorithm. Taken from: 
 			for (std::index_t index = 0; index < length; index++)
 			{
-				char c = str[index];
+				char c = stringToHash[index];
 				hash = (hash + (c - 'a' + 1) * Power) % m;
 				Power = (p * Power) % m;
 			}
 
 			return hash;
+		}
+
+		constexpr inline std::hash_t _const_sym_hash(constexprstring stringToHash)
+		{
+			return 0;
 		}
 
 		/* Running hash */

@@ -79,10 +79,15 @@ void BBP::userspace::BinaryExecutable::loadExecutable(std::ELF::ELFBuilder &bina
 		// If offset is 0, continue
 		if (segmentOffset == 0)
 			continue;
+		
+		//std::printf("Loading segment %u (from 0x%08x to 0x%08x: 0x%04x bytes)\n", segment, loadIntoAddress, loadIntoAddress + physicalSegmentSize, physicalSegmentSize);
 
 		// Now copy binary data into physical memory
 		for (std::index_t idx = 0; idx < physicalSegmentSize; idx++)
+		{
+			std::word data = std::read(&binary.file, segmentOffset + idx);
 			__UNSAFE__(std::write)(&BinaryData, __UNSAFE__(std::read)(&binary.file, segmentOffset + idx), loadIntoAddress + idx);
+		}
 	}
 
 }
@@ -154,9 +159,7 @@ BBP::std::address_t BBP::userspace::BinaryExecutable::virtualToPhysical(std::add
 
 	// If no address is found, signal SIGSEGV
 	if (block == mapping.dataSize)
-	{
-		__SIGNAL__(SIGSEGV);
-	}
+		std::raise(std::SIGSEGV);
 
 	// Retrieve variables
 	std::address_t virtualHead = mapping.static_data[block].virtualMemoryHead;
@@ -176,9 +179,7 @@ BBP::std::address_t BBP::userspace::BinaryExecutable::physicalToVirtual(std::add
 
 	// If no address is found, signal SIGSEGV
 	if (block == mapping.dataSize)
-	{
-		__SIGNAL__(SIGSEGV);
-	}
+		std::raise(std::SIGSEGV);
 
 	// Retrieve variables
 	std::address_t virtualHead = mapping.static_data[block].virtualMemoryHead;

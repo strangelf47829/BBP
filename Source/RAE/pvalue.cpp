@@ -1,8 +1,9 @@
+#include "../include/StateMachine.h"
 #include "../include/ValueCategories.h"
 #include "../include/stdio.h"
 #include "../include/Opcodes.h"
 #include "../include/Threading.h"
-#include "../include/StateMachine.h"
+
 
 
 bool BBP::userspace::pvalue::isArgumentLValue(userspace::Instruction::Arg &arg)
@@ -39,9 +40,9 @@ BBP::userspace::register_t *BBP::userspace::pvalue::getAddressForRegister(usersp
 		switch (lvalueFor & ~0b1111)
 		{
 		case LOBYHIHW:	// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case HIBYHIHW:	// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case LOBYLOHW:	// AL
 			_register = &state.getActiveThread().al;
 			break;
@@ -52,21 +53,21 @@ BBP::userspace::register_t *BBP::userspace::pvalue::getAddressForRegister(usersp
 			_register = &state.getActiveThread().ax;
 			break;
 		case HIHW:		// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case TT:		// EAX
 			_register = &state.getActiveThread().eax;
 			break;
 		default: // Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		}
 		break;
 	case 2: // ecx
 		switch (lvalueFor & ~0b1111)
 		{
 		case LOBYHIHW:	// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case HIBYHIHW:	// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case LOBYLOHW:	// CL
 			_register = &state.getActiveThread().cl;
 			break;
@@ -77,21 +78,21 @@ BBP::userspace::register_t *BBP::userspace::pvalue::getAddressForRegister(usersp
 			_register = &state.getActiveThread().cx;
 			break;
 		case HIHW:		// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case TT:		// ECX
 			_register = &state.getActiveThread().ecx;
 			break;
 		default: // Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		}
 		break;
 	case 3: // edx
 		switch (lvalueFor & ~0b1111)
 		{
 		case LOBYHIHW:	// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case HIBYHIHW:	// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case LOBYLOHW:	// DL
 			_register = &state.getActiveThread().dl;
 			break;
@@ -102,21 +103,21 @@ BBP::userspace::register_t *BBP::userspace::pvalue::getAddressForRegister(usersp
 			_register = &state.getActiveThread().dx;
 			break;
 		case HIHW:		// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case TT:		// EDX
 			_register = &state.getActiveThread().edx;
 			break;
 		default: // Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		}
 		break;
 	case 4: // ebx
 		switch (lvalueFor & ~0b1111)
 		{
 		case LOBYHIHW:	// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case HIBYHIHW:	// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case LOBYLOHW:	// BL
 			_register = &state.getActiveThread().bl;
 			break;
@@ -127,21 +128,21 @@ BBP::userspace::register_t *BBP::userspace::pvalue::getAddressForRegister(usersp
 			_register = &state.getActiveThread().bx;
 			break;
 		case HIHW:		// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case TT:		// EBX
 			_register = &state.getActiveThread().ebx;
 			break;
 		default: // Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		}
 		break;
 	case 5: // esi
 		switch (lvalueFor & ~0b1111)
 		{
 		case LOBYHIHW:	// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case HIBYHIHW:	// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case LOBYLOHW:	// sil
 			_register = &state.getActiveThread().sil;
 			break;
@@ -152,21 +153,21 @@ BBP::userspace::register_t *BBP::userspace::pvalue::getAddressForRegister(usersp
 			_register = &state.getActiveThread().six;
 			break;
 		case HIHW:		// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case TT:		// esi
 			_register = &state.getActiveThread().esi;
 			break;
 		default: // Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		}
 		break;
 	case 6: // edi
 		switch (lvalueFor & ~0b1111)
 		{
 		case LOBYHIHW:	// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case HIBYHIHW:	// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case LOBYLOHW:	// dil
 			_register = &state.getActiveThread().dil;
 			break;
@@ -177,12 +178,12 @@ BBP::userspace::register_t *BBP::userspace::pvalue::getAddressForRegister(usersp
 			_register = &state.getActiveThread().dix;
 			break;
 		case HIHW:		// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case TT:		// edi
 			_register = &state.getActiveThread().edi;
 			break;
 		default: // Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		}
 		break;
 	case 7: // tix
@@ -210,7 +211,7 @@ BBP::userspace::register_t *BBP::userspace::pvalue::getAddressForRegister(usersp
 			_register = &state.getActiveThread().tix;
 			break;
 		default: // Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		}
 		break;
 	case 8: // ssx
@@ -238,20 +239,20 @@ BBP::userspace::register_t *BBP::userspace::pvalue::getAddressForRegister(usersp
 			_register = &state.getActiveThread().ssx;
 			break;
 		default: // Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		}
 		break;
 	case 9: // sui
 		switch (lvalueFor & ~0b1111)
 		{
 		case LOBYHIHW:	// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case HIBYHIHW:	// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case LOBYLOHW:	// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case HIBYLOHW:  // Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case LOHW:		// gsi
 			_register = &state.getActiveThread().gsi;
 			break;
@@ -262,16 +263,16 @@ BBP::userspace::register_t *BBP::userspace::pvalue::getAddressForRegister(usersp
 			_register = &state.getActiveThread().sui;
 			break;
 		default: // Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		}
 		break;
 	case 10: // eip
 		switch (lvalueFor & ~0b1111)
 		{
 		case LOBYHIHW:	// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case HIBYHIHW:	// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case LOBYLOHW:	// il
 			_register = &state.getActiveThread().il;
 			break;
@@ -282,38 +283,38 @@ BBP::userspace::register_t *BBP::userspace::pvalue::getAddressForRegister(usersp
 			_register = &state.getActiveThread().ip;
 			break;
 		case HIHW:		// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case TT:		// eip
 			_register = &state.getActiveThread().eip;
 			break;
 		default: // Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		}
 		break;
 	case 11: // sip
 		switch (lvalueFor & ~0b1111)
 		{
 		case LOBYHIHW:	// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case HIBYHIHW:	// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case LOBYLOHW:	// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case HIBYLOHW:  // Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case LOHW:		// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case HIHW:		// Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		case TT:		// sip
 			_register = &state.getActiveThread().sip;
 			break;
 		default: // Doesn't exist
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 		}
 		break;
 	default: // Doesn't exist
-		__SIGNAL__(SIGILL);
+		std::raise(std::SIGILL);
 	}
 
 	// Return address

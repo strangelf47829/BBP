@@ -9,7 +9,7 @@ PLAT= generic
 
 # =========== Module target details
 MODULE= RAE
-MODULE_SRC= Registers.cpp InstructionCycle.cpp BinaryExecutables.cpp ThreadState.cpp StateMachine.cpp StateMachineOpcodes.cpp lvalue.cpp rvalue.cpp xvalue.cpp pvalue.cpp
+MODULE_SRC= Registers.cpp InstructionCycle.cpp BinaryExecutables.cpp ThreadState.cpp StateMachine.cpp StateMachineOpcodes.cpp lvalue.cpp rvalue.cpp xvalue.cpp pvalue.cpp HypervisorFunctors.cpp
 
 # ========
 # END OF MODULE SETTINGS.

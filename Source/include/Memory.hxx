@@ -9,7 +9,7 @@ template <typename T>
 inline void __UNSAFE__(BBP::std::write)(PAGE<T> *page, T &data, index_t index)
 {
 	// Check if index is within bounds, and if next page is not null
-	if (index > page->dataSize && page->nextPage)
+	if (index >= page->dataSize && page->nextPage)
 		__UNSAFE__(write)(page->nextPage, data, index - page->dataSize);
 	else
 		page->data[index] = data;
@@ -44,7 +44,7 @@ void BBP::std::write(PAGE<T> *page, T &data, index_t index)
 	size_t page_size = std::seqlen(*page);
 
 	// If requested index is too large, throw error
-	if (index > page_size)
+	if (index >= page_size)
 		throw std::exception("Cannot write to page: index exceeds page bounds.", ENOBUFS);
 
 	// Copy over data. We can use unsafe, since we already validated everything.
@@ -62,7 +62,7 @@ void BBP::std::write_r(PAGE<T> *page, mem_t &data, index_t index)
 	size_t page_size = std::seqlen_r(page);
 
 	// If requested index is too large, throw error
-	if (index > page_size)
+	if (index >= page_size)
 		throw std::exception("Cannot write to page: index is out of bounds.", ENOBUFS);
 
 	// Copy over data. We can use unsafe, since we already validated everything.
@@ -398,6 +398,12 @@ void BBP::std::memcpy(PAGE<T> &src, PAGE<T> &dst, size_t amount)
 	// Directly write
 	for (std::index_t index = 0; index < amount; index++)
 		__UNSAFE__(write)(&dst, __UNSAFE__(read)(&src, index), index);
+}
+
+template <typename T>
+T &BBP::std::PAGE<T>::operator[](std::index_t idx)
+{
+	return std::read(this, idx);
 }
 
 #endif

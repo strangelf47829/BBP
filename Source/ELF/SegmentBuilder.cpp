@@ -5,9 +5,7 @@ void BBP::std::ELF::SegmentBuilder::Append(std::size_t size)
 {
 	// If builder is null, signal SIGSEV
 	if (elf == nullptr)
-	{
-		__SIGNAL__(SIGSEGV);
-	}
+		std::raise(std::SIGSEGV);
 
 	// Get current length of elf page
 	std::size_t currentLength = std::seqlen(elf->file);
@@ -32,9 +30,7 @@ void BBP::std::ELF::SegmentBuilder::close()
 {
 	// If builder is null, signal SIGSEV
 	if (elf == nullptr)
-	{
-		__SIGNAL__(SIGSEGV);
-	}
+		std::raise(std::SIGSEGV);
 
 	// If mem is unique, free it.
 	if (isMemUnique)

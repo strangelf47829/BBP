@@ -14,6 +14,7 @@ BBP::std::conststring BBP::esa::esaProcessor::numerical(BBP::std::Lexer::numeric
 
 BBP::std::conststring BBP::esa::esaProcessor::numericalArgument(BBP::std::Lexer::numerical_t numerical, bool isFloat)
 {
+
 	// Check if correct thing is expected
 	bool expectsLiteral = instruction.args[atArgument].isLiteralArg || instruction.args[atArgument].anyvalue;
 
@@ -285,6 +286,10 @@ BBP::std::conststring BBP::esa::esaProcessor::resolve(BBP::std::index_t at, BBP:
 	std::word byteSize = 0;
 	std::index_t symbol = lookupSymbol(delimiterDepth ? lastOpener : (start + 1), delimiterDepth ? firstCloser : (position - 1), &byteSize, hash);
 
+	// Now reset delimiterDepth and delimiterStack
+	delimiterDepth = 0;
+	delimiterStack.atElement = 0;
+
 	// If symbol is 0, try to resolve quasi or reserved.
 	if (symbol == 0)
 	{
@@ -392,10 +397,15 @@ BBP::std::conststring BBP::esa::esaProcessor::resolve(BBP::std::index_t at, BBP:
 		if (sizeDepth > 2)
 			return "ECannot resolve more than 2 size layers.";
 
-		// Do action based on depth. FIX: What am I trying to do here?
+		// Do an action based on the amount of brackets
+		std::conststring errMsg = nullptr;
 		if (sizeDepth == 1)
-			return numericalArgument({ byteSize }, false);
-		return numericalArgument({ byteSize * 8 }, false);
+			errMsg = numericalArgument({ byteSize }, false);
+		else
+			errMsg = numericalArgument({ byteSize * 8 }, false);
+
+		// Return error message
+		return errMsg;
 	}
 
 	// Check if reference was expected
@@ -405,9 +415,10 @@ BBP::std::conststring BBP::esa::esaProcessor::resolve(BBP::std::index_t at, BBP:
 	// Get total referenced
 	BBP::int32_t totalRefDepth = dereferenceDepth - referenceDepth;
 
+
 	// Check if page is 0
 	// TODO: Move to different function
-	if (atPage == 0)
+	if (atPage == 0 || true)
 		emitRelocation(symbol);
 
 	// Check if request is legal

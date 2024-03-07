@@ -7,19 +7,14 @@ void BBP::userspace::HyperVisor::FetchActiveThreadInstruction()
 {
 	// Check if active thread is within bounds
 	if (activeThread >= threadCount)
-	{
-		// Signal Processor fault
-		__SIGNAL__(SIGINV);
-	}
+		std::raise(std::SIGINV); // Signal Processor fault
 
 	// Get active thread
 	Thread *currentThread = &threads.static_data[activeThread];
 
 	// If thread is inactive, raise signal
 	if (currentThread->active == false)
-	{
-		__SIGNAL__(SIGTHREXP);
-	}
+		std::raise(std::SIGTHREXP);
 
 	// Read program counter (eip) and convert from virtual memory to physical memory
 	std::word programCounter = currentThread->executable.virtualToPhysical(readRegister(currentThread->eip));
@@ -99,7 +94,7 @@ void BBP::userspace::HyperVisor::FetchActiveThreadInstruction()
 	catch (const std::except &e)
 	{
 		// Doesn't really matter what happens, just signal fault
-		__SIGNAL__(SIGTHREXP);
+		std::raise(std::SIGTHREXP);
 	}
 
 

@@ -1067,6 +1067,7 @@ INSTRUCTION(ctrl)
 		argCount = 1;
 		processor.surpressArgCountWarning(0);
 		processor.setInstruction(userspace::CTRL, suffix, 0, argCount);
+		processor.expectAny(0);
 		break;
 
 	case CALL_HANDLE:
@@ -1756,35 +1757,37 @@ INSTRUCTION(page)
    {
    case PAGE_HANDLE:
 	   processor.setInstruction(userspace::PAGE, userspace::assign | userspace::read | userspace::write, 0, 1);
-	   processor.expectLiteral(0);
+	   processor.expectAny(0);		// The page to set
 	   return nullptr;
 
    case PAGEAW_HANDLE:
 	   processor.setInstruction(userspace::PAGE, userspace::assign | userspace::write, 0, 1);
-	   processor.expectLiteral(0);
+	   processor.expectLiteral(0);	// The page to set
 	   return nullptr;
    case PAGEAR_HANDLE:
 	   processor.setInstruction(userspace::PAGE, userspace::assign | userspace::read, 0, 1);
-	   processor.expectLiteral(0);
+	   processor.expectLiteral(0);	// The page to set
 	   return nullptr;
 
    case PAGEW_HANDLE:
 	   processor.setInstruction(userspace::PAGE, userspace::write, 0, 2);
-	   processor.expectLiteral(0);
-	   processor.expectAny(1);
+	   processor.expectLiteral(0);	// The index
+	   processor.expectAny(1);		// Where to write into
 	   return nullptr;
    case PAGER_HANDLE:
 	   processor.setInstruction(userspace::PAGE, userspace::read, 0, 2);
-	   processor.expectLiteral(0);
-	   processor.expectAny(1);
+	   processor.expectLiteral(0);	// The index
+	   processor.expectAddress(1);	// Where to read into
 	   return nullptr;
 
    case PALLOC_HANDLE:
 	   processor.setInstruction(userspace::PAGE, userspace::assign | userspace::memoryOp | userspace::sizeOp, 0, 1);
-	   processor.expectLiteral(0);
+	   processor.expectLiteral(0);	// The page to allocate space in
+	   processor.expectLiteral(1);	// The amount of space to allocate
 	   return nullptr;
    case PFREE_HANDLE:
 	   processor.setInstruction(userspace::PAGE, userspace::memoryOp | userspace::sizeOp, 0, 0);
+	   processor.expectLiteral(0);	// The page to free
 	   return nullptr;
 
    case PAGES_HANDLE:
@@ -1802,6 +1805,13 @@ INSTRUCTION(page)
 	   processor.setInstruction(userspace::PAGE, userspace::assign | userspace::read | userspace::write | userspace::memoryOp, 0, 1);
 	   processor.expectAddress(0);
 	   return nullptr;
+	   
+   case PALIGN_HANDLE:
+	   processor.setInstruction(userspace::PAGE, userspace::assign | userspace::memoryOp, 0, 2);
+	   processor.expectLiteral(0);	// The page to align to.
+	   processor.expectLiteral(1);	// The alignment of said page in bytes.
+	   return nullptr;
+
    }
 
    return "APage instruction not recognized. Please ensure you are using the right version of ELSA.";

@@ -49,3 +49,6 @@ clean: $(patsubst %,%.clean,$(notdir $(MODULE_DIRS)))
 
 %.clean:
 	@cd ../Source/$(patsubst %.clean,%,$@); make clean --no-print-directory
+
+elf:
+	readelf -e /mnt/v/boot/ELSA.o -x 5 -x 4 -x 2 -x 8 -r -s

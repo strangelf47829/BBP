@@ -20,6 +20,18 @@ BBP::userspace::HyperVisor hypervisor;
 BBP::userspace::HyperVisor hypervisor2;
 BBP::userspace::StateMachine state;
 
+
+BBP::std::word printcall(BBP::userspace::StateMachine *state, BBP::userspace::HyperVisor *, BBP::userspace::Thread *thr, BBP::userspace::Instruction &Args)
+{
+	// Get a page
+	BBP::userspace::xvalue val = BBP::userspace::xvalue(*state, Args.args[1]);
+	BBP::std::c_string str = thr->executable.BinaryData.data + val.getOwnPhysicalAddress();
+	BBP::std::word count = BBP::std::printf("%s", str);
+
+	return count;
+}
+
+
 int BBP::smile_main(int argc, char **argv)
 {
 
@@ -77,20 +89,9 @@ int BBP::smile_main(int argc, char **argv)
 	// Get processor
 	std::ELF::ELFBuilder compiled(compiledFile.b().page, std::activemem);
 
-	// Now we can do whatever
-	for (std::index_t index = 0; index < compiled.symbolCount; index++)
-	{
-		// Check symbol stuff
-		//if (compiled.symbols[index].info() & std::ELF::SYM_FUNC)
-		//	std::printf("Symbol %u is a function.\n", index);
-	}
 
-
-
-
-
-
-
+	// Set the correspondig syscall
+	hypervisor.systemcalls.data[0] = (BBP::userspace::HyperVisor::syscall_t)printcall;
 
 
 
@@ -107,8 +108,7 @@ int BBP::smile_main(int argc, char **argv)
 	state.setActiveHypervisor(&hypervisor);
 	state.setActiveThread(t);
 
-	// Cycle a single thread
-	state.cycleThread();
+	hypervisor.advanceThread(state, 10);
 
 	// Close
 	hypervisor.destroyThread(0);

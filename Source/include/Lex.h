@@ -43,6 +43,8 @@ namespace BBP
 				bool forceParseOutsideLiterals; // If true, this keyword is also considered when literalDepth is 0.
 				bool actAsDelimiter; // If true, this keyword will be treated like a whitespace.
 
+				bool allowsPrefixing; // If true, the keyword doesn't need to be followed by a whitespace (not whitespace keyword) in order to be recognized.
+
 				char considerCommentDepth; // If 'forceParseInComments' is false, his keyword is considered only if 'commentDepth' matches this value
 				char considerLiteralDepth; // if 'forceParseInLiterals' is false, his keyword is considered only if 'literalDepth' matches this value
 			};

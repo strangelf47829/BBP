@@ -1,8 +1,9 @@
+#include "../include/StateMachine.h"
 #include "../include/ValueCategories.h"
 #include "../include/stdio.h"
 #include "../include/Opcodes.h"
 #include "../include/Threading.h"
-#include "../include/StateMachine.h"
+
 
 
 BBP::userspace::xvalue::xvalue()
@@ -39,7 +40,7 @@ BBP::userspace::xvalue::xvalue(userspace::StateMachine &state, userspace::Instru
 	}
 
 	// Uninitialized
-	__SIGNAL__(SIGSEGV);
+	std::raise(std::SIGSEGV);
 
 }
 
@@ -57,7 +58,7 @@ void BBP::userspace::xvalue::dereference(userspace::StateMachine &state, std::ad
 	}
 
 	// Uninitialized value
-	__SIGNAL__(SIGSEGV);
+	std::raise(std::SIGSEGV);
 }
 
 void BBP::userspace::xvalue::reference(userspace::StateMachine &state, pvalue &value)
@@ -68,7 +69,7 @@ void BBP::userspace::xvalue::reference(userspace::StateMachine &state, pvalue &v
 		rval.reference(state, value);
 
 	// Uninitialized
-	__SIGNAL__(SIGSEGV);
+	std::raise(std::SIGSEGV);
 }
 
 BBP::std::address_t BBP::userspace::xvalue::getOwnPhysicalAddress()
@@ -79,7 +80,7 @@ BBP::std::address_t BBP::userspace::xvalue::getOwnPhysicalAddress()
 		return rval.getOwnVirtualAddress();
 
 	// Uninitialized value
-	__SIGNAL__(SIGSEGV);
+	std::raise(std::SIGSEGV);
 }
 
 BBP::std::address_t BBP::userspace::xvalue::getOwnVirtualAddress()
@@ -90,7 +91,7 @@ BBP::std::address_t BBP::userspace::xvalue::getOwnVirtualAddress()
 		return rval.getOwnVirtualAddress();
 
 	// Uninitialized value
-	__SIGNAL__(SIGSEGV);
+	std::raise(std::SIGSEGV);
 }
 
 BBP::std::word BBP::userspace::xvalue::resolve(userspace::StateMachine &state)
@@ -101,7 +102,7 @@ BBP::std::word BBP::userspace::xvalue::resolve(userspace::StateMachine &state)
 		return rval.resolve(state);
 
 	// Uninitialized value
-	__SIGNAL__(SIGSEGV);
+	std::raise(std::SIGSEGV);
 }
 
 void BBP::userspace::xvalue::assign(userspace::StateMachine &state, pvalue &assignee, std::byte bytes)
@@ -110,9 +111,24 @@ void BBP::userspace::xvalue::assign(userspace::StateMachine &state, pvalue &assi
 		lval.assign(state, assignee, bytes);
 	else if (isRvalue)
 		rval.assign(state, assignee, bytes);
+	else
+	{
+		// Unassigned
+		std::raise(std::SIGSEGV);
+	}
+}
 
-	// Uninitialized
-	__SIGNAL__(SIGSEGV);
+void BBP::userspace::xvalue::assign(userspace::StateMachine &state, std::word data, std::byte bytes)
+{
+	if (isLvalue)
+		lval.assign(state, data, bytes);
+	else if (isRvalue)
+		rval.assign(state, data, bytes);
+	else
+	{
+		// Unassigned
+		std::raise(std::SIGSEGV);
+	}
 }
 
 bool BBP::userspace::xvalue::canUserExecuteFrom(userspace::StateMachine& state)
@@ -123,7 +139,7 @@ bool BBP::userspace::xvalue::canUserExecuteFrom(userspace::StateMachine& state)
 		return rval.canUserExecuteFrom(state);
 
 	// Uninitialized
-	__SIGNAL__(SIGSEGV);
+	std::raise(std::SIGSEGV);
 }
 
 bool BBP::userspace::xvalue::canUserReadFrom(userspace::StateMachine& state)
@@ -134,7 +150,7 @@ bool BBP::userspace::xvalue::canUserReadFrom(userspace::StateMachine& state)
 		return rval.canUserReadFrom(state);
 
 	// Uninitialized
-	__SIGNAL__(SIGSEGV);
+	std::raise(std::SIGSEGV);
 }
 
 bool BBP::userspace::xvalue::canUserWriteTo(userspace::StateMachine& state)
@@ -145,5 +161,5 @@ bool BBP::userspace::xvalue::canUserWriteTo(userspace::StateMachine& state)
 		return rval.canUserWriteTo(state);
 
 	// Uninitialized
-	__SIGNAL__(SIGSEGV);
+	std::raise(std::SIGSEGV);
 }

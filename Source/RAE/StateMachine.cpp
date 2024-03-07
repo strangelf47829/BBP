@@ -1,4 +1,5 @@
 #include "../include/StateMachine.h"
+#include "../include/stdio.h"
 
 void BBP::userspace::StateMachine::setActiveHypervisor(userspace::HyperVisor *hyperv)
 {
@@ -12,25 +13,20 @@ void BBP::userspace::StateMachine::setActiveThread(userspace::Thread *t)
 
 void BBP::userspace::StateMachine::cycleThread()
 {
-	// Try to get hypervisor to do thing
-	for (std::index_t i = 0; i < 7; i++)
-	{
-		// Get Instruction
-		activeHypervisor->FetchActiveThreadInstruction();
-		activeThread->LogInstruction();
+	// Get Instruction
+	activeHypervisor->FetchActiveThreadInstruction();
+	//activeThread->LogInstruction();
 
-		// Now load TLS
-		activeThread->executable.loadTLS(activeThread->TLS);
+	// Now load TLS
+	activeThread->executable.loadTLS(activeThread->TLS);
 
-		// Do instruction
-		execute();
+	// Do instruction
+	execute();
 
-		// Unload TLS
-		activeThread->executable.unloadTLS(activeThread->TLS);
+	// Unload TLS
+	activeThread->executable.unloadTLS(activeThread->TLS);
 
-	}
 }
-
 void BBP::userspace::StateMachine::execute()
 {
 	// If no thread active
@@ -116,7 +112,7 @@ void BBP::userspace::StateMachine::execute()
 			HALT();
 			break;
 		default:
-			__SIGNAL__(SIGILL);
+			std::raise(std::SIGILL);
 	}
 
 
@@ -130,4 +126,45 @@ BBP::userspace::Thread &BBP::userspace::StateMachine::getActiveThread()
 	
 	// Return thread
 	return *activeThread;
+}
+
+
+// Shorthand for calling functions without promise
+void BBP::userspace::StateMachine::callFunction(std::word address, std::byte argCount, std::word args[7])
+{
+	// Create lvalue handle for eip
+	Instruction::Arg eipArg = { userspace::REGISTERPAGE | 10, false, true, 0, 1, {1, 0, 0, 0}, false, false };
+	lvalue eipHandle(*this, eipArg);
+
+	// Now call function with EIP handle.
+	callFunction(address, eipHandle, argCount, args);
+}
+
+// Calling a function from within
+void BBP::userspace::StateMachine::callFunction(std::word address, lvalue &returnObject, std::byte argCount, std::word args[7])
+{
+
+	// Check if argcount is valid
+	if (argCount >= 7)
+		std::raise(std::SIGSEGV);
+
+	// Get current EIP
+	std::word jumpBackTo = readRegister(activeThread->eip);
+
+	// Now store that in argument stack
+	activeThread->argumentStack << jumpBackTo;
+
+	// Now get lvalue virtual address, and store that into argument stack
+	activeThread->argumentStack << returnObject.getOwnVirtualAddress();
+
+	// Now add each argument into the stack
+	for (std::byte arg = 0; arg < argCount; arg++)
+		activeThread->argumentStack << args[arg];
+
+	// Now add the amount of arguments added
+	activeThread->argumentStack << argCount;
+
+	// Now actually set eip to address
+	setRegister(activeThread->eip, address);
+
 }

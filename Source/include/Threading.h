@@ -104,6 +104,12 @@ namespace BBP
 			// Argument / General Stack
 			std::Stack<std::word> argumentStack;
 			std::Stack<std::word> generalStack;
+
+			// Pages
+			constexpr static std::byte maxPages = 16;
+			std::DYN_PAGE pages[maxPages];
+			std::byte activeRPage;
+			std::byte activeWPage;
 			
 
 			// Signal handling stuff goes here

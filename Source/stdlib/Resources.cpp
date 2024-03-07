@@ -75,9 +75,7 @@ void BBP::std::ResourceManager::free(void *ptr, std::index_t ptrIndex)
 {
 	// If index invalid, throw sigsegv signal
 	if (ptrIndex == this->invalidAllocationIndex)
-	{
-		__SIGNAL__(SIGSEGV);
-	}
+		std::raise(std::SIGSEGV);
 
 	// Pointer exists, so free it.
 	std::ext_free(ptr);
@@ -126,9 +124,7 @@ void BBP::std::ResourceManager::_delete(std::index_t ptrIndex)
 {
 	// If index invalid, throw sigsegv signal
 	if (ptrIndex == this->invalidObjectIndex)
-	{
-		__SIGNAL__(SIGSEGV);
-	}
+		std::raise(std::SIGSEGV);
 
 	// Pointer exists, so delete it.
 	this->objects.data[ptrIndex]->_delete();

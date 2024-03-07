@@ -181,6 +181,7 @@
 #define PAGES_HANDLE 143
 #define PAGEBC_HANDLE 144
 #define PASSIGN_HANDLE 145
+#define PALIGN_HANDLE 151
 
 // SIGNAL instructions
 #define SIGNAL_HANDLE 146

@@ -9,5 +9,5 @@
 
 int BBP::logout_main(int argc, char **argv)
 {
-	__SIGNAL__(SIGSHTDN);
+	std::raise(std::SIGSHTDN);
 }

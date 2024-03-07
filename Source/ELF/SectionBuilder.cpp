@@ -8,9 +8,7 @@ void BBP::std::ELF::SectionBuilder::Append(std::size_t size)
 
 	// If builder is null, signal SIGSEV
 	if (elf == nullptr)
-	{
-		__SIGNAL__(SIGSEGV);
-	}
+		std::raise(std::SIGSEGV);
 
 	// Do not overwrite old data. if old data exists, throw error
 	if (data.dataSize)
@@ -38,9 +36,7 @@ void BBP::std::ELF::SectionBuilder::Extend(std::size_t size)
 {
 	// If builder is null, signal SIGSEV
 	if (elf == nullptr)
-	{
-		__SIGNAL__(SIGSEGV);
-	}
+		std::raise(std::SIGSEGV);
 
 	// Can only extend old data, so if data does not exist, throw error.
 	if (!data.dataSize)
@@ -60,9 +56,7 @@ void BBP::std::ELF::SectionBuilder::close()
 {
 	// If builder is null, signal SIGSEV
 	if (elf == nullptr)
-	{
-		__SIGNAL__(SIGSEGV);
-	}
+		std::raise(std::SIGSEGV);
 
 	// If mem is unique, free it.
 	if (isMemUnique)

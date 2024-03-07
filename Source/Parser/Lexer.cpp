@@ -109,15 +109,15 @@ BBP::std::Lexer::lex_keywordhandle BBP::std::Lexer::lex_context::moveToNextKeywo
 				hasFoundMeaningfulToken = false;
 
 				// If need to abort, break out.
-				if (abort)
-					return keywordStack.atElement + 1;
+if (abort)
+return keywordStack.atElement + 1;
 			}
 		}
 		else
 		{
-			if (!hasFoundMeaningfulToken)
-				foundAt = atPosition - 1;
-			hasFoundMeaningfulToken = true;
+		if (!hasFoundMeaningfulToken)
+			foundAt = atPosition - 1;
+		hasFoundMeaningfulToken = true;
 		}
 
 		if (character == '\n')
@@ -129,7 +129,7 @@ BBP::std::Lexer::lex_keywordhandle BBP::std::Lexer::lex_context::moveToNextKeywo
 		// Mask each keyword word
 		for (handle = 0; handle < kwCount; handle++)
 		{
-			
+
 			// Get a handle on the keyword
 			lex_keyword *keyword = &read(&keywords, handle);
 
@@ -197,6 +197,21 @@ BBP::std::Lexer::lex_keywordhandle BBP::std::Lexer::lex_context::moveToNextKeywo
 			if (atPosition - lastWhiteSpace > keyword->length && !keyword->actAsDelimiter)
 				continue;
 
+			// Check if word is prefixed if it dissallows prefixing. A word is not considered prefixed if it as the end of the file.
+			if (atPosition >= data.dataSize == false)
+			{
+				// Get next character
+				std::string_element nextChar = std::read(&data, atPosition);
+
+				// If it doesn't allow prefixing, nor is the next character a whitespace, continue looking.
+				if ((isWhitespace(nextChar) || keyword->allowsPrefixing) == false)
+				{
+					keyword->mask = 0;
+					continue;
+				}
+
+			}
+
 			// Reset mask, since keywords may come after eachother.
 			keyword->mask = 0;
 
@@ -257,7 +272,7 @@ void BBP::std::Lexer::lex_context::executeSpecialFunction(std::index_t from, std
 
 	// Nothing found, call unkown
 	// Call action
-	debugInformation.msg = onUnkown(to, from);
+	debugInformation.msg = onUnkown(from, to);
 
 	// if msg exists, log error
 	if (debugInformation.msg)

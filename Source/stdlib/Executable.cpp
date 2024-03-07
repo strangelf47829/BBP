@@ -129,5 +129,5 @@ BBP::std::PID_t BBP::std::getNextAvailablePID()
 void BBP::std::exit()
 {
 	printf("\n\r");
-	__SIGNAL__(SIGABRT);
+	std::raise(std::SIGABRT);
 }

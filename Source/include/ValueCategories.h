@@ -27,6 +27,7 @@ namespace BBP
 
 			virtual std::word resolve(userspace::StateMachine &state) = 0;
 			virtual void assign(userspace::StateMachine &state, userspace::pvalue &, std::byte bytes) = 0;
+			virtual void assign(userspace::StateMachine &state, std::word, std::byte bytes) = 0; // Quickly assign value
 
 			// Get own address
 			virtual std::address_t getOwnPhysicalAddress() = 0;
@@ -61,6 +62,7 @@ namespace BBP
 			// Reading and writing
 			std::word resolve(userspace::StateMachine &state);
 			void assign(userspace::StateMachine &state, userspace::pvalue &, std::byte bytes);
+			void assign(userspace::StateMachine &state, std::word, std::byte bytes); // Quickly assign value
 
 			// Functions to resolve
 			std::address_t getOwnPhysicalAddress();
@@ -89,6 +91,9 @@ namespace BBP
 			lvalue();
 			lvalue(userspace::StateMachine &state, userspace::Instruction::Arg &);
 
+			// Stores a virtual address
+			lvalue(userspace::StateMachine &state, std::word);
+
 			// Functions to reference and dereference
 			void dereference(userspace::StateMachine &state, std::address_t);
 			void reference(userspace::StateMachine &state, pvalue &);
@@ -96,6 +101,7 @@ namespace BBP
 			// Reading and writing
 			std::word resolve(userspace::StateMachine &state);
 			void assign(userspace::StateMachine &state, userspace::pvalue &, std::byte bytes);
+			void assign(userspace::StateMachine &state, std::word, std::byte bytes); // Quickly assign value
 
 			// Functions to resolve
 			std::address_t getOwnPhysicalAddress();
@@ -130,6 +136,7 @@ namespace BBP
 			// Reading and writing
 			std::word resolve(userspace::StateMachine &state);
 			void assign(userspace::StateMachine &state, userspace::pvalue &, std::byte bytes);
+			void assign(userspace::StateMachine &state, std::word, std::byte bytes); // Quickly assign value
 
 			// Functions to resolve
 			std::address_t getOwnPhysicalAddress();

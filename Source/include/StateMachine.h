@@ -4,12 +4,12 @@
 #include "Opcodes.h"
 #include "Threading.h"
 #include "Hyperv.h"
+#include "ValueCategories.h"
 
 namespace BBP
 {
 	namespace userspace
 	{
-
 		class StateMachine
 		{
 			userspace::HyperVisor *activeHypervisor;
@@ -50,6 +50,10 @@ namespace BBP
 
 			// Used to define arithmetic operations done on variables
 			using arithmeticOperation = std::word(*)(std::word&, std::word&);
+
+			// Call functions
+			void callFunction(std::word address, userspace::lvalue &returnInfo, std::byte argCount, std::word args[7]);
+			void callFunction(std::word address, std::byte argCount, std::word args[7]);
 
 			// First argument is lvalue to write result to. Second and third argument are arguments for the operation
 			std::word Operate(arithmeticOperation, std::word&, std::word&);

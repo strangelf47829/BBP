@@ -155,3 +155,13 @@ void BBP::esa::esaProcessor::reserveRegisters()
 
 	addReservedIdentifier("sip", { userspace::REGISTERPAGE | 11, false, true, 0, 1, {1, 0, 0, 0}, false, false });
 }
+
+void BBP::esa::esaProcessor::reserveBuiltins()
+{
+	addReservedIdentifier("sizeof?crumb", { 2, false, false, 0, 0, {0, 0, 0, 0}, true, false });
+	addReservedIdentifier("sizeof?nibble", { 4, false, false, 0, 0, {0, 0, 0, 0}, true, false });
+	addReservedIdentifier("sizeof?byte", { 8, false, false, 0, 0, {0, 0, 0, 0}, true, false });
+	addReservedIdentifier("sizeof?halfword", { 16, false, false, 0, 0, {0, 0, 0, 0}, true, false });
+	addReservedIdentifier("sizeof?address", { 24, false, false, 0, 0, {0, 0, 0, 0}, true, false });
+	addReservedIdentifier("sizeof?word", { 32, false, false, 0, 0, {0, 0, 0, 0}, true, false });
+}
