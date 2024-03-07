@@ -1,4 +1,4 @@
-#include "../include/FileSys.h"
+#include "../include/Kernel.h"
 #include "../include/stdio.h"
 
 BBP::std::FILE::FILE()
@@ -23,24 +23,24 @@ BBP::std::FILE::FILE(std::Stack<std::string_element> &data, std::conststring pat
 #endif
 
 	// Create file node at corresponding INode
-	std::fileTable.data[this->node] = BBP::std::FileNode(data, BBP::std::primaryVolume, path);
+	system::kernelSS()->activeContext->fileTable.data[this->node] = BBP::std::FileNode(data, BBP::system::kernelSS()->activeContext->primaryVolume, path);
 }
 
 void BBP::std::FILE::getINodeIndex(std::PATH &path)
 {
 	// Resolve names
-	path.makeAbsolutePath(std::workingDirectory);
+	path.makeAbsolutePath(system::kernelSS()->activeContext->workingDirectory);
 
 	// Check if file is open
 	BBP::std::index_t idx = checkIfIsOpen(path.relName());
 
-	if (idx == std::fileTable.dataSize)
+	if (idx == system::kernelSS()->activeContext->fileTable.dataSize)
 	{
 		// Look for next empty file
 		std::index_t emptyIndex = findClosedFile();
 
 		// Check if there are empty files
-		if (emptyIndex == std::fileTable.dataSize)
+		if (emptyIndex == system::kernelSS()->activeContext->fileTable.dataSize)
 			throw std::exception("ERR_NO_EMPTYFILENODE", ENFILE);
 
 		// Save node index
@@ -70,16 +70,16 @@ BBP::std::FILE::FILE(std::PATH path)
 		std::size_t fileSize = getFileSizeFromDisk(path);
 
 		// Create new node
-		std::fileTable.data[this->node] = std::FileNode(std::activemem, fileSize + 1, path);
+		system::kernelSS()->activeContext->fileTable.data[this->node] = std::FileNode(system::kernelSS()->activeContext->activemem, fileSize + 1, path);
 		_dealloc_page = true;
 		_unload_inode = true;
 
 		// Read data from file
-		readFileFromDisk(&std::fileTable.data[this->node], path);
+		readFileFromDisk(&system::kernelSS()->activeContext->fileTable.data[this->node], path);
 	}
 
-	std::fileTable.data[this->node].fileData.page->prevPage = nullptr;
-	std::fileTable.data[this->node].fileData.page->nextPage = nullptr;
+	system::kernelSS()->activeContext->fileTable.data[this->node].fileData.page->prevPage = nullptr;
+	system::kernelSS()->activeContext->fileTable.data[this->node].fileData.page->nextPage = nullptr;
 
 }
 
@@ -95,10 +95,10 @@ BBP::std::index_t BBP::std::FILE::checkIfIsOpen(std::conststring path)
 	std::hash_t hash = std::strhsh(path);
 
 	// Fetch each table hash
-	for (std::index_t idx = 0; idx < std::fileTable.dataSize; idx++)
+	for (std::index_t idx = 0; idx < system::kernelSS()->activeContext->fileTable.dataSize; idx++)
 	{
 		// Get reference to node
-		std::FileNode *node = &__UNSAFE__(read)(&std::fileTable, idx);
+		std::FileNode *node = &__UNSAFE__(read)(&system::kernelSS()->activeContext->fileTable, idx);
 
 		// If entry is nullptr, skip
 		if (node == nullptr)
@@ -112,16 +112,16 @@ BBP::std::index_t BBP::std::FILE::checkIfIsOpen(std::conststring path)
 	}
 
 	// Nothing found, return false.
-	return std::fileTable.dataSize;
+	return system::kernelSS()->activeContext->fileTable.dataSize;
 }
 
 BBP::std::index_t BBP::std::FILE::findClosedFile()
 {
 	// Fetch each table hash
-	for (std::index_t idx = 0; idx < std::fileTable.dataSize; idx++)
+	for (std::index_t idx = 0; idx < system::kernelSS()->activeContext->fileTable.dataSize; idx++)
 	{
 		// Get reference to node
-		std::FileNode *node = &__UNSAFE__(read)(&std::fileTable, idx);
+		std::FileNode *node = &__UNSAFE__(read)(&system::kernelSS()->activeContext->fileTable, idx);
 
 		// If entry is nullptr, skip
 		if (node == nullptr)
@@ -135,12 +135,12 @@ BBP::std::index_t BBP::std::FILE::findClosedFile()
 	}
 
 	// Nothing found, return false.
-	return std::fileTable.dataSize;
+	return system::kernelSS()->activeContext->fileTable.dataSize;
 }
 
 BBP::std::FileNode *BBP::std::FILE::data()
 {
-	return &std::read(&std::fileTable, this->node);
+	return &std::read(&system::kernelSS()->activeContext->fileTable, this->node);
 }
 
 void BBP::std::FILE::close()
@@ -148,21 +148,21 @@ void BBP::std::FILE::close()
 	// Deallocate the page if marked allocated
 	if (_dealloc_page)
 	{
-		BBP::std::activemem->free(data()->fileData.page->data);
-		BBP::std::activemem->_delete(data()->fileData.page);
+		BBP::system::kernelSS()->activeContext->activemem->free(data()->fileData.page->data);
+		BBP::system::kernelSS()->activeContext->activemem->_delete(data()->fileData.page);
 	}
 
 	if (_unload_inode)
-		BBP::std::fileTable.data[this->node].fileData.page = nullptr;
+		BBP::system::kernelSS()->activeContext->fileTable.data[this->node].fileData.page = nullptr;
 
-	this->node = BBP::std::fileTable.dataSize;
+	this->node = BBP::system::kernelSS()->activeContext->fileTable.dataSize;
 }
 
 bool BBP::std::FILE::is_open()
 {
 	if (data() == nullptr)
 		return false;
-	return BBP::std::fileTable.data[this->node].fileData.page != nullptr;
+	return BBP::system::kernelSS()->activeContext->fileTable.data[this->node].fileData.page != nullptr;
 }
 
 BBP::std::Stack<BBP::std::string_element> &BBP::std::FILE::b()

@@ -15,6 +15,7 @@
 #include "../include/Threading.h"
 #include "../include/Hyperv.h"
 #include "../include/StateMachine.h"
+#include "../include/Time.h"
 
 BBP::userspace::HyperVisor hypervisor;
 BBP::userspace::HyperVisor hypervisor2;
@@ -25,12 +26,47 @@ BBP::std::word printcall(BBP::userspace::StateMachine *state, BBP::userspace::Hy
 {
 	// Get a page
 	BBP::userspace::xvalue val = BBP::userspace::xvalue(*state, Args.args[1]);
-	BBP::std::c_string str = thr->executable.BinaryData.data + val.getOwnPhysicalAddress();
-	BBP::std::word count = BBP::std::printf("%s", str);
+
+	// Get the physical address
+	BBP::std::address_t physicalAddress = val.getOwnPhysicalAddress();
+
+	// Create string
+	BBP::std::c_string string = nullptr;
+
+	// Check if string is in TLS or in executable
+	if (physicalAddress >= thr->executable.BinaryData.dataSize)
+		string = thr->executable.BinaryData.nextPage->data + physicalAddress - thr->executable.BinaryData.dataSize;
+	else
+		string = thr->executable.BinaryData.data + physicalAddress;
+
+	BBP::std::word count = BBP::std::printf("%s", string);
 
 	return count;
 }
 
+BBP::std::word printcallU(BBP::userspace::StateMachine *state, BBP::userspace::HyperVisor *, BBP::userspace::Thread *thr, BBP::userspace::Instruction &Args)
+{
+	// Get a page
+	BBP::userspace::xvalue val = BBP::userspace::xvalue(*state, Args.args[1]);
+
+	// Print
+	BBP::std::word word = val.resolve(*state);
+	BBP::std::word count = BBP::std::printf("%d (%u)\n", val, val);
+
+	return count;
+}
+
+BBP::std::word printcallX(BBP::userspace::StateMachine *state, BBP::userspace::HyperVisor *, BBP::userspace::Thread *thr, BBP::userspace::Instruction &Args)
+{
+	// Get a page
+	BBP::userspace::xvalue val = BBP::userspace::xvalue(*state, Args.args[1]);
+
+	// Print
+	BBP::std::word word = val.resolve(*state);
+	BBP::std::word count = BBP::std::printf("0x%x\n", val);
+
+	return count;
+}
 
 int BBP::smile_main(int argc, char **argv)
 {
@@ -85,131 +121,58 @@ int BBP::smile_main(int argc, char **argv)
 
 	// Now try and deconstruct it
 	std::FILE compiledFile(dstFile);
+	std::FILE compiledFile2("/boot/ELSA2.o");
 
 	// Get processor
-	std::ELF::ELFBuilder compiled(compiledFile.b().page, std::activemem);
+	std::ELF::ELFBuilder compiled(compiledFile.b().page, system::kernelSS()->activeContext->activemem);
+	std::ELF::ELFBuilder compiled2(compiledFile2.b().page, system::kernelSS()->activeContext->activemem);
 
 
 	// Set the correspondig syscall
 	hypervisor.systemcalls.data[0] = (BBP::userspace::HyperVisor::syscall_t)printcall;
+	hypervisor.systemcalls.data[1] = (BBP::userspace::HyperVisor::syscall_t)printcallU;
+	hypervisor.systemcalls.data[2] = (BBP::userspace::HyperVisor::syscall_t)printcallX;
 
-
-
+	// Get time before execution in milliseconds
+	std::time_t before = std::millis();
 
 	// Get zero-th thread
-	userspace::Thread *t = hypervisor.spawnThread(compiled, std::activemem);
+	userspace::Thread *t = hypervisor.spawnThread(compiled, system::kernelSS()->activeContext->activemem);
+	userspace::Thread *t2 = hypervisor.spawnThread(compiled2, system::kernelSS()->activeContext->activemem);
 
 	// Unload binary since we have a copy
 	compiled.close();
 	compiledFile.close();
+	compiled2.close();
+	compiledFile2.close();
 
+	hypervisor.currentPIDCount = 0;
 
 	// Set active hypervisor
 	state.setActiveHypervisor(&hypervisor);
-	state.setActiveThread(t);
 
-	hypervisor.advanceThread(state, 10);
+	for (int i = 0; i < 150; i++)
+	{
+
+		std::printf("\e[0;32m");
+		state.setActiveThread(t);
+		hypervisor.advanceThread(state, 10);
+
+		std::printf("\e[0;31m");
+		state.setActiveThread(t2);
+		hypervisor.advanceThread(state, 10);
+	}
+	std::printf("\e[0;37m\n");
 
 	// Close
 	hypervisor.destroyThread(0);
+	hypervisor.destroyThread(1);
 
+	// Get time after execution in milliseconds
+	std::time_t after = std::millis();
 
-	/*
-
-	std::PATH bootPath("/boot/test.lua");
-	lua::initializeParser();
-	lua::luaParser.parseFile(bootPath);
-
-	*/
-
-
-
-	/*
-	// Emit header
-	builder.emitHeader();
-
-	builder.shstrtab = 1;
-	builder.strtab = 2;
-	builder.symtab = 3;
-
-	builder.sections[0].type(std::ELF::SHT_NILL);
-
-	builder._shstrtab().Append(64);
-	builder._shstrtab().stack++;
-	builder._shstrtab().stack <<= ".shstrtab";
-	builder._shstrtab().type(std::ELF::SHT_STRTAB);
-	builder._shstrtab().name(1);
-
-	builder._strtab().Append(64);
-	builder._strtab().name(builder._shstrtab().stack.atElement);
-	builder._shstrtab().stack <<= ".strtab";
-	builder._strtab().type(std::ELF::SHT_STRTAB);
-
-	builder._symtab().Append(32);
-	builder._symtab().type(std::ELF::SHT_SYMTAB);
-	builder._symtab().name(builder._shstrtab().stack.atElement);
-	builder._symtab().info(builder.strtab);
-	builder._symtab().link(builder.strtab);
-	builder._symtab().entsize(16);
-	builder._strtab().stack++;
-	builder._shstrtab().stack <<= ".symtab";
-
-	builder.shstrndx(1);
-
-	builder._shstrtab().Extend(16);
-
-	*/
-	
-	/*
-	std::ELF::ELFBuilder builder(std::activemem, 0, 13, 3);
-	std::Stack<std::string_element> builderStack(&builder.file, std::seqlen(builder.file));
-	std::FILE file(builderStack, "/bin/test.o");
-
-	const char *msg = "Hello, world!";
-
-	builder.formStandard(24, 14, 0, 0);
-
-	builder.renameSymbol(1, "Hello");
-	builder.renameSymbol(2, "HoHo");
-
-	builder._data().stack <<= "Hello, World!";
-
-	file.writeFileToDisk();
-	builder.close();
-	file.close();
-	*/
-
-	/*
-
-	std::ESAM::dataEntry data("Hello, World!", std::ELF::SYM_OBJECT | std::ELF::SYM_GLOBAL);
-	std::ESAM::dataEntry data2("4 + 5 is %d\n", std::ELF::SYM_OBJECT | std::ELF::SYM_GLOBAL);
-
-	std::ESAM::dataEntry program("\x32\xa1\xa2", std::ELF::SYM_FILE | std::ELF::SYM_GLOBAL);
-	std::ESAM::dataEntry program2("\xFF\xFF\xFF", std::ELF::SYM_SECTION | std::ELF::SYM_GLOBAL);
-
-
-	std::ESAM::BinaryApplication application("/bin/test.o", 0, 0, 4);
-	application.setSource("/home/test.esa");
-	application.emitSymbol(application.builder.rodata, data, "myString");
-	application.emitSymbol(application.builder.rodata, data2, "fmtString");
-	application.emitSymbol(application.builder.text, program, "_ZfooIi");
-	application.emitSymbol(application.builder.text, program2, "_ZfffIi");
-	application.save();
-	application.close();
-
-	std::ESAM::BinaryApplication application2("/bin/test2.o", 0, 0, 4);
-	application2.setSource("/home/test.esa");
-	application2.emitSymbol(application2.builder.rodata, data, "myString");
-	application2.emitSymbol(application2.builder.rodata, data2, "fmtString");
-	application2.emitSymbol(application2.builder.text, program, "_ZfooIi");
-	application2.emitSymbol(application2.builder.text, program2, "_ZfffIi");
-	application2.appendSymbols(1);
-	application2.emitSymbol(application2.builder.text, program2, "_ZfofIi");
-	application2.save();
-	application2.close();
-
-	*/
-
+	// Now print
+	std::printf("Time difference: %ums\n", after - before);
 
 	return 0;
 }

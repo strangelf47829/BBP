@@ -1,6 +1,7 @@
 #include "../include/stdio.h"
 #include "../include/Graphics.h"
 #include "../include/OS.h"
+#include "../include/Kernel.h"
 
 #include <cstdio>
 #include <thread>
@@ -22,7 +23,7 @@ int BBP::std::printf(std::conststring format, ...)
 	va_end(args);
 
 	// Then print
-	std::STDOUT <<= printfbuff;
+	system::kernelSS()->activeContext->STDOUT <<= printfbuff;
 	
 	return res;
 }
@@ -112,13 +113,13 @@ void userInput_thread()
 			std::exit(-999);
 		}
 
-		BBP::std::STDIN << c;
+		BBP::system::kernelSS()->activeContext->STDIN << c;
 	}
 }
 
 char BBP::std::getC()
 {
-	while (std::STDIN.atElement == 0);
+	while (system::kernelSS()->activeContext->STDIN.atElement == 0);
 	return '\0';
 }
 

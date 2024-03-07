@@ -9,7 +9,7 @@ PLAT= UBUNTU
 
 # =========== Module target details
 MODULE= BBP
-MODULE_SRC= Applications ELF ELSA env_UBUNTU File Graphics Parser RAE stdlib
+MODULE_SRC= Applications ELF ELSA env_UBUNTU File Graphics Parser RAE stdlib System
 
 # ========
 # END OF MODULE SETTINGS.

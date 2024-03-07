@@ -41,10 +41,14 @@ namespace BBP
 			void PAGE();
 			void SIGNAL();
 			void HALT();
+			void SECR();
 
 			// Used to update arithmetic functions
-			void Compare(std::word&);
 			void Compare(std::word&, std::word&);
+			void Compare(std::word&, std::word&, std::word&);
+
+			// Security flags
+			bool expectsEndbr;
 
 		public:
 

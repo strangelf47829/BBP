@@ -9,8 +9,11 @@
 #define BBP_STDLIB_FILESYS_OVERWRITEEXISTINGFILES
 #endif
 
+
+
 namespace BBP
 {
+
 	namespace std
 	{
 
@@ -30,11 +33,11 @@ namespace BBP
 
 		// This is ...
 		typedef std::index_t noderef_t;
-		extern std::STATIC_PAGE<FileNode, max_open_files> fileTable;
+		//extern std::STATIC_PAGE<FileNode, max_open_files> fileTable;
 
 		// Variables
-		extern PATH *workingDirectory;
-		extern VOLUME *primaryVolume;
+		//extern PATH *workingDirectory;
+		//extern VOLUME *primaryVolume;
 
 		// Paths
 		class PATH
@@ -166,78 +169,13 @@ namespace BBP
 			std::PATH filePath;
 			std::hash_t filePathHash;
 
-			FileNode()
-				: allocator(nullptr),
-				fileData((std::PAGE<std::string_element> *)nullptr, 0),
-				filePath(),
-				filePathHash(0)
-			{}
-
-			FileNode(std::ResourceManager *res, std::conststring path)
-				: allocator(res),
-				fileData((std::PAGE<std::string_element> *)nullptr),
-				filePath(path),
-				filePathHash(0)
-			{
-				filePath.makeAbsolutePath(std::workingDirectory);
-				filePathHash = std::strhsh(filePath.relName());
-			}
-
-			FileNode(std::Stack<std::string_element> &data, std::conststring path)
-				: allocator(nullptr),
-				fileData(data),
-				filePath(path),
-				filePathHash(0)
-			{
-				filePath.makeAbsolutePath(std::workingDirectory);
-				filePathHash = std::strhsh(filePath.relName());
-			}
-
-			FileNode(std::ResourceManager *res, std::VOLUME *v, std::conststring path)
-				: allocator(res),
-				fileData((std::PAGE<std::string_element> *)nullptr, 0),
-				filePath(v, path),
-				filePathHash(0)
-			{
-				filePath.makeAbsolutePath(std::workingDirectory);
-				filePathHash = std::strhsh(filePath.relName());
-			}
-
-			FileNode(std::ResourceManager *res, std::size_t size, std::VOLUME *v, std::conststring path)
-				: allocator(res),
-				fileData(
-					(std::PAGE<std::string_element> *)res->add_object(new std::PAGE<std::string_element>(size, (std::string_element *)res->calloc(size, sizeof(std::string_element)))),
-					size),
-				filePath(v, path),
-				filePathHash(0)
-			{
-				filePath.makeAbsolutePath(std::workingDirectory);
-				filePathHash = std::strhsh(filePath.relName());
-			}
-
-			FileNode(std::ResourceManager *res, std::size_t size, std::PATH &path)
-				: allocator(res),
-				fileData(
-					(std::PAGE<std::string_element> *)res->add_object(new std::PAGE<std::string_element>(size, (std::string_element *)res->calloc(size, sizeof(std::string_element)))),
-					size),
-				filePath(path),
-				filePathHash(0)
-			{
-				filePath.makeAbsolutePath(std::workingDirectory);
-				filePathHash = std::strhsh(filePath.relName());
-			}
-
-			
-
-			FileNode(std::Stack<std::string_element> &data, std::VOLUME *v, std::conststring path)
-				: allocator(nullptr),
-				fileData(data),
-				filePath(v, path),
-				filePathHash(0)
-			{
-				filePath.makeAbsolutePath(std::workingDirectory);
-				filePathHash = std::strhsh(filePath.relName());
-			}
+			FileNode();
+			FileNode(std::ResourceManager *res, std::conststring path);
+			FileNode(std::Stack<std::string_element> &data, std::conststring path);
+			FileNode(std::ResourceManager *res, std::VOLUME *v, std::conststring path);
+			FileNode(std::ResourceManager *res, std::size_t size, std::VOLUME *v, std::conststring path);
+			FileNode(std::ResourceManager *res, std::size_t size, std::PATH &path);
+			FileNode(std::Stack<std::string_element> &data, std::VOLUME *v, std::conststring path);
 
 		};
 
@@ -259,14 +197,14 @@ namespace BBP
 
 		
 		template<typename... Args>
-		inline void fprintf(BBP::std::FILE &file, std::conststring format, Args... args)
+		inline void fprintf(BBP::std::FILE &file, std::conststring format, Args... args, ResourceManager *memory)
 		{
 			// Check if can write to file
 			if (!file.is_open())
 				throw std::exception("ERR_FILE_NOT_OPEN", EBADF);
 
 			// Allocate a buffer
-			std::string buffer(BBP::std::max_page_elements, (BBP::std::string_element *)BBP::std::activemem->calloc(BBP::std::max_page_elements, sizeof(BBP::std::string_element)));
+			std::string buffer(BBP::std::max_page_elements, (BBP::std::string_element *)memory->calloc(BBP::std::max_page_elements, sizeof(BBP::std::string_element)));
 
 			// Format the string
 			std::sprintf(buffer.data, format, args...);
@@ -275,7 +213,7 @@ namespace BBP
 			file.data()->fileData <<= buffer;
 
 			// Then free the buffer
-			BBP::std::activemem->free(buffer.data);
+			memory->free(buffer.data);
 
 		}
 

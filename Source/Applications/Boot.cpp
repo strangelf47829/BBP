@@ -12,12 +12,14 @@
 
 #include "../include/OS.h"
 
+#include "../include/Kernel.h"
+
 
 int BBP::boot_main(int argc, char **argv)
 {   
 
 
-    BBP::std::window *w = &BBP::std::kernelDisplay;
+    BBP::std::window *w = &BBP::system::kernelSS()->activeContext->display;
 
     std::R2D::fill(w, 0x00FF00FF);
     std::R2D::setCursorPos(w, 50, 50);

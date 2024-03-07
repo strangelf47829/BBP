@@ -33,6 +33,7 @@ BBP::std::ResourceManager framePage;
 int BBP::badapple_main(int argc, char **argv)
 {
 
+	/*
 	char *fileName = (char *)BBP::std::activemem->calloc(34, sizeof(char));
 
 
@@ -53,7 +54,7 @@ int BBP::badapple_main(int argc, char **argv)
 
 		std::delay(1000 / FRAMERATE);
 		std::printf("\033[2J\033[1;1H");
-		system("clear");
+		::system("clear");
 		
 		if (i % 50 == 0)
 			BBP::std::activemem->deleteAll();
@@ -66,5 +67,6 @@ int BBP::badapple_main(int argc, char **argv)
 
 	BBP::std::activemem = oldMem;
 	std::activemem->free(fileName);
+	*/
 	return 0;
 }

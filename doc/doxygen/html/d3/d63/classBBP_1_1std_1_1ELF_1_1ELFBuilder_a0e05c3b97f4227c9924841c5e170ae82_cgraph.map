@@ -1,6 +1,0 @@
-<map id="BBP::std::ELF::ELFBuilder::close" name="BBP::std::ELF::ELFBuilder::close">
-<area shape="rect" id="node1" title=" " alt="" coords="5,71,188,112"/>
-<area shape="rect" id="node2" href="$d3/db3/classBBP_1_1std_1_1ELF_1_1SymbolBuilder.html#af712bf5deb743173585e23792d1cbd56" title=" " alt="" coords="241,5,450,47"/>
-<area shape="rect" id="node3" href="$d5/daf/classBBP_1_1std_1_1ELF_1_1SectionBuilder.html#a3a50373a9ed12789a1b9411e290e3921" title=" " alt="" coords="241,71,449,112"/>
-<area shape="rect" id="node4" href="$d8/d33/classBBP_1_1std_1_1ELF_1_1SegmentBuilder.html#a1fb2cb860513ff4521f8bb295ebc78c1" title=" " alt="" coords="236,136,455,177"/>
-</map>

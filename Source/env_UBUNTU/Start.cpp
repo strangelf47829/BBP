@@ -7,15 +7,9 @@
 #include "../include/Time.h"
 #include "../include/Graphics.h"
 #include "../include/OS.h"
+#include "../include/Kernel.h"
 
 
-BBP::std::ResourceManager BBP::std::progmem;
-BBP::std::ResourceManager *BBP::std::activemem;
-BBP::std::STATIC_PAGE<BBP::std::FileNode, BBP::std::max_open_files> BBP::std::fileTable;
-BBP::std::VOLUME *BBP::std::primaryVolume;
-BBP::std::PATH *BBP::std::workingDirectory;
-
-BBP::std::window BBP::std::kernelDisplay;
 
 int main()
 {
@@ -24,22 +18,22 @@ int main()
 		
 
 	//BBP::std::STDERR.writeTo = BBP::std::print_to_terminal;
-	BBP::std::STDOUT.writeTo = BBP::std::print_to_terminal;
-	BBP::std::activemem = &BBP::std::progmem;
+	BBP::system::kernelSS()->activeContext->STDOUT.writeTo = BBP::std::print_to_terminal;
+	BBP::system::kernelSS()->activeContext->activemem = &BBP::system::kernelSS()->activeContext->progmem;
 
 	for (BBP::std::index_t node = 0; node < BBP::std::max_open_files; node++)
-		BBP::std::fileTable.data[node] = BBP::std::FileNode();
+		BBP::system::kernelSS()->activeContext->fileTable.data[node] = BBP::std::FileNode();
 
 	BBP::std::VOLUME prim('v', "/mnt/v/");
-	BBP::std::primaryVolume = &prim;
+	BBP::system::kernelSS()->activeContext->primaryVolume = &prim;
 
 	BBP::std::PATH p("/home/");
-	BBP::std::workingDirectory = &p;
+	BBP::system::kernelSS()->activeContext->workingDirectory = &p;
 
-	BBP::std::FILE f(BBP::std::STDOUT, "/proc/stdout");
-	BBP::std::FILE f2(BBP::std::STDIN, "/proc/stdin");
+	BBP::std::FILE f(BBP::system::kernelSS()->activeContext->STDOUT, "/proc/stdout");
+	BBP::std::FILE f2(BBP::system::kernelSS()->activeContext->STDIN, "/proc/stdin");
 
-	BBP::std::Driver::initializeGraphics(&BBP::std::kernelDisplay, 1000, 800);
+	BBP::std::Driver::initializeGraphics(&BBP::system::kernelSS()->activeContext->display, 1000, 800);
 
 	//BBP::std::PATH path("/bin/font");
 	//BBP::std::R2D::GetFontFromFile(&BBP::std::kernelDisplay, path);
@@ -54,7 +48,7 @@ int main()
 	int magicCount = 4;
 
 	BBP::std::PAGE<BBP::std::string_element> bootPage(magicCount + sizeof(BBP::std::executable_main) / sizeof(BBP::std::string_element),
-		(BBP::std::string_element *)BBP::std::activemem->malloc(magicCount * sizeof(BBP::std::string_element) + sizeof(BBP::std::executable_main)));
+		(BBP::std::string_element *)BBP::system::kernelSS()->activeContext->activemem->malloc(magicCount * sizeof(BBP::std::string_element) + sizeof(BBP::std::executable_main)));
 	BBP::std::Stack<BBP::std::string_element> bootStack(&bootPage, bootPage.dataSize);
 	((BBP::std::executable_main *)bootPage.raw)[0] = BBP::boot_main;
 	
@@ -64,7 +58,7 @@ int main()
 	bootPage.raw[BBP_EXEC_MAGIC3IDX] = BBP_EXEC_MAGIC3;
 
 	BBP::std::PAGE<BBP::std::string_element> logoutPage(magicCount + sizeof(BBP::std::executable_main) / sizeof(BBP::std::string_element),
-		(BBP::std::string_element *)BBP::std::activemem->malloc(magicCount * sizeof(BBP::std::string_element) + sizeof(BBP::std::executable_main)));
+		(BBP::std::string_element *)BBP::system::kernelSS()->activeContext->activemem->malloc(magicCount * sizeof(BBP::std::string_element) + sizeof(BBP::std::executable_main)));
 	BBP::std::Stack<BBP::std::string_element> logoutStack(&logoutPage, logoutPage.dataSize);
 	((BBP::std::executable_main *)logoutPage.raw)[0] = BBP::logout_main;
 
@@ -74,7 +68,7 @@ int main()
 	logoutPage.raw[BBP_EXEC_MAGIC3IDX] = BBP_EXEC_MAGIC3;
 
 	BBP::std::PAGE<BBP::std::string_element> neofetchPage(magicCount + sizeof(BBP::std::executable_main) / sizeof(BBP::std::string_element),
-		(BBP::std::string_element *)BBP::std::activemem->malloc(magicCount * sizeof(BBP::std::string_element) + sizeof(BBP::std::executable_main)));
+		(BBP::std::string_element *)BBP::system::kernelSS()->activeContext->activemem->malloc(magicCount * sizeof(BBP::std::string_element) + sizeof(BBP::std::executable_main)));
 	BBP::std::Stack<BBP::std::string_element> neofetchStack(&neofetchPage, neofetchPage.dataSize);
 	((BBP::std::executable_main *)neofetchPage.raw)[0] = BBP::neofetch_main;
 
@@ -84,7 +78,7 @@ int main()
 	neofetchPage.raw[BBP_EXEC_MAGIC3IDX] = BBP_EXEC_MAGIC3;
 
 	BBP::std::PAGE<BBP::std::string_element> badapplePage(magicCount + sizeof(BBP::std::executable_main) / sizeof(BBP::std::string_element),
-		(BBP::std::string_element *)BBP::std::activemem->malloc(magicCount * sizeof(BBP::std::string_element) + sizeof(BBP::std::executable_main)));
+		(BBP::std::string_element *)BBP::system::kernelSS()->activeContext->activemem->malloc(magicCount * sizeof(BBP::std::string_element) + sizeof(BBP::std::executable_main)));
 	BBP::std::Stack<BBP::std::string_element> badAppleStack(&badapplePage, badapplePage.dataSize);
 	((BBP::std::executable_main *)badapplePage.raw)[0] = BBP::smile_main;
 
@@ -112,26 +106,26 @@ int main()
 	BBP::std::stopCapturingInput();
 
 	// Print error message if errno is not 0
-	if (BBP::std::__errno && BBP::std::STDERR.atElement)
-		BBP::std::STDOUT <<= BBP::std::STDERR.page->data;
+	if (BBP::system::kernelSS()->activeContext->__errno && BBP::system::kernelSS()->activeContext->STDERR.atElement)
+		BBP::system::kernelSS()->activeContext->STDOUT <<= BBP::system::kernelSS()->activeContext->STDERR.page->data;
 
 	// Clean up
 	bootExec.close();
 	f.close();
 	f2.close();
 
-	BBP::std::progmem.free(bootPage.data);
-	BBP::std::progmem.free(logoutPage.data);
-	BBP::std::progmem.free(neofetchPage.data);
-	BBP::std::progmem.free(badapplePage.data);
+	BBP::system::kernelSS()->activeContext->progmem.free(bootPage.data);
+	BBP::system::kernelSS()->activeContext->progmem.free(logoutPage.data);
+	BBP::system::kernelSS()->activeContext->progmem.free(neofetchPage.data);
+	BBP::system::kernelSS()->activeContext->progmem.free(badapplePage.data);
 	//BBP::std::progmem.free(BBP::std::fileTable.data);
 
-	BBP::std::progmem.deleteAll();
+	BBP::system::kernelSS()->activeContext->progmem.deleteAll();
 
 	BBP::std::Driver::destructGraphics();
 	BBP::std::vmem.dealloc();
 
-	return BBP::std::__errno;
+	return BBP::system::kernelSS()->activeContext->__errno;
 	
 }
 

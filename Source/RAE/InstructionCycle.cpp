@@ -42,12 +42,15 @@ void BBP::userspace::HyperVisor::FetchActiveThreadInstruction()
 			// Decide if argument is a literal
 			bool isLiteral = !(currentThread->instruction.header.prefix & (1 << argumentIndex));
 
+			// Get four next bytes
+			std::word b1 = std::read(&currentThread->executable.BinaryData, executableIndex + 0) & 0xFF;
+			std::word b2 = std::read(&currentThread->executable.BinaryData, executableIndex + 1) & 0xFF;
+			std::word b3 = std::read(&currentThread->executable.BinaryData, executableIndex + 2) & 0xFF;
+			std::word b4 = std::read(&currentThread->executable.BinaryData, executableIndex + 3) & 0xFF;
+			
 			// Decode word
-			std::word decoded = 0;
-			decoded |= std::read(&currentThread->executable.BinaryData, executableIndex + 0) << 24;
-			decoded |= std::read(&currentThread->executable.BinaryData, executableIndex + 1) << 16;
-			decoded |= std::read(&currentThread->executable.BinaryData, executableIndex + 2) <<  8;
-			decoded |= std::read(&currentThread->executable.BinaryData, executableIndex + 3) <<  0;
+			std::word decoded = (b1 << 24) | (b2 << 16) | (b3 << 8) | b4;
+
 			executableIndex += 4;
 
 			// If literal, set argument and stop

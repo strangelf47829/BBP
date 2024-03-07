@@ -1,8 +1,9 @@
-#include "Strings.h"
-#include "FileSys.h"
-
 #ifndef BBP_STDLIB_LEX_H
 #define BBP_STDLIB_LEX_H
+
+#include "Strings.h"
+#include "Kernel.h"
+
 
 namespace BBP
 {

@@ -8,9 +8,6 @@ namespace BBP
 	namespace std
 	{
 
-		// This is the 'main' display
-		extern std::window kernelDisplay;
-
 
 
 	}

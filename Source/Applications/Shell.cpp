@@ -2,7 +2,7 @@
 #include "../include/Signal.h"
 #include "../include/Resources.h"
 #include "../include/ELF.h"
-#include "../include/FileSys.h"
+#include "../include/Kernel.h"
 #include "../include/Lex.h"
 #include "../include/CPPApplications.h"
 #include "../include/Executable.h"
@@ -41,7 +41,7 @@ namespace BBP
 
         // Create paths
         std::PATH procPath("/proc/exec/");
-        procPath.makeAbsolutePath(std::workingDirectory);
+        procPath.makeAbsolutePath(system::kernelSS()->activeContext->workingDirectory);
         std::PATH executable(command);
         executable.makeAbsolutePath(&procPath);
 
@@ -72,16 +72,16 @@ namespace BBP
                 std::printf("%s: Exec format error.\n", command);
             }
 
-            return std::__errno;
+            return system::kernelSS()->activeContext->__errno;
 
         }
         catch (std::except const &e)
         {
-            switch (std::__errno)
+            switch (system::kernelSS()->activeContext->__errno)
             {
             case ENOENT:
                 std::printf("%s: command not found.\n", command);
-                std::__errno = 0;
+                system::kernelSS()->activeContext->__errno = 0;
                 return -1;
                 break;
             default:
@@ -98,7 +98,7 @@ namespace BBP
         std::size_t strL = std::strlen(ss);
 
         // Create new string of that size
-        std::string str(strL + 1, (std::string_element *)BBP::std::activemem->calloc(strL + 1, sizeof(std::string_element)));
+        std::string str(strL + 1, (std::string_element *)BBP::system::kernelSS()->activeContext->activemem->calloc(strL + 1, sizeof(std::string_element)));
 
         // Copy string
         std::strcpy(&str, ss);
@@ -107,7 +107,7 @@ namespace BBP
         int s = shell(str);
 
         // Free string mem
-        BBP::std::activemem->free(str.data);
+        BBP::system::kernelSS()->activeContext->activemem->free(str.data);
 
         // Return shell result
         return s;
@@ -131,16 +131,16 @@ namespace BBP
 
         while (true)
         {
-            std::printf("\e[0;92m" HOSTNAME "\e[0;37m:\e[1;34m%s\e[0;37m$ ", std::workingDirectory->relName());
+            std::printf("\e[0;92m" HOSTNAME "\e[0;37m:\e[1;34m%s\e[0;37m$ ", system::kernelSS()->activeContext->workingDirectory->relName());
 
             while (doLoop)
             {
                 std::getC();
-                if (std::STDIN.atElement)
+                if (system::kernelSS()->activeContext->STDIN.atElement)
                 {
                     char c = 0;
                     char del = 0x08;
-                    std::STDIN >> c;
+                    system::kernelSS()->activeContext->STDIN >> c;
 
                     //std::printf("0x%02x ", c);
 
@@ -155,22 +155,22 @@ namespace BBP
                     case 12:
                         // Screen clear
                         std::printf("\033[2J\033[1;1H");
-                        std::printf("\e[0;92m" HOSTNAME "\e[0;37m:\e[1;34m%s\e[0;37m$ ", std::workingDirectory->relName());
+                        std::printf("\e[0;92m" HOSTNAME "\e[0;37m:\e[1;34m%s\e[0;37m$ ", system::kernelSS()->activeContext->workingDirectory->relName());
                         break;
 
                     case 0x7f:
                         
                         if (line.atElement)
                         {
-                            std::STDOUT <<= del;
-                            std::STDOUT <<= ' ';
-                            std::STDOUT <<= del;
+                            system::kernelSS()->activeContext->STDOUT <<= del;
+                            system::kernelSS()->activeContext->STDOUT <<= ' ';
+                            system::kernelSS()->activeContext->STDOUT <<= del;
                             line--;
                         }
 
                         break;
                     default:
-                        std::STDOUT <<= c;
+                        system::kernelSS()->activeContext->STDOUT <<= c;
                         line << c;
                         break;
                     }

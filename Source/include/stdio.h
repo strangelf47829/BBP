@@ -8,6 +8,7 @@ namespace BBP
 {
 	namespace std
 	{
+		/*
 		extern static_string<509> str_STDOUT;
 		extern static_string<509> str_STDIN;
 		extern static_string<509> str_STDERR;
@@ -15,6 +16,8 @@ namespace BBP
 		extern std::Stack<std::string_element> STDOUT;
 		extern std::Stack<std::string_element> STDIN;
 		extern std::Stack<std::string_element> STDERR;
+
+		*/
 
 		void print_to_terminal(std::Stack<std::string_element> *stack);
 

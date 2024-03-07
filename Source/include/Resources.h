@@ -115,8 +115,8 @@ namespace BBP
 			std::STATIC_PAGE<AbstractGCEntry *, max_objects> objects;
 		};
 
-		extern ResourceManager progmem;
-		extern ResourceManager *activemem;
+		//extern ResourceManager progmem;
+		//extern ResourceManager *activemem;
 	}
 }
 

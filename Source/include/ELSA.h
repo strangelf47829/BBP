@@ -1,3 +1,4 @@
+#include "FileSys.h"
 #include "Lex.h"
 #include "ELSABackend.h"
 #include "Instructions.h"

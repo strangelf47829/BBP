@@ -15,7 +15,6 @@ namespace BBP
 
 #ifndef BBP_STDLIB_EXCEPT_H
 #define BBP_STDLIB_EXCEPT_H
-		volatile extern errno_t __errno;
 
 		struct except
 		{

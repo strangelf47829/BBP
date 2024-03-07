@@ -34,7 +34,8 @@ namespace BBP
 			JMPC = 21,
 			PAGE = 22,
 			SIGNAL = 23,
-			HALT = 24
+			HALT = 24,
+			SECR = 25
 		};
 
 		enum STACKSUFFIXES : std::byte
@@ -96,6 +97,11 @@ namespace BBP
 			shalfword = 32,
 			sword = 64,
 			saddress = 128
+		};
+
+		enum SECRSUFFIXES : std::byte
+		{
+			endbr = 1
 		};
 
 		constexpr std::word REGISTERPAGE = 0xf0000;

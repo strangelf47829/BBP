@@ -50,7 +50,7 @@ BBP::std::hash_t BBP::esa::esaProcessor::hashIdentifier(BBP::esa::dataEntry &ent
 
 void BBP::esa::esaProcessor::setupBackend(std::conststring str, std::size_t seg, std::size_t sec, std::size_t sym)
 {
-	application = std::activemem->add_object(new BinaryApplication(str, seg, sec, sym));
+	application = system::kernelSS()->activeContext->activemem->add_object(new BinaryApplication(str, seg, sec, sym));
 	application->setSource(esaParser.activeFile.static_data);
 }
 
@@ -59,7 +59,7 @@ void BBP::esa::esaProcessor::saveAndClose()
 	application->save();
 	application->close();
 
-	std::activemem->_delete(application);
+	system::kernelSS()->activeContext->activemem->_delete(application);
 	application = nullptr;
 }
 
@@ -67,7 +67,7 @@ void BBP::esa::esaProcessor::discardAndClose()
 {
 	application->close();
 
-	std::activemem->_delete(application);
+	system::kernelSS()->activeContext->activemem->_delete(application);
 	application = nullptr;
 }
 

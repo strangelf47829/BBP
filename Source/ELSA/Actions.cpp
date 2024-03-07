@@ -507,6 +507,17 @@ TOKEN(newline)
 		// Just for logging
 		return error;
 	}
+	else if (processor.lineIsDefiningProcedure && (processor.externProcedure == false))
+	{
+		// Always emit an endbr instruction immediately after defining a procedure
+		processor.resetInstruction();
+		processor.setInstruction(userspace::SECR, userspace::endbr, 0, 1);
+		processor.expectLiteral(0);
+		processor.numericalArgument({ processor.procedureArgumentCount }, false);
+		processor.emitInstruction();
+		processor.resetInstruction();
+
+	}
 
 	// Reset this flag
 	processor.lineIsDefiningProcedure = false;
@@ -1043,6 +1054,8 @@ INSTRUCTION(stack)
 		break;
 	case POPA_HANDLE:
 		suffix = userspace::pop | userspace::argument;
+		processor.expectAny(1);
+		processor.surpressArgCountWarning(1);
 		break;
 	}
 

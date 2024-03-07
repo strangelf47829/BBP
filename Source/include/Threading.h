@@ -29,6 +29,11 @@ namespace BBP
 			// Flag to if the thread is active or not
 			bool active;
 
+			// Routine information
+			constexpr static std::byte maxRoutineDepth = 12;
+			std::STATIC_PAGE<std::address_t, maxRoutineDepth> routineAddressPage;
+			std::Stack<std::address_t> routineAddress;
+
 			// Registers go here
 			static constexpr std::size_t registerCount = 12;
 			std::STATIC_PAGE<std::byte, registerCount * 4> registerData;
@@ -93,6 +98,15 @@ namespace BBP
 
 			register_t sip;
 
+			// Flags field
+			constexpr static std::byte greaterThan = 0b00100000;
+			constexpr static std::byte lessThan = 0b00010000;
+			constexpr static std::byte equalTo = 0b00001000;
+			constexpr static std::byte resultGreaterThan = 0b00000100;
+			constexpr static std::byte resultLessThan = 0b00000010;
+			constexpr static std::byte resultEqualTo = 0b00000001;
+			std::byte flags;
+
 			// Argument and general Stack
 			constexpr static std::word argumentStackSize = 255;
 			constexpr static std::word generalStackSize = 255;
@@ -110,6 +124,9 @@ namespace BBP
 			std::DYN_PAGE pages[maxPages];
 			std::byte activeRPage;
 			std::byte activeWPage;
+
+			// Thread specific stuff (C++)
+			pid_t myPid;
 			
 
 			// Signal handling stuff goes here

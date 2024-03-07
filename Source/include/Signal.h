@@ -31,6 +31,7 @@ namespace BBP
 		constexpr signal_t SIGSHTDN = 8; // Shut down the system
 		constexpr signal_t SIGTHREXP = 9; // Signal thread exception. 
 		constexpr signal_t SIGEND = 10; // Signals the end of a process by reaching the end
+		constexpr signal_t SIGSEC = 11; // Signal caused by unsafe code execution
 		constexpr signal_t SIGADJ = 150;
 	}
 }

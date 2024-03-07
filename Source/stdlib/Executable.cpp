@@ -3,6 +3,7 @@
 #include "../include/stdio.h"
 #include "../include/Graphics.h"
 #include "../include/OS.h"
+#include "../include/Kernel.h"
 
 const BBP::std::Executable BBP::std::executables[] = {{shell_main, "/proc/shell"}};
 
@@ -23,11 +24,11 @@ void BBP::std::execute(std::executable_main mainFunc, int argc, char **argv)
 	procFrame.PID = procPID;
 
 	// Create process memory
-	procFrame.pmem = BBP::std::progmem.add_object(new std::ResourceManager());
+	procFrame.pmem = BBP::system::kernelSS()->activeContext->progmem.add_object(new std::ResourceManager());
 
 	// Swap that in for the old activemem
-	BBP::std::ResourceManager *oldActiveMem = BBP::std::activemem;
-	BBP::std::activemem = procFrame.pmem;
+	BBP::std::ResourceManager *oldActiveMem = BBP::system::kernelSS()->activeContext->activemem;
+	BBP::system::kernelSS()->activeContext->activemem = procFrame.pmem;
 
 	// Store old active executable
 	PID_t oldActiveExecutable = std::activeExecutable;
@@ -42,15 +43,15 @@ void BBP::std::execute(std::executable_main mainFunc, int argc, char **argv)
 		procFrame.isExecuting = true;
 
 		// Acually execute the program
-		BBP::std::__errno = mainFunc(argc, argv);
+		BBP::system::kernelSS()->activeContext->__errno = mainFunc(argc, argv);
 
 		// Reset the 'is executing' flag
 		procFrame.isExecuting = false;
 
 		// Reset terminal
-		BBP::std::kernelDisplay.fontSize = 1;
-		BBP::std::kernelDisplay.fontSpacing = 6;
-		BBP::std::R2D::fill(&BBP::std::kernelDisplay, 0xFFFFFFFF);
+		BBP::system::kernelSS()->activeContext->display.fontSize = 1;
+		BBP::system::kernelSS()->activeContext->display.fontSpacing = 6;
+		BBP::std::R2D::fill(&BBP::system::kernelSS()->activeContext->display, 0xFFFFFFFF);
 	}
 	catch (const std::SIGNAL &signal)
 	{
@@ -64,10 +65,10 @@ void BBP::std::execute(std::executable_main mainFunc, int argc, char **argv)
 			procFrame.pmem->freeAll();
 
 			// Delete garbage collector
-			BBP::std::progmem._delete(procFrame.pmem);
+			BBP::system::kernelSS()->activeContext->progmem._delete(procFrame.pmem);
 
 			// Restore active mem and active proc
-			BBP::std::activemem = oldActiveMem;
+			BBP::system::kernelSS()->activeContext->activemem = oldActiveMem;
 			BBP::std::activeExecutable = oldActiveExecutable;
 			throw;
 
@@ -80,6 +81,9 @@ void BBP::std::execute(std::executable_main mainFunc, int argc, char **argv)
 			if (signal._sig == std::SIGSEGV)
 				BBP::std::printf(" (SIGSEGV).");
 
+			if (signal._sig == std::SIGSEC)
+				BBP::std::printf(" (Security fault).");
+
 			BBP::std::printf("\r\n");
 			break;
 		}
@@ -87,15 +91,15 @@ void BBP::std::execute(std::executable_main mainFunc, int argc, char **argv)
 	catch (std::except exception)
 	{
 		BBP::std::printf("[bbp] Uncaught exception: halting program.\r\n");
-		std::STDOUT <<= std::STDERR;
+		system::kernelSS()->activeContext->STDOUT <<= system::kernelSS()->activeContext->STDERR;
 	}
 	catch (...)
 	{
 		BBP::std::printf("[bbp] Program terminated after uncaught object.\r\n");
 	}
 
-	if (std::__errno && std::STDERR[0])
-		BBP::std::printf("Program terminated with code %d: %s\n\r", std::__errno, &std::STDERR[0]);
+	if (system::kernelSS()->activeContext->__errno && system::kernelSS()->activeContext->STDERR[0])
+		BBP::std::printf("Program terminated with code %d: %s\n\r", system::kernelSS()->activeContext->__errno, &system::kernelSS()->activeContext->STDERR[0]);
 
 	// Print stuff
 	//std::printf("(%p) Allocated a total of %u bytes during runtime.\n", procFrame.pmem, procFrame.pmem->totalAllocations);
@@ -113,10 +117,10 @@ void BBP::std::execute(std::executable_main mainFunc, int argc, char **argv)
 	}
 
 	// Delete garbage collector
-	BBP::std::progmem._delete(procFrame.pmem);
+	BBP::system::kernelSS()->activeContext->progmem._delete(procFrame.pmem);
 
 	// Restore active mem and active proc
-	BBP::std::activemem = oldActiveMem;
+	BBP::system::kernelSS()->activeContext->activemem = oldActiveMem;
 	BBP::std::activeExecutable = oldActiveExecutable;
 }
 

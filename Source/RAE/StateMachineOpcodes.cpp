@@ -28,24 +28,49 @@ BBP::userspace::StateMachine::arithmeticOperation modulo = [](BBP::std::word& a1
 
 BBP::userspace::StateMachine::arithmeticOperation illegalOperation = [](BBP::std::word& a1, BBP::std::word& a2) { BBP::std::raise(BBP::std::SIGILL); return a1 % a2; };
 
-void BBP::userspace::StateMachine::Compare(std::word &argument1)
+void BBP::userspace::StateMachine::Compare(std::word &argument1, std::word &result)
 {
-
+	std::word compareTo = readRegister(activeThread->eax);
+	Compare(argument1, compareTo, result);
 }
 
-void BBP::userspace::StateMachine::Compare(std::word &argument1, std::word &argument2)
+void BBP::userspace::StateMachine::Compare(std::word &argument1, std::word &argument2, std::word &result)
 {
+	// Check if argument1 is bigger than argument2
+	bool greaterThan = argument1 > argument2;
+
+	// Check if argument1 is less than argument2
+	bool lessThan = argument1 < argument2;
+
+	// Check if argument1 is equal to argument2
+	bool equalTo = argument1 == argument2;
+
+	// Check if result is 0
+	bool resultEqualTo = !!result;
+
+	// Check if signed result is greater or less than 0
+	int signedResult = (int)result;
+
+	bool resultGreaterThan = signedResult > 0;
+	bool resultLessThan = signedResult < 0;
+
+	// Set flags
+	activeThread->flags = greaterThan * activeThread->greaterThan;
+	activeThread->flags |= lessThan * activeThread->lessThan;
+	activeThread->flags |= equalTo * activeThread->equalTo;
+	activeThread->flags |= resultGreaterThan * activeThread->resultGreaterThan;
+	activeThread->flags |= resultLessThan * activeThread->resultLessThan;
+	activeThread->flags |= resultEqualTo * activeThread->resultEqualTo;
 
 }
 
 BBP::std::word BBP::userspace::StateMachine::Operate(arithmeticOperation operation, std::word &arg1, std::word &arg2)
 {
+	// Operate on the thingy
+	std::word result = operation(arg1, arg2);
 
 	// First compare both values
-	Compare(arg1, arg2);
-
-	// Basically just this
-	std::word result = operation(arg1, arg2);
+	Compare(arg1, arg2, result);
 
 	return result;
 }
@@ -96,13 +121,12 @@ BBP::std::word BBP::userspace::StateMachine::MathOperate(arithmeticOperation ii_
 	else if (initial)
 		totalResult = initial - 9; // Otherwise set it to this.
 
+	std::word firstArgument = 0;
+	std::word secondArgument = 0;
+
 	// Perform the required operation
 	for (std::byte atArg = 0; atArg < argumentCount; atArg++)
 	{
-		// if initial value is set, skip at arg
-		if (initial && atArg + 1 == initial)
-			continue;
-
 		// Get argument xvalue (as long as it can be read from)
 		xvalue argXval = xvalue(*this, activeThread->instruction.args[atArg]);
 
@@ -113,14 +137,24 @@ BBP::std::word BBP::userspace::StateMachine::MathOperate(arithmeticOperation ii_
 		// Resolve it
 		std::word argData = argXval.resolve(*this);
 
+		if (atArg == 0)
+			firstArgument = argData;
+		else if (atArg == 1)
+			secondArgument = argData;
+
+		// if initial value is set, skip at arg
+		if (initial && atArg + 1 == initial)
+			continue;
+
 		// Now operate on it
 		totalResult = operation(totalResult, argData);
 	}
 
 	// Now 'compare' that result to set appropriate flags
-	Compare(totalResult);
-
-	std::printf("Calculated %u (0x%08x)\n", totalResult, totalResult);
+	if (activeThread->instruction.header.args == 1)
+		Compare(firstArgument, totalResult);
+	else if (activeThread->instruction.header.args == 2)
+		Compare(firstArgument, secondArgument, totalResult);
 
 	// Return result
 	return totalResult;
@@ -150,9 +184,7 @@ void BBP::userspace::StateMachine::LogicOperate(arithmeticOperation nominal, ari
 
 	// Perform operation, then compare it
 	std::word result = operation(argument1Data, argument2Data);
-	Compare(result);
-
-	std::printf("Calculated logic %u\n", result);
+	Compare(argument1Data, argument2Data, result);
 
 	// Create rvalue based on value
 	rvalue rvalueResult = rvalue(result);
@@ -186,68 +218,109 @@ void BBP::userspace::StateMachine::NIL()
 
 void BBP::userspace::StateMachine::STACK()
 {
-	// Get stack
-	std::Stack<std::word> *activeStack;
 
-	// If of type push: [STACK]$ lvalue
-	xvalue pushFirstArgument;
-
-	// If of type pop: [STACK]$ xvalue
-	lvalue popFirstArgument;
-
-	// If argument, we want exactly one argument, Which must always be lvalue
-	if (activeThread->instruction.header.args != 1)	
-		std::raise(std::SIGILL); // If not exactly two arguments, throw signal
-
-	// Do things based on if stack is argument or not
-	if (activeThread->instruction.header.suffix & userspace::argument)
+	// Check for push or pop
+	if (activeThread->instruction.header.suffix & userspace::pop)
 	{
-		// If we are pushing a type argument call, throw SIGILL
-		if (activeThread->instruction.header.suffix == userspace::push)
+		// Set some variables
+		std::Stack<std::word> *popFrom = nullptr;
+		std::byte expectedArguments = 0;
+
+		// Check for argument flag
+		if (activeThread->instruction.header.suffix & userspace::argument)
+		{
+			popFrom = &activeThread->argumentStack;
+			expectedArguments = 2;
+		}
+		else
+		{
+			popFrom = &activeThread->generalStack;
+			expectedArguments = 1;
+		}
+
+		// Check for expected arguments
+		if (activeThread->instruction.header.args != expectedArguments)
 			std::raise(std::SIGILL);
 
-		activeStack = &activeThread->argumentStack;
+		// Get first lvalue
+		lvalue firstArg = lvalue(*this, activeThread->instruction.args[0]);
+
+		// Now, if not argument, just get a value from stack and return
+		if ((activeThread->instruction.header.suffix & userspace::argument) == false)
+		{
+			// Pop from stack
+			std::word popped = 0;
+			(*popFrom) >> popped;
+
+			// Assign to lvalue
+			firstArg.assign(*this, popped, 4);
+
+			// Done. Now return.
+			return;
+		}
+
+		// Get second argument xvalue
+		xvalue secondArg = xvalue(*this, activeThread->instruction.args[1]);
+
+		// Now resolve the argument index
+		std::word argumentIndex = secondArg.resolve(*this);
+
+		// Peek argument count
+		std::word argumentCount = (*popFrom)[popFrom->atElement - 1];
+
+		// Check if argument is within bounds.
+		if (argumentIndex >= argumentCount)
+			std::raise(std::SIGILL);
+
+		// Peek value
+		std::word popped = (*popFrom)[popFrom->atElement - (argumentCount - argumentIndex) - 1];
+
+		// Assign to first argument, then return
+		firstArg.assign(*this, popped, 4);
+		return;
 	}
-	else
-	{
-		activeStack = &activeThread->generalStack;
-	}
 
-	// If active thread
-	std::word stackOperandNumerical = 0;
-	rvalue stackOperand(0);
-	
-	switch (activeThread->instruction.header.suffix)
-	{
+	// We are pushing. Check if the argument flag is set.
+	if (activeThread->instruction.header.suffix & userspace::argument)
+		std::raise(std::SIGILL);
 
-	case userspace::push:
-		// Get first argument as xvalue (since it doesn't matter if its lvalue or rvalue)
-		pushFirstArgument = xvalue(*this, activeThread->instruction.args[0]);
+	// Check for exactly one argument
+	if (activeThread->instruction.header.args != 1)
+		std::raise(std::SIGILL);
 
-		// Resolve xvalue to get stack operand
-		stackOperandNumerical = pushFirstArgument.resolve(*this);
+	// Get xvalue
+	xvalue firstArg = xvalue(*this, activeThread->instruction.args[0]);
 
-		// Then push that value into the active thread stack
-		*activeStack << stackOperandNumerical;
-		break;
+	// Get value
+	std::word pushing = firstArg.resolve(*this);
 
-
-	case userspace::pop:
-		// Get first argument as lvalue (since we wan't to assign a value into xvalue)
-		popFirstArgument = lvalue(*this, activeThread->instruction.args[0]);
-
-		// Stack operand is value popped from active stack
-		*activeStack >> stackOperandNumerical;
-		stackOperand = rvalue(stackOperandNumerical);
-
-		// Then push that value into the active thread stack
-		popFirstArgument.assign(*this, stackOperand, 4);
-		break;
-	}
+	// Now push that 
+	activeThread->generalStack << pushing;
 	
 }
 void BBP::userspace::StateMachine::CTRL()
 {
+
+	// Check if instruction is a routine
+	if (activeThread->instruction.header.suffix & userspace::routine)
+	{
+		// Check whether routine is absolute or not
+		bool absolute = !!(activeThread->instruction.header.suffix & userspace::absolute);
+
+		// If not absolute signal SIGILL, TODO: Implement non-trivial routines
+		if (absolute == false)
+			std::raise(std::SIGILL);
+		
+		// Get target address
+		xvalue tgtAddressxv = xvalue(*this, activeThread->instruction.args[0]);
+		std::word tgtAddress = tgtAddressxv.resolve(*this) + 0x20000;
+
+		// Add address to stack
+		activeThread->routineAddress << tgtAddress;
+		return;
+	}
+
+
 	// Check if the instruction is a syscall
 	if (activeThread->instruction.header.suffix & userspace::syscall)
 	{
@@ -340,7 +413,6 @@ void BBP::userspace::StateMachine::CTRL()
 
 	// Call the function
 	callFunction(callingAddress.resolve(*this), returnObject, activeThread->instruction.header.args - startAt, args);
-
 
 }
 void BBP::userspace::StateMachine::MEM() 
@@ -534,7 +606,7 @@ void BBP::userspace::StateMachine::DIV()
 	// Perform division, since nothing is 0
 	std::word _word = MathOperate(division, divisionf, divisionif, divisionff, 1);
 
-	std::printf("Division float result: %f\n", _word);
+	//std::printf("Division float result: %f\n", _word);
 
 	// Write result into eax
 	setRegister(activeThread->eax, _word);
@@ -607,18 +679,213 @@ void BBP::userspace::StateMachine::NOT()
 }
 void BBP::userspace::StateMachine::FLAG()
 {
+	// Check if instruction not a comparison
+	if (activeThread->instruction.header.suffix == 1)
+	{
+		// Not implemented
+		std::raise(std::SIGILL);
+	}
+
+	// Declare two arguments already
+	std::word argument1 = 0;
+	std::word argument2 = 0;
+
+	// Declare result
+	std::word result = 0;
+
+	// Get argument count
+	std::byte argumentCount = activeThread->instruction.header.args;
+
+	// if arguments is 1:
+	if (argumentCount >= 1)
+		argument1 = xvalue(*this, activeThread->instruction.args[0]).resolve(*this);
 	
+	if (argumentCount >= 2)
+		argument2 = xvalue(*this, activeThread->instruction.args[1]).resolve(*this);
+
+	if (argumentCount >= 3)
+		result = xvalue(*this, activeThread->instruction.args[2]).resolve(*this);
+
+	result = argument1 - argument2;
+	//std::printf("Result: %u - %u = %u\n", argument1, argument2, result);
+
+	if (argumentCount > 3)
+		std::raise(std::SIGILL);
+
+	// Now do a comparison based on argument count
+	switch (argumentCount)
+	{
+	case 1:
+		Compare(argument1, result);
+		break;
+	case 2:
+		// Implicit result
+		
+		Compare(argument1, argument2, result);
+		break;
+	case 3:
+		Compare(argument1, argument2, result);
+		break;
+	}
+
 }
 void BBP::userspace::StateMachine::JMP()
 {
 
+	// Check if jump is routinal
+	if (activeThread->instruction.header.suffix & userspace::jmproutine)
+	{
+		// Check if there is a current routine
+		if (activeThread->routineAddress.atElement == 0)
+			std::raise(std::SIGINV); // Invalid instruction because missing routine, not because ill-formed syntax
+
+		// Get target address
+		std::word tgt = 0;
+		activeThread->routineAddress >> tgt;
+
+		// Jump to that address
+		setRegister(activeThread->eip, tgt);
+		return;
+	}
+
+	// Check if at least one argument is present
+	if (activeThread->instruction.header.args != 1)
+		std::raise(std::SIGILL);
+
+	// Get first value
+	xvalue val = xvalue(*this, activeThread->instruction.args[0]);
+
+	// Get address to jump to.
+	std::address_t jumpTo = val.resolve(*this);
+
+	// If jump is not absolute, add 0x20004 to address
+	if (!!(activeThread->instruction.header.suffix & userspace::absoluteJmp))
+		jumpTo += 0x20004;
+
+	// Jump to address
+	setRegister(activeThread->eip, jumpTo);
 }
 void BBP::userspace::StateMachine::JMPZ()
 {
 
+	// Create a boolean value to check if the conditions to jump have been met
+	bool shouldExecute = false;
+
+	// Check for less than (zero) flag
+	if (activeThread->instruction.header.suffix & userspace::lessthan)
+		shouldExecute |= activeThread->flags & activeThread->resultLessThan;
+
+	// Check for greater than (zero) flag
+	if (activeThread->instruction.header.suffix & userspace::greaterthan)
+		shouldExecute |= activeThread->flags & activeThread->resultGreaterThan;
+
+	// Check for equal to (zero) flag
+	if (activeThread->instruction.header.suffix & userspace::equalto)
+		shouldExecute |= activeThread->flags & activeThread->resultEqualTo;
+
+	// Negate evaluated value if negation flag is set
+	if (activeThread->instruction.header.suffix & userspace::negated)
+		shouldExecute = !shouldExecute;
+
+	// If should not execute, do not execute
+	if (shouldExecute == false)
+		return;
+
+	// Check if jump is routinal
+	if (activeThread->instruction.header.suffix & userspace::jmproutine)
+	{
+		// Check if there is a current routine
+		if (activeThread->routineAddress.atElement == 0)
+			std::raise(std::SIGINV); // Invalid instruction because missing routine, not because ill-formed syntax
+
+		// Get target address
+		std::word tgt = 0;
+		activeThread->routineAddress >> tgt;
+
+		// Jump to that address
+		setRegister(activeThread->eip, tgt);
+		return;
+	}
+
+	// Check if at least one argument is present
+	if (activeThread->instruction.header.args != 1)
+		std::raise(std::SIGILL);
+
+	// Get first value
+	xvalue val = xvalue(*this, activeThread->instruction.args[0]);
+
+	// Get address to jump to.
+	std::address_t jumpTo = val.resolve(*this);
+
+	// If jump is not absolute, add 0x20004 to address
+	if (!!(activeThread->instruction.header.suffix & userspace::absoluteJmp))
+		jumpTo += 0x20004;
+
+	// Jump to address
+	setRegister(activeThread->eip, jumpTo);
+
+
 }
 void BBP::userspace::StateMachine::JMPC()
 {
+
+	// Create a boolean value to check if the conditions to jump have been met
+	bool shouldExecute = false;
+
+	// Check for less than (zero) flag
+	if (activeThread->instruction.header.suffix & userspace::lessthan)
+		shouldExecute |= activeThread->flags & activeThread->lessThan;
+
+	// Check for greater than (zero) flag
+	if (activeThread->instruction.header.suffix & userspace::greaterthan)
+		shouldExecute |= activeThread->flags & activeThread->greaterThan;
+
+	// Check for equal to (zero) flag
+	if (activeThread->instruction.header.suffix & userspace::equalto)
+		shouldExecute |= activeThread->flags & activeThread->equalTo;
+
+	// Negate evaluated value if negation flag is set
+	if (activeThread->instruction.header.suffix & userspace::negated)
+		shouldExecute = !shouldExecute;
+
+	// If should not execute, do not execute
+	if (shouldExecute == false)
+		return;
+
+	// Check if jump is routinal
+	if (activeThread->instruction.header.suffix & userspace::jmproutine)
+	{
+		// Check if there is a current routine
+		if (activeThread->routineAddress.atElement == 0)
+			std::raise(std::SIGINV); // Invalid instruction because missing routine, not because ill-formed syntax
+
+		// Get target address
+		std::word tgt = 0;
+		activeThread->routineAddress >> tgt;
+
+		// Jump to that address
+		setRegister(activeThread->eip, tgt);
+		return;
+	}
+
+	// Check if at least one argument is present
+	if (activeThread->instruction.header.args != 1)
+		std::raise(std::SIGILL);
+
+	// Get first value
+	xvalue val = xvalue(*this, activeThread->instruction.args[0]);
+
+	// Get address to jump to.
+	std::address_t jumpTo = val.resolve(*this);
+
+	// If jump is not absolute, add 0x20004 to address
+	if (!!(activeThread->instruction.header.suffix & userspace::absoluteJmp))
+		jumpTo += 0x20004;
+
+	// Jump to address
+	setRegister(activeThread->eip, jumpTo);
+
+
 
 }
 void BBP::userspace::StateMachine::PAGE()
@@ -862,8 +1129,37 @@ void BBP::userspace::StateMachine::PAGE()
 void BBP::userspace::StateMachine::SIGNAL()
 {
 
+
+
 }
 void BBP::userspace::StateMachine::HALT()
 {
 
 }
+
+void BBP::userspace::StateMachine::SECR()
+{
+	// If endbranch instruction, check for matching argument count
+	if (activeThread->instruction.header.suffix == userspace::endbr)
+	{
+		// Get argument 0 data (always literal, since compiler emits instruction)
+		std::word argumentCount = activeThread->instruction.args[0].data;
+
+		// Get argument count from stack
+		std::word presentedArgumentCount = activeThread->argumentStack[activeThread->argumentStack.atElement - 1];
+
+		// If they are not the same, SIGSEC
+		if (argumentCount != presentedArgumentCount)
+			std::raise(std::SIGSEC);
+
+		// Reset expecting endbr flag
+		expectsEndbr = false;
+
+		return;
+
+	}
+
+
+}
+
+

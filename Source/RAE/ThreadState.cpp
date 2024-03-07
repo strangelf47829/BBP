@@ -1,9 +1,10 @@
 #include "../include/Threading.h"
 #include "../include/Hyperv.h"
+#include "../include/stdio.h"
 
 BBP::userspace::pid_t BBP::userspace::HyperVisor::allocateThread()
 {
-	return 0;
+	return currentPIDCount++;
 }
 
 BBP::userspace::Thread *BBP::userspace::HyperVisor::spawnThread(std::ELF::ELFBuilder &binary, std::ResourceManager *allocator)
@@ -17,6 +18,8 @@ BBP::userspace::Thread *BBP::userspace::HyperVisor::spawnThread(std::ELF::ELFBui
 
 	// Get thread
 	userspace::Thread *t = &threads.static_data[threadPID];
+	t->myPid = threadPID;
+	std::printf("Spawned thread %u.\n", t->myPid);
 
 	// Set active
 	t->active = true;
@@ -100,7 +103,9 @@ BBP::userspace::Thread::Thread()
 		sip(*this, 11, 0, thirtyTwoBit, true),
 
 		argumentStack(&argumentPage, argumentStackSize),
-		generalStack(&generalPage, generalStackSize)
+		generalStack(&generalPage, generalStackSize),
+
+		routineAddress(&routineAddressPage, maxRoutineDepth)
 {
 
 }

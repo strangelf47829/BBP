@@ -3,6 +3,7 @@
 #include "../include/Resources.h"
 #include "../include/stdio.h"
 #include "../include/Signal.h"
+#include "../include/Kernel.h"
 
 
 void *BBP::std::ResourceManager::malloc(std::size_t size)
@@ -60,7 +61,7 @@ void BBP::std::ResourceManager::free(void *ptr)
 	if (ptr == nullptr)
 	{
 		// Attempting to free nullptr: Do nothing but output something to stderr
-		std::STDERR << "Attempt to free nullptr was made." <<= std::endl;
+		system::kernelSS()->activeContext->STDERR << "Attempt to free nullptr was made." <<= std::endl;
 		return;
 	}
 
@@ -91,7 +92,7 @@ void BBP::std::ResourceManager::mark_deleted(void *ptr)
 	if (ptr == nullptr)
 	{
 		// Attempting to free nullptr: Do nothing but output something to stderr
-		std::STDERR << "Attempt to delete nullptr was made." <<= std::endl;
+		system::kernelSS()->activeContext->STDERR << "Attempt to delete nullptr was made." <<= std::endl;
 		return;
 	}
 
@@ -109,7 +110,7 @@ void BBP::std::ResourceManager::_delete(void *ptr)
 	if (ptr == nullptr)
 	{
 		// Attempting to free nullptr: Do nothing but output something to stderr
-		std::STDERR << "Attempt to delete nullptr was made." <<= std::endl;
+		system::kernelSS()->activeContext->STDERR << "Attempt to delete nullptr was made." <<= std::endl;
 		return;
 	}
 

@@ -185,7 +185,7 @@ bool BBP::esa::esaProcessor::includeFromPath(std::FILE &file, std::PATH &filenam
 		dirs >>= &path;
 
 		// Then create path from stored string.
-		std::PATH searchIn(BBP::std::primaryVolume, path);
+		std::PATH searchIn(BBP::system::kernelSS()->activeContext->primaryVolume, path);
 
 		// Make searchIn relative to physical root.
 		searchIn.makeAbsolutePath(nullptr);

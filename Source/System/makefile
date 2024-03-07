@@ -2,14 +2,14 @@
 #  Module make utility                  #
 #                                       #
 #########################################
-#  Module: Standard Library             #
+#  Module: Parser Utilities             #
 
 # =========== Platform
 PLAT= generic
 
 # =========== Module target details
-MODULE= stdlib
-MODULE_SRC= Except.cpp Resources.cpp stdint.cpp stdio.cpp Strings.cpp Executable.cpp DynamicPage.cpp Signal.cpp FileNode.cpp
+MODULE= System
+MODULE_SRC= Daemon.cpp Fini.cpp Init.cpp Kernel.cpp Shell.cpp
 
 # ========
 # END OF MODULE SETTINGS.

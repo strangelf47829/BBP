@@ -9,6 +9,7 @@ void BBP::userspace::StateMachine::setActiveHypervisor(userspace::HyperVisor *hy
 void BBP::userspace::StateMachine::setActiveThread(userspace::Thread *t)
 {
 	activeThread = t;
+	activeHypervisor->activeThread = t->myPid;
 }
 
 void BBP::userspace::StateMachine::cycleThread()
@@ -32,6 +33,10 @@ void BBP::userspace::StateMachine::execute()
 	// If no thread active
 	if (activeThread == nullptr)
 		throw std::exception("No active thread.", ENOEXEC);
+
+	// If expects an endbr instruction but the opcode is not security, raise SIGSEC
+	if (expectsEndbr && activeThread->instruction.header.opcode != userspace::SECR)
+		std::raise(std::SIGSEC);
 
 	// Cycle instruction
 	switch (activeThread->instruction.header.opcode)
@@ -111,6 +116,9 @@ void BBP::userspace::StateMachine::execute()
 		case userspace::HALT:
 			HALT();
 			break;
+		case userspace::SECR:
+			SECR();
+			break;
 		default:
 			std::raise(std::SIGILL);
 	}
@@ -166,5 +174,8 @@ void BBP::userspace::StateMachine::callFunction(std::word address, lvalue &retur
 
 	// Now actually set eip to address
 	setRegister(activeThread->eip, address);
+
+	// Since we are jumping all over the place, require endbr
+	expectsEndbr = true;
 
 }
