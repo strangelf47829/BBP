@@ -51,7 +51,7 @@ BBP::std::word printcallU(BBP::userspace::StateMachine *state, BBP::userspace::H
 
 	// Print
 	BBP::std::word word = val.resolve(*state);
-	BBP::std::word count = BBP::std::printf("%d (%u)\n", val, val);
+	BBP::std::word count = BBP::std::printf("%d\n", word);
 
 	return count;
 }
@@ -63,7 +63,7 @@ BBP::std::word printcallX(BBP::userspace::StateMachine *state, BBP::userspace::H
 
 	// Print
 	BBP::std::word word = val.resolve(*state);
-	BBP::std::word count = BBP::std::printf("0x%x\n", val);
+	BBP::std::word count = BBP::std::printf("0x%x\n", word);
 
 	return count;
 }
@@ -151,7 +151,7 @@ int BBP::smile_main(int argc, char **argv)
 	// Set active hypervisor
 	state.setActiveHypervisor(&hypervisor);
 
-	for (int i = 0; i < 150; i++)
+	for (int i = 0; i < 1500; i++)
 	{
 
 		std::printf("\e[0;32m");

@@ -47,9 +47,6 @@ namespace BBP
 			void Compare(std::word&, std::word&);
 			void Compare(std::word&, std::word&, std::word&);
 
-			// Security flags
-			bool expectsEndbr;
-
 		public:
 
 			// Used to define arithmetic operations done on variables

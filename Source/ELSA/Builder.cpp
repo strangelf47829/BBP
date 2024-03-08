@@ -111,12 +111,20 @@ void BBP::esa::BinaryApplication::appendSymbols(std::index_t n)
 	builder.symbolCount += n;
 	builder._symtab().info(builder.symbolCount);
 
+	// Get latest page to set info to, since information may have moved
+	std::string last = builder.sections[builder.symtab].data;
+
 	// Set ELF Info
-	for (std::index_t index = 0; index < n; index++)
+	for (std::index_t index = 0; index < builder.symbolCount - 1; index++)
 	{
+		// Get pointer to the beginning of the 16 bit chunk
+		std::string_element *at = &std::read(&last, ELF_SYMBOL_ENTRYSIZE * (builder.symbolCount - 1 - index));
+
+		// Then assign that pointer.
 		builder.symbols[builder.symbolCount - 1 - index].elf = &builder;
+		builder.symbols[builder.symbolCount - 1 - index].header.dataSize = ELF_SYMBOL_ENTRYSIZE;
 		builder.symbols[builder.symbolCount - 1 - index].header.bytes = ELF_SYMBOL_ENTRYSIZE;
-		builder.symbols[builder.symbolCount - 1 - index].header.data = builder.sections[builder.symtab].data.data + ELF_SYMBOL_ENTRYSIZE * (builder.symbolCount - 1 - index);
+		builder.symbols[builder.symbolCount - 1 - index].header.data = at;
 	}
 
 	// Extend hash table

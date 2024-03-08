@@ -41,6 +41,10 @@ namespace BBP
 			// Current instruction
 			userspace::Instruction instruction;
 
+			// Security flags
+			bool expectsEndbr;
+			bool expectsEndrt;
+
 			register_t eax;
 			register_t  ax;
 			register_t  ah;

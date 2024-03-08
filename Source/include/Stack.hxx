@@ -126,6 +126,7 @@ namespace BBP
 		{
 			// Create temporary string
 			std::PAGE<K> temp(*page);
+			K *oldData = page->data;
 
 			// Save size
 			size_t oldSize = max_elements;
@@ -137,7 +138,7 @@ namespace BBP
 			memcpy(temp, *page, oldSize);
 
 			// Then free old string
-			allocator->free(temp.data);
+			allocator->free(oldData);
 
 			// Then save the prev and next pages
 			page->prevPage = temp.prevPage;

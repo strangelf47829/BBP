@@ -31,9 +31,9 @@ void BBP::userspace::BinaryExecutable::loadExecutable(std::ELF::ELFBuilder &bina
 
 		// If segment ends at address greater than physical size, increase physical size
 		if (segmentEndsAt > BinaryPhysicalSize && binary.segments[segment].type() == std::ELF::PT_LOAD)
-			BinaryPhysicalSize += actualSize;
+			BinaryPhysicalSize = segmentEndsAt;
 		else if (segmentEndsAt > BinaryPhysicalSize && binary.segments[segment].type() == std::ELF::PT_TLS)
-			TLSSize += actualSize;
+			TLSSize = segmentEndsAt;
 
 		// Since we are here anyway, set segment data head data
 		mapping.static_data[loadedSegment].physicalMemoryHead = binary.segments[segment].paddr();
@@ -57,7 +57,13 @@ void BBP::userspace::BinaryExecutable::loadExecutable(std::ELF::ELFBuilder &bina
 
 	// Allocate the specified amount of bytes into memory.
 	BinaryData = std::PAGE<std::string_element>(BinaryPhysicalSize, (std::string_element*)allocator->calloc(BinaryPhysicalSize, sizeof(std::string_element)));
-	TLSData = std::PAGE<std::string_element>(TLSSize, (std::string_element *)allocator->calloc(TLSSize, sizeof(std::string_element)));
+	TLSSize += 4;
+
+	if (TLSSize > 0)
+		TLSData = std::PAGE<std::string_element>(TLSSize, (std::string_element *)allocator->calloc(TLSSize, sizeof(std::string_element)));
+	else
+		TLSData = std::PAGE<std::string_element>(0, nullptr);
+
 	allocated = true;
 
 	// Link TLS data and Binary Data together
@@ -83,8 +89,10 @@ void BBP::userspace::BinaryExecutable::loadExecutable(std::ELF::ELFBuilder &bina
 		//std::printf("Loading segment %u (from 0x%08x to 0x%08x: 0x%04x bytes)\n", segment, loadIntoAddress, loadIntoAddress + physicalSegmentSize, physicalSegmentSize);
 
 		// Now copy binary data into physical memory
+		
 		for (std::index_t idx = 0; idx < physicalSegmentSize; idx++)
 		{
+			//std::printf("[%u\\%u] (%u) [%u] (%p) <--\n", idx, physicalSegmentSize, BinaryData.dataSize, loadIntoAddress + idx, BinaryData.nextPage);
 			std::word data = std::read(&binary.file, segmentOffset + idx);
 			__UNSAFE__(std::write)(&BinaryData, __UNSAFE__(std::read)(&binary.file, segmentOffset + idx), loadIntoAddress + idx);
 		}
@@ -243,6 +251,10 @@ void BBP::userspace::BinaryExecutable::createTLS(std::PAGE<std::string_element> 
 	// If no binary data is loaded, throw exception
 	if (allocated == false)
 		throw std::exception("Could not create TLS Data: No binary loaded", ENODATA);
+
+	// If TLSData is empty, no need to do anyting
+	if (page.dataSize == 0)
+		return;
 
 	// Initialize page
 	page = std::PAGE<std::string_element>(TLSData.dataSize, (std::string_element*)allocator->calloc(TLSData.dataSize, sizeof(std::string_element)));

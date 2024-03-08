@@ -455,6 +455,12 @@ ACTION(endroutine)
 	// Get current index in .text
 	std::index_t currentIndex = processor.application->builder.sections[processor.application->builder.text].stack.atElement;
 
+	// Then emit end-routine instruction after getting instruction
+	processor.resetInstruction();
+	processor.setInstruction(userspace::SECR, userspace::endrt, 0, 0);
+	processor.emitInstruction();
+	processor.resetInstruction();
+
 	// Get routine starts
 	std::offset_t startOfRoutine = 0;
 	std::index_t zero = 0;

@@ -46,7 +46,7 @@ void BBP::userspace::StateMachine::Compare(std::word &argument1, std::word &argu
 	bool equalTo = argument1 == argument2;
 
 	// Check if result is 0
-	bool resultEqualTo = !!result;
+	bool resultEqualTo = result == 0;
 
 	// Check if signed result is greater or less than 0
 	int signedResult = (int)result;
@@ -61,6 +61,8 @@ void BBP::userspace::StateMachine::Compare(std::word &argument1, std::word &argu
 	activeThread->flags |= resultGreaterThan * activeThread->resultGreaterThan;
 	activeThread->flags |= resultLessThan * activeThread->resultLessThan;
 	activeThread->flags |= resultEqualTo * activeThread->resultEqualTo;
+
+	//std::printf("Compare %u, %u, %u?: %d %d %d %d %d %d\n", argument1, argument2, result, greaterThan, lessThan, equalTo, resultGreaterThan, resultLessThan, resultEqualTo);
 
 }
 
@@ -395,7 +397,6 @@ void BBP::userspace::StateMachine::CTRL()
 
 	// Calling something, just try this
 	xvalue callingAddress = xvalue(*this, activeThread->instruction.args[0]);
-	lvalue returnObject = lvalue(*this, activeThread->instruction.args[1]);
 
 	// Create argument list
 	std::word args[7] = { 0, 0, 0, 0, 0, 0, 0 };
@@ -412,7 +413,14 @@ void BBP::userspace::StateMachine::CTRL()
 		args[arg - startAt] = rvalue(*this, activeThread->instruction.args[arg]).resolve(*this);
 
 	// Call the function
-	callFunction(callingAddress.resolve(*this), returnObject, activeThread->instruction.header.args - startAt, args);
+	if (activeThread->instruction.header.suffix & userspace::callp)
+	{
+		lvalue returnObject = lvalue(*this, activeThread->instruction.args[1]);
+		callFunction(callingAddress.resolve(*this), returnObject, activeThread->instruction.header.args - startAt, args);
+	}
+	{
+		callFunction(callingAddress.resolve(*this), activeThread->instruction.header.args - startAt, args);
+	}
 
 }
 void BBP::userspace::StateMachine::MEM() 
@@ -599,7 +607,7 @@ void BBP::userspace::StateMachine::DIV()
 		std::word valBytes = val.resolve(*this);
 
 		// Check if it zero
-		if (valBytes == integerZero || valBytes == floatingPointZero)
+		if ((valBytes == integerZero || valBytes == floatingPointZero) && atArg != 0)
 			std::raise(std::SIGFPE);
 	}
 
@@ -632,8 +640,8 @@ void BBP::userspace::StateMachine::MOD()
 		// Resolve bytes
 		std::word valBytes = val.resolve(*this);
 
-		// Check if it zero
-		if (valBytes == integerZero || valBytes == floatingPointZero)
+		// Check if it zero (except for first argument0
+		if ((valBytes == integerZero || valBytes == floatingPointZero) && atArg != 0)
 			std::raise(std::SIGFPE);
 	}
 
@@ -740,10 +748,10 @@ void BBP::userspace::StateMachine::JMP()
 			std::raise(std::SIGINV); // Invalid instruction because missing routine, not because ill-formed syntax
 
 		// Get target address
-		std::word tgt = 0;
-		activeThread->routineAddress >> tgt;
+		std::word tgt = activeThread->routineAddress[activeThread->routineAddress.atElement - 1];
 
-		// Jump to that address
+		// Expect endrt and jump to that address
+		activeThread->expectsEndrt = true;
 		setRegister(activeThread->eip, tgt);
 		return;
 	}
@@ -791,38 +799,8 @@ void BBP::userspace::StateMachine::JMPZ()
 	if (shouldExecute == false)
 		return;
 
-	// Check if jump is routinal
-	if (activeThread->instruction.header.suffix & userspace::jmproutine)
-	{
-		// Check if there is a current routine
-		if (activeThread->routineAddress.atElement == 0)
-			std::raise(std::SIGINV); // Invalid instruction because missing routine, not because ill-formed syntax
-
-		// Get target address
-		std::word tgt = 0;
-		activeThread->routineAddress >> tgt;
-
-		// Jump to that address
-		setRegister(activeThread->eip, tgt);
-		return;
-	}
-
-	// Check if at least one argument is present
-	if (activeThread->instruction.header.args != 1)
-		std::raise(std::SIGILL);
-
-	// Get first value
-	xvalue val = xvalue(*this, activeThread->instruction.args[0]);
-
-	// Get address to jump to.
-	std::address_t jumpTo = val.resolve(*this);
-
-	// If jump is not absolute, add 0x20004 to address
-	if (!!(activeThread->instruction.header.suffix & userspace::absoluteJmp))
-		jumpTo += 0x20004;
-
-	// Jump to address
-	setRegister(activeThread->eip, jumpTo);
+	// Otherwise jump
+	JMP();
 
 
 }
@@ -852,41 +830,8 @@ void BBP::userspace::StateMachine::JMPC()
 	if (shouldExecute == false)
 		return;
 
-	// Check if jump is routinal
-	if (activeThread->instruction.header.suffix & userspace::jmproutine)
-	{
-		// Check if there is a current routine
-		if (activeThread->routineAddress.atElement == 0)
-			std::raise(std::SIGINV); // Invalid instruction because missing routine, not because ill-formed syntax
-
-		// Get target address
-		std::word tgt = 0;
-		activeThread->routineAddress >> tgt;
-
-		// Jump to that address
-		setRegister(activeThread->eip, tgt);
-		return;
-	}
-
-	// Check if at least one argument is present
-	if (activeThread->instruction.header.args != 1)
-		std::raise(std::SIGILL);
-
-	// Get first value
-	xvalue val = xvalue(*this, activeThread->instruction.args[0]);
-
-	// Get address to jump to.
-	std::address_t jumpTo = val.resolve(*this);
-
-	// If jump is not absolute, add 0x20004 to address
-	if (!!(activeThread->instruction.header.suffix & userspace::absoluteJmp))
-		jumpTo += 0x20004;
-
-	// Jump to address
-	setRegister(activeThread->eip, jumpTo);
-
-
-
+	// Otherwise jump
+	JMP();
 }
 void BBP::userspace::StateMachine::PAGE()
 {
@@ -1142,6 +1087,10 @@ void BBP::userspace::StateMachine::SECR()
 	// If endbranch instruction, check for matching argument count
 	if (activeThread->instruction.header.suffix == userspace::endbr)
 	{
+		// If processor is not expecting endbr, raise security fault
+		if (activeThread->expectsEndbr == false)
+			std::raise(std::SIGSEC);
+
 		// Get argument 0 data (always literal, since compiler emits instruction)
 		std::word argumentCount = activeThread->instruction.args[0].data;
 
@@ -1153,12 +1102,24 @@ void BBP::userspace::StateMachine::SECR()
 			std::raise(std::SIGSEC);
 
 		// Reset expecting endbr flag
-		expectsEndbr = false;
+		activeThread->expectsEndbr = false;
 
 		return;
 
 	}
 
+	// If endroutine instruction;
+	if (activeThread->instruction.header.suffix == userspace::endrt)
+	{
+		// Remove address from stack and continue.
+		std::word bin = 0;
+		activeThread->routineAddress >> bin;
+
+		// Reset flag
+		activeThread->expectsEndrt = false;
+		return;
+
+	}
 
 }
 

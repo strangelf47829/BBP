@@ -101,7 +101,8 @@ namespace BBP
 
 		enum SECRSUFFIXES : std::byte
 		{
-			endbr = 1
+			endbr = 1,
+			endrt = 2
 		};
 
 		constexpr std::word REGISTERPAGE = 0xf0000;

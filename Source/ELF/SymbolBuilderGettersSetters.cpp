@@ -35,10 +35,11 @@ void writeHalfWord(BBP::std::ELF::SymbolBuilder *sym, BBP::std::halfword halfwor
 }
 BBP::std::word readWord(BBP::std::ELF::SymbolBuilder *sym, BBP::std::offset_t offset)
 {
-	BBP::std::byte a = sym->header.data[offset];
-	BBP::std::byte b = sym->header.data[offset + 1];
-	BBP::std::byte c = sym->header.data[offset + 2];
-	BBP::std::byte d = sym->header.data[offset + 3];
+	
+	BBP::std::byte a = BBP::std::read(&sym->header, offset + 0);
+	BBP::std::byte b = BBP::std::read(&sym->header, offset + 1);
+	BBP::std::byte c = BBP::std::read(&sym->header, offset + 2);
+	BBP::std::byte d = BBP::std::read(&sym->header, offset + 3);
 
 	if (!sym->elf->Endian)
 		return a | (b << 8) | (c << 16) | (d << 24);

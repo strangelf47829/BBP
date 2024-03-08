@@ -34,8 +34,8 @@ void BBP::userspace::StateMachine::execute()
 	if (activeThread == nullptr)
 		throw std::exception("No active thread.", ENOEXEC);
 
-	// If expects an endbr instruction but the opcode is not security, raise SIGSEC
-	if (expectsEndbr && activeThread->instruction.header.opcode != userspace::SECR)
+	// If expects an endbr or endrt instruction but the opcode is not security, raise SIGSEC
+	if ((activeThread->expectsEndbr || activeThread->expectsEndrt) && activeThread->instruction.header.opcode != userspace::SECR)
 		std::raise(std::SIGSEC);
 
 	// Cycle instruction
@@ -176,6 +176,6 @@ void BBP::userspace::StateMachine::callFunction(std::word address, lvalue &retur
 	setRegister(activeThread->eip, address);
 
 	// Since we are jumping all over the place, require endbr
-	expectsEndbr = true;
+	activeThread->expectsEndbr = true;
 
 }

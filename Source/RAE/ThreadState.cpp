@@ -33,6 +33,9 @@ BBP::userspace::Thread *BBP::userspace::HyperVisor::spawnThread(std::ELF::ELFBui
 	// Set EIP point
 	userspace::setRegister(t->eip, binary.entry());
 
+	// Expect endbr since entry point will have it
+	t->expectsEndbr = true;
+
 	// Reset argument and general stack
 	t->argumentStack.atElement = 0;
 	t->generalStack.atElement = 0;
