@@ -19,13 +19,13 @@ Author: Rafael de Bie
 
 */
 
-#include "Kernel.h"
+#include "../include/Kernel.h"
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <fstream>
 
-#include "SDL.h"
+#include "../include/SDL.h"
 
 using namespace BBP::IO;
 /*

@@ -19,8 +19,8 @@ Author: Rafael de Bie
 
 */
 
-#include "kernel.h"
-#include "SDL.h"
+#include "../include/kernel.h"
+#include "../include/SDL.h"
 
 #include <cstdio>
 #include <stdio.h>
