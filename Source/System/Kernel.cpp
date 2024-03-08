@@ -12,11 +12,21 @@ BBP::system::SystemContext::SystemContext()
 }
 
 BBP::system::KernelSubSystems::KernelSubSystems()
+	: activeContext(&kernelContext)
 {
 	activeContext = &kernelContext;
 }
 
+BBP::system::SystemContext* BBP::system::KernelSubSystems::getKernelSystemContext()
+{
+	return &kernelContext;
+}
+
 BBP::system::KernelSubSystems *BBP::system::kernelSS()
 {
+	// Check just bc stupid
+	if (s.activeContext == nullptr)
+		s.activeContext = s.getKernelSystemContext();
+
 	return &s;
 }

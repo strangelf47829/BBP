@@ -18,9 +18,8 @@ namespace BBP
 			// State machine for the kernel subsystem
 			userspace::StateMachine state;
 
-			// Multiple hypervisors
-			userspace::HyperVisor hypervisor1;
-			userspace::HyperVisor hypervisor2;
+			// Hypervisor page
+			std::PAGE<userspace::HyperVisor> hypervisors;
 
 			// Just for fun
 			SystemContext kernelContext;
@@ -29,6 +28,9 @@ namespace BBP
 
 			// Constructor sets state ready for the bootloader.
 			KernelSubSystems();
+
+			// Get pointer to kernel context
+			SystemContext* getKernelSystemContext();
 
 			// The context currently being used. If neither hypervisor is being used (I.E., none of them are currently consuming resources), this should be set to kernelContext.
 			SystemContext *activeContext;
