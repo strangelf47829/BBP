@@ -3,6 +3,21 @@
 *.lib
 *.o
 
+# Build artifacts
+*.log
+*.bak
+Source/BuildLog.txt
+
+# Out files
+*.out
+
+# Workshop
+Workshop/
+
+# Documentation
+doc/doxygen/*
+doc/sphinx/*
+
 #Visual Studio
 .vs/
 .vscode/
