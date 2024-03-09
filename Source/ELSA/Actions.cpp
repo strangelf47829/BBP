@@ -22,57 +22,26 @@ PRAGMA(include)
 	// Recalculate position
 	context->calculateDebugPosition();
 
-	// Since file names can appear between '<>' or '""' (but not both), create the following handle
-	std::Lexer::lex_keywordhandle handles[] = { OPENANGLEBRACKET_HANDLE, CLOSEANGLEBRACKET_HANDLE, DOUBLEQUOTES_HANDLE, DOUBLEQUOTES_HANDLE };
+	// Just dont use delimiters lol
+	std::index_t wordBegin = context->atPosition;
 
-	// Read delimiter information, and update debug information.
-	std::errno_t error = processor.ExpectDelimiters(context, 4, handles, true, 1, 1, BACKSLASH_HANDLE, context->keywordStack.atElement + 2);
-	context->debugInformation.highlightLength = context->atPosition - index;
+	// Move to end of word
+	context->moveToEndOfThisWord(true);
+	std::index_t endOfWord = ++context->atPosition;
 
-	// Switch based on error code
-	switch (error)
-	{
-	case EFAULT: // Somehow a nullpointer got here. Abort immediately.
-		context->resetInfo(context->debugInformation);
-		return "AMemory instability detected.";
-	case EDOM: // Somehow, an odd number ended up as argc. Either programmer fault, or stack error. Abort immediately.
-		context->resetInfo(context->debugInformation);
-		return "APossible stack smashing detected.";
-	case EEOF: // Found End Of File before anything was found.
-		context->resetInfo(context->debugInformation);
-		return "EExpected filename before end of file.";
-	case ENOMSG:// Found End of Line before anything was found.
-		context->resetInfo(context->debugInformation);
-		return "EExpected filename before end of line.";
-	case ELINEEND: // End of Line found before second delimiter
-		context->resetInfo(context->debugInformation);
-		return "EExpected closing delimiter before end of line.";
-	case ENOANO: // Attempted to close delimiter before starting it.
-		context->debugInformation.highlightmsg = "NHere";
-		context->debugInformation.highlight = index;
-		if (processor.handle == CLOSEANGLEBRACKET_HANDLE)
-			return "eExpected '<' before '>'.";
-		return "EExpected '\"' before filename.";
-	case EILSEQ: // Mismatched delimiters
-		context->debugInformation.highlightmsg = "NHere";
-		context->debugInformation.highlight = index;
-		if (processor.handle == CLOSEANGLEBRACKET_HANDLE)
-			return "eExpected '>' after '<'.";
-		return "EExpected '\"' after '\"'.";
-	case EUNFOCS: // Somehow unfocused?
-		context->resetInfo(context->debugInformation);
-		return "AEncountered bug 0x01.";
-	case EOVERFLOW: // More than one delimiter, can only really happen with <
-		context->debugInformation.highlightmsg = "NHere";
-		context->debugInformation.highlight = index;
-		return "EUnexpected '<' after '<'.";
-	}
+	// Set corresponding flags
+	processor.lastOpener = wordBegin;
+	processor.firstCloser = endOfWord;
+	
+	// Import
+	const char *errmsg = processor.includeFile(context, index);
 
-	//context->resetInfo(context->debugInformation);
-	context->debugInformation.highlight = processor.lastOpener;
-	context->debugInformation.highlightLength = processor.firstCloser - processor.lastOpener;
-	context->debugInformation.highlightmsg = "NHere";
-	return processor.includeFile(context, index);
+	// Set corresponding debug variables
+	context->debugInformation.highlight = wordBegin;
+	context->debugInformation.highlightLength = endOfWord - wordBegin;
+	context->debugInformation.highlightmsg = "NFile imported here:";
+
+	return errmsg;
 }
 
 PRAGMA(handler)

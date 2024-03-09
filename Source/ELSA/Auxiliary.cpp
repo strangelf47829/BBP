@@ -51,7 +51,7 @@ BBP::std::errno_t BBP::esa::esaProcessor::ExpectDelimiters(std::Lexer::lex_conte
 			return EEOF;
 
 		// Get keyword
-		std::Lexer::lex_keyword *keyword = &context->keywordStack[handle];
+		std::Lexer::lex_keyword* keyword = &context->keywordStack[handle];
 
 		// If handle is new line or stop, and delimiter stack is not balanced, and expected within one line, return error
 		if ((context->isNewLine(keyword->word[0]) || handle == stop) && depth && (singleLine || handle == stop))
@@ -80,7 +80,7 @@ BBP::std::errno_t BBP::esa::esaProcessor::ExpectDelimiters(std::Lexer::lex_conte
 			context->atPosition++;
 			continue;
 		}
-		
+
 		// If not included, just skip
 		if (!isIncluded)
 			continue;
@@ -91,7 +91,7 @@ BBP::std::errno_t BBP::esa::esaProcessor::ExpectDelimiters(std::Lexer::lex_conte
 			// This delimiter is the closing delimiter to the last found delimiter.
 			// Decrease the depth by 1, and retrieve the last index from stack.
 			depth--;
-			
+
 			// If there is depth (I.E., there is still a closing delimiter needed)
 			if (depth)
 			{
@@ -255,18 +255,15 @@ BBP::std::conststring BBP::esa::esaProcessor::includeFile(std::Lexer::lex_contex
 	std::FILE file;
 	std::PATH imported;
 	std::PATH filename(requestedPath);
-	bool opened = false;
 
-	// Choose which paths to search based on delimiter used
-	switch (delimiterStack[0])
-	{
-	case DOUBLEQUOTES_HANDLE:
+	// First try to include system path
+	bool opened = includeFromPath(file, filename, context->syspaths, imported);
+
+	// If that failed, try using user path
+	if (opened == false)
 		opened = includeFromPath(file, filename, context->usrpaths, imported);
-		break;
-	case OPENANGLEBRACKET_HANDLE:
-		opened = includeFromPath(file, filename, context->syspaths, imported);
-		break;
-	}
+	
+
 
 	if (opened)
 	{

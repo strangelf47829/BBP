@@ -110,8 +110,8 @@ BBP::std::Lexer::lex_keywordhandle BBP::std::Lexer::lex_context::moveToNextKeywo
 				hasFoundMeaningfulToken = false;
 
 				// If need to abort, break out.
-if (abort)
-return keywordStack.atElement + 1;
+				if (abort)
+				return keywordStack.atElement + 1;
 			}
 		}
 		else
