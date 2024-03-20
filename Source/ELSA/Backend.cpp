@@ -71,7 +71,7 @@ void BBP::esa::esaProcessor::discardAndClose()
 	application = nullptr;
 }
 
-void BBP::esa::esaProcessor::emitRelocation(std::index_t symbolIndex)
+void BBP::esa::esaProcessor::emitRelocation(std::index_t symbolIndex, std::byte type)
 {
 	// Calculate offset of instruction from .text (in words)
 	std::word offset = calculateArgumentOffset();
@@ -79,7 +79,7 @@ void BBP::esa::esaProcessor::emitRelocation(std::index_t symbolIndex)
 	// Create data entry
 	std::ELF::RelEntry rel_entry;
 	rel_entry.r_offset = application->builder._text().stack.atElement + offset;
-	rel_entry.r_info = symbolIndex << 8 | 1;
+	rel_entry.r_info = symbolIndex << 8 | type;
 
 	// Set rel data
 	std::word rel_data[2] = { rel_entry.r_offset, rel_entry.r_info };

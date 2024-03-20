@@ -1,7 +1,11 @@
-#include "Strings.h"
-
 #ifndef BBP_SYSTEM_DAEMON_H
 #define BBP_SYSTEM_DAEMON_H
+
+#include "Strings.h"
+
+// A Daemon is a module that can be loaded by the bootloader and passed onto the kernel.
+
+// Daemons are interfaced with using a hashtable, where each element is a hash of a string corresponding with the command line thing.
 
 namespace BBP
 {
@@ -9,34 +13,70 @@ namespace BBP
 	namespace system
 	{
 
-		// These function definitions allow for a daemon to have multiple stuff
-		typedef std::word (*daemonService)(std::PAGE<std::c_string>);
-		typedef daemonService (*daemonResolutionService)(std::hash_t, std::string);
+		class Daemon;
 
-		// A daemon record stores information about a daemon. 
-		class DaemonRecord
+		// A daemon service structure describes the relationship between a hash, it's help page, it's version page, and it's index within
+		// The derived classes functions page
+		struct DaemonService
 		{
+			// The hash for this service
+			std::hash_t hash;
 
-			// This variable stores the maximum amount of services a daemon may have
-			constexpr static std::size_t maxDaemonServices = 3;
+			// The index where the service is located.
+			bool hasAssociatedService;
+			std::index_t serviceIndex;
 
-			// Stores the various services
-			std::word serviceCount;
-			std::STATIC_PAGE<daemonService, maxDaemonServices> services; 
-			std::STATIC_PAGE<std::hash_t, maxDaemonServices> serviceHashes;
+			// It's help and version page. nullptr if not present
+			std::conststring helpMSG;
+			std::conststring versMSG;
+		};
 
-			virtual void daemonInit() = 0;
+		// Hash lookup functor looks up a given hash, then sets that ...
+		using DaemonHashLookupFunctor = DaemonService *(Daemon::*)(std::string &);
+		using DaemonHashLookupFunctorDecl = DaemonService * (std::string &);
+
+		// This function actually executes the 
+		using DaemonFunctor = std::errno_t (Daemon::*)(std::hash_t, std::size_t, std::c_string *);
+		using DaemonFunctorDecl = std::errno_t(std::hash_t, std::size_t, std::c_string *);
+
+		constexpr std::size_t maxDaemonNameLength = 32;
+
+		// A daemon record is the structure that actually stores the relationship between a service and daemon
+		struct DaemonRecord
+		{
+			// Stores a pointer to the daemon who owns this record.
+			Daemon *owner;
+
+			// Points to the Lookup functor
+			std::static_string<maxDaemonNameLength> daemonName;
+
+			// This member 
+			static std::PAGE<DaemonRecord> records;
+
+			// Constructor automatically adds to records
+			DaemonRecord(Daemon *, std::conststring);
+			DaemonRecord();
+		};
+
+		// The actual daemon class
+		class Daemon
+		{
+		protected:
+
+			// Holds the list of services served by this daemon
+			std::PAGE<DaemonService> services;
 
 		public:
 
-			// Used to interface with the daemon
-			std::word daemonAction(std::string);
+			// Initialization 
+			virtual std::errno_t initialize() = 0;
+			virtual std::errno_t deinitialize() = 0;
 
+			// Virtual lookup stuff
+			virtual DaemonHashLookupFunctorDecl lookupFunctor = 0;
+			virtual DaemonFunctorDecl functorFunctor = 0;
 
 		};
-
-
-
 	}
 
 

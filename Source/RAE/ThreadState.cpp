@@ -121,10 +121,18 @@ void BBP::userspace::HyperVisor::destroyThread(userspace::pid_t pid)
 	// Unload executable
 	t->executable.unloadExecutable();
 
-	// Free up TLS
-	t->allocator->free(t->TLS.data);
+	// Free up TLS, if it exists
+	if (t->TLS.data)
+		t->allocator->free(t->TLS.data);
+
 	t->TLS = std::PAGE<std::string_element>(0, nullptr);
 
 	// Set inactive
 	t->active = false;
+}
+
+bool BBP::userspace::Thread::isThreadCold()
+{
+	// Return true if the argument stack is at 0
+	return argumentStack.atElement == 0;
 }

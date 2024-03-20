@@ -419,7 +419,7 @@ BBP::std::conststring BBP::esa::esaProcessor::resolve(BBP::std::index_t at, BBP:
 	// Check if page is 0
 	// TODO: Move to different function
 	if (atPage == 0 || true)
-		emitRelocation(symbol);
+		emitRelocation(symbol, 33);
 
 	// Check if request is legal
 	if (totalRefDepth < -1)

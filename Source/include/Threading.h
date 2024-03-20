@@ -132,6 +132,8 @@ namespace BBP
 			// Thread specific stuff (C++)
 			pid_t myPid;
 			
+			// Thread status functions
+			bool isThreadCold();
 
 			// Signal handling stuff goes here
 

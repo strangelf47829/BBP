@@ -53,6 +53,8 @@ namespace BBP
 			bool isDefinedFromRoot();
 
 			PATH &makeAbsolutePath(PATH *currentPath);
+			PATH &makeAbsolutePath();
+
 			PATH &resolveAbsolutes();
 
 			void makeRelative(PATH &reference, PATH &dir);
@@ -93,7 +95,12 @@ namespace BBP
 			VOLUME(char l, std::conststring);
 			VOLUME(char l) : VOLUME(l, "/") {}
 
+			VOLUME() : label('\0'), volumePath() {}
+
 			~VOLUME();
+
+			// Mount empty volume
+			void mount(char label, std::conststring str);
 
 			PATH volumePath;
 			char label;

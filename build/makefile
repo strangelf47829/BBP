@@ -9,7 +9,10 @@ PLAT= UBUNTU
 
 # =========== Module target details
 MODULE= BBP
-MODULE_SRC= Applications ELF ELSA env_UBUNTU File Graphics Parser RAE stdlib System
+MODULE_SRC= Applications ELF ELSA File Graphics Parser RAE stdlib System Daemons
+ENV=UBUNTU
+ENV_DIR= ../Source/env/$(ENV)
+ENV_BIN= libmoduleenv
 
 # ========
 # END OF MODULE SETTINGS.
@@ -36,13 +39,22 @@ MODULE_DIRS= $(foreach var,$(MODULE_SRC),../Source/$(var))
 
 default: build
 
+env: 
+	@cd $(ENV_DIR); make EXTCXXFLAGS="$(CXXFLAGS)" --no-print-directory
+	@cp $(ENV_DIR)/libmodule.a ./bin/libenv.a
+
 $(MODULE_DIRS):
 	@cd $@; make EXTCXXFLAGS="$(CXXFLAGS)" --no-print-directory
 	@cp $(patsubst %,%/libmodule.a,$@) ./bin/lib$(notdir $@).a
 
-build: $(MODULE_DIRS)
+%.a: env
+	@echo
+	@echo
+	@echo Using environment setup $(ENV)
+
+build: $(MODULE_DIRS) $(ENV_DIR)/env.a
 	@echo "Compiled everything"
-	@g++ -Wl,--start-group $(patsubst %, bin/lib%.a, $(notdir $(MODULE_DIRS))) -Wl,--end-group -pthread
+	@g++ -Wl,--start-group $(patsubst %, bin/lib%.a, $(notdir $(MODULE_DIRS))) bin/libenv.a -Wl,--end-group -pthread
 
 clean: $(patsubst %,%.clean,$(notdir $(MODULE_DIRS)))
 	rm bin/*; rm a.out

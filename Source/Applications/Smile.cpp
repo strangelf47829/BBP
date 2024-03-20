@@ -116,12 +116,20 @@ int BBP::smile_main(int argc, char **argv)
 	std::PATH testFile("/boot/ELSA.esa");
 	std::PATH dstFile("/boot/ELSA.o");
 
+	std::PATH testFile2("/boot/ELSA2.esa");
+	std::PATH dstFile2("/boot/ELSA2.o");
+
 	// Compile source
-	esa::processor.translate(testFile, dstFile);
+	//esa::processor.translate(testFile, dstFile);
+
+	//esa::processor.reset();
+
+	// Compile second source
+	//esa::processor.translate(testFile2, dstFile2);
 
 	// Now try and deconstruct it
 	std::FILE compiledFile(dstFile);
-	std::FILE compiledFile2("/boot/ELSA2.o");
+	std::FILE compiledFile2(dstFile2);
 
 	// Get processor
 	std::ELF::ELFBuilder compiled(compiledFile.b().page, system::kernelSS()->activeContext->activemem);
@@ -139,6 +147,7 @@ int BBP::smile_main(int argc, char **argv)
 	// Get zero-th thread
 	userspace::Thread *t = hypervisor.spawnThread(compiled, system::kernelSS()->activeContext->activemem);
 	userspace::Thread *t2 = hypervisor.spawnThread(compiled2, system::kernelSS()->activeContext->activemem);
+	userspace::Thread *t3 = hypervisor.spawnThread(compiled, system::kernelSS()->activeContext->activemem);
 
 	// Unload binary since we have a copy
 	compiled.close();
@@ -151,28 +160,62 @@ int BBP::smile_main(int argc, char **argv)
 	// Set active hypervisor
 	state.setActiveHypervisor(&hypervisor);
 
-	for (int i = 0; i < 1500; i++)
+	// Count instructions
+	std::size_t instructions1 = 0;
+	std::size_t instructions2 = 0;
+	std::size_t instructions3 = 0;
+
+	// Flag
+	bool isActive = true;
+
+	while (isActive)
 	{
-
+		// Make green for now
 		std::printf("\e[0;32m");
-		state.setActiveThread(t);
-		hypervisor.advanceThread(state, 10);
 
+		// Set activethread
+		state.setActiveThread(t);
+
+		// Then advance thread
+		if (hypervisor.advanceThread(state))
+			instructions1++;
+
+		// Make blue
+		std::printf("\e[0;34m");
+
+		// Set activethread
+		state.setActiveThread(t3);
+
+		// Then advance thread
+		if (hypervisor.advanceThread(state))
+			instructions3++;
+
+		// Make red for now
 		std::printf("\e[0;31m");
+
+		// Set activethread
 		state.setActiveThread(t2);
-		hypervisor.advanceThread(state, 10);
+
+		// Then advance thread
+		if (hypervisor.advanceThread(state))
+			instructions2++;
+
+		isActive = (!t->isThreadCold() || !t2->isThreadCold());
+
 	}
+
 	std::printf("\e[0;37m\n");
 
 	// Close
 	hypervisor.destroyThread(0);
 	hypervisor.destroyThread(1);
+	hypervisor.destroyThread(2);
 
 	// Get time after execution in milliseconds
 	std::time_t after = std::millis();
 
 	// Now print
-	std::printf("Time difference: %ums\n", after - before);
+	std::printf("Time difference: %ums. Instructions: (%u/%u/%u). Speed: %uKHz.\n", after - before, instructions1, instructions2, instructions3, ((instructions1+instructions2+instructions3) / (after - before)));
 
 	return 0;
 }

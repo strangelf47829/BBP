@@ -57,7 +57,8 @@ namespace BBP
 			void FetchActiveThreadInstruction();
 
 			// Functions called to advance the state of a program
-			void advanceThread(userspace::StateMachine &, std::word millis);
+			bool advanceThread(userspace::StateMachine &, std::word millis);
+			bool advanceThread(userspace::StateMachine &);
 
 
 		};

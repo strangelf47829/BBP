@@ -89,7 +89,6 @@ void BBP::userspace::BinaryExecutable::loadExecutable(std::ELF::ELFBuilder &bina
 		//std::printf("Loading segment %u (from 0x%08x to 0x%08x: 0x%04x bytes)\n", segment, loadIntoAddress, loadIntoAddress + physicalSegmentSize, physicalSegmentSize);
 
 		// Now copy binary data into physical memory
-		
 		for (std::index_t idx = 0; idx < physicalSegmentSize; idx++)
 		{
 			//std::printf("[%u\\%u] (%u) [%u] (%p) <--\n", idx, physicalSegmentSize, BinaryData.dataSize, loadIntoAddress + idx, BinaryData.nextPage);
@@ -253,7 +252,7 @@ void BBP::userspace::BinaryExecutable::createTLS(std::PAGE<std::string_element> 
 		throw std::exception("Could not create TLS Data: No binary loaded", ENODATA);
 
 	// If TLSData is empty, no need to do anyting
-	if (page.dataSize == 0)
+	if (TLSData.dataSize == 0)
 		return;
 
 	// Initialize page

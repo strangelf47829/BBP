@@ -23,6 +23,9 @@ namespace BBP
 			void trim();
 			void finalize();
 
+			// Reset the state of the processor to its initial values.
+			void reset();
+
 			// Public API
 			std::errno_t translate(std::PATH &, std::PATH& );
 
@@ -35,7 +38,7 @@ namespace BBP
 			void reserveBuiltins();
 
 			// Linker stuff
-			void emitRelocation(std::index_t);
+			void emitRelocation(std::index_t, std::byte);
 			std::word calculateArgumentOffset();
 			std::word calculateAbsoluteArgumentOffset();
 

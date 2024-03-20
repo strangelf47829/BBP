@@ -9,7 +9,7 @@ PLAT= generic
 
 # =========== Module target details
 MODULE= System
-MODULE_SRC= Daemon.cpp Fini.cpp Init.cpp Kernel.cpp Shell.cpp
+MODULE_SRC= Daemon.cpp Fini.cpp Init.cpp Kernel.cpp Shell.cpp Bootloader.cpp KernelDrivers.cpp KernelSubsystems.cpp OS.cpp BootRecords.cpp SoftwareDrivers.cpp HardwareDriver.cpp KernelSetters.cpp
 
 # ========
 # END OF MODULE SETTINGS.

@@ -10,10 +10,12 @@
 #include "../include/Graphics.h"
 #include "../include/OS.h"
 #include "../include/System.h"
+#include "../include/Daemon.h"
 
 namespace BBP
 {
-       
+    bool doLoop = true;
+    bool exitShell = false;
 
     int shell(BBP::std::string &str)
     {
@@ -39,13 +41,21 @@ namespace BBP
         if (command[0] == 0)
             return 0;
 
+        // Hash first command
+        std::hash_t firstHash = std::strhsh(command);
+
+        // Print hash
+        if (firstHash == std::static_hash("logout"))
+        {
+            exitShell = true;
+            return 0;
+        }
+
         // Create paths
         std::PATH procPath("/proc/exec/");
         procPath.makeAbsolutePath(system::kernelSS()->activeContext->workingDirectory);
         std::PATH executable(command);
         executable.makeAbsolutePath(&procPath);
-
-        
 
         try 
         {
@@ -124,25 +134,22 @@ namespace BBP
         argv = argv;
 
         int count = 0;
-        bool doLoop = true;
+        
 
-        shell("elsa");
-        return 0;
 
-        while (true)
+        while (exitShell == false)
         {
             std::printf("\e[0;92m" HOSTNAME "\e[0;37m:\e[1;34m%s\e[0;37m$ ", system::kernelSS()->activeContext->workingDirectory->relName());
 
             while (doLoop)
             {
-                std::getC();
-                if (system::kernelSS()->activeContext->STDIN.atElement)
-                {
-                    char c = 0;
-                    char del = 0x08;
-                    system::kernelSS()->activeContext->STDIN >> c;
+                
+                // Get a character
+                char c = std::getChar();
 
-                    //std::printf("0x%02x ", c);
+                if (true)
+                {
+                    char del = 0x08;
 
                     switch (c)
                     {
@@ -181,6 +188,7 @@ namespace BBP
             shell(linePage);
             line.atElement = 0;
             count++;
+
             doLoop = true;
         }
 

@@ -72,13 +72,10 @@ namespace BBP
 		hash_t strhsh(c_string str);
 		hash_t strhsh(conststring str);
 
-		/*
-		constexpr inline std::hash_t operator ""_hash(const char *str, long unsigned int hehe) 
+		inline std::string String(constexprstring _string)
 		{
-			
+			return std::string(std::strlen(_string), (c_string)_string);
 		}
-
-		*/
 
 		constexpr inline std::size_t static_length(constexprstring string)
 		{

@@ -123,6 +123,11 @@ BBP::std::PATH &BBP::std::PATH::getFileAndPaths()
 	return *this;
 }
 
+BBP::std::PATH &BBP::std::PATH::makeAbsolutePath()
+{
+	return makeAbsolutePath(this);
+}
+
 BBP::std::PATH &BBP::std::PATH::makeAbsolutePath(std::PATH *currentDir)
 {
 	if (!isDefinedFromRoot())
@@ -173,7 +178,7 @@ BBP::std::PATH &BBP::std::PATH::makeAbsolutePath(std::PATH *currentDir)
 	}
 
 	// Resolve paths
-	return resolveAbsolutes();;
+	return resolveAbsolutes();
 }
 
 BBP::std::PATH &BBP::std::PATH::resolveAbsolutes()
@@ -182,7 +187,7 @@ BBP::std::PATH &BBP::std::PATH::resolveAbsolutes()
 	std::size_t rawPathLength = std::strlen(rawPath);
 
 	// Stack to 
-	std::PAGE<index_t> separatorPage(64, (std::index_t *)allocator->calloc(64, sizeof(std::index_t)));
+	std::STATIC_PAGE<index_t, 64> separatorPage;
 	std::Stack<index_t> separatorStack(&separatorPage, 64);
 
 	for (index_t index = 0; index < rawPathLength - 1; index++)
@@ -241,9 +246,6 @@ BBP::std::PATH &BBP::std::PATH::resolveAbsolutes()
 		}
 		
 	}
-
-	// Deallocate separatorPage data
-	allocator->free(separatorPage.data);
 
 	// Mirror edited stuff into ...
 	return getFileAndPaths();

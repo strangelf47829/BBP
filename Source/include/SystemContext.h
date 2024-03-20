@@ -9,13 +9,30 @@ namespace BBP
 	namespace system
 	{
 
+		struct SystemContext;
+
 		// A process context is a structure that stores all the stuff each process might need (such as the resource manager)
 		struct ProcessContext
 		{
+			// Active working volume
+			std::VOLUME *workingVolume;
 
+			// Working and active directory
+			std::PATH activeDirectory;
+			std::PATH workingDirectory;
 
+			// Resource manager
+			std::ResourceManager *activeMemory;
 
+			ProcessContext(SystemContext &, std::c_string, std::c_string);
+			ProcessContext(SystemContext &);
+
+			// Default constructor
+			inline ProcessContext() : workingVolume(nullptr), activeMemory(nullptr) {};
 		};
+
+		// Forward declare procframe
+		struct procFrame;
 
 		// A system context is a structure that stores all the stuff each hypervisor might need 
 		struct SystemContext
@@ -37,12 +54,16 @@ namespace BBP
 			std::window display;
 			
 			// Volume information
+			std::VOLUME contextVolume;
 			std::VOLUME *primaryVolume;
 			std::PATH *workingDirectory;
 
 			// Resource Allocation
 			std::ResourceManager progmem;
 			std::ResourceManager *activemem;
+
+			// Active running process
+			procFrame *activeFrame;
 
 			// File table data
 			std::STATIC_PAGE<std::FileNode, std::max_open_files> fileTable;
@@ -54,18 +75,7 @@ namespace BBP
 
 		};
 
-		// The kernel context structure holds all 'globals' in a single structure.
-		// This is really the only global
-		struct KernelContext
-		{
-
-			// The processor frames
-			// TODO: Implement
-
-			// 
-
-
-		};
+		
 
 	}
 }

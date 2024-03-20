@@ -2,9 +2,19 @@
 #include "../include/stdio.h"
 
 BBP::std::VOLUME::VOLUME(char l, std::conststring path)
-	: volumePath(this, path), label(l)
+	: label(l)
 {
+	
 
+}
+
+void BBP::std::VOLUME::mount(std::string_element label, std::conststring path)
+{
+	// Set label
+	this->label = label;
+
+	// Set path
+	this->volumePath = std::PATH(path);
 
 }
 

@@ -310,7 +310,21 @@ void BBP::esa::esaProcessor::finalize()
 	application->builder.segments[application->builder.dataSegment].type(std::ELF::PT_TLS);
 	application->builder.segments[application->builder.bssSegment].type(std::ELF::PT_TLS);
 
+}
 
+
+void BBP::esa::esaProcessor::reset()
+{
+	// Reset the processor
+	processor = esaProcessor();
+
+	// Re-reserve builtins and so
+	processor.reserveBuiltins();
+	processor.reserveRegisters();
+
+	// Reset subscriber stuff
+	for (std::index_t index = 0; index < processor.routineSubscriberCount.dataSize; index++)
+		processor.routineSubscriberCount.data[index] = 0;
 
 
 }
