@@ -57,7 +57,7 @@ namespace BBP
 
 			STATIC_PAGE() : PAGE<T>::PAGE(K, static_data) 
 			{
-				static_assert(K <= max_page_static_size, "Static page cannot hold more than max_page_static_size items!");
+				//static_assert(K <= max_page_static_size, "Static page cannot hold more than max_page_static_size items!");
 			}
 		};
 

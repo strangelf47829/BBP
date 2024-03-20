@@ -2,6 +2,7 @@
 #define BBP_SYSTEM_DEVDRIVER_H
 
 #include "Strings.h"
+#include "DriverTypes.h"
 
 // This header defines device-agnostic drivers that are used to provide an interface between hardware and software.
 // This is done by providing an API 
@@ -21,7 +22,6 @@ namespace BBP
 		// Function definitions used to interface with hardware
 		using HardwareAction = std::size_t(*)(std::size_t, std::PAGE<std::string_element> &);
 		using HardwareCmd = bool (*)(std::size_t argc, std::word *argv);
-
 
 		// The instance for this
 		class HardwareHandle
@@ -47,6 +47,10 @@ namespace BBP
 			// Constructors
 			HardwareHandle() = delete;
 			HardwareHandle(HardwareAction[3], std::size_t, const HardwareCmd *);
+
+			// Identification
+			HWID_t hwid;
+			DVID_t dvid;
 
 			// Used to define common commands
 			static constexpr std::index_t connectCmd = 0;		// Used to connect to a device

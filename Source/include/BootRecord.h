@@ -21,14 +21,15 @@ namespace BBP
 			std::static_string<16> recordName;
 
 			// This function checks if this boot record is available
-			bool (*isBootRecordAvailable)();
+			bool (*isBootRecordAvailable)(UEFI *);
+			bool computedValue; // Used to pass around the result of the calculation
 
 			// This function attempts to load into the boot record
 			using bootRecordEntryPoint = bool (*)(UEFI *);
 			bootRecordEntryPoint entryPoint;
 
 			BootRecord() = delete;
-			BootRecord(bool (*check)(), bootRecordEntryPoint entry, std::conststring name);
+			BootRecord(bool (*check)(UEFI *), bootRecordEntryPoint entry, std::conststring name);
 			
 
 		};

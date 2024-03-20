@@ -95,7 +95,7 @@ namespace BBP
 			VOLUME(char l, std::conststring);
 			VOLUME(char l) : VOLUME(l, "/") {}
 
-			VOLUME() : label('\0'), volumePath() {}
+			VOLUME() : volumePath(), label(0) {}
 
 			~VOLUME();
 

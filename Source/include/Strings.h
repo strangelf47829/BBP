@@ -112,7 +112,7 @@ namespace BBP
 
 		constexpr inline std::hash_t _const_sym_hash(constexprstring stringToHash)
 		{
-			return 0;
+			return static_hash(stringToHash);
 		}
 
 		/* Running hash */

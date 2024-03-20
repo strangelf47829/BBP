@@ -4,7 +4,7 @@
 // BIOS Boot record
 BBP::system::BootRecord Environment::BIOS::bootRecord = BBP::system::BootRecord(Environment::BIOS::canBootIntoBIOS, Environment::BIOS::EntryPoint, "BIOS");
 
-bool Environment::BIOS::canBootIntoBIOS()
+bool Environment::BIOS::canBootIntoBIOS(BBP::system::UEFI *)
 {
 	return true;
 }

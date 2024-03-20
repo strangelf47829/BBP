@@ -23,7 +23,7 @@ namespace BBP
 			// If failed to activate keyboard, return error
 			if (keyboardActive == false)
 				return keyboardInitFailed;
-			
+
 			return 0;
 		}
 
@@ -81,6 +81,82 @@ namespace BBP
 				return keyboardStatus;
 
 			return 0;
+		}
+
+		// Boot selection
+		void BootSelect(BootRecord::bootRecordEntryPoint &BIOS, BootRecord::bootRecordEntryPoint &entry, std::PAGE<BootRecord *> &bootrecords)
+		{
+			// Keep track of current selection
+			std::index_t selection = 1;
+
+			while (true)
+			{
+
+				// Clear the screen
+				getKernelInstance().getScreenDriver().hardwareDriver.executeCommand(screenClearScreen, 0, nullptr);
+
+				// Print help
+				std::printf("Boot selection menu:\nUse the 'w' and 's' keys to move up and down to select an os to boot into.\n");
+				std::printf("The default choice is marked with '\e[0;34m*\e[0;37m'. Options not available are marked with '\e[0;31mx\e[0;37m'.\n");
+				std::printf("Your current selection is marked in \e[0;32mgreen\e[0;37m.\n\n");
+
+				// Print out stuff
+				for (std::index_t idx = 0; idx < bootrecords.dataSize; idx++)
+				{
+					//print out index
+					std::printf("\t<%u>", idx);
+
+					// If this boot record is the default, mark with *
+					if (bootrecords[idx]->entryPoint == entry)
+						std::printf("\e[0;34m*\e[0;37m");
+
+					// If this boot record is unavailable, mark with x
+					if (bootrecords[idx]->computedValue == false)
+						std::printf("\e[0;31mx\e[0;37m");
+
+					// If boot record is selected, make green if available
+					if (idx == selection && bootrecords[idx]->computedValue == false)
+						std::printf("\e[0;31m");
+					else if (idx == selection)
+						std::printf("\e[0;32m");
+
+					// Print out name
+					std::printf("\t%s\e[0;37m\n", bootrecords[idx]->recordName.data);
+				}
+
+				// Print out other tip
+				std::printf("\n<enter>: Make selection\n<tab>: Default selection\n");
+
+				// Get character
+				std::string_element choice = BBP::std::getChar();
+				
+				// If tab, exit out
+				if (choice == '\t')
+					break;
+
+				// If 'w', and selection allows it, move up
+				if (choice == 's' && (selection + 1) < bootrecords.dataSize)
+					selection++;
+
+				// If 's', and selection allows it, move down
+				if (choice == 'w' && selection)
+					selection--;
+
+				// If enter, exit out
+				if (choice == 0x0a)
+				{
+					if (bootrecords[selection]->computedValue == false)
+						continue;
+
+					if (selection == 0)
+						entry = BIOS;
+					else
+						entry = bootrecords[selection]->entryPoint;
+
+					return;
+				}
+
+			}
 		}
 
 	}
@@ -202,7 +278,8 @@ int BBP::system::bootloaderMain()
 	for (std::index_t bootRecordIndex = 0; bootRecordIndex < bootRecordCount; bootRecordIndex++)
 	{
 		// Check if boot record can be loaded
-		if (bootrecords[bootRecordIndex]->isBootRecordAvailable() == false)
+		bootrecords[bootRecordIndex]->computedValue = bootrecords[bootRecordIndex]->isBootRecordAvailable(&configuration);
+		if (bootrecords[bootRecordIndex]->computedValue == false)
 			continue;
 
 		if (bootRecordIndex == 0)
@@ -236,31 +313,38 @@ int BBP::system::bootloaderMain()
 
 	// Key to enter BIOS
 	std::string_element enterBios = configuration.post.biosModeKey;
+	std::string_element bootSelect = '\t';
 
-	// Print BIOS message. Boot record should be 0. If not available, show not available message
+	// Show boot selection thing
+	getKernelInstance().getScreenDriver().hardwareDriver.executeCommand(screenClearScreen, 0, nullptr);
+	std::printf("Press <tab> to enter boot selection menu.\n");
+
+	// Print BIOS message. Boot record should be 0.
 	if (canBootIntoBIOS)
 		std::printf("Press <%c> to enter '%s'.\n", enterBios, bootrecords[0]->recordName.data);
-	else
-		std::printf("'%s' mode not available.\n", bootrecords[0]->recordName.data);
 
 	// Wait for keypress
 	do
 	{
-		// Break out immediately if BIOS not available
-		if (canBootIntoBIOS == false)
-			break;
-
 		// Get keypress asynchronously.
 		std::string_element c = std::getCharAsync();
 
 		// If not enterBios, continue
-		if (c != enterBios)
+		if (c != enterBios && c != bootSelect)
 			continue;
+		
+		// If we want to enter BIOS, do that
+		if (c == enterBios)
+		{
+			// Set stuff
+			std::printf("Entering BIOS mode...\n");
 
-		// Set stuff
-		std::printf("Entering BIOS mode...\n");
+			entryPoint = BIOSEntry;
+		}
 
-		entryPoint = BIOSEntry;
+		// If we want to enter boot selection, do that.s
+		if (c == bootSelect)
+			BootSelect(BIOSEntry, entryPoint, bootrecords);
 
 	} while (std::millis() <= calledAt + delay);
 
@@ -274,7 +358,7 @@ int BBP::system::bootloaderMain()
 	****************************************/
 
 	// Now we have loaded the drivers and have gotten an entry point, boot the kernel.
-	std::errno_t kernelStatus = getKernelInstance().Entry(configuration, entryPoint);
+	std::errno_t kernelStatus = entryPoint(&configuration);
 
 	/***************************************
 	*		STAGE 6: Disable stuff.        *

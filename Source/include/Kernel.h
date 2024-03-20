@@ -36,6 +36,7 @@ namespace BBP
 			std::PAGE<DeviceDriver> drivers;
 
 			// Users
+			bool rootConfigured;
 			UserInformation *root;
 			UserInformation *activeUser;
 			
@@ -56,6 +57,8 @@ namespace BBP
 			// Functions to log into other users
 			bool login(std::string username, std::string password);
 			UserInformation &getActiveUser();
+			
+			void configureRoot(UEFI *);
 
 			// Context tools
 			void setKernelContext();					// Sets the context to kernel context

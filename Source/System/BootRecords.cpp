@@ -1,6 +1,6 @@
 #include "../include/Kernel.h"
 
-BBP::system::BootRecord::BootRecord(bool (*check)(), bootRecordEntryPoint entry, std::conststring name)
+BBP::system::BootRecord::BootRecord(bool (*check)(BBP::system::UEFI *), bootRecordEntryPoint entry, std::conststring name)
 {
 	// Initialize values
 	this->isBootRecordAvailable = check;

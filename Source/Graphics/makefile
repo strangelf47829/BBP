@@ -9,7 +9,7 @@ PLAT= generic
 
 # =========== Module target details
 MODULE= Glib
-MODULE_SRC= R2D.cpp
+MODULE_SRC= Background.cpp Box.cpp Colours.cpp Fill.cpp Fonts.cpp Frame.cpp HRule.cpp Line.cpp PixelMask.cpp Pixels.cpp Print.cpp RectPixelMask.cpp Stroke.cpp VRule.cpp Window.cpp
 
 # ========
 # END OF MODULE SETTINGS.

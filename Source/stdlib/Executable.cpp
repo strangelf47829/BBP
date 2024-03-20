@@ -51,7 +51,6 @@ void BBP::std::execute(std::executable_main mainFunc, int argc, char **argv)
 		// Reset terminal
 		BBP::system::kernelSS()->activeContext->display.fontSize = 1;
 		BBP::system::kernelSS()->activeContext->display.fontSpacing = 6;
-		BBP::std::R2D::fill(&BBP::system::kernelSS()->activeContext->display, 0xFFFFFFFF);
 	}
 	catch (const std::SIGNAL &signal)
 	{

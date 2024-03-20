@@ -22,6 +22,23 @@ void BBP::system::Kernel::setSystemVolume(std::string_element label, std::consts
 	subsystems.activeContext->primaryVolume = &subsystems.activeContext->contextVolume;
 }
 
+void BBP::system::Kernel::configureRoot(UEFI *uefi)
+{
+	if (rootConfigured)
+		return;
+
+	rootConfigured = true;
+	root = &systemUsers[0];
+	root->username = std::String("root");
+	root->usernameHash = std::strhsh(root->username);
+	root->password = std::String(uefi->system.rootPassword);
+	root->passwordHash = std::strhsh(root->password);
+	root->connectionMethod = std::String(uefi->system.deviceName);
+
+	// Set active user to root
+	activeUser = root;
+}
+
 BBP::system::pid_t BBP::system::Kernel::getNextDaemonPID()
 {
 	return pidCount++;

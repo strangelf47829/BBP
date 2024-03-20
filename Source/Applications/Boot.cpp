@@ -21,16 +21,14 @@ int BBP::boot_main(int argc, char **argv)
 
     BBP::std::window *w = &BBP::system::kernelSS()->activeContext->display;
 
-    std::R2D::fill(w, 0x00FF00FF);
-    std::R2D::setCursorPos(w, 50, 50);
+    std::R2D::fill(*w, 0x00FF00FF);
+    std::R2D::setCursorPos(*w, 50, 50);
     w->fontSize = 6;
 
-    std::R2D::print(w,"Hello!\n");
+    std::R2D::print(*w,"Hello!\n");
 
-    std::R2D::fill(w, 0xFF00FFFF);
-    std::R2D::print(w, "Pretty nice, huh?\n");
-
-    BBP::std::Driver::drawWindow(w);
+    std::R2D::fill(*w, 0xFF00FFFF);
+    std::R2D::print(*w, "Pretty nice, huh?\n");
 
     return 0;
 }

@@ -16,7 +16,7 @@
 
 int BBP::neofetch_main(int argc, char **argv)
 {
-
+	/*
 	//std::printf(RED "BBBBBBBBBBBBBBBBB   BBBBBBBBBBBBBBBBB" NORM "\n");
 	//std::printf(RED "B::::::::::::::::B  B::::::::::::::::B" NORM "\n");
 	//std::printf(RED "B::::::BBBBBB:::::B B::::::BBBBBB:::::B" NORM "\n");
@@ -53,4 +53,5 @@ int BBP::neofetch_main(int argc, char **argv)
 
 
 	return 0;
+	*/
 }
