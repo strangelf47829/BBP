@@ -14,7 +14,7 @@ endif
 
 # =========== Module target details
 MODULE= BBP
-MODULE_SRC= Applications ELF ELSA File Graphics Parser RAE stdlib System Daemons
+MODULE_SRC= Applications ELF ELSA File Graphics Parser RAE stdlib System Daemons Terminal
 
 # =========== Environment target details
 ENV=$(PLAT)
@@ -54,6 +54,9 @@ MODULE_DIRS= $(foreach var,$(MODULE_SRC),../Source/$(var))
 .PHONY: $(MODULE_DIRS)
 
 default: build
+
+count:
+	cloc --exclude-dir=SDL2 ../Source/
 
 env:
 	@echo "Compiling platform $(PLAT)/$(ENV)"

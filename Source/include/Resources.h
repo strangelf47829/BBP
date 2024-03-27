@@ -90,6 +90,47 @@ namespace BBP
 			std::index_t deleteAll();
 			std::index_t dealloc();
 
+			// allocation tools for pages
+			template<typename T>
+			inline void page_malloc(PAGE<T> &page, size_t count)
+			{
+				// Allocate from this
+				T *data = (T *)this->malloc(count);
+
+				// If nullptr, set page to 0 data
+				if (data == nullptr)
+				{
+					page = PAGE<T>(0, nullptr);
+					return;
+				}
+
+				// Otherwise, set data
+				page = PAGE<T>(count, data);
+			}
+
+			template<typename T>
+			inline void page_calloc(PAGE<T> &page, size_t count, size_t size)
+			{
+				// Allocate from this
+				T *data = (T *)this->calloc(count, size);
+
+				// If nullptr, set page to 0 data
+				if (data == nullptr)
+				{
+					page = PAGE<T>(0, nullptr);
+					return;
+				}
+
+				// Otherwise, set data
+				page = PAGE<T>(count, data);
+			}
+
+			template<typename T>
+			inline void page_calloc(PAGE<T> &page, size_t count)
+			{
+				page_calloc(page, count, sizeof(T));
+			}
+
 		private:
 
 			// Internal functions to quickly free / delete data at known indicies

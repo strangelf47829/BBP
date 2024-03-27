@@ -4,10 +4,16 @@
 
 void BBP::std::R2D::Box(window &window, pos_t x, pos_t y, pos_t w, pos_t h)
 {
-	// If no stroke is selected, do nothing
-	if (window.doStroke == false)
+	// If no fill is selected, do nothing
+	if (window.doFill == false)
 		return;
 
+	// Draw box with fill colour
+	Box(window, x, y, w, h, window.Fill);
+}
+
+void BBP::std::R2D::Box(window &window, pos_t x, pos_t y, pos_t w, pos_t h, colour col)
+{
 	// If 'x' is beyond window size, do nothing
 	if (x >= window.width)
 		return;
@@ -25,24 +31,11 @@ void BBP::std::R2D::Box(window &window, pos_t x, pos_t y, pos_t w, pos_t h)
 		return;
 
 	// Calculate bounds
-	size_t xCount = (x + w) >= window.width ? (window.width - x) : (w - x);
-	size_t yCount = (y + h) >= window.height ? (window.height - y) : (h - y);
+	size_t xCount = (x + w) >= window.width ? (window.width - x) : (w);
+	size_t yCount = (y + h) >= window.height ? (window.height - y) : (h);
 
-	// Go over each horizontal pixel
-	for (pos_t xPixel = 0; xPixel < xCount; xPixel++)
-	{
-		// Set pixel to current stroke.
-		setPixel(window, x + xPixel, y + 0, window.Stroke.RGBA);
-		setPixel(window, x + xPixel, y + h, window.Stroke.RGBA);
-	}
-
-	// Go over each vertical pixel
-	for (pos_t yPixel = 0; yPixel < yCount; yPixel++)
-	{
-		// Set pixel to current stroke.
-		setPixel(window, x + 0, y + yPixel, window.Stroke.RGBA);
-		setPixel(window, x + w, y + yPixel, window.Stroke.RGBA);
-	}
-
+	// Draw horizontal stuff based on xCount.
+	for (std::index_t wCount = 0; wCount <= yCount; wCount++)
+		Hrule(window, x, x + xCount, y + wCount, col.RGBA);
 
 }

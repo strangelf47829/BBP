@@ -48,6 +48,9 @@ namespace BBP
 			HardwareHandle() = delete;
 			HardwareHandle(HardwareAction[3], std::size_t, const HardwareCmd *);
 
+			// Initializers
+			void setHandleData(HardwareAction[3], std::size_t, const HardwareCmd *);
+
 			// Identification
 			HWID_t hwid;
 			DVID_t dvid;
@@ -63,6 +66,10 @@ namespace BBP
 			// Used to update stuff
 			std::size_t send(std::size_t);
 			std::size_t receive(std::size_t);
+
+			// Send stuff, but without using default stack
+			std::size_t send(int, std::size_t);
+			std::size_t receive(int, std::size_t);
 
 			// Get pointers to pages
 			std::PAGE<std::string_element> &getInput();

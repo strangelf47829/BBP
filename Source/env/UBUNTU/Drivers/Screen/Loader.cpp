@@ -19,6 +19,9 @@ void Environment::Drivers::screen::loadScreenDriver(BBP::system::DeviceDriver &d
 	driver.hardwareDriver.hwid |= BBP::system::HardwareClassification::SimplexReceiver;
 	driver.hardwareDriver.hwid |= BBP::system::HardwareClassification::System;
 
+	// Set commands
+	driver.hardwareDriver.setHandleData(screenManifest.actions, screenManifest.commandCount, screenManifest.commands);
+
 	// Also do the same for STDOUT
 	BBP::system::kernelSS()->getKernelSystemContext()->STDOUT.writeTo = print_stack_to_string;
 

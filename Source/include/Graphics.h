@@ -1,7 +1,6 @@
 #ifndef BBP_STDLIB_GRAPHICS_H
 #define BBP_STDLIB_GRAPHICS_H
 
-#include "Memory.h"
 #include "Strings.h"
 
 namespace BBP
@@ -69,8 +68,8 @@ namespace BBP
 			} version;
 
 			// Glyphs and such
-			PAGE<byte> glyphs;
-			PAGE<byte> mapping;
+			PAGE<mask_t> glyphs;
+			STATIC_PAGE<offset_t, 256> mapping;
 
 		};
 
@@ -160,13 +159,17 @@ namespace BBP
 			void Box(window &, pos_t x, pos_t y, pos_t w, pos_t h);
 			void Frame(window &, pos_t x, pos_t y, pos_t w, pos_t h);
 
-			void RectPixelMask(window &, pos_t x, pos_t y, mask_t mask);
-			void RectPixelMask(window &, pos_t x, pos_t y, word size, mask_t mask);
-			void RectPixelMaskAligned(window &, pos_t x, pos_t y, word size, mask_t mask);
+			void Rect(window &, pos_t x, pos_t y, pos_t w, pos_t h, colour);
+			void Box(window &, pos_t x, pos_t y, pos_t w, pos_t h, colour);
+			void Frame(window &, pos_t x, pos_t y, pos_t w, pos_t h, colour);
 
-			void RectPixelMask(window &, pos_t x, pos_t y, mask_t *maskv, word maskc);
-			void RectPixelMask(window &, pos_t x, pos_t y, word size, mask_t *maskv, word maskc);
-			void RectPixelMaskAligned(window &, pos_t x, pos_t y, word size, mask_t *maskv, word maskc);
+			void RectPixelMask(window &, pos_t x, pos_t y, mask_t mask, colour);
+			void RectPixelMask(window &, pos_t x, pos_t y, word size, mask_t mask, colour);
+			void RectPixelMaskAligned(window &, pos_t x, pos_t y, word size, mask_t mask, colour);
+
+			void RectPixelMask(window &, pos_t x, pos_t y, mask_t *maskv, word maskc, colour);
+			void RectPixelMask(window &, pos_t x, pos_t y, word size, mask_t *maskv, word maskc, colour);
+			void RectPixelMaskAligned(window &, pos_t x, pos_t y, word size, mask_t *maskv, word maskc, colour);
 
 			RGBA_t readPixel(window &, pos_t x, pos_t y);
 
@@ -174,26 +177,49 @@ namespace BBP
 			void setPixel(window &, pos_t x, pos_t y, RGBA_t colour, word size);
 			void setPixelAligned(window &, pos_t x, pos_t y, RGBA_t colour, word size);
 
-			void PixelMask(window &, pos_t x, pos_t y, mask_t mask);
-			void PixelMask(window &, pos_t x, pos_t y, word size, mask_t mask);
-			void PixelMaskAligned(window &, pos_t x, pos_t y, word size, mask_t mask);
+			void PixelMask(window &, pos_t x, pos_t y, mask_t mask, colour);
+			void PixelMask(window &, pos_t x, pos_t y, word size, mask_t mask, colour);
+			void PixelMaskAligned(window &, pos_t x, pos_t y, word size, mask_t mask, colour);
 
-			void PixelMask(window &, pos_t x, pos_t y, mask_t *maskv, word maskc);
-			void PixelMask(window &, pos_t x, pos_t y, word size, mask_t *maskv, word maskc);
-			void PixelMaskAligned(window &, pos_t x, pos_t y, word size, mask_t *maskv, word maskc);
+			void PixelMask(window &, pos_t x, pos_t y, mask_t *maskv, word maskc, colour);
+			void PixelMask(window &, pos_t x, pos_t y, word size, mask_t *maskv, word maskc, colour);
+			void PixelMaskAligned(window &, pos_t x, pos_t y, word size, mask_t *maskv, word maskc, colour);
 
 			void PrintCharacterAt(window &, pos_t x, pos_t y, ustring_element ch);
 			void PrintCharacterAt(window &, pos_t x, pos_t y, ustring_element ch, word size);
 
-			void print(window &, ustring_element ch);
-			void print(window &, ustring_element *str);
+			void PrintCharacterAt(window &, pos_t x, pos_t y, ustring_element ch, colour col);
+			void PrintCharacterAt(window &, pos_t x, pos_t y, ustring_element ch, word size, colour col);
+
+			void print(window &, ustring_element ch, colour col);
+			void print(window &, conststring str, colour col);
+			void print(window &, string str, colour col);
+
+			void print(window &, string str);
 			void print(window &, conststring str);
-			void print(window &, mem_t *str, word str_c);
+
 			void setCursorPos(window &, pos_t x, pos_t y);
 
+			// Set active Fonts
+			void setActiveFont(window &, Font &);
 
-			void GetFontFromFile(window &, std::string);
+			// Active window stuff
+			void setActiveWindow(window &);
+			window &activeWindow();
 		}
+
+		// Load a font from memory
+		void loadFont(Font &, ResourceManager &, std::PAGE<std::string_element> &);
+
+		// Load font per type
+		void loadFontPSF1(Font &, ResourceManager &, std::PAGE<std::string_element> &);
+		void loadFontPSF2(Font &, ResourceManager &, std::PAGE<std::string_element> &);
+
+		// Unload a font
+		void unloadFont(Font &);
+
+		// Load font from disk
+		void loadFontFromDisk(Font &, ResourceManager &, std::string);
 	}
 }
 

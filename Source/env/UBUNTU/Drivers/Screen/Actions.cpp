@@ -2,10 +2,19 @@
 #include "../../include/Environment.h"
 
 #include <cstdio>
+#include <termios.h>
+#include <iostream>
+#include <unistd.h>
+#include <fcntl.h>
+#include <stdarg.h>
 
 BBP::std::word Environment::Drivers::screen::sendDataToScreen(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &page)
 {
-	return ::std::puts(page.data);
+	// Read string length
+	std::size_t strLength = BBP::std::strlen(page);
+
+	// 'printf'
+	::write(STDOUT_FILENO, page.data, strLength);
 }
 
 BBP::std::word Environment::Drivers::screen::receiveDataScreen(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &)

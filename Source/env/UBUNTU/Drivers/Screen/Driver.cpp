@@ -60,9 +60,7 @@ void Environment::Drivers::screen::print_stack_to_string(BBP::std::Stack<BBP::st
 	// Read string
 	*stack >>= &str;
 
-	// Read string length
-	std::size_t strLength = BBP::std::strlen(str);
-
-	// 'printf'
-	::write(STDOUT_FILENO, str, strLength);
+	// Print string by sending data (through driver)
+	BBP::system::getKernelInstance().getScreenDriver().softwareDriver.setInputPage(stack);
+	BBP::system::getKernelInstance().getScreenDriver().hardwareDriver.send(stack->atElement);
 }

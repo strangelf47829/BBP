@@ -50,7 +50,25 @@ BBP::system::HardwareHandle::HardwareHandle(HardwareAction actions[3], std::size
 		commands.data[cmdIndex] = cmdv[cmdIndex];
 }
 
+// Set own handles.
+void BBP::system::HardwareHandle::setHandleData(HardwareAction actions[3], std::size_t cmdCount, const HardwareCmd *cmdVector)
+{
+	// Set own data
+	if (actions)
+	{
+		sendData = actions[0];
+		receiveData = actions[1];
+		readMetadata = actions[2];
+	}
 
+	// Copy commands if it exists
+	if (cmdCount && cmdVector)
+	{
+		for (std::index_t idx = 0; idx < cmdCount; idx++)
+			commands[idx] = cmdVector[idx];
+	}
+
+}
 
 // Execute a command. Returns false on failure, true on success.
 bool BBP::system::HardwareHandle::executeCommand(std::index_t commandIndex, std::size_t argc, std::word *argv)

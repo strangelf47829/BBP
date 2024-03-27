@@ -1,6 +1,7 @@
 // This file initializes software defined drivers for use before booting.
 // The minimum amount of drivers needed: Keyboard input, screen output, and file IO.
 
+#include "../include/DeviceDriver.h"
 #include "../include/Kernel.h"
 
 // Device driver constructor

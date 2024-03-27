@@ -18,13 +18,17 @@ BIOS_SRC = BIOS/BIOS.cpp BIOS/POST.cpp
 UEFI_SRC = UEFI/UEFI.cpp UEFI/Records.cpp
 
 # =========== plugin targets
-PLUGINS= Time Memory Input File
+PLUGINS= Time Memory Input File ECMA35
 PLUGINS_SRC= $(foreach plug,$(PLUGINS),./Plugins/$(plug).cpp)
+
+# =========== Submodule information
+SUBMODULES= GTerm
 
 # =========== Module target details
 MODULE= ENV
 DRIVERS_SRCLIST= $(foreach drv,$(DRIVERS), $(foreach fil,$(DRIVER_SRC),./Drivers/$(drv)/$(fil))) ./Drivers/Manifests.cpp
-MODULE_SRC= Boot.cpp $(UEFI_SRC) $(BIOS_SRC) $(PLUGINS_SRC) $(DRIVERS_SRCLIST)
+SUBMODULE_SRC= $(foreach submod,$(SUBMODULES),$(wildcard ./Source/$(submod)/*.cpp))
+MODULE_SRC= Boot.cpp $(UEFI_SRC) $(BIOS_SRC) $(PLUGINS_SRC) $(DRIVERS_SRCLIST) $(SUBMODULE_SRC)
 
 # ========
 # END OF MODULE SETTINGS.
@@ -64,7 +68,7 @@ default: generic
 
 $(MODULE_A): $(MODULE_O)
 	@echo
-	$(AR) $(ARFLAGS) libmodule.a $(MODULE_O)
+	@$(AR) $(ARFLAGS) libmodule.a $(MODULE_O)
 	@echo "+=======================+"
 	@echo "|=+= Module Compiled =+=|"
 	@echo "+=======================+"

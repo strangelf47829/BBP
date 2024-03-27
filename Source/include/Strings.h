@@ -74,7 +74,7 @@ namespace BBP
 
 		inline std::string String(constexprstring _string)
 		{
-			return std::string(std::strlen(_string), (c_string)_string);
+			return std::string(std::strlen(_string) + 1, (c_string)_string);
 		}
 
 		constexpr inline std::size_t static_length(constexprstring string)

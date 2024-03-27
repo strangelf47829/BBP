@@ -26,7 +26,7 @@ void BBP::std::R2D::background(window &w, RGBA_t rgb)
 {
 	// Foreach value in page, set value to rgb
 	for (std::index_t pix = 0; pix < w.backBuffer.dataSize; pix++)
-		w.backBuffer[pix] = rgb;
+		w.backBuffer.data[pix] = rgb;
 }
 
 void BBP::std::R2D::background(window &w, RGBA_t rgb, chan_t a)
