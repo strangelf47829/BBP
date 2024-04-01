@@ -1,0 +1,4 @@
+Drivers/Keyboard/Driver.cpp: In function 'int inputThread(void*)':
+Drivers/Keyboard/Driver.cpp:11:23: warning: unused parameter 'data' [-Wunused-parameter]
+   11 | int inputThread(void *data)
+      |                 ~~~~~~^~~~

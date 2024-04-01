@@ -1,15 +1,24 @@
 Boot.cpp: In function 'void drawWindow(BBP::std::window*)':
-Boot.cpp:23:27: warning: comparison of integer expressions of different signedness: 'int' and 'BBP::std::size_t' {aka 'unsigned int'} [-Wsign-compare]
-   23 |         for (int X = 0; X < wind->width; X++)
+Boot.cpp:32:27: warning: comparison of integer expressions of different signedness: 'int' and 'BBP::std::size_t' {aka 'unsigned int'} [-Wsign-compare]
+   32 |         for (int X = 0; X < wind->width; X++)
       |                         ~~^~~~~~~~~~~~~
-Boot.cpp:25:35: warning: comparison of integer expressions of different signedness: 'int' and 'BBP::std::size_t' {aka 'unsigned int'} [-Wsign-compare]
-   25 |                 for (int Y = 0; Y < wind->height; Y++)
+Boot.cpp:34:35: warning: comparison of integer expressions of different signedness: 'int' and 'BBP::std::size_t' {aka 'unsigned int'} [-Wsign-compare]
+   34 |                 for (int Y = 0; Y < wind->height; Y++)
       |                                 ~~^~~~~~~~~~~~~~
 Boot.cpp: In function 'int SDL_main(int, char**)':
-Boot.cpp:63:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   63 | }
+Boot.cpp:116:30: warning: ISO C++ forbids converting a string constant to 'BBP::std::c_string' {aka 'char*'} [-Wwrite-strings]
+  116 |         bool succ = loadFile("V:usr\\share\\zap-light16.psf", fontMem);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Boot.cpp:118:13: warning: unused variable 'top' [-Wunused-variable]
+  118 |         int top = 0x00003018;
+      |             ^~~
+Boot.cpp:119:13: warning: unused variable 'bot' [-Wunused-variable]
+  119 |         int bot = 0x0c0c0c0c;
+      |             ^~~
+Boot.cpp:172:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  172 | }
       | ^
 Boot.cpp: In function 'int init()':
-Boot.cpp:91:32: warning: control reaches end of non-void function [-Wreturn-type]
-   91 |         SDL_UpdateWindowSurface(_window);
+Boot.cpp:200:32: warning: control reaches end of non-void function [-Wreturn-type]
+  200 |         SDL_UpdateWindowSurface(_window);
       |         ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~

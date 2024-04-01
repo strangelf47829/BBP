@@ -1,0 +1,4 @@
+CSIInters.cpp: In member function 'void BBP::std::Terminal::TerminalApplication::CSIActionInters(BBP::std::Terminal::CC)':
+CSIInters.cpp:3:66: warning: unused parameter 'finalByte' [-Wunused-parameter]
+    3 | void BBP::std::Terminal::TerminalApplication::CSIActionInters(CC finalByte)
+      |                                                               ~~~^~~~~~~~~

@@ -1,7 +1,7 @@
 # Configuration for environments
 
 # Name of the environment
-PLAT=MINGW
+PLAT=Ubuntu
 
 # =========== Platform specific binaries
 CC= 	gcc
@@ -20,4 +20,4 @@ LDFLAGS= $(SYSLDFLAGS) $(EXTLDFLAGS)
 SYSCFLAGS= -c
 SYSCXXFLAGS= -c -std=c++17 -Wall -Wextra -fdiagnostics-show-option
 SYSARFLAGS= cr
-SYSLDFLAGS= -lmingw32 -lSDL2main -lSDL2 -L./lib/
+SYSLDFLAGS= -pthread

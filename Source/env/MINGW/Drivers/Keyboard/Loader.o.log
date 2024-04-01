@@ -1,0 +1,4 @@
+Drivers/Keyboard/Loader.cpp: In function 'void Environment::Drivers::keyboard::loadKeyboardDriver(BBP::system::DeviceDriver&)':
+Drivers/Keyboard/Loader.cpp:6:84: warning: unused parameter 'driver' [-Wunused-parameter]
+    6 | void Environment::Drivers::keyboard::loadKeyboardDriver(BBP::system::DeviceDriver &driver)
+      |                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~

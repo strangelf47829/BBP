@@ -1,105 +1,67 @@
-#########################################
-#  Module make utility                  #
-#                                       #
-#########################################
-#  Module: Master BBP Compiler tool     #
+# +======================================+
+# | Makefile utility to create libraries |
+# +======================================+
 
-# =========== What file is needed to guess
-PLAT_GUESS=./setup.sh
+# Include configuration file
+include ../Source/makefile.config
 
-# =========== Module target details
-MODULE= BBP
-MODULE_SRC= Applications ELF ELSA File Graphics Parser RAE stdlib System Daemons Terminal
-MODULE_A= Applications ELF ELSA fileSys GLib Parser RAE stdlib System Daemons Terminal
+# Get a list of modules
+MODULE_LIST= Applications ELF ELSA File Graphics Parser RAE stdlib System Daemons Terminal
 
-# =========== Environment target details
-ENV=$(PLAT)
-ENV_DIR= ../Source/env/$(ENV)
-ENV_BIN= libENV.a
+# Get environment details
+ENV= $(PLAT)
 
-# =========== OS target details
+# Get operating system details
 OS_LIST= BBPOSIX WINDOWSE20
-OS_DIR= ../Source/OS
-OS_DIRS= $(foreach os,$(OS_LIST),$(OS_DIR)/$(os))
-OS_A= $(foreach os,$(OS_LIST),bin/libOS$(os).a)
 
-# EXTNERLA
-EXT_A=
+# Create a list of targets
+MODULE_A= Applications ELF ELSA fileSys Glib Parser RAE stdlib System Daemons Terminal
+ENV_A= env
+OS_A= $(foreach os,$(OS_LIST),OS$(os))
+ALL_A= $(MODULE_A) $(ENV_A) $(OS_A)
 
-# ========
-# END OF MODULE SETTINGS.
-# ========
+# Directory information
+SOURCE_DIR= ../Source
 
-# =========== Platform specific stuff
-CC= gcc
-CXX= g++
-AR= ar
-RANLIB= ranlib
+MODULE_DIR=$(SOURCE_DIR)
+MODULE_DIRS= $(foreach mod,$(MODULE_LIST),$(MODULE_DIR)/$(mod))
+ENV_DIR= $(SOURCE_DIR)/env/$(ENV)
+OS_DIR=$(SOURCE_DIR)/OS
 
-# =========== Compiler / Linker flags
-CFLAGS=
-CXXFLAGS= -g
-ARFLAGS=
-LDFLAGS= -pthread
+# +====================+
+# | Begin targets      |
+# +====================+
 
-ifeq ($(PLAT),MINGW)
-	LDFLAGS= -lmingw32
-	EXT_A= lib/libSDL2main.a lib/libSDL2.a
-endif
-
-# ==========
-# Default build action
-# ==========
-
-ifeq ($(PLAT),)
-MAKEFLAGS += --no-print-directory
-endif
-
-ifeq ($(PLAT),)
-default:
-	@echo "No default platform specified, guessing platform..."
-	@$(PLAT_GUESS)
-else
-default: build
-endif
-
-# ========
-# END OF MODULE CONFIGURATION.
-# ========
-
-MODULE_DIRS= $(foreach var,$(MODULE_SRC),../Source/$(var))
-
+# Create phony targets
 .PHONY: $(MODULE_DIRS)
 
+# Default action: build file and executable
+default: build executable
 
-
-count:
-	cloc --exclude-dir=SDL2 ../Source/
-
-env:
-	@echo "Compiling platform $(PLAT)/$(ENV)"
-	@cd $(ENV_DIR); make EXTCXXFLAGS="$(CXXFLAGS)" --no-print-directory
-
+# Compilation rules for modules
 $(MODULE_DIRS):
-	@cd $@; make EXTCXXFLAGS="$(CXXFLAGS)" --no-print-directory
+	@cd $@; make --no-print-directory
 
+# Compilation rules for OS's
 $(OS_LIST):
 	@cd "$(OS_DIR)/$@"; make --no-print-directory
 
-ALL_A= $(foreach mod,$(MODULE_A),bin/lib$(mod).a) $(OS_A) bin/$(ENV_BIN) $(EXT_A)
-build: $(MODULE_DIRS) $(OS_LIST) env executable
+# Environment compilation rules
+env:
+	@cd $(ENV_DIR); make --no-print-directory
 
+# Build rules
+build: $(MODULE_DIRS) $(OS_LIST) env
 
+# Actually creating an executable
 executable:
-	g++ $(LDFLAGS) -Wl,--start-group $(ALL_A) -Wl,--end-group $(LDFLAGS)
-	@echo "Compiled everything"
+	@echo "Creating executable..."
+	@$(LD) $(LDFLAGS) -Wl,--start-group $(foreach a_a,$(ALL_A),bin/lib$(a_a).a) -Wl,--end-group $(LDFLAGS)
+	@echo "Done."
 
-
-clean: $(patsubst %,%.clean,$(notdir $(MODULE_DIRS))) $(ENV_DIR).clean $(foreach osdir,$(OS_DIRS),$(osdir).clean)
+# Clean out each directory
+clean: $(patsubst %,%.clean,$(notdir $(MODULE_DIRS))) $(ENV_DIR).clean $(foreach osdir,$(OS_LIST),$(OS_DIR)/$(osdir).clean)
 	rm -f a.out a.exe bin/*
 
 %.clean:
 	@cd ../Source/$(patsubst %.clean,%,$@); make clean --no-print-directory
-
-elf:
-	readelf -e /mnt/v/boot/ELSA.o -x 5 -x 4 -x 2 -x 8 -r -s

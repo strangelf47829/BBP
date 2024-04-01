@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/bash
 
 # Get line with format "NAME=*"
 DISTR_LINE=$(cat /etc/*-release | grep -E "^NAME=")
@@ -10,11 +10,15 @@ DISTR_SPLIT=${DISTR_SPLIT[1]}
 # Sanitize any quotes or any other illegal characters
 DISTR=(${DISTR_SPLIT//\"/})
 
-# Show detected platform
-echo "Detected platform: $DISTR"
-echo
-echo
+# Check if 'makefile.config.$DISTR' exists
+if [ -f "makefile.config.$DISTR" ]; then
+	PLAT=$DISTR
+else
+	PLAT=generic
+fi
+
+# Echo stuff back
+echo "Detected platform: $PLAT"
 
 # Now setup enviromnent
-make -f makefile.guess guess GUESSING="$DISTR" SHOULDRUN="yes"
-
+cp makefile.config.$PLAT ../../Source/makefile.config

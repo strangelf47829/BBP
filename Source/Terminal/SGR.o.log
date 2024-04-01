@@ -1,0 +1,4 @@
+SGR.cpp: In member function 'void BBP::std::Terminal::TerminalApplication::SGR_CMD(BBP::std::word)':
+SGR.cpp:3:60: warning: unused parameter 'arg' [-Wunused-parameter]
+    3 | void BBP::std::Terminal::TerminalApplication::SGR_CMD(word arg)
+      |                                                       ~~~~~^~~

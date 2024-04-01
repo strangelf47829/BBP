@@ -1,0 +1,4 @@
+Drivers/Screen/Actions.cpp: In function ‘BBP::std::word Environment::Drivers::screen::sendDataToScreen(BBP::std::size_t, BBP::std::PAGE<char>&)’:
+Drivers/Screen/Actions.cpp:18:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   18 | }
+      | ^
