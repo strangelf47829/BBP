@@ -19,7 +19,7 @@ BBP::system::DaemonService *BBP::system::initd::lookupFunctor(std::string &str)
 {
 	// Get request hash
 	std::hash_t cmdHash = std::strhsh(str);
-	
+
 	// Switch statement
 	switch (cmdHash)
 	{

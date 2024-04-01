@@ -1,84 +1,12 @@
-#########################################
-#  Module make utility                  #
-#                                       #
-#########################################
-#  Module: Parser Utilities             #
+# +=====================+
+# | Module make utility |
+# +=====================+
 
-# =========== Platform
-PLAT= generic
-
-# =========== Module target details
+# Module information
 MODULE= System
-MODULE_SRC= Daemon.cpp Fini.cpp Init.cpp Kernel.cpp Shell.cpp Bootloader.cpp KernelDrivers.cpp KernelSubsystems.cpp OS.cpp BootRecords.cpp SoftwareDrivers.cpp HardwareDriver.cpp KernelSetters.cpp
 
-# ========
-# END OF MODULE SETTINGS.
-# ========
+# Source files
+MODULE_SRC=Daemon.cpp Fini.cpp Init.cpp Kernel.cpp Shell.cpp Bootloader.cpp KernelDrivers.cpp KernelSubsystems.cpp OS.cpp BootRecords.cpp SoftwareDrivers.cpp HardwareDriver.cpp KernelSetters.cpp
 
-# =========== Platform specific stuff
-CC= gcc
-CXX= g++
-AR= ar
-RANLIB= ranlib
-
-# =========== Compiler / Linker flags
-CFLAGS= $(SYSCFLAGS) $(EXTCFLAGS)
-CXXFLAGS= $(SYSCXXFLAGS) $(EXTCXXFLAGS)
-ARFLAGS= $(SYSARFLAGS) $(EXTARFLAGS)
-LDFLAGS= $(SYSLDFLAGS) $(EXTLDFLAGS)
-
-# =========== Module specific flags
-SYSCFLAGS= -c
-SYSCXXFLAGS= -c -Wall -Wextra -fdiagnostics-show-option
-SYSARFLAGS= rc
-SYSLDFLAGS=
-
-# =========== Platform specific flags
-EXTCFLAGS=
-EXTCXXFLAGS=
-EXTARFLAGS=
-EXTLDFLAGS=
-
-# ========
-# END OF MODULE CONFIGURATION.
-# ========
-MODULE_O= $(patsubst %.cpp,%.o,$(MODULE_SRC))
-MODULE_A= lib$(MODULE).a
-
-default: generic
-
-$(MODULE_A): $(MODULE_O)
-	@echo
-	$(AR) $(ARFLAGS) libmodule.a $(MODULE_O)
-	@echo "+=======================+"
-	@echo "|=+= Module Compiled =+=|"
-	@echo "+=======================+"
-
-
-%.o: %.cpp
-	@$(CXX) $^ -o $@ $(CXXFLAGS)
-	@echo "        $(MODULE) +=+ Compiling $^..."
-
-%.log:
-	@echo
-	@echo ===========================
-	@echo Compiling module $(MODULE)
-	@echo "        Platform: $(PLAT)"
-	@echo "        Source files: $(MODULE_SRC)"
-	@echo ===========================
-	@echo
-	@rm -f *.log
-	@rm -f *.a *.o
-	@echo "Hehe" >> $@
-	@make $(PLAT) --no-print-directory
-	@echo 
-
-generic: $(MODULE).$(PLAT).log $(MODULE_A)
-
-
-
-
-clean:
-	@echo Cleaning files for module $(MODULE)...
-	@rm -f *.a *.o *.log
-	@echo Done!
+# Actually include the makefile
+include ../makefile

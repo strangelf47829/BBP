@@ -8,8 +8,8 @@
 PLAT= generic
 
 # =========== Drivers
-DRIVER_SRC = Actions.cpp Driver.cpp Loader.cpp Commands.cpp
-DRIVERS = Keyboard Screen File
+DRIVER_SRC= Actions.cpp Driver.cpp Loader.cpp Commands.cpp
+DRIVERS= Keyboard Screen File
 
 # =========== BIOS targets
 BIOS_SRC = BIOS/BIOS.cpp BIOS/POST.cpp
