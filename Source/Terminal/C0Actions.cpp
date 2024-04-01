@@ -25,8 +25,7 @@ void BBP::std::Terminal::TerminalApplication::HT_C0()
 	std::size_t toIncrease = state.activePresentationPosition.horizontal % state.tabularSettings.horizontal;
 
 	// If this is 0, set to horizontal tab setting
-	if (toIncrease == 0)
-		toIncrease = state.tabularSettings.horizontal;
+	toIncrease = state.tabularSettings.horizontal - toIncrease;
 
 	// Move forward that amount
 	MoveForward(toIncrease);

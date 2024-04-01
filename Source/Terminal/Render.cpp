@@ -25,3 +25,12 @@ void BBP::std::Terminal::TerminalApplication::render(string &str)
 	if (device)
 		device->renderDisplay();
 }
+
+void BBP::std::Terminal::TerminalApplication::render(conststring str)
+{
+	// Create temporary string
+	std::string Str = std::String(str);
+
+	// Render
+	render(Str);
+}

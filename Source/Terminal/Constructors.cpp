@@ -23,7 +23,7 @@ BBP::std::Terminal::TerminalState::TerminalState(size_t lc, size_t vp_w, size_t 
 
 	// Set viewport information
 	viewportSize = { vp_h, vp_w };
-	tabularSettings = {1, 1};
+	tabularSettings = {4, 4};
 
 	// Allocate more lines if needed
 	for (std::index_t lineIndex = 1; lineIndex < lineCount; lineIndex++)

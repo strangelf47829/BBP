@@ -460,6 +460,7 @@ namespace BBP
 				// Input some characters, and then render
 				void render(CC);
 				void render(string &);
+				void render(conststring);
 
 				void set(size_t, size_t);
 

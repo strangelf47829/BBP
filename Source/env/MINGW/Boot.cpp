@@ -141,7 +141,7 @@ int main(int, char **)
 		for (int i = 0; i < 40; i++)
 		{
 			char buff[500];
-			sprintf(buff, "line %d \033[0m Hello!\n", i);
+			sprintf(buff, "line %d  \t\033[0mHello!\n", i);
 
 			BBP::std::string str = BBP::std::String(buff);
 

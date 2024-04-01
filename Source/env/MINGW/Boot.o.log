@@ -19,6 +19,6 @@ Boot.cpp:172:1: warning: no return statement in function returning non-void [-Wr
   172 | }
       | ^
 Boot.cpp: In function 'int init()':
-Boot.cpp:200:32: warning: control reaches end of non-void function [-Wreturn-type]
-  200 |         SDL_UpdateWindowSurface(_window);
-      |         ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+Boot.cpp:201:1: warning: control reaches end of non-void function [-Wreturn-type]
+  201 | }
+      | ^

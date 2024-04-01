@@ -3,6 +3,6 @@ KernelDrivers.cpp:22:1: warning: no return statement in function returning non-v
    22 | }
       | ^
 KernelDrivers.cpp: In member function 'BBP::std::errno_t BBP::system::Kernel::loadDriver(BBP::system::UEFILoadDriver, BBP::system::DeviceDriver&, BBP::std::size_t, BBP::std::word*)':
-KernelDrivers.cpp:36:49: warning: control reaches end of non-void function [-Wreturn-type]
-   36 |         intoDriver.hardwareDriver.executeCommand(intoDriver.hardwareDriver.connectCmd, argc, argv);
-      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+KernelDrivers.cpp:37:1: warning: control reaches end of non-void function [-Wreturn-type]
+   37 | }
+      | ^
