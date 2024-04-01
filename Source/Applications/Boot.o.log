@@ -1,0 +1,7 @@
+Boot.cpp: In function 'int BBP::boot_main(int, char**)':
+Boot.cpp:18:24: warning: unused parameter 'argc' [-Wunused-parameter]
+   18 | int BBP::boot_main(int argc, char **argv)
+      |                    ~~~~^~~~
+Boot.cpp:18:37: warning: unused parameter 'argv' [-Wunused-parameter]
+   18 | int BBP::boot_main(int argc, char **argv)
+      |                              ~~~~~~~^~~~

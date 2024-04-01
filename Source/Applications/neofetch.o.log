@@ -1,0 +1,10 @@
+neofetch.cpp: In function 'int BBP::neofetch_main(int, char**)':
+neofetch.cpp:57:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   57 | }
+      | ^
+neofetch.cpp:17:28: warning: unused parameter 'argc' [-Wunused-parameter]
+   17 | int BBP::neofetch_main(int argc, char **argv)
+      |                        ~~~~^~~~
+neofetch.cpp:17:41: warning: unused parameter 'argv' [-Wunused-parameter]
+   17 | int BBP::neofetch_main(int argc, char **argv)
+      |                                  ~~~~~~~^~~~

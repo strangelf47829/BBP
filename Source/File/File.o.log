@@ -1,0 +1,16 @@
+In file included from ../include/SystemContext.h:3,
+                 from ../include/Hyperv.h:7,
+                 from ../include/KernelSubSystems.h:4,
+                 from ../include/Kernel.h:4,
+                 from File.cpp:1:
+../include/FileSys.h: In member function 'constexpr BBP::std::FileNode& BBP::std::FileNode::operator=(BBP::std::FileNode&&)':
+../include/FileSys.h:169:24: warning: implicitly-declared 'constexpr BBP::std::PATH& BBP::std::PATH::operator=(const BBP::std::PATH&)' is deprecated [-Wdeprecated-copy]
+  169 |                 struct FileNode
+      |                        ^~~~~~~~
+../include/FileSys.h:66:25: note: because 'BBP::std::PATH' has user-provided 'BBP::std::PATH::PATH(BBP::std::PATH&)'
+   66 |                         PATH(std::PATH &);
+      |                         ^~~~
+File.cpp: In constructor 'BBP::std::FILE::FILE(BBP::std::Stack<char>&, BBP::std::conststring)':
+File.cpp:26:157: note: synthesized method 'constexpr BBP::std::FileNode& BBP::std::FileNode::operator=(BBP::std::FileNode&&)' first required here
+   26 |         system::kernelSS()->activeContext->fileTable.data[this->node] = BBP::std::FileNode(data, BBP::system::kernelSS()->activeContext->primaryVolume, path);
+      |                                                                                                                                                             ^

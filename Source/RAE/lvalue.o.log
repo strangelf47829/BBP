@@ -1,0 +1,8 @@
+lvalue.cpp: In member function 'virtual BBP::std::address_t BBP::userspace::lvalue::getOwnPhysicalAddress()':
+lvalue.cpp:97:19: warning: control reaches end of non-void function [-Wreturn-type]
+   97 |         std::raise(std::SIGSEGV);
+      |         ~~~~~~~~~~^~~~~~~~~~~~~~
+lvalue.cpp: In member function 'virtual BBP::std::word BBP::userspace::lvalue::resolve(BBP::userspace::StateMachine&)':
+lvalue.cpp:124:19: warning: control reaches end of non-void function [-Wreturn-type]
+  124 |         std::raise(std::SIGSEGV);
+      |         ~~~~~~~~~~^~~~~~~~~~~~~~

@@ -1,0 +1,4 @@
+Entry.cpp: In function 'bool OS::BIOS::WINDOWSE20::EntryPoint(BBP::system::UEFI*)':
+Entry.cpp:6:58: warning: unused parameter 'uefi' [-Wunused-parameter]
+    6 | bool OS::BIOS::WINDOWSE20::EntryPoint(BBP::system::UEFI *uefi)
+      |                                       ~~~~~~~~~~~~~~~~~~~^~~~

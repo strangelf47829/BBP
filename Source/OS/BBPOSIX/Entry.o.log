@@ -1,0 +1,4 @@
+Entry.cpp: In function 'bool OS::BIOS::BBPOSIX::EntryPoint(BBP::system::UEFI*)':
+Entry.cpp:60:27: warning: variable 'result' set but not used [-Wunused-but-set-variable]
+   60 |         BBP::std::errno_t result = 0;
+      |                           ^~~~~~

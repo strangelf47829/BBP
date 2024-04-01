@@ -1,0 +1,24 @@
+In file included from ELFHeader.cpp:1:
+../include/ELF.h: In constructor 'BBP::std::ELF::ELFBuilder::ELFBuilder(BBP::std::ResourceManager*, BBP::std::size_t, BBP::std::size_t, BBP::std::size_t)':
+../include/ELF.h:155:38: warning: 'BBP::std::ELF::ELFBuilder::isMemUnique' will be initialized after [-Wreorder]
+  155 |                                 bool isMemUnique;
+      |                                      ^~~~~~~~~~~
+../include/ELF.h:147:43: warning:   'BBP::std::word BBP::std::ELF::ELFBuilder::hashBucketCount' [-Wreorder]
+  147 |                                 std::word hashBucketCount;
+      |                                           ^~~~~~~~~~~~~~~
+ELFHeader.cpp:7:1: warning:   when initialized here [-Wreorder]
+    7 | BBP::std::ELF::ELFBuilder::ELFBuilder(BBP::std::ResourceManager *res, std::size_t segCount, std::size_t secCount, std::size_t symCount)
+      | ^~~
+../include/ELF.h: In constructor 'BBP::std::ELF::ELFBuilder::ELFBuilder(BBP::std::PAGE<char>*, BBP::std::ResourceManager*)':
+../include/ELF.h:155:38: warning: 'BBP::std::ELF::ELFBuilder::isMemUnique' will be initialized after [-Wreorder]
+  155 |                                 bool isMemUnique;
+      |                                      ^~~~~~~~~~~
+../include/ELF.h:147:43: warning:   'BBP::std::word BBP::std::ELF::ELFBuilder::hashBucketCount' [-Wreorder]
+  147 |                                 std::word hashBucketCount;
+      |                                           ^~~~~~~~~~~~~~~
+ELFHeader.cpp:42:1: warning:   when initialized here [-Wreorder]
+   42 | BBP::std::ELF::ELFBuilder::ELFBuilder(BBP::std::PAGE<string_element> *_file, BBP::std::ResourceManager *res)
+      | ^~~
+ELFHeader.cpp:193:39: warning: unused variable 'symName' [-Wunused-variable]
+  193 |                         std::c_string symName = file.data + sections[_symtab().link()].offset() + sym.name();
+      |                                       ^~~~~~~

@@ -1,0 +1,15 @@
+Boot.cpp: In function 'void drawWindow(BBP::std::window*)':
+Boot.cpp:23:27: warning: comparison of integer expressions of different signedness: 'int' and 'BBP::std::size_t' {aka 'unsigned int'} [-Wsign-compare]
+   23 |         for (int X = 0; X < wind->width; X++)
+      |                         ~~^~~~~~~~~~~~~
+Boot.cpp:25:35: warning: comparison of integer expressions of different signedness: 'int' and 'BBP::std::size_t' {aka 'unsigned int'} [-Wsign-compare]
+   25 |                 for (int Y = 0; Y < wind->height; Y++)
+      |                                 ~~^~~~~~~~~~~~~~
+Boot.cpp: In function 'int SDL_main(int, char**)':
+Boot.cpp:63:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   63 | }
+      | ^
+Boot.cpp: In function 'int init()':
+Boot.cpp:91:32: warning: control reaches end of non-void function [-Wreturn-type]
+   91 |         SDL_UpdateWindowSurface(_window);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~

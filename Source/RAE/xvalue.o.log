@@ -1,0 +1,24 @@
+xvalue.cpp: In member function 'virtual BBP::std::address_t BBP::userspace::xvalue::getOwnPhysicalAddress()':
+xvalue.cpp:83:19: warning: control reaches end of non-void function [-Wreturn-type]
+   83 |         std::raise(std::SIGSEGV);
+      |         ~~~~~~~~~~^~~~~~~~~~~~~~
+xvalue.cpp: In member function 'virtual BBP::std::address_t BBP::userspace::xvalue::getOwnVirtualAddress()':
+xvalue.cpp:94:19: warning: control reaches end of non-void function [-Wreturn-type]
+   94 |         std::raise(std::SIGSEGV);
+      |         ~~~~~~~~~~^~~~~~~~~~~~~~
+xvalue.cpp: In member function 'virtual BBP::std::word BBP::userspace::xvalue::resolve(BBP::userspace::StateMachine&)':
+xvalue.cpp:105:19: warning: control reaches end of non-void function [-Wreturn-type]
+  105 |         std::raise(std::SIGSEGV);
+      |         ~~~~~~~~~~^~~~~~~~~~~~~~
+xvalue.cpp: In member function 'virtual bool BBP::userspace::xvalue::canUserExecuteFrom(BBP::userspace::StateMachine&)':
+xvalue.cpp:142:19: warning: control reaches end of non-void function [-Wreturn-type]
+  142 |         std::raise(std::SIGSEGV);
+      |         ~~~~~~~~~~^~~~~~~~~~~~~~
+xvalue.cpp: In member function 'virtual bool BBP::userspace::xvalue::canUserReadFrom(BBP::userspace::StateMachine&)':
+xvalue.cpp:153:19: warning: control reaches end of non-void function [-Wreturn-type]
+  153 |         std::raise(std::SIGSEGV);
+      |         ~~~~~~~~~~^~~~~~~~~~~~~~
+xvalue.cpp: In member function 'virtual bool BBP::userspace::xvalue::canUserWriteTo(BBP::userspace::StateMachine&)':
+xvalue.cpp:164:19: warning: control reaches end of non-void function [-Wreturn-type]
+  164 |         std::raise(std::SIGSEGV);
+      |         ~~~~~~~~~~^~~~~~~~~~~~~~

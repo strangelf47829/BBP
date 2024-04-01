@@ -1,0 +1,14 @@
+Drivers/File/Actions.cpp: In function ‘BBP::std::word Environment::Drivers::Filesystem::sendDataToFileSystem(BBP::std::size_t, BBP::std::PAGE<char>&)’:
+Drivers/File/Actions.cpp:8:1: warning: no return statement in function returning non-void [-Wreturn-type]
+    8 | }
+      | ^
+Drivers/File/Actions.cpp:4:131: warning: unused parameter ‘page’ [-Wunused-parameter]
+    4 | BBP::std::word Environment::Drivers::Filesystem::sendDataToFileSystem(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &page)
+      |                                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+Drivers/File/Actions.cpp: In function ‘BBP::std::word Environment::Drivers::Filesystem::receiveDataFromFileSystem(BBP::std::size_t, BBP::std::PAGE<char>&)’:
+Drivers/File/Actions.cpp:13:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   13 | }
+      | ^
+Drivers/File/Actions.cpp:10:136: warning: unused parameter ‘page’ [-Wunused-parameter]
+   10 | BBP::std::word Environment::Drivers::Filesystem::receiveDataFromFileSystem(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &page)
+      |                                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~

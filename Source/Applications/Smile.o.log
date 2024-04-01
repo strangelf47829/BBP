@@ -1,0 +1,15 @@
+Smile.cpp: In function 'BBP::std::word printcallU(BBP::userspace::StateMachine*, BBP::userspace::HyperVisor*, BBP::userspace::Thread*, BBP::userspace::Instruction&)':
+Smile.cpp:47:118: warning: unused parameter 'thr' [-Wunused-parameter]
+   47 | BBP::std::word printcallU(BBP::userspace::StateMachine *state, BBP::userspace::HyperVisor *, BBP::userspace::Thread *thr, BBP::userspace::Instruction &Args)
+      |                                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~^~~
+Smile.cpp: In function 'BBP::std::word printcallX(BBP::userspace::StateMachine*, BBP::userspace::HyperVisor*, BBP::userspace::Thread*, BBP::userspace::Instruction&)':
+Smile.cpp:59:118: warning: unused parameter 'thr' [-Wunused-parameter]
+   59 | BBP::std::word printcallX(BBP::userspace::StateMachine *state, BBP::userspace::HyperVisor *, BBP::userspace::Thread *thr, BBP::userspace::Instruction &Args)
+      |                                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~^~~
+Smile.cpp: In function 'int BBP::smile_main(int, char**)':
+Smile.cpp:71:25: warning: unused parameter 'argc' [-Wunused-parameter]
+   71 | int BBP::smile_main(int argc, char **argv)
+      |                     ~~~~^~~~
+Smile.cpp:71:38: warning: unused parameter 'argv' [-Wunused-parameter]
+   71 | int BBP::smile_main(int argc, char **argv)
+      |                               ~~~~~~~^~~~

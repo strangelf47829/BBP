@@ -1,0 +1,26 @@
+#	This makefile is used to guess the target platform.
+#	You can add your own by adding blah blah blah
+
+default: ./setup.sh
+
+guess:
+ifeq ($(GUESSING),)
+	@echo "You must pass the string saved under NAME= in /etc/*-release as the GUESSING variable. Ending."
+else
+	@echo "Guessing platform $(GUESSING)..."
+	@echo
+endif
+
+ifeq ($(GUESSING),Ubuntu)
+	@echo "Guessed 'ubuntu'."
+ifeq ($(SHOULDRUN),yes)
+	@export PLAT=UBUNTU && make build
+endif
+endif
+
+ifeq ($(GUESSING),MSYS2)
+	@echo "Guessed MSYS2 (MINGW)"
+ifeq ($(SHOULDRUN),yes)
+	@export PLAT=MINGW && make build
+endif
+endif
