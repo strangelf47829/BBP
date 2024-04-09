@@ -1,0 +1,18 @@
+cd.cpp: In function ‘BBP::std::errno_t BBP::system::cd_builtin(BBP::std::size_t, BBP::std::string_element**)’:
+cd.cpp:34:28: warning: ISO C++ forbids converting a string constant to ‘BBP::std::c_string’ {aka ‘char*’} [-Wwrite-strings]
+   34 |   if (std::strcmp(argv[1], "."))
+      |                            ^~~
+cd.cpp:38:33: warning: ISO C++ forbids converting a string constant to ‘BBP::std::c_string’ {aka ‘char*’} [-Wwrite-strings]
+   38 |   else if (std::strcmp(argv[1], ".."))
+      |                                 ^~~~
+cd.cpp:55:54: warning: implicitly-declared ‘constexpr BBP::std::PATH& BBP::std::PATH::operator=(const BBP::std::PATH&)’ is deprecated [-Wdeprecated-copy]
+   55 |  currentPath = changeTo.makeAbsolutePath(&currentPath);
+      |                                                      ^
+In file included from ../include/SystemContext.h:3,
+                 from ../include/Hyperv.h:7,
+                 from ../include/KernelSubSystems.h:4,
+                 from ../include/Kernel.h:4,
+                 from cd.cpp:5:
+../include/FileSys.h:96:4: note: because ‘BBP::std::PATH’ has user-provided ‘BBP::std::PATH::PATH(BBP::std::PATH&)’
+   96 |    PATH(std::PATH &);
+      |    ^~~~

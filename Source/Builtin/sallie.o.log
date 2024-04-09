@@ -1,0 +1,7 @@
+sallie.cpp: In function ‘BBP::std::errno_t BBP::system::sallie_builtin(BBP::std::size_t, BBP::std::string_element**)’:
+sallie.cpp:10:59: warning: unused parameter ‘argc’ [-Wunused-parameter]
+   10 | BBP::std::errno_t BBP::system::sallie_builtin(std::size_t argc, std::c_string *argv)
+      |                                               ~~~~~~~~~~~~^~~~
+sallie.cpp:10:80: warning: unused parameter ‘argv’ [-Wunused-parameter]
+   10 | BBP::std::errno_t BBP::system::sallie_builtin(std::size_t argc, std::c_string *argv)
+      |                                                                 ~~~~~~~~~~~~~~~^~~~

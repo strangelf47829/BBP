@@ -4,7 +4,6 @@
 #include "Strings.h"
 #include "Kernel.h"
 
-
 namespace BBP
 {
 	namespace std

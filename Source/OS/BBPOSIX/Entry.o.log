@@ -1,0 +1,16 @@
+Entry.cpp: In function ‘bool OS::BIOS::BBPOSIX::EntryPoint(BBP::system::UEFI*)’:
+Entry.cpp:65:21: warning: variable ‘result’ set but not used [-Wunused-but-set-variable]
+   65 |   BBP::std::errno_t result = 0;
+      |                     ^~~~~~
+Entry.cpp:75:15: warning: ISO C++ forbids converting a string constant to ‘BBP::std::c_string’ {aka ‘char*’} [-Wwrite-strings]
+   75 |    OSPanic(0, "KSignal received.");
+      |               ^~~~~~~~~~~~~~~~~~~
+Entry.cpp:92:24: warning: ISO C++ forbids converting a string constant to ‘BBP::std::c_string’ {aka ‘char*’} [-Wwrite-strings]
+   92 |    OSPanic(0xFFFFFFFF, "(ERROR TRYING TO READ ERRNO MESSAGE)");
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Entry.cpp:97:23: warning: ISO C++ forbids converting a string constant to ‘BBP::std::c_string’ {aka ‘char*’} [-Wwrite-strings]
+   97 |   OSPanic(0xFF00FF00, "System threw object.");
+      |                       ^~~~~~~~~~~~~~~~~~~~~~
+Entry.cpp:100:1: warning: control reaches end of non-void function [-Wreturn-type]
+  100 | }
+      | ^

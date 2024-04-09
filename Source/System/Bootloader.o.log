@@ -1,0 +1,4 @@
+Bootloader.cpp: In function ‘int BBP::system::bootloaderMain()’:
+Bootloader.cpp:247:16: warning: unused variable ‘status’ [-Wunused-variable]
+  247 |   std::errno_t status = record->owner->initialize();
+      |                ^~~~~~

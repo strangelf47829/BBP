@@ -1,0 +1,4 @@
+PixelMask.cpp: In function ‘void BBP::std::R2D::PixelMask(BBP::std::window&, BBP::std::pos_t, BBP::std::pos_t, BBP::std::mask_t, BBP::std::colour)’:
+PixelMask.cpp:3:85: warning: unused parameter ‘col’ [-Wunused-parameter]
+    3 | void BBP::std::R2D::PixelMask(window &window, pos_t x, pos_t y, mask_t mask, colour col)
+      |                                                                              ~~~~~~~^~~

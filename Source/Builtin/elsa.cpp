@@ -71,6 +71,9 @@ BBP::std::errno_t BBP::system::elsa_builtin(std::size_t argc, std::c_string *arg
 		case 'c':
 			enableLinking = false;
 			break;
+		case 'r':
+			esa::processor = esa::esaProcessor();
+			break;
 		case 'o':
 			// Check if argument exists after this
 			if (argc <= idx + 1)

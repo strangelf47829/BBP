@@ -1,0 +1,4 @@
+Backend.cpp: In member function ‘BBP::std::hash_t BBP::esa::esaProcessor::hashIdentifier(BBP::esa::dataEntry&)’:
+Backend.cpp:26:78: warning: unused parameter ‘entry’ [-Wunused-parameter]
+   26 | BBP::std::hash_t BBP::esa::esaProcessor::hashIdentifier(BBP::esa::dataEntry &entry)
+      |                                                         ~~~~~~~~~~~~~~~~~~~~~^~~~~

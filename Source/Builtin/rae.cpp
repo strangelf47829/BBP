@@ -24,9 +24,10 @@ BBP::std::word printcall(BBP::userspace::StateMachine *state, BBP::userspace::Hy
 	else
 		string = thr->executable.BinaryData.data + physicalAddress;
 
-	BBP::std::word count = BBP::std::printf("%s", string);
+	// Move string to stdout
+	BBP::system::getKernelInstance().getScreenDriver().softwareDriver << string;
 
-	return count;
+	return 0;
 }
 BBP::std::word printcallU(BBP::userspace::StateMachine *state, BBP::userspace::HyperVisor *, BBP::userspace::Thread *thr, BBP::userspace::Instruction &Args)
 {
@@ -138,7 +139,7 @@ BBP::std::errno_t BBP::system::rae_builtin(std::size_t argc, std::c_string *argv
 		fileToRun.close();
 
 		// Get time before execution
-		std::time_t before = std::millis();
+		std::time_t before = std::micros();
 
 		// Amount of instructions ran
 		std::word instructions1 = 0;
@@ -156,11 +157,16 @@ BBP::std::errno_t BBP::system::rae_builtin(std::size_t argc, std::c_string *argv
 		}
 
 		// Get time after execution
-		std::time_t after = std::millis();
+		std::time_t after = std::micros();
+
+		// Time is in microseconds
+		std::time_t delta = after - before;
+
+		// Frequency is measured in
+		std::word kiloHz = (instructions1 * 1000) / delta;
 
 		// Now print deltatime
-		std::printf("Time difference: %ums. Instructions: (%u). Speed: %uKHz.\n", after - before, instructions1, instructions1 / (after - before));
-
+		std::printf("Time difference: %uus. Instructions: (%u). Speed: %uKHz.\n", delta, instructions1, kiloHz);
 
 		// Close thread after execution
 		hyperv->destroyThread(0);

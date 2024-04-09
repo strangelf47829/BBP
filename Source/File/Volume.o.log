@@ -1,0 +1,12 @@
+Volume.cpp: In constructor ‘BBP::std::VOLUME::VOLUME(char, BBP::std::conststring)’:
+Volume.cpp:4:51: warning: unused parameter ‘path’ [-Wunused-parameter]
+    4 | BBP::std::VOLUME::VOLUME(char l, std::conststring path)
+      |                                  ~~~~~~~~~~~~~~~~~^~~~
+Volume.cpp: In member function ‘void BBP::std::VOLUME::mount(BBP::std::string_element, BBP::std::conststring)’:
+Volume.cpp:17:35: warning: implicitly-declared ‘constexpr BBP::std::PATH& BBP::std::PATH::operator=(const BBP::std::PATH&)’ is deprecated [-Wdeprecated-copy]
+   17 |  this->volumePath = std::PATH(path);
+      |                                   ^
+In file included from Volume.cpp:1:
+../include/FileSys.h:96:4: note: because ‘BBP::std::PATH’ has user-provided ‘BBP::std::PATH::PATH(BBP::std::PATH&)’
+   96 |    PATH(std::PATH &);
+      |    ^~~~

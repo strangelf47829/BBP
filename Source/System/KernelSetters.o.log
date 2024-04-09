@@ -1,0 +1,4 @@
+KernelSetters.cpp: In member function ‘BBP::system::DeviceDriver& BBP::system::Kernel::getNextAvailableDriver()’:
+KernelSetters.cpp:103:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  103 | }
+      | ^

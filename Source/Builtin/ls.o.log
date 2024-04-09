@@ -1,0 +1,21 @@
+ls.cpp: In function ‘BBP::std::errno_t BBP::system::ls_builtin(BBP::std::size_t, BBP::std::string_element**)’:
+ls.cpp:31:28: warning: ISO C++ forbids converting a string constant to ‘BBP::std::c_string’ {aka ‘char*’} [-Wwrite-strings]
+   31 |   if (std::strcmp(argv[1], "."))
+      |                            ^~~
+ls.cpp:35:33: warning: ISO C++ forbids converting a string constant to ‘BBP::std::c_string’ {aka ‘char*’} [-Wwrite-strings]
+   35 |   else if (std::strcmp(argv[1], ".."))
+      |                                 ^~~~
+ls.cpp:52:54: warning: implicitly-declared ‘constexpr BBP::std::PATH& BBP::std::PATH::operator=(const BBP::std::PATH&)’ is deprecated [-Wdeprecated-copy]
+   52 |  currentPath = changeTo.makeAbsolutePath(&currentPath);
+      |                                                      ^
+In file included from ../include/SystemContext.h:3,
+                 from ../include/Hyperv.h:7,
+                 from ../include/KernelSubSystems.h:4,
+                 from ../include/Kernel.h:4,
+                 from ls.cpp:5:
+../include/FileSys.h:96:4: note: because ‘BBP::std::PATH’ has user-provided ‘BBP::std::PATH::PATH(BBP::std::PATH&)’
+   96 |    PATH(std::PATH &);
+      |    ^~~~
+ls.cpp:66:7: warning: unused variable ‘success’ [-Wunused-variable]
+   66 |  bool success = info.populate(newPath, ownFrame->systemContext->activemem);
+      |       ^~~~~~~
