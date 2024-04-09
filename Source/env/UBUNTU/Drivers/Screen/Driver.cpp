@@ -22,8 +22,8 @@ int BBP::std::printf(std::conststring format, ...)
 	int res = ::vsprintf(printfbuff.data, format, args);
 	va_end(args);
 
-	// Then print
-	system::getKernelInstance().getScreenDriver().softwareDriver << printfbuff.data;
+	// Then print to STDOUT
+	system::getKernelInstance().SubSystems().activeContext->STDOUT <<= printfbuff.data;
 
 	return res;
 }
@@ -57,10 +57,15 @@ void Environment::Drivers::screen::print_stack_to_string(BBP::std::Stack<BBP::st
 	// Declare string
 	BBP::std::c_string str;
 
+	// Get current index before read
+	BBP::std::index_t preRead = stack->atElement;
+
 	// Read string
 	*stack >>= &str;
 
-	// Print string by sending data (through driver)
-	BBP::system::getKernelInstance().getScreenDriver().softwareDriver.setInputPage(stack);
-	BBP::system::getKernelInstance().getScreenDriver().hardwareDriver.send(stack->atElement);
+	// Get current index after read
+	BBP::std::index_t postRead = stack->atElement;
+
+	// Write that data into software driver
+	BBP::system::getKernelInstance().getScreenDriver().softwareDriver << str;
 }

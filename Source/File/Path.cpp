@@ -23,6 +23,10 @@ BBP::std::PATH::PATH(std::VOLUME *v, std::conststring str)
 	// Get string sizes
 	std::size_t pathlength = std::strlen(str);
 
+	// Zero out buffer
+	for (std::index_t idx = 0; idx < rawPath.dataSize; idx++)
+		rawPath.static_data[idx] = 0;
+
 	// Copy string into rawPath
 	std::strcpy(&rawPath, str);
 
@@ -61,6 +65,18 @@ BBP::std::c_string BBP::std::PATH::relName()
 	rawPath.data = rawPath.static_data;
 
 	return rawPath.data;
+}
+
+// Copy over from something
+void BBP::std::PATH::copyFrom(PATH &path)
+{
+	// Copy strings
+	std::strcpy(_path.static_data, path._path.static_data);
+	std::strcpy(rawPath.static_data, path.rawPath.static_data);
+
+	// Copy indicies and volume
+	this->fileNameStartIndex = path.fileNameStartIndex;
+	this->Volume = path.Volume;
 }
 
 bool BBP::std::PATH::isRelativeToRoot()
@@ -106,21 +122,45 @@ BBP::std::PATH &BBP::std::PATH::getFileAndPaths()
 		__UNSAFE__(write)(&_path, c, index);
 	}
 
+	// Used to store index for copying over name
+	std::index_t copyIndex = fileNameStartIndex;
+
 	if (fileNameStartIndex)
 	{
-		// Then seperate last FILLME
-		for (index_t index = fileNameStartIndex; index < rawPathLength; index++)
-			__UNSAFE__(write)(&_path, __UNSAFE__(read)(&rawPath, index), index + 1);
+		// Then seperate file from directory.
+		for (; copyIndex < rawPathLength; copyIndex++)
+			__UNSAFE__(write)(&_path, __UNSAFE__(read)(&rawPath, copyIndex), copyIndex + 1);
+
+		// Null terminate directory.
 		__UNSAFE__(write)(&_path, nul, fileNameStartIndex + 1);
+
+		// Null terminate file
+		__UNSAFE__(write)(&_path, nul, copyIndex + 1);
 	}
 	else
 	{
-		for (index_t index = fileNameStartIndex; index < rawPathLength; index++)
-			__UNSAFE__(write)(&_path, __UNSAFE__(read)(&rawPath, index), index + 2);
+		
+		for (; copyIndex < rawPathLength; copyIndex++)
+			__UNSAFE__(write)(&_path, __UNSAFE__(read)(&rawPath, copyIndex), copyIndex + 2);
+
+		// Null terminate directory
 		__UNSAFE__(write)(&_path, nul, 0);
+
+		// Null terminate file
+		__UNSAFE__(write)(&_path, nul, copyIndex + 1);
 	}
 
 	return *this;
+}
+
+BBP::std::PATH &BBP::std::PATH::volumePath()
+{
+	// Check for empty volume
+	if (Volume == nullptr)
+		std::raise(SIGSEGV);
+
+	// Return volume pathname
+	return Volume->volumePath;
 }
 
 BBP::std::PATH &BBP::std::PATH::makeAbsolutePath()
@@ -230,9 +270,11 @@ BBP::std::PATH &BBP::std::PATH::resolveAbsolutes()
 			}
 			else if (nextC == '.' && nextnextC == '/')
 			{
-				// Read last two '/''s from stack
-				index_t from, to;
-				separatorStack >> to >> from;
+				// Read last two '/''s from stack, if there exists at least 2.
+				index_t from = 0, to = 0;
+
+				if (separatorStack.atElement >= 2)
+					separatorStack >> to >> from;
 
 				// Looping
 				for (index_t idx = 0; idx + to + 2 < rawPathLength; idx++)
@@ -255,11 +297,66 @@ void BBP::std::PATH::makeRelative(PATH &reference, PATH &dir)
 {
 	if (!dir.isRelativeToRoot())
 	{
-		
 		dir.makeAbsolutePath(&reference);
 
-		if (reference.isRelativeToRoot())
-			dir.makeAbsolutePath(nullptr);
+		// Do not do this!
+		//if (reference.isRelativeToRoot())
+		//	dir.makeAbsolutePath(nullptr);
 	}
 
+}
+
+bool BBP::std::PATH::isDirectory()
+{
+	// Check if file actually has something.
+	return (rawPath[fileNameStartIndex + 2] == 0);
+}
+
+bool BBP::std::PATH::isFile()
+{
+	// Self explanatory lol
+	return !isDirectory();
+}
+
+BBP::std::PATH &BBP::std::PATH::makeFile()
+{
+	// If already file, do nothing
+	if (isFile())
+		return *this;
+
+	// Otherwise, remove '/' suffix
+	std::printf("raw: %s\n", rawPath.static_data);
+
+	return *this;
+}
+
+BBP::std::PATH &BBP::std::PATH::makeDirectory()
+{
+	// If already directory, do nothing.
+	if (isDirectory())
+		return *this;
+
+	// Keep track of index, for nullptr.
+	std::index_t totalLength = fileNameStartIndex;
+
+	// Otherwise, move file back and append '/', then get whatever.
+	for (std::index_t idx = fileNameStartIndex + 2; _path[idx] && idx < max_path_length - 2; idx++)
+	{
+		// Move back data
+		_path.static_data[idx - 1] = _path[idx];
+
+		// Increase totalLength
+		totalLength++;
+	}
+
+	_path.static_data[totalLength + 1] = '/';
+	_path.static_data[totalLength + 2] = 0;
+
+	rawPath.static_data[totalLength + 1] = '/';
+	rawPath.static_data[totalLength + 2] = 0;
+	
+	// I could probably get rid of this? just leave this here for now.
+	getFileAndPaths();
+
+	return *this;
 }

@@ -1,198 +1,237 @@
+#include "../include/Shell.h"
+#include "../Daemons/initd.h"
+#include "../include/TerminalController.h"
 #include "../include/stdio.h"
-#include "../include/Signal.h"
-#include "../include/Resources.h"
-#include "../include/ELF.h"
 #include "../include/Kernel.h"
-#include "../include/Lex.h"
-#include "../include/CPPApplications.h"
-#include "../include/Executable.h"
-#include "../include/System.h"
-#include "../include/Graphics.h"
-#include "../include/OS.h"
-#include "../include/System.h"
-#include "../include/Daemon.h"
+#include "../include/DriverCommands.h"
 
-namespace BBP
+// Execute shell command
+BBP::std::errno_t BBP::system::initd::shell(std::string &line)
 {
-    bool doLoop = true;
-    bool exitShell = false;
+	// Copy data from line into shellLine
+	std::strcpy(&shellLine, line.data);
 
-    int shell(BBP::std::string &str)
-    {
-        // Get the first command line arg
-        std::c_string command = std::read_a(&str, 0);
-        
-        // Then go until space
-        for (std::index_t index = 0; index < str.dataSize; index++)
-        {
-            // Read char at index index
-            std::string_element c = std::read(&str, index);
+	// Run shell
+	return shell();
+}
 
-            // Check if 'c' is a space
-            if (c != ' ')
-                continue;
-            
-            str.data[index] = 0;
-            break;
+// Execute shell command (through shellLine)
+BBP::std::errno_t BBP::system::initd::shell()
+{
+	// Get line length
+	std::size_t lineLength = std::strlen(shellLine);
 
-        }
+	// Delimit input
+	delimitInput(lineLength);
 
-        // If string is just empty, do nothing
-        if (command[0] == 0)
-            return 0;
+	// Check if builtin
+	bool isCmdBuiltin = isBuiltin();
 
-        // Hash first command
-        std::hash_t firstHash = std::strhsh(command);
+	if (isCmdBuiltin)
+		shellBuiltin(argumentCount, argumentVectors.static_data);
+	else
+		std::printf("%s: command not found.\n", argumentVectors[0]);
+}
 
-        // Print hash
-        if (firstHash == std::static_hash("logout"))
-        {
-            exitShell = true;
-            return 0;
-        }
+// Spawn application
+BBP::std::errno_t BBP::system::initd::shellApplication(std::size_t argc, std::c_string *argv)
+{
 
-        // Create paths
-        std::PATH procPath("/proc/exec/");
-        procPath.makeAbsolutePath(system::kernelSS()->activeContext->workingDirectory);
-        std::PATH executable(command);
-        executable.makeAbsolutePath(&procPath);
+	// Print information
+	printShellInformation();
 
-        try 
-        {
-            // Create file, if it exists, no error will be thrown. Otherwise, an error will be thrown.
-            std::FILE executableFile(executable);
+	// Try to do a shell immediately
+	std::string shellCMD0 = std::String("cd /boot/");
+	shell(shellCMD0);
 
-            // The file exists. Check if the page has the correct magic numbers.
-            std::mem_t magic0 = std::read_r(executableFile.data()->fileData.page, BBP_EXEC_MAGIC0IDX);
-            std::mem_t magic1 = std::read_r(executableFile.data()->fileData.page, BBP_EXEC_MAGIC1IDX);
-            std::mem_t magic2 = std::read_r(executableFile.data()->fileData.page, BBP_EXEC_MAGIC2IDX);
-            std::mem_t magic3 = std::read_r(executableFile.data()->fileData.page, BBP_EXEC_MAGIC3IDX);
+	std::string shellCMD1 = std::String("elsa ELSA.esa");
+	shell(shellCMD1);
 
-            // If the magic matches up, this file is an executable.
-            bool isMachineCodeExecutable = (magic0 == BBP_EXEC_MAGIC0) && (magic1 == BBP_EXEC_MAGIC1) && (magic2 == BBP_EXEC_MAGIC2) && (magic3 == BBP_EXEC_MAGIC3);
-            
-            if (isMachineCodeExecutable)
-            {
-                // This file is an executable in machine code format. Extract the function from the page, and execute.
-                std::executable_main _entry = ((std::executable_main *)executableFile.data()->fileData.page->raw)[0];
-                std::execute(_entry, 0, nullptr);
-            }
-            else
-            {
-                std::printf("%s: Exec format error.\n", command);
-            }
+	std::string shellCMD2 = std::String("rae");
+	shell(shellCMD2);
 
-            return system::kernelSS()->activeContext->__errno;
+	std::string shellCMD3 = std::String("logout");
+	shell(shellCMD3);
 
-        }
-        catch (std::except const &e)
-        {
-            switch (system::kernelSS()->activeContext->__errno)
-            {
-            case ENOENT:
-                std::printf("%s: command not found.\n", command);
-                system::kernelSS()->activeContext->__errno = 0;
-                return -1;
-                break;
-            default:
-                // Unkown error, rethrow
-                throw;
-            }
-        }
+	// Get a shell Line
+	while (1)
+		shellApplicationGetLine();
 
-    }
+}
 
-    int shell(const char *ss)
-    {
-        // Get string length
-        std::size_t strL = std::strlen(ss);
+void BBP::system::initd::delimitInput(std::size_t lineLength)
+{
+	// Create stack of arguments
+	std::Stack<std::c_string> argStack(&argumentVectors, argumentVectors.dataSize);
 
-        // Create new string of that size
-        std::string str(strL + 1, (std::string_element *)BBP::system::kernelSS()->activeContext->activemem->calloc(strL + 1, sizeof(std::string_element)));
+	// If last character is space
+	bool isLastCharacterDelimiter = false;
 
-        // Copy string
-        std::strcpy(&str, ss);
+	// Last known string thing
+	std::c_string lastKnownCharacter = shellLine.static_data;
 
-        // save shell return value
-        int s = shell(str);
+	// reset argument count
+	argumentCount = 0;
 
-        // Free string mem
-        BBP::system::kernelSS()->activeContext->activemem->free(str.data);
+	// Split lines
+	for (std::index_t idx = 0; idx < lineLength; idx++)
+	{
+		// Get current character
+		std::string_element character = shellLine[idx];
 
-        // Return shell result
-        return s;
+		// If idx is space and isLastCharacterDelimiter, do nothing
+		if (character == ' ' && isLastCharacterDelimiter)
+			continue;
 
-    }
+		// If character is space, but last character is not delimiting character, push lastKnownStuff
+		if (character == ' ' && !isLastCharacterDelimiter)
+		{
+			// Push value
+			argStack << lastKnownCharacter;
+			isLastCharacterDelimiter = true;
 
-    BBP::std::static_string<509> linePage;
-    BBP::std::Stack<BBP::std::string_element> line(&linePage, linePage.dataSize);
+			// Update value
+			argumentCount++;
 
-    int shell_main(int argc, char **argv)
-    {
-        // This surpresses the g++ unused parameters warnings
-        argc = argc;
-        argv = argv;
+			// Write 0 to shellLine stuff
+			shellLine[idx] = 0;
 
-        int count = 0;
-        
+			// Update
+			isLastCharacterDelimiter = true;
+			continue;
+		}
 
+		// If character is not space, but is last character delimiter, update lastKnown stuff
+		if (character != ' ' && isLastCharacterDelimiter)
+		{
+			lastKnownCharacter = &shellLine[idx];
 
-        while (exitShell == false)
-        {
-            std::printf("\e[0;92m" HOSTNAME "\e[0;37m:\e[1;34m%s\e[0;37m$ ", system::kernelSS()->activeContext->workingDirectory->relName());
+			// Update
+			isLastCharacterDelimiter = false;
+		}
 
-            while (doLoop)
-            {
-                
-                // Get a character
-                char c = std::getChar();
+		// Update
+		isLastCharacterDelimiter = (character == ' ');
+	}
 
-                if (true)
-                {
-                    char del = 0x08;
+	// If last character is not a delimiter, push argument
+	if (isLastCharacterDelimiter == false)
+	{
+		argStack << lastKnownCharacter;
 
-                    switch (c)
-                    {
-                    case 0x0a:
-                    case 0x0d:
-                        doLoop = false;
-                        
-                        break;
+		argumentCount++;
+	}
+}
 
-                    case 12:
-                        // Screen clear
-                        std::printf("\033[2J\033[1;1H");
-                        std::printf("\e[0;92m" HOSTNAME "\e[0;37m:\e[1;34m%s\e[0;37m$ ", system::kernelSS()->activeContext->workingDirectory->relName());
-                        break;
+// Get a line
+void BBP::system::initd::shellApplicationGetLine()
+{
+	// Print directory
+	printShellDirectory();
 
-                    case 0x7f:
-                        
-                        if (line.atElement)
-                        {
-                            system::kernelSS()->activeContext->STDOUT <<= del;
-                            system::kernelSS()->activeContext->STDOUT <<= ' ';
-                            system::kernelSS()->activeContext->STDOUT <<= del;
-                            line--;
-                        }
+	// Get line
+	std::size_t lineLength = loadUserInput();
 
-                        break;
-                    default:
-                        system::kernelSS()->activeContext->STDOUT <<= c;
-                        line << c;
-                        break;
-                    }
-                }
-            }
-            line << '\0';
-            std::printf("\n");
-            shell(linePage);
-            line.atElement = 0;
-            count++;
+	// If line length is 0, do nothing
+	if (lineLength == 0)
+		return;
 
-            doLoop = true;
-        }
+	// Now do shell
+	shell(shellLine);
+}
 
+// Load a line from the user
+BBP::std::size_t BBP::system::initd::loadUserInput()
+{
+	// Keep track of line length
+	std::size_t lineLength = 0;
 
-        return 0;
-    }
+	// Should keep reading user input
+	bool readInput = true;
+
+	// Clear buffer
+	for (std::index_t idx = 0; idx < shellLine.dataSize; idx++)
+		shellLine.static_data[idx] = 0;
+
+	// Read input
+	while (readInput)
+	{
+		// Get a character
+		std::string_element character = std::getChar();
+
+		// If character is not within C0 or C1, do normal thing
+		bool isInC0 = (character >= BBP::std::Terminal::TerminalApplication::C0_Low && character <= BBP::std::Terminal::TerminalApplication::C0_High);
+		bool isInC1 = (character >= BBP::std::Terminal::TerminalApplication::C1_Low && character <= BBP::std::Terminal::TerminalApplication::C1_High);
+		bool isDelete = (character == 0x7F);
+
+		// If in neither, add character normally
+		if ((isInC0 || isInC1 || isDelete) == false && lineLength < shellLine.dataSize - 1)
+		{
+			// Write character
+			shellLine[lineLength++] = character;
+
+			// Null terminate
+			shellLine[lineLength] = 0;
+
+			// Write character
+			//getKernelInstance().getScreenDriver().writeData(strChar);
+			std::printf("%c", character);
+
+			// Continue
+			continue;
+		}
+
+		// If within C1, do nothing
+		if (isInC1)
+			continue;
+
+		// Get C0 action and do action
+		BBP::std::Terminal::TerminalApplication::C0 c0Action = (BBP::std::Terminal::TerminalApplication::C0)character;
+
+		// If is delete, and can delete
+		if (isDelete && lineLength)
+		{
+			// Move null into current space, then decrement lineLength
+			shellLine[--lineLength] = 0;
+
+			// Output a space
+			std::printf("%c %c", 8, 8);
+
+			// Continue loop
+			continue;
+		}
+
+		// Switch case
+		switch (c0Action)
+		{
+			// Newline
+		case BBP::std::Terminal::TerminalApplication::C0::LF:
+			// Stop reading stuff
+			readInput = false;
+			std::printf("\n");
+			break;
+
+			// Clear screen
+		case BBP::std::Terminal::TerminalApplication::C0::FF:
+
+			// Clear screen command
+			getKernelInstance().getScreenDriver().hardwareDriver.executeCommand(screenClearScreen, 0, nullptr);
+
+			// Reprint directory
+			printShellDirectory();
+
+			// Only print if something is present.
+			if (lineLength)
+				std::printf("%s", shellLine.static_data);
+
+			break;
+		}
+
+	}
+
+	// Null terminate
+	shellLine[lineLength] = 0;
+
+	// Return that
+	return lineLength;
 }

@@ -1,0 +1,7 @@
+Plugins/FileInfo.cpp: In function ‘bool BBP::std::populateVolumeInfo(BBP::std::VolumeInfo&, BBP::std::PATH&)’:
+Plugins/FileInfo.cpp:9:52: warning: unused parameter ‘info’ [-Wunused-parameter]
+    9 | bool BBP::std::populateVolumeInfo(std::VolumeInfo &info, std::PATH &path)
+      |                                   ~~~~~~~~~~~~~~~~~^~~~
+Plugins/FileInfo.cpp:9:69: warning: unused parameter ‘path’ [-Wunused-parameter]
+    9 | bool BBP::std::populateVolumeInfo(std::VolumeInfo &info, std::PATH &path)
+      |                                                          ~~~~~~~~~~~^~~~

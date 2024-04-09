@@ -4,7 +4,6 @@
 #include "../include/ELF.h"
 #include "../include/FileSys.h"
 #include "../include/Lex.h"
-#include "../include/CPPApplications.h"
 #include "../include/Executable.h"
 #include "../include/System.h"
 #include "../include/Graphics.h"
@@ -17,6 +16,7 @@
 #include "../include/StateMachine.h"
 #include "../include/Time.h"
 
+/*
 BBP::userspace::HyperVisor hypervisor;
 BBP::userspace::HyperVisor hypervisor2;
 BBP::userspace::StateMachine state;
@@ -109,7 +109,7 @@ int BBP::smile_main(int argc, char **argv)
 	w->coloumn = co;
 	w->line = lo;
 	
-	*/
+	
 
 	// EmbeddabLe Simple Assembler
 	// Roger Bemelmans
@@ -219,3 +219,4 @@ int BBP::smile_main(int argc, char **argv)
 
 	return 0;
 }
+*/

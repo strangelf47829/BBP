@@ -29,7 +29,7 @@ void BBP::system::Kernel::configureRoot(UEFI *uefi)
 
 	rootConfigured = true;
 	root = &systemUsers[0];
-	root->username = std::String("root");
+	root->username = std::String("kangel");
 	root->usernameHash = std::strhsh(root->username);
 	root->password = std::String(uefi->system.rootPassword);
 	root->passwordHash = std::strhsh(root->password);

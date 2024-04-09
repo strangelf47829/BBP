@@ -44,20 +44,50 @@ namespace BBP
 		{
 		public:
 
+			// Get dir component of path
 			std::c_string pathName();
+
+			// Get file component of path
 			std::c_string fileName();
 
+			// Get complete path name
 			std::c_string relName();
 
+			// Copy path from other path
+			void copyFrom(PATH &);
+
+			// Does this path start from root? (/)
 			bool isRelativeToRoot();
+
+			// Is this path defined to be referenced using root? (Volume path)
 			bool isDefinedFromRoot();
 
-			PATH &makeAbsolutePath(PATH *currentPath);
+			// If defined from root, reference path from root.
 			PATH &makeAbsolutePath();
 
+			// If defined from root, reference path from root. Otherwise, make this path relative to another path.
+			PATH &makeAbsolutePath(PATH *currentPath);
+
+			// Resolve any absolute file references.
 			PATH &resolveAbsolutes();
 
-			void makeRelative(PATH &reference, PATH &dir);
+			// Make dir relative to reference
+			static void makeRelative(PATH &reference, PATH &dir);
+
+			// Is this path a directory?
+			bool isDirectory();
+
+			// Is this path a file?
+			bool isFile();
+
+			// Make this path a file
+			std::PATH &makeFile();
+
+			// Make this path a directory
+			std::PATH& makeDirectory();
+
+			// Get pointer to volume root
+			std::PATH &volumePath();
 
 			PATH(VOLUME *, std::string &path);
 			PATH(VOLUME *, std::conststring path);

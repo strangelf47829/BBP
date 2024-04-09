@@ -1,4 +1,0 @@
-OS.cpp: In member function 'bool BBP::system::Kernel::BBPEntry(BBP::system::UEFI*)':
-OS.cpp:79:22: warning: variable 'result' set but not used [-Wunused-but-set-variable]
-   79 |         std::errno_t result = 0;
-      |                      ^~~~~~

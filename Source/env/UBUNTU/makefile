@@ -13,7 +13,7 @@ BIOS_SRC= BIOS/BIOS.cpp BIOS/POST.cpp
 UEFI_SRC= UEFI/UEFI.cpp UEFI/Records.cpp
 
 # =========== plugin targets
-PLUGINS= Time Memory Input File
+PLUGINS= Time Memory Input File Panic FileInfo
 PLUGINS_SRC= $(foreach plug,$(PLUGINS),./Plugins/$(plug).cpp)
 
 # Module information

@@ -14,9 +14,6 @@ BBP::system::DeviceDriver::DeviceDriver(std::Stack<std::string_element> *input, 
 
 BBP::std::word BBP::system::DeviceDriver::writeData(std::c_string data)
 {
-	// Write into software handle
-	softwareDriver << data;
-
 	// Then tell hardware handle to write that shiiit
 	hardwareDriver.send(std::strlen(data));
 }

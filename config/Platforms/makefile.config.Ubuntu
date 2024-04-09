@@ -17,7 +17,7 @@ LDFLAGS= $(SYSLDFLAGS) $(EXTLDFLAGS)
 
 
 # =========== Binary flags specific to this environment
-SYSCFLAGS= -c
-SYSCXXFLAGS= -c -std=c++17 -Wall -Wextra -fdiagnostics-show-option
+SYSCFLAGS= -c -g
+SYSCXXFLAGS= -c -g -std=c++17 -Wall -Wextra -fdiagnostics-show-option
 SYSARFLAGS= cr
 SYSLDFLAGS= -pthread

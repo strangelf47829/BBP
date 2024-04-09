@@ -1,9 +1,0 @@
-Auxiliary.cpp: In member function 'bool BBP::esa::esaProcessor::includeFromPath(BBP::std::FILE&, BBP::std::PATH&, BBP::std::Stack<char>&, BBP::std::PATH&)':
-Auxiliary.cpp:211:31: warning: implicitly-declared 'constexpr BBP::std::PATH& BBP::std::PATH::operator=(const BBP::std::PATH&)' is deprecated [-Wdeprecated-copy]
-  211 |                         out = rel;
-      |                               ^~~
-In file included from ../include/ELSA.h:1,
-                 from Auxiliary.cpp:1:
-../include/FileSys.h:66:25: note: because 'BBP::std::PATH' has user-provided 'BBP::std::PATH::PATH(BBP::std::PATH&)'
-   66 |                         PATH(std::PATH &);
-      |                         ^~~~

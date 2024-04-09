@@ -1,7 +1,0 @@
-badapple.cpp: In function 'int BBP::badapple_main(int, char**)':
-badapple.cpp:33:28: warning: unused parameter 'argc' [-Wunused-parameter]
-   33 | int BBP::badapple_main(int argc, char **argv)
-      |                        ~~~~^~~~
-badapple.cpp:33:41: warning: unused parameter 'argv' [-Wunused-parameter]
-   33 | int BBP::badapple_main(int argc, char **argv)
-      |                                  ~~~~~~~^~~~

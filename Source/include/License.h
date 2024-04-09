@@ -72,7 +72,7 @@ namespace BBP
 				: build(maj, min, pat, bui, ext), copyright(year, copy), license(name, info, url) {}
 
 			appInfo(std::byte maj, std::byte min, std::byte pat, std::byte bui)
-				: appInfo(maj, min, pat, bui, "Debug", 2024, "Rafael de Bie", "GNU GPL", "more info", "www.xvideos.com") {}
+				: appInfo(maj, min, pat, bui, "Debug", 2024, "Rafael de Bie", "GNU GPL", "more info", "127.0.0.1") {}
 
 			appInfo()
 				: appInfo(0, 1, 0, 1) {}

@@ -6,9 +6,6 @@ void Environment::Drivers::screen::loadScreenDriver(BBP::system::DeviceDriver &d
 	// Set stack to kernel stuff whatever
 	stdoutStack = BBP::std::Stack<BBP::std::string_element>(&driver.hardwareDriver.getOutput(), driver.hardwareDriver.getOutput().dataSize);
 
-	// When written to, use the print screen thingy
-	stdoutStack.writeTo = print_stack_to_string;
-
 	// This driver is builtin.
 	driver.hardwareDriver.hwid = 0; // Reset
 
@@ -22,8 +19,9 @@ void Environment::Drivers::screen::loadScreenDriver(BBP::system::DeviceDriver &d
 	// Set commands
 	driver.hardwareDriver.setHandleData(screenManifest.actions, screenManifest.commandCount, screenManifest.commands);
 
-	// Also do the same for STDOUT
+	// Also do the same for STDOUT, and STDERR
 	BBP::system::kernelSS()->getKernelSystemContext()->STDOUT.writeTo = print_stack_to_string;
+	BBP::system::kernelSS()->getKernelSystemContext()->STDERR.writeTo = print_stack_to_string;
 
 	// Then set input page
 	driver.softwareDriver.setOutputPage(&stdoutStack);

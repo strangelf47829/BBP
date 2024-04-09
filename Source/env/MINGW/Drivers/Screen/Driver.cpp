@@ -21,7 +21,6 @@ int BBP::std::printf(std::conststring format, ...)
 	va_end(args);
 
 	// Then print
-	system::getKernelInstance().getScreenDriver().softwareDriver << printfbuff.data;
 
 	return res;
 }

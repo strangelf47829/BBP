@@ -6,8 +6,8 @@
 
 #include <fstream>
 
-constexpr BBP::std::pos_t w = 800;
-constexpr BBP::std::pos_t h = 600;
+constexpr BBP::std::pos_t w = 1200;
+constexpr BBP::std::pos_t h = 800;
 
 BBP::std::STATIC_PAGE<BBP::std::RGBA_t, w *h> vmem;
 BBP::std::window window;
@@ -19,7 +19,7 @@ static SDL_Renderer *_renderer;
 static SDL_Surface *screenSurface;
 
 OS::Terminal::GTerm device;
-BBP::std::Terminal::TerminalApplication terminal({30, 40}, 60, &manager, &device);
+BBP::std::Terminal::TerminalApplication terminal({30, 80}, 60, &manager, &device);
 
 int init();
 void fini();
@@ -113,7 +113,7 @@ int main(int, char **)
 	BBP::std::PAGE<BBP::std::string_element> fontStr(fontMem.dataSize, fontMem.data);
 
 	// Load font
-	bool succ = loadFile("V:usr\\share\\zap-light16.psf", fontMem);
+	bool succ = loadFile("V:usr\\share\\zap-vga16.psf", fontMem);
 
 	int top = 0x00003018;
 	int bot = 0x0c0c0c0c;

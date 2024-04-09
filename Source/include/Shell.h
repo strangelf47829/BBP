@@ -15,7 +15,8 @@ namespace BBP
 		void printShellInformation();
 		void printShellDirectory();
 
-		
+		// Do a single shell command
+		void shell(std::string &);
 
 	}
 }

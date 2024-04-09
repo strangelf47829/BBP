@@ -74,8 +74,20 @@ BBP::system::SoftwareHandle &BBP::system::SoftwareHandle::operator<<(std::c_stri
 	if (OutputBuffer == nullptr)
 		return *this;	// Nothing output.
 
+	// Get current position
+	std::size_t prePosition = OutputBuffer->atElement;
+
 	// Just write that into output buffer.
 	*OutputBuffer <<= b;
+
+	// Get position after write
+	std::size_t postPosition = OutputBuffer->atElement;
+
+	// Send that amount of stuff to hardware
+	std::size_t bytesSent = BBP::system::getKernelInstance().getScreenDriver().hardwareDriver.send(postPosition - prePosition);
+
+	// Move output buffer back that amount of spaces, plus one
+	OutputBuffer->atElement -= (bytesSent + 1);
 
 	return *this;
 }

@@ -7,8 +7,8 @@ Boot.cpp:34:35: warning: comparison of integer expressions of different signedne
       |                                 ~~^~~~~~~~~~~~~~
 Boot.cpp: In function 'int SDL_main(int, char**)':
 Boot.cpp:116:30: warning: ISO C++ forbids converting a string constant to 'BBP::std::c_string' {aka 'char*'} [-Wwrite-strings]
-  116 |         bool succ = loadFile("V:usr\\share\\zap-light16.psf", fontMem);
-      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  116 |         bool succ = loadFile("V:usr\\share\\zap-vga16.psf", fontMem);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Boot.cpp:118:13: warning: unused variable 'top' [-Wunused-variable]
   118 |         int top = 0x00003018;
       |             ^~~

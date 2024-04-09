@@ -1,0 +1,7 @@
+Drivers/Screen/Driver.cpp: In function ‘void Environment::Drivers::screen::print_stack_to_string(BBP::std::Stack<char>*)’:
+Drivers/Screen/Driver.cpp:61:20: warning: unused variable ‘preRead’ [-Wunused-variable]
+   61 |  BBP::std::index_t preRead = stack->atElement;
+      |                    ^~~~~~~
+Drivers/Screen/Driver.cpp:67:20: warning: unused variable ‘postRead’ [-Wunused-variable]
+   67 |  BBP::std::index_t postRead = stack->atElement;
+      |                    ^~~~~~~~

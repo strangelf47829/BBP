@@ -14,7 +14,9 @@ BBP::std::word Environment::Drivers::screen::sendDataToScreen(BBP::std::size_t, 
 	std::size_t strLength = BBP::std::strlen(page);
 
 	// 'printf'
-	::write(STDOUT_FILENO, page.data, strLength);
+	std::size_t bytesSent = ::write(STDOUT_FILENO, page.data, strLength);
+
+	return bytesSent;
 }
 
 BBP::std::word Environment::Drivers::screen::receiveDataScreen(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &)

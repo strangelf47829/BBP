@@ -3,7 +3,6 @@
 #include "../include/Resources.h"
 #include "../include/FileSys.h"
 #include "../include/Executable.h"
-#include "../include/CPPApplications.h"
 #include "../include/Time.h"
 #include "../include/Graphics.h"
 #include "../include/OS.h"

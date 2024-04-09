@@ -3,11 +3,81 @@
 #include "../include/Shell.h"
 #include "../include/Kernel.h"
 #include "../include/DriverCommands.h"
+#include "../include/BuiltinShell.h"
 
-// just for show
-#include "../include/Executable.h"
-#include "../include/CPPApplications.h"
+BBP::std::errno_t BBP::system::initd::shell(std::size_t argc, std::c_string *argv)
+{
 
+
+}
+
+// Is builtin?
+bool BBP::system::initd::isBuiltin()
+{
+	// If no arguments, do nothing
+	if (argumentCount == 0)
+		return false;
+
+	// Then hash first argument
+	std::hash_t argumentOneHash = std::strhsh(argumentVectors[0]);
+
+	// Compare over list of known hashes
+	for (std::index_t idx = 0; idx < builtinCommands.dataSize; idx++)
+	{
+		// Get command
+		BuiltinCommand *command = builtinCommands[idx];
+
+		// If command is invalid, skip
+		if (command == nullptr)
+			continue;
+
+		// If command hash is not the same, exit
+		if (command->hash != argumentOneHash)
+			continue;
+		
+		// If strings are equal, return true
+		if (std::strcmp(command->name.data, argumentVectors[0]))
+			return true;
+	}
+
+	// Default is no.
+	return false;
+}
+
+// Execute builtin action
+BBP::std::errno_t BBP::system::initd::shellBuiltin(std::size_t argc, std::c_string *argv)
+{
+	// If no arguments, do nothing
+	if (argumentCount == 0)
+		return -1;
+
+	// Then hash first argument
+	std::hash_t argumentOneHash = std::strhsh(argumentVectors[0]);
+
+	// Compare over list of known hashes
+	for (std::index_t idx = 0; idx < builtinCommands.dataSize; idx++)
+	{
+		// Get command
+		BuiltinCommand *command = builtinCommands[idx];
+
+		// If command is invalid, skip
+		if (command == nullptr)
+			continue;
+
+		// If command hash is not the same, exit
+		if (command->hash != argumentOneHash)
+			continue;
+
+		// If strings are equal, return function outcome
+		if (std::strcmp(command->name.data, argumentVectors[0]))
+			return command->entryPoint(argc, argv);
+	}
+
+	// Error.
+	return ENODATA;
+}
+
+/*
 constexpr BBP::std::string_element NL = 0x0a;	// new line
 constexpr BBP::std::string_element CR = 0x0d;	// carriage return
 
@@ -15,6 +85,11 @@ constexpr BBP::std::string_element CL = 0x0c;	// clear line
 
 constexpr BBP::std::string_element DEL = 0x7f;	// Delete character
 
+// empty stuff
+void emptyIRQFunctor(BBP::std::size_t argc, BBP::std::interrupt_arg_t *argv)
+{
+	BBP::std::printf("IRQ called.\n");
+}
 
 BBP::system::appInfo shellInformation;
 
@@ -98,6 +173,15 @@ BBP::std::size_t BBP::system::initd::getShellLine()
 	// Get line
 	printShellDirectory();
 
+	BBP::std::c_string a = "makeirq";
+	BBP::std::c_string b = "irq";
+
+	// Print shell stuff
+	shell(1, &a);
+	shell(1, &b);
+
+	return 0;
+
 	// Get the line length
 	std::size_t lineLength = getLine(shellLine);
 
@@ -105,44 +189,10 @@ BBP::std::size_t BBP::system::initd::getShellLine()
 	if (lineLength == 0)
 		return 0;
 
-	// Look for first space. (Ignoring delimiters for now)
-	// ...
-
-	// Hash command
-	std::hash_t cmdHash = std::strhsh(shellLine.static_data);
-
-	std::printf("Hash: 0x%08x\n", cmdHash);
-
-	// Check for simple builtin commands
-	switch (cmdHash)
-	{
-	case std::static_hash("logout"):
-		return maxDaemonNameLength + 1;
-	case std::static_hash("?"):
-		printShellInformation();
-		return 0;
-	case std::static_hash("emma"):
-		std::printf("Hewwo!\n");
-		return 0;
-	case std::static_hash("run"):
-		try {
-			BBP::std::execute(smile_main, 0, nullptr);
-		}
-		catch (...)
-		{
-
-		}
-		
-
-		return 0;
-	}
-
-	//0x39a4887f
-
 	std::c_string argv[1] = { shellLine.static_data };
 	shell(1, argv);
 
-	return lineLength;
+	return maxDaemonNameLength + 1;
 }
 
 
@@ -162,6 +212,47 @@ BBP::std::errno_t BBP::system::initd::shell(std::size_t argc, std::c_string *arg
 
 	// Otherwise, execute shell commands. argv[0] is always a command, followed by arguments.
 	std::printf("Executing command: %s\n", argv[0]);
+
+	// Hash command
+	std::hash_t cmdHash = std::strhsh(shellLine.static_data);
+
+	// Check for simple builtin commands
+	switch (cmdHash)
+	{
+	case std::static_hash("logout"):
+		return maxDaemonNameLength + 1;
+	case std::static_hash("?"):
+		printShellInformation();
+		return 0;
+	case std::static_hash("emma"):
+		std::printf("Hewwo!\n");
+		return 0;
+	case std::static_hash("irq"):
+		getKernelInstance().IRQHandler.updateHandler();
+		return 0;
+	case std::static_hash("makeirq"):
+
+		// create IRQ thingy
+		BBP::std::IRQ irq;
+		BBP::std::createInterrupt(irq, emptyIRQFunctor);
+		irq.removeFromQueue = false;
+
+		getKernelInstance().IRQHandler.handle(irq);
+
+		return 0;
+	case std::static_hash("run"):
+		try {
+			BBP::std::execute(smile_main, 0, nullptr);
+		}
+		catch (...)
+		{
+
+		}
+		return 0;
+	default:
+		std::printf("Unkown command '%s' (0x%08x)\n", shellLine.static_data, cmdHash);
+		return 0;
+	}
 
 	return 0;
 }
@@ -209,3 +300,4 @@ void BBP::system::printShellInformation()
 	else
 		std::printf("\n\n");
 }
+*/

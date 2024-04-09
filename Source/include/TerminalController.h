@@ -41,6 +41,8 @@ namespace BBP
 
 				} currentState;
 
+			public:
+
 				// C0 control codes (inclusive)
 				constexpr static CC C0_Low = 0x00;
 				constexpr static CC C0_High = 0x1E;
@@ -243,6 +245,8 @@ namespace BBP
 
 					SCP = 0x6b
 				};
+
+			private:
 
 				// Current string state
 				enum StringState

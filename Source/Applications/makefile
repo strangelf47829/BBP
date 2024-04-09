@@ -6,7 +6,7 @@
 MODULE=Applications
 
 # Source files
-MODULE_SRC=Shell.cpp Logout.cpp neofetch.cpp badapple.cpp Smile.cpp Boot.cpp
+MODULE_SRC= Shell.cpp Smile.cpp
 
 # Actually include the makefile
 include ../makefile

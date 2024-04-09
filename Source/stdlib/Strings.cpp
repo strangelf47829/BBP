@@ -146,6 +146,28 @@ bool BBP::std::strcmp(string *str1, conststring str2)
 	return true;
 }
 
+bool BBP::std::strcmp(c_string a, c_string b)
+{
+	// If both are equal to eachother, return true
+	if (a == b)
+		return true;
+
+	// If either are nullptrs, return false
+	if (a == nullptr || b == nullptr)
+		return false;
+
+	// Compare both
+	for (BBP::std::index_t idx = 0; a[idx] || b[idx]; idx++)
+	{
+		// If string at this position is not the same, return false
+		if (a[idx] != b[idx])
+			return false;
+	}
+
+	// Return true
+	return true;
+
+}
 
 void BBP::std::operator<=(string &dst, conststring src)
 {

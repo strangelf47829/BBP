@@ -6,7 +6,7 @@
 MODULE= System
 
 # Source files
-MODULE_SRC=Daemon.cpp Fini.cpp Init.cpp Kernel.cpp Shell.cpp Bootloader.cpp KernelDrivers.cpp KernelSubsystems.cpp OS.cpp BootRecords.cpp SoftwareDrivers.cpp HardwareDriver.cpp KernelSetters.cpp
+MODULE_SRC=Ctrl.cpp Daemon.cpp Fini.cpp Init.cpp Kernel.cpp Shell.cpp Bootloader.cpp KernelDrivers.cpp KernelSubsystems.cpp OS.cpp BootRecords.cpp SoftwareDrivers.cpp HardwareDriver.cpp KernelSetters.cpp IRQHandler.cpp Shell.cpp ShellHelpers.cpp
 
 # Actually include the makefile
 include ../makefile

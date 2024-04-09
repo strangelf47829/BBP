@@ -14,6 +14,9 @@ namespace OS
 
 			// Actual OS Entry point
 			bool EntryPoint(BBP::system::UEFI *);
+
+			// OS Panic
+			void OSPanic(BBP::std::errno_t, BBP::std::c_string);
 		}
 
 		namespace WINDOWSE20

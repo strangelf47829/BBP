@@ -4,7 +4,6 @@
 #include "../include/ELF.h"
 #include "../include/FileSys.h"
 #include "../include/Lex.h"
-#include "../include/CPPApplications.h"
 #include "../include/Executable.h"
 #include "../include/System.h"
 #include "../include/Time.h"
@@ -14,7 +13,7 @@
 #define NORM "\e[0;37m"
 
 
-int BBP::neofetch_main(int argc, char **argv)
+int neofetch(int argc, char **argv)
 {
 	/*
 	//std::printf(RED "BBBBBBBBBBBBBBBBB   BBBBBBBBBBBBBBBBB" NORM "\n");

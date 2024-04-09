@@ -52,6 +52,9 @@ namespace BBP
 
 		/* Use this type when referring to the smallest possible division of memory in streams. */
 		typedef byte mem_t;
+
+		/* The hashing type of a string */
+		typedef uint32_t hash_t;
 	}
 }
 

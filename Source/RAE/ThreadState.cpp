@@ -2,7 +2,21 @@
 #include "../include/Hyperv.h"
 #include "../include/stdio.h"
 
-BBP::userspace::pid_t BBP::userspace::HyperVisor::allocateThread()
+BBP::std::index_t BBP::userspace::HyperVisor::allocateThreadIDX()
+{
+	// Loop over each thread
+	for (std::index_t idx = 0; idx < threadCount; idx++)
+	{
+		// If thread is inactive (and cold), return index
+		if (threads[idx].active == false && threads[idx].isThreadCold())
+			return idx;
+	}
+
+	// Throw error
+	throw std::exception("No free threads", EBUSY);
+}
+
+BBP::userspace::pid_t BBP::userspace::HyperVisor::allocateThreadPID()
 {
 	return currentPIDCount++;
 }
@@ -14,16 +28,22 @@ BBP::userspace::Thread *BBP::userspace::HyperVisor::spawnThread(std::ELF::ELFBui
 		std::exception("Cannot execute binary: not an executable.", ENOEXEC);
 
 	// Get next available PID
-	pid_t threadPID = allocateThread();
+	std::index_t threadIDX = allocateThreadIDX();
+	pid_t threadPID = allocateThreadPID();
 
 	// Get thread
-	userspace::Thread *t = &threads.static_data[threadPID];
+	userspace::Thread *t = &threads.static_data[threadIDX];
+
+	// Set flags
 	t->myPid = threadPID;
-	std::printf("Spawned thread %u.\n", t->myPid);
+	t->myIdx = threadIDX;
+
+	// print info
+	std::printf("Spawned thread with pid %u (id: %u).\n", t->myPid, t->myIdx);
 
 	// Set active
 	t->active = true;
-	activeThread = threadPID;
+	activeThread = threadIDX;
 
 	// Set page
 	t->executable.loadExecutable(binary, allocator);
@@ -134,5 +154,5 @@ void BBP::userspace::HyperVisor::destroyThread(userspace::pid_t pid)
 bool BBP::userspace::Thread::isThreadCold()
 {
 	// Return true if the argument stack is at 0
-	return argumentStack.atElement == 0;
+	return (argumentStack.atElement == 0);
 }

@@ -35,9 +35,6 @@ namespace BBP
 		/* The absolute longest size of a string */
 		const size_t max_string_length = 0xFFFF;
 
-		/* The hashing type of a string */
-		typedef uint32_t hash_t;
-
 		/* Copy string literal into 'dst' */
 		void strcpy(string *dst, conststring src);
 		void operator<=(string &dst, conststring src);
@@ -52,8 +49,8 @@ namespace BBP
 		/* Compare string to string literal */
 		bool strcmp(string *sta, conststring stb);
 
-		/* Compare string to conventional string */
-		bool strcmp(string *sta, c_string stb);
+		/* Compare conventional string to conventional string */
+		bool strcmp(c_string sta, c_string stb);
 
 		/* Calculate size of string literal */
 		size_t strlen(conststring str);

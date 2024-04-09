@@ -1,11 +1,11 @@
 #include "../include/Executable.h"
-#include "../include/CPPApplications.h"
+//#include "../include/CPPApplications.h"
 #include "../include/stdio.h"
 #include "../include/Graphics.h"
 #include "../include/OS.h"
 #include "../include/Kernel.h"
 
-const BBP::std::Executable BBP::std::executables[] = {{shell_main, "/proc/shell"}};
+const BBP::std::Executable BBP::std::executables[] = { {nullptr, "/proc/shell"}};//{{shell_main, "/proc/shell"}};
 
 BBP::std::STATIC_PAGE<BBP::std::executableFrame, 12> BBP::std::procFrames;
 BBP::std::Stack<BBP::std::executableFrame> BBP::std::Processes(&procFrames);

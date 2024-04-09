@@ -130,6 +130,7 @@ namespace BBP
 			std::byte activeWPage;
 
 			// Thread specific stuff (C++)
+			std::index_t myIdx;
 			pid_t myPid;
 			
 			// Thread status functions

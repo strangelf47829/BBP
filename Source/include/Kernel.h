@@ -2,6 +2,7 @@
 #define BBP_SYSTEM_KERNEL_H
 
 #include "KernelSubSystems.h"
+#include "Interrupts.h"
 
 namespace BBP
 {
@@ -103,6 +104,9 @@ namespace BBP
 			// External stuff
 			void allocateExternalDrivers(std::size_t);
 			DeviceDriver &getNextAvailableDriver();
+
+			// Interrupt handler
+			volatile BBP::std::KernelIRQHandler IRQHandler;
 
 			// Load a driver into memory
 			std::errno_t loadDriver(UEFILoadDriver loadDriver, DeviceDriver &intoDriver, std::size_t argc, std::word *argv);

@@ -9,7 +9,7 @@ void BBP::userspace::StateMachine::setActiveHypervisor(userspace::HyperVisor *hy
 void BBP::userspace::StateMachine::setActiveThread(userspace::Thread *t)
 {
 	activeThread = t;
-	activeHypervisor->activeThread = t->myPid;
+	activeHypervisor->activeThread = t->myIdx;
 }
 
 void BBP::userspace::StateMachine::cycleThread()

@@ -1,5 +1,6 @@
 #include "../include/Kernel.h"
 #include "../include/Daemon.h"
+#include "../include/stdctrl.h"
 
 // Statically allocated stuff
 BBP::system::Kernel kernel;
@@ -16,6 +17,11 @@ BBP::system::Kernel::Kernel()
 	fileDriver(nullptr, nullptr, "Generic FileSystem", fileSystemActions, fileSystemCMDCount, fileSystemCMD)
 {
 
+}
+
+BBP::system::SystemContext *BBP::system::Kernel::getCurrentSystemContext()
+{
+	return subsystems.activeContext;
 }
 
 BBP::std::index_t BBP::system::Kernel::findFirstEmptyFrame()
@@ -83,7 +89,7 @@ BBP::system::procFrame *BBP::system::Kernel::allocateDaemonFrame(DaemonRecord *r
 	frame->systemContext = subsystems.activeContext;
 
 	// Create process context
-	frame->processContext = system::ProcessContext(*frame->systemContext, "/home/", "/home/");
+	frame->processContext = system::ProcessContext(*frame->systemContext, "/home/kangel/", "/home/kangel/");
 
 	// Now set daemon specific stuff
 	frame->record = rec;
@@ -100,47 +106,56 @@ bool BBP::system::Kernel::executeFrame(procFrame *frame)
 	if (frame == nullptr)
 		return false;
 
-	// Switch daemon type
-	switch (frame->identifier.type)
+	// Surround entire switch-statement in try-catch block since error may occur anywhere
+	try
 	{
-	case procFrame::daemon:
-	{
-		// Check if record exists
-		if (frame->record == nullptr)
-			return false;
 
-		// Check if record has owner
-		if (frame->record->owner == nullptr)
-			return false;
+		// Switch daemon type
+		switch (frame->identifier.type)
+		{
+		case procFrame::daemon:
+		{
+			// Check if record exists
+			if (frame->record == nullptr)
+				return false;
 
-		// Get service
-		DaemonService *service = frame->record->owner->lookupFunctor(frame->spawnedBy);
+			// Check if record has owner
+			if (frame->record->owner == nullptr)
+				return false;
 
-		// If service does not exist, exit
-		if (service == nullptr)
-			return false;
+			// Get service
+			DaemonService *service = frame->record->owner->lookupFunctor(frame->spawnedBy);
 
-		// Set execution status
-		frame->state = procFrame::procState::executing;
+			// If service does not exist, exit
+			if (service == nullptr)
+				return false;
 
-		// Store old active frame
-		procFrame *oldActiveFrame = subsystems.activeContext->activeFrame;
+			// Set execution status
+			frame->state = procFrame::procState::executing;
 
-		// Override frame
-		subsystems.activeContext->activeFrame = frame;
+			// Store old active frame
+			procFrame *oldActiveFrame = subsystems.activeContext->activeFrame;
 
-		// Execute functor
-		frame->record->owner->functorFunctor(service->hash, 0, nullptr);
+			// Override frame
+			subsystems.activeContext->activeFrame = frame;
 
-		// Restore old frame
-		subsystems.activeContext->activeFrame = oldActiveFrame;
+			// Execute functor
+			frame->record->owner->functorFunctor(service->hash, 0, nullptr);
 
-		break;
+			// Restore old frame
+			subsystems.activeContext->activeFrame = oldActiveFrame;
+
+			break;
+		}
+
+		default:
+			// Unkown type
+			throw std::exception("Unkown proc frame type.", EINVAL);
+		}
 	}
-
-	default:
-		// Unkown type
-		throw std::exception("Unkown proc frame type.", EINVAL);
+	catch (BBP::std::ProcSignal &signal)
+	{
+		std::printf("Stopped frame: Caught signal.\n");
 	}
 
 	return true;

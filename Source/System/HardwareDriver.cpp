@@ -17,7 +17,14 @@ BBP::std::size_t BBP::system::HardwareHandle::send(std::size_t amount)
 	if (sendData == nullptr)
 		return 0;
 
-	return sendData(amount, outputBuffer);
+	// Get amount of data written
+	BBP::std::size_t bytesSent = sendData(amount, outputBuffer);
+
+	// Write that amount of zero's into buffer
+	for (std::index_t idx = 0; idx < bytesSent; idx++)
+		outputBuffer[idx] = 0;
+
+	return bytesSent;
 }
 
 BBP::std::size_t BBP::system::HardwareHandle::receive(std::size_t amount)

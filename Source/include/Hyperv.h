@@ -51,7 +51,10 @@ namespace BBP
 
 			pid_t currentPIDCount;
 
-			pid_t allocateThread();
+			// IDX: The index of the thread, PID: PID.
+			std::index_t allocateThreadIDX();
+			pid_t allocateThreadPID();
+
 			userspace::Thread *spawnThread(std::ELF::ELFBuilder &binary, std::ResourceManager *allocator);
 			void destroyThread(userspace::pid_t pid);
 			void FetchActiveThreadInstruction();

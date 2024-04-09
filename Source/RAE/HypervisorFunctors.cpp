@@ -28,7 +28,7 @@ bool BBP::userspace::HyperVisor::advanceThread(userspace::StateMachine &state, s
 bool BBP::userspace::HyperVisor::advanceThread(userspace::StateMachine &state)
 {
 	// Check for valid thread
-	if (activeThread >= activeThreadCount)
+	if (activeThread >= threadCount)
 		std::exception("Invalid active thread.", EINVAL);
 
 	// Check for active thread
