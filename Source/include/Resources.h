@@ -13,8 +13,8 @@ namespace BBP
 		extern void *ext_malloc(std::size_t);
 		extern void *ext_calloc(std::size_t, std::size_t);
 
-		static constexpr size_t max_objects = 1000;
-		static constexpr size_t max_allocations = 1000;
+		static constexpr size_t max_objects = 0x400;
+		static constexpr size_t max_allocations = 0x400;
 
 		struct AbstractGCEntry
 		{
@@ -45,33 +45,29 @@ namespace BBP
 			{
 				return (void *)ptr;
 			}
+			GCEntry(T *p)
+			{
+				ptr = p;
+			}
 		};
 
-		class ResourceManager
+		// Allows for dynamic object allocation using (new/delete) 
+		class objectAllocator
 		{
 		public:
 
-			ResourceManager();
+			objectAllocator();
 
-			void *malloc(std::size_t);
-			void *calloc(std::size_t, std::size_t);
-
-			std::size_t totalAllocations = 0;
-
-			template <typename T>
-			inline T *add_object(T *ptr)
+			template<class T>
+			inline T *Register(T *ptr)
 			{
-
 				// See if allocation is possible
 				if (this->nextObjectAvailable == this->invalidObjectIndex)
 					throw std::exception("Could not register new'd data to Resource manager: Out of allocation space.", ENOMEM);
 
 				// Store that write into next possible object
-
-				GCEntry<T> *entry = new GCEntry<T>();
-				entry->ptr = ptr;
+				GCEntry<T> *entry = new GCEntry<T>(ptr);
 				this->objects.data[this->nextObjectAvailable] = entry;
-				totalAllocations += sizeof(T);
 
 				// Find next possible location
 				this->nextObjectAvailable = find_next_empty_object();
@@ -79,16 +75,118 @@ namespace BBP
 				// Return ptr, in case it is needed for something
 				return ptr;
 			}
-			void add_alloc(void *);
 
+			template<class T>
+			inline void Delete(T *d)
+			{
+				// Dont delete nullptrs.
+				if (d == nullptr)
+					return;
+
+				// Delete pointer if it was able to.
+				_delete((void *)d); 
+			}
+
+			// Delete everything.
+			std::size_t deleteAll();
+
+		private:
+
+			// Delete stuff
+			bool _delete(void *);
+
+			// Searches in the object page.
+			std::index_t find_next_empty_object();
+
+			// Searches in the 'new' 
+			std::index_t find_Object_pointer(void *);
+
+			// Used to store the indicies of 'new'-'delete' things
+			std::index_t invalidObjectIndex;
+			std::index_t nextObjectAvailable;
+			std::STATIC_PAGE<AbstractGCEntry *, max_objects> objects;
+
+			// Internal functions to quickly delete data at known indicies
+			void _delete(std::index_t);
+
+			// Delete stuff
+			void mark_deleted(void *);
+
+		};
+
+		// Allows for dynamic page allocation using (malloc/calloc)
+		class pageAllocator
+		{
+		public:
+
+			pageAllocator();
+
+			// Allocate stuff
+			void *malloc(std::size_t);
+			void *calloc(std::size_t, std::size_t);
+
+			// Free something
 			void free(void *);
 
-			void mark_deleted(void *);
+			// Free Everything
+			std::size_t freeAll();
+
+		private:
+
+			// Searches in the allocation page.
+			std::index_t find_next_empty_alloc();
+
+			// Searches in the 'allocations' 
+			std::index_t find_Alloc_pointer(void *);
+
+			// Used to store the indicies of 'alloc'-'free' things
+			std::index_t invalidAllocationIndex;
+			std::index_t nextAllocationAvailable;
+			std::STATIC_PAGE<void *, max_allocations> allocations;
+
+			// Internal functions to quickly free data at known indicies
+			void free(void *, std::index_t);
+
+			// Add an allocation
+			void add_alloc(void *);
+
+		};
+
+		class ResourceManager
+		{
+		private:
+
+			// Allocators
+			pageAllocator pageManager;
+			objectAllocator objectManager;
+
+		public:
+
+			// malloc stuff
+			void *malloc(std::size_t);
+			void *calloc(std::size_t, std::size_t);
+
+			// Free stuff
+			void free(void *);
+
+			// Delete stuff
 			void _delete(void *);
 
-			std::index_t freeAll();
-			std::index_t deleteAll();
-			std::index_t dealloc();
+			// Add stuff
+			template<class T>
+			inline T *add_object(T *ptr)
+			{
+				return objectManager.Register(ptr);
+			}
+
+			// Free everything
+			std::size_t freeAll();
+
+			// Delete everything
+			std::size_t deleteAll();
+
+			// Complete clear everything
+			std::size_t clearAll();
 
 			// allocation tools for pages
 			template<typename T>
@@ -131,33 +229,7 @@ namespace BBP
 				page_calloc(page, count, sizeof(T));
 			}
 
-		private:
-
-			// Internal functions to quickly free / delete data at known indicies
-			void free(void *, std::index_t);
-			void _delete(std::index_t);
-
-			// Searches in the allocations and object page respectively.
-			std::index_t find_next_empty_alloc();
-			std::index_t find_next_empty_object();
-
-			// Searches in the 'allocations' and 'new' 
-			std::index_t find_Alloc_pointer(void *);
-			std::index_t find_Object_pointer(void *);
-
-			// Used to store the indicies of 'alloc'-'free' things
-			std::index_t invalidAllocationIndex;
-			std::index_t nextAllocationAvailable;
-			std::STATIC_PAGE<void *, max_allocations> allocations;
-
-			// Used to store the indicies of 'new'-'delete' things
-			std::index_t invalidObjectIndex;
-			std::index_t nextObjectAvailable;
-			std::STATIC_PAGE<AbstractGCEntry *, max_objects> objects;
 		};
-
-		//extern ResourceManager progmem;
-		//extern ResourceManager *activemem;
 	}
 }
 

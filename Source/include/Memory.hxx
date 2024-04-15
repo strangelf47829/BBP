@@ -1,9 +1,8 @@
-#include "Except.h"
-#include "Memory.h"
-
 #ifndef BBP_STDLIB_MEMORY_HXX
 #define BBP_STDLIB_MEMORY_HXX
 
+#include "Except.h"
+#include "Memory.h"
 
 template <typename T>
 inline void __UNSAFE__(BBP::std::write)(PAGE<T> *page, T &data, index_t index)

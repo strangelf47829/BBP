@@ -4,6 +4,7 @@
 #include "stddef.h"
 #include "Time.h"
 #include "Memory.h"
+#include "Hashing.h"
 
 namespace BBP
 {

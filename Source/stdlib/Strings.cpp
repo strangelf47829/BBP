@@ -166,7 +166,32 @@ bool BBP::std::strcmp(c_string a, c_string b)
 
 	// Return true
 	return true;
+}
 
+bool BBP::std::strcmp(string &a, string &b)
+{
+	// Get sequence length for both
+	std::size_t seqlen_a = seqlen(a);
+	std::size_t seqlen_b = seqlen(b);
+
+	// If they are both 0, return true
+	if (seqlen_a == seqlen_b && seqlen_a == 0)
+		return true;
+
+	// If these don't match, return false
+	if (seqlen_a != seqlen_b)
+		return false;
+
+	// Compare both
+	for (BBP::std::index_t idx = 0; a[idx] || b[idx]; idx++)
+	{
+		// If string at this position is not the same, return false
+		if (a[idx] != b[idx])
+			return false;
+	}
+
+	// Return true
+	return true;
 }
 
 void BBP::std::operator<=(string &dst, conststring src)
@@ -491,6 +516,14 @@ BBP::std::hash_t BBP::std::strhsh(std::string &str)
 	return std::strhsh(std::read_a(&str, 0));
 }
 
+BBP::std::hash_t BBP::std::strhsh(const std::string &str)
+{
+	// Create new string for some reason?
+	std::string str2(str.dataSize, str.data);
+
+	return std::strhsh(str2);
+}
+
 BBP::std::hash_t BBP::std::strhsh(std::conststring str)
 {
 	return std::strhsh((std::c_string) str);
@@ -529,4 +562,29 @@ void BBP::std::strhsh(std::hash_t &hash, std::word &Power, std::string_element &
 	// Run the hashing equation once
 	hash = (hash + (c - 'a' + 1) * Power) % m;
 	Power = (p * Power) % m;
+}
+
+template<>
+BBP::std::string::PAGE<BBP::std::string_element>(const char *arr)
+	: PAGE<BBP::std::string_element>(BBP::std::strlen(arr), (std::c_string)arr)
+{
+	
+}
+
+template<>
+BBP::std::string::operator BBP::std::hash_t() const
+{
+	return std::strhsh(*this);
+}
+
+template<>
+bool BBP::std::PAGE<char>::operator ==(string &b)
+{
+	return std::strcmp(*this, b);
+}
+
+template<>
+bool BBP::std::PAGE<char>::operator !=(string &b)
+{
+	return !(*this == b);
 }

@@ -1,0 +1,27 @@
+In file included from ../include/Stack.h:88,
+                 from ../include/Resources.h:5,
+                 from PageAllocator.cpp:3:
+../include/Stack.hxx: In member function ‘void BBP::std::Stack<K>::Extend(BBP::std::ResourceManager*, BBP::std::index_t)’:
+../include/Stack.hxx:135:60: warning: invalid use of incomplete type ‘class BBP::std::ResourceManager’
+  135 |    *page = std::PAGE<K>(page->dataSize + by, (K *)allocator->calloc(page->dataSize + by, sizeof(K)));
+      |                                                            ^~
+In file included from ../include/Resources.h:5,
+                 from PageAllocator.cpp:3:
+../include/Stack.h:11:9: note: forward declaration of ‘class BBP::std::ResourceManager’
+   11 |   class ResourceManager;
+      |         ^~~~~~~~~~~~~~~
+In file included from ../include/Stack.h:88,
+                 from ../include/Resources.h:5,
+                 from PageAllocator.cpp:3:
+../include/Stack.hxx:141:13: warning: invalid use of incomplete type ‘class BBP::std::ResourceManager’
+  141 |    allocator->free(oldData);
+      |             ^~
+In file included from ../include/Resources.h:5,
+                 from PageAllocator.cpp:3:
+../include/Stack.h:11:9: note: forward declaration of ‘class BBP::std::ResourceManager’
+   11 |   class ResourceManager;
+      |         ^~~~~~~~~~~~~~~
+PageAllocator.cpp: In constructor ‘BBP::std::pageAllocator::pageAllocator()’:
+PageAllocator.cpp:12:19: warning: unused variable ‘nul2’ [-Wunused-variable]
+   12 |  AbstractGCEntry *nul2 = nullptr;
+      |                   ^~~~

@@ -12,41 +12,41 @@ Lexer.cpp:611:63: warning: unused parameter ‘stopAtNewLine’ [-Wunused-parame
       |                                                          ~~~~~^~~~~~~~~~~~~
 In file included from Lexer.cpp:1:
 ../include/Lex.h: In constructor ‘BBP::std::Lexer::lex_context::lex_context()’:
-../include/Lex.h:157:37: warning: ‘BBP::std::Lexer::lex_context::syspaths’ will be initialized after [-Wreorder]
-  157 |     std::Stack<std::string_element> syspaths;
+../include/Lex.h:156:37: warning: ‘BBP::std::Lexer::lex_context::syspaths’ will be initialized after [-Wreorder]
+  156 |     std::Stack<std::string_element> syspaths;
       |                                     ^~~~~~~~
-../include/Lex.h:150:10: warning:   ‘bool BBP::std::Lexer::lex_context::abort’ [-Wreorder]
-  150 |     bool abort;
+../include/Lex.h:149:10: warning:   ‘bool BBP::std::Lexer::lex_context::abort’ [-Wreorder]
+  149 |     bool abort;
       |          ^~~~~
 Lexer.cpp:989:1: warning:   when initialized here [-Wreorder]
   989 | BBP::std::Lexer::lex_context::lex_context()
       | ^~~
 In file included from Lexer.cpp:1:
-../include/Lex.h:150:10: warning: ‘BBP::std::Lexer::lex_context::abort’ will be initialized after [-Wreorder]
-  150 |     bool abort;
+../include/Lex.h:149:10: warning: ‘BBP::std::Lexer::lex_context::abort’ will be initialized after [-Wreorder]
+  149 |     bool abort;
       |          ^~~~~
-../include/Lex.h:127:18: warning:   ‘BBP::std::index_t BBP::std::Lexer::lex_context::atPosition’ [-Wreorder]
-  127 |     std::index_t atPosition;
+../include/Lex.h:126:18: warning:   ‘BBP::std::index_t BBP::std::Lexer::lex_context::atPosition’ [-Wreorder]
+  126 |     std::index_t atPosition;
       |                  ^~~~~~~~~~
 Lexer.cpp:989:1: warning:   when initialized here [-Wreorder]
   989 | BBP::std::Lexer::lex_context::lex_context()
       | ^~~
 In file included from Lexer.cpp:1:
-../include/Lex.h:144:10: warning: ‘BBP::std::Lexer::lex_context::literalDepth’ will be initialized after [-Wreorder]
-  144 |     char literalDepth; // 0 if not in literal, otherwise used to mask keywords.
+../include/Lex.h:143:10: warning: ‘BBP::std::Lexer::lex_context::literalDepth’ will be initialized after [-Wreorder]
+  143 |     char literalDepth; // 0 if not in literal, otherwise used to mask keywords.
       |          ^~~~~~~~~~~~
-../include/Lex.h:124:17: warning:   ‘BBP::std::size_t BBP::std::Lexer::lex_context::dataSize’ [-Wreorder]
-  124 |     std::size_t dataSize;
+../include/Lex.h:123:17: warning:   ‘BBP::std::size_t BBP::std::Lexer::lex_context::dataSize’ [-Wreorder]
+  123 |     std::size_t dataSize;
       |                 ^~~~~~~~
 Lexer.cpp:989:1: warning:   when initialized here [-Wreorder]
   989 | BBP::std::Lexer::lex_context::lex_context()
       | ^~~
 In file included from Lexer.cpp:1:
-../include/Lex.h:141:13: warning: ‘BBP::std::Lexer::lex_context::lastWhiteSpace’ will be initialized after [-Wreorder]
-  141 |     index_t lastWhiteSpace;
+../include/Lex.h:140:13: warning: ‘BBP::std::Lexer::lex_context::lastWhiteSpace’ will be initialized after [-Wreorder]
+  140 |     index_t lastWhiteSpace;
       |             ^~~~~~~~~~~~~~
-../include/Lex.h:136:10: warning:   ‘bool BBP::std::Lexer::lex_context::inhibitSpecialFunctions’ [-Wreorder]
-  136 |     bool inhibitSpecialFunctions;
+../include/Lex.h:135:10: warning:   ‘bool BBP::std::Lexer::lex_context::inhibitSpecialFunctions’ [-Wreorder]
+  135 |     bool inhibitSpecialFunctions;
       |          ^~~~~~~~~~~~~~~~~~~~~~~
 Lexer.cpp:989:1: warning:   when initialized here [-Wreorder]
   989 | BBP::std::Lexer::lex_context::lex_context()

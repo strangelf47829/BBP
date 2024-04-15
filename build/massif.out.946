@@ -1,0 +1,581 @@
+desc: --stacks=yes
+cmd: ./a.out
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=103887505
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1296
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=257268875
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1688
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=387931227
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1688
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=589755530
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1688
+heap_tree=detailed
+n2: 73008 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x48FCA69: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011CA0: call_init (dl-init.c:30)
+    n1: 72704 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 304 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=5
+#-----------
+time=698539703
+mem_heap_B=86176
+mem_heap_extra_B=80
+mem_stacks_B=6168
+heap_tree=detailed
+n4: 86176 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x48FCA69: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011CA0: call_init (dl-init.c:30)
+    n1: 72704 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n1: 8192 0x4961D33: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 8192 0x4965F96: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+   n2: 8192 0x49668EF: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+    n1: 8192 0x148FCE: BBP::std::FILE::readFileFromDisk(BBP::std::FileNode*, BBP::std::PATH&) (File.cpp:44)
+     n1: 8192 0x13E211: BBP::std::FILE::FILE(BBP::std::PATH) (File.cpp:78)
+      n1: 8192 0x127AB4: BBP::system::rae_builtin(unsigned int, char**) (rae.cpp:115)
+       n1: 8192 0x124190: BBP::system::initd::shellBuiltin(unsigned int, char**) (Shell.cpp:73)
+        n1: 8192 0x122997: BBP::system::initd::shell() (Shell.cpp:31)
+         n1: 8192 0x122927: BBP::system::initd::shell(BBP::std::PAGE<char>&) (Shell.cpp:15)
+          n1: 8192 0x122BCB: BBP::system::initd::shellApplicationGetLine() (Shell.cpp:140)
+           n1: 8192 0x1229F3: BBP::system::initd::shellApplication(unsigned int, char**) (Shell.cpp:58)
+            n1: 8192 0x1227E9: BBP::system::initd::functorFunctor(unsigned int, unsigned int, char**) (initd.cpp:54)
+             n1: 8192 0x115250: BBP::system::Kernel::executeFrame(BBP::system::procFrame*) (Kernel.cpp:143)
+              n1: 8192 0x119B95: OS::BIOS::BBPOSIX::EntryPoint(BBP::system::UEFI*) (Entry.cpp:66)
+               n1: 8192 0x11246E: BBP::system::bootloaderMain() (Bootloader.cpp:361)
+                n0: 8192 0x1118D9: main (Boot.cpp:7)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 4456 0x122827: BBP::std::ext_calloc(unsigned int, unsigned int) (Memory.cpp:7)
+  n1: 4456 0x11E81C: BBP::std::pageAllocator::calloc(unsigned int, unsigned int) (PageAllocator.cpp:48)
+   n1: 4456 0x11E551: BBP::std::ResourceManager::calloc(unsigned int, unsigned int) (Resources.cpp:13)
+    n1: 4456 0x121E0A: BBP::std::FileNode::FileNode(BBP::std::ResourceManager*, unsigned int, BBP::std::PATH&) (FileNode.cpp:56)
+     n1: 4456 0x13E16E: BBP::std::FILE::FILE(BBP::std::PATH) (File.cpp:73)
+      n1: 4456 0x127AB4: BBP::system::rae_builtin(unsigned int, char**) (rae.cpp:115)
+       n1: 4456 0x124190: BBP::system::initd::shellBuiltin(unsigned int, char**) (Shell.cpp:73)
+        n1: 4456 0x122997: BBP::system::initd::shell() (Shell.cpp:31)
+         n1: 4456 0x122927: BBP::system::initd::shell(BBP::std::PAGE<char>&) (Shell.cpp:15)
+          n1: 4456 0x122BCB: BBP::system::initd::shellApplicationGetLine() (Shell.cpp:140)
+           n1: 4456 0x1229F3: BBP::system::initd::shellApplication(unsigned int, char**) (Shell.cpp:58)
+            n1: 4456 0x1227E9: BBP::system::initd::functorFunctor(unsigned int, unsigned int, char**) (initd.cpp:54)
+             n1: 4456 0x115250: BBP::system::Kernel::executeFrame(BBP::system::procFrame*) (Kernel.cpp:143)
+              n1: 4456 0x119B95: OS::BIOS::BBPOSIX::EntryPoint(BBP::system::UEFI*) (Entry.cpp:66)
+               n1: 4456 0x11246E: BBP::system::bootloaderMain() (Bootloader.cpp:361)
+                n0: 4456 0x1118D9: main (Boot.cpp:7)
+ n0: 824 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=838770115
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1688
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=1017571299
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=1118632841
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=1250491108
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1688
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=1367698449
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=1514207637
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1712
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=1704669577
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=1851178751
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1712
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=1954034164
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=2099789662
+mem_heap_B=89855
+mem_heap_extra_B=209
+mem_stacks_B=31576
+heap_tree=peak
+n4: 89855 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x48FCA69: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011CA0: call_init (dl-init.c:30)
+    n1: 72704 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n1: 8192 0x4961D33: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n2: 8192 0x4965F96: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+   n1: 8192 0x4966DC7: std::basic_ofstream<char, std::char_traits<char> >::basic_ofstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+    n1: 8192 0x1491BB: BBP::std::FILE::writeFileToDisk(BBP::std::PATH&) (File.cpp:73)
+     n1: 8192 0x1492C8: BBP::std::FILE::writeFileToDisk() (File.cpp:89)
+      n1: 8192 0x13BC99: BBP::esa::BinaryApplication::save() (Builder.cpp:219)
+       n1: 8192 0x13984E: BBP::esa::esaProcessor::saveAndClose() (Backend.cpp:59)
+        n1: 8192 0x12FA13: BBP::esa::esaProcessor::translate(BBP::std::PATH&, BBP::std::PATH&) (Processor.cpp:170)
+         n1: 8192 0x125B16: BBP::system::elsa_builtin(unsigned int, char**) (elsa.cpp:128)
+          n1: 8192 0x124190: BBP::system::initd::shellBuiltin(unsigned int, char**) (Shell.cpp:73)
+           n1: 8192 0x122997: BBP::system::initd::shell() (Shell.cpp:31)
+            n1: 8192 0x122927: BBP::system::initd::shell(BBP::std::PAGE<char>&) (Shell.cpp:15)
+             n1: 8192 0x122BCB: BBP::system::initd::shellApplicationGetLine() (Shell.cpp:140)
+              n1: 8192 0x1229F3: BBP::system::initd::shellApplication(unsigned int, char**) (Shell.cpp:58)
+               n1: 8192 0x1227E9: BBP::system::initd::functorFunctor(unsigned int, unsigned int, char**) (initd.cpp:54)
+                n1: 8192 0x115250: BBP::system::Kernel::executeFrame(BBP::system::procFrame*) (Kernel.cpp:143)
+                 n1: 8192 0x119B95: OS::BIOS::BBPOSIX::EntryPoint(BBP::system::UEFI*) (Entry.cpp:66)
+                  n1: 8192 0x11246E: BBP::system::bootloaderMain() (Bootloader.cpp:361)
+                   n0: 8192 0x1118D9: main (Boot.cpp:7)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 7591 0x122827: BBP::std::ext_calloc(unsigned int, unsigned int) (Memory.cpp:7)
+  n1: 7591 0x11E81C: BBP::std::pageAllocator::calloc(unsigned int, unsigned int) (PageAllocator.cpp:48)
+   n3: 7591 0x11E551: BBP::std::ResourceManager::calloc(unsigned int, unsigned int) (Resources.cpp:13)
+    n1: 3451 0x12DC68: BBP::std::ELF::SectionBuilder::Append(unsigned int) (SectionBuilder.cpp:25)
+     n0: 3451 in 11 places, all below massif's threshold (1.00%)
+    n0: 2572 in 12 places, all below massif's threshold (1.00%)
+    n1: 1568 0x12A799: BBP::std::ELF::ELFBuilder::ELFBuilder(BBP::std::ResourceManager*, unsigned int, unsigned int, unsigned int) (ELFHeader.cpp:16)
+     n1: 1568 0x13B104: BBP::esa::BinaryApplication::BinaryApplication(char const*, unsigned int, unsigned int, unsigned int) (Builder.cpp:10)
+      n1: 1568 0x1397CC: BBP::esa::esaProcessor::setupBackend(char const*, unsigned int, unsigned int, unsigned int) (Backend.cpp:53)
+       n1: 1568 0x12F9B0: BBP::esa::esaProcessor::translate(BBP::std::PATH&, BBP::std::PATH&) (Processor.cpp:156)
+        n1: 1568 0x125B16: BBP::system::elsa_builtin(unsigned int, char**) (elsa.cpp:128)
+         n1: 1568 0x124190: BBP::system::initd::shellBuiltin(unsigned int, char**) (Shell.cpp:73)
+          n1: 1568 0x122997: BBP::system::initd::shell() (Shell.cpp:31)
+           n1: 1568 0x122927: BBP::system::initd::shell(BBP::std::PAGE<char>&) (Shell.cpp:15)
+            n1: 1568 0x122BCB: BBP::system::initd::shellApplicationGetLine() (Shell.cpp:140)
+             n1: 1568 0x1229F3: BBP::system::initd::shellApplication(unsigned int, char**) (Shell.cpp:58)
+              n1: 1568 0x1227E9: BBP::system::initd::functorFunctor(unsigned int, unsigned int, char**) (initd.cpp:54)
+               n1: 1568 0x115250: BBP::system::Kernel::executeFrame(BBP::system::procFrame*) (Kernel.cpp:143)
+                n1: 1568 0x119B95: OS::BIOS::BBPOSIX::EntryPoint(BBP::system::UEFI*) (Entry.cpp:66)
+                 n1: 1568 0x11246E: BBP::system::bootloaderMain() (Bootloader.cpp:361)
+                  n0: 1568 0x1118D9: main (Boot.cpp:7)
+ n0: 1368 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=2254072794
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=2408355919
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1688
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=2511211344
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1712
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=2716922183
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1688
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=2922633006
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=3090072282
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=3257511567
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1688
+heap_tree=detailed
+n2: 73008 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x48FCA69: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011CA0: call_init (dl-init.c:30)
+    n1: 72704 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 304 in 9 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=23
+#-----------
+time=3466810661
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1688
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=3592390122
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1688
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=3801689216
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=3927268675
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=4094707957
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1688
+heap_tree=detailed
+n2: 73008 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x48FCA69: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011CA0: call_init (dl-init.c:30)
+    n1: 72704 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 304 in 9 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=28
+#-----------
+time=4220287417
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=4429586509
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1688
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=4555165967
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=4722605238
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=4890044519
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=5015623972
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=5169907114
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1688
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=5324190262
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=5427045695
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=detailed
+n2: 73008 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x48FCA69: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011CA0: call_init (dl-init.c:30)
+    n1: 72704 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 304 in 9 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=37
+#-----------
+time=5581328849
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=5787039722
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=5941322870
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=detailed
+n2: 73008 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x48FCA69: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011CA0: call_init (dl-init.c:30)
+    n1: 72704 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 304 in 9 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=40
+#-----------
+time=6095606022
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1688
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=6301316897
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=6507027765
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1688
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=6712738629
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1688
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=6867021781
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1688
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=6969877216
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1688
+heap_tree=detailed
+n2: 73008 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x48FCA69: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011CA0: call_init (dl-init.c:30)
+    n1: 72704 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 304 in 15 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=7124160370
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=7278443517
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1712
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=7432726663
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1688
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=7587009818
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1688
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=7688071370
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1688
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=7789132912
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=7890194457
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1688
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=7991256001
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1712
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=8092317553
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1688
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=8193379098
+mem_heap_B=73008
+mem_heap_extra_B=24
+mem_stacks_B=1704
+heap_tree=empty

@@ -1,7 +1,34 @@
+In file included from cp.cpp:9:
+../include/ELSA/Symbol.h:136:41: error: template constraint failure
+  136 |    std::Dictionary<std::string, symbol_t> dictionary;
+      |                                         ^
+../include/ELSA/Symbol.h:136:41: note:   constraints not satisfied
+In file included from ../include/ELSA/../Dictionary.h:5,
+                 from ../include/ELSA/../Dictionary.hxx:4,
+                 from ../include/ELSA/Symbol.h:6,
+                 from cp.cpp:9:
+../include/ELSA/../Concepts.h:13:11: note: within ‘template<class T> concept const bool BBP::std::Identifiable<T> [with T = BBP::elsa::symbol_t]’
+   13 |   concept Identifiable = requires (T & a, T & b)
+      |           ^~~~~~~~~~~~
+../include/ELSA/../Concepts.h:13:11: note:     with ‘BBP::elsa::symbol_t& a’
+../include/ELSA/../Concepts.h:13:11: note:     with ‘BBP::elsa::symbol_t& b’
+../include/ELSA/../Concepts.h:13:11: note: the required expression ‘new T’ would be ill-formed
 cp.cpp: In function ‘BBP::std::errno_t BBP::system::cp_builtin(BBP::std::size_t, BBP::std::string_element**)’:
-cp.cpp:10:55: warning: unused parameter ‘argc’ [-Wunused-parameter]
-   10 | BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
+cp.cpp:16:55: warning: unused parameter ‘argc’ [-Wunused-parameter]
+   16 | BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
       |                                           ~~~~~~~~~~~~^~~~
-cp.cpp:10:76: warning: unused parameter ‘argv’ [-Wunused-parameter]
-   10 | BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
+cp.cpp:16:76: warning: unused parameter ‘argv’ [-Wunused-parameter]
+   16 | BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
       |                                                             ~~~~~~~~~~~~~~~^~~~
+In file included from ../include/ELSA/Symbol.h:6,
+                 from cp.cpp:9:
+../include/ELSA/../Dictionary.hxx: In instantiation of ‘void BBP::std::HashedDictionary<Key_t, Value_t>::add(Key_t, Value_t) [with Key_t = BBP::std::PAGE<char>; Value_t = BBP::std::PAGE<char>]’:
+cp.cpp:29:29:   required from here
+../include/ELSA/../Dictionary.hxx:28:9: warning: unused variable ‘valueHash’ [-Wunused-variable]
+   28 |  hash_t valueHash = (hash_t)value;
+      |         ^~~~~~~~~
+../include/ELSA/../Dictionary.hxx: In instantiation of ‘void BBP::std::HashedDictionary<Key_t, Value_t>::remove(Key_t&&) [with Key_t = BBP::std::PAGE<char>; Value_t = BBP::std::PAGE<char>]’:
+../include/ELSA/../Dictionary.hxx:144:6:   required from here
+../include/ELSA/../Dictionary.hxx:144:65: warning: unused parameter ‘key’ [-Wunused-parameter]
+  144 | void BBP::std::HashedDictionary<Key_t, Value_t>::remove(Key_t &&key)
+      |                                                         ~~~~~~~~^~~

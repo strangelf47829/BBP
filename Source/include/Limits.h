@@ -1,0 +1,8 @@
+#ifndef BBP_STDLIB_LIMITS_H
+#define BBP_STDLIB_LIMITS_H
+
+#define MAX_BYTE 0xFF
+#define MAX_HALFWORD 0xFFFF
+#define MAX_WORD 0xFFFFFFFF
+
+#endif

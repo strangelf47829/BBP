@@ -2,6 +2,7 @@
 #define BBP_STDLIB_MEMORY_H
 
 #include "stddef.h"
+#include "Hashing.h"
 
 #define STATIC_STACK(type, identifier) static BBP::std::STATIC_PAGE<type> identifier##PAGE;\
 BBP::std::Stack<type> identifier(&identifier##PAGE);
@@ -47,6 +48,17 @@ namespace BBP
 			PAGE() : dataSize(0), bytes(0), prevPage(0), nextPage(0), data(nullptr) {}
 
 			T &operator[](std::index_t idx);
+
+			// Hashing function - Deleted function - Needs to be explicitly specialized.
+			explicit operator hash_t () const = delete;
+
+			// Comparison function - Deleted function - Needs to be explicitly specialized.
+			bool operator ==(std::PAGE<T> &b) = delete;
+			bool operator !=(std::PAGE<T> &b) = delete;
+
+			// Implicit creation from static list of items (I.E., array initialization)
+			PAGE(const T *arr) = delete;
+
 
 		};
 

@@ -4,7 +4,7 @@
 #include "Memory.h"
 #include "Stack.h"
 #include "Resources.h"
-
+#include "Hashing.h"
 
 namespace BBP
 {
@@ -52,6 +52,9 @@ namespace BBP
 		/* Compare conventional string to conventional string */
 		bool strcmp(c_string sta, c_string stb);
 
+		/* Compare string to string */
+		bool strcmp(string &sta, string &stb);
+
 		/* Calculate size of string literal */
 		size_t strlen(conststring str);
 
@@ -65,6 +68,7 @@ namespace BBP
 		size_t strlen(string str, offset_t offset);
 
 		/* Calculate the hash of a given string */
+		hash_t strhsh(const string &str);
 		hash_t strhsh(string &str);
 		hash_t strhsh(c_string str);
 		hash_t strhsh(conststring str);
@@ -156,6 +160,21 @@ namespace BBP
 
 		const std::conststring space = " ";
 		const std::conststring endl = "\n";
+
+		// Create string from string literal
+		template<>
+		BBP::std::string::PAGE<string_element>(const char *);
+
+		// String hashing
+		template<>
+		BBP::std::PAGE<char>::operator BBP::std::hash_t() const;
+
+		// String comparison
+		template<>
+		bool BBP::std::PAGE<char>::operator ==(string &b);
+
+		template<>
+		bool BBP::std::PAGE<char>::operator !=(string &b);
 
 	}
 }

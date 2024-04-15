@@ -2,6 +2,7 @@
 #define BBP_STDLIB_STDDEF_H
 
 #include "stdint.h"
+#include "Limits.h"
 
 #define __UNSAFE__(func) func##_unsafe
 
@@ -9,7 +10,6 @@ namespace BBP
 {
 	namespace std
 	{
-		
 
 		/* Use this type when you explicitly mean 32 bits */
 		typedef uint32_t word;
@@ -53,8 +53,13 @@ namespace BBP
 		/* Use this type when referring to the smallest possible division of memory in streams. */
 		typedef byte mem_t;
 
-		/* The hashing type of a string */
-		typedef uint32_t hash_t;
+		// Arithmetic concept
+		template<typename T>
+		concept Arithmetic = requires (T a)
+		{
+			(int)a + (int)a;
+		};
+
 	}
 }
 
