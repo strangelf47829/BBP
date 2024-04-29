@@ -30,6 +30,7 @@ namespace BBP
 		/* The maximum amount of things in a long page which is of type non-ptr. */
 		constexpr word max_lpage_static_size = 0x2000;
 
+
 		template <typename T>
 		struct PAGE
 		{
@@ -58,7 +59,62 @@ namespace BBP
 
 			// Implicit creation from static list of items (I.E., array initialization)
 			PAGE(const T *arr) = delete;
+		};
 
+		// Abstract page defines
+		template<typename T>
+		struct APAGE
+		{
+		public:
+			// Methods to retrieve sizes
+			virtual size_t &dataSize() = 0;
+			virtual size_t &bytes() = 0;
+
+			virtual PAGE<T> *&prevPage() = 0;
+			virtual PAGE<T> *&nextPage() = 0;
+
+			virtual T *&data() = 0;
+
+			virtual T &operator[](std::index_t idx) = 0;
+
+			// Hashing function - Deleted function - Needs to be explicitly specialized.
+			virtual explicit operator hash_t () const = delete;
+
+			// Comparison function - Deleted function - Needs to be explicitly specialized.
+			virtual bool operator ==(std::PAGE<T> &b) = delete;
+			virtual bool operator !=(std::PAGE<T> &b) = delete;
+
+		};
+
+		// Implementation of APAGE as page
+		template<typename T>
+		struct VPAGE : virtual APAGE<T>
+		{
+		private:
+			PAGE<T> page; // Encapsulated
+
+		public:
+
+			virtual size_t &dataSize() override { return page.dataSize; }
+			virtual size_t &bytes() override { return page.bytes; }
+
+			virtual PAGE<T> *&prevPage() { return page.prevPage; }
+			virtual PAGE<T> *&nextPage() { return page.nextPage; }
+
+			virtual T *&data() { return page.data; }
+
+			virtual T &operator[](std::index_t idx) override { return page[idx]; }
+
+			// Hashing function - Deleted function - Needs to be explicitly specialized.
+			virtual explicit operator hash_t () const override = delete;
+
+			// Comparison function - Deleted function - Needs to be explicitly specialized.
+			virtual bool operator ==(std::PAGE<T> &b) override = delete;
+			virtual bool operator !=(std::PAGE<T> &b) override = delete;
+			
+			VPAGE() : page() {}
+			VPAGE(size_t Size, T *dat) : page(Size, dat) {}
+			VPAGE(PAGE<T> &_page) : page(_page) {}
 
 		};
 

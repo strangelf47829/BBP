@@ -2,6 +2,7 @@
 #define BBP_ELSA_NUMERICAL_H
 
 #include "../stddef.h"
+#include "../Hashing.h"
 
 namespace BBP
 {
@@ -55,6 +56,15 @@ namespace BBP
 
 			// Interpret as word.
 			void interpretWord();
+
+			// Is float?
+			bool isFloat();
+
+			// is Signed?
+			bool isSigned();
+
+			// is Unsigned?
+			bool isUnsigned();
 
 			// Create as float
 			Numerical_t(float);

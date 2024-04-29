@@ -4,6 +4,7 @@
 // Create a structure that defines a symbol
 #include "../Strings.h"
 #include "../Dictionary.hxx"
+#include "Numerical.h"
 
 namespace BBP
 {
@@ -109,28 +110,6 @@ namespace BBP
 
 		};
 
-		// Hashtable to store symbols
-		class symbol_hashtable
-		{
-			// Page for hashtable
-			std::PAGE<std::index_t> hashTable;
-
-			// Amount of bins
-			std::halfword binCount;
-
-			// Amount of elements per bin
-			std::halfword elementsPerBin;
-
-		public:
-
-			// Expand
-			// Free
-			
-			// Lookup
-			// Encode
-
-		};
-
 		// Database for symbols
 		class symbol_db
 		{
@@ -147,20 +126,23 @@ namespace BBP
 		public:
 
 			// Type for symbol handle. A handle is used externally to refer to different symbols.
-			using handle_t = std::index_t;
+			using symhandle_t = std::index_t;
 
 			// Initialize a new symbol.
-			handle_t initSymbol();
+			symhandle_t initSymbol();
 
 			// Set active symbol to handle. Returns true on success, false on failure.
-			bool setActiveSymbol(handle_t);
+			bool setActiveSymbol(symhandle_t);
 
 			// Set active symbol based on symbol name (may or may not be mangled)
 			bool setActiveSymbol(std::string &);
 			bool setActiveSymbol(std::string &&);
 
 			// Set constant value
-			void setConstantValue()
+			void setConstantValue(Numerical_t);
+
+			// Copy over data
+			void copyData();
 
 		};
 

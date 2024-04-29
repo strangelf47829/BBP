@@ -163,7 +163,7 @@ namespace BBP
 
 		// Create string from string literal
 		template<>
-		BBP::std::string::PAGE<string_element>(const char *);
+		BBP::std::PAGE<string_element>::PAGE(const string_element *);
 
 		// String hashing
 		template<>

@@ -18,11 +18,22 @@ namespace BBP
 
 		struct AbstractGCEntry
 		{
+			// Does nothing
 			virtual ~AbstractGCEntry()
 			{};
+			
+			// Delete the pointer
 			virtual void _delete() = 0;
+
+			// Mark the pointer deleted
 			virtual void markDeleted() = 0;
+
+			// Get the raw pointer
 			virtual void *getRawPtr() = 0;
+
+			// Get the size for this entry
+			virtual size_t getSize() = 0;
+
 		};
 
 		template<typename T>
@@ -30,6 +41,7 @@ namespace BBP
 		{
 		public:
 			T *ptr;
+			size_t size;
 			virtual ~GCEntry()
 			{
 			}
@@ -49,6 +61,11 @@ namespace BBP
 			{
 				ptr = p;
 			}
+			size_t getSize()
+			{
+				return size;
+			}
+
 		};
 
 		// Allows for dynamic object allocation using (new/delete) 
@@ -122,14 +139,14 @@ namespace BBP
 			pageAllocator();
 
 			// Allocate stuff
-			void *malloc(std::size_t);
-			void *calloc(std::size_t, std::size_t);
+			virtual void *malloc(std::size_t);
+			virtual void *calloc(std::size_t, std::size_t);
 
 			// Free something
-			void free(void *);
+			virtual index_t free(void *);
 
 			// Free Everything
-			std::size_t freeAll();
+			virtual std::size_t freeAll();
 
 		private:
 
@@ -139,16 +156,21 @@ namespace BBP
 			// Searches in the 'allocations' 
 			std::index_t find_Alloc_pointer(void *);
 
-			// Used to store the indicies of 'alloc'-'free' things
-			std::index_t invalidAllocationIndex;
-			std::index_t nextAllocationAvailable;
-			std::STATIC_PAGE<void *, max_allocations> allocations;
-
 			// Internal functions to quickly free data at known indicies
 			void free(void *, std::index_t);
 
 			// Add an allocation
-			void add_alloc(void *);
+			void add_alloc(void *, size_t);
+
+		protected:
+
+			// Stores indicies to various constructs
+			std::index_t invalidAllocationIndex;
+			std::index_t nextAllocationAvailable;
+
+			// Used to store the indicies of 'alloc'-'free' things
+			std::STATIC_PAGE<void *, max_allocations> allocations;
+			std::STATIC_PAGE<size_t, max_allocations> allocationsSizes;
 
 		};
 

@@ -13,7 +13,10 @@ BBP::std::pageAllocator::pageAllocator()
 
 	// Zero initialize allocations
 	for (std::index_t t = 0; t < allocations.dataSize; t++)
-		write(&allocations, nul, t);
+	{
+		allocations[t] = nullptr;
+		allocationsSizes[t] = 0;
+	}
 
 	// Set invalid indicies
 	this->invalidAllocationIndex = allocations.dataSize;
@@ -32,7 +35,7 @@ void *BBP::std::pageAllocator::malloc(std::size_t size)
 	void *data = std::ext_malloc(size);
 
 	// Add that data
-	add_alloc(data);
+	add_alloc(data, size);
 
 	// Return data
 	return data;
@@ -48,20 +51,20 @@ void *BBP::std::pageAllocator::calloc(std::size_t count, std::size_t size)
 	void *data = std::ext_calloc(count, size);
 
 	// Add that data
-	add_alloc(data);
+	add_alloc(data, count * size);
 
 	// Return data
 	return data;
 }
 
-void BBP::std::pageAllocator::free(void *ptr)
+BBP::std::index_t BBP::std::pageAllocator::free(void *ptr)
 {
 	// Check if pointer is not actually nullptr
 	if (ptr == nullptr)
 	{
 		// Attempting to free nullptr: Do nothing but output something to stderr
 		system::kernelSS()->activeContext->STDERR << "Attempt to free nullptr was made." <<= std::endl;
-		return;
+		return invalidAllocationIndex;
 	}
 
 	// Attempt to find index of pointer
@@ -69,6 +72,9 @@ void BBP::std::pageAllocator::free(void *ptr)
 
 	// Call to internal free function
 	this->free(ptr, ptrIndex);
+
+	// Return found index
+	return ptrIndex;
 }
 
 void BBP::std::pageAllocator::free(void *ptr, std::index_t ptrIndex)
@@ -81,13 +87,14 @@ void BBP::std::pageAllocator::free(void *ptr, std::index_t ptrIndex)
 	std::ext_free(ptr);
 
 	// Then also write nullptr to index
-	this->allocations.data[ptrIndex] = (void *)0;
+	this->allocations[ptrIndex] = nullptr;
+	this->allocationsSizes[ptrIndex] = 0;
 }
 
 BBP::std::index_t BBP::std::pageAllocator::find_next_empty_alloc()
 {
 	// Check if we are not already at free pointer
-	void *ptr = std::read(&this->allocations, this->nextAllocationAvailable);
+	void *ptr = allocations[nextAllocationAvailable];
 
 	// If we are at nullptr already, just return current location
 	if (ptr == nullptr)
@@ -98,7 +105,7 @@ BBP::std::index_t BBP::std::pageAllocator::find_next_empty_alloc()
 	if (this->nextAllocationAvailable + 1 < this->allocations.dataSize)
 	{
 		// Read pointer
-		ptr = std::read(&this->allocations, this->nextAllocationAvailable + 1);
+		ptr = allocations[nextAllocationAvailable + 1];
 
 		// If null, return.
 		if (ptr == nullptr)
@@ -109,7 +116,7 @@ BBP::std::index_t BBP::std::pageAllocator::find_next_empty_alloc()
 	for (std::index_t idx = 0; idx < this->allocations.dataSize; idx++)
 	{
 		// Read one pointer
-		ptr = __UNSAFE__(std::read)(&this->allocations, idx);
+		ptr = allocations[idx];
 
 		// If pointer is not free, skip
 		if (ptr)
@@ -129,7 +136,7 @@ BBP::std::index_t BBP::std::pageAllocator::find_Alloc_pointer(void *ptr)
 	for (std::index_t idx = 0; idx < allocations.dataSize; idx++)
 	{
 		// Read value stored at 'idx'
-		void *stored = __UNSAFE__(std::read)(&allocations, idx);
+		void *stored = allocations[idx];
 
 		// If 'stored' and 'ptr' are equal, return idx
 		if (stored == ptr)
@@ -140,14 +147,15 @@ BBP::std::index_t BBP::std::pageAllocator::find_Alloc_pointer(void *ptr)
 	return invalidAllocationIndex;
 }
 
-void BBP::std::pageAllocator::add_alloc(void *ptr)
+void BBP::std::pageAllocator::add_alloc(void *ptr, size_t size)
 {
 	// See if allocation is possible
 	if (this->nextAllocationAvailable == this->invalidAllocationIndex)
 		throw std::exception("Could not register alloc'd data to Resource manager: Out of allocation space.", ENOMEM);
 
 	// Store that write into next possible alloc
-	std::write(&this->allocations, ptr, this->nextAllocationAvailable);
+	this->allocations[nextAllocationAvailable] = ptr;
+	this->allocationsSizes[nextAllocationAvailable] = size;
 
 	// Find next possible location
 	this->nextAllocationAvailable = find_next_empty_alloc();
@@ -163,7 +171,7 @@ BBP::std::index_t BBP::std::pageAllocator::freeAll()
 	for (std::index_t idx = 0; idx < allocations.dataSize; idx++)
 	{
 		// Read pointer
-		void *ptr = __UNSAFE__(std::read)(&allocations, idx);
+		void *ptr = allocations[idx];
 
 		// If ptr is nullptr, skip
 		if (ptr == nullptr)

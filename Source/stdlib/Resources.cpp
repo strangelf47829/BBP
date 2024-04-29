@@ -16,7 +16,7 @@ void *BBP::std::ResourceManager::calloc(std::size_t bytes, std::size_t amount)
 // Free stuff
 void BBP::std::ResourceManager::free(void *ptr)
 {
-	return pageManager.free(ptr);
+	pageManager.free(ptr);
 }
 
 // Delete stuff

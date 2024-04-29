@@ -11,19 +11,58 @@
 #include "../include/Concepts.h"
 #include "../include/Dictionary.hxx"
 #include "../include/ELSA/Numerical.h"
+#include "../include/SequentialMemory.h"
 
+// Symbol database
 BBP::elsa::symbol_db symboldb;
-BBP::elsa::Numerical_t a = 2;
-BBP::elsa::Numerical_t b = 3;
+
+BBP::std::SequentialMemory<BBP::std::string_element> dd;
 
 BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
 {
-	// Initialize a new symbol, and get its handle
-	std::index_t idx = symboldb.initSymbol();
-	
-	symboldb.setActiveSymbol("symbol");
+	// Allocate stuff
+	std::string str1(std::static_length("Hello, "), dd.Malloc(std::static_length("Hello, ")));
+	std::string str2(std::static_length("World!"), dd.Malloc(std::static_length("World!")));
 
-	a = -a;
+	// Write stuff into str1 and str2
+	for (std::index_t idx = 0; idx < str1.dataSize; idx++)
+		str1[idx] = "Hello, "[idx];
+
+	// Write stuff into str1 and str2
+	for (std::index_t idx = 0; idx < str2.dataSize; idx++)
+		str2[idx] = "World!"[idx];
+
+	// Get size
+	std::size_t siz = dd.dataSize();
+
+	// Print
+	for (std::index_t idx = 0; idx < siz; idx++)
+		kernelSS()->activeContext->STDOUT << dd[idx];
+
+	kernelSS()->activeContext->STDOUT <<= "\n";
+
+
+	/*
+	// Initialize a new symbol, and get its handle. Also set its name and stuff ig
+	std::index_t idx = symboldb.initSymbol();
+
+	// Set active symbol
+	symboldb.setActiveSymbol(idx);
+
+	// Set a constant value
+	symboldb.setConstantValue(1);
+
+	// Create new symbol
+	std::index_t idx2 = symboldb.initSymbol();
+
+	// Set index
+	symboldb.setActiveSymbol(idx2);
+
+	// Create data
+	std::string idx2Data = "hehe";
+
+	// 
+	seqmem.malloc();*/
 
 	/*
 	std::ResourceManager *allocator = getKernelInstance().getCurrentSystemContext()->activemem;
