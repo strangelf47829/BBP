@@ -1,13 +1,20 @@
 cp.cpp: In function ‘BBP::std::errno_t BBP::system::cp_builtin(BBP::std::size_t, BBP::std::string_element**)’:
-cp.cpp:21:55: warning: unused parameter ‘argc’ [-Wunused-parameter]
-   21 | BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
+cp.cpp:24:55: warning: unused parameter ‘argc’ [-Wunused-parameter]
+   24 | BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
       |                                           ~~~~~~~~~~~~^~~~
-cp.cpp:21:76: warning: unused parameter ‘argv’ [-Wunused-parameter]
-   21 | BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
+cp.cpp:24:76: warning: unused parameter ‘argv’ [-Wunused-parameter]
+   24 | BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
       |                                                             ~~~~~~~~~~~~~~~^~~~
-In file included from ../include/SequentialMemory.h:101,
-                 from cp.cpp:14:
-../include/SequentialMemory.hxx: In member function ‘T& BBP::std::SequentialMemory<T>::operator[](BBP::std::index_t) [with T = char]’:
-../include/SequentialMemory.hxx:65:1: warning: control reaches end of non-void function [-Wreturn-type]
-   65 | }
-      | ^
+In file included from ../include/ELSA/../Dictionary.h:120,
+                 from ../include/ELSA/Symbol.h:6,
+                 from cp.cpp:9:
+../include/ELSA/../Dictionary.hxx: In instantiation of ‘void BBP::std::HashedDictionary<Key_t, Value_t>::add(Key_t, Value_t) [with Key_t = BBP::std::PAGE<char>; Value_t = BBP::elsa::symbol_db_entry]’:
+../include/ELSA/../Dictionary.hxx:24:6:   required from here
+../include/ELSA/../Dictionary.hxx:28:9: warning: unused variable ‘valueHash’ [-Wunused-variable]
+   28 |  hash_t valueHash = (hash_t)value;
+      |         ^~~~~~~~~
+../include/ELSA/../Dictionary.hxx: In instantiation of ‘void BBP::std::HashedDictionary<Key_t, Value_t>::remove(Key_t&&) [with Key_t = BBP::std::PAGE<char>; Value_t = BBP::elsa::symbol_db_entry]’:
+../include/ELSA/../Dictionary.hxx:146:6:   required from here
+../include/ELSA/../Dictionary.hxx:146:65: warning: unused parameter ‘key’ [-Wunused-parameter]
+  146 | void BBP::std::HashedDictionary<Key_t, Value_t>::remove(Key_t &&key)
+      |                                                         ~~~~~~~~^~~

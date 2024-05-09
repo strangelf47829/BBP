@@ -9,42 +9,24 @@ namespace BBP
 	namespace elsa
 	{
 
-		// Structure used by the lexer to convey information to a keyword functor
-		struct KeywordFunctor_args_t
-		{
+		// A keyword is an abstract object that
+		template <class T>
+		using keyword_functor = void (T::)();
 
+		// And now a keyword struct
+		template <class T>
+		struct keyword_t
+		{
+			
+			keyword_functor<T> action = delete;
+
+			// Calls the keyword
+			void operator() () = delete;
 		};
-
-		// Definition for a keyword functor
-		using KeywordFunctor_t = void (KeywordFunctor_args_t &);		
-
-		// A keyword as defined by the frontend
-		struct Keyword_t
+		
+		// Own implementation of thingy
+		struct myKeyword : public keyword_t<int>
 		{
-			// The text used to define this keyword
-			std::string keyword;
-
-			// Length of the keyword (used in case null-termination isn't possible, such as when reading files etc..)
-			std::size_t keywordLength;
-
-			// The index of the action associated with this keyword, as provided by the frontend.
-			std::index_t actionIndex;
-
-			// Various flags related to the 
-
-		};
-
-		// A keyword as used by the lexer
-		struct KeywordHandle_t
-		{
-
-			// 
-			void tes()
-			{
-				Keyword_t t;
-				esaProcessor proces;
-				t.functor = proces.call;
-			}
 
 		};
 
@@ -52,29 +34,3 @@ namespace BBP
 }
 
 #endif
-
-
-class KeywordAction
-{
-	virtual void call() = 0;
-};
-
-class SomeClass 
-{
-
-};
-
-template<class T>
-class GenericKeywordActionIDKGOTOSLEEPYOUFUCKINGUSELESSCUNTTTTT : public KeywordAction
-{
-	// Template definition
-	using KeywordFunctor_t = void (T::*)();
-
-	KeywordFunctor_t functor;
-
-	void call() override
-	{
-
-	}
-
-};

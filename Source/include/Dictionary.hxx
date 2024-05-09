@@ -36,6 +36,8 @@ void BBP::std::HashedDictionary<Key_t, Value_t>::add(Key_t key, Value_t value)
 
 	// Then write 'value' and 'key' to appropriate spots
 	DictionaryKeyValuePair<Key_t, Value_t> *kvp = &Frames[keyIndex];
+
+	// Set values
 	kvp->key = key;
 	kvp->value = value;
 }
@@ -148,9 +150,16 @@ void BBP::std::HashedDictionary<Key_t, Value_t>::remove(Key_t &&key)
 
 // Clear out everything
 template <BBP::std::Identifiable Key_t, BBP::std::Identifiable Value_t>
-BBP::std::HashedDictionary<Key_t, Value_t>::~HashedDictionary()
+void BBP::std::HashedDictionary<Key_t, Value_t>::Reset()
 {
 	allocator.clearAll();
+}
+
+// Clear out everything
+template <BBP::std::Identifiable Key_t, BBP::std::Identifiable Value_t>
+BBP::std::HashedDictionary<Key_t, Value_t>::~HashedDictionary()
+{
+	Reset();
 }
 
 #endif

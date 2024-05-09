@@ -12,110 +12,57 @@
 #include "../include/Dictionary.hxx"
 #include "../include/ELSA/Numerical.h"
 #include "../include/SequentialMemory.h"
+#include "../include/ELSA/SectionDB.h"
 
 // Symbol database
-BBP::elsa::symbol_db symboldb;
+BBP::elsa::symbol_db database;
+BBP::elsa::section_db database2;
 
-BBP::std::SequentialMemory<BBP::std::string_element> dd;
+BBP::elsa::Section *dataSection;
+BBP::elsa::Section *stringTableSection;
 
 BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
 {
-	// Allocate stuff
-	std::string str1(std::static_length("Hello, "), dd.Malloc(std::static_length("Hello, ")));
-	std::string str2(std::static_length("World!"), dd.Malloc(std::static_length("World!")));
+	// Set stuff in database
+	database2.createSection(".text");
+	database2.createSection(".strtab");
 
-	// Write stuff into str1 and str2
-	for (std::index_t idx = 0; idx < str1.dataSize; idx++)
-		str1[idx] = "Hello, "[idx];
+	// Create new section
+	dataSection = &database2[".text"];
+	stringTableSection = &database2[".strtab"];
 
-	// Write stuff into str1 and str2
-	for (std::index_t idx = 0; idx < str2.dataSize; idx++)
-		str2[idx] = "World!"[idx];
+	// Initialize symbol database
+	database.setDataSection(dataSection);
+	database.setStringSection(stringTableSection);
 
-	// Get size
-	std::size_t siz = dd.dataSize();
-
-	// Print
-	for (std::index_t idx = 0; idx < siz; idx++)
-		kernelSS()->activeContext->STDOUT << dd[idx];
-
-	kernelSS()->activeContext->STDOUT <<= "\n";
-
-
-	/*
-	// Initialize a new symbol, and get its handle. Also set its name and stuff ig
-	std::index_t idx = symboldb.initSymbol();
-
-	// Set active symbol
-	symboldb.setActiveSymbol(idx);
-
-	// Set a constant value
-	symboldb.setConstantValue(1);
-
-	// Create new symbol
-	std::index_t idx2 = symboldb.initSymbol();
-
-	// Set index
-	symboldb.setActiveSymbol(idx2);
-
-	// Create data
-	std::string idx2Data = "hehe";
-
-	// 
-	seqmem.malloc();*/
-
-	/*
-	std::ResourceManager *allocator = getKernelInstance().getCurrentSystemContext()->activemem;
-
-	// Initialize database with 4 symbols.
-	database.init(allocator, 4);
-
-	// Create 3 new symbols
-	BBP::elsa::symbol_t *a = database.nextSymbol();
-	BBP::elsa::symbol_t *b = database.nextSymbol();
-	BBP::elsa::symbol_t *c = database.nextSymbol();
-	BBP::elsa::symbol_t *d = database.nextSymbol();
-
-	// Create symbol 'a', and give it a constant value of 42 (byte)
-	a->setUniqueName("a");
-	a->setConstantValue(5, std::DYN_PAGE::Alignment::Byte);
-
-	// Create symbol 'b', set it to byte value and write {data}
-	std::string data = std::String("Some dummy data");
-
-	b->setUniqueName("b");
-	b->setElementSize(std::DYN_PAGE::Alignment::Byte);
-	b->writeUniqueData(data);
-
-	// Also using preallocation
-	std::index_t preallocatedIndex = b->preallocate(data.dataSize + 1);
+	database.createSymbol("_ZN3fd", "Hello, ");
+	database.createSymbol("_ZN3bar", "world!");
 	
-	// Then write individual bytes
-	b->write('!', preallocatedIndex);
-	b->write(data, preallocatedIndex + 1);
+	std::printf("Found: %s\n\n", database["_ZN3fd"]->identifier.name.data);
 
-	// Create object 'c', and link it to a.
-	c->setUniqueName("c");
-	database.createSymbolLink(c, a);
 
-	// Create empty symbol 'd'
-	d->setUniqueName("d");
-	d->setUndefined();
+	// Print out data
+	std::size_t stringTableLength = stringTableSection->size();
+	std::size_t dataSectionLength = dataSection->size();
 
-	// Resolve 'd'
-	std::index_t d_idx = database.find("d");
-	elsa::symbol_t *d_sym = database.fetch(d_idx); // database.resolve("d");
+	// Print out info
+	std::printf("String table size: %u:\n", stringTableLength);
 
-	// Then overwrite (with shallow data)
-	std::string fileName = std::String("a.out");
-	d_sym->writeShallowData(fileName);
+	// Print stuff
+	for (std::index_t idx = 0; idx < stringTableLength; idx++)
+		std::printf("(%c)", (*stringTableSection)[idx]);
+	kernelSS()->activeContext->STDOUT <<= '\n';
 
-	// Now set debug symbol info
-	a->definedIn(d_sym);
-	b->definedIn(d_sym);
-	c->definedIn(d_sym);
+	// Print out info
+	std::printf("\n\nData size: %u:\n", dataSectionLength);
 
-	*/
+	// Print stuff
+	for (std::index_t idx = 0; idx < dataSectionLength; idx++)
+		std::printf("(%c)", (*dataSection)[idx]);
+	kernelSS()->activeContext->STDOUT <<= '\n';
+
+	database.Reset();
+	database2.Reset();
 
 	return 0;
 }

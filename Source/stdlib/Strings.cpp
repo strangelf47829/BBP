@@ -566,7 +566,7 @@ void BBP::std::strhsh(std::hash_t &hash, std::word &Power, std::string_element &
 
 template<>
 BBP::std::PAGE<BBP::std::string_element>::PAGE(const BBP::std::string_element *arr)
-	: PAGE<BBP::std::string_element>(BBP::std::strlen(arr), (std::c_string)arr)
+	: PAGE<BBP::std::string_element>(BBP::std::strlen(arr) + 1, (std::c_string)arr)
 {
 	
 }

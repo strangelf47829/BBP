@@ -39,6 +39,9 @@ namespace BBP
 			// Remove stuff
 			virtual void remove(Key_t &&) = 0;
 
+			// Remove everything
+			virtual void Reset() = 0;
+
 		};
 
 		// A hashed dictionary trades space for speed.
@@ -85,6 +88,9 @@ namespace BBP
 			// Remove stuff
 			void remove(Key_t &&) override;
 
+			// Remove everything
+			void Reset();
+
 			// Clear resources
 			~HashedDictionary();
 
@@ -107,7 +113,6 @@ namespace BBP
 			// The resource allocator
 			pageAllocator allocator;
 		};
-		
 
 	}
 }
