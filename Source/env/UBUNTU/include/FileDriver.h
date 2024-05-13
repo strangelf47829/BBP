@@ -29,6 +29,7 @@ namespace Environment
 
 			// Actual driver stuff
 			bool doesPathExist();
+			BBP::std::size_t getFileSize();
 
 			// Mode type
 			enum FileSystemMode

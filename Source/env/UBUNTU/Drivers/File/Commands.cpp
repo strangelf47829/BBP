@@ -34,6 +34,10 @@ bool Environment::Drivers::Filesystem::queryFileMetadata(BBP::std::size_t argc, 
 	if (argc >= 1)
 		argv[0] = !!(doesPathExist());
 
+	// Get file size if requesting at least two arguments. Also check if file actually exists
+	if (argc >= 2 && argv[0])
+		argv[1] = getFileSize();
+
 	// Return true
 	return true;
 }

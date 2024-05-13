@@ -1,32 +1,37 @@
 #include "../include/stddrv.h"
 #include "../include/drvcmd.h"
 #include "../include/Kernel.h"
+#include "../include/filedrv.h"
 
-// File driver.
-// File driver has following commands:
-
-// 0 - LOAD PATH (the next data received should be written into path field)
-
-// Query if file is on disk or not
-bool BBP::std::isFileOnDisk(PATH &path)
+// Load standard stuff
+void BBP::std::loadFileMetadata(std::PATH &path, std::size_t argc, std::word *argv)
 {
 	// Get file driver
 	BBP::system::DeviceDriver *driver = &system::getKernelInstance().getFileDriver();
 
 	// Tell the file driver to load a path
 	driver->hardwareDriver.executeCommand(loadPath, 0, 0);
-	
+
 	// Then send path
 	driver->writeData(path.relName());
 
-	// Create buffer of 2 arguments to be supplied to the command. Then, send back
-	std::word args[1];
-
 	// Then query metadata for file
-	driver->hardwareDriver.executeCommand(queryFileMetadata, 1, args);
+	driver->hardwareDriver.executeCommand(queryFileMetadata, argc, argv);
+}
 
-	// Then return first arg
-	return args[0];
+
+
+// Query if file is on disk or not
+bool BBP::std::isFileOnDisk(PATH &path)
+{
+	// Create a buffer
+	std::word buff[1] = {0};
+
+	// Query
+	loadFileMetadata(path, 1, buff);
+
+	// Return first result
+	return !!(buff[0]);
 }
 
 // Query if path is of type file
@@ -48,9 +53,20 @@ bool BBP::std::isPathRealObject(PATH &)
 }
 
 // Query file size for file on disk
-BBP::std::size_t BBP::std::getFilesizeFromDisk(PATH &)
+BBP::std::size_t BBP::std::getFilesizeFromDisk(PATH &path)
 {
+	// Create a buffer
+	std::word buff[2] = { 0, 0 };
 
+	// Query
+	loadFileMetadata(path, 2, buff);
+
+	// If non-existant, return 0
+	if (buff[0] == 0)
+		return 0;
+
+	// Return second result
+	return buff[1];
 }
 
 // Read file from disk (this is to stream the entire contents of a file into memory and then dump it)

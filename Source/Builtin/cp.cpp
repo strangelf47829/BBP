@@ -28,10 +28,16 @@ void check(BBP::std::string str)
 	bool exists = BBP::std::isFileOnDisk(path);
 
 	// Print diagnostic
-	if (exists)
-		BBP::std::printf("File %s does exist.\n", str.data);
-	else
+	if (exists == false)
+	{
 		BBP::std::printf("File %s does not exist.\n", str.data);
+		return;
+	}
+
+	// Get file size
+	BBP::std::size_t fileSize = BBP::std::getFilesizeFromDisk(path);
+
+	BBP::std::printf("File %s does exist and occupies %u bytes.\n", str.data, fileSize);
 }
 
 BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)

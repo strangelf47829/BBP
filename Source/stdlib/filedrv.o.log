@@ -1,40 +1,36 @@
 filedrv.cpp: In function ‘bool BBP::std::isPathOfTypeFile(BBP::std::PATH&)’:
-filedrv.cpp:36:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   36 | }
+filedrv.cpp:41:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   41 | }
       | ^
 filedrv.cpp: In function ‘bool BBP::std::isPathOfTypeDirectory(BBP::std::PATH&)’:
-filedrv.cpp:42:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   42 | }
+filedrv.cpp:47:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   47 | }
       | ^
 filedrv.cpp: In function ‘bool BBP::std::isPathRealObject(BBP::std::PATH&)’:
-filedrv.cpp:48:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   48 | }
-      | ^
-filedrv.cpp: In function ‘BBP::std::size_t BBP::std::getFilesizeFromDisk(BBP::std::PATH&)’:
-filedrv.cpp:54:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   54 | }
+filedrv.cpp:53:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   53 | }
       | ^
 filedrv.cpp: In function ‘BBP::std::size_t BBP::std::readFileFromDisk(BBP::std::stream_t, BBP::std::PATH&)’:
-filedrv.cpp:60:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   60 | }
+filedrv.cpp:76:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   76 | }
       | ^
 filedrv.cpp: In function ‘BBP::std::errno_t BBP::std::Inspect(BBP::std::PATH&)’:
-filedrv.cpp:72:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   72 | }
+filedrv.cpp:88:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   88 | }
       | ^
 filedrv.cpp: In function ‘BBP::std::size_t BBP::std::fileCount()’:
-filedrv.cpp:78:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   78 | }
+filedrv.cpp:94:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   94 | }
       | ^
 filedrv.cpp: In function ‘BBP::std::size_t BBP::std::directoryCount()’:
-filedrv.cpp:83:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   83 | }
+filedrv.cpp:99:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   99 | }
       | ^
 filedrv.cpp: In function ‘BBP::std::string_element* BBP::std::getFileName(BBP::std::index_t)’:
-filedrv.cpp:89:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   89 | }
+filedrv.cpp:105:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  105 | }
       | ^
 filedrv.cpp: In function ‘BBP::std::string_element* BBP::std::getDirectoryName(BBP::std::index_t)’:
-filedrv.cpp:95:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   95 | }
+filedrv.cpp:111:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  111 | }
       | ^
