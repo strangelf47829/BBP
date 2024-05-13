@@ -347,6 +347,13 @@ BBP::std::Stack<BBP::std::string_element> &BBP::std::operator>>=(std::Stack<std:
 	// Move the pointer back by one
 	stack--;
 
+	// If the index is now 0, it means that the encoded string is a null string. Therefore write a null character into str
+	if (stack.atElement == 0)
+	{
+		*str = __UNSAFE__(std::read_a)(stack.page, 0);
+		return stack;
+	}
+
 	// Check if the current element is not a null character
 	if ((stack %= 0) == 0)
 		stack--; // If this is the case, move the pointer back one.

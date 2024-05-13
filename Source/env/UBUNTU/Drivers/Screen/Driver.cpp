@@ -67,5 +67,5 @@ void Environment::Drivers::screen::print_stack_to_string(BBP::std::Stack<BBP::st
 	BBP::std::index_t postRead = stack->atElement;
 
 	// Write that data into software driver
-	BBP::system::getKernelInstance().getScreenDriver().softwareDriver << str;
+	BBP::system::getKernelInstance().getScreenDriver().writeData(str);
 }

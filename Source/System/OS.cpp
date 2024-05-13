@@ -68,6 +68,9 @@ bool BBP::system::Kernel::BBPEntry(BBP::system::UEFI *uefi)
 	// Set kernel context
 	setKernelContext();
 
+	// Associate file driver
+	fileDriver.Associate();
+
 	// Allocate a new proc frame, spawned from itself.
 	system::procFrame *frame = allocateDaemonFrame(&system::DaemonRecord::records[0], std::String("shell"));
 

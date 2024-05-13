@@ -23,6 +23,59 @@ namespace BBP
 		using HardwareAction = std::size_t(*)(std::size_t, std::PAGE<std::string_element> &);
 		using HardwareCmd = bool (*)(std::size_t argc, std::word *argv);
 
+
+		// This class provides an interface to interact with software
+		class SoftwareHandle
+		{
+			static constexpr std::size_t maximumDeviceNameLength = 32;
+			static constexpr std::size_t maximumDeviceMountNameLength = 8;
+
+			// Name of the device, such as 'SD CARD'
+			std::static_string<maximumDeviceNameLength> deviceName;
+
+			// Where to mount the device
+			std::static_string<maximumDeviceMountNameLength> mountName;
+
+			// Data IO
+			std::Stack<std::string_element> *InputBuffer; // Mounts to /dev/<mountName>/stdin
+			std::Stack<std::string_element> *OutputBuffer; // Mounts to /dev/<mountName>/stdout
+
+		public:
+
+			// Constructors
+			SoftwareHandle() = delete;
+			SoftwareHandle(std::Stack<std::string_element> *input, std::Stack<std::string_element> *output, std::conststring name);
+
+			// Used to mount and dismount drivers from the file system
+			void Mount(std::string);
+			void Dismount();
+
+			// Writing data into
+			SoftwareHandle &operator <<(std::string_element);	// From kernel to driver (So to output)
+			SoftwareHandle &operator >>(std::string_element&);	// From driver to kernel (So from input)
+
+			SoftwareHandle &operator <<(std::c_string);			// From kernel to driver (So to output)
+			SoftwareHandle &operator >>(std::c_string);			// From driver to kernel (So from input)
+
+			SoftwareHandle &operator <(std::string_element);	// From hardware to driver (So to input)
+			SoftwareHandle &operator >(std::string_element&);	// From driver to hardware (So from output)
+
+			// Returns the amount of available bytes.
+			std::size_t available();
+
+			// Sets the input page
+			void setInputPage(std::Stack<std::string_element> *);
+			void setOutputPage(std::Stack<std::string_element> *);
+
+			// Seek output forward and back
+			void seekOutputForward(std::size_t);
+			void seekOutputBack(std::size_t);
+
+			// Seek input forward and back
+			void seekInputForward(std::size_t);
+			void seekInputBack(std::size_t);
+		};
+
 		// The instance for this
 		class HardwareHandle
 		{
@@ -85,62 +138,27 @@ namespace BBP
 
 		};
 
-
-		// This class provides an interface to interact with software
-		class SoftwareHandle
-		{
-			static constexpr std::size_t maximumDeviceNameLength = 32;
-			static constexpr std::size_t maximumDeviceMountNameLength = 8;
-
-			// Name of the device, such as 'SD CARD'
-			std::static_string<maximumDeviceNameLength> deviceName;
-
-			// Where to mount the device
-			std::static_string<maximumDeviceMountNameLength> mountName;
-
-			// Data IO
-			std::Stack<std::string_element> *InputBuffer; // Mounts to /dev/<mountName>/stdin
-			std::Stack<std::string_element> *OutputBuffer; // Mounts to /dev/<mountName>/stdout
-
-		public:
-
-			// Constructors
-			SoftwareHandle() = delete;
-			SoftwareHandle(std::Stack<std::string_element> *input, std::Stack<std::string_element> *output, std::conststring name);
-
-			// Used to mount and dismount drivers from the file system
-			void Mount(std::string);
-			void Dismount();
-
-			// Writing data into
-			SoftwareHandle &operator <<(std::string_element);	// From kernel to driver (So to output)
-			SoftwareHandle &operator >>(std::string_element&);	// From driver to kernel (So from input)
-
-			SoftwareHandle &operator <<(std::c_string);			// From kernel to driver (So to output)
-			SoftwareHandle &operator >>(std::c_string);			// From driver to kernel (So from input)
-
-			SoftwareHandle &operator <(std::string_element);	// From hardware to driver (So to input)
-			SoftwareHandle &operator >(std::string_element&);	// From driver to hardware (So from output)
-
-			// Returns the amount of available bytes.
-			std::size_t available();
-
-			// Sets the input page
-			void setInputPage(std::Stack<std::string_element> *);
-			void setOutputPage(std::Stack<std::string_element> *);
-		};
-
 		// The actual device driver structure to hold stuff
 		class DeviceDriver
 		{
+			// Stack stuff
+			std::Stack<std::string_element> stdinp;
+			std::Stack<std::string_element> stdout;
+
 		public:
 			SoftwareHandle softwareDriver;
 			HardwareHandle hardwareDriver;
 
 			DeviceDriver(std::Stack<std::string_element> *input, std::Stack<std::string_element> *output, std::conststring name, HardwareAction[3], std::size_t, const HardwareCmd *);
 		
+			// Associate the software driver with the hardware driver
+			void Associate();
+
 			// Used to send data
 			std::word writeData(std::c_string str);
+			std::word writeData(std::string str);
+
+			// Used to receive data
 			std::Stack<std::string_element> &receiveData(std::word);
 
 		};

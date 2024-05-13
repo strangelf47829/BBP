@@ -6,18 +6,59 @@
 
 // Device driver constructor
 BBP::system::DeviceDriver::DeviceDriver(std::Stack<std::string_element> *input, std::Stack<std::string_element> *output, std::conststring name, HardwareAction actions[3], std::size_t cmdc, const HardwareCmd *cmdv)
-	: softwareDriver(input, output, name),
+	: stdinp(nullptr, 0),
+	stdout(nullptr, 0),
+	softwareDriver(input, output, name),
 	hardwareDriver(actions, cmdc, cmdv)
 {
+	// Reset stdinput
+	stdinp = std::Stack<std::string_element>(&hardwareDriver.getInput(), deviceBufferSize);
+	stdout = std::Stack<std::string_element>(&hardwareDriver.getOutput(), deviceBufferSize);
 
+	// Check if input is nullptr. If it is, set stdinp
+	if (input == nullptr)
+		softwareDriver.setInputPage(&stdinp);
+
+	// Check if output is nullptr. If it is, set stdout
+	if (output == nullptr)
+		softwareDriver.setOutputPage(&stdout);
+}
+
+void BBP::system::DeviceDriver::Associate()
+{
+	softwareDriver.setInputPage(&stdinp);
+	softwareDriver.setOutputPage(&stdout);
 }
 
 BBP::std::word BBP::system::DeviceDriver::writeData(std::c_string data)
 {
-	// Then tell hardware handle to write that shiiit
-	hardwareDriver.send(std::strlen(data));
+	// Write into software buffer
+	softwareDriver << data;
+
+	// Then send amount of data out
+	std::size_t bytesSent = hardwareDriver.send(std::strlen(data));
+
+	// Then Seek back the amount of data sent
+	softwareDriver.seekOutputBack(bytesSent + 1);
+
+	// Then return amount of bytes sent
+	return bytesSent;
 }
 
+BBP::std::word BBP::system::DeviceDriver::writeData(std::string data)
+{
+	// Write into software buffer
+	softwareDriver << data.data;
+
+	// Then send amount of data out
+	std::size_t bytesSent = hardwareDriver.send(std::strlen(data));
+
+	// Then Seek back the amount of data sent
+	softwareDriver.seekOutputBack(bytesSent + 1);
+
+	// Then return amount of bytes sent
+	return bytesSent;
+}
 
 // Load a driver
 BBP::std::errno_t BBP::system::Kernel::loadDriver(UEFILoadDriver loadDriver, DeviceDriver &intoDriver, BBP::std::size_t argc, BBP::std::word *argv)

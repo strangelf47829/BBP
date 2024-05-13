@@ -4,11 +4,11 @@ In file included from ../include/SystemContext.h:3,
                  from ../include/Kernel.h:4,
                  from Path.cpp:2:
 ../include/FileSys.h: In constructor ‘BBP::std::PATH::PATH()’:
-../include/FileSys.h:116:12: warning: ‘BBP::std::PATH::Volume’ will be initialized after [-Wreorder]
-  116 |    VOLUME *Volume;
+../include/FileSys.h:114:12: warning: ‘BBP::std::PATH::Volume’ will be initialized after [-Wreorder]
+  114 |    VOLUME *Volume;
       |            ^~~~~~
-../include/FileSys.h:113:26: warning:   ‘BBP::std::ResourceManager* BBP::std::PATH::allocator’ [-Wreorder]
-  113 |    std::ResourceManager *allocator;
+../include/FileSys.h:111:26: warning:   ‘BBP::std::ResourceManager* BBP::std::PATH::allocator’ [-Wreorder]
+  111 |    std::ResourceManager *allocator;
       |                          ^~~~~~~~~
 Path.cpp:4:1: warning:   when initialized here [-Wreorder]
     4 | BBP::std::PATH::PATH()
@@ -18,11 +18,11 @@ In file included from ../include/SystemContext.h:3,
                  from ../include/KernelSubSystems.h:4,
                  from ../include/Kernel.h:4,
                  from Path.cpp:2:
-../include/FileSys.h:113:26: warning: ‘BBP::std::PATH::allocator’ will be initialized after [-Wreorder]
-  113 |    std::ResourceManager *allocator;
+../include/FileSys.h:111:26: warning: ‘BBP::std::PATH::allocator’ will be initialized after [-Wreorder]
+  111 |    std::ResourceManager *allocator;
       |                          ^~~~~~~~~
-../include/FileSys.h:110:17: warning:   ‘BBP::std::index_t BBP::std::PATH::fileNameStartIndex’ [-Wreorder]
-  110 |    std::index_t fileNameStartIndex;
+../include/FileSys.h:108:17: warning:   ‘BBP::std::index_t BBP::std::PATH::fileNameStartIndex’ [-Wreorder]
+  108 |    std::index_t fileNameStartIndex;
       |                 ^~~~~~~~~~~~~~~~~~
 Path.cpp:4:1: warning:   when initialized here [-Wreorder]
     4 | BBP::std::PATH::PATH()

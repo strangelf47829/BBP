@@ -17,74 +17,25 @@
 #include "../include/ELSA/Processor.h"
 #include "../include/ELSA/Lexer.h"
 #include "../include/ELSA/DebugUtils.h"
+#include "../include/stddrv.h"
 
-BBP::elsa::DebugEmissionType_t errorType = { BBP::elsa::DebugEmissionType_t::Error, 23, 23 };
-BBP::elsa::DebugEmissionSource_t errorSource;
-BBP::elsa::DebugEmissionRecord_t debugRecord;
+void check(BBP::std::string str)
+{
+	// Create path
+	BBP::std::PATH path = str;
 
-// Debug database
-BBP::elsa::Debug_db database;
+	// Check 
+	bool exists = BBP::std::isFileOnDisk(path);
+
+	// Print diagnostic
+	if (exists)
+		BBP::std::printf("File %s does exist.\n", str.data);
+	else
+		BBP::std::printf("File %s does not exist.\n", str.data);
+}
 
 BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
 {
-	// Create error
-	errorSource = { 1, 1, "file.cpp", 4 };
-
-	database.emitHeader(errorSource);
-
+	check("/mnt/v/home/a.out");
+	check("/mnt/v/home/gofuckyourself");
 }
-
-/*
-// Symbol database
-BBP::elsa::symbol_db database;
-BBP::elsa::section_db database2;
-
-BBP::elsa::Section *dataSection;
-BBP::elsa::Section *stringTableSection;
-
-BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
-{
-	// Set stuff in database
-	database2.createSection(".text");
-	database2.createSection(".strtab");
-
-	// Create new section
-	dataSection = &database2[".text"];
-	stringTableSection = &database2[".strtab"];
-
-	// Initialize symbol database
-	database.setDataSection(dataSection);
-	database.setStringSection(stringTableSection);
-
-	database.createSymbol("_ZN3fd", "Hello, ");
-	database.createSymbol("_ZN3bar", "world!");
-	
-	std::printf("Found: %s\n\n", database["_ZN3fd"]->identifier.name.data);
-
-
-	// Print out data
-	std::size_t stringTableLength = stringTableSection->size();
-	std::size_t dataSectionLength = dataSection->size();
-
-	// Print out info
-	std::printf("String table size: %u:\n", stringTableLength);
-
-	// Print stuff
-	for (std::index_t idx = 0; idx < stringTableLength; idx++)
-		std::printf("(%c)", (*stringTableSection)[idx]);
-	kernelSS()->activeContext->STDOUT <<= '\n';
-
-	// Print out info
-	std::printf("\n\nData size: %u:\n", dataSectionLength);
-
-	// Print stuff
-	for (std::index_t idx = 0; idx < dataSectionLength; idx++)
-		std::printf("(%c)", (*dataSection)[idx]);
-	kernelSS()->activeContext->STDOUT <<= '\n';
-
-	database.Reset();
-	database2.Reset();
-
-	return 0;
-}
-*/

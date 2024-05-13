@@ -14,8 +14,8 @@ Environment::Drivers::Manifest Environment::Drivers::keyboardManifest = { {Keybo
 BBP::system::HardwareCmd BBP::system::screenCMD[2] = { Screen::connectToScreen, Screen::clearScreen };
 Environment::Drivers::Manifest Environment::Drivers::screenManifest = { {Screen::sendDataToScreen, Screen::receiveDataScreen, Screen::receiveScreenMetadata}, 2, BBP::system::screenCMD, Screen::loadScreenDriver };
 
-BBP::system::HardwareCmd BBP::system::fileSystemCMD[2] = { FS::initializeFilesystem, FS::deinitializeFilesystem };
-Environment::Drivers::Manifest Environment::Drivers::fileManifest = { {FS::sendDataToFileSystem, FS::receiveDataFromFileSystem, FS::receiveFileMetadata}, 2, BBP::system::fileSystemCMD, FS::loadFileSystem };
+BBP::system::HardwareCmd BBP::system::fileSystemCMD[4] = { FS::initializeFilesystem, FS::deinitializeFilesystem, FS::setModeLoadPath, FS::queryFileMetadata };
+Environment::Drivers::Manifest Environment::Drivers::fileManifest = { {FS::sendDataToFileSystem, FS::receiveDataFromFileSystem, FS::receiveFileMetadata}, 4, BBP::system::fileSystemCMD, FS::loadFileSystem };
 
 
 BBP::std::size_t BBP::system::keyboardCMDCount = 4;

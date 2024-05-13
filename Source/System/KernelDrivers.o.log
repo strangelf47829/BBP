@@ -1,8 +1,4 @@
-KernelDrivers.cpp: In member function ‘BBP::std::word BBP::system::DeviceDriver::writeData(BBP::std::c_string)’:
-KernelDrivers.cpp:19:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   19 | }
-      | ^
 KernelDrivers.cpp: In member function ‘BBP::std::errno_t BBP::system::Kernel::loadDriver(BBP::system::UEFILoadDriver, BBP::system::DeviceDriver&, BBP::std::size_t, BBP::std::word*)’:
-KernelDrivers.cpp:34:1: warning: control reaches end of non-void function [-Wreturn-type]
-   34 | }
+KernelDrivers.cpp:75:1: warning: control reaches end of non-void function [-Wreturn-type]
+   75 | }
       | ^

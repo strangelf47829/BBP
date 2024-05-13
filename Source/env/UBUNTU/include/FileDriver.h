@@ -11,7 +11,7 @@ namespace Environment
 		namespace Filesystem
 		{
 
-			// Keyboard specific stuff
+			// File specific stuff
 			BBP::std::word sendDataToFileSystem(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &);		// Writes data from page into file
 			BBP::std::word receiveDataFromFileSystem(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &);	// Reads data from file into page
 			BBP::std::word receiveFileMetadata(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &);		// Currently does nothing
@@ -19,9 +19,25 @@ namespace Environment
 			// Load driver
 			void loadFileSystem(BBP::system::DeviceDriver &driver);
 
-			// Keyboard commands
+			// File commands
 			bool initializeFilesystem(BBP::std::size_t, BBP::std::word *);			// 0
 			bool deinitializeFilesystem(BBP::std::size_t, BBP::std::word *);		// 1
+
+			// File specific commands
+			bool setModeLoadPath(BBP::std::size_t, BBP::std::word *);				// loadPath
+			bool queryFileMetadata(BBP::std::size_t, BBP::std::word *);				// Query
+
+			// Actual driver stuff
+			bool doesPathExist();
+
+			// Mode type
+			enum FileSystemMode
+			{
+				READPATH
+			};
+
+			// Current mode
+			extern FileSystemMode mode;
 
 			extern BBP::std::PATH activeFile;
 		}

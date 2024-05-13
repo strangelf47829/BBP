@@ -1,14 +1,20 @@
 Drivers/File/Actions.cpp: In function ‘BBP::std::word Environment::Drivers::Filesystem::sendDataToFileSystem(BBP::std::size_t, BBP::std::PAGE<char>&)’:
-Drivers/File/Actions.cpp:8:1: warning: no return statement in function returning non-void [-Wreturn-type]
-    8 | }
-      | ^
-Drivers/File/Actions.cpp:4:131: warning: unused parameter ‘page’ [-Wunused-parameter]
-    4 | BBP::std::word Environment::Drivers::Filesystem::sendDataToFileSystem(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &page)
-      |                                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+Drivers/File/Actions.cpp:12:16: warning: implicitly-declared ‘constexpr BBP::std::PATH& BBP::std::PATH::operator=(const BBP::std::PATH&)’ is deprecated [-Wdeprecated-copy]
+   12 |   activeFile = page;
+      |                ^~~~
+In file included from Drivers/File/../../include/FileDriver.h:4,
+                 from Drivers/File/Actions.cpp:1:
+Drivers/File/../../include/../../../include/FileSys.h:94:4: note: because ‘BBP::std::PATH’ has user-provided ‘BBP::std::PATH::PATH(BBP::std::PATH&)’
+   94 |    PATH(std::PATH &);
+      |    ^~~~
 Drivers/File/Actions.cpp: In function ‘BBP::std::word Environment::Drivers::Filesystem::receiveDataFromFileSystem(BBP::std::size_t, BBP::std::PAGE<char>&)’:
-Drivers/File/Actions.cpp:13:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   13 | }
+Drivers/File/Actions.cpp:20:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   20 | }
       | ^
-Drivers/File/Actions.cpp:10:136: warning: unused parameter ‘page’ [-Wunused-parameter]
-   10 | BBP::std::word Environment::Drivers::Filesystem::receiveDataFromFileSystem(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &page)
+Drivers/File/Actions.cpp:17:136: warning: unused parameter ‘page’ [-Wunused-parameter]
+   17 | BBP::std::word Environment::Drivers::Filesystem::receiveDataFromFileSystem(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &page)
       |                                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+Drivers/File/Actions.cpp: In function ‘BBP::std::word Environment::Drivers::Filesystem::sendDataToFileSystem(BBP::std::size_t, BBP::std::PAGE<char>&)’:
+Drivers/File/Actions.cpp:15:1: warning: control reaches end of non-void function [-Wreturn-type]
+   15 | }
+      | ^

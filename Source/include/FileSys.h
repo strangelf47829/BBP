@@ -9,8 +9,6 @@
 #define BBP_STDLIB_FILESYS_OVERWRITEEXISTINGFILES
 #endif
 
-
-
 namespace BBP
 {
 

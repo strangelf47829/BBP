@@ -45,6 +45,46 @@ BBP::std::size_t BBP::system::SoftwareHandle::available()
 	return InputBuffer->atElement;
 }
 
+void BBP::system::SoftwareHandle::seekOutputBack(std::size_t len)
+{
+	// Check for valid buffer
+	if (OutputBuffer == nullptr)
+		return;
+
+	// Seek back
+	OutputBuffer->atElement -= len;
+}
+
+void BBP::system::SoftwareHandle::seekOutputForward(std::size_t len)
+{
+	// Check for valid buffer
+	if (OutputBuffer == nullptr)
+		return;
+
+	// Seek back
+	OutputBuffer->atElement += len;
+}
+
+void BBP::system::SoftwareHandle::seekInputBack(std::size_t len)
+{
+	// Check for valid buffer
+	if (InputBuffer == nullptr)
+		return;
+
+	// Seek back
+	InputBuffer->atElement -= len;
+}
+
+void BBP::system::SoftwareHandle::seekInputForward(std::size_t len)
+{
+	// Check for valid buffer
+	if (InputBuffer == nullptr)
+		return;
+
+	// Seek back
+	InputBuffer->atElement += len;
+}
+
 BBP::system::SoftwareHandle &BBP::system::SoftwareHandle::operator<<(std::string_element b)
 {
 	// Check for valid output Buffer
@@ -68,6 +108,7 @@ BBP::system::SoftwareHandle &BBP::system::SoftwareHandle::operator>>(std::string
 
 	return *this;
 }
+
 BBP::system::SoftwareHandle &BBP::system::SoftwareHandle::operator<<(std::c_string b)
 {
 	// Check for valid output Buffer
@@ -82,12 +123,6 @@ BBP::system::SoftwareHandle &BBP::system::SoftwareHandle::operator<<(std::c_stri
 
 	// Get position after write
 	std::size_t postPosition = OutputBuffer->atElement;
-
-	// Send that amount of stuff to hardware
-	std::size_t bytesSent = BBP::system::getKernelInstance().getScreenDriver().hardwareDriver.send(postPosition - prePosition);
-
-	// Move output buffer back that amount of spaces, plus one
-	OutputBuffer->atElement -= (bytesSent + 1);
 
 	return *this;
 }

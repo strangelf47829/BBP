@@ -4,11 +4,11 @@ In file included from ../include/SystemContext.h:3,
                  from ../include/Kernel.h:4,
                  from File.cpp:1:
 ../include/FileSys.h: In member function ‘constexpr BBP::std::FileNode& BBP::std::FileNode::operator=(BBP::std::FileNode&&)’:
-../include/FileSys.h:199:10: warning: implicitly-declared ‘constexpr BBP::std::PATH& BBP::std::PATH::operator=(const BBP::std::PATH&)’ is deprecated [-Wdeprecated-copy]
-  199 |   struct FileNode
+../include/FileSys.h:197:10: warning: implicitly-declared ‘constexpr BBP::std::PATH& BBP::std::PATH::operator=(const BBP::std::PATH&)’ is deprecated [-Wdeprecated-copy]
+  197 |   struct FileNode
       |          ^~~~~~~~
-../include/FileSys.h:96:4: note: because ‘BBP::std::PATH’ has user-provided ‘BBP::std::PATH::PATH(BBP::std::PATH&)’
-   96 |    PATH(std::PATH &);
+../include/FileSys.h:94:4: note: because ‘BBP::std::PATH’ has user-provided ‘BBP::std::PATH::PATH(BBP::std::PATH&)’
+   94 |    PATH(std::PATH &);
       |    ^~~~
 File.cpp: In constructor ‘BBP::std::FILE::FILE(BBP::std::Stack<char>&, BBP::std::conststring)’:
 File.cpp:26:150: note: synthesized method ‘constexpr BBP::std::FileNode& BBP::std::FileNode::operator=(BBP::std::FileNode&&)’ first required here
