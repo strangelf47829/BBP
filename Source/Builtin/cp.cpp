@@ -13,7 +13,28 @@
 #include "../include/ELSA/Numerical.h"
 #include "../include/SequentialMemory.h"
 #include "../include/ELSA/SectionDB.h"
+#include "../include/ELSA/Keywords.h"
+#include "../include/ELSA/Processor.h"
+#include "../include/ELSA/Lexer.h"
+#include "../include/ELSA/DebugUtils.h"
 
+BBP::elsa::DebugEmissionType_t errorType = { BBP::elsa::DebugEmissionType_t::Error, 23, 23 };
+BBP::elsa::DebugEmissionSource_t errorSource;
+BBP::elsa::DebugEmissionRecord_t debugRecord;
+
+// Debug database
+BBP::elsa::Debug_db database;
+
+BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
+{
+	// Create error
+	errorSource = { 1, 1, "file.cpp", 4 };
+
+	database.emitHeader(errorSource);
+
+}
+
+/*
 // Symbol database
 BBP::elsa::symbol_db database;
 BBP::elsa::section_db database2;
@@ -66,3 +87,4 @@ BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
 
 	return 0;
 }
+*/
