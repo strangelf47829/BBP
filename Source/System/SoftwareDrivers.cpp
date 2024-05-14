@@ -92,7 +92,7 @@ BBP::system::SoftwareHandle &BBP::system::SoftwareHandle::operator<<(std::string
 		return *this;	// Nothing output.
 
 	// Just write that into output buffer.
-	*OutputBuffer <<= b;
+	*OutputBuffer << b;
 
 	return *this;
 }

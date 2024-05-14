@@ -31,6 +31,11 @@ namespace Environment
 			bool closeFile(BBP::std::size_t, BBP::std::word *);						// close a file
 			bool setReadMode(BBP::std::size_t, BBP::std::word *);					// Set read mode
 			bool setWriteMode(BBP::std::size_t, BBP::std::word *);					// Set read mode
+			bool pathInspect(BBP::std::size_t, BBP::std::word *);					// Inspect a path
+			bool stepInspect(BBP::std::size_t, BBP::std::word *);					// Step over path
+			bool emitNameInspect(BBP::std::size_t, BBP::std::word *);				// Emit name of an inspection
+			bool emitTypeInspect(BBP::std::size_t, BBP::std::word *);				// Emit type of an inspection
+			bool canStepInspect(BBP::std::size_t, BBP::std::word *);				// Check if able to step
 
 			// Actual driver stuff
 			bool doesPathExist();
@@ -46,13 +51,26 @@ namespace Environment
 			void closeFileReading();
 			bool readCharacter(char &);
 
+			// File writing
+			void openFileWriting();
+			void closeFileWriting();
+			void writeFile(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &);
 
+			// Inspection
+			void openInspection();
+			bool stepInspection();
+			BBP::std::size_t nameSizeInspection();
+			int getEntityTypeInspection();
+			BBP::std::size_t prepareNameEmission();
+			void emitName(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &);
+			bool inspectorStatus();
 
 			// Mode type
 			enum FileSystemMode
 			{
 				READPATH,
-				READ, WRITE
+				READ, WRITE,
+				INSPECT
 			};
 
 			// Current mode

@@ -14,8 +14,8 @@ Environment::Drivers::Manifest Environment::Drivers::keyboardManifest = { {Keybo
 BBP::system::HardwareCmd BBP::system::screenCMD[2] = { Screen::connectToScreen, Screen::clearScreen };
 Environment::Drivers::Manifest Environment::Drivers::screenManifest = { {Screen::sendDataToScreen, Screen::receiveDataScreen, Screen::receiveScreenMetadata}, 2, BBP::system::screenCMD, Screen::loadScreenDriver };
 
-BBP::system::HardwareCmd BBP::system::fileSystemCMD[9] = { FS::initializeFilesystem, FS::deinitializeFilesystem, FS::setModeLoadPath, FS::queryFileMetadata, FS::getFileType, FS::openFile, FS::closeFile, FS::setReadMode, FS::setWriteMode };
-Environment::Drivers::Manifest Environment::Drivers::fileManifest = { {FS::sendDataToFileSystem, FS::receiveDataFromFileSystem, FS::receiveFileMetadata}, 9, BBP::system::fileSystemCMD, FS::loadFileSystem };
+BBP::system::HardwareCmd BBP::system::fileSystemCMD[14] = { FS::initializeFilesystem, FS::deinitializeFilesystem, FS::setModeLoadPath, FS::queryFileMetadata, FS::getFileType, FS::openFile, FS::closeFile, FS::setReadMode, FS::setWriteMode, FS::pathInspect, FS::stepInspect, FS::emitNameInspect, FS::emitTypeInspect, FS::canStepInspect };
+Environment::Drivers::Manifest Environment::Drivers::fileManifest = { {FS::sendDataToFileSystem, FS::receiveDataFromFileSystem, FS::receiveFileMetadata}, 14, BBP::system::fileSystemCMD, FS::loadFileSystem };
 
 
 BBP::std::size_t BBP::system::keyboardCMDCount = 4;

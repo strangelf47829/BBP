@@ -17,7 +17,11 @@ namespace BBP
 		constexpr std::index_t closeFile = 6;				// Close a file
 		constexpr std::index_t setModeRead = 7;				// Set mode to reading
 		constexpr std::index_t setModeWrite = 8;			// Set mode to writing
-		
+		constexpr std::index_t inspectPath = 9;				// Inspect a path (used to count items)
+		constexpr std::index_t inspectStep = 10;			// Move to the next path
+		constexpr std::index_t inspectEmitName = 11;		// Receive the name of the path
+		constexpr std::index_t inspectGetType = 12;			// Get the file type
+		constexpr std::index_t inspectCanStep = 13;			// Can step?
 
 		
 

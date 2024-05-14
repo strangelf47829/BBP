@@ -62,16 +62,44 @@ BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
 	check("/mnt/v/home/");
 	check("/mnt/v/home/test.txt");
 
-	std::STATIC_PAGE<std::string_element, 100> pa;
-	std::Stack<std::string_element> str(&pa);
+	// Get Inspect a path
+	std::PATH inspection = "/mnt/v/home";
 
-	std::PATH p("/mnt/v/home/test.txt");
-	std::readFileFromDisk(str, p);
+	// Inspect a path
+	std::Inspect(inspection);
 
-	std::printf("File contains:\n%s\n\n", pa.data);
+	// String
+	std::static_string<255> str;
 
-	std::PATH p2("/mnt/v/home/test2.txt");
-	std::readFileFromDisk(str, p2);
+	// While we can step the iterator
+	while (std::canStepInspector())
+	{
+		// Get type
+		std::FileSysInfo::FileSysEntryType type = std::getInspectorFileType();
 
-	std::printf("File contains:\n%s\n\n", pa.data);
+		// Get name
+		std::getInspectorPath(str);
+
+		// Get filetype name
+		std::conststring typeStr = "Unkown";
+
+		switch (type)
+		{
+		case std::FileSysInfo::FileSysEntryType::File:
+			typeStr = "File";
+			break;
+		case std::FileSysInfo::FileSysEntryType::Directory:
+			typeStr = "Directory";
+			break;
+		case std::FileSysInfo::FileSysEntryType::Unkown:
+			typeStr = "Unkown";
+			break;
+		}
+		// print stuff
+		std::printf(" - %s is of type %s.\n", str.data, typeStr);
+
+		// Step at the end
+		std::stepInspectionIterator();
+	}
+
 }

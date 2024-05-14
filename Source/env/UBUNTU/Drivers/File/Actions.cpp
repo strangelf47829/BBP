@@ -17,8 +17,9 @@ BBP::std::word Environment::Drivers::Filesystem::sendDataToFileSystem(BBP::std::
 		return 0; // No-op
 		
 	case FileSystemMode::WRITE:
-		// TODO: Implement
-		return 0;
+		// Pass on data
+		writeFile(amount, page);
+		return amount;
 	}
 }
 
@@ -53,6 +54,14 @@ BBP::std::word Environment::Drivers::Filesystem::receiveDataFromFileSystem(BBP::
 		}
 
 		// Read requested amount
+		return requested;
+
+	case FileSystemMode::INSPECT:
+
+		// Read the amount of requested bytes into page
+		emitName(requested, page);
+		
+		// Return amount
 		return requested;
 	}
 }

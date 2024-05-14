@@ -76,6 +76,9 @@ bool Environment::Drivers::Filesystem::openFile(BBP::std::size_t argc, BBP::std:
 	case FileSystemMode::READ:
 		openFileReading();
 		return true;
+	case FileSystemMode::WRITE:
+		openFileWriting();
+		return true;
 	}
 
 	// Something went wrong.
@@ -89,6 +92,9 @@ bool Environment::Drivers::Filesystem::closeFile(BBP::std::size_t argc, BBP::std
 	{
 	case FileSystemMode::READ:
 		closeFileReading();
+		return true;
+	case FileSystemMode::WRITE:
+		closeFileWriting();
 		return true;
 	}
 
@@ -104,4 +110,65 @@ bool Environment::Drivers::Filesystem::setReadMode(BBP::std::size_t argc, BBP::s
 bool Environment::Drivers::Filesystem::setWriteMode(BBP::std::size_t argc, BBP::std::word *argv)
 {
 	mode = WRITE;
+}
+
+bool Environment::Drivers::Filesystem::pathInspect(BBP::std::size_t argc, BBP::std::word *argv)
+{
+	// Open up an inspection.
+	openInspection();
+
+	// Done
+	return true;
+}
+
+bool Environment::Drivers::Filesystem::stepInspect(BBP::std::size_t argc, BBP::std::word *argv)
+{
+	// Step iterator
+	bool valid = stepInspection();
+
+	// If argc and argv, set first argument to value
+	if (argc && argv)
+		argv[0] = valid;
+
+	// Return if could step
+	return valid;
+}
+
+bool Environment::Drivers::Filesystem::emitNameInspect(BBP::std::size_t argc, BBP::std::word *argv)
+{
+	// Tell the driver to prepare. also save
+	BBP::std::size_t nameSize = prepareNameEmission();
+
+	// If argc and argv, write
+	if (argc && argv)
+		argv[0] = nameSize;
+
+	// return true
+	return true;
+}
+
+bool Environment::Drivers::Filesystem::emitTypeInspect(BBP::std::size_t argc, BBP::std::word *argv)
+{
+	// Tell the driver to prepare. also save
+	int type = getEntityTypeInspection();
+
+	// If argc and argv, write
+	if (argc && argv)
+		argv[0] = type;
+
+	// return true
+	return true;
+}
+
+bool Environment::Drivers::Filesystem::canStepInspect(BBP::std::size_t argc, BBP::std::word *argv)
+{
+	// Get inspector status
+	bool status = inspectorStatus();
+
+	// If argc and argv, set
+	if (argc && argv)
+		argv[0] = status;
+
+	// Success
+	return true;
 }

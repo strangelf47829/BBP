@@ -161,6 +161,7 @@ namespace BBP
 			// Used to send data
 			std::word writeData(std::c_string str);
 			std::word writeData(std::string str);
+			std::word writeData(std::string str, std::size_t);
 
 			// Used to receive data
 			std::word receiveData(std::word);

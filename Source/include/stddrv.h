@@ -50,15 +50,17 @@ namespace BBP
 		// Inspect a given path. Returns 0 if success, 
 		std::errno_t Inspect(PATH &);
 
-		// Get file and directory count for a given path
-		std::size_t fileCount();
-		std::size_t directoryCount();
+		// Step iterator
+		bool stepInspectionIterator();
 
-		// Get file name given an index
-		std::c_string getFileName(std::index_t);
+		// Get name of path
+		void getInspectorPath(std::string &);
 
-		// Get directory name given an index
-		std::c_string getDirectoryName(std::index_t);
+		// Get inspector file type
+		FileSysInfo::FileSysEntryType getInspectorFileType();
+
+		// Check if can step
+		bool canStepInspector();
 
 	}
 }
