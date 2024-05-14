@@ -26,15 +26,33 @@ namespace Environment
 			// File specific commands
 			bool setModeLoadPath(BBP::std::size_t, BBP::std::word *);				// loadPath
 			bool queryFileMetadata(BBP::std::size_t, BBP::std::word *);				// Query
+			bool getFileType(BBP::std::size_t, BBP::std::word *);					// queryEntityType
+			bool openFile(BBP::std::size_t, BBP::std::word *);						// open a file
+			bool closeFile(BBP::std::size_t, BBP::std::word *);						// close a file
+			bool setReadMode(BBP::std::size_t, BBP::std::word *);					// Set read mode
+			bool setWriteMode(BBP::std::size_t, BBP::std::word *);					// Set read mode
 
 			// Actual driver stuff
 			bool doesPathExist();
 			BBP::std::size_t getFileSize();
 
+			// Entity type checking
+			bool isFile();
+			bool isDirectory();
+			bool doesEntityExist();
+
+			// File reading
+			void openFileReading();
+			void closeFileReading();
+			bool readCharacter(char &);
+
+
+
 			// Mode type
 			enum FileSystemMode
 			{
-				READPATH
+				READPATH,
+				READ, WRITE
 			};
 
 			// Current mode

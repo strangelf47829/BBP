@@ -74,6 +74,10 @@ namespace BBP
 			// Seek input forward and back
 			void seekInputForward(std::size_t);
 			void seekInputBack(std::size_t);
+
+			// Trigger event
+			void triggerInput(std::string_element);
+			void triggerOutput(std::string_element);
 		};
 
 		// The instance for this
@@ -159,7 +163,7 @@ namespace BBP
 			std::word writeData(std::string str);
 
 			// Used to receive data
-			std::Stack<std::string_element> &receiveData(std::word);
+			std::word receiveData(std::word);
 
 		};
 

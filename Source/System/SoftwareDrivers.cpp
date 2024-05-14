@@ -163,4 +163,24 @@ BBP::system::SoftwareHandle &BBP::system::SoftwareHandle::operator>(std::string_
 	return *this;
 }
 
+void BBP::system::SoftwareHandle::triggerInput(std::string_element element)
+{
+	// Check for valid input Buffer
+	if (InputBuffer == nullptr)
+		return;	// Nothing output.
 
+	// Just write that into output buffer.
+	*InputBuffer <<= element;
+	return;
+}
+
+void BBP::system::SoftwareHandle::triggerOutput(std::string_element element)
+{
+	// Check for valid input Buffer
+	if (OutputBuffer == nullptr)
+		return;	// Nothing output.
+
+	// Just write that into output buffer.
+	*OutputBuffer <<= element;
+	return;
+}

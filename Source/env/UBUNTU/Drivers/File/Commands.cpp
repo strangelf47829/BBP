@@ -41,3 +41,67 @@ bool Environment::Drivers::Filesystem::queryFileMetadata(BBP::std::size_t argc, 
 	// Return true
 	return true;
 }
+
+bool Environment::Drivers::Filesystem::getFileType(BBP::std::size_t argc, BBP::std::word *argv)
+{
+	// If argc is 0 or argv is nullptr return false
+	if (argc == 0 || argv == nullptr)
+		return false;
+
+	// If does not exist then return none
+	if (doesEntityExist() == false)
+		argv[0] = 0; // NONE
+
+	// If file exists return file
+	else if (isFile())
+		argv[0] = 1;
+
+	// If directory exists return directory
+	else if (isDirectory())
+		argv[0] = 2;
+
+	// Otherwise unkown
+	else
+		argv[0] = 3;
+
+	// Success
+	return true;
+}
+
+bool Environment::Drivers::Filesystem::openFile(BBP::std::size_t argc, BBP::std::word *argv)
+{
+	// Do something based on mode
+	switch (mode)
+	{
+	case FileSystemMode::READ:
+		openFileReading();
+		return true;
+	}
+
+	// Something went wrong.
+	return false;
+}
+
+bool Environment::Drivers::Filesystem::closeFile(BBP::std::size_t argc, BBP::std::word *argv)
+{
+	// Do something based on mode
+	switch (mode)
+	{
+	case FileSystemMode::READ:
+		closeFileReading();
+		return true;
+	}
+
+	// Something went wrong.
+	return false;
+}
+
+bool Environment::Drivers::Filesystem::setReadMode(BBP::std::size_t argc, BBP::std::word *argv)
+{
+	mode = READ;
+}
+
+bool Environment::Drivers::Filesystem::setWriteMode(BBP::std::size_t argc, BBP::std::word *argv)
+{
+	mode = WRITE;
+}

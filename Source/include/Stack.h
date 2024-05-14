@@ -16,12 +16,12 @@ namespace BBP
 		public:
 			
 			// Constructors
-			Stack(PAGE<K> *_page) : page(_page), max_elements(std::seqlen(*_page)), atElement(0), readFrom(nullptr), writeTo(nullptr) {}
+			Stack(PAGE<K> *_page) : page(_page), max_elements(0), atElement(0), readFrom(nullptr), writeTo(nullptr) { if (page != nullptr) max_elements = std::seqlen(*_page); }
 			Stack(PAGE<K> *_page, size_t max) : page(_page), max_elements(max), atElement(0), readFrom(nullptr), writeTo(nullptr) {}
 
 			// Static constructors
 			template<int N>
-			Stack(STATIC_PAGE<K, N> *_page) : page(_page), max_elements(std::seqlen(*_page)), atElement(0), readFrom(nullptr), writeTo(nullptr) {}
+			Stack(STATIC_PAGE<K, N> *_page) : page(_page), max_elements(0), atElement(0), readFrom(nullptr), writeTo(nullptr) { if (page != nullptr) max_elements = std::seqlen(*_page);  }
 			template<int N>
 			Stack(STATIC_PAGE<K, N> *_page, size_t max) : page(_page), max_elements(max), atElement(0), readFrom(nullptr), writeTo(nullptr) {}
 

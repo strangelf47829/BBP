@@ -3,8 +3,15 @@
 
 #include <fstream>
 
+#define _HAS_CXX17
+#include <filesystem>
+namespace fs = std::filesystem;
+
 Environment::Drivers::Filesystem::FileSystemMode Environment::Drivers::Filesystem::mode;
 BBP::std::PATH Environment::Drivers::Filesystem::activeFile("/mnt/v/");
+
+// Reading
+std::ifstream readStream;
 
 bool Environment::Drivers::Filesystem::doesPathExist()
 {
@@ -41,4 +48,63 @@ BBP::std::word Environment::Drivers::Filesystem::getFileSize()
 
 	// Return bytecount
 	return size;
+}
+
+bool Environment::Drivers::Filesystem::isDirectory()
+{
+	// Get C string representation
+	BBP::std::c_string pathName = activeFile.relName();
+
+	// Then get path
+	fs::path path(pathName);
+
+	// Then return is directory
+	return fs::is_directory(path);
+}
+
+bool Environment::Drivers::Filesystem::isFile()
+{
+	// Get C string representation
+	BBP::std::c_string pathName = activeFile.relName();
+
+	// Then get path
+	fs::path path(pathName);
+
+	// Then return is file
+	return fs::is_regular_file(path);
+}
+
+bool Environment::Drivers::Filesystem::doesEntityExist()
+{
+	// Get C string representation
+	BBP::std::c_string pathName = activeFile.relName();
+
+	// Then get path
+	fs::path path(pathName);
+
+	// Then return is file
+	return fs::exists(path);
+}
+
+// Open for reading
+void Environment::Drivers::Filesystem::openFileReading()
+{
+	// Open stream
+	readStream = std::ifstream(activeFile.relName(), ::std::ios_base::binary);
+}
+
+// Close for reading
+void Environment::Drivers::Filesystem::closeFileReading()
+{
+	// Open stream
+	readStream.close();
+}
+
+// Read a character
+bool Environment::Drivers::Filesystem::readCharacter(char &c)
+{
+	// Stupid workaround ?
+	if (readStream.get(c))
+		return true;
+	return false;
 }

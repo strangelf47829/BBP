@@ -60,6 +60,28 @@ BBP::std::word BBP::system::DeviceDriver::writeData(std::string data)
 	return bytesSent;
 }
 
+// Read data
+BBP::std::word BBP::system::DeviceDriver::receiveData(std::word amount)
+{
+	// Receive hardware
+	std::size_t received = hardwareDriver.receive(amount);
+
+	// Then write that into software
+	for (std::index_t idx = 0; idx < received; idx++)
+	{
+		if (idx + 1 < received)
+			softwareDriver < hardwareDriver.getInput()[idx];
+		else
+			softwareDriver.triggerInput(hardwareDriver.getInput()[idx]);
+	}
+
+	// Then seek
+	softwareDriver.seekInputBack(received + 1);
+
+	// Then return amount of bytes received
+	return received;
+}
+
 // Load a driver
 BBP::std::errno_t BBP::system::Kernel::loadDriver(UEFILoadDriver loadDriver, DeviceDriver &intoDriver, BBP::std::size_t argc, BBP::std::word *argv)
 {
