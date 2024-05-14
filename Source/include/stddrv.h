@@ -45,7 +45,7 @@ namespace BBP
 		std::size_t readFileFromDisk(stream_t, PATH &);
 
 		// Write file to disk (Takes all the data from the file and dumps it into a file driver)
-		void writeFileToDisk(PATH &, fstream_t);
+		void writeFileToDisk(PATH &, stream_t);
 
 		// Inspect a given path. Returns 0 if success, 
 		std::errno_t Inspect(PATH &);

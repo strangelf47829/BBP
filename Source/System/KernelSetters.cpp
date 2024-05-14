@@ -116,3 +116,8 @@ BBP::system::DeviceDriver &BBP::system::Kernel::getScreenDriver()
 {
 	return screenDriver;
 }
+
+BBP::system::DeviceDriver &BBP::system::Kernel::getSystemDriver()
+{
+	return systemDriver;
+}

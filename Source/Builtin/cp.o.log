@@ -1,14 +1,7 @@
 cp.cpp: In function ‘BBP::std::errno_t BBP::system::cp_builtin(BBP::std::size_t, BBP::std::string_element**)’:
-cp.cpp:88:10: warning: enumeration value ‘None’ not handled in switch [-Wswitch]
-   88 |   switch (type)
-      |          ^
-cp.cpp:88:10: warning: enumeration value ‘Volume’ not handled in switch [-Wswitch]
-cp.cpp:110:1: warning: no return statement in function returning non-void [-Wreturn-type]
-  110 | }
-      | ^
-cp.cpp:58:55: warning: unused parameter ‘argc’ [-Wunused-parameter]
-   58 | BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
+cp.cpp:109:55: warning: unused parameter ‘argc’ [-Wunused-parameter]
+  109 | BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
       |                                           ~~~~~~~~~~~~^~~~
-cp.cpp:58:76: warning: unused parameter ‘argv’ [-Wunused-parameter]
-   58 | BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
+cp.cpp:109:76: warning: unused parameter ‘argv’ [-Wunused-parameter]
+  109 | BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
       |                                                             ~~~~~~~~~~~~~~~^~~~

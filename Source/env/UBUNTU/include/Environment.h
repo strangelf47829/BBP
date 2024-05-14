@@ -29,6 +29,7 @@ namespace Environment
 		extern Manifest keyboardManifest;
 		extern Manifest screenManifest;
 		extern Manifest fileManifest;
+		extern Manifest systemManifest;
 
 	}
 

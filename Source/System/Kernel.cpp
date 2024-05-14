@@ -14,7 +14,8 @@ BBP::system::Kernel &BBP::system::getKernelInstance()
 BBP::system::Kernel::Kernel()
 	: keyboardDriver(nullptr, nullptr, "Generic Keyboard", keyboardActions, keyboardCMDCount, keyboardCMD),
 	screenDriver(nullptr, nullptr, "Generic TTY", screenActions, screenCMDCount, screenCMD),
-	fileDriver(nullptr, nullptr, "Generic FileSystem", fileSystemActions, fileSystemCMDCount, fileSystemCMD)
+	fileDriver(nullptr, nullptr, "Generic FileSystem", fileSystemActions, fileSystemCMDCount, fileSystemCMD),
+	systemDriver(nullptr, nullptr, "System", systemActions, systemCMDCount, systemCMD)
 {
 
 }

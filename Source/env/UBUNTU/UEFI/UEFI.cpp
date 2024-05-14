@@ -30,6 +30,7 @@ BBP::system::UEFI &BBP::system::retrieveUEFI()
 	ubuntuUEFI.drivers.loadKeyboard = Environment::Drivers::keyboardManifest.loader;
 	ubuntuUEFI.drivers.loadScreen = Environment::Drivers::screenManifest.loader;
 	ubuntuUEFI.drivers.loadFileSystem = Environment::Drivers::fileManifest.loader;
+	ubuntuUEFI.drivers.loadSystem = Environment::Drivers::systemManifest.loader;
 
 	// Configure daemons
 	ubuntuUEFI.daemons.records = std::PAGE<system::DaemonRecord>(2, records);

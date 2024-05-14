@@ -57,6 +57,21 @@ namespace BBP
 			return 0;
 		}
 
+		std::errno_t loadSystem(UEFI &configuration)
+		{
+			if (getKernelInstance().loadDriver(configuration.drivers.loadSystem, getKernelInstance().getSystemDriver()))
+				return fileSystemInitFailed;
+
+			// Connect
+			bool connectionActive = getKernelInstance().getSystemDriver().hardwareDriver.executeCommand(HardwareHandle::connectCmd, 0, nullptr);
+
+			// If failed to activate keyboard, return error
+			if (connectionActive == false)
+				return systemInitFailed;
+
+			return 0;
+		}
+
 		std::errno_t loadEssentialDrivers(UEFI &configuration)
 		{
 			// Attempt to load Screen
@@ -79,6 +94,13 @@ namespace BBP
 			// If error, return
 			if (keyboardStatus)
 				return keyboardStatus;
+
+			// Attempt to load system
+			std::errno_t systemStatus = loadSystem(configuration);
+
+			// If error, return
+			if (systemStatus)
+				return systemStatus;
 
 			return 0;
 		}

@@ -20,6 +20,7 @@
 #include "../include/FileSysInfo.h"
 #include "../include/stddrv.h"
 
+/*
 void check(BBP::std::string str)
 {
 	// Create path
@@ -102,4 +103,28 @@ BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
 		std::stepInspectionIterator();
 	}
 
+}*/
+
+
+BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
+{
+	std::PATH dirPath = "/";
+	std::ResourceManager alloc;
+
+	std::DirectoryInfo info;
+	info.populate(dirPath, &alloc);
+
+	std::size_t entityCount = info.entity_count();
+
+	for (std::index_t idx = 0; idx < entityCount; idx++)
+	{
+		std::string entityName; 
+		info.loadEntity(idx, entityName);
+
+		std::printf(" - %s\n", entityName.data);
+	}
+
+	info.release();
+
+	return 0;
 }

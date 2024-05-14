@@ -1,0 +1,4 @@
+FileDrv.cpp: In member function ‘void BBP::std::FILE::writeFileToDisk(BBP::std::PATH&)’:
+FileDrv.cpp:42:14: warning: unused variable ‘dataSize’ [-Wunused-variable]
+   42 |  std::size_t dataSize = std::seqlen(*_data);
+      |              ^~~~~~~~

@@ -147,15 +147,8 @@ BBP::std::size_t BBP::std::readFileFromDisk(stream_t stream, PATH &path)
 }
 
 // Write file to disk (Takes all the data from the file and dumps it into a file driver)
-void BBP::std::writeFileToDisk(PATH &path, fstream_t file)
+void BBP::std::writeFileToDisk(PATH &path, stream_t stream)
 {
-	// If no valid data or no file do nothing
-	if (file == nullptr)
-		return;
-
-	if (file->b().page == nullptr)
-		return;
-
 	// Get driver
 	BBP::system::DeviceDriver *driver = &system::getKernelInstance().getFileDriver();
 
@@ -169,7 +162,7 @@ void BBP::std::writeFileToDisk(PATH &path, fstream_t file)
 	driver->hardwareDriver.executeCommand(openFile, 0, 0);
 
 	// Send data
-	driver->writeData(*file->b().page, file->b().atElement);
+	driver->writeData(*(stream.page), stream.atElement);
 
 	// Close file
 	driver->hardwareDriver.executeCommand(closeFile, 0, 0);

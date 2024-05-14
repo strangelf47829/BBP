@@ -32,6 +32,7 @@ namespace BBP
 			DeviceDriver keyboardDriver;
 			DeviceDriver screenDriver;
 			DeviceDriver fileDriver;
+			DeviceDriver systemDriver;
 
 			// Since there may be more drivers present, this page holds extra room for drivers
 			std::PAGE<DeviceDriver> drivers;
@@ -95,11 +96,9 @@ namespace BBP
 
 			// Called by the bootloader to configure the drivers
 			DeviceDriver &getKeyboardDriver(); 
-			bool activateKeyboardDriver();			// Returns true on failure, return false on success.
 			DeviceDriver &getScreenDriver();
-			bool activateScreenDriver();			// Returns true on failure, return false on success.
 			DeviceDriver &getFileDriver();
-			bool activateFileDriver();				// Returns true on failure, return false on success.
+			DeviceDriver &getSystemDriver();
 
 			// External stuff
 			void allocateExternalDrivers(std::size_t);

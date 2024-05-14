@@ -52,10 +52,11 @@ namespace BBP
 		// This structure is used to store function pointers to load drivers into the kernel before the kernel activates
 		struct UEFI_Drivers
 		{
-			// Load keyboard, screen, and file system
+			// Load keyboard, screen, file system, and system driver
 			UEFILoadDriver loadKeyboard;
 			UEFILoadDriver loadScreen;
 			UEFILoadDriver loadFileSystem;
+			UEFILoadDriver loadSystem;
 
 			// Get list of other drivers
 			UEFIGetManifest<UEFILoadDriver> getOtherDrivers;
@@ -143,19 +144,23 @@ namespace BBP
 		const int keyboardInitFailed = -5;
 		const int screenInitFailed = -6;
 		const int fileSystemInitFailed = -7;
+		const int systemInitFailed = -8;
 
 		// Platform dependant stuff
 		extern HardwareAction keyboardActions[3];
 		extern HardwareAction screenActions[3];
 		extern HardwareAction fileSystemActions[3];
+		extern HardwareAction systemActions[3];
 
 		extern std::size_t keyboardCMDCount;
 		extern std::size_t screenCMDCount;
 		extern std::size_t fileSystemCMDCount;
+		extern std::size_t systemCMDCount;
 
 		extern HardwareCmd keyboardCMD[];
 		extern HardwareCmd screenCMD[];
 		extern HardwareCmd fileSystemCMD[];
+		extern HardwareCmd systemCMD[];
 
 	}
 }
