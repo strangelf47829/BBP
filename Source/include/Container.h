@@ -23,6 +23,13 @@ namespace BBP
 				idx(sizeof...(K))
 			{}
 
+			// Default constructor
+			Container()
+				: value(T()),
+				trailing(),
+				idx(sizeof...(K))
+			{}
+
 			// Declare a getter
 			template<std::index_t P, typename L>
 			struct ListGetter;

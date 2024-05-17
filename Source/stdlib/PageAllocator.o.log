@@ -22,9 +22,9 @@ In file included from ../include/Resources.h:5,
    11 |   class ResourceManager;
       |         ^~~~~~~~~~~~~~~
 PageAllocator.cpp: In constructor ‘BBP::std::pageAllocator::pageAllocator()’:
-PageAllocator.cpp:11:8: warning: unused variable ‘nul’ [-Wunused-variable]
-   11 |  void *nul = nullptr;
+PageAllocator.cpp:12:8: warning: unused variable ‘nul’ [-Wunused-variable]
+   12 |  void *nul = nullptr;
       |        ^~~
-PageAllocator.cpp:12:19: warning: unused variable ‘nul2’ [-Wunused-variable]
-   12 |  AbstractGCEntry *nul2 = nullptr;
+PageAllocator.cpp:13:19: warning: unused variable ‘nul2’ [-Wunused-variable]
+   13 |  AbstractGCEntry *nul2 = nullptr;
       |                   ^~~~

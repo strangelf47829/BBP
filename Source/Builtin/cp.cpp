@@ -20,6 +20,7 @@
 #include "../include/FileSysInfo.h"
 #include "../include/stddrv.h"
 #include "../include/Syscalls.h"
+#include "../include/Async.h"
 
 /*
 void check(BBP::std::string str)
@@ -109,6 +110,28 @@ BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
 
 BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
 {
+	std::async_task<int (*)(int), int>::lambda_t k = [](std::async_stack_t<int> &stack, std::async_stack_t<int> &arg) -> int { /*Double*/ stack.template get<0>() = 2 * arg.template get<0>(); return 0; };
+	std::async_task<int (*)(int), int>::lambda_t l = [](std::async_stack_t<int> &stack, std::async_stack_t<int> &arg) -> int { /*Return double again*/ return stack.template get<0>() * 2; };
+
+	std::async_task<int (*)(int), int>::lambda_t list[2] = { k, l };
+
+	// Collect everything
+	std::async_task<int (*)(int), int> task1(2, list);
+	std::async_task<int (*)(int), int> task2(2, list);
+
+	std::word arg1 = 13;
+	std::word arg2 = 12;
+
+	// Call asynchronously
+	task1.Async(arg1);
+	task2.Async(arg2);
+	task1.Step();
+	task2.Step();
+	int result1 = task1.Await();
+	int result2 = task2.Await();
+
+	std::printf("Inputs were (%u,%u) and outputs were (%u,%u)\n", arg1,arg2,result1,result2);
+
 
 	void *result_dub = systemcalls::malloc(3);
 	systemcalls::free(result_dub);

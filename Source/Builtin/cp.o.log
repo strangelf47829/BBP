@@ -1,7 +1,20 @@
+cp.cpp: In lambda function:
+cp.cpp:114:111: warning: unused parameter ‘arg’ [-Wunused-parameter]
+  114 |  std::async_task<int (*)(int), int>::lambda_t l = [](std::async_stack_t<int> &stack, std::async_stack_t<int> &arg) -> int { /*Return double again*/ return stack.template get<0>() * 2; };
+      |                                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
 cp.cpp: In function ‘BBP::std::errno_t BBP::system::cp_builtin(BBP::std::size_t, BBP::std::string_element**)’:
-cp.cpp:110:55: warning: unused parameter ‘argc’ [-Wunused-parameter]
-  110 | BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
+cp.cpp:111:55: warning: unused parameter ‘argc’ [-Wunused-parameter]
+  111 | BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
       |                                           ~~~~~~~~~~~~^~~~
-cp.cpp:110:76: warning: unused parameter ‘argv’ [-Wunused-parameter]
-  110 | BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
+cp.cpp:111:76: warning: unused parameter ‘argv’ [-Wunused-parameter]
+  111 | BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
       |                                                             ~~~~~~~~~~~~~~~^~~~
+In file included from cp.cpp:23:
+../include/Async.h: In instantiation of ‘R BBP::std::async_task<R (*)(A ...), K ...>::Sync(A ...) [with R = int; A = {int}; K = {int}]’:
+../include/Async.h:164:6:   required from here
+../include/Async.h:165:5: warning: no return statement in function returning non-void [-Wreturn-type]
+  165 |    {}
+      |     ^
+../include/Async.h:164:12: warning: unused parameter ‘args#0’ [-Wunused-parameter]
+  164 |    R Sync(A... args) override
+      |           ~^~~~~~~~

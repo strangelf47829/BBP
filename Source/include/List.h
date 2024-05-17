@@ -23,6 +23,10 @@ namespace BBP
 				: cont(first, others...)
 			{}
 
+			// Default constructor
+			List()
+			{}
+
 			// Object Getter
 			template<std::index_t index>
 			auto &get()

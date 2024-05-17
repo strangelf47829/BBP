@@ -4,6 +4,7 @@
 #include "../include/stdio.h"
 #include "../include/Signal.h"
 #include "../include/Kernel.h"
+#include "../include/Syscalls.h"
 
 BBP::std::pageAllocator::pageAllocator()
 {
@@ -32,7 +33,7 @@ void *BBP::std::pageAllocator::malloc(std::size_t size)
 		throw std::exception("Could not allocate bytes to Resource manager: Out of allocation space.", ENOMEM);
 
 	// Actually malloc data
-	void *data = std::ext_malloc(size);
+	void *data = systemcalls::malloc(size);
 
 	// Add that data
 	add_alloc(data, size);
@@ -48,7 +49,7 @@ void *BBP::std::pageAllocator::calloc(std::size_t count, std::size_t size)
 		throw std::exception("Could not allocate bytes to Resource manager: Out of allocation space.", ENOMEM);
 
 	// Actually calloc data
-	void *data = std::ext_calloc(count, size);
+	void *data = systemcalls::calloc(count, size);
 
 	// Add that data
 	add_alloc(data, count * size);
@@ -84,7 +85,7 @@ void BBP::std::pageAllocator::free(void *ptr, std::index_t ptrIndex)
 		std::raise(std::SIGSEGV);
 
 	// Pointer exists, so free it.
-	std::ext_free(ptr);
+	systemcalls::free(ptr);
 
 	// Then also write nullptr to index
 	this->allocations[ptrIndex] = nullptr;

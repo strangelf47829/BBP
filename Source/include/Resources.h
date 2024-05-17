@@ -8,11 +8,6 @@ namespace BBP
 {
 	namespace std
 	{
-
-		extern void ext_free(void *);
-		extern void *ext_malloc(std::size_t);
-		extern void *ext_calloc(std::size_t, std::size_t);
-
 		static constexpr size_t max_objects = 0x400;
 		static constexpr size_t max_allocations = 0x400;
 

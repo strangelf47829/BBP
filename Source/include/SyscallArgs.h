@@ -1,8 +1,8 @@
 #ifndef BBP_SYSCALLS_ARGS_H
 #define BBP_SYSCALLS_ARGS_H
 
-#include "Syscalls.h"
 #include "List.h"
+#include "Memory.h"
 
 namespace BBP
 {

@@ -1,10 +1,10 @@
 Drivers/System/Commands.cpp: In function ‘bool Environment::Drivers::System::handleSystemCall(BBP::std::size_t, BBP::std::word*)’:
-Drivers/System/Commands.cpp:24:25: warning: unused variable ‘call’ [-Wunused-variable]
-   24 |  BBP::system::syscall_t call = systemcall_;
+Drivers/System/Commands.cpp:23:25: warning: unused variable ‘call’ [-Wunused-variable]
+   23 |  BBP::system::syscall_t call = systemcall_;
       |                         ^~~~
-Drivers/System/Commands.cpp:45:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
-   45 |   free(BBP::system::getInValue<void *>(*args, 0));
-      |   ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Drivers/System/Commands.cpp:47:2: note: here
-   47 |  default:
+Drivers/System/Commands.cpp:44:34: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   44 |   Environment::syscalls::sys_free(BBP::system::getInValue<void *>(*args, 0));
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Drivers/System/Commands.cpp:46:2: note: here
+   46 |  default:
       |  ^~~~~~~
