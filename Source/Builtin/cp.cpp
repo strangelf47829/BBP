@@ -19,6 +19,7 @@
 #include "../include/ELSA/DebugUtils.h"
 #include "../include/FileSysInfo.h"
 #include "../include/stddrv.h"
+#include "../include/Syscalls.h"
 
 /*
 void check(BBP::std::string str)
@@ -108,6 +109,11 @@ BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
 
 BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
 {
+
+	void *result_dub = systemcalls::malloc(3);
+	systemcalls::free(result_dub);
+
+	/*
 	std::PATH dirPath = "/";
 	std::ResourceManager alloc;
 
@@ -124,7 +130,9 @@ BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
 		std::printf(" - %s\n", entityName.data);
 	}
 
-	info.release();
+	info.release();*/
+
+	
 
 	return 0;
 }

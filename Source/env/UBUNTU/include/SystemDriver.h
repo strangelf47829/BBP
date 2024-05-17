@@ -21,6 +21,7 @@ namespace Environment
 			// Keyboard commands
 			bool connectSystem(BBP::std::size_t, BBP::std::word *);			// 0
 			bool disconnectSystem(BBP::std::size_t, BBP::std::word *);		// 1
+			bool handleSystemCall(BBP::std::size_t, BBP::std::word *);		// 2
 
 
 		}

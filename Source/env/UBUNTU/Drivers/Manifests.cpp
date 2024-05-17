@@ -19,13 +19,13 @@ Environment::Drivers::Manifest Environment::Drivers::screenManifest = { {Screen:
 BBP::system::HardwareCmd BBP::system::fileSystemCMD[14] = { FS::initializeFilesystem, FS::deinitializeFilesystem, FS::setModeLoadPath, FS::queryFileMetadata, FS::getFileType, FS::openFile, FS::closeFile, FS::setReadMode, FS::setWriteMode, FS::pathInspect, FS::stepInspect, FS::emitNameInspect, FS::emitTypeInspect, FS::canStepInspect };
 Environment::Drivers::Manifest Environment::Drivers::fileManifest = { {FS::sendDataToFileSystem, FS::receiveDataFromFileSystem, FS::receiveFileMetadata}, 14, BBP::system::fileSystemCMD, FS::loadFileSystem };
 
-BBP::system::HardwareCmd BBP::system::systemCMD[2] = { System::connectSystem, System::disconnectSystem };
-Environment::Drivers::Manifest Environment::Drivers::systemManifest = { {System::sendDataToSystem, System::receiveDataFromSystem, System::receiveSystemMetadata}, 2, BBP::system::systemCMD, System::loadSystemDriver };
+BBP::system::HardwareCmd BBP::system::systemCMD[3] = { System::connectSystem, System::disconnectSystem, System::handleSystemCall };
+Environment::Drivers::Manifest Environment::Drivers::systemManifest = { {System::sendDataToSystem, System::receiveDataFromSystem, System::receiveSystemMetadata}, 3, BBP::system::systemCMD, System::loadSystemDriver };
 
 BBP::std::size_t BBP::system::keyboardCMDCount = 4;
 BBP::std::size_t BBP::system::screenCMDCount = 2;
 BBP::std::size_t BBP::system::fileSystemCMDCount = 14;
-BBP::std::size_t BBP::system::systemCMDCount = 2;
+BBP::std::size_t BBP::system::systemCMDCount = 3;
 
 BBP::system::HardwareAction BBP::system::keyboardActions[3] = { Environment::Drivers::keyboardManifest.actions[0],Environment::Drivers::keyboardManifest.actions[1],Environment::Drivers::keyboardManifest.actions[2] };
 BBP::system::HardwareAction BBP::system::screenActions[3] = { Environment::Drivers::screenManifest.actions[0],Environment::Drivers::screenManifest.actions[1],Environment::Drivers::screenManifest.actions[2] };

@@ -23,6 +23,9 @@ namespace BBP
 		constexpr std::index_t inspectGetType = 12;			// Get the file type
 		constexpr std::index_t inspectCanStep = 13;			// Can step?
 
+		// System commands
+		constexpr std::index_t systemCallCmd = 2;			// Do a system call
+
 		
 
 	}

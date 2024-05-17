@@ -53,7 +53,9 @@ build:
 clean:
 	@cd build; make clean --no-print-directory
 
-
+# Count the amount of lines of code
+count:
+	cloc ./Source --exclude-dir=SDL2
 
 all:
 	cd ./samples; make all;

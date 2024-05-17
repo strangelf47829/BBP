@@ -16,12 +16,16 @@ UEFI_SRC= UEFI/UEFI.cpp UEFI/Records.cpp
 PLUGINS= Time Memory Input Panic
 PLUGINS_SRC= $(foreach plug,$(PLUGINS),./Plugins/$(plug).cpp)
 
+# =========== System calls
+SYSCALLS= Time Memory Input Panic
+SYSCALLS_SRC= $(foreach call,$(SYSCALLS),./Syscalls/$(call).cpp)
+
 # Module information
 MODULE=ENV
 
 # Source files
 DRIVERS_SRCLIST= $(foreach drv,$(DRIVERS), $(foreach fil,$(DRIVER_SRC),./Drivers/$(drv)/$(fil))) ./Drivers/Manifests.cpp
-MODULE_SRC= Boot.cpp $(UEFI_SRC) $(BIOS_SRC) $(PLUGINS_SRC) $(DRIVERS_SRCLIST)
+MODULE_SRC= Boot.cpp $(UEFI_SRC) $(BIOS_SRC) $(PLUGINS_SRC) $(DRIVERS_SRCLIST) $(P)
 
 # Actually include the makefile
 SOURCE_DIR=./../..
