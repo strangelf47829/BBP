@@ -2,6 +2,7 @@
 #define BBP_STD_ASYNC_H
 
 #include "List.h"
+#include "Memory.h"
 
 namespace BBP
 {
@@ -53,8 +54,8 @@ namespace BBP
 				: stack(values...),
 				args(nullptr),
 				funcs(fncCount, fncVector),
-				idx(fncCount -1),
-				default_idx(fncCount -1)
+				idx(fncCount - 1),
+				default_idx(fncCount - 1)
 			{}
 
 			// Default constructor
@@ -119,7 +120,7 @@ namespace BBP
 
 		// Then define specialization for propper values
 		template<typename R, typename... A, typename... K>
-		class async_task<R (*)(A...), K...> : public abstract_async_call<async_signature_t<R, A...>, async_stack_t<K...>>
+		class async_task<R(*)(A...), K...> : public abstract_async_call<async_signature_t<R, A...>, async_stack_t<K...>>
 		{
 			// Private buffer
 			async_stack_t<A...> argsStack;
@@ -130,7 +131,7 @@ namespace BBP
 			using functor_t = async_func_t<async_signature_t<R, A...>, async_stack_t<K...>>;
 
 			// Define lambda type
-			using lambda_t = async_func_t<async_signature_t<R, A...>, async_stack_t<K...>>::lambda_t;
+			using lambda_t = functor_t::lambda_t;
 
 			// If pages are known
 			async_task(std::size_t fncCount, lambda_t *fncList, K...args)
@@ -143,7 +144,7 @@ namespace BBP
 			{}
 
 			// Must respect functor constructor
-			async_task( K...args)
+			async_task(K...args)
 				: functor(0, nullptr, args...)
 			{}
 
@@ -176,7 +177,7 @@ namespace BBP
 
 				// Call functors
 				returnVal = functor.funcs[functor.reverse(functor.idx)](functor.stack, *functor.args);
-				
+
 				// Return if anything is left
 				return functor.idx;
 			}
@@ -214,8 +215,6 @@ namespace BBP
 			R returnVal;
 
 		};
-
-
 
 	}
 }

@@ -21,6 +21,8 @@
 #include "../include/stddrv.h"
 #include "../include/Syscalls.h"
 #include "../include/Async.h"
+#include "../include/Tasks.h"
+#include "../include/TaskPool.h"
 
 /*
 void check(BBP::std::string str)
@@ -108,10 +110,72 @@ BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
 }*/
 
 
+int cp_stage_1(BBP::std::async_stack_t<int> &stack, BBP::std::async_stack_t<int> &arg)
+{
+	// Return arg
+	return stack.template get<0>() = (arg.template get<0>() * 9) / 5;
+}
+
+int cp_stage_2(BBP::std::async_stack_t<int> &stack, BBP::std::async_stack_t<int> &arg)
+{
+	return stack.template get<0>() = (stack.template get<0>() + 32);
+}
+
+int rep_stg1(BBP::std::async_stack_t<int> &stack, BBP::std::async_stack_t<BBP::std::TaskFlowInterface *> &arg)
+{
+	// If exceeding, join
+	if (stack.template get<0>() > 555)
+		arg.template get<0>()->Kill();
+
+	BBP::std::printf(".");
+
+	return stack.template get<0>()++;
+}
+
+
 BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
 {
-	std::async_task<int (*)(int), int>::lambda_t k = [](std::async_stack_t<int> &stack, std::async_stack_t<int> &arg) -> int { /*Double*/ stack.template get<0>() = 2 * arg.template get<0>(); return 0; };
-	std::async_task<int (*)(int), int>::lambda_t l = [](std::async_stack_t<int> &stack, std::async_stack_t<int> &arg) -> int { /*Return double again*/ return stack.template get<0>() * 2; };
+	// Pool of tasks
+	std::STATIC_PAGE<std::TaskFlowInterface *, 32> poolPage;
+	std::TaskPool pool = poolPage;
+
+	std::TaskTemplate<int (*)(int), 2, int>::atomic_t list[2] = { cp_stage_1, cp_stage_2 };
+	std::TaskTemplate<int (*)(int), 2, int> d(list);
+
+	std::TaskTemplate<int (*)(std::TaskFlowInterface *), 1, int>::atomic_t replist[1] = { rep_stg1 };
+	std::TaskTemplate<int (*)(std::TaskFlowInterface *), 1, int> rep(replist);
+
+	// Create task
+	std::Task<int (*)(int), int> task;
+	d.ShallowCopy(task.getList());
+
+	// Create repeating task
+	std::RepeatingTask<int (*)(), int> reptask;
+	reptask.SetFunctor(rep_stg1);
+
+	// Argument
+	int cel = 30;
+
+	auto t1 = task(30);
+	auto t2 = reptask();
+
+	// Then run
+	pool.Add(t1);
+	pool.Add(t2);
+
+	// Run until not able to
+	while (pool.Step());
+
+	// Get results.
+	int result1 = task.Join();
+	int result2 = reptask.Join();
+
+	// Print
+	std::printf("%d*C is %d*F, counter is: %d\n", cel, result1, result2);
+
+	/*
+	std::async_task<int (*)(int), int>::lambda_t k = [](std::async_stack_t<int> &stack, std::async_stack_t<int> &arg) -> int { /*Double stack.template get<0>() = 2 * arg.template get<0>(); return 0; };
+	std::async_task<int (*)(int), int>::lambda_t l = [](std::async_stack_t<int> &stack, std::async_stack_t<int> &arg) -> int { /*Return double again return stack.template get<0>() * 2; };
 
 	std::async_task<int (*)(int), int>::lambda_t list[2] = { k, l };
 
@@ -135,6 +199,7 @@ BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
 
 	void *result_dub = systemcalls::malloc(3);
 	systemcalls::free(result_dub);
+	*/
 
 	/*
 	std::PATH dirPath = "/";
