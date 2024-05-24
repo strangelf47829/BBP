@@ -2,12 +2,13 @@
 #include "../include/Shell.h"
 
 BBP::std::FILE::FILE()
-	: node(max_open_files)
+	: node(max_open_files), data(nullptr)
 {
 	// Empty file, no nothing.
 }
 
 BBP::std::FILE::FILE(std::Stack<std::string_element> &data, std::conststring path)
+	: data(nullptr)
 {
 	// Get INode info
 	std::PATH p(path);
@@ -28,6 +29,7 @@ BBP::std::FILE::FILE(std::Stack<std::string_element> &data, std::conststring pat
 }
 
 BBP::std::FILE::FILE(std::PATH path)
+	: data(nullptr)
 {
 	this->node = system::Kernel::allocateINode(path);
 

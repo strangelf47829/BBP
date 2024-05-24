@@ -2,85 +2,180 @@
 #include "../include/stddef.h"
 #include "../include/stdio.h"
 
+// Constructor
+BBP::std::stack_trace::stack_trace()
+{
+
+}
+
 // Move a stack trace up
 bool BBP::std::stack_trace::moveUp()
 {
-    // Get pointer to current active frame
-    stack_frame::frame_ptr_t currentFrame = activeFrame.frameAddress;
+	// Get pointer to current active frame
+	stack_frame::frame_ptr_t currentFrame = activeFrame.frameAddress;
 
-    // Set this equal to lastFrame
-    stack_frame::frame_ptr_t lastFrame = currentFrame;
+	// Set this equal to lastFrame
+	stack_frame::frame_ptr_t lastFrame = currentFrame;
 
-    // Subtract 0x10 from lastFrame
-    asm volatile("subq $0x10,%0"
-        : "=r" (lastFrame));
+	// Subtract 0x10 from lastFrame
+	asm volatile("subq $0x10,%0"
+		: "=r" (lastFrame));
 
-    // If this is equal to '0' return false
-    if (lastFrame == nullptr)
-        return false;
+	// If this is equal to '0' return false
+	if (lastFrame == nullptr)
+		return false;
 
-    // Otherwise get lastFrame
-    lastFrame = ((stack_frame::frame_ptr_t)*lastFrame);
+	// Otherwise get lastFrame
+	lastFrame = ((stack_frame::frame_ptr_t)*lastFrame);
 
-    // Set current frame to lastFrame
-    currentFrame = lastFrame;
-    
-    // Add 0x10
-    asm volatile ("addq $0x10, %0"
-        : "=r" (currentFrame));
+	// Set current frame to lastFrame
+	currentFrame = lastFrame;
+	
+	// Add 0x10
+	asm volatile ("addq $0x10, %0"
+		: "=r" (currentFrame));
 
-    // Then update currentFrame and lastFrame
-    activeFrame.frameAddress = currentFrame;
+	// Move caller function into this function
+	activeFrame.functionAddress = activeFrame.calleeAddress;
 
-    // Return true for success
-    return true;
+	// Then update currentFrame and lastFrame
+	activeFrame.frameAddress = currentFrame;
+
+	// Moved up, so one removed
+	framesRemoved++;
+
+	// If lastFrame is 0, no caller available
+	if (lastFrame == nullptr)
+	{
+		activeFrame.calleeAddress = 0;
+		return true;
+	}
+
+	// Get pointer to saved rip
+	stack_frame::frame_ptr_t callee = lastFrame;
+
+	// Add 0x08
+	asm volatile ("addq $0x08, %0"
+		: "=r" (callee));
+
+	// Then dereference into address
+	long calleeAddr = (*callee);
+
+	// Get caller
+	activeFrame.calleeAddress = calleeAddr;
+
+	// Return true for success
+	return true;
 }
 
 void BBP::std::stack_trace::Capture()
 {
-    // Declare current frame
-    stack_frame::frame_ptr_t currentFrame;
+	// Reference
+	stack_frame::frame_ptr_t reference = (stack_frame::frame_ptr_t)stack_trace_ref;
 
-    // Get rbp and add 0x10
-    asm volatile ("mov %%rbp, %0"
-        : "=r" (currentFrame));
+	// Store reference
+	activeFrame.referenceAddress = *((std::address_t *)&reference);
 
-    // Add 0x10
+	// Declare current frame and func
+	stack_frame::frame_ptr_t currentFrame;
+	stack_frame::frame_ptr_t calleePtr;
 
-    // Store that in activeFrame
-    activeFrame.frameAddress = 
+	// Get rbp and add 0x10
+	asm volatile ("mov %%rbp, %0\n\t"
+		"addq $0x10, %0"
+		: "=r" (currentFrame));
 
+	// Store that in activeFrame
+	activeFrame.frameAddress = currentFrame;
+
+	// Set funcptr to currentFrame
+	calleePtr = currentFrame;
+
+	// Subtract 0x08 from rbp
+	asm volatile ("subq $0x08, %0"
+		: "=r" (calleePtr));
+
+	// Save that as funcPtr
+	activeFrame.calleeAddress = *calleePtr;
+
+	// Get RIP
+	activeFrame.functionAddress = 0;
+
+	// Then save active frame
+	capturedFrame = activeFrame;
+
+	// 0 Frames away now
+	framesRemoved = 0;
 }
 
-
-void BBP::std::trace()
+void BBP::std::stack_trace::printFrame(stack_trace_db &db, address_t referencePhysAddress)
 {
-    // Using directive
-    using frame_ptr_t = long *;
+	// Print
+	std::printf("#%u ", framesRemoved);
+	
+	// If address known of function, print it (also not if frames removed is 0)
+	if (framesRemoved == 0)
+	{
+		std::printf("at \e[0;33mCapture\e[0;37m ()\n");
+		return;
+	}
 
-    // Get pointer to current active frame
-    frame_ptr_t currentFrame;
+	else
+	{
+		// Show address
+		std::printf("\e[0;34m0x%016x\e[0;37m ", activeFrame.functionAddress);
+	}
 
-    // Set this equal to lastFrame
-    frame_ptr_t lastFrame;
+	// If address unkown, show it as such
+	if (activeFrame.functionAddress == 0)
+	{
+		std::printf("at \e[0;33m??\e[0;37m\n");
+		return;
+	}
 
-    // Move rbp into frame_pointer
-    asm volatile ("mov %%rbp, %0"
-        : "=r" (lastFrame));
+	// Get the offset to the virtual address
+	std::offset_t referenceOffset = activeFrame.functionAddress - activeFrame.referenceAddress;
 
-    // Go through stack trace
-    while (lastFrame) 
-    {
-        // Write lastFrame to current Frame
-        currentFrame = lastFrame;
+	// Now get physical address of this function
+	std::address_t realAddress = referencePhysAddress + referenceOffset;
 
-        // Add 0x10 to currentFrame
-        asm volatile ("addq $0x10,%0"
-            : "=r" (currentFrame));
+	// Now look up db
+	db.binLookup(realAddress);
 
-        // Then dereference lastFrame
-        lastFrame = ((frame_ptr_t)*lastFrame);
+	// Then line lookup
+	db.lineLookup();
 
-        // Print out data
-        std::printf("Current frame is %p, which came from frame at %p\n", currentFrame, lastFrame);    }
+	// Then print information
+	std::printf("at \e[0;33m");
+	db.printName();
+	std::printf("\e[0;37m ()\n");
+}
+
+void BBP::std::stack_trace::printReference()
+{
+	// Print
+	std::printf("#R \e[0;34m0x%016x\e[0;37m - \e[0;33mReference\e[0;37m\n", activeFrame.referenceAddress);
+}
+
+void BBP::std::stack_trace::showStackTrace()
+{
+	// Get a stack_trace_db here
+	stack_trace_db db;
+
+	// Get reference address
+	std::address_t refAddress = 0x1f2ab;
+
+	// Loop over stacktrace elements
+	do
+	{
+		// Print frame
+		printFrame(db, refAddress);
+
+		// If could not step up, break
+		if (moveUp() == false)
+			break;
+
+	} while (1);
+
+
 }

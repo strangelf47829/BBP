@@ -93,21 +93,41 @@ BBP::std::word BBP::system::DeviceDriver::writeData(std::string data, std::size_
 // Read data
 BBP::std::word BBP::system::DeviceDriver::receiveData(std::word amount)
 {
-	// Receive hardware
-	std::size_t received = hardwareDriver.receive(amount);
+	// Define the amount of bytes received
+	std::size_t bytesReceived = 0;
 
-	// Then write that into software
-	for (std::index_t idx = 0; idx < received; idx++)
+	// Calculate the size of a block
+	std::size_t blockSize = std::seqlen(hardwareDriver.getInput());
+
+	// While this amount is less than the amount of requested bytes...
+	while (bytesReceived < amount)
 	{
-		if (idx + 1 < received)
+		// Calculate the amount of bytes that need to be received
+		std::size_t bytesToReceive = amount - bytesReceived;
+
+		// If this amount is larger than a block size, limit
+		if (bytesToReceive > blockSize)
+			bytesToReceive = blockSize;
+
+		// Then receive amount of data
+		std::size_t blockBytesReceived = hardwareDriver.receive(bytesToReceive);
+
+		// Then write into software buffer
+		for (std::index_t idx = 0; idx < bytesToReceive; idx++)
 			softwareDriver < hardwareDriver.getInput()[idx];
-		else
-			softwareDriver.triggerInput(hardwareDriver.getInput()[idx]);
+
+		// Add up bytes received
+		bytesReceived += blockBytesReceived;
+
+		// Then check if we receive the expected amount of bytes. If we did not, break out
+		if (blockBytesReceived != bytesToReceive)
+			break;
 	}
 
-	// Then seek
-	softwareDriver.seekInputBack(received + 1);
+	// Clear out hardware driver
+	for (std::index_t idx = 0; idx < blockSize; idx++)
+		hardwareDriver.getInput()[idx] = 0;
 
-	// Then return amount of bytes received
-	return received;
+	// Then return amount of bytes sent
+	return bytesReceived;
 }

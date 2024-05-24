@@ -57,6 +57,11 @@ build: $(MODULE_DIRS) $(OS_LIST) env
 executable:
 	@echo "Creating executable..."
 	@$(LD) $(LDFLAGS) -Wl,--start-group $(foreach a_a,$(ALL_A),bin/lib$(a_a).a) -Wl,--end-group $(LDFLAGS)
+	@echo "Generating address map..."
+	@rm -f /mnt/v/lib/memmap*
+	@nm -n -C -S | grep -E " [tTWw] " >> /mnt/v/lib/memmap
+	@python3 memmap.py
+#	@rm /mnt/v/lib/memmap
 	@echo "Done."
 
 # Clean out each directory
@@ -65,3 +70,4 @@ clean: $(patsubst %,%.clean,$(notdir $(MODULE_DIRS))) $(ENV_DIR).clean $(foreach
 
 %.clean:
 	@cd ../Source/$(patsubst %.clean,%,$@); make clean --no-print-directory
+	@rm -f /mnt/v/lib/memmap*

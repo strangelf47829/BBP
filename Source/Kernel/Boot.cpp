@@ -206,9 +206,6 @@ BBP::std::errno_t BBP::system::Kernel::enterKernelSpace(system::UEFI &uefi)
 	// Load entry point
 	bool couldEnter = entryPoint(&uefi, singleton.extTaskPool);
 
-	// Start tracing
-	std::trace();
-
 	// If could not enter, return error
 	if (couldEnter == false)
 		return OSError;

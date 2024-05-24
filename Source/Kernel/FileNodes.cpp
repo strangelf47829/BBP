@@ -38,7 +38,7 @@ bool BBP::system::Kernel::findEmptyNode()
 		// If hash is null, return true
 		if (singleton.fileTable[idx].filePathHash == 0)
 		{
-			singleton.activeNodeRef = singleton.fileTable.dataSize;
+			singleton.activeNodeRef = idx;
 			return true;
 		}
 	}
