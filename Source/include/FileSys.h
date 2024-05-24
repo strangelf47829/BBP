@@ -145,8 +145,6 @@ namespace BBP
 
 			FILE(std::Stack<std::string_element> &data, std::conststring path);
 
-			FileNode *data();
-
 			std::Stack<std::string_element> &b();
 
 			bool is_open();
@@ -170,16 +168,13 @@ namespace BBP
 
 
 		private:
-			
-			std::index_t checkIfIsOpen(std::conststring path);
-			std::index_t findClosedFile();
 
-			void getINodeIndex(std::PATH &);
 			bool _is_on_disk = false;
 			bool _dealloc_page = false;
 			bool _loaded_intomem = false;
 			bool _unload_inode = false;
 
+			Stack<string_element> *data;
 			noderef_t node;
 		};
 
@@ -210,7 +205,7 @@ namespace BBP
 			FileNode(std::ResourceManager *res, std::VOLUME *v, std::conststring path);
 			FileNode(std::ResourceManager *res, std::size_t size, std::VOLUME *v, std::conststring path);
 			FileNode(std::ResourceManager *res, std::size_t size, std::PATH &path);
-			FileNode(std::Stack<std::string_element> &data, std::VOLUME *v, std::conststring path);
+			FileNode(std::Stack<std::string_element> &data, std::VOLUME *v, std::PATH &path);
 
 		};
 

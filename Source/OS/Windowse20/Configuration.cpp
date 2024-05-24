@@ -9,12 +9,9 @@ BBP::system::BootRecord Environment::BIOS::Windowse20Record(OS::BIOS::WINDOWSE20
 // Can only boot into Windowse20 if screen supports the GUI, and if there is a mouse driver present.
 bool OS::BIOS::WINDOWSE20::canBoot(BBP::system::UEFI *uefi)
 {
-	// Check for GUI capabilities. Get screen driver
-	BBP::system::DeviceDriver *driver = &BBP::system::getKernelInstance().getScreenDriver();
-
 	// Get driver metadata
-	BBP::std::printf("Screen Hardware identification: 0x%08x\n", driver->hardwareDriver.hwid);
-	BBP::std::printf("Screen device identification: 0x%08x\n", driver->hardwareDriver.dvid);
+	BBP::std::printf("Screen Hardware identification: 0x%08x\n", BBP::system::Kernel::getScreenHWID());
+	BBP::std::printf("Screen device identification: 0x%08x\n", BBP::system::Kernel::getScreenDVID());
 
 	return false;
 }

@@ -20,11 +20,8 @@ BBP::system::appInfo BBP::system::getShellInformation()
 
 void BBP::system::printShellDirectory()
 {
-	// Get active user
-	procFrame *ownFrame = getKernelInstance().SubSystems().activeContext->activeFrame;
-
 	// Also get some paths
-	std::PATH fullpath = *(ownFrame->systemContext->workingDirectory);
+	std::PATH fullpath = system::Shell::getWorkingDirectory();
 	fullpath = fullpath.resolveAbsolutes();
 
 	// fancy flag bc why not
@@ -34,8 +31,8 @@ void BBP::system::printShellDirectory()
 	{
 
 		// Print username
-		std::printf("\e[0;92m%s@", ownFrame->identifier.owner->username.data);
-		std::printf("%s\e[0;37m:", ownFrame->identifier.owner->connectionMethod.data);
+		std::printf("\e[0;92m%s@", "kangel");
+		std::printf("%s\e[0;37m:", "dd");
 
 
 		std::printf("\e[1;34m%s\e[0;37m$ ", fullpath.relName());
@@ -43,8 +40,8 @@ void BBP::system::printShellDirectory()
 	}
 	else
 	{
-		std::printf("\n+---(\e[0;92m%s@", ownFrame->identifier.owner->username.data);
-		std::printf("%s\e[0;37m)-[", ownFrame->identifier.owner->connectionMethod.data);
+		std::printf("\n+---(\e[0;92m%s@", "kangel");
+		std::printf("%s\e[0;37m)-[", "dd");
 		std::printf("\e[1;34m%s\e[0;37m]\n+--$ ", fullpath.relName());
 
 	}

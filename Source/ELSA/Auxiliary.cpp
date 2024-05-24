@@ -1,5 +1,6 @@
 #include "../include/ELSA.h"
 #include "../include/ELSABackend.h"
+#include "../include/Shell.h"
 #include "Actions.h"
 
 BBP::std::errno_t BBP::esa::esaProcessor::ExpectDelimiters(std::Lexer::lex_context *context, std::index_t argc, std::Lexer::lex_keywordhandle const argv[], bool singleLine, std::index_t min, std::index_t maxDepth, std::Lexer::lex_keywordhandle escape, std::Lexer::lex_keywordhandle stop)
@@ -185,7 +186,7 @@ bool BBP::esa::esaProcessor::includeFromPath(std::FILE &file, std::PATH &filenam
 		dirs >>= &path;
 
 		// Then create path from stored string.
-		std::PATH searchIn(BBP::system::kernelSS()->activeContext->primaryVolume, path);
+		std::PATH searchIn(&BBP::system::Shell::getPrimaryVolume(), path);
 
 		// Make searchIn relative to physical root.
 		searchIn.makeAbsolutePath(nullptr);

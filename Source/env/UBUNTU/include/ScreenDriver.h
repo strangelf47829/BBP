@@ -16,8 +16,10 @@ namespace Environment
 			BBP::std::word receiveDataScreen(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &);		// Doesn't do anything
 			BBP::std::word receiveScreenMetadata(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &);	// Doesn't do anything.
 
-			bool clearScreen(BBP::std::size_t, BBP::std::word *);
 			bool connectToScreen(BBP::std::size_t, BBP::std::word *);
+			bool disconnectFromScreen(BBP::std::size_t, BBP::std::word *);
+			bool clearScreen(BBP::std::size_t, BBP::std::word *);
+			bool printSplash(BBP::std::size_t, BBP::std::word *);
 
 			extern BBP::std::Stack<BBP::std::string_element> stdoutStack;
 

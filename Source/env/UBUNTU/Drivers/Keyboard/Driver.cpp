@@ -9,10 +9,11 @@
 #include <fcntl.h>
 #include <stdarg.h>
 
-BBP::std::Stack<BBP::std::string_element> Environment::Drivers::keyboard::keyboardStack(nullptr, 0);
+volatile BBP::std::index_t Environment::Drivers::keyboard::count = 0;
+volatile BBP::std::string_element Environment::Drivers::keyboard::keys[64];
+volatile bool Environment::Drivers::keyboard::captureUserInput = false;
 
 ::std::thread inpThread;
-volatile bool Environment::Drivers::keyboard::captureUserInput = false;
 struct termios originalTermios;
 struct termios rawTermios;
 
@@ -57,7 +58,8 @@ void userInput_thread()
 			std::exit(-999);
 		}
 
-		BBP::system::getKernelInstance().getKeyboardDriver().softwareDriver < c;
+		if (Environment::Drivers::keyboard::count < 64)
+			Environment::Drivers::keyboard::keys[Environment::Drivers::keyboard::count++] = c;
 	}
 }
 
@@ -66,11 +68,11 @@ void Environment::Drivers::keyboard::captureInput()
 	// Save terminal state
 	saveTerminalState();
 
-	// Create threads
-	inpThread = ::std::thread(userInput_thread);
-
 	// Capture user input
 	captureUserInput = true;
+
+	// Create threads
+	inpThread = ::std::thread(userInput_thread);
 }
 
 void Environment::Drivers::keyboard::stopCapturingInput()

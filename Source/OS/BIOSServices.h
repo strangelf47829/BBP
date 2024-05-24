@@ -13,7 +13,7 @@ namespace OS
 			bool canBoot(BBP::system::UEFI *);
 
 			// Actual OS Entry point
-			bool EntryPoint(BBP::system::UEFI *);
+			bool EntryPoint(BBP::system::UEFI *, BBP::std::TaskPool *&);
 
 			// OS Panic
 			void OSPanic(BBP::std::errno_t, BBP::std::c_string);
@@ -25,7 +25,7 @@ namespace OS
 			bool canBoot(BBP::system::UEFI *);
 
 			// Actual OS Entry point
-			bool EntryPoint(BBP::system::UEFI *);
+			bool EntryPoint(BBP::system::UEFI *, BBP::std::TaskPool *&);
 		}
 
 	}

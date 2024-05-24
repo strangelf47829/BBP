@@ -1,7 +1,7 @@
 In file included from ../include/SystemContext.h:3,
                  from ../include/Hyperv.h:7,
                  from ../include/KernelSubSystems.h:4,
-                 from ../include/Kernel.h:4,
+                 from ../include/Kernel.h:7,
                  from Path.cpp:2:
 ../include/FileSys.h: In constructor ‘BBP::std::PATH::PATH()’:
 ../include/FileSys.h:114:12: warning: ‘BBP::std::PATH::Volume’ will be initialized after [-Wreorder]
@@ -10,13 +10,13 @@ In file included from ../include/SystemContext.h:3,
 ../include/FileSys.h:111:26: warning:   ‘BBP::std::ResourceManager* BBP::std::PATH::allocator’ [-Wreorder]
   111 |    std::ResourceManager *allocator;
       |                          ^~~~~~~~~
-Path.cpp:4:1: warning:   when initialized here [-Wreorder]
-    4 | BBP::std::PATH::PATH()
+Path.cpp:5:1: warning:   when initialized here [-Wreorder]
+    5 | BBP::std::PATH::PATH()
       | ^~~
 In file included from ../include/SystemContext.h:3,
                  from ../include/Hyperv.h:7,
                  from ../include/KernelSubSystems.h:4,
-                 from ../include/Kernel.h:4,
+                 from ../include/Kernel.h:7,
                  from Path.cpp:2:
 ../include/FileSys.h:111:26: warning: ‘BBP::std::PATH::allocator’ will be initialized after [-Wreorder]
   111 |    std::ResourceManager *allocator;
@@ -24,10 +24,10 @@ In file included from ../include/SystemContext.h:3,
 ../include/FileSys.h:108:17: warning:   ‘BBP::std::index_t BBP::std::PATH::fileNameStartIndex’ [-Wreorder]
   108 |    std::index_t fileNameStartIndex;
       |                 ^~~~~~~~~~~~~~~~~~
-Path.cpp:4:1: warning:   when initialized here [-Wreorder]
-    4 | BBP::std::PATH::PATH()
+Path.cpp:5:1: warning:   when initialized here [-Wreorder]
+    5 | BBP::std::PATH::PATH()
       | ^~~
 Path.cpp: In constructor ‘BBP::std::PATH::PATH(BBP::std::VOLUME*, BBP::std::conststring)’:
-Path.cpp:24:14: warning: unused variable ‘pathlength’ [-Wunused-variable]
-   24 |  std::size_t pathlength = std::strlen(str);
+Path.cpp:25:14: warning: unused variable ‘pathlength’ [-Wunused-variable]
+   25 |  std::size_t pathlength = std::strlen(str);
       |              ^~~~~~~~~~

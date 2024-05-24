@@ -4,6 +4,6 @@
 
 void BBP::std::raise(std::signal_t signal)
 {
-	BBP::system::kernelSS()->activeContext->__errno = signal + BBP::std::SIGADJ;
+	system::Kernel::setError(signal + BBP::std::SIGADJ);
 	throw BBP::std::SIGNAL(signal);
 }

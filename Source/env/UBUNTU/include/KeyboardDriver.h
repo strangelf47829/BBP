@@ -21,13 +21,12 @@ namespace Environment
 			// Keyboard commands
 			bool connectKeyboard(BBP::std::size_t, BBP::std::word *);			// 0
 			bool disconnectKeyboard(BBP::std::size_t, BBP::std::word *);		// 1
-			bool enableKeyboardInput(BBP::std::size_t, BBP::std::word *);		// 3
-			bool disableKeyboardInput(BBP::std::size_t, BBP::std::word *);		// 4
-
-			// Keyboard stack
-			extern BBP::std::Stack<BBP::std::string_element> keyboardStack;
+			bool keyCount(BBP::std::size_t, BBP::std::word *);					// 2
+			bool captureKey(BBP::std::size_t, BBP::std::word *);				// 3
 
 			extern volatile bool captureUserInput;
+			extern volatile BBP::std::index_t count;
+			extern volatile BBP::std::string_element keys[64];
 
 			void captureInput();
 			void stopCapturingInput();

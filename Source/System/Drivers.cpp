@@ -111,30 +111,3 @@ BBP::std::word BBP::system::DeviceDriver::receiveData(std::word amount)
 	// Then return amount of bytes received
 	return received;
 }
-
-// Load a driver
-BBP::std::errno_t BBP::system::Kernel::loadDriver(UEFILoadDriver loadDriver, DeviceDriver &intoDriver, BBP::std::size_t argc, BBP::std::word *argv)
-{
-	// Check if function exists
-	if (loadDriver == nullptr)
-		return invalidConfig;
-
-	// Execute driver init function
-	loadDriver(intoDriver);
-
-	// Execute connection command
-	intoDriver.hardwareDriver.executeCommand(intoDriver.hardwareDriver.connectCmd, argc, argv);
-}
-
-// Load a driver
-BBP::std::errno_t BBP::system::Kernel::loadDriver(UEFILoadDriver loadDriver, DeviceDriver &intoDriver)
-{
-	// Check if function exists
-	if (loadDriver == nullptr)
-		return invalidConfig;
-
-	// Execute driver init function
-	loadDriver(intoDriver);
-
-	return 0;
-}

@@ -2,7 +2,7 @@
 #define BBP_KERNEL_BOOTRECORD_H
 
 #include "Strings.h"
-
+#include "Taskpool.h"
 
 
 namespace BBP
@@ -25,7 +25,7 @@ namespace BBP
 			bool computedValue; // Used to pass around the result of the calculation
 
 			// This function attempts to load into the boot record
-			using bootRecordEntryPoint = bool (*)(UEFI *);
+			using bootRecordEntryPoint = bool (*)(UEFI *, std::TaskPool *&);
 			bootRecordEntryPoint entryPoint;
 
 			BootRecord() = delete;

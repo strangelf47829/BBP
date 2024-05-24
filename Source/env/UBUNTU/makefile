@@ -7,13 +7,13 @@ DRIVER_SRC= Actions.cpp Driver.cpp Loader.cpp Commands.cpp
 DRIVERS= Keyboard Screen File System
 
 # =========== BIOS targets
-BIOS_SRC= BIOS/BIOS.cpp BIOS/POST.cpp
+BIOS_SRC= BIOS/BIOS.cpp BIOS/POST.cpp BIOS/SysInfo.cpp
 
 # =========== UEFI targets
 UEFI_SRC= UEFI/UEFI.cpp UEFI/Records.cpp
 
 # =========== plugin targets
-PLUGINS= Time Input Panic
+PLUGINS= Panic
 PLUGINS_SRC= $(foreach plug,$(PLUGINS),./Plugins/$(plug).cpp)
 
 # =========== System calls

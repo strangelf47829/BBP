@@ -10,6 +10,7 @@
 #include "DeviceDriver.h"
 #include "BootRecord.h"
 #include "Time.h"
+#include "License.h"
 
 namespace BBP
 {
@@ -48,6 +49,44 @@ namespace BBP
 			std::time_t biosModeDelay;
 
 		};
+
+		// This structure is used to determine system capabilities.
+		// This structure is also used to determine display modes by the screen driver.
+		struct UEFI_SysReport
+		{
+			// Name of underlying host
+			std::conststring HostName;
+
+			// Get total amount of useful heap
+			std::size_t usefulHeap;
+
+			// Get total system memory
+			std::size_t totalMemory;
+
+			// Get processor speed (in MHZ)
+			std::word processorSpeed;
+
+			// Get processor name
+			std::static_string<32> processorName;
+
+			// Get processor architecture
+			std::static_string<16> processorArch;
+
+			// Display modes
+			bool supportsTTY;
+			bool supportsGUI;
+
+			// What are the TTY Capabilities?
+			std::halfword TTYHorizontalPage;
+			std::halfword TTYVerticalPage;
+
+			// What are the GUI capabilities?
+			std::size_t VMEMSize;
+			std::halfword xResolution;
+			std::halfword yResolution;
+			std::byte colourDepth;
+		};
+		
 
 		// This structure is used to store function pointers to load drivers into the kernel before the kernel activates
 		struct UEFI_Drivers
@@ -120,22 +159,34 @@ namespace BBP
 			std::conststring deviceName;
 		};
 
+		// This struct is used for defining application licenses and common names, etc..
+		struct UEFI_LicenseInfo
+		{
+			// BIOS Version
+			appInfo BIOSInfo;
+			
+			// Kernel Version
+			appInfo KernelInfo;
+
+			// Name of kernel
+			std::conststring KernelName;
+
+		};
+
 		// This structure is used to store the entire UEFI configuration, which can either be a constant or a dynamically configured object.
 		// Either way, a single function retrieves that UEFI action.
 		struct UEFI
 		{
 			// Holds a structure to each configuration
 			UEFI_POST post;
+			UEFI_SysReport systemReport;
 			UEFI_Drivers drivers;
 			UEFI_Daemons daemons;
 			UEFI_State state;
 			UEFI_Shell shell;
 			UEFI_System system;
+			UEFI_LicenseInfo licenses;
 		};
-
-		// This function is platform dependant. This provides flexibility in the sense that the platform may choose to read this from a config file
-		// (Providing much greater flexibility), or just return a constant thing. Either way, the bootloader calls this function exactly once.
-		UEFI &retrieveUEFI();
 
 		const int invalidConfig = -1;
 		const int failedPOST = -2;
@@ -145,6 +196,8 @@ namespace BBP
 		const int screenInitFailed = -6;
 		const int fileSystemInitFailed = -7;
 		const int systemInitFailed = -8;
+		const int outOfDaemonRecords = -9;
+		const int OSError = -10;
 
 		// Platform dependant stuff
 		extern HardwareAction keyboardActions[3];

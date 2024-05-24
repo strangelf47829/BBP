@@ -1,10 +1,8 @@
 #include "include/Environment.h"
-#include <cstdio>
 
-// Call bootloader main
+// Since everything is statically linked, no 'bootloading' is necessary.
 int main()
 {
-	int result = BBP::system::bootloaderMain();
-	//printf("\e[0;34m<Bootloader>\e[0;37m Exited with code: %d.\n", result);
+	int result = BBP::system::Kernel::enterKernelSpace(Environment::UEFI::configureUEFI());
 	return result;
 }

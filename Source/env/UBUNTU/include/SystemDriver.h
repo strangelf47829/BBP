@@ -18,10 +18,15 @@ namespace Environment
 			// Load driver
 			void loadSystemDriver(BBP::system::DeviceDriver &driver);
 
-			// Keyboard commands
+			// System commands
 			bool connectSystem(BBP::std::size_t, BBP::std::word *);			// 0
 			bool disconnectSystem(BBP::std::size_t, BBP::std::word *);		// 1
 			bool handleSystemCall(BBP::std::size_t, BBP::std::word *);		// 2
+
+			// Time information
+			bool initClock(BBP::std::size_t, BBP::std::word *);				// 3
+			bool getClockMillis(BBP::std::size_t, BBP::std::word *);		// 4
+			bool getClockMicros(BBP::std::size_t, BBP::std::word *);		// 5
 
 
 		}

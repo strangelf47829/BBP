@@ -19,7 +19,7 @@ namespace BBP
 			std::string name;
 
 			// Capacity
-			std::dword capacity;
+			std::word capacity;
 
 		};
 

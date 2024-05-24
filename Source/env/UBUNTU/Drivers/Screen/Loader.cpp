@@ -19,10 +19,6 @@ void Environment::Drivers::screen::loadScreenDriver(BBP::system::DeviceDriver &d
 	// Set commands
 	driver.hardwareDriver.setHandleData(screenManifest.actions, screenManifest.commandCount, screenManifest.commands);
 
-	// Also do the same for STDOUT, and STDERR
-	BBP::system::kernelSS()->getKernelSystemContext()->STDOUT.writeTo = print_stack_to_string;
-	BBP::system::kernelSS()->getKernelSystemContext()->STDERR.writeTo = print_stack_to_string;
-
 	// Then set input page
 	driver.softwareDriver.setOutputPage(&stdoutStack);
 }

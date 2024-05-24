@@ -1,23 +1,24 @@
 
 #include "../include/Kernel.h"
+#include "../include/Shell.h"
 
 BBP::std::PATH::PATH()
 	: Volume(nullptr), allocator(nullptr), fileNameStartIndex(0)
 {
 }
 BBP::std::PATH::PATH(std::string &str)
-	: PATH(BBP::system::kernelSS()->activeContext->primaryVolume, str)
+	: PATH(&system::Shell::getPrimaryVolume(), str)
 {}
 
 BBP::std::PATH::PATH(std::conststring str)
-	: PATH(BBP::system::kernelSS()->activeContext->primaryVolume, str)
+	: PATH(&system::Shell::getPrimaryVolume(), str)
 {}
 
 BBP::std::PATH::PATH(std::VOLUME *v, std::string &str)
 	: PATH(v, str.data) {}
 
 BBP::std::PATH::PATH(std::VOLUME *v, std::conststring str)
-	: fileNameStartIndex(0), allocator(BBP::system::kernelSS()->activeContext->activemem), Volume(v)
+	: fileNameStartIndex(0), allocator(&system::Shell::getActiveMemory()), Volume(v)
 {
 
 	// Get string sizes

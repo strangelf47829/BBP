@@ -23,7 +23,7 @@ int BBP::std::printf(std::conststring format, ...)
 	va_end(args);
 
 	// Then print to STDOUT
-	system::getKernelInstance().SubSystems().activeContext->STDOUT <<= printfbuff.data;
+	BBP::system::Kernel::printString(printfbuff);
 
 	return res;
 }
@@ -66,6 +66,9 @@ void Environment::Drivers::screen::print_stack_to_string(BBP::std::Stack<BBP::st
 	// Get current index after read
 	BBP::std::index_t postRead = stack->atElement;
 
+	// Create string
+	BBP::std::string strstr = str;
+
 	// Write that data into software driver
-	BBP::system::getKernelInstance().getScreenDriver().writeData(str);
+	BBP::system::Kernel::printString(strstr);
 }

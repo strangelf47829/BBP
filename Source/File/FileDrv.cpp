@@ -1,9 +1,9 @@
 #include "../include/FileSys.h"
-#include "../include/stddrv.h"
+#include "../include/Kernel.h"
 
 bool BBP::std::FILE::doesFileExistOnDisk(BBP::std::PATH &_path)
 {
-	_is_on_disk = std::isFileOnDisk(_path);
+	_is_on_disk = system::Kernel::isFileOnDisk(_path);
 
 	return _is_on_disk;
 }
@@ -11,22 +11,22 @@ bool BBP::std::FILE::doesFileExistOnDisk(BBP::std::PATH &_path)
 BBP::std::size_t BBP::std::FILE::getFileSizeFromDisk(BBP::std::PATH &_path)
 {
 	// Check if file exists
-	if (std::isPathOfTypeFile(_path) == false)
+	if (system::Kernel::isPathOfTypeFile(_path) == false)
 		throw std::exception("ERR_FILE_NOEXIST", ENOENT);
 
 	// Return bytecount
-	return std::getFilesizeFromDisk(_path);
+	return system::Kernel::getFilesizeFromDisk(_path);
 }
 
 BBP::std::size_t BBP::std::FILE::readFileFromDisk(BBP::std::FileNode *n, BBP::std::PATH &_path)
 {
 
 	// Check if file exists
-	if (std::isPathOfTypeFile(_path))
+	if (system::Kernel::isPathOfTypeFile(_path))
 		throw std::exception("ERR_FILE_NOEXIST", ENOENT);
 
 	// Read file
-	std::size_t bytesRead = std::readFileFromDisk(n->fileData, _path);
+	std::size_t bytesRead = system::Kernel::readFileFromDisk(n->fileData, _path);
 
 	// Set _is_on_disk
 	_is_on_disk = true;
@@ -37,15 +37,19 @@ BBP::std::size_t BBP::std::FILE::readFileFromDisk(BBP::std::FileNode *n, BBP::st
 
 void BBP::std::FILE::writeFileToDisk(std::PATH &path)
 {
+	// If nothing to write do nothing
+	if (data == nullptr)
+		return;
+
 	// Get data length
-	std::string *_data = data()->fileData.page;
+	std::string *_data = data->page;
 	std::size_t dataSize = std::seqlen(*_data);
 
 	// Write file
-	std::writeFileToDisk(path, b());
+	system::Kernel::writeFileToDisk(path, b());
 }
 
 void BBP::std::FILE::writeFileToDisk()
 {
-	writeFileToDisk(data()->filePath);
+	writeFileToDisk(system::Kernel::getNodePath(this->node));
 }

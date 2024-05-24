@@ -36,13 +36,36 @@ BBP::std::size_t BBP::system::HardwareHandle::receive(std::size_t amount)
 	return receiveData(amount, inputBuffer);
 }
 
+// Connect and disconnect
+bool BBP::system::HardwareHandle::Connect()
+{
+	// Send connect command
+	bool sent = executeCommand(connectCmd, 0, nullptr);
+
+	// Return status
+	return sent;
+}
+
+bool BBP::system::HardwareHandle::Disconnect()
+{
+	// Send connect command
+	bool sent = executeCommand(disconnectCmd, 0, nullptr);
+
+	// Return status
+	return sent;
+}
+
+
 // Hardware handle constructor
 BBP::system::HardwareHandle::HardwareHandle(HardwareAction actions[3], std::size_t cmdc, const HardwareCmd *cmdv)
 {
 	// Set own actions
-	sendData = actions[0];
-	receiveData = actions[1];
-	readMetadata = actions[2];
+	if (actions)
+	{
+		sendData = actions[0];
+		receiveData = actions[1];
+		readMetadata = actions[2];
+	}
 
 	// If cmdv is nullptr, force cmdc to 0
 	if (cmdv == nullptr)

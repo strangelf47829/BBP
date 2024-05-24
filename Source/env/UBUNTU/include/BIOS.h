@@ -18,7 +18,7 @@ namespace Environment
 		extern BBP::system::BootRecord bootRecord;
 
 		// BIOS Entry point
-		bool EntryPoint(BBP::system::UEFI *);
+		bool EntryPoint(BBP::system::UEFI *, BBP::std::TaskPool *&);
 	}
 }
 

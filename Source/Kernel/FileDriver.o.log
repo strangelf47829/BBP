@@ -1,0 +1,4 @@
+FileDriver.cpp: In static member function ‘static BBP::std::errno_t BBP::system::Kernel::Inspect(BBP::std::PATH&)’:
+FileDriver.cpp:163:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  163 | }
+      | ^

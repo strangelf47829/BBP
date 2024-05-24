@@ -14,6 +14,7 @@ BBP::std::PID_t BBP::std::activeExecutable = 0;
 
 void BBP::std::execute(std::executable_main mainFunc, int argc, char **argv)
 {
+	/*
 	// Find a new PID
 	PID_t procPID = getNextAvailablePID();
 
@@ -121,6 +122,7 @@ void BBP::std::execute(std::executable_main mainFunc, int argc, char **argv)
 	// Restore active mem and active proc
 	BBP::system::kernelSS()->activeContext->activemem = oldActiveMem;
 	BBP::std::activeExecutable = oldActiveExecutable;
+	*/
 }
 
 BBP::std::PID_t pidCounter = 0;

@@ -1,17 +1,18 @@
 #include "../include/Hyperv.h"
 #include "../include/StateMachine.h"
 #include "../include/Time.h"
+#include "../include/Kernel.h"
 
 bool BBP::userspace::HyperVisor::advanceThread(userspace::StateMachine &state, std::word millis)
 {
 	// Get current time
-	std::time_t now = std::millis();
+	std::time_t now = system::Kernel::millis();
 
 	// Calculate until when to execute
 	std::time_t executeUntil = now + millis;
 
 	// Now execute until that condition is met
-	while (std::millis() <= executeUntil)
+	while (system::Kernel::millis() <= executeUntil)
 	{
 
 		// Check if argument stack is empty. If it is, return 

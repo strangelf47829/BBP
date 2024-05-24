@@ -2,6 +2,7 @@
 #define BBP_STD_DRVCMD_H
 
 #include "stddef.h"
+#include "Time.h"
 
 namespace BBP
 {
@@ -25,7 +26,17 @@ namespace BBP
 
 		// System commands
 		constexpr std::index_t systemCallCmd = 2;			// Do a system call
+		constexpr std::index_t initClock = 3;
+		constexpr std::index_t getMillis = 4;
+		constexpr std::index_t getMicros = 5;
 
+		// Keyboard commands
+		constexpr std::index_t getKeyboardKeyCount = 2;
+		constexpr std::index_t getKeyboardKeyInput = 3;
+
+		// Screen commands
+		constexpr BBP::std::index_t screenClearScreen = 2;
+		constexpr BBP::std::index_t screenBIOSSplashScreen = 3;
 		
 
 	}

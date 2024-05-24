@@ -6,7 +6,7 @@
 void OS::BIOS::BBPOSIX::OSPanic(BBP::std::errno_t errorCode, BBP::std::c_string message)
 {
 	// Clear screen
-	BBP::system::getKernelInstance().getScreenDriver().hardwareDriver.executeCommand(screenClearScreen, 0, nullptr);
+	BBP::system::Kernel::clearScreen();
 
 	// Print panic
 	for (BBP::std::byte k = 0; k < 255; k++)

@@ -1,5 +1,6 @@
 #include "../include/ELSA.h"
 #include "../include/ELSABackend.h"
+#include "../include/Shell.h"
 #include "Actions.h"
 
 BBP::std::static_string<100> Identifier;
@@ -50,7 +51,7 @@ BBP::std::hash_t BBP::esa::esaProcessor::hashIdentifier(BBP::esa::dataEntry &ent
 
 void BBP::esa::esaProcessor::setupBackend(std::conststring str, std::size_t seg, std::size_t sec, std::size_t sym)
 {
-	application = system::kernelSS()->activeContext->activemem->add_object(new BinaryApplication(str, seg, sec, sym));
+	application = system::Shell::getActiveMemory().add_object(new BinaryApplication(str, seg, sec, sym));
 	application->setSource(esaParser.activeFile.static_data);
 }
 
@@ -59,7 +60,7 @@ void BBP::esa::esaProcessor::saveAndClose()
 	application->save();
 	application->close();
 
-	system::kernelSS()->activeContext->activemem->_delete(application);
+	system::Shell::getActiveMemory()._delete(application);
 	application = nullptr;
 }
 
@@ -67,7 +68,7 @@ void BBP::esa::esaProcessor::discardAndClose()
 {
 	application->close();
 
-	system::kernelSS()->activeContext->activemem->_delete(application);
+	system::Shell::getActiveMemory()._delete(application);
 	application = nullptr;
 }
 

@@ -157,7 +157,7 @@ BBP::std::size_t BBP::system::initd::loadUserInput()
 	while (readInput)
 	{
 		// Get a character
-		std::string_element character = std::getChar();
+		std::string_element character = system::Kernel::getKey();
 
 		// If character is not within C0 or C1, do normal thing
 		bool isInC0 = (character >= BBP::std::Terminal::TerminalApplication::C0_Low && character <= BBP::std::Terminal::TerminalApplication::C0_High);
@@ -215,7 +215,7 @@ BBP::std::size_t BBP::system::initd::loadUserInput()
 		case BBP::std::Terminal::TerminalApplication::C0::FF:
 
 			// Clear screen command
-			getKernelInstance().getScreenDriver().hardwareDriver.executeCommand(screenClearScreen, 0, nullptr);
+			Kernel::clearScreen();
 
 			// Reprint directory
 			printShellDirectory();

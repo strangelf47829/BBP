@@ -28,7 +28,7 @@ void BBP::std::objectAllocator::mark_deleted(void *ptr)
 	if (ptr == nullptr)
 	{
 		// Attempting to free nullptr: Do nothing but output something to stderr
-		system::kernelSS()->activeContext->STDERR << "Attempt to delete nullptr was made." <<= std::endl;
+		//system::kernelSS()->activeContext->STDERR << "Attempt to delete nullptr was made." <<= std::endl;
 		return;
 	}
 
@@ -46,7 +46,7 @@ bool BBP::std::objectAllocator::_delete(void *ptr)
 	if (ptr == nullptr)
 	{
 		// Attempting to free nullptr: Do nothing but output something to stderr
-		system::kernelSS()->activeContext->STDERR << "Attempt to delete nullptr was made." <<= std::endl;
+		//system::kernelSS()->activeContext->STDERR << "Attempt to delete nullptr was made." <<= std::endl;
 		return false;
 	}
 

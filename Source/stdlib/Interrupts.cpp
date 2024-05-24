@@ -1,4 +1,5 @@
 #include "../include/Interrupts.h"
+#include "../include/Kernel.h"
 
 // Stubs
 void BBP::std::createInterrupt(IRQ &irq, interrupt_t function)
@@ -96,7 +97,7 @@ void BBP::std::createTimedInterrupt(IRQ &irq, interrupt_t function, byte argCoun
 	irq.isTimed = true;
 
 	// Set timer to now
-	irq.lastCall = millis();
+	irq.lastCall = system::Kernel::millis();
 
 	// Recalculate hash
 	irq.hash = calculateIRQHash(irq);

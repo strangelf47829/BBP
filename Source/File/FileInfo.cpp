@@ -1,5 +1,5 @@
 #include "../include/FileSysInfo.h"
-#include "../include/stddrv.h"
+#include "../include/Kernel.h"
 
 bool BBP::std::populateVolumeInfo(std::VolumeInfo &info, std::PATH &path)
 {
@@ -17,14 +17,14 @@ bool BBP::std::DirectoryInfo::scarce_populate(std::PATH &path)
 	std::c_string absPathString = absPath.relName();
 
 	// Check if path actually exists
-	this->exists = std::isPathRealObject(absPath);
+	this->exists = system::Kernel::isPathRealObject(absPath);
 
 	// if does not exist...
 	if (this->exists == false)
 		return false;
 
 	// Check if is directory
-	this->isDirectory = std::isPathOfTypeDirectory(absPath);
+	this->isDirectory = system::Kernel::isPathOfTypeDirectory(absPath);
 
 	// If no such directory...
 	if (this->isDirectory == false)
@@ -39,19 +39,19 @@ bool BBP::std::DirectoryInfo::scarce_populate(std::PATH &path)
 	dirLength = 0;
 
 	// Get directory iterator.
-	std::Inspect(absPath);
+	system::Kernel::Inspect(absPath);
 
 	// Get current string length
 	std::size_t pathString_length = std::strlen(absPathString);
 
 	// Count
-	while (std::canStepInspector())
+	while (system::Kernel::canStepInspector())
 	{
 		// Allocate static string for path
 		std::static_string<std::max_path_length> entryPath;
 
 		// Get the name of this path
-		std::getInspectorPath(entryPath);
+		system::Kernel::getInspectorPath(entryPath);
 
 		// Get length to string
 		std::size_t entryPath_length = std::strlen(entryPath);
@@ -64,13 +64,13 @@ bool BBP::std::DirectoryInfo::scarce_populate(std::PATH &path)
 		std::string entryPathAdjusted = std::string(entryPath_length - pathString_length, entryPath.data + pathString_length);
 
 		// Check for entry type
-		if (std::getInspectorFileType() == std::FileSysInfo::Directory)
+		if (system::Kernel::getInspectorFileType() == std::FileSysInfo::Directory)
 		{
 			// Increase dircount, and add (pathString_length + 1 (for trailing '/')) to dirLength
 			dirCount++;
 			dirLength += 1 + entryPath_length;
 		}
-		else if (std::getInspectorFileType() == std::FileSysInfo::File)
+		else if (system::Kernel::getInspectorFileType() == std::FileSysInfo::File)
 		{
 			// Increase filecount, and add pathString_length to fileLength
 			fileCount++;
@@ -78,7 +78,7 @@ bool BBP::std::DirectoryInfo::scarce_populate(std::PATH &path)
 		}
 
 		// Step over
-		std::stepInspectionIterator();
+		system::Kernel::stepInspectionIterator();
 	}
 
 	// Set entity count
@@ -142,19 +142,19 @@ bool BBP::std::DirectoryInfo::populate(std::PATH &path, std::ResourceManager *al
 	std::Stack<std::string_element> stringTableStack(&stringTable);
 
 	// Iterate over path
-	std::Inspect(path);
+	system::Kernel::Inspect(path);
 
 	// Get current string length
 	std::size_t pathString_length = std::strlen(absPathString);
 
 	// Iterate over everything
-	while (std::canStepInspector())
+	while (system::Kernel::canStepInspector())
 	{
 		// Allocate static string for path
 		std::static_string<std::max_path_length> entryPath;
 
 		// Get the name of this path
-		std::getInspectorPath(entryPath);
+		system::Kernel::getInspectorPath(entryPath);
 
 		// Get length to string
 		std::size_t entryPath_length = std::strlen(entryPath);
@@ -170,7 +170,7 @@ bool BBP::std::DirectoryInfo::populate(std::PATH &path, std::ResourceManager *al
 		currentStringTableLength = stringTableStack.atElement;
 
 		// Check for entry type
-		if (std::getInspectorFileType() == FileSysInfo::FileSysEntryType::Directory)
+		if (system::Kernel::getInspectorFileType() == FileSysInfo::FileSysEntryType::Directory)
 		{
 			// Directory type, so set index for directory to be ..
 			std::write(&dirIndicies, currentStringTableLength, currentDirIndex);
@@ -182,7 +182,7 @@ bool BBP::std::DirectoryInfo::populate(std::PATH &path, std::ResourceManager *al
 			stringTableStack << entryPathAdjusted <<= "/";
 
 		}
-		else if (std::getInspectorFileType() == FileSysInfo::FileSysEntryType::File)
+		else if (system::Kernel::getInspectorFileType() == FileSysInfo::FileSysEntryType::File)
 		{
 			// File type, so set index for file to be ..
 			std::write(&fileIndicies, currentStringTableLength, currentFileIndex);
@@ -195,7 +195,7 @@ bool BBP::std::DirectoryInfo::populate(std::PATH &path, std::ResourceManager *al
 		}
 
 		// Step over
-		std::stepInspectionIterator();
+		system::Kernel::stepInspectionIterator();
 	}
 
 	return true;

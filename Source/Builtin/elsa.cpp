@@ -108,14 +108,11 @@ BBP::std::errno_t BBP::system::elsa_builtin(std::size_t argc, std::c_string *arg
 	std::PATH output(outputFile);
 	std::PATH input(inputFiles[0]);
 
-	// Get own frame
-	procFrame *ownFrame = getKernelInstance().SubSystems().activeContext->activeFrame;
-
 	// Get home directory
 	std::PATH currentPath;
 
 	// Copy data from old path into current path
-	currentPath.copyFrom(*(ownFrame->systemContext->workingDirectory));
+	currentPath.copyFrom(system::Shell::getWorkingDirectory());
 
 	// Make paths absolute
 	std::PATH::makeRelative(currentPath, input);

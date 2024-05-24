@@ -35,9 +35,6 @@ namespace BBP
 			static constexpr std::size_t systemCallCount = 128;
 			std::STATIC_PAGE<syscall_t, systemCallCount> systemcalls;
 
-			// This system's context
-			system::SystemContext context;
-
 			// This ELF Object serves as the 'shared library' of this hyper visor
 			BinaryExecutable sharedlib;
 

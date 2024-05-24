@@ -1,18 +1,17 @@
 #include "../include/Syscalls.h"
 #include "../include/SyscallList.h"
 #include "../include/SyscallArgs.h"
-#include "../include/stddrv.h"
 #include "../include/drvcmd.h"
 #include "../include/Kernel.h"
 
 // Do a system call
-BBP::std::errno_t BBP::system::syscall(BBP::system::syscall_t system, BBP::system::syscall_args_t &args)
+BBP::std::errno_t BBP::system::Kernel::syscall(BBP::system::syscall_t system, BBP::system::syscall_args_t &args)
 {
 	// Lil' hack
 	std::word *argv = (std::word *)(&args);
 
 	// Get the system driver
-	getKernelInstance().getSystemDriver().hardwareDriver.executeCommand(std::systemCallCmd, system, argv);
+	singleton.systemDriver.hardwareDriver.executeCommand(std::systemCallCmd, system, argv);
 
 	// Return result
 	return args.errno;
@@ -27,7 +26,7 @@ void *BBP::systemcalls::malloc(std::size_t size)
 	BBP::system::syscall_args_t arg(ReturnData, ArgumentData);
 
 	// System call
-	system::syscall(systemcalls::system_malloc, arg);
+	system::Kernel::syscall(systemcalls::system_malloc, arg);
 
 	// Return result
 	return ReturnData.template get<0>();
@@ -42,7 +41,7 @@ void *BBP::systemcalls::calloc(std::size_t count, std::size_t size)
 	BBP::system::syscall_args_t arg(ReturnData, ArgumentData);
 
 	// System call
-	system::syscall(systemcalls::system_calloc, arg);
+	system::Kernel::syscall(systemcalls::system_calloc, arg);
 
 	// Return result
 	return ReturnData.template get<0>();
@@ -57,7 +56,7 @@ void BBP::systemcalls::free(void *ptr)
 	BBP::system::syscall_args_t arg(ReturnData, ArgumentData);
 
 	// System call
-	system::syscall(systemcalls::system_free, arg);
+	system::Kernel::syscall(systemcalls::system_free, arg);
 }
 
 /*

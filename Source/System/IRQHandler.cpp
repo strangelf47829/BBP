@@ -1,4 +1,5 @@
 #include "../include/Interrupts.h"
+#include "../include/Kernel.h"
 
 BBP::std::size_t BBP::std::KernelIRQHandler::getAvailableCount()
 {
@@ -66,7 +67,7 @@ void BBP::std::KernelIRQHandler::handle(IRQ &irq)
 void BBP::std::KernelIRQHandler::updateHandler()
 {
 	// Get now
-	time_t now = millis();
+	time_t now = system::Kernel::millis();
 
 	// Loop over irqs
 	for (index_t idx = 0; idx < IRQBacklog.dataSize; idx++)

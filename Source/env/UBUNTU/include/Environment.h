@@ -35,6 +35,8 @@ namespace Environment
 
 	namespace UEFI
 	{
+		
+		BBP::system::UEFI &configureUEFI();
 
 		BBP::std::size_t loadBootrecords(BBP::std::PAGE<BBP::system::BootRecord*> &records);
 

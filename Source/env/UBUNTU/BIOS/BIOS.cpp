@@ -9,7 +9,7 @@ bool Environment::BIOS::canBootIntoBIOS(BBP::system::UEFI *)
 	return true;
 }
 
-bool Environment::BIOS::EntryPoint(BBP::system::UEFI *uefi)
+bool Environment::BIOS::EntryPoint(BBP::system::UEFI *uefi, BBP::std::TaskPool *&)
 {
 	// Show info
 	BBP::std::printf("BIOS version 0.0.0(1) for UBUNTU.\n");

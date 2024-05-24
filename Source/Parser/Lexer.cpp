@@ -2,13 +2,14 @@
 #include "../include/stdio.h"
 #include "../include/FileSys.h"
 #include "../include/Kernel.h"
+#include "../include/Shell.h"
 
 void BBP::std::Lexer::lex_context::translateUnit(std::PATH &file)
 {
 	// Reset user paths
 	usrpaths.atElement = 0;
 	usrpaths <<= file.pathName();
-	usrpaths <<= system::kernelSS()->activeContext->workingDirectory->relName();
+	usrpaths <<= system::Shell::getWorkingDirectory().relName();
 
 	// Parse the source file.
 	parseFile(file);
@@ -738,49 +739,49 @@ void BBP::std::Lexer::lex_context::resetInfo(std::Lexer::lex_debugInfo &info)
 void BBP::std::Lexer::lex_context::LogError(conststring from, conststring msg, conststring name)
 {
 	if (from)
-		system::kernelSS()->activeContext->STDOUT << "\e[0;31m" << from << "\e[0;37m: " << msg;
+		std::printf("\e[0;31m%s\e[0;37m: %s", from, msg);
 	else
-		system::kernelSS()->activeContext->STDOUT << "\e[0;31merror\e[0;37m: " << msg;
+		std::printf("\e[0;31merror\e[0;37m: %s", msg);
 	if (name)
-		system::kernelSS()->activeContext->STDOUT << " [\e[0;31m" << name << "\e[0;37m]" <<= endl;
+		std::printf(" [\e[0;31m%s\e[0;37m]\n", name);
 	else
-		system::kernelSS()->activeContext->STDOUT <<= endl;
+		std::printf("\n");
 }
 
 void BBP::std::Lexer::lex_context::LogNote(conststring from, conststring msg, conststring name)
 {
 	if (from)
-		system::kernelSS()->activeContext->STDOUT << "\e[0;36m" << from << "\e[0;37m: " << msg;
+		std::printf("\e[0;36m%s\e[0;37m: %s", from, msg);
 	else
-		system::kernelSS()->activeContext->STDOUT << "\e[0;96mnote\e[0;37m: " << msg;
+		std::printf("\e[0;96mnote\e[0;37m: %s", msg);
 	if (name)
-		system::kernelSS()->activeContext->STDOUT << " [\e[0;36m" << name << "\e[0;37m]" <<= endl;
+		std::printf(" [\e[0;36m%s\e[0;37m]\n", name);
 	else
-		system::kernelSS()->activeContext->STDOUT <<= endl;
+		std::printf("\n");
 }
 
 void BBP::std::Lexer::lex_context::LogWarning(conststring from, conststring msg, conststring name)
 {
 	if (from)
-		system::kernelSS()->activeContext->STDOUT << "\e[0;35m" << from << "\e[0;37m: " << msg;
+		std::printf("\e[0;35m%s\e[0;37m: %s", from, msg);
 	else
-		system::kernelSS()->activeContext->STDOUT << "\e[0;35mwarning\e[0;37m: " << msg;
+		std::printf("\e[0;35mwarning\e[0;37m: %s", msg);
 	if (name)
-		system::kernelSS()->activeContext->STDOUT << " [\e[0;35m" << name << "\e[0;37m]" <<= endl;
+		std::printf(" [\e[0;35m%s\e[0;37m]\n", name);
 	else
-		system::kernelSS()->activeContext->STDOUT <<= endl;
+		std::printf("\n");
 }
 
 void BBP::std::Lexer::lex_context::LogAbort(conststring from, conststring msg, conststring name)
 {
 	if (from)
-		system::kernelSS()->activeContext->STDOUT << "\e[0;30;101m" << from << "\e[0;37m: " << msg;
+		std::printf("\e[0;30;101m%s\e[0;37m: %s", from, msg);
 	else
-		system::kernelSS()->activeContext->STDOUT << "\e[0;30;101mfatal error\e[0;37m: " << msg;
+		std::printf("\e[0;30;101mfatal error\e[0;37m: %s", msg);
 	if (name)
-		system::kernelSS()->activeContext->STDOUT << " [\e[0;30;101m" << name << "\e[0;37m]" <<= endl;
+		std::printf(" [\e[0;30;101m%s\e[0;37m]\n", name);
 	else
-		system::kernelSS()->activeContext->STDOUT <<= endl;
+		std::printf("\n");
 }
 
 void BBP::std::Lexer::lex_context::Log(conststring msg)
@@ -853,16 +854,16 @@ void BBP::std::Lexer::lex_context::Log(lex_debugInfo &info)
 		if (info.showLinesAndColoumns)
 		{
 			if (activeFile.data[0] == '\0')
-				std::putf(system::kernelSS()->activeContext->STDOUT, "(<Binary>:%u:%u): ", info.coloumn, info.line);
+				std::printf("(<Binary>:%u:%u): ", info.coloumn, info.line);
 			else
-				std::putf(system::kernelSS()->activeContext->STDOUT, "\e[0;97m%s:%u:%u:\e[0;37m ", activeFile.data, info.coloumn, info.line);
+				std::printf("\e[0;97m%s:%u:%u:\e[0;37m ", activeFile.data, info.coloumn, info.line);
 		}
 		else
 		{
 			if (activeFile.data[0] == '\0')
-				std::putf(system::kernelSS()->activeContext->STDOUT, "(<Binary>~%4u): ", info.character);
+				std::printf("(<Binary>~%4u): ", info.character);
 			else
-				std::putf(system::kernelSS()->activeContext->STDOUT, "\e[0;97m%s~%4u:\e[0;37m ", activeFile.data, info.character);
+				std::printf("\e[0;97m%s~%4u:\e[0;37m ", activeFile.data, info.character);
 		}
 	}
 
@@ -876,23 +877,23 @@ void BBP::std::Lexer::lex_context::Log(lex_debugInfo &info)
 			if (info.showLinesAndColoumns)
 			{
 				if (activeFile.data[0] == '\0')
-					std::putf(system::kernelSS()->activeContext->STDOUT, "(<Binary>:%u:%u): ", info.coloumn, info.line);
+					std::printf("(<Binary>:%u:%u): ", info.coloumn, info.line);
 				else
-					std::putf(system::kernelSS()->activeContext->STDOUT, "(%s:%u:%u): ", activeFile.data, info.coloumn, info.line);
+					std::printf("(%s:%u:%u): ", activeFile.data, info.coloumn, info.line);
 			}
 			else
 			{
 				if (activeFile.data[0] == '\0')
-					std::putf(system::kernelSS()->activeContext->STDOUT, "(<Binary>~%4u): ", info.character);
+					std::printf("(<Binary>~%4u): ", info.character);
 				else
-					std::putf(system::kernelSS()->activeContext->STDOUT, "(%s~%4u): ", activeFile.data, info.character);
+					std::printf("(%s~%4u): ", activeFile.data, info.character);
 			}
 		}
 		Log(info.highlightmsg);
 		Highlight(info);
 	}
 
-	std::putf(system::kernelSS()->activeContext->STDOUT, "\n");
+	std::printf("\n");
 
 }
 
@@ -920,9 +921,9 @@ void BBP::std::Lexer::lex_context::Highlight(lex_debugInfo info)
 		if (info.showWhere)
 		{
 			if (info.showLinesAndColoumns)
-				std::putf(system::kernelSS()->activeContext->STDOUT, "%5u |\t\e[0;96m", line);
+				std::printf("%5u |\t\e[0;96m", line);
 			else
-				std::putf(system::kernelSS()->activeContext->STDOUT, "%4u~ |\t\e[0;96m", character);
+				std::printf("%4u~ |\t\e[0;96m", character);
 		}
 		// Continue highlighting until end of string
 		while ((!info.highlightLength) || (info.highlightLength && runningLength < info.highlightLength))
@@ -949,7 +950,7 @@ void BBP::std::Lexer::lex_context::Highlight(lex_debugInfo info)
 				// Else, increment line and coloumn info
 				line += 1;
 				character = 0;
-				system::kernelSS()->activeContext->STDOUT << "\e[0;37m" <<= endl;
+				std::printf("\e[0;37m");
 				isSingleLine = false;
 				length = (length < linelength) ? linelength - 1 : length;
 				linelength = 0;
@@ -957,7 +958,7 @@ void BBP::std::Lexer::lex_context::Highlight(lex_debugInfo info)
 			}
 
 			// Print character to screen
-			system::kernelSS()->activeContext->STDOUT << c;
+			std::printf("%c", c);
 			length = (length < linelength) ? linelength : length;
 
 		}
@@ -968,18 +969,18 @@ void BBP::std::Lexer::lex_context::Highlight(lex_debugInfo info)
 
 	// Emit last new line
 	if (c != '\n')
-		system::kernelSS()->activeContext->STDOUT << "\e[0;37m\n      | \e[0;96m";
+		std::printf("\e[0;37m\n      | \e[0;96m");
 	else if (runningLength > 1)
-		system::kernelSS()->activeContext->STDOUT << "\e[0;37m      | \e[0;96m";
+		std::printf("\e[0;37m      | \e[0;96m");
 
 	for (unsigned int index = 0; index < length; index++)
 	{
 		if (isSingleLine)
-			system::kernelSS()->activeContext->STDOUT << "^";
+			std::printf("^");
 		else
-			system::kernelSS()->activeContext->STDOUT << "~";
+			std::printf("~");
 	}
-	system::kernelSS()->activeContext->STDOUT << "\e[0;37m" <<= std::endl;
+	std::printf("\e[0;37m\n");
 	
 
 }

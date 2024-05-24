@@ -15,9 +15,6 @@ namespace BBP
 		// Forward declaration
 		struct syscall_args_t;
 
-		// Perform a system call
-		std::errno_t syscall(syscall_t call, syscall_args_t &args);
-
 		// Get a system call
 		template<typename T>
 		T &getInValue(syscall_args_t &args, std::index_t idx);

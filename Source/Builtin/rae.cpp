@@ -25,7 +25,7 @@ BBP::std::word printcall(BBP::userspace::StateMachine *state, BBP::userspace::Hy
 		string = thr->executable.BinaryData.data + physicalAddress;
 
 	// Move string to stdout
-	BBP::system::getKernelInstance().getScreenDriver().softwareDriver << string;
+	BBP::std::printf("%s", string);
 
 	return 0;
 }
@@ -96,14 +96,11 @@ BBP::std::errno_t BBP::system::rae_builtin(std::size_t argc, std::c_string *argv
 	// Get path for file to run
 	std::PATH runFilePath(runFile);
 
-	// Get own frame
-	procFrame *ownFrame = getKernelInstance().SubSystems().activeContext->activeFrame;
-
 	// Get home directory
 	std::PATH currentPath;
 
 	// Copy data from old path into current path
-	currentPath.copyFrom(*(ownFrame->systemContext->workingDirectory));
+	currentPath.copyFrom(system::Shell::getWorkingDirectory());
 
 	// Make paths absolute
 	std::PATH::makeRelative(currentPath, runFilePath);
@@ -115,10 +112,10 @@ BBP::std::errno_t BBP::system::rae_builtin(std::size_t argc, std::c_string *argv
 		std::FILE fileToRun(runFilePath);
 
 		// Convert to binary format
-		std::ELF::ELFBuilder compiled(fileToRun.b().page, system::kernelSS()->activeContext->activemem);
+		std::ELF::ELFBuilder compiled(fileToRun.b().page, &system::Shell::getActiveMemory());
 
 		// Get hypervisor
-		userspace::HyperVisor *hyperv = &getKernelInstance().SubSystems().hypervisors[0];
+		userspace::HyperVisor *hyperv = &system::Kernel::getHypervisor(0);
 
 		// Set syscalls
 		hyperv->systemcalls.data[0] = (BBP::userspace::HyperVisor::syscall_t)printcall;
@@ -126,10 +123,10 @@ BBP::std::errno_t BBP::system::rae_builtin(std::size_t argc, std::c_string *argv
 		hyperv->systemcalls.data[2] = (BBP::userspace::HyperVisor::syscall_t)printcallX;
 
 		// Spawn thread
-		userspace::Thread *t = hyperv->spawnThread(compiled, system::kernelSS()->activeContext->activemem);
+		userspace::Thread *t = hyperv->spawnThread(compiled, &system::Shell::getActiveMemory());
 
 		// Get state
-		userspace::StateMachine *state = &getKernelInstance().SubSystems().state;
+		userspace::StateMachine *state = &system::Kernel::getStateMachine();
 
 		// Set state active hypervisor
 		state->setActiveHypervisor(hyperv);
@@ -139,7 +136,7 @@ BBP::std::errno_t BBP::system::rae_builtin(std::size_t argc, std::c_string *argv
 		fileToRun.close();
 
 		// Get time before execution
-		std::time_t before = std::micros();
+		std::time_t before = system::Kernel::micros();
 
 		// Amount of instructions ran
 		std::word instructions1 = 0;
@@ -157,7 +154,7 @@ BBP::std::errno_t BBP::system::rae_builtin(std::size_t argc, std::c_string *argv
 		}
 
 		// Get time after execution
-		std::time_t after = std::micros();
+		std::time_t after = system::Kernel::micros();
 
 		// Time is in microseconds
 		std::time_t delta = after - before;

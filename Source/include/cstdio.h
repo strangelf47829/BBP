@@ -17,14 +17,6 @@ namespace BBP
 		// Type used to denote a file stream
 		using fstream_t = FILE *;
 
-		// Open a file
-
-
-
-
-
-
-
 		// Type used to denote stream
 		using stream_t = std::Stack<std::string_element> &;
 

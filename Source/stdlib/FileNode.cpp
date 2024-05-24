@@ -1,5 +1,6 @@
 #include "../include/FileSys.h"
 #include "../include/Kernel.h"
+#include "../include/Shell.h"
 
 BBP::std::FileNode::FileNode()
 	: allocator(nullptr),
@@ -14,7 +15,7 @@ BBP::std::FileNode::FileNode(std::ResourceManager *res, std::conststring path)
 	filePath(path),
 	filePathHash(0)
 {
-	filePath.makeAbsolutePath(BBP::system::kernelSS()->activeContext->workingDirectory);
+	filePath.makeAbsolutePath(&BBP::system::Shell::getWorkingDirectory());
 	filePathHash = std::strhsh(filePath.relName());
 }
 
@@ -24,7 +25,7 @@ BBP::std::FileNode::FileNode(std::Stack<std::string_element> &data, std::constst
 	filePath(path),
 	filePathHash(0)
 {
-	filePath.makeAbsolutePath(BBP::system::kernelSS()->activeContext->workingDirectory);
+	filePath.makeAbsolutePath(&BBP::system::Shell::getWorkingDirectory());
 	filePathHash = std::strhsh(filePath.relName());
 }
 
@@ -34,7 +35,7 @@ BBP::std::FileNode::FileNode(std::ResourceManager *res, std::VOLUME *v, std::con
 	filePath(v, path),
 	filePathHash(0)
 {
-	filePath.makeAbsolutePath(BBP::system::kernelSS()->activeContext->workingDirectory);
+	filePath.makeAbsolutePath(&BBP::system::Shell::getWorkingDirectory());
 	filePathHash = std::strhsh(filePath.relName());
 }
 
@@ -46,7 +47,7 @@ BBP::std::FileNode::FileNode(std::ResourceManager *res, std::size_t size, std::V
 	filePath(v, path),
 	filePathHash(0)
 {
-	filePath.makeAbsolutePath(BBP::system::kernelSS()->activeContext->workingDirectory);
+	filePath.makeAbsolutePath(&BBP::system::Shell::getWorkingDirectory());
 	filePathHash = std::strhsh(filePath.relName());
 }
 
@@ -58,18 +59,18 @@ BBP::std::FileNode::FileNode(std::ResourceManager *res, std::size_t size, std::P
 	filePath(path),
 	filePathHash(0)
 {
-	filePath.makeAbsolutePath(BBP::system::kernelSS()->activeContext->workingDirectory);
+	filePath.makeAbsolutePath(&BBP::system::Shell::getWorkingDirectory());
 	filePathHash = std::strhsh(filePath.relName());
 }
 
 
 
-BBP::std::FileNode::FileNode(std::Stack<std::string_element> &data, std::VOLUME *v, std::conststring path)
+BBP::std::FileNode::FileNode(std::Stack<std::string_element> &data, std::VOLUME *v, std::PATH &path)
 	: allocator(nullptr),
 	fileData(data),
-	filePath(v, path),
+	filePath(v, path.relName()),
 	filePathHash(0)
 {
-	filePath.makeAbsolutePath(BBP::system::kernelSS()->activeContext->workingDirectory);
+	filePath.makeAbsolutePath(&BBP::system::Shell::getWorkingDirectory());
 	filePathHash = std::strhsh(filePath.relName());
 }

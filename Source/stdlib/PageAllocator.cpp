@@ -64,7 +64,6 @@ BBP::std::index_t BBP::std::pageAllocator::free(void *ptr)
 	if (ptr == nullptr)
 	{
 		// Attempting to free nullptr: Do nothing but output something to stderr
-		system::kernelSS()->activeContext->STDERR << "Attempt to free nullptr was made." <<= std::endl;
 		return invalidAllocationIndex;
 	}
 

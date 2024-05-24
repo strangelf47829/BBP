@@ -15,15 +15,6 @@ BBP::std::conststring defaultPath = "/home/";
 
 BBP::std::errno_t BBP::system::cd_builtin(std::size_t argc, std::c_string *argv)
 {
-	// Get kernel
-	Kernel *k = &getKernelInstance();
-
-	// Get subsystem
-	KernelSubSystems *kernelSS = &k->SubSystems();
-
-	// Get active procframe
-	procFrame *ownFrame = kernelSS->activeContext->activeFrame;
-
 	// Get string to cd into.
 	std::string pathTo = std::String(defaultPath);
 
@@ -31,11 +22,11 @@ BBP::std::errno_t BBP::system::cd_builtin(std::size_t argc, std::c_string *argv)
 	if (argc >= 2)
 	{
 		// If argument is '.', set path to './'
-		if (std::strcmp(argv[1], "."))
+		if (std::strcmp(argv[1], (std::c_string)"."))
 			pathTo = std::String("./");
 
 		// If argument is '.,', set path to '../'
-		else if (std::strcmp(argv[1], ".."))
+		else if (std::strcmp(argv[1], (std::c_string)".."))
 			pathTo = std::String("../");
 
 		// Otherwise, set path to argv[1]
@@ -49,7 +40,7 @@ BBP::std::errno_t BBP::system::cd_builtin(std::size_t argc, std::c_string *argv)
 	std::PATH changeTo(pathTo);
 
 	// Copy data from old path into current path
-	currentPath.copyFrom(*(ownFrame->systemContext->workingDirectory));
+	currentPath.copyFrom(system::Shell::getWorkingDirectory());
 
 	// Combine them
 	currentPath = changeTo.makeAbsolutePath(&currentPath);
@@ -59,7 +50,7 @@ BBP::std::errno_t BBP::system::cd_builtin(std::size_t argc, std::c_string *argv)
 
 	// Check if changeto is now defined as root or not. If it is, move forward.
 	if (changeTo.isDefinedFromRoot())
-		pathName += std::strlen(ownFrame->systemContext->contextVolume.volumePath.relName()) - 1;
+		pathName += std::strlen(system::Shell::getPrimaryVolume().volumePath.relName()) - 1;
 
 	// Create new path
 	std::PATH newPath(pathName);
@@ -70,7 +61,7 @@ BBP::std::errno_t BBP::system::cd_builtin(std::size_t argc, std::c_string *argv)
 
 	// Copy over stuff from that path, if success
 	if (success)
-		ownFrame->systemContext->workingDirectory->copyFrom(newPath.makeDirectory());
+		system::Shell::getWorkingDirectory().copyFrom(newPath.makeDirectory());
 	else
 	{
 		// Handle thing is not directory.

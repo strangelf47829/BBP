@@ -1,10 +1,11 @@
 #include "../include/ELF.h"
 #include "../include/ELSABackend.h"
 #include "../include/StressRelief.h"
+#include "../include/Shell.h"
 
 BBP::esa::BinaryApplication::BinaryApplication(std::conststring name, std::size_t extraSegments, std::size_t extraSections, std::size_t extraSymbols)
 	:
-	builder(system::kernelSS()->activeContext->activemem, 6 + extraSegments, 14 + extraSections, 1 + extraSymbols),
+	builder(&system::Shell::getActiveMemory(), 6 + extraSegments, 14 + extraSections, 1 + extraSymbols),
 	builderStack(&builder.file, std::seqlen(builder.file)),
 	file(builderStack, name),
 	mangled(&mangledPage, 128)

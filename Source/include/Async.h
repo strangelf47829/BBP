@@ -58,15 +58,6 @@ namespace BBP
 				default_idx(fncCount - 1)
 			{}
 
-			// Default constructor
-			async_func_t(std::size_t fncCount, lambda_t *fncVector)
-				: stack(),
-				args(nullptr),
-				funcs(fncCount, fncVector),
-				idx(fncCount - 1),
-				default_idx(fncCount - 1)
-			{}
-
 			// Reset this 'job'
 			void Reset()
 			{
@@ -136,11 +127,6 @@ namespace BBP
 			// If pages are known
 			async_task(std::size_t fncCount, lambda_t *fncList, K...args)
 				: functor(fncCount, fncList, args...)
-			{}
-
-			// If default values exist
-			async_task(std::size_t fncCount, lambda_t *fncList)
-				: functor(fncCount, fncList)
 			{}
 
 			// Must respect functor constructor

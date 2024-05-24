@@ -6,7 +6,7 @@
 include ../Source/makefile.config
 
 # Get a list of modules
-MODULE_LIST= Applications ELF ELSA ELSAnew File Graphics Parser RAE stdlib System Daemons Terminal Builtin
+MODULE_LIST= Applications ELF ELSA ELSAnew File Graphics Parser RAE stdlib Daemons Terminal Builtin Kernel System Shell
 
 # Get environment details
 ENV= $(PLAT)
@@ -15,7 +15,7 @@ ENV= $(PLAT)
 OS_LIST= BBPOSIX WINDOWSE20
 
 # Create a list of targets
-MODULE_A= Applications ELF ELSA fileSys Glib Parser RAE stdlib System Daemons Terminal Builtin ELSAnew
+MODULE_A= Applications ELF ELSA fileSys Glib Parser RAE stdlib Daemons Terminal Builtin ELSAnew System Kernel Shell
 ENV_A= env
 OS_A= $(foreach os,$(OS_LIST),OS$(os))
 ALL_A= $(MODULE_A) $(ENV_A) $(OS_A)

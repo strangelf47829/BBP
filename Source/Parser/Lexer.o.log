@@ -1,14 +1,14 @@
 Lexer.cpp: In member function ‘BBP::std::Lexer::lex_keywordhandle BBP::std::Lexer::lex_context::moveToNextKeyword()’:
-Lexer.cpp:202:19: warning: suggest parentheses around comparison in operand of ‘==’ [-Wparentheses]
-  202 |    if (atPosition >= data.dataSize == false)
+Lexer.cpp:203:19: warning: suggest parentheses around comparison in operand of ‘==’ [-Wparentheses]
+  203 |    if (atPosition >= data.dataSize == false)
       |        ~~~~~~~~~~~^~~~~~~~~~~~~~~~
 Lexer.cpp: In member function ‘void BBP::std::Lexer::lex_context::moveToEndOfThisWord(bool)’:
-Lexer.cpp:600:61: warning: unused parameter ‘stopAtNewLine’ [-Wunused-parameter]
-  600 | void BBP::std::Lexer::lex_context::moveToEndOfThisWord(bool stopAtNewLine)
+Lexer.cpp:601:61: warning: unused parameter ‘stopAtNewLine’ [-Wunused-parameter]
+  601 | void BBP::std::Lexer::lex_context::moveToEndOfThisWord(bool stopAtNewLine)
       |                                                        ~~~~~^~~~~~~~~~~~~
 Lexer.cpp: In member function ‘void BBP::std::Lexer::lex_context::moveToStartOfThisWord(bool)’:
-Lexer.cpp:611:63: warning: unused parameter ‘stopAtNewLine’ [-Wunused-parameter]
-  611 | void BBP::std::Lexer::lex_context::moveToStartOfThisWord(bool stopAtNewLine)
+Lexer.cpp:612:63: warning: unused parameter ‘stopAtNewLine’ [-Wunused-parameter]
+  612 | void BBP::std::Lexer::lex_context::moveToStartOfThisWord(bool stopAtNewLine)
       |                                                          ~~~~~^~~~~~~~~~~~~
 In file included from Lexer.cpp:1:
 ../include/Lex.h: In constructor ‘BBP::std::Lexer::lex_context::lex_context()’:
@@ -18,8 +18,8 @@ In file included from Lexer.cpp:1:
 ../include/Lex.h:149:10: warning:   ‘bool BBP::std::Lexer::lex_context::abort’ [-Wreorder]
   149 |     bool abort;
       |          ^~~~~
-Lexer.cpp:989:1: warning:   when initialized here [-Wreorder]
-  989 | BBP::std::Lexer::lex_context::lex_context()
+Lexer.cpp:990:1: warning:   when initialized here [-Wreorder]
+  990 | BBP::std::Lexer::lex_context::lex_context()
       | ^~~
 In file included from Lexer.cpp:1:
 ../include/Lex.h:149:10: warning: ‘BBP::std::Lexer::lex_context::abort’ will be initialized after [-Wreorder]
@@ -28,8 +28,8 @@ In file included from Lexer.cpp:1:
 ../include/Lex.h:126:18: warning:   ‘BBP::std::index_t BBP::std::Lexer::lex_context::atPosition’ [-Wreorder]
   126 |     std::index_t atPosition;
       |                  ^~~~~~~~~~
-Lexer.cpp:989:1: warning:   when initialized here [-Wreorder]
-  989 | BBP::std::Lexer::lex_context::lex_context()
+Lexer.cpp:990:1: warning:   when initialized here [-Wreorder]
+  990 | BBP::std::Lexer::lex_context::lex_context()
       | ^~~
 In file included from Lexer.cpp:1:
 ../include/Lex.h:143:10: warning: ‘BBP::std::Lexer::lex_context::literalDepth’ will be initialized after [-Wreorder]
@@ -38,8 +38,8 @@ In file included from Lexer.cpp:1:
 ../include/Lex.h:123:17: warning:   ‘BBP::std::size_t BBP::std::Lexer::lex_context::dataSize’ [-Wreorder]
   123 |     std::size_t dataSize;
       |                 ^~~~~~~~
-Lexer.cpp:989:1: warning:   when initialized here [-Wreorder]
-  989 | BBP::std::Lexer::lex_context::lex_context()
+Lexer.cpp:990:1: warning:   when initialized here [-Wreorder]
+  990 | BBP::std::Lexer::lex_context::lex_context()
       | ^~~
 In file included from Lexer.cpp:1:
 ../include/Lex.h:140:13: warning: ‘BBP::std::Lexer::lex_context::lastWhiteSpace’ will be initialized after [-Wreorder]
@@ -48,13 +48,13 @@ In file included from Lexer.cpp:1:
 ../include/Lex.h:135:10: warning:   ‘bool BBP::std::Lexer::lex_context::inhibitSpecialFunctions’ [-Wreorder]
   135 |     bool inhibitSpecialFunctions;
       |          ^~~~~~~~~~~~~~~~~~~~~~~
-Lexer.cpp:989:1: warning:   when initialized here [-Wreorder]
-  989 | BBP::std::Lexer::lex_context::lex_context()
+Lexer.cpp:990:1: warning:   when initialized here [-Wreorder]
+  990 | BBP::std::Lexer::lex_context::lex_context()
       | ^~~
 Lexer.cpp: In member function ‘void BBP::std::Lexer::lex_context::Log(BBP::std::conststring, BBP::std::conststring, BBP::std::conststring)’:
-Lexer.cpp:806:9: warning: this statement may fall through [-Wimplicit-fallthrough=]
-  806 |   abort = true;
+Lexer.cpp:807:9: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  807 |   abort = true;
       |   ~~~~~~^~~~~~
-Lexer.cpp:807:2: note: here
-  807 |  case 'E':
+Lexer.cpp:808:2: note: here
+  808 |  case 'E':
       |  ^~~~

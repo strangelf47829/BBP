@@ -51,8 +51,11 @@ void BBP::system::SoftwareHandle::seekOutputBack(std::size_t len)
 	if (OutputBuffer == nullptr)
 		return;
 
-	// Seek back
-	OutputBuffer->atElement -= len;
+	// Seek back 'len' or 'atElement', whichever is less
+	if (len <= OutputBuffer->atElement)
+		OutputBuffer->atElement -= len;
+	else
+		OutputBuffer->atElement = 0;
 }
 
 void BBP::system::SoftwareHandle::seekOutputForward(std::size_t len)
@@ -61,8 +64,11 @@ void BBP::system::SoftwareHandle::seekOutputForward(std::size_t len)
 	if (OutputBuffer == nullptr)
 		return;
 
-	// Seek back
-	OutputBuffer->atElement += len;
+	// Seek forward 'len' or 'atElement', whichever is less
+	if (len <= OutputBuffer->atElement)
+		OutputBuffer->atElement += len;
+	else
+		OutputBuffer->atElement = 0;
 }
 
 void BBP::system::SoftwareHandle::seekInputBack(std::size_t len)
@@ -71,8 +77,11 @@ void BBP::system::SoftwareHandle::seekInputBack(std::size_t len)
 	if (InputBuffer == nullptr)
 		return;
 
-	// Seek back
-	InputBuffer->atElement -= len;
+	// Seek back 'len' or 'atElement', whichever is less
+	if (len <= InputBuffer->atElement)
+		InputBuffer->atElement -= len;
+	else
+		InputBuffer->atElement = 0;
 }
 
 void BBP::system::SoftwareHandle::seekInputForward(std::size_t len)
@@ -81,8 +90,11 @@ void BBP::system::SoftwareHandle::seekInputForward(std::size_t len)
 	if (InputBuffer == nullptr)
 		return;
 
-	// Seek back
-	InputBuffer->atElement += len;
+	// Seek forward 'len' or 'atElement', whichever is less
+	if (len <= InputBuffer->atElement)
+		InputBuffer->atElement += len;
+	else
+		InputBuffer->atElement = 0;
 }
 
 BBP::system::SoftwareHandle &BBP::system::SoftwareHandle::operator<<(std::string_element b)
