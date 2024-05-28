@@ -25,7 +25,7 @@ namespace BBP
 			Processor_functor(keyword_return_t(*act)()) : action(act) {}
 
 			// Other constructor
-			void *operator new(unsigned long int, Processor_functor *addr) { return addr; }
+			void *operator new(std::__cxx_size_t, Processor_functor *addr) { return addr; }
 		};
 		
 		// Relates a list of functions to a list of strings

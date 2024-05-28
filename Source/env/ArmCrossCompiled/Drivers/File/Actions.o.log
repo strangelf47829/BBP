@@ -1,0 +1,24 @@
+Drivers/File/Actions.cpp: In function ‘BBP::std::word Environment::Drivers::Filesystem::sendDataToFileSystem(BBP::std::size_t, BBP::std::PAGE<char>&)’:
+Drivers/File/Actions.cpp:13:16: warning: implicitly-declared ‘constexpr BBP::std::PATH& BBP::std::PATH::operator=(const BBP::std::PATH&)’ is deprecated [-Wdeprecated-copy]
+   13 |   activeFile = page;
+      |                ^~~~
+In file included from Drivers/File/../../include/FileDriver.h:4,
+                 from Drivers/File/Actions.cpp:1:
+Drivers/File/../../include/../../../include/FileSys.h:94:4: note: because ‘BBP::std::PATH’ has user-provided ‘BBP::std::PATH::PATH(BBP::std::PATH&)’
+   94 |    PATH(std::PATH &);
+      |    ^~~~
+Drivers/File/Actions.cpp:10:8: warning: enumeration value ‘INSPECT’ not handled in switch [-Wswitch]
+   10 |  switch(mode)
+      |        ^
+Drivers/File/Actions.cpp: In function ‘BBP::std::word Environment::Drivers::Filesystem::receiveDataFromFileSystem(BBP::std::size_t, BBP::std::PAGE<char>&)’:
+Drivers/File/Actions.cpp:43:9: warning: unused variable ‘c’ [-Wunused-variable]
+   43 |    char c = 0;
+      |         ^
+Drivers/File/Actions.cpp: In function ‘BBP::std::word Environment::Drivers::Filesystem::sendDataToFileSystem(BBP::std::size_t, BBP::std::PAGE<char>&)’:
+Drivers/File/Actions.cpp:24:1: warning: control reaches end of non-void function [-Wreturn-type]
+   24 | }
+      | ^
+Drivers/File/Actions.cpp: In function ‘BBP::std::word Environment::Drivers::Filesystem::receiveDataFromFileSystem(BBP::std::size_t, BBP::std::PAGE<char>&)’:
+Drivers/File/Actions.cpp:67:1: warning: control reaches end of non-void function [-Wreturn-type]
+   67 | }
+      | ^

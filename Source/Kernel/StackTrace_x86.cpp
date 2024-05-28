@@ -2,6 +2,9 @@
 #include "../include/stddef.h"
 #include "../include/stdio.h"
 
+// Only do this for x86 architectures
+#ifdef ARCH_x86_64
+
 // Constructor
 BBP::std::stack_trace::stack_trace()
 {
@@ -11,6 +14,7 @@ BBP::std::stack_trace::stack_trace()
 // Move a stack trace up
 bool BBP::std::stack_trace::moveUp()
 {
+
 	// Get pointer to current active frame
 	stack_frame::frame_ptr_t currentFrame = activeFrame.frameAddress;
 
@@ -18,7 +22,7 @@ bool BBP::std::stack_trace::moveUp()
 	stack_frame::frame_ptr_t lastFrame = currentFrame;
 
 	// Subtract 0x10 from lastFrame
-	asm volatile("subq $0x10,%0"
+	asm volatile("subq $0x10, %0"
 		: "=r" (lastFrame));
 
 	// If this is equal to '0' return false
@@ -30,7 +34,7 @@ bool BBP::std::stack_trace::moveUp()
 
 	// Set current frame to lastFrame
 	currentFrame = lastFrame;
-	
+
 	// Add 0x10
 	asm volatile ("addq $0x10, %0"
 		: "=r" (currentFrame));
@@ -82,7 +86,7 @@ void BBP::std::stack_trace::Capture()
 
 	// Get rbp and add 0x10
 	asm volatile ("mov %%rbp, %0\n\t"
-		"addq $0x10, %0"
+		ASM_ADD(0x10)
 		: "=r" (currentFrame));
 
 	// Store that in activeFrame
@@ -112,7 +116,7 @@ void BBP::std::stack_trace::printFrame(stack_trace_db &db, address_t referencePh
 {
 	// Print
 	std::printf("#%u ", framesRemoved);
-	
+
 	// If address known of function, print it (also not if frames removed is 0)
 	if (framesRemoved == 0)
 	{
@@ -146,9 +150,9 @@ void BBP::std::stack_trace::printFrame(stack_trace_db &db, address_t referencePh
 	db.lineLookup();
 
 	// Then print information
-	std::printf("at \e[0;33m");
+	std::printf("at <\e[0;33m");
 	db.printName();
-	std::printf("\e[0;37m ()\n");
+	std::printf(" ()\n");
 }
 
 void BBP::std::stack_trace::printReference()
@@ -179,3 +183,5 @@ void BBP::std::stack_trace::showStackTrace()
 
 
 }
+
+#endif

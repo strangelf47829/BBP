@@ -25,8 +25,6 @@ namespace BBP
 
 			// Reference address
 			std::address_t referenceAddress;
-
-
 		};
 
 		// Function finder

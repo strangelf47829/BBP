@@ -17,7 +17,7 @@ void BBP::std::stack_trace_db::printName()
 	if (binIndex == -1 || functionStart == -1 || functionOffset == -1 || line == -1)
 		std::strcpy(name.data, "??");
 
-	std::printf("%s<+0x%04x>", name.data, functionOffset);
+	std::printf("%s\e[0;37m+0x%04x>", name.data, functionOffset);
 }
 
 void BBP::std::stack_trace_db::lineLookup()

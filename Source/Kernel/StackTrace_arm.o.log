@@ -1,0 +1,7 @@
+StackTrace_arm.cpp: In member function ‘void BBP::std::stack_trace::printFrame(BBP::std::stack_trace_db&, BBP::std::address_t)’:
+StackTrace_arm.cpp:20:56: warning: unused parameter ‘db’ [-Wunused-parameter]
+   20 | void BBP::std::stack_trace::printFrame(stack_trace_db &db, address_t referencePhysAddress)
+      |                                        ~~~~~~~~~~~~~~~~^~
+StackTrace_arm.cpp:20:70: warning: unused parameter ‘referencePhysAddress’ [-Wunused-parameter]
+   20 | void BBP::std::stack_trace::printFrame(stack_trace_db &db, address_t referencePhysAddress)
+      |                                                            ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~

@@ -1,0 +1,8 @@
+Plugins/Input.cpp: In function ‘BBP::std::size_t BBP::std::inputBufferCount()’:
+Plugins/Input.cpp:7:22: error: ‘getKernelInstance’ is not a member of ‘BBP::system’
+    7 |  return BBP::system::getKernelInstance().getKeyboardDriver().softwareDriver.available();
+      |                      ^~~~~~~~~~~~~~~~~
+Plugins/Input.cpp: In function ‘BBP::std::string_element BBP::std::getChar()’:
+Plugins/Input.cpp:21:10: error: ‘getKernelInstance’ is not a member of ‘BBP::system’
+   21 |  system::getKernelInstance().getKeyboardDriver().softwareDriver >> c;
+      |          ^~~~~~~~~~~~~~~~~

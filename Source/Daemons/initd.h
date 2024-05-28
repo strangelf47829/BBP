@@ -3,16 +3,19 @@
 
 #include "../include/Daemon.h"
 
+/*
+INITD Daemon - 
+
+This daemon is responsible for keeping other daemons organized.
+This means for example that this daemon registers all other daemons together,
+Simplifies 
+
+*/
+
 namespace BBP
 {
 	namespace system
 	{
-
-		// Structure to hold shell actions
-		struct shell
-		{
-
-		};
 
 		// Initial daemon
 		class initd : public Daemon

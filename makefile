@@ -37,6 +37,13 @@ version:
 setup:
 	@cd config/Platforms; ./guess.sh
 
+# Setup ARM environment
+setup-arm:
+	@cp config/Platforms/makefile.config.arm Source/makefile.config
+
+# Setup Ubuntu environment
+setup-ubuntu:
+	@cp config/Platforms/makefile.config.Ubuntu Source/makefile.config
 
 # +========================================+
 # | The build command actually builds the  |
@@ -52,6 +59,16 @@ build:
 
 clean:
 	@cd build; make clean --no-print-directory
+
+# +========================================+
+# | Cross compilation debug tools          |
+# +========================================+
+
+gdb-host:
+	qemu-arm -L /usr/arm-linux-gnueabihf -g 1234 build/a.out
+
+gdb-remote:
+	gdb-multiarch --ex="set arch armv5te" --ex="set sysroot /usr/arm-linux-gnueabihf/" --ex="target remote localhost:1234" --ex="break main" build/a.out
 
 # Count the amount of lines of code
 count:

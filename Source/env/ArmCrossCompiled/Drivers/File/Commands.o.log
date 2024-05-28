@@ -1,0 +1,49 @@
+Drivers/File/Commands.cpp: In function ‘bool Environment::Drivers::Filesystem::openFile(BBP::std::size_t, BBP::std::word*)’:
+Drivers/File/Commands.cpp:74:9: warning: enumeration value ‘READPATH’ not handled in switch [-Wswitch]
+   74 |  switch (mode)
+      |         ^
+Drivers/File/Commands.cpp:74:9: warning: enumeration value ‘INSPECT’ not handled in switch [-Wswitch]
+Drivers/File/Commands.cpp:71:66: warning: unused parameter ‘argc’ [-Wunused-parameter]
+   71 | bool Environment::Drivers::Filesystem::openFile(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                                 ~~~~~~~~~~~~~~~~~^~~~
+Drivers/File/Commands.cpp:71:88: warning: unused parameter ‘argv’ [-Wunused-parameter]
+   71 | bool Environment::Drivers::Filesystem::openFile(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                                                        ~~~~~~~~~~~~~~~~^~~~
+Drivers/File/Commands.cpp: In function ‘bool Environment::Drivers::Filesystem::closeFile(BBP::std::size_t, BBP::std::word*)’:
+Drivers/File/Commands.cpp:91:9: warning: enumeration value ‘READPATH’ not handled in switch [-Wswitch]
+   91 |  switch (mode)
+      |         ^
+Drivers/File/Commands.cpp:91:9: warning: enumeration value ‘INSPECT’ not handled in switch [-Wswitch]
+Drivers/File/Commands.cpp:88:67: warning: unused parameter ‘argc’ [-Wunused-parameter]
+   88 | bool Environment::Drivers::Filesystem::closeFile(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                                  ~~~~~~~~~~~~~~~~~^~~~
+Drivers/File/Commands.cpp:88:89: warning: unused parameter ‘argv’ [-Wunused-parameter]
+   88 | bool Environment::Drivers::Filesystem::closeFile(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                                                         ~~~~~~~~~~~~~~~~^~~~
+Drivers/File/Commands.cpp: In function ‘bool Environment::Drivers::Filesystem::setReadMode(BBP::std::size_t, BBP::std::word*)’:
+Drivers/File/Commands.cpp:108:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  108 | }
+      | ^
+Drivers/File/Commands.cpp:105:69: warning: unused parameter ‘argc’ [-Wunused-parameter]
+  105 | bool Environment::Drivers::Filesystem::setReadMode(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                                    ~~~~~~~~~~~~~~~~~^~~~
+Drivers/File/Commands.cpp:105:91: warning: unused parameter ‘argv’ [-Wunused-parameter]
+  105 | bool Environment::Drivers::Filesystem::setReadMode(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                                                           ~~~~~~~~~~~~~~~~^~~~
+Drivers/File/Commands.cpp: In function ‘bool Environment::Drivers::Filesystem::setWriteMode(BBP::std::size_t, BBP::std::word*)’:
+Drivers/File/Commands.cpp:113:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  113 | }
+      | ^
+Drivers/File/Commands.cpp:110:70: warning: unused parameter ‘argc’ [-Wunused-parameter]
+  110 | bool Environment::Drivers::Filesystem::setWriteMode(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                                     ~~~~~~~~~~~~~~~~~^~~~
+Drivers/File/Commands.cpp:110:92: warning: unused parameter ‘argv’ [-Wunused-parameter]
+  110 | bool Environment::Drivers::Filesystem::setWriteMode(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                                                            ~~~~~~~~~~~~~~~~^~~~
+Drivers/File/Commands.cpp: In function ‘bool Environment::Drivers::Filesystem::pathInspect(BBP::std::size_t, BBP::std::word*)’:
+Drivers/File/Commands.cpp:115:69: warning: unused parameter ‘argc’ [-Wunused-parameter]
+  115 | bool Environment::Drivers::Filesystem::pathInspect(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                                    ~~~~~~~~~~~~~~~~~^~~~
+Drivers/File/Commands.cpp:115:91: warning: unused parameter ‘argv’ [-Wunused-parameter]
+  115 | bool Environment::Drivers::Filesystem::pathInspect(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                                                           ~~~~~~~~~~~~~~~~^~~~

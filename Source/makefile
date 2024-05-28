@@ -43,6 +43,7 @@ printinfo:
 	@echo "+--- Module info -----------------------"
 	@echo "| >\tModule: $(MODULE)"
 	@echo "| >\tPlatform: $(PLAT)"
+	@echo "| >\tArchitecture: $(ARCH)"
 	@echo "| >\tSource directory: $(SOURCE_DIR)"
 	@echo "|"
 

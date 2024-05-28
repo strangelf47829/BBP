@@ -3,6 +3,7 @@
 
 #include "stdint.h"
 #include "Limits.h"
+#include "Architectures.h"
 
 #define __UNSAFE__(func) func##_unsafe
 

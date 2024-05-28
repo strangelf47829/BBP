@@ -40,15 +40,15 @@ default: build executable
 
 # Compilation rules for modules
 $(MODULE_DIRS):
-	@cd $@; make --no-print-directory
+	@cd $@; make EXTCXXFLAGS="-DARCH=$(ARCH) -DARCH_$(ARCH)" --no-print-directory
 
 # Compilation rules for OS's
 $(OS_LIST):
-	@cd "$(OS_DIR)/$@"; make --no-print-directory
+	@cd "$(OS_DIR)/$@"; make EXTCXXFLAGS="-DARCH=$(ARCH) -DARCH_$(ARCH)" --no-print-directory
 
 # Environment compilation rules
 env:
-	@cd $(ENV_DIR); make --no-print-directory
+	@cd $(ENV_DIR); make EXTCXXFLAGS="-DARCH=$(ARCH) -DARCH_$(ARCH)" --no-print-directory
 
 # Build rules
 build: $(MODULE_DIRS) $(OS_LIST) env
@@ -61,8 +61,12 @@ executable:
 	@rm -f /mnt/v/lib/memmap*
 	@nm -n -C -S | grep -E " [tTWw] " >> /mnt/v/lib/memmap
 	@python3 memmap.py
-#	@rm /mnt/v/lib/memmap
 	@echo "Done."
+
+# Get binary sizes
+size:
+	@echo "Binary sizes for $(ARCH) architecture:"
+	@size -G -x bin/lib* -t | grep -E "TOTALS|filename"
 
 # Clean out each directory
 clean: $(patsubst %,%.clean,$(notdir $(MODULE_DIRS))) $(ENV_DIR).clean $(foreach osdir,$(OS_LIST),$(OS_DIR)/$(osdir).clean)
