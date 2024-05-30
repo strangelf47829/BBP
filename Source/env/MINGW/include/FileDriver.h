@@ -2,7 +2,7 @@
 #define BBP_FILE_H
 
 #include "../../../include/FileSys.h"
-#include "../../../include/UEFI.h"
+#include "../../../include/EFI.h"
 
 namespace Environment
 {

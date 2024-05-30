@@ -1,4 +1,4 @@
-#include "../../../include/UEFI.h"
+#include "../../../include/EFI.h"
 #include "../../../include/Kernel.h"
 #include "../include/BIOS.h"
 #include "../include/Environment.h"
@@ -9,7 +9,7 @@
 constexpr BBP::std::size_t bootrecordCount = 3;
 BBP::system::BootRecord *bootrecord[3] = { nullptr, nullptr, nullptr };
 
-BBP::std::size_t Environment::UEFI::loadBootrecords(BBP::std::PAGE<BBP::system::BootRecord *> &records)
+BBP::std::size_t Environment::EFI::loadBootrecords(BBP::std::PAGE<BBP::system::BootRecord *> &records)
 {
 	// Set BIOS Record
 	bootrecord[0] = &Environment::BIOS::bootRecord;

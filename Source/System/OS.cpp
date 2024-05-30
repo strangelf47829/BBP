@@ -7,17 +7,17 @@
 #include "../include/Graphics.h"
 #include "../include/OS.h"
 #include "../include/Kernel.h"
-#include "../include/UEFI.h"
+#include "../include/EFI.h"
 #include "../include/Daemon.h"
 
-bool BBP::system::BBPEntryStub(BBP::system::UEFI *uefi)
+bool BBP::system::BBPEntryStub(BBP::system::EFI *EFI)
 {
-	return BBP::system::getKernelInstance().BBPEntry(uefi);
+	return BBP::system::getKernelInstance().BBPEntry(EFI);
 }
 
 // It's kinda funny putting an entire operating system in one 'OS.cpp' hahahahahahhahahahahhhaa
 
-bool BBP::system::Kernel::BBPEntry(BBP::system::UEFI *uefi)
+bool BBP::system::Kernel::BBPEntry(BBP::system::EFI *EFI)
 {
 	// Set active context to kernel context
 	setKernelContext();
@@ -26,7 +26,7 @@ bool BBP::system::Kernel::BBPEntry(BBP::system::UEFI *uefi)
 	setSystemProgmem();
 
 	// Set system volume
-	setSystemVolume(uefi->system.volumeLabel, uefi->system.volumePath);
+	setSystemVolume(EFI->system.volumeLabel, EFI->system.volumePath);
 
 	// Now switch to hypervisors
 	setHypervisorContext(0);
@@ -58,9 +58,9 @@ bool BBP::system::Kernel::BBPEntry(BBP::system::UEFI *uefi)
 	root = &systemUsers[0];
 	root->username = std::String("root");
 	root->usernameHash = std::strhsh(root->username);
-	root->password = std::String(uefi->system.rootPassword);
+	root->password = std::String(EFI->system.rootPassword);
 	root->passwordHash = std::strhsh(root->password);
-	root->connectionMethod = std::String(uefi->system.deviceName);
+	root->connectionMethod = std::String(EFI->system.deviceName);
 
 	// Set active user to root
 	activeUser = root;

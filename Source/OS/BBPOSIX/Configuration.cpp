@@ -3,10 +3,10 @@
 #include "../BIOSServices.h"
 
 // Configure the OS in such way that the BIOS can boot into it.
-BBP::system::BootRecord Environment::BIOS::BBPRecord(OS::BIOS::BBPOSIX::canBoot, OS::BIOS::BBPOSIX::EntryPoint, "BBPOSIX");
+BBP::system::BootRecord OS::BBPRecord(OS::BBPOSIX::canBoot, OS::BBPOSIX::EntryPoint, "BBPOSIX");
 
 // Can always boot into BBP
-bool OS::BIOS::BBPOSIX::canBoot(BBP::system::UEFI *)
+bool OS::BBPOSIX::canBoot(BBP::system::EFI *)
 {
 	return true;
 }

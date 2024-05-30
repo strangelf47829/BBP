@@ -40,15 +40,15 @@ default: build executable
 
 # Compilation rules for modules
 $(MODULE_DIRS):
-	@cd $@; make EXTCXXFLAGS="-DARCH=$(ARCH) -DARCH_$(ARCH)" --no-print-directory
+	@cd $@; make EXTCXXFLAGS="-DARCH=\\\"$(ARCH)\\\" -DARCH_$(ARCH)" --no-print-directory
 
 # Compilation rules for OS's
 $(OS_LIST):
-	@cd "$(OS_DIR)/$@"; make EXTCXXFLAGS="-DARCH=$(ARCH) -DARCH_$(ARCH)" --no-print-directory
+	@cd "$(OS_DIR)/$@"; make EXTCXXFLAGS="-DARCH=\\\"$(ARCH)\\\" -DARCH_$(ARCH)" --no-print-directory
 
 # Environment compilation rules
 env:
-	@cd $(ENV_DIR); make EXTCXXFLAGS="-DARCH=$(ARCH) -DARCH_$(ARCH)" --no-print-directory
+	@cd $(ENV_DIR); make EXTCXXFLAGS="-DARCH=\\\"$(ARCH)\\\" -DARCH_$(ARCH)" --no-print-directory
 
 # Build rules
 build: $(MODULE_DIRS) $(OS_LIST) env
@@ -58,8 +58,8 @@ executable:
 	@echo "Creating executable..."
 	@$(LD) $(LDFLAGS) -Wl,--start-group $(foreach a_a,$(ALL_A),bin/lib$(a_a).a) -Wl,--end-group $(LDFLAGS)
 	@echo "Generating address map..."
-	@rm -f /mnt/v/lib/memmap*
-	@nm -n -C -S | grep -E " [tTWw] " >> /mnt/v/lib/memmap
+	@rm -f /mnt/v/boot/memmap/memmap*
+	@nm -n -C -S | grep -E " [tTWw] " >> /mnt/v/boot/memmap/memmap
 	@python3 memmap.py
 	@echo "Done."
 

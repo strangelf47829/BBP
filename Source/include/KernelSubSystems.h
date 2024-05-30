@@ -6,7 +6,7 @@
 #include "SystemContext.h"
 #include "SysConfig.h"
 #include "DeviceDriver.h"
-#include "UEFI.h"
+#include "EFI.h"
 #include "stdctrl.h"
 
 // The kernel subsystem class handles with the state of the kernel, rather than performing tasks.

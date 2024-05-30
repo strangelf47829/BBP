@@ -4,8 +4,8 @@
 # Open the memmap file
 from signal import siginterrupt
 
-
-Largemap = open("/mnt/v/lib/memmap", 'rt')
+# Open large map from makefile output
+Largemap = open("/mnt/v/boot/memmap/memmap", 'rt')
 
 # used to count bin items
 binCount = 0
@@ -29,7 +29,7 @@ for line in Largemap:
 	# Declare address and size variables
 	addr = 0
 	size = 0
-	
+
 	# Try to get int
 	try:
 		addr = int(splitLines[0], 16)
@@ -37,7 +37,7 @@ for line in Largemap:
 	# On fail, just keep going
 	except:
 		continue
-	
+
 	# Get name
 	name = splitLines[3]
 
@@ -48,14 +48,14 @@ for line in Largemap:
 	if '(' not in name and name != "main":
 		continue
 
-	# If name contains '__' or 'gnu' or 'cxx', discard 
+	# If name contains '__' or 'gnu' or 'cxx', discard
 	if "__" in name or "gnu" in name or "cxx" in name:
 		continue
 
 	# If name starts with 'std' discard
 	if name.startswith("std"):
 		continue
-	
+
 	# Get address and size in hex
 	addrHex = "%0.6x" % addr
 	sizeHex = "%0.4x" % size
@@ -84,13 +84,13 @@ for line in Largemap:
 	headerData.append(header)
 
 # Save header data
-with open('/mnt/v/lib/memmaphdr', 'w') as outfile:
+with open('/mnt/v/boot/memmap/memmaphdr', 'w') as outfile:
   outfile.write('\n'.join(str(i) for i in headerData))
 
 Bin = 0
 
 # Then for each other bin
 for BinDat in binList:
-	with open(f'/mnt/v/lib/memmap.{Bin}', 'w') as outfile:
+	with open(f'/mnt/v/boot/memmap/memmap.{Bin}', 'w') as outfile:
 		outfile.write('\n'.join(str(i) for i in BinDat))
 	Bin += 1

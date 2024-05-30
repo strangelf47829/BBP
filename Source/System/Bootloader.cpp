@@ -1,5 +1,5 @@
 #include "../include/Kernel.h"
-#include "../include/UEFI.h"
+#include "../include/EFI.h"
 #include "../include/Daemon.h"
 #include "../include/Time.h"
 #include "../include/DriverCommands.h"
@@ -11,7 +11,7 @@ namespace BBP
 	namespace system
 	{
 
-		std::errno_t loadKeyboard(UEFI &configuration)
+		std::errno_t loadKeyboard(EFI &configuration)
 		{
 			if (getKernelInstance().loadDriver(configuration.drivers.loadKeyboard, getKernelInstance().getKeyboardDriver()))
 				return keyboardInitFailed;
@@ -27,7 +27,7 @@ namespace BBP
 			return 0;
 		}
 
-		std::errno_t loadScreen(UEFI &configuration)
+		std::errno_t loadScreen(EFI &configuration)
 		{
 			if (getKernelInstance().loadDriver(configuration.drivers.loadScreen, getKernelInstance().getScreenDriver()))
 				return screenInitFailed;
@@ -42,7 +42,7 @@ namespace BBP
 			return 0;
 		}
 
-		std::errno_t loadFileSystem(UEFI &configuration)
+		std::errno_t loadFileSystem(EFI &configuration)
 		{
 			if (getKernelInstance().loadDriver(configuration.drivers.loadFileSystem, getKernelInstance().getFileDriver()))
 				return fileSystemInitFailed;
@@ -57,7 +57,7 @@ namespace BBP
 			return 0;
 		}
 
-		std::errno_t loadSystem(UEFI &configuration)
+		std::errno_t loadSystem(EFI &configuration)
 		{
 			if (getKernelInstance().loadDriver(configuration.drivers.loadSystem, getKernelInstance().getSystemDriver()))
 				return fileSystemInitFailed;
@@ -72,7 +72,7 @@ namespace BBP
 			return 0;
 		}
 
-		std::errno_t loadEssentialDrivers(UEFI &configuration)
+		std::errno_t loadEssentialDrivers(EFI &configuration)
 		{
 			// Attempt to load Screen
 			std::errno_t screenStatus = loadScreen(configuration);
@@ -187,8 +187,8 @@ namespace BBP
 // This is the entry point of the system
 int BBP::system::bootloaderMain()
 {
-	// Retrieve the uefi configuration
-	UEFI configuration = retrieveUEFI();
+	// Retrieve the EFI configuration
+	EFI configuration = retrieveEFI();
 
 	// Get Post configuration
 	if (configuration.post.basicPost == nullptr)
@@ -216,7 +216,7 @@ int BBP::system::bootloaderMain()
 	{
 
 		// Now get list of other available drivers
-		std::PAGE<UEFILoadDriver> otherDrivers;
+		std::PAGE<EFILoadDriver> otherDrivers;
 		std::size_t driverCount = configuration.drivers.getOtherDrivers(otherDrivers);
 
 		// Allocate driver count
@@ -226,7 +226,7 @@ int BBP::system::bootloaderMain()
 		for (std::index_t driverIndex = 0; driverIndex < driverCount; driverIndex++)
 		{
 			// Get function pointer
-			UEFILoadDriver loadFunction = otherDrivers[driverIndex];
+			EFILoadDriver loadFunction = otherDrivers[driverIndex];
 
 			// Load driver into kernel.
 			std::errno_t kernelErr = getKernelInstance().loadDriver(loadFunction, getKernelInstance().getNextAvailableDriver());

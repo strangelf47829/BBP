@@ -8,53 +8,53 @@
 // Daemons
 BBP::system::initd initdD;
 
-BBP::system::UEFI ubuntuUEFI;
+BBP::system::EFI ubuntuEFI;
 
 BBP::system::DaemonRecord records[2] = { BBP::system::DaemonRecord(&initdD, "initd"), { BBP::system::DaemonRecord(&initdD, "winmand")} };
 
-BBP::system::UEFI &Environment::UEFI::configureUEFI()
+BBP::system::EFI &Environment::EFI::configureEFI()
 {
 	// Configure post actions
-	ubuntuUEFI.post.basicPost = Environment::BIOS::POST;
-	ubuntuUEFI.post.biosModeKey = 'f';
-	ubuntuUEFI.post.biosModeDelay = 1000;
+	ubuntuEFI.post.basicPost = Environment::BIOS::POST;
+	ubuntuEFI.post.biosModeKey = 'f';
+	ubuntuEFI.post.biosModeDelay = 1000;
 
 	// Configure capabilities
-	ubuntuUEFI.systemReport.HostName = "WSL-UNIX";
-	ubuntuUEFI.systemReport.usefulHeap = Environment::BIOS::totalFreeMemory();
-	ubuntuUEFI.systemReport.totalMemory = Environment::BIOS::totalSystemMemory();
-	ubuntuUEFI.systemReport.supportsTTY = true;
-	ubuntuUEFI.systemReport.supportsGUI = false;
-	ubuntuUEFI.systemReport.TTYHorizontalPage = Environment::BIOS::getDisplayCols();
-	ubuntuUEFI.systemReport.TTYVerticalPage = Environment::BIOS::getDisplayLines();
+	ubuntuEFI.systemReport.HostName = "WSL-UNIX";
+	ubuntuEFI.systemReport.usefulHeap = Environment::BIOS::totalFreeMemory();
+	ubuntuEFI.systemReport.totalMemory = Environment::BIOS::totalSystemMemory();
+	ubuntuEFI.systemReport.supportsTTY = true;
+	ubuntuEFI.systemReport.supportsGUI = false;
+	ubuntuEFI.systemReport.TTYHorizontalPage = Environment::BIOS::getDisplayCols();
+	ubuntuEFI.systemReport.TTYVerticalPage = Environment::BIOS::getDisplayLines();
 
 	// Then get CPU info
-	Environment::BIOS::getCPUData(&ubuntuUEFI);
+	Environment::BIOS::getCPUData(&ubuntuEFI);
 
 	// Configure volume info
-	ubuntuUEFI.system.volumeLabel = 'v';
-	ubuntuUEFI.system.volumePath = "/mnt/v/";
+	ubuntuEFI.system.volumeLabel = 'v';
+	ubuntuEFI.system.volumePath = "/mnt/v/";
 
 	// Configure root password
-	ubuntuUEFI.system.rootPassword = "root";
-	ubuntuUEFI.system.deviceName = "BB607";
+	ubuntuEFI.system.rootPassword = "root";
+	ubuntuEFI.system.deviceName = "BB607";
 
 	// Configure drivers
-	ubuntuUEFI.drivers.loadKeyboard = Environment::Drivers::keyboardManifest.loader;
-	ubuntuUEFI.drivers.loadScreen = Environment::Drivers::screenManifest.loader;
-	ubuntuUEFI.drivers.loadFileSystem = Environment::Drivers::fileManifest.loader;
-	ubuntuUEFI.drivers.loadSystem = Environment::Drivers::systemManifest.loader;
+	ubuntuEFI.drivers.loadKeyboard = Environment::Drivers::keyboardManifest.loader;
+	ubuntuEFI.drivers.loadScreen = Environment::Drivers::screenManifest.loader;
+	ubuntuEFI.drivers.loadFileSystem = Environment::Drivers::fileManifest.loader;
+	ubuntuEFI.drivers.loadSystem = Environment::Drivers::systemManifest.loader;
 
 	// Configure daemons
-	ubuntuUEFI.daemons.records = BBP::std::PAGE<BBP::system::DaemonRecord>(2, records);
-	ubuntuUEFI.daemons.specialIndicies = BBP::std::PAGE<BBP::std::index_t>(0, nullptr);
-	ubuntuUEFI.daemons.specialDaemons = 0;
+	ubuntuEFI.daemons.records = BBP::std::PAGE<BBP::system::DaemonRecord>(2, records);
+	ubuntuEFI.daemons.specialIndicies = BBP::std::PAGE<BBP::std::index_t>(0, nullptr);
+	ubuntuEFI.daemons.specialDaemons = 0;
 
 	// Configure boot records
-	ubuntuUEFI.post.retrieveBootrecords = Environment::UEFI::loadBootrecords;
+	ubuntuEFI.post.retrieveBootrecords = Environment::EFI::loadBootrecords;
 
 	// Licensing info
-	ubuntuUEFI.licenses.BIOSInfo = BBP::system::appInfo(1, 0, 0, 0);
+	ubuntuEFI.licenses.BIOSInfo = BBP::system::appInfo(1, 0, 0, 0);
 
-	return ubuntuUEFI;
+	return ubuntuEFI;
 }

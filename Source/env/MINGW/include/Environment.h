@@ -3,7 +3,7 @@
 
 #include "../../../include/stddef.h"
 #include "../../../include/Strings.h"
-#include "../../../include/UEFI.h"
+#include "../../../include/EFI.h"
 #include "../../../include/Kernel.h"
 #include "../../../include/DriverCommands.h"
 
@@ -23,7 +23,7 @@ namespace Environment
 			BBP::system::HardwareCmd *commands;
 
 			// Loader
-			BBP::system::UEFILoadDriver loader;
+			BBP::system::EFILoadDriver loader;
 		};
 
 		extern Manifest keyboardManifest;
@@ -32,7 +32,7 @@ namespace Environment
 
 	}
 
-	namespace UEFI
+	namespace EFI
 	{
 
 		BBP::std::size_t loadBootrecords(BBP::std::PAGE<BBP::system::BootRecord*> &records);

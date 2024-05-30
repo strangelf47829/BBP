@@ -1,4 +1,4 @@
-Entry.cpp: In function ‘bool OS::BIOS::BBPOSIX::EntryPoint(BBP::system::UEFI*, BBP::std::TaskPool*&)’:
-Entry.cpp:9:55: warning: unused parameter ‘uefi’ [-Wunused-parameter]
-    9 | bool OS::BIOS::BBPOSIX::EntryPoint(BBP::system::UEFI *uefi, BBP::std::TaskPool *&pool)
-      |                                    ~~~~~~~~~~~~~~~~~~~^~~~
+Entry.cpp: In function ‘bool OS::BBPOSIX::EntryPoint(BBP::system::EFI*, BBP::std::TaskPool*&)’:
+Entry.cpp:11:48: warning: unused parameter ‘EFI’ [-Wunused-parameter]
+   11 | bool OS::BBPOSIX::EntryPoint(BBP::system::EFI *EFI, BBP::std::TaskPool *&pool)
+      |                              ~~~~~~~~~~~~~~~~~~^~~

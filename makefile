@@ -70,6 +70,13 @@ gdb-host:
 gdb-remote:
 	gdb-multiarch --ex="set arch armv5te" --ex="set sysroot /usr/arm-linux-gnueabihf/" --ex="target remote localhost:1234" --ex="break main" build/a.out
 
+# +========================================+
+# | Fancy run                              |
+# +========================================+
+
+cool-term:
+	cool-retro-term -p BBPVGA --workdir build/
+
 # Count the amount of lines of code
 count:
 	cloc ./Source --exclude-dir=SDL2

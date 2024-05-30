@@ -86,7 +86,7 @@ void BBP::std::stack_trace::Capture()
 
 	// Get rbp and add 0x10
 	asm volatile ("mov %%rbp, %0\n\t"
-		ASM_ADD(0x10)
+		"addq $0x10, %0"
 		: "=r" (currentFrame));
 
 	// Store that in activeFrame

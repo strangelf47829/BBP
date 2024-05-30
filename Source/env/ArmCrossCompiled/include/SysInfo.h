@@ -2,7 +2,7 @@
 #define BBP_BIOS_SYSINFO_H
 
 #include "../../../include/Memory.h"
-#include "../../../include/UEFI.h"
+#include "../../../include/EFI.h"
 
 namespace Environment
 {
@@ -13,7 +13,7 @@ namespace Environment
 		BBP::std::size_t totalFreeMemory();
 
 		// Get CPU speed
-		BBP::std::word getCPUData(BBP::system::UEFI *);
+		BBP::std::word getCPUData(BBP::system::EFI *);
 
 		// Get Display width and height
 		BBP::std::halfword getDisplayCols();

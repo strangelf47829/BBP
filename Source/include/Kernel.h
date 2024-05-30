@@ -25,8 +25,8 @@ namespace BBP
 			// Static kernel instance
 			static Kernel singleton;
 
-			// The UEFI used to spawn this kernel
-			UEFI *sysconfig;
+			// The EFI used to spawn this kernel
+			EFI *sysconfig;
 
 			// Kernel IRQ handler.
 			std::KernelIRQHandler IRQ;
@@ -46,10 +46,10 @@ namespace BBP
 			std::PAGE<DeviceDriver *> externalDrivers;
 
 			// Essential drivers loaders
-			std::errno_t loadSystemDriver(UEFI &);
-			std::errno_t loadFileDriver(UEFI &);
-			std::errno_t loadScreenDriver(UEFI &);
-			std::errno_t loadKeyboardDriver(UEFI &);
+			std::errno_t loadSystemDriver(EFI &);
+			std::errno_t loadFileDriver(EFI &);
+			std::errno_t loadScreenDriver(EFI &);
+			std::errno_t loadKeyboardDriver(EFI &);
 
 			// Tasks
 			static bool kernelUpdateCycle(std::async_stack_t<> &stack, std::async_stack_t<std::TaskFlowInterface *> &arg);
@@ -97,7 +97,7 @@ namespace BBP
 			std::STATIC_PAGE<userspace::HyperVisor, 1> hypervisors;
 
 			// Screen stuff
-			static void biosSplashCommand(UEFI &);
+			static void biosSplashCommand(EFI &);
 
 			// Private constructor
 			Kernel();
@@ -105,7 +105,7 @@ namespace BBP
 		public:
 
 			// Boot into the kernel
-			static std::errno_t enterKernelSpace(UEFI &);
+			static std::errno_t enterKernelSpace(EFI &);
 
 			// Set error
 			static void setError(std::errno_t);

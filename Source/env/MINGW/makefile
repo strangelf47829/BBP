@@ -9,8 +9,8 @@ DRIVERS = Keyboard Screen File
 # =========== BIOS targets
 BIOS_SRC = BIOS/BIOS.cpp BIOS/POST.cpp
 
-# =========== UEFI targets
-UEFI_SRC = UEFI/UEFI.cpp UEFI/Records.cpp
+# =========== EFI targets
+EFI_SRC = EFI/EFI.cpp EFI/Records.cpp
 
 # =========== plugin targets
 PLUGINS= Time Memory Input File ECMA35
@@ -23,7 +23,7 @@ SUBMODULES= GTerm
 MODULE= ENV
 DRIVERS_SRCLIST= $(foreach drv,$(DRIVERS), $(foreach fil,$(DRIVER_SRC),./Drivers/$(drv)/$(fil))) ./Drivers/Manifests.cpp
 SUBMODULE_SRC= $(foreach submod,$(SUBMODULES),$(wildcard ./Source/$(submod)/*.cpp))
-MODULE_SRC= Boot.cpp $(UEFI_SRC) $(BIOS_SRC) $(PLUGINS_SRC) $(DRIVERS_SRCLIST) $(SUBMODULE_SRC)
+MODULE_SRC= Boot.cpp $(EFI_SRC) $(BIOS_SRC) $(PLUGINS_SRC) $(DRIVERS_SRCLIST) $(SUBMODULE_SRC)
 
 
 # Actually include the makefile

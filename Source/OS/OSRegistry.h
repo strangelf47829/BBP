@@ -4,13 +4,10 @@
 // Provide a list of boot records for ...
 #include "../include/BootRecord.h"
 
-namespace Environment
+namespace OS
 {
-	namespace BIOS
-	{
-		extern BBP::system::BootRecord BBPRecord;
-		extern BBP::system::BootRecord Windowse20Record;
-	}
+	extern BBP::system::BootRecord BBPRecord;
+	extern BBP::system::BootRecord Windowse20Record;
 }
 
 #endif

@@ -13,7 +13,7 @@ namespace BBP
 		// This does not mean how to necessarily load an OS, but more of a 'what c++ function is in this case the exit point of the bootloader?'
 		// This is useful for when the firmware may wish to boot into a BIOS mode, or flash mode, or just normal mode, etc...
 
-		struct UEFI;
+		struct EFI;
 
 		struct BootRecord
 		{
@@ -21,15 +21,15 @@ namespace BBP
 			std::static_string<16> recordName;
 
 			// This function checks if this boot record is available
-			bool (*isBootRecordAvailable)(UEFI *);
+			bool (*isBootRecordAvailable)(EFI *);
 			bool computedValue; // Used to pass around the result of the calculation
 
 			// This function attempts to load into the boot record
-			using bootRecordEntryPoint = bool (*)(UEFI *, std::TaskPool *&);
+			using bootRecordEntryPoint = bool (*)(EFI *, std::TaskPool *&);
 			bootRecordEntryPoint entryPoint;
 
 			BootRecord() = delete;
-			BootRecord(bool (*check)(UEFI *), bootRecordEntryPoint entry, std::conststring name);
+			BootRecord(bool (*check)(EFI *), bootRecordEntryPoint entry, std::conststring name);
 			
 
 		};

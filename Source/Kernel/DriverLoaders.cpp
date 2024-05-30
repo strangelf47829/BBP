@@ -1,6 +1,6 @@
 #include "../include/Kernel.h"
 
-BBP::std::errno_t BBP::system::Kernel::loadKeyboardDriver(UEFI &configuration)
+BBP::std::errno_t BBP::system::Kernel::loadKeyboardDriver(EFI &configuration)
 {
 	// Check if function exists
 	if (configuration.drivers.loadKeyboard == nullptr)
@@ -16,7 +16,7 @@ BBP::std::errno_t BBP::system::Kernel::loadKeyboardDriver(UEFI &configuration)
 	return 0;
 }
 
-BBP::std::errno_t BBP::system::Kernel::loadScreenDriver(UEFI &configuration)
+BBP::std::errno_t BBP::system::Kernel::loadScreenDriver(EFI &configuration)
 {
 	// Check if function exists
 	if (configuration.drivers.loadScreen == nullptr)
@@ -29,7 +29,7 @@ BBP::std::errno_t BBP::system::Kernel::loadScreenDriver(UEFI &configuration)
 	return 0;
 }
 
-BBP::std::errno_t BBP::system::Kernel::loadFileDriver(UEFI &configuration)
+BBP::std::errno_t BBP::system::Kernel::loadFileDriver(EFI &configuration)
 {
 	// Check if function exists
 	if (configuration.drivers.loadFileSystem == nullptr)
@@ -42,7 +42,7 @@ BBP::std::errno_t BBP::system::Kernel::loadFileDriver(UEFI &configuration)
 	return 0;
 }
 
-BBP::std::errno_t BBP::system::Kernel::loadSystemDriver(UEFI &configuration)
+BBP::std::errno_t BBP::system::Kernel::loadSystemDriver(EFI &configuration)
 {
 	// Check if function exists
 	if (configuration.drivers.loadSystem == nullptr)

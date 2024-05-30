@@ -5,56 +5,56 @@
 // Kernel license info
 BBP::system::appInfo kernelLicense = BBP::system::appInfo(1, 0, 0, 0);
 
-BBP::std::errno_t BBP::system::Kernel::enterKernelSpace(system::UEFI &uefi)
+BBP::std::errno_t BBP::system::Kernel::enterKernelSpace(system::EFI &EFI)
 {
-	// Set uefi
-	singleton.sysconfig = &uefi;
+	// Set EFI
+	singleton.sysconfig = &EFI;
 
-	// Check if uefi post is available
-	if (uefi.post.basicPost == nullptr)
+	// Check if EFI post is available
+	if (EFI.post.basicPost == nullptr)
 		return invalidConfig; // Invalid configuration: no POST available.
 
 	// Perform POST
-	std::word basicPOST = uefi.post.basicPost();
+	std::word basicPOST = EFI.post.basicPost();
 
 	// If post failed, return
 	if (basicPOST)
 		return failedPOST;
 
 	// Load system driver
-	std::errno_t systemDriverStatus = singleton.loadSystemDriver(uefi);
+	std::errno_t systemDriverStatus = singleton.loadSystemDriver(EFI);
 
 	// If set, return
 	if (systemDriverStatus)
 		return systemDriverStatus;
 
 	// Load file driver
-	std::errno_t fileDriverStatus = singleton.loadFileDriver(uefi);
+	std::errno_t fileDriverStatus = singleton.loadFileDriver(EFI);
 
 	// If set, return
 	if (fileDriverStatus)
 		return fileDriverStatus;
 
 	// Load screen driver
-	std::errno_t screenDriverStatus = singleton.loadScreenDriver(uefi);
+	std::errno_t screenDriverStatus = singleton.loadScreenDriver(EFI);
 
 	// If set, return
 	if (screenDriverStatus)
 		return screenDriverStatus;
 
 	// Load keyboard driver
-	std::errno_t keyboardDriverStatus = singleton.loadKeyboardDriver(uefi);
+	std::errno_t keyboardDriverStatus = singleton.loadKeyboardDriver(EFI);
 
 	// If set, return
 	if (keyboardDriverStatus)
 		return keyboardDriverStatus;
 	
 	// If more drivers available, set those
-	if (uefi.drivers.getOtherDrivers)
+	if (EFI.drivers.getOtherDrivers)
 	{
 		// Allocate pages
-		std::PAGE<UEFILoadDriver> otherDrivers;
-		std::size_t driverCount = uefi.drivers.getOtherDrivers(otherDrivers);
+		std::PAGE<EFILoadDriver> otherDrivers;
+		std::size_t driverCount = EFI.drivers.getOtherDrivers(otherDrivers);
 
 		// Allocate new data
 		singleton.allocator.page_calloc(singleton.externalDrivers, driverCount);
@@ -78,14 +78,14 @@ BBP::std::errno_t BBP::system::Kernel::enterKernelSpace(system::UEFI &uefi)
 	std::size_t registeredDaemons = 0;
 
 	// Look through the list of daemons.
-	for (std::index_t daemonIndex = 0; daemonIndex < uefi.daemons.records.dataSize; daemonIndex++)
+	for (std::index_t daemonIndex = 0; daemonIndex < EFI.daemons.records.dataSize; daemonIndex++)
 	{
 		// If it is not possible to register daemons, exit out here
 		if (system::DaemonRecord::records.dataSize <= registeredDaemons)
 			return outOfDaemonRecords;
 
 		// Get a pointer to the daemon
-		system::DaemonRecord *record = &uefi.daemons.records[daemonIndex];
+		system::DaemonRecord *record = &EFI.daemons.records[daemonIndex];
 
 		// Check if daemon can be loaded
 		if (record->owner == nullptr)
@@ -99,12 +99,12 @@ BBP::std::errno_t BBP::system::Kernel::enterKernelSpace(system::UEFI &uefi)
 	}
 
 	// Check if configuration supports boot records
-	if (uefi.post.retrieveBootrecords == nullptr)
+	if (EFI.post.retrieveBootrecords == nullptr)
 		return invalidConfig;
 
 	// Get list
 	std::PAGE<BootRecord *> bootrecords;
-	std::size_t bootRecordCount = uefi.post.retrieveBootrecords(bootrecords);
+	std::size_t bootRecordCount = EFI.post.retrieveBootrecords(bootrecords);
 
 	// If no boot records exist, return
 	if (bootRecordCount == 0)
@@ -120,7 +120,7 @@ BBP::std::errno_t BBP::system::Kernel::enterKernelSpace(system::UEFI &uefi)
 	for (std::index_t bootRecordIndex = 0; bootRecordIndex < bootRecordCount; bootRecordIndex++)
 	{
 		// Check if boot record can be loaded
-		bootrecords[bootRecordIndex]->computedValue = bootrecords[bootRecordIndex]->isBootRecordAvailable(&uefi);
+		bootrecords[bootRecordIndex]->computedValue = bootrecords[bootRecordIndex]->isBootRecordAvailable(&EFI);
 		if (bootrecords[bootRecordIndex]->computedValue == false)
 			continue;
 
@@ -143,8 +143,8 @@ BBP::std::errno_t BBP::system::Kernel::enterKernelSpace(system::UEFI &uefi)
 		return noBootRecords;
 
 	// Load license info
-	uefi.licenses.KernelInfo = kernelLicense;
-	uefi.licenses.KernelName = "BBP";
+	EFI.licenses.KernelInfo = kernelLicense;
+	EFI.licenses.KernelName = "BBP";
 
 	// Initialize clock
 	singleton.initClock();
@@ -153,14 +153,14 @@ BBP::std::errno_t BBP::system::Kernel::enterKernelSpace(system::UEFI &uefi)
 	clearScreen();
 
 	// Show BIOS splash screen
-	biosSplashCommand(uefi);
+	biosSplashCommand(EFI);
 
 	// Set delay
-	std::time_t delay = (canBootIntoBIOS ? uefi.post.biosModeDelay : 0);
+	std::time_t delay = (canBootIntoBIOS ? EFI.post.biosModeDelay : 0);
 	std::time_t calledAt = millis();
 
 	// Key to enter BIOS
-	std::string_element enterBios = uefi.post.biosModeKey;
+	std::string_element enterBios = EFI.post.biosModeKey;
 	std::string_element bootSelect = '\t';
 
 	//std::printf("Press <tab> to enter boot selection menu.\n");
@@ -204,7 +204,7 @@ BBP::std::errno_t BBP::system::Kernel::enterKernelSpace(system::UEFI &uefi)
 	singleton.taskpool.Add(singleton.kernelUpdateCycleTask());
 
 	// Load entry point
-	bool couldEnter = entryPoint(&uefi, singleton.extTaskPool);
+	bool couldEnter = entryPoint(&EFI, singleton.extTaskPool);
 
 	// If could not enter, return error
 	if (couldEnter == false)

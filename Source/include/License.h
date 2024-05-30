@@ -72,7 +72,7 @@ namespace BBP
 				: build(maj, min, pat, bui, ext), copyright(year, copy), license(name, info, url) {}
 
 			appInfo(std::byte maj, std::byte min, std::byte pat, std::byte bui)
-				: appInfo(maj, min, pat, bui, "Debug", 2024, "Rafael de Bie", "GNU GPLv3", "Contact: strangelf47829@gmail.com", "github.com/strangelf47829/BBP") {}
+				: appInfo(maj, min, pat, bui, "Debug", 2024, "Rafael de Bie", "GNU GPLv3", "Contact: strangelf47829@gmail.com", "http://gnu.org/licenses/gpl.html") {}
 
 			appInfo()
 				: appInfo(0, 1, 0, 1) {}

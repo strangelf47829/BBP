@@ -2,30 +2,25 @@
 # | Module make utility |
 # +=====================+
 
-# =========== Drivers
-DRIVER_SRC= Actions.cpp Driver.cpp Loader.cpp Commands.cpp
-DRIVERS= Keyboard Screen File System
-
-# =========== BIOS targets
-BIOS_SRC= BIOS/BIOS.cpp BIOS/POST.cpp BIOS/SysInfo.cpp
-
-# =========== UEFI targets
-UEFI_SRC= UEFI/UEFI.cpp UEFI/Records.cpp
-
-# =========== plugin targets
-PLUGINS= Panic
-PLUGINS_SRC= $(foreach plug,$(PLUGINS),./Plugins/$(plug).cpp)
-
-# =========== System calls
-SYSCALLS= Memory
-SYSCALLS_SRC= $(foreach call,$(SYSCALLS),./Syscalls/$(call).cpp)
-
 # Module information
 MODULE=ENV
 
+# =========== BIOS targets
+BIOS_SRC= Boot Entry Files Keyboard Screen printf Splash Time
+
+# =========== Configuration targets
+CONF_SRC= Config Host Memsize CPUData RecordSearch
+
+# =========== EFI targets
+EFI_SRC= InteractiveShell Formatting
+
+# =========== Get list of targets from above lists
+BIOS_TGT= $(foreach var,$(BIOS_SRC),BIOS/$(var).cpp)
+CONF_TGT= $(foreach var,$(CONF_SRC),Configuration/$(var).cpp)
+EFI_TGT=  $(foreach var,$(EFI_SRC),EFI/$(var).cpp)
+
 # Source files
-DRIVERS_SRCLIST= $(foreach drv,$(DRIVERS), $(foreach fil,$(DRIVER_SRC),./Drivers/$(drv)/$(fil))) ./Drivers/Manifests.cpp
-MODULE_SRC= Boot.cpp $(UEFI_SRC) $(BIOS_SRC) $(PLUGINS_SRC) $(DRIVERS_SRCLIST) $(SYSCALLS_SRC)
+MODULE_SRC= $(BIOS_TGT) $(CONF_TGT) $(EFI_TGT)
 
 # Actually include the makefile
 SOURCE_DIR=./../..

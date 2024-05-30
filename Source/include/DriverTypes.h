@@ -101,7 +101,7 @@ namespace BBP
 				// This is a special driver reserved by the system (keyboard, file, screen)
 				System = 0b0001 << PermsOffset,	
 
-				// This driver has been created by the BIOS/UEFI system.
+				// This driver has been created by the BIOS/EFI system.
 				BIOS = 0b0010 << PermsOffset,
 
 				// This driver has been created by the kernel

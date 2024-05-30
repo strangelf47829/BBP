@@ -1,4 +1,4 @@
-BIOS/BIOS.cpp: In function ‘bool Environment::BIOS::EntryPoint(BBP::system::UEFI*, BBP::std::TaskPool*&)’:
-BIOS/BIOS.cpp:12:55: warning: unused parameter ‘uefi’ [-Wunused-parameter]
-   12 | bool Environment::BIOS::EntryPoint(BBP::system::UEFI *uefi, BBP::std::TaskPool *&)
-      |                                    ~~~~~~~~~~~~~~~~~~~^~~~
+BIOS/BIOS.cpp: In function ‘bool Environment::BIOS::EntryPoint(BBP::system::EFI*, BBP::std::TaskPool*&)’:
+BIOS/BIOS.cpp:12:54: warning: unused parameter ‘EFI’ [-Wunused-parameter]
+   12 | bool Environment::BIOS::EntryPoint(BBP::system::EFI *EFI, BBP::std::TaskPool *&)
+      |                                    ~~~~~~~~~~~~~~~~~~^~~

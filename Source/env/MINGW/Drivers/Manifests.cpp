@@ -2,7 +2,7 @@
 #include "../include/FileDriver.h"
 #include "../include/KeyboardDriver.h"
 #include "../include/ScreenDriver.h"
-#include "../../../include/UEFI.h"
+#include "../../../include/EFI.h"
 
 namespace Keyboard = Environment::Drivers::keyboard;
 namespace Screen = Environment::Drivers::screen;

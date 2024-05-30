@@ -24,7 +24,7 @@ BBP::std::conststring strings[131] =
 	"No such device", //ENODEV
 	"Not a directory", //ENOTDIR
 	"Is a directory", //EISDIR
-	"Invalid argument", //Invalid argument
+	"Invalid argument", //EINVAL
 	"Too many open files in system", // ENFILE
 	"Too many open files", //EMFILE
 	"Innappropriate ioctl for device", //ENOTTY

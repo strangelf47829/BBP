@@ -107,7 +107,7 @@ BBP::std::halfword Environment::BIOS::getDisplayLines()
     return 0;
 }
 
-BBP::std::word Environment::BIOS::getCPUData(BBP::system::UEFI *uefi)
+BBP::std::word Environment::BIOS::getCPUData(BBP::system::EFI *EFI)
 {
     // Declare a string
     std::string lscpuOutput;
@@ -173,8 +173,8 @@ BBP::std::word Environment::BIOS::getCPUData(BBP::system::UEFI *uefi)
                     // Convert to number (double for now)
                     double clockSpeedNum = std::stod(clockSpeed);
 
-                    // Then write into UEFI
-                    uefi->systemReport.processorSpeed = clockSpeedNum;
+                    // Then write into EFI
+                    EFI->systemReport.processorSpeed = clockSpeedNum;
                 }
             }
 
@@ -205,8 +205,8 @@ BBP::std::word Environment::BIOS::getCPUData(BBP::system::UEFI *uefi)
                             break;
 
                         // Otherwise copy
-                        uefi->systemReport.processorArch[idx++] = c;
-                        uefi->systemReport.processorArch[idx] = 0;
+                        EFI->systemReport.processorArch[idx++] = c;
+                        EFI->systemReport.processorArch[idx] = 0;
                     }
                 }
 
@@ -271,8 +271,8 @@ BBP::std::word Environment::BIOS::getCPUData(BBP::system::UEFI *uefi)
                             break;
 
                         // Otherwise copy
-                        uefi->systemReport.processorName[idx++] = c;
-                        uefi->systemReport.processorName[idx] = 0;
+                        EFI->systemReport.processorName[idx++] = c;
+                        EFI->systemReport.processorName[idx] = 0;
                     }
                 }
 

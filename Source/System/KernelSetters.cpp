@@ -22,7 +22,7 @@ void BBP::system::Kernel::setSystemVolume(std::string_element label, std::consts
 	subsystems.activeContext->primaryVolume = &subsystems.activeContext->contextVolume;
 }
 
-void BBP::system::Kernel::configureRoot(UEFI *uefi)
+void BBP::system::Kernel::configureRoot(EFI *EFI)
 {
 	if (rootConfigured)
 		return;
@@ -31,9 +31,9 @@ void BBP::system::Kernel::configureRoot(UEFI *uefi)
 	root = &systemUsers[0];
 	root->username = std::String("kangel");
 	root->usernameHash = std::strhsh(root->username);
-	root->password = std::String(uefi->system.rootPassword);
+	root->password = std::String(EFI->system.rootPassword);
 	root->passwordHash = std::strhsh(root->password);
-	root->connectionMethod = std::String(uefi->system.deviceName);
+	root->connectionMethod = std::String(EFI->system.deviceName);
 
 	// Set active user to root
 	activeUser = root;
@@ -81,7 +81,7 @@ BBP::system::BootRecord::bootRecordEntryPoint BBP::system::Kernel::getBBPEntryPo
 	return BBPEntryStub;
 }
 
-BBP::std::errno_t BBP::system::Kernel::Entry(UEFI &configuration, BootRecord::bootRecordEntryPoint entry)
+BBP::std::errno_t BBP::system::Kernel::Entry(EFI &configuration, BootRecord::bootRecordEntryPoint entry)
 {
 	// Yolo barebone that shiiiiit
 	return entry(&configuration);

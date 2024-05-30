@@ -7,37 +7,37 @@
 // Daemons
 BBP::system::initd initdD;
 
-BBP::system::UEFI ubuntuUEFI;
+BBP::system::EFI ubuntuEFI;
 
 BBP::system::DaemonRecord records[2] = { BBP::system::DaemonRecord(&initdD, "initd"), { BBP::system::DaemonRecord(&initdD, "winmand")} };
 
-BBP::system::UEFI &BBP::system::retrieveUEFI()
+BBP::system::EFI &BBP::system::retrieveEFI()
 {
 	// Configure post actions
-	ubuntuUEFI.post.basicPost = Environment::BIOS::POST;
-	ubuntuUEFI.post.biosModeKey = 'f';
-	ubuntuUEFI.post.biosModeDelay = 2000;
+	ubuntuEFI.post.basicPost = Environment::BIOS::POST;
+	ubuntuEFI.post.biosModeKey = 'f';
+	ubuntuEFI.post.biosModeDelay = 2000;
 
 	// Configure volume info
-	ubuntuUEFI.system.volumeLabel = 'v';
-	ubuntuUEFI.system.volumePath = "V:\\";
+	ubuntuEFI.system.volumeLabel = 'v';
+	ubuntuEFI.system.volumePath = "V:\\";
 
 	// Configure root password
-	ubuntuUEFI.system.rootPassword = "root";
-	ubuntuUEFI.system.deviceName = "BBP";
+	ubuntuEFI.system.rootPassword = "root";
+	ubuntuEFI.system.deviceName = "BBP";
 
 	// Configure drivers
-	ubuntuUEFI.drivers.loadKeyboard = Environment::Drivers::keyboardManifest.loader;
-	ubuntuUEFI.drivers.loadScreen = Environment::Drivers::screenManifest.loader;
-	ubuntuUEFI.drivers.loadFileSystem = Environment::Drivers::fileManifest.loader;
+	ubuntuEFI.drivers.loadKeyboard = Environment::Drivers::keyboardManifest.loader;
+	ubuntuEFI.drivers.loadScreen = Environment::Drivers::screenManifest.loader;
+	ubuntuEFI.drivers.loadFileSystem = Environment::Drivers::fileManifest.loader;
 
 	// Configure daemons
-	ubuntuUEFI.daemons.records = std::PAGE<system::DaemonRecord>(2, records);
-	ubuntuUEFI.daemons.specialIndicies = std::PAGE<std::index_t>(0, nullptr);
-	ubuntuUEFI.daemons.specialDaemons = 0;
+	ubuntuEFI.daemons.records = std::PAGE<system::DaemonRecord>(2, records);
+	ubuntuEFI.daemons.specialIndicies = std::PAGE<std::index_t>(0, nullptr);
+	ubuntuEFI.daemons.specialDaemons = 0;
 
 	// Configure boot records
-	ubuntuUEFI.post.retrieveBootrecords = Environment::UEFI::loadBootrecords;
+	ubuntuEFI.post.retrieveBootrecords = Environment::EFI::loadBootrecords;
 
-	return ubuntuUEFI;
+	return ubuntuEFI;
 }
