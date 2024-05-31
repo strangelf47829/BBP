@@ -29,6 +29,7 @@ namespace BBP
 		constexpr std::index_t initClock = 3;
 		constexpr std::index_t getMillis = 4;
 		constexpr std::index_t getMicros = 5;
+		constexpr std::index_t getUnixTimstamp = 6;
 
 		// Keyboard commands
 		constexpr std::index_t getKeyboardKeyCount = 2;

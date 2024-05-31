@@ -18,8 +18,14 @@ int main(int argc, char **argv)
 	// Configure
 	Host::configure(bios, record);
 
+	// Set active efi
+	Host::setActiveInterface(record);
+
+	// Create firmware interface
+	BBP::FirmwareInterface Hardware(bios, &record);
+
 	// Jump into bios space (with configured record);
-	bios->boot(record);
+	bios->boot(record, Hardware);
 
 	// Deinitialize BIOS
 	bios->fini();

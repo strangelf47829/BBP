@@ -1,4 +1,4 @@
 Configuration/Config.cpp: In function ‘void Host::configure(BBP::BIOS*, BBP::system::EFI&)’:
-Configuration/Config.cpp:19:33: warning: unused parameter ‘bios’ [-Wunused-parameter]
-   19 | void Host::configure(BBP::BIOS *bios, BBP::system::EFI &efi)
+Configuration/Config.cpp:22:33: warning: unused parameter ‘bios’ [-Wunused-parameter]
+   22 | void Host::configure(BBP::BIOS *bios, BBP::system::EFI &efi)
       |                      ~~~~~~~~~~~^~~~

@@ -67,7 +67,7 @@ namespace Host
 		BBP::std::word microseconds();
 
 		// Actually boot something
-		void boot(BBP::system::EFI &);
+		void boot(BBP::system::EFI &, BBP::FirmwareInterface &);
 
 		// Initialize and deinitialize BIOS
 		BBP::std::errno_t init();

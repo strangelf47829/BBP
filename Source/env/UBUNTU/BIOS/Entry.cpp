@@ -1,10 +1,13 @@
 #include "../include/BIOS.h"
 #include "../include/EFIShell.h"
 #include "../../../include/Kernel.h"
+#include "../../../include/SyscallList.h"
+#include "../include/EFIDriverInterface.h"
 
-void Host::BIOS::boot(BBP::system::EFI &efi)
+void Host::BIOS::boot(BBP::system::EFI &efi, BBP::FirmwareInterface &Hardware)
 {
 bootStart:
+
 	// Print splashscreen
 	splash(efi);
 

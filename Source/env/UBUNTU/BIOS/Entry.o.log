@@ -1,0 +1,4 @@
+BIOS/Entry.cpp: In member function ‘virtual void Host::BIOS::boot(BBP::system::EFI&, BBP::FirmwareInterface&)’:
+BIOS/Entry.cpp:7:70: warning: unused parameter ‘Hardware’ [-Wunused-parameter]
+    7 | void Host::BIOS::boot(BBP::system::EFI &efi, BBP::FirmwareInterface &Hardware)
+      |                                              ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~

@@ -1,6 +1,9 @@
 #include "../../include/EFIConfig.h"
 #include "../include/Config.h"
 #include "../../../../Source/include/DaemonRegistry.h"
+#include "../../include/SystemDriver.h"
+#include "../../include/FileSystemDriver.h"
+#include "../../include/ScreenDriver.h"
 
 // Daemons
 BBP::system::initd initdD;
@@ -58,10 +61,10 @@ void Host::configure(BBP::BIOS *bios, BBP::system::EFI &efi)
 	efi.system.deviceName = deviceName.data;
 
 	// Configure drivers
-	//efi.drivers.loadKeyboard = Environment::Drivers::keyboardManifest.loader;
-	//efi.drivers.loadScreen = Environment::Drivers::screenManifest.loader;
-	//efi.drivers.loadFileSystem = Environment::Drivers::fileManifest.loader;
-	//efi.drivers.loadSystem = Environment::Drivers::systemManifest.loader;
+	efi.drivers.loadKeyboard = nullptr;
+	efi.drivers.loadScreen = Host::Drivers::Screen::loadScreenDriver;
+	efi.drivers.loadFileSystem = Host::Drivers::FileSystem::loadFileSystem;
+	efi.drivers.loadSystem = Host::Drivers::System::loadSystemDriver;
 
 	// Configure daemons
 	efi.daemons.records = BBP::std::PAGE<BBP::system::DaemonRecord>(2, records);
