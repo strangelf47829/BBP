@@ -1,7 +1,0 @@
-dumpelf.cpp: In function ‘BBP::std::errno_t BBP::system::dumpelf_builtin(BBP::std::size_t, BBP::std::string_element**)’:
-dumpelf.cpp:10:60: warning: unused parameter ‘argc’ [-Wunused-parameter]
-   10 | BBP::std::errno_t BBP::system::dumpelf_builtin(std::size_t argc, std::c_string *argv)
-      |                                                ~~~~~~~~~~~~^~~~
-dumpelf.cpp:10:81: warning: unused parameter ‘argv’ [-Wunused-parameter]
-   10 | BBP::std::errno_t BBP::system::dumpelf_builtin(std::size_t argc, std::c_string *argv)
-      |                                                                  ~~~~~~~~~~~~~~~^~~~

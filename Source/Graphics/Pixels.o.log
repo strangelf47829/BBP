@@ -1,4 +1,0 @@
-Pixels.cpp: In function ‘void BBP::std::R2D::setPixelAligned(BBP::std::window&, BBP::std::pos_t, BBP::std::pos_t, BBP::std::RGBA_t, BBP::std::word)’:
-Pixels.cpp:20:78: warning: unused parameter ‘colour’ [-Wunused-parameter]
-   20 | void BBP::std::R2D::setPixelAligned(window &window, pos_t x, pos_t y, RGBA_t colour, word size)
-      |                                                                       ~~~~~~~^~~~~~

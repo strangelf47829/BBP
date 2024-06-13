@@ -1,0 +1,15 @@
+UEFI/Records.cpp: In function ‘BBP::std::size_t Environment::EFI::loadBootrecords(BBP::std::PAGE<BBP::system::BootRecord*>&)’:
+UEFI/Records.cpp:18:38: error: ‘Windowse20Record’ is not a member of ‘Environment::BIOS’; did you mean ‘OS::Windowse20Record’?
+   18 |  bootrecord[1] = &Environment::BIOS::Windowse20Record;
+      |                                      ^~~~~~~~~~~~~~~~
+In file included from UEFI/Records.cpp:5:
+UEFI/../../../OS/OSRegistry.h:10:33: note: ‘OS::Windowse20Record’ declared here
+   10 |  extern BBP::system::BootRecord Windowse20Record;
+      |                                 ^~~~~~~~~~~~~~~~
+UEFI/Records.cpp:21:38: error: ‘BBPRecord’ is not a member of ‘Environment::BIOS’; did you mean ‘OS::BBPRecord’?
+   21 |  bootrecord[2] = &Environment::BIOS::BBPRecord;
+      |                                      ^~~~~~~~~
+In file included from UEFI/Records.cpp:5:
+UEFI/../../../OS/OSRegistry.h:9:33: note: ‘OS::BBPRecord’ declared here
+    9 |  extern BBP::system::BootRecord BBPRecord;
+      |                                 ^~~~~~~~~

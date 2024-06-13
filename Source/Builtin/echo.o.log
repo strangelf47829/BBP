@@ -1,7 +1,0 @@
-echo.cpp: In function ‘BBP::std::errno_t BBP::system::echo_builtin(BBP::std::size_t, BBP::std::string_element**)’:
-echo.cpp:10:57: warning: unused parameter ‘argc’ [-Wunused-parameter]
-   10 | BBP::std::errno_t BBP::system::echo_builtin(std::size_t argc, std::c_string *argv)
-      |                                             ~~~~~~~~~~~~^~~~
-echo.cpp:10:78: warning: unused parameter ‘argv’ [-Wunused-parameter]
-   10 | BBP::std::errno_t BBP::system::echo_builtin(std::size_t argc, std::c_string *argv)
-      |                                                               ~~~~~~~~~~~~~~~^~~~

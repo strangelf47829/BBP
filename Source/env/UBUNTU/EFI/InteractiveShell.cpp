@@ -13,7 +13,8 @@ bool Host::enterShell(Host::BIOS &bios)
 	bios.print("Entering shell...\n");
 
 	// Read one line
-	readLine(bios);
+	while (BBP::std::strcmp(&cmd, "exit") == false)
+		readLine(bios);
 
 	return false;
 }
@@ -25,6 +26,10 @@ void Host::readLine(Host::BIOS &bios)
 
 	// Set commandLength to 0
 	commandLength = 0;
+
+	// Clear input
+	for (BBP::std::index_t idx = 0; idx < cmd.dataSize; idx++)
+		cmd[idx] = 0;
 
 	// Print ']'
 	bios.printCharacter(']');

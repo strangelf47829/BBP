@@ -1,8 +1,0 @@
-rae.cpp: In function ‘BBP::std::word printcallU(BBP::userspace::StateMachine*, BBP::userspace::HyperVisor*, BBP::userspace::Thread*, BBP::userspace::Instruction&)’:
-rae.cpp:32:118: warning: unused parameter ‘thr’ [-Wunused-parameter]
-   32 | BBP::std::word printcallU(BBP::userspace::StateMachine *state, BBP::userspace::HyperVisor *, BBP::userspace::Thread *thr, BBP::userspace::Instruction &Args)
-      |                                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~^~~
-rae.cpp: In function ‘BBP::std::word printcallX(BBP::userspace::StateMachine*, BBP::userspace::HyperVisor*, BBP::userspace::Thread*, BBP::userspace::Instruction&)’:
-rae.cpp:43:118: warning: unused parameter ‘thr’ [-Wunused-parameter]
-   43 | BBP::std::word printcallX(BBP::userspace::StateMachine *state, BBP::userspace::HyperVisor *, BBP::userspace::Thread *thr, BBP::userspace::Instruction &Args)
-      |                                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~^~~

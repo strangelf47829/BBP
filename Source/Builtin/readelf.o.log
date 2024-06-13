@@ -1,7 +1,0 @@
-readelf.cpp: In function ‘BBP::std::errno_t BBP::system::readelf_builtin(BBP::std::size_t, BBP::std::string_element**)’:
-readelf.cpp:10:60: warning: unused parameter ‘argc’ [-Wunused-parameter]
-   10 | BBP::std::errno_t BBP::system::readelf_builtin(std::size_t argc, std::c_string *argv)
-      |                                                ~~~~~~~~~~~~^~~~
-readelf.cpp:10:81: warning: unused parameter ‘argv’ [-Wunused-parameter]
-   10 | BBP::std::errno_t BBP::system::readelf_builtin(std::size_t argc, std::c_string *argv)
-      |                                                                  ~~~~~~~~~~~~~~~^~~~

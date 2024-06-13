@@ -1,7 +1,0 @@
-SoftwareDrivers.cpp: In member function ‘BBP::system::SoftwareHandle& BBP::system::SoftwareHandle::operator<<(BBP::std::c_string)’:
-SoftwareDrivers.cpp:131:14: warning: unused variable ‘prePosition’ [-Wunused-variable]
-  131 |  std::size_t prePosition = OutputBuffer->atElement;
-      |              ^~~~~~~~~~~
-SoftwareDrivers.cpp:137:14: warning: unused variable ‘postPosition’ [-Wunused-variable]
-  137 |  std::size_t postPosition = OutputBuffer->atElement;
-      |              ^~~~~~~~~~~~

@@ -1,7 +1,0 @@
-Bootloader.cpp: In function ‘int main(int, char**)’:
-Bootloader.cpp:6:14: warning: unused parameter ‘argc’ [-Wunused-parameter]
-    6 | int main(int argc, char **argv)
-      |          ~~~~^~~~
-Bootloader.cpp:6:27: warning: unused parameter ‘argv’ [-Wunused-parameter]
-    6 | int main(int argc, char **argv)
-      |                    ~~~~~~~^~~~

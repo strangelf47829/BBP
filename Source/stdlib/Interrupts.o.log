@@ -1,7 +1,0 @@
-Interrupts.cpp: In function ‘BBP::std::hash_t BBP::std::calculateIRQHash(BBP::std::IRQ&)’:
-Interrupts.cpp:26:10: warning: statement has no effect [-Wunused-value]
-   26 |  irqHash >> irq.argumentCount;
-      |  ~~~~~~~~^~~~~~~~~~~~~~~~~~~~
-Interrupts.cpp:34:1: warning: control reaches end of non-void function [-Wreturn-type]
-   34 | }
-      | ^

@@ -1,0 +1,3 @@
+Plugins/Panic.cpp:6:10: error: ‘OS::BIOS’ has not been declared
+    6 | void OS::BIOS::BBPOSIX::OSPanic(BBP::std::errno_t errorCode, BBP::std::c_string message)
+      |          ^~~~

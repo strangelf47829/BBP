@@ -1,4 +1,0 @@
-ErrorHandling.cpp: In static member function ‘static void BBP::system::Kernel::setError(BBP::std::errno_t)’:
-ErrorHandling.cpp:3:49: warning: unused parameter ‘error’ [-Wunused-parameter]
-    3 | void BBP::system::Kernel::setError(std::errno_t error)
-      |                                    ~~~~~~~~~~~~~^~~~~

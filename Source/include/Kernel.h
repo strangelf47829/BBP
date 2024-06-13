@@ -1,10 +1,18 @@
 #ifndef BBP_SYSTEM_KERNEL_H
 #define BBP_SYSTEM_KERNEL_H
 
+#include "KernelCore.h"
 #include "Boot.h"
 #include "Tasks.h"
 #include "TaskPool.h"
-#include "KernelSubSystems.h"
+#include "Hyperv.h"
+#include "StateMachine.h"
+#include "SystemContext.h"
+#include "SysConfig.h"
+#include "DeviceDriver.h"
+#include "EFI.h"
+#include "stdctrl.h"
+#include "KernelCore.h"
 #include "Interrupts.h"
 #include "UserInformation.h"
 #include "cstdio.h"
@@ -17,6 +25,9 @@ namespace BBP
 
 	namespace system
 	{
+
+		// Forward declaration of Kernel Core
+		class KernelCore;
 
 		// This class holds all the information needed to run an actual system.
 		// This includes drivers, applications, Security functions, etc...
@@ -95,6 +106,9 @@ namespace BBP
 			// RAE stuff
 			userspace::StateMachine machine;
 			std::STATIC_PAGE<userspace::HyperVisor, 1> hypervisors;
+			
+			// Kernel Core
+			KernelCore core;
 
 			// Screen stuff
 			static void biosSplashCommand(EFI &);
