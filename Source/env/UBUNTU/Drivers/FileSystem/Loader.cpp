@@ -1,5 +1,6 @@
 #include "../../../include/FileSystemDriver.h"
 #include "../../../../include/drvcmd.h"
+#include "../../../../include/Shell.h"
 #include "Filedrvhdr.h"
 
 // Reduces amount of characters needed to type
@@ -16,4 +17,7 @@ void Host::Drivers::FileSystem::loadFileSystem(BBP::system::DeviceDriver &driver
 {
 	// Set commands
 	driver.hardwareDriver.setHandleData(fileActions, fileCMDsize, fileCMD);
+
+	// Also load primary volume
+	BBP::system::Shell::getPrimaryVolume().volumePath = "/mnt/v/";
 }

@@ -1,0 +1,10 @@
+Shell.cpp: In member function ‘BBP::std::errno_t BBP::system::initd::shell(BBP::std::size_t, BBP::std::string_element**)’:
+Shell.cpp:12:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   12 | }
+      | ^
+Shell.cpp:8:57: warning: unused parameter ‘argc’ [-Wunused-parameter]
+    8 | BBP::std::errno_t BBP::system::initd::shell(std::size_t argc, std::c_string *argv)
+      |                                             ~~~~~~~~~~~~^~~~
+Shell.cpp:8:78: warning: unused parameter ‘argv’ [-Wunused-parameter]
+    8 | BBP::std::errno_t BBP::system::initd::shell(std::size_t argc, std::c_string *argv)
+      |                                                               ~~~~~~~~~~~~~~~^~~~

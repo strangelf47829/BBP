@@ -4,6 +4,7 @@
 #include "../../include/SystemDriver.h"
 #include "../../include/FileSystemDriver.h"
 #include "../../include/ScreenDriver.h"
+#include "../../include/KeyboardDriver.h"
 
 // Daemons
 BBP::system::initd initdD;
@@ -61,7 +62,7 @@ void Host::configure(BBP::BIOS *bios, BBP::system::EFI &efi)
 	efi.system.deviceName = deviceName.data;
 
 	// Configure drivers
-	efi.drivers.loadKeyboard = nullptr;
+	efi.drivers.loadKeyboard = Host::Drivers::Keyboard::loadKeyboardDriver;
 	efi.drivers.loadScreen = Host::Drivers::Screen::loadScreenDriver;
 	efi.drivers.loadFileSystem = Host::Drivers::FileSystem::loadFileSystem;
 	efi.drivers.loadSystem = Host::Drivers::System::loadSystemDriver;

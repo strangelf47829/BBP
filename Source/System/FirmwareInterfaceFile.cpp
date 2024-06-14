@@ -202,8 +202,8 @@ void BBP::FirmwareInterface::getInspectorPath(std::string &str)
 	// Then set input to that
 	HardwareFile.softwareDriver.setInputPage(&stream);
 
-	// Then receive string 
-	HardwareFile.receiveData(args[0]);
+	// Then receive string. Plus one for null terminator
+	HardwareFile.receiveData(args[0] + 1);
 
 	// Associate driver
 	HardwareFile.Associate();

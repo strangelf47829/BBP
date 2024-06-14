@@ -1,24 +1,45 @@
 #include "../include/stdio.h"
 #include "../include/Except.h"
 #include "../include/Kernel.h"
+#include "../include/StackTrace.h"
+#include "../include/errnoStrings.h"
 
-
+// If busy handling exception
+bool handling = false;
 
 BBP::std::except BBP::std::exception(const char *msg, errno_t _errno)
 {
+	// If already handling throw kernel signal instead
+	if (handling)
+		std::panic();
+
+	// Flag handling
+	handling = true;
+
 	// set error number
 	system::Kernel::setError(_errno);
 
 	// Get length of message
 	std::size_t msgLen = std::strlen(msg);
 
-	// Check if STDERR has enough capacity to stream message. If it does, stream message into STDERR
-	//if (BBP::system::kernelSS()->activeContext->STDERR.max_elements - BBP::system::kernelSS()->activeContext->STDERR.atElement > msgLen)
-	//	BBP::system::kernelSS()->activeContext->STDERR << "\e[0;31mError: " << msg <<= "\e[0;37m";
+	// String to store errno message
+	std::static_string<50> errnoMessage;
 
-	std::printf("Error: %s\n", msg);
+	// Get errno
+	std::strerror(_errno, errnoMessage);
 
+	// Print what happened
+	std::printf("An exception has occured: %s: %s. Showing stack trace:\n", errnoMessage.data, msg);
+
+	// Print where it happened
+	stack_trace trace;
+	trace.Capture();
+	trace.showStackTrace();
+
+	// Done handling
+	handling = false;
+
+	// Create object and return
 	except exc = {_errno};
-
 	return exc;
 }

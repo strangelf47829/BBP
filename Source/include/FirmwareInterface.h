@@ -78,12 +78,6 @@ namespace BBP
 		// If in BIOS mode, calls to the firmware interface go through the BIOS. Otherwise they go through drivers
 		bool biosMode;
 
-		// Standard device drivers
-		system::DeviceDriver HardwareKeyboard;
-		system::DeviceDriver HardwareScreen;
-		system::DeviceDriver HardwareFile;
-		system::DeviceDriver HardwareSystem;
-
 		// EFI configuration
 		system::EFI *configuration;
 
@@ -96,12 +90,16 @@ namespace BBP
 		void initClock();
 
 		// Built-in keyboard commands
-		void startCapture();
-		void stopCapture();
 		std::index_t getKeyCount();
 		std::string_element getKeyboardKey();
 
 	public:
+
+		// Standard device drivers
+		system::DeviceDriver HardwareKeyboard;
+		system::DeviceDriver HardwareScreen;
+		system::DeviceDriver HardwareFile;
+		system::DeviceDriver HardwareSystem;
 
 		// Constructor using BIOS
 		FirmwareInterface(BIOS *, system::EFI *);
@@ -159,6 +157,10 @@ namespace BBP
 
 		// Syscalls
 		std::errno_t syscall(system::syscall_t call, system::syscall_args_t &args);
+
+		// Input
+		void startCapture();
+		void stopCapture();
 
 	};
 }

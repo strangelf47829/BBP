@@ -41,17 +41,17 @@ BBP::std::errno_t BBP::system::initd::shellApplication(std::size_t argc, std::c_
 	printShellInformation();
 
 	// Try to do a shell immediately
-	//std::string shellCMD0 = std::String("cd /boot/esa");
-	//shell(shellCMD0);
+	std::string shellCMD0 = std::String("cd /boot/");
+	shell(shellCMD0);
 
-	std::string shellCMD1 = std::String("cp");
+	std::string shellCMD1 = std::String("ls");
 	shell(shellCMD1);
 
 	//std::string shellCMD2 = std::String("rae");
 	//shell(shellCMD2);
 
-	std::string shellCMD3 = std::String("logout");
-	shell(shellCMD3);
+	//std::string shellCMD3 = std::String("logout");
+	//shell(shellCMD3);
 
 	// Get a shell Line
 	while (1)

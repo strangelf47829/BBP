@@ -12,8 +12,6 @@ namespace BBP
 		// Convert error to string
 		void strerror(std::errno_t, std::string &);
 
-		// 
-
 	}
 }
 

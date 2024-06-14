@@ -43,5 +43,5 @@ bootStart:
 
 	print("normal boot...\n");
 
-	BBP::system::Kernel::enterKernelSpace(efi);
+	BBP::system::Kernel::enterKernelSpace(efi, Hardware);
 }

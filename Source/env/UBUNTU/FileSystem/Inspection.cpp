@@ -86,6 +86,9 @@ void Host::Drivers::FileSystem::emitName(BBP::std::size_t amount, BBP::std::PAGE
 	// Copy string
 	BBP::std::strcpy(&string, (BBP::std::c_string)directoryIterator->path().c_str());
 
+	// Write null-terminator
+	string[amount] = 0;
+
 	// Restore mode
 	mode = secondaryMode;
 }

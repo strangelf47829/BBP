@@ -5,10 +5,14 @@
 // Kernel license info
 BBP::system::appInfo kernelLicense = BBP::system::appInfo(1, 0, 0, 0);
 
-BBP::std::errno_t BBP::system::Kernel::enterKernelSpace(system::EFI &EFI)
+BBP::std::errno_t BBP::system::Kernel::enterKernelSpace(system::EFI &EFI, FirmwareInterface &hardware)
 {
 	// Set EFI
 	singleton.sysconfig = &EFI;
+
+	// Set Core info
+	singleton.Core().firmware = &hardware;
+	singleton.Core().configuration = &EFI;
 
 	// Check if EFI post is available
 	if (EFI.post.basicPost == nullptr)
@@ -22,21 +26,21 @@ BBP::std::errno_t BBP::system::Kernel::enterKernelSpace(system::EFI &EFI)
 		return failedPOST;
 
 	// Load system driver
-	std::errno_t systemDriverStatus = singleton.loadSystemDriver(EFI);
+	std::errno_t systemDriverStatus = 0;// singleton.loadSystemDriver(EFI);
 
 	// If set, return
 	if (systemDriverStatus)
 		return systemDriverStatus;
 
 	// Load file driver
-	std::errno_t fileDriverStatus = singleton.loadFileDriver(EFI);
+	std::errno_t fileDriverStatus = 0;// singleton.loadFileDriver(EFI);
 
 	// If set, return
 	if (fileDriverStatus)
 		return fileDriverStatus;
 
 	// Load screen driver
-	std::errno_t screenDriverStatus = singleton.loadScreenDriver(EFI);
+	std::errno_t screenDriverStatus = 0;// singleton.loadScreenDriver(EFI);
 
 	// If set, return
 	if (screenDriverStatus)
@@ -57,7 +61,7 @@ BBP::std::errno_t BBP::system::Kernel::enterKernelSpace(system::EFI &EFI)
 		std::size_t driverCount = EFI.drivers.getOtherDrivers(otherDrivers);
 
 		// Allocate new data
-		singleton.allocator.page_calloc(singleton.externalDrivers, driverCount);
+		singleton.Core().allocator.page_calloc(singleton.Core().externalDrivers, driverCount);
 
 		// Now loop over
 		for (std::index_t idx = 0; idx < driverCount; idx++)
@@ -67,12 +71,15 @@ BBP::std::errno_t BBP::system::Kernel::enterKernelSpace(system::EFI &EFI)
 				continue;
 
 			// Create new driver
-			DeviceDriver *newDriver = singleton.allocator.add_object(new DeviceDriver(nullptr, nullptr, nullptr, nullptr, 0, nullptr));
+			DeviceDriver *newDriver = singleton.Core().allocator.add_object(new DeviceDriver(nullptr, nullptr, nullptr, nullptr, 0, nullptr));
 			
 			// Load driver
 			otherDrivers[idx](*newDriver);
 		}
 	}
+
+	// Now that drivers are loaded spool them up
+	singleton.Core().firmware->SwitchToDrivers();
 
 	// Keep track of registered daemons.
 	std::size_t registeredDaemons = 0;
@@ -146,9 +153,6 @@ BBP::std::errno_t BBP::system::Kernel::enterKernelSpace(system::EFI &EFI)
 	EFI.licenses.KernelInfo = kernelLicense;
 	EFI.licenses.KernelName = "BBP";
 
-	// Initialize clock
-	singleton.initClock();
-
 	// Clear screen
 	clearScreen();
 
@@ -214,7 +218,7 @@ BBP::std::errno_t BBP::system::Kernel::enterKernelSpace(system::EFI &EFI)
 	while (singleton.taskpool.Step());
 
 	// Then unload all drivers
-	singleton.stopCapture();
+	singleton.Core().firmware->stopCapture();
 
 	// Return
 	return 0;

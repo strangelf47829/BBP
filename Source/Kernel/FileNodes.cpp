@@ -7,44 +7,44 @@ bool BBP::system::Kernel::isFileOpened(std::PATH &path)
 	std::hash_t hash = std::strhsh(path.relName());
 
 	// For each file node,
-	for (std::index_t idx = 0; idx < singleton.fileTable.dataSize; idx++)
+	for (std::index_t idx = 0; idx < singleton.Core().fileTable.dataSize; idx++)
 	{
 		// Get hash
-		std::hash_t nodeHash = singleton.fileTable[idx].filePathHash;
+		std::hash_t nodeHash = singleton.Core().fileTable[idx].filePathHash;
 
 		// If not equal, continue
 		if (nodeHash != hash)
 			continue;
 
 		// Otherwise check both against eachother
-		if (std::strcmp(path.relName(), singleton.fileTable[idx].filePath.relName()))
+		if (std::strcmp(path.relName(), singleton.Core().fileTable[idx].filePath.relName()))
 			continue;
 
 		// Found, set node
-		singleton.activeNodeRef = idx;
+		singleton.Core().activeNodeRef = idx;
 		return true;
 	}
 
 	// Nothing found.
-	singleton.activeNodeRef = singleton.fileTable.dataSize;
+	singleton.Core().activeNodeRef = singleton.Core().fileTable.dataSize;
 	return false;
 }
 
 bool BBP::system::Kernel::findEmptyNode()
 {
 	// Go over each filenode
-	for (std::index_t idx = 0; idx < singleton.fileTable.dataSize; idx++)
+	for (std::index_t idx = 0; idx < singleton.Core().fileTable.dataSize; idx++)
 	{
 		// If hash is null, return true
-		if (singleton.fileTable[idx].filePathHash == 0)
+		if (singleton.Core().fileTable[idx].filePathHash == 0)
 		{
-			singleton.activeNodeRef = idx;
+			singleton.Core().activeNodeRef = idx;
 			return true;
 		}
 	}
 
 	// Nothing found.
-	singleton.activeNodeRef = singleton.fileTable.dataSize;
+	singleton.Core().activeNodeRef = singleton.Core().fileTable.dataSize;
 	return false;
 }
 
@@ -53,16 +53,16 @@ BBP::std::noderef_t BBP::system::Kernel::deallocateINode(std::noderef_t node, bo
 	// Deallocate the page if marked allocated
 	if (_dealloc)
 	{
-		singleton.allocator.free(singleton.fileTable[node].fileData.page->data);
-		singleton.allocator._delete(singleton.fileTable[node].fileData.page);
+		singleton.Core().allocator.free(singleton.Core().fileTable[node].fileData.page->data);
+		singleton.Core().allocator._delete(singleton.Core().fileTable[node].fileData.page);
 	}
 
 	// If also needing to unload the page itself, do this
 	if (_unload)
-		singleton.fileTable[node].fileData.page = nullptr;
+		singleton.Core().fileTable[node].fileData.page = nullptr;
 
 	// Return invalid INode
-	return singleton.fileTable.dataSize;
+	return singleton.Core().fileTable.dataSize;
 }
 
 BBP::std::noderef_t BBP::system::Kernel::allocateINode(std::PATH &path)
@@ -75,7 +75,7 @@ BBP::std::noderef_t BBP::system::Kernel::allocateINode(std::PATH &path)
 
 	// If not open, set node and exit
 	if (isOpen)
-		return singleton.activeNodeRef;
+		return singleton.Core().activeNodeRef;
 
 	// Otherwise look for empty node
 	bool emptyNodeExists = system::Kernel::findEmptyNode();
@@ -85,10 +85,10 @@ BBP::std::noderef_t BBP::system::Kernel::allocateINode(std::PATH &path)
 		throw std::exception("No Empty Filenode", ENFILE);
 
 	// Otherwise set index
-	return singleton.activeNodeRef;
+	return singleton.Core().activeNodeRef;
 }
 
 BBP::std::PATH &BBP::system::Kernel::getNodePath(std::noderef_t node)
 {
-	return singleton.fileTable[node].filePath;
+	return singleton.Core().fileTable[node].filePath;
 }

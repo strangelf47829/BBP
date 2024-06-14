@@ -1,4 +1,0 @@
-FileSystem/Inspection.cpp: In function ‘void Host::Drivers::FileSystem::emitName(BBP::std::size_t, BBP::std::PAGE<char>&)’:
-FileSystem/Inspection.cpp:84:59: warning: unused parameter ‘amount’ [-Wunused-parameter]
-   84 | void Host::Drivers::FileSystem::emitName(BBP::std::size_t amount, BBP::std::PAGE<BBP::std::string_element> &string)
-      |                                          ~~~~~~~~~~~~~~~~~^~~~~~

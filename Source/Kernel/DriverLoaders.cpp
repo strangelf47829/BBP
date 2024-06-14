@@ -7,10 +7,10 @@ BBP::std::errno_t BBP::system::Kernel::loadKeyboardDriver(EFI &configuration)
 		return invalidConfig;
 
 	// Execute driver init function
-	configuration.drivers.loadKeyboard(keyboardDriver);
+	configuration.drivers.loadKeyboard(singleton.Core().firmware->HardwareKeyboard);
 
 	// Start capturing input
-	startCapture();
+	singleton.Core().firmware->startCapture();
 
 	// Return no errors
 	return 0;
@@ -23,7 +23,7 @@ BBP::std::errno_t BBP::system::Kernel::loadScreenDriver(EFI &configuration)
 		return invalidConfig;
 
 	// Execute driver init function
-	configuration.drivers.loadScreen(screenDriver);
+	configuration.drivers.loadScreen(singleton.Core().firmware->HardwareScreen);
 
 	// Return no errors
 	return 0;
@@ -36,7 +36,7 @@ BBP::std::errno_t BBP::system::Kernel::loadFileDriver(EFI &configuration)
 		return invalidConfig;
 
 	// Execute driver init function
-	configuration.drivers.loadFileSystem(fileDriver);
+	configuration.drivers.loadFileSystem(singleton.Core().firmware->HardwareFile);
 
 	// Return no errors
 	return 0;
@@ -49,7 +49,7 @@ BBP::std::errno_t BBP::system::Kernel::loadSystemDriver(EFI &configuration)
 		return invalidConfig;
 
 	// Execute driver init function
-	configuration.drivers.loadSystem(systemDriver);
+	configuration.drivers.loadSystem(singleton.Core().firmware->HardwareSystem);
 	
 	// Return no errors
 	return 0;

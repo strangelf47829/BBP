@@ -11,7 +11,7 @@ BBP::std::errno_t BBP::system::Kernel::syscall(BBP::system::syscall_t system, BB
 	std::word *argv = (std::word *)(&args);
 
 	// Get the system driver
-	singleton.systemDriver.hardwareDriver.executeCommand(std::systemCallCmd, system, argv);
+	singleton.Core().firmware->HardwareSystem.hardwareDriver.executeCommand(std::systemCallCmd, system, argv);
 
 	// Return result
 	return args.errno;

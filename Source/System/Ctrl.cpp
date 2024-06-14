@@ -1,10 +1,12 @@
 #include "../include/stdctrl.h"
+#include "../include/stdio.h"
 
 // Create static signals (stack get unwound anyway doofus)
 BBP::std::KernelSignal shutdownSignal;
 
 void BBP::std::panic()
 {
+	std::printf("Double fault detected. PANIC!\n");
 	throw KernelSignal();
 }
 

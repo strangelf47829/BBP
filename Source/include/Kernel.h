@@ -49,13 +49,6 @@ namespace BBP
 			// External OS taskpool
 			std::TaskPool *extTaskPool;
 
-			// Essential drivers
-			DeviceDriver systemDriver;
-			DeviceDriver fileDriver;
-			DeviceDriver screenDriver;
-			DeviceDriver keyboardDriver;
-			std::PAGE<DeviceDriver *> externalDrivers;
-
 			// Essential drivers loaders
 			std::errno_t loadSystemDriver(EFI &);
 			std::errno_t loadFileDriver(EFI &);
@@ -66,42 +59,12 @@ namespace BBP
 			static bool kernelUpdateCycle(std::async_stack_t<> &stack, std::async_stack_t<std::TaskFlowInterface *> &arg);
 			std::RepeatingTask<bool (*)()> kernelUpdateCycleTask;
 
-			// Keep user information. 0 is root.
-			std::STATIC_PAGE<UserInformation, 4> users;
-			std::index_t loggedIn;
-
-			// Own allocator pool
-			std::ResourceManager allocator;
-
-			// Built-in system commands
-			void initClock();
-
-			// Built-in keyboard commands
-			void startCapture();
-			void stopCapture();
-			std::index_t getKeyCount();
-			std::string_element getKeyboardKey();
-
 			// Enter boot selection screen
 			system::BootRecord::bootRecordEntryPoint enterBootSelection(std::PAGE<BootRecord *> &bootrecords, system::BootRecord::bootRecordEntryPoint entry, system::BootRecord::bootRecordEntryPoint BIOS);
-
-			// File table data
-			std::noderef_t activeNodeRef;
-			std::STATIC_PAGE<std::FileNode, std::max_open_files> fileTable;
 
 			// File node stuff
 			static bool isFileOpened(std::PATH &);
 			static bool findEmptyNode();
-
-			// File stuff
-			static void setPath(std::PATH &);
-			static void loadFileMetadata(std::PATH &, std::size_t, std::word *);
-			static std::FileSysInfo::FileSysEntryType queryFileType(std::PATH &);
-
-			// I/O
-			std::static_string<509> STDERRPage;
-			std::static_string<509> STDOUTPage;
-			std::static_string<509> STDINPage;
 
 			// RAE stuff
 			userspace::StateMachine machine;
@@ -109,6 +72,9 @@ namespace BBP
 			
 			// Kernel Core
 			KernelCore core;
+
+			// Fetch the core
+			KernelCore &Core();
 
 			// Screen stuff
 			static void biosSplashCommand(EFI &);
@@ -119,7 +85,7 @@ namespace BBP
 		public:
 
 			// Boot into the kernel
-			static std::errno_t enterKernelSpace(EFI &);
+			static std::errno_t enterKernelSpace(EFI &, FirmwareInterface &);
 
 			// Set error
 			static void setError(std::errno_t);

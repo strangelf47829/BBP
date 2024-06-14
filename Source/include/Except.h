@@ -3,12 +3,12 @@
 #include "errno.h"
 #include "Memory.h"
 
-
 namespace BBP
 {
 	namespace std
 	{
 
+		// Forward declare exception
 		struct except;
 		except exception(const char *msg, errno_t _errno);
 

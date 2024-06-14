@@ -1,0 +1,24 @@
+xvalue.cpp: In member function ‘virtual BBP::std::address_t BBP::userspace::xvalue::getOwnPhysicalAddress()’:
+xvalue.cpp:84:1: warning: control reaches end of non-void function [-Wreturn-type]
+   84 | }
+      | ^
+xvalue.cpp: In member function ‘virtual BBP::std::address_t BBP::userspace::xvalue::getOwnVirtualAddress()’:
+xvalue.cpp:95:1: warning: control reaches end of non-void function [-Wreturn-type]
+   95 | }
+      | ^
+xvalue.cpp: In member function ‘virtual BBP::std::word BBP::userspace::xvalue::resolve(BBP::userspace::StateMachine&)’:
+xvalue.cpp:106:1: warning: control reaches end of non-void function [-Wreturn-type]
+  106 | }
+      | ^
+xvalue.cpp: In member function ‘virtual bool BBP::userspace::xvalue::canUserExecuteFrom(BBP::userspace::StateMachine&)’:
+xvalue.cpp:143:1: warning: control reaches end of non-void function [-Wreturn-type]
+  143 | }
+      | ^
+xvalue.cpp: In member function ‘virtual bool BBP::userspace::xvalue::canUserReadFrom(BBP::userspace::StateMachine&)’:
+xvalue.cpp:154:1: warning: control reaches end of non-void function [-Wreturn-type]
+  154 | }
+      | ^
+xvalue.cpp: In member function ‘virtual bool BBP::userspace::xvalue::canUserWriteTo(BBP::userspace::StateMachine&)’:
+xvalue.cpp:165:1: warning: control reaches end of non-void function [-Wreturn-type]
+  165 | }
+      | ^

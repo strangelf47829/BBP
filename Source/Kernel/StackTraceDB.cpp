@@ -3,7 +3,7 @@
 
 BBP::std::stack_trace_db::stack_trace_db()
 {
-	hdr = std::FILE("/mnt/v/lib/memmaphdr");
+	hdr = std::FILE("/mnt/v/boot/memmap/memmaphdr");
 }
 
 BBP::std::stack_trace_db::~stack_trace_db()
@@ -33,7 +33,7 @@ void BBP::std::stack_trace_db::lineLookup()
 	std::static_string<32> buffer;
 
 	// write path to header info
-	std::sprintf(buffer.data, "/mnt/v/lib/memmap.%d", binIndex);
+	std::sprintf(buffer.data, "/mnt/v/boot/memmap/memmap.%d", binIndex);
 
 	// Open file
 	std::FILE lines(buffer.data);

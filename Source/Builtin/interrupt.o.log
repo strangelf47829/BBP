@@ -1,0 +1,7 @@
+interrupt.cpp: In function ‘BBP::std::errno_t BBP::system::interrupt_builtin(BBP::std::size_t, BBP::std::string_element**)’:
+interrupt.cpp:10:62: warning: unused parameter ‘argc’ [-Wunused-parameter]
+   10 | BBP::std::errno_t BBP::system::interrupt_builtin(std::size_t argc, std::c_string *argv)
+      |                                                  ~~~~~~~~~~~~^~~~
+interrupt.cpp:10:83: warning: unused parameter ‘argv’ [-Wunused-parameter]
+   10 | BBP::std::errno_t BBP::system::interrupt_builtin(std::size_t argc, std::c_string *argv)
+      |                                                                    ~~~~~~~~~~~~~~~^~~~

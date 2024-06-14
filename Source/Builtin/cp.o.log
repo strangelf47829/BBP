@@ -1,0 +1,17 @@
+cp.cpp:176:125: warning: "/*" within comment [-Wcomment]
+  176 |  std::async_task<int (*)(int), int>::lambda_t k = [](std::async_stack_t<int> &stack, std::async_stack_t<int> &arg) -> int { /*Double stack.template get<0>() = 2 * arg.template get<0>(); return 0; };
+      |                                                                                                                              
+cp.cpp:177:125: warning: "/*" within comment [-Wcomment]
+  177 |  std::async_task<int (*)(int), int>::lambda_t l = [](std::async_stack_t<int> &stack, std::async_stack_t<int> &arg) -> int { /*Return double again return stack.template get<0>() * 2; };
+      |                                                                                                                              
+cp.cpp: In function ‘int cp_stage_2(BBP::std::async_stack_t<int>&, BBP::std::async_stack_t<int>&)’:
+cp.cpp:118:83: warning: unused parameter ‘arg’ [-Wunused-parameter]
+  118 | int cp_stage_2(BBP::std::async_stack_t<int> &stack, BBP::std::async_stack_t<int> &arg)
+      |                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+cp.cpp: In function ‘BBP::std::errno_t BBP::system::cp_builtin(BBP::std::size_t, BBP::std::string_element**)’:
+cp.cpp:135:55: warning: unused parameter ‘argc’ [-Wunused-parameter]
+  135 | BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
+      |                                           ~~~~~~~~~~~~^~~~
+cp.cpp:135:76: warning: unused parameter ‘argv’ [-Wunused-parameter]
+  135 | BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
+      |                                                             ~~~~~~~~~~~~~~~^~~~

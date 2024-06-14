@@ -41,6 +41,9 @@ bool Host::Drivers::Keyboard::keyCount(BBP::std::size_t argc, BBP::std::word *ar
 	if (argc == 0 || argv == nullptr)
 		return false;
 
+	// Poll
+	pollKey(0, nullptr);
+
 	// Return stack
 	argv[0] = inputStack.atElement;
 	return true;
@@ -92,7 +95,7 @@ bool Host::Drivers::Keyboard::pollKey(BBP::std::size_t argc, BBP::std::word *arg
 	bool captured = bios->getKeyboardInput(key);
 
 	// If Captured, push to stack
-	if (captured == false)
+	if (captured)
 		inputStack << key;
 
 	// If argc and argv set, set captured

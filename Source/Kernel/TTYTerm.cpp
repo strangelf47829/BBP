@@ -3,16 +3,18 @@
 
 void BBP::system::Kernel::clearScreen()
 {
-	singleton.screenDriver.hardwareDriver.executeCommand(std::screenClearScreen, 0, nullptr);
+	// Core implemented
+	singleton.Core().firmware->clearScreen();
 }
 
 void BBP::system::Kernel::printString(std::string &str)
 {
-	singleton.screenDriver.writeData(str);
+	// Core implemented
+	singleton.Core().firmware->printString(str);
 }
 
 void BBP::system::Kernel::biosSplashCommand(EFI &configuration)
 {
 	// Do this pretty much
-	singleton.screenDriver.hardwareDriver.executeCommand(std::screenBIOSSplashScreen, 1, (std::word *)&configuration);
+	singleton.Core().firmware->HardwareScreen.hardwareDriver.executeCommand(std::screenBIOSSplashScreen, 1, (std::word *)&configuration);
 }

@@ -27,12 +27,16 @@ namespace BBP
 
 		class KernelCore
 		{
+		public:
 
 			// Primary kernel volume
 			std::VOLUME systemVolume;
 
 			// Firmware
 			FirmwareInterface *firmware;
+
+			// External drivers
+			std::PAGE<DeviceDriver *> externalDrivers;
 
 			// Configuration used to load this kernel
 			EFI *configuration;
@@ -41,21 +45,19 @@ namespace BBP
 			UserInformation loggedInUser;
 
 			// I/O stuff
-			std::STATIC_PAGE<std::string_element, std::max_string_length> STDOUTstream;
-			std::STATIC_PAGE<std::string_element, std::max_string_length> STDINstream;
-			std::STATIC_PAGE<std::string_element, std::max_string_length> STDERRstream;
+			std::static_string<509> STDERRPage;
+			std::static_string<509> STDOUTPage;
+			std::static_string<509> STDINPage;
 
 			// File table stuff
+			std::noderef_t activeNodeRef;
 			std::STATIC_PAGE<std::FileNode, std::max_open_files> fileTable;
 
 			// Memory access
-			std::ResourceManager kernelMemory;
-
-		public:
+			std::ResourceManager allocator;
 
 			// Constructors
 			KernelCore();
-			KernelCore(FirmwareInterface *, EFI *, Kernel *);
 
 		};
 		

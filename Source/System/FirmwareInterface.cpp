@@ -45,4 +45,10 @@ void BBP::FirmwareInterface::SwitchToDrivers()
 {
 	// Set appropriate flag
 	biosMode = false;
+
+	// Initialize timers
+	initClock();
+
+	// Start capture
+	startCapture();
 }
