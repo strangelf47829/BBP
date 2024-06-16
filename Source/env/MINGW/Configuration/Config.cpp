@@ -55,7 +55,7 @@ void Host::configure(BBP::BIOS *bios, BBP::system::EFI &efi)
 
 	// Configure volume info
 	efi.system.volumeLabel = 'v';
-	efi.system.volumePath = "/v/";
+	efi.system.volumePath = "V:\\";
 
 	// Configure root password
 	efi.system.rootPassword = "root";

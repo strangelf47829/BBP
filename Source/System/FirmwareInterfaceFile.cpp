@@ -6,8 +6,23 @@ void BBP::FirmwareInterface::setPath(std::PATH &path)
 {
 	HardwareFile.hardwareDriver.executeCommand(std::loadPath, 0, 0);
 
+	// Create string
+	std::static_string<std::max_path_length * 2> sysroot;
+
+	// Copy system root into sysroot
+	std::strcpy(sysroot.data, configuration->system.volumePath);
+
+	// Then copy path to sysroot
+	std::strcpy(sysroot.data + std::strlen(sysroot), path.relName() + 1);
+
+
+	// Convert to windows thingy
+	for (BBP::std::index_t idx = 0; sysroot[idx]; idx++)
+		if (sysroot[idx] == '/')
+			sysroot[idx] = '\\';
+
 	// Then send path
-	HardwareFile.writeData(path.relName());
+	HardwareFile.writeData(sysroot);
 }
 
 void BBP::FirmwareInterface::loadFileMetadata(std::PATH &path, std::size_t argc, std::word *argv)

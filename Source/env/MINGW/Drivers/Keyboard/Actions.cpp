@@ -7,24 +7,28 @@ BBP::std::word Host::Drivers::Keyboard::sendDataToKeyboard(BBP::std::size_t, BBP
 
 BBP::std::word Host::Drivers::Keyboard::receiveDataFromKeyboard(BBP::std::size_t amount, BBP::std::PAGE<BBP::std::string_element> &page)
 {
-	// Get amount of keyboard keys queued up
-	BBP::std::size_t queued;
-	keyCount(1, &queued);
+	// Poll keys
+	Host::Drivers::Keyboard::pollKey(0, nullptr);
 
-	// Get amount to be read ('amount' or 'queued', whichever is less)
+	// Get amount of keys that input
+	BBP::std::size_t queued = 0;
+	Host::Drivers::Keyboard::keyCount(1, &queued);
+
+	// Then get the amount to read -- which is 'amount' or 'queued', whichever is less
 	BBP::std::size_t toRead = (queued < amount) ? queued : amount;
 
-	// While that is true;
+	// Then copy
 	for (BBP::std::index_t idx = 0; idx < toRead; idx++)
 	{
-		// Declare key
-		BBP::std::word key;
+		// Declare key that will get captured
+		BBP::std::word captured = 0;
+		
+		// Capture a key -- if error break out
+		if (captureKey(1, &captured))
+			return idx;
 
-		// Read
-		captureKey(1, &key);
-
-		// Set
-		page[idx] = key;
+		// Write
+		page[idx] = captured;
 	}
 
 	// Return amount of keys read

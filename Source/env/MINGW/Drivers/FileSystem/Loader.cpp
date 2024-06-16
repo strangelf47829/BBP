@@ -19,5 +19,5 @@ void Host::Drivers::FileSystem::loadFileSystem(BBP::system::DeviceDriver &driver
 	driver.hardwareDriver.setHandleData(fileActions, fileCMDsize, fileCMD);
 
 	// Also load primary volume
-	BBP::system::Shell::getPrimaryVolume().volumePath = "/mnt/v/";
+	BBP::system::Shell::getPrimaryVolume().volumePath = "/";
 }

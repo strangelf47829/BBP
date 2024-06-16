@@ -47,7 +47,7 @@ bool Host::Drivers::FileSystem::stepInspection()
 BBP::std::size_t Host::Drivers::FileSystem::nameSizeInspection()
 {
 	// Get size of string
-	return BBP::std::strlen((BBP::std::c_string)directoryIterator->path().c_str());
+	return BBP::std::strlen((BBP::std::c_string)directoryIterator->path().generic_u8string().c_str());
 }
 
 int Host::Drivers::FileSystem::getEntityTypeInspection()
@@ -84,7 +84,7 @@ BBP::std::size_t Host::Drivers::FileSystem::prepareNameEmission()
 void Host::Drivers::FileSystem::emitName(BBP::std::size_t amount, BBP::std::PAGE<BBP::std::string_element> &string)
 {
 	// Copy string
-	BBP::std::strcpy(&string, (BBP::std::c_string)directoryIterator->path().c_str());
+	BBP::std::strcpy(&string, (BBP::std::c_string)directoryIterator->path().generic_u8string().c_str());
 
 	// Write null-terminator
 	string[amount] = 0;

@@ -41,7 +41,7 @@ BBP::std::errno_t BBP::system::initd::shellApplication(std::size_t argc, std::c_
 	printShellInformation();
 
 	// Try to do a shell immediately
-	std::string shellCMD0 = std::String("cd /boot/");
+	std::string shellCMD0 = std::String("cd /");
 	shell(shellCMD0);
 
 	std::string shellCMD1 = std::String("ls");
@@ -206,6 +206,7 @@ BBP::std::size_t BBP::system::initd::loadUserInput()
 		{
 			// Newline
 		case BBP::std::Terminal::TerminalApplication::C0::LF:
+		case BBP::std::Terminal::TerminalApplication::C0::CR:
 			// Stop reading stuff
 			readInput = false;
 			std::printf("\n");

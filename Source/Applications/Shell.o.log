@@ -23,7 +23,6 @@ Shell.cpp:205:24: warning: enumeration value 'BEL' not handled in switch [-Wswit
 Shell.cpp:205:24: warning: enumeration value 'BS' not handled in switch [-Wswitch]
 Shell.cpp:205:24: warning: enumeration value 'HT' not handled in switch [-Wswitch]
 Shell.cpp:205:24: warning: enumeration value 'VT' not handled in switch [-Wswitch]
-Shell.cpp:205:24: warning: enumeration value 'CR' not handled in switch [-Wswitch]
 Shell.cpp:205:24: warning: enumeration value 'LS1' not handled in switch [-Wswitch]
 Shell.cpp:205:24: warning: enumeration value 'LS0' not handled in switch [-Wswitch]
 Shell.cpp:205:24: warning: enumeration value 'DLE' not handled in switch [-Wswitch]

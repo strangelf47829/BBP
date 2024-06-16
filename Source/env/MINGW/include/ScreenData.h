@@ -23,6 +23,10 @@ namespace Host
 	constexpr BBP::std::pos_t w = 1200;
 	constexpr BBP::std::pos_t h = 800;
 
+	// Calculate tty_x and tty_y sizes
+	constexpr BBP::std::halfword tty_x = w / 10;
+	constexpr BBP::std::halfword tty_y = h / 10;
+
 	// Window
 	extern BBP::std::window hostDisplay;
 

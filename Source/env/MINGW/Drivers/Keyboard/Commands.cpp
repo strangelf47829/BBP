@@ -59,14 +59,6 @@ bool Host::Drivers::Keyboard::captureKey(BBP::std::size_t argc, BBP::std::word *
 	if (inputStack.atElement == 0)
 		return false;
 
-	// Declare polling
-	BBP::std::word captured = 0;
-	bool couldCapture;
-
-	// Poll
-	do couldCapture = pollKey(1, &captured);
-	while (couldCapture && captured);
-
 	// Declare element and read
 	BBP::std::string_element element;
 	inputStack >> element;
@@ -91,7 +83,7 @@ bool Host::Drivers::Keyboard::pollKey(BBP::std::size_t argc, BBP::std::word *arg
 	// Declare key
 	BBP::std::string_element key;
 
-	// If some present
+	// If something available
 	bool captured = bios->getKeyboardInput(key);
 
 	// If Captured, push to stack

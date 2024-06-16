@@ -58,7 +58,11 @@ bool BBP::std::DirectoryInfo::scarce_populate(std::PATH &path)
 
 		// If entryPath is smaller than or equal to pathString, skip the entry.
 		if (entryPath_length <= pathString_length)
+		{
+			// Step over
+			system::Kernel::stepInspectionIterator();
 			continue;
+		}
 
 		// Set offset (Fix directory issues later)
 		std::string entryPathAdjusted = std::string(entryPath_length - pathString_length, entryPath.data + pathString_length);
@@ -77,7 +81,7 @@ bool BBP::std::DirectoryInfo::scarce_populate(std::PATH &path)
 			fileLength += entryPath_length;
 		}
 
-		// Step over
+		// Step
 		system::Kernel::stepInspectionIterator();
 	}
 
