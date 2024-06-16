@@ -1,6 +1,6 @@
 Drivers/FileSystem/Actions.cpp: In function 'BBP::std::word Host::Drivers::FileSystem::sendDataToFileSystem(BBP::std::size_t, BBP::std::PAGE<char>&)':
-Drivers/FileSystem/Actions.cpp:12:30: warning: implicitly-declared 'constexpr BBP::std::PATH& BBP::std::PATH::operator=(const BBP::std::PATH&)' is deprecated [-Wdeprecated-copy]
-   12 |                 activeFile = page;
+Drivers/FileSystem/Actions.cpp:19:30: warning: implicitly-declared 'constexpr BBP::std::PATH& BBP::std::PATH::operator=(const BBP::std::PATH&)' is deprecated [-Wdeprecated-copy]
+   19 |                 activeFile = page;
       |                              ^~~~
 In file included from Drivers/FileSystem/../../../../include/FileSysInfo.h:4,
                  from Drivers/FileSystem/Filedrvhdr.h:6,
@@ -12,14 +12,14 @@ Drivers/FileSystem/Actions.cpp:9:16: warning: enumeration value 'INSPECT' not ha
     9 |         switch (mode)
       |                ^
 Drivers/FileSystem/Actions.cpp: In function 'BBP::std::word Host::Drivers::FileSystem::receiveDataFromFileSystem(BBP::std::size_t, BBP::std::PAGE<char>&)':
-Drivers/FileSystem/Actions.cpp:42:30: warning: unused variable 'c' [-Wunused-variable]
-   42 |                         char c = 0;
+Drivers/FileSystem/Actions.cpp:49:30: warning: unused variable 'c' [-Wunused-variable]
+   49 |                         char c = 0;
       |                              ^
 Drivers/FileSystem/Actions.cpp: In function 'BBP::std::word Host::Drivers::FileSystem::sendDataToFileSystem(BBP::std::size_t, BBP::std::PAGE<char>&)':
-Drivers/FileSystem/Actions.cpp:23:1: warning: control reaches end of non-void function [-Wreturn-type]
-   23 | }
+Drivers/FileSystem/Actions.cpp:30:1: warning: control reaches end of non-void function [-Wreturn-type]
+   30 | }
       | ^
 Drivers/FileSystem/Actions.cpp: In function 'BBP::std::word Host::Drivers::FileSystem::receiveDataFromFileSystem(BBP::std::size_t, BBP::std::PAGE<char>&)':
-Drivers/FileSystem/Actions.cpp:66:1: warning: control reaches end of non-void function [-Wreturn-type]
-   66 | }
+Drivers/FileSystem/Actions.cpp:73:1: warning: control reaches end of non-void function [-Wreturn-type]
+   73 | }
       | ^

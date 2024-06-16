@@ -9,6 +9,13 @@ BBP::std::word Host::Drivers::FileSystem::sendDataToFileSystem(BBP::std::size_t 
 	switch (mode)
 	{
 	case FileSystemMode::READPATH:
+
+		// Convert to windows thingy
+		for (BBP::std::index_t idx = 0; page[idx]; idx++)
+			if (page[idx] == '/')
+				page[idx] = '\\';
+
+		// Set file
 		activeFile = page;
 		return amount;
 
