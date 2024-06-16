@@ -38,14 +38,7 @@ namespace BBP
 			// This ELF Object serves as the 'shared library' of this hyper visor
 			BinaryExecutable sharedlib;
 
-			/*
-			INSERT FUNCTIONS TO ACCESS SHARED LIB
-			*/
-
-			/*
-			INSERT THREAD MANIPULATION STUFF
-			*/
-
+			// Count of PID counts
 			pid_t currentPIDCount;
 
 			// IDX: The index of the thread, PID: PID.

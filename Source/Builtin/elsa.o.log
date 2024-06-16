@@ -1,10 +1,10 @@
-elsa.cpp: In function ‘BBP::std::errno_t BBP::system::elsa_builtin(BBP::std::size_t, BBP::std::string_element**)’:
-elsa.cpp:36:7: warning: variable ‘enableDebug’ set but not used [-Wunused-but-set-variable]
-   36 |  bool enableDebug = false;
-      |       ^~~~~~~~~~~
-elsa.cpp:37:7: warning: variable ‘enableLinking’ set but not used [-Wunused-but-set-variable]
-   37 |  bool enableLinking = true;
-      |       ^~~~~~~~~~~~~
+elsa.cpp: In function 'BBP::std::errno_t BBP::system::elsa_builtin(BBP::std::size_t, BBP::std::string_element**)':
+elsa.cpp:36:14: warning: variable 'enableDebug' set but not used [-Wunused-but-set-variable]
+   36 |         bool enableDebug = false;
+      |              ^~~~~~~~~~~
+elsa.cpp:37:14: warning: variable 'enableLinking' set but not used [-Wunused-but-set-variable]
+   37 |         bool enableLinking = true;
+      |              ^~~~~~~~~~~~~
 elsa.cpp:127:1: warning: control reaches end of non-void function [-Wreturn-type]
   127 | }
       | ^

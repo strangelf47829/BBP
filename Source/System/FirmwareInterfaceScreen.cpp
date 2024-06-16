@@ -10,3 +10,8 @@ void BBP::FirmwareInterface::printString(std::string &str)
 {
 	HardwareScreen.writeData(str);
 }
+
+void BBP::FirmwareInterface::initDisplay()
+{
+	HardwareScreen.hardwareDriver.Connect();
+}

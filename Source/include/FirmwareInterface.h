@@ -89,6 +89,9 @@ namespace BBP
 		// Built-in system commands
 		void initClock();
 
+		// Built-in screen commands
+		void initDisplay();
+
 		// Built-in keyboard commands
 		std::index_t getKeyCount();
 		std::string_element getKeyboardKey();

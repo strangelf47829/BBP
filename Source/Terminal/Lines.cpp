@@ -12,7 +12,7 @@ void BBP::std::Terminal::TerminalApplication::deleteLine()
 void BBP::std::Terminal::TerminalApplication::extendLine()
 {
 	// Get currently active line
-	std::string *activeLine = state.terminalLines[state.activePresentationPosition.vertical];
+	std::w_string *activeLine = state.terminalLines[state.activePresentationPosition.vertical];
 
 	// If null, insert line instead.
 	if (activeLine == nullptr)
@@ -22,10 +22,10 @@ void BBP::std::Terminal::TerminalApplication::extendLine()
 	}
 
 	// Get last in sequence
-	std::string *lastPage = &last(*activeLine);
+	std::w_string *lastPage = &last(*activeLine);
 
 	// Allocate new line
-	std::string *newLine = state.allocator->add_object(new std::string);
+	std::w_string *newLine = state.allocator->add_object(new std::w_string);
 
 	// Allocate string page
 	state.allocator->page_calloc(*newLine, state.viewportSize.horizontal);

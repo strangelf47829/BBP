@@ -1,0 +1,10 @@
+Drivers/Screen/Commands.cpp: In function 'bool Host::Drivers::Screen::printSplash(BBP::std::size_t, BBP::std::word*)':
+Drivers/Screen/Commands.cpp:32:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   32 | }
+      | ^
+Drivers/Screen/Commands.cpp:23:58: warning: unused parameter 'argc' [-Wunused-parameter]
+   23 | bool Host::Drivers::Screen::printSplash(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                         ~~~~~~~~~~~~~~~~~^~~~
+Drivers/Screen/Commands.cpp:23:80: warning: unused parameter 'argv' [-Wunused-parameter]
+   23 | bool Host::Drivers::Screen::printSplash(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                                                ~~~~~~~~~~~~~~~~^~~~

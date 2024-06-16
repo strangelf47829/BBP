@@ -14,8 +14,14 @@ namespace BBP
 		typedef char string_element;
 		typedef unsigned char ustring_element;
 
+		/* The type a wide string is made of */
+		typedef std::word wstring_element;
+
 		/* Dynamically allocated string */
 		typedef PAGE<string_element> string;
+
+		/* Dynamically allocated wide string */
+		typedef PAGE<wstring_element> w_string;
 
 		/* Statically allocated string typedef */
 		template <int N>

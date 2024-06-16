@@ -1,8 +1,8 @@
-Scroll.cpp: In member function ‘void BBP::std::Terminal::TerminalApplication::ScrollBack(BBP::std::offset_t)’:
-Scroll.cpp:3:67: warning: unused parameter ‘count’ [-Wunused-parameter]
+Scroll.cpp: In member function 'void BBP::std::Terminal::TerminalApplication::ScrollBack(BBP::std::offset_t)':
+Scroll.cpp:3:67: warning: unused parameter 'count' [-Wunused-parameter]
     3 | void BBP::std::Terminal::TerminalApplication::ScrollBack(offset_t count)
       |                                                          ~~~~~~~~~^~~~~
-Scroll.cpp: In member function ‘void BBP::std::Terminal::TerminalApplication::ScrollForward(BBP::std::offset_t)’:
-Scroll.cpp:8:70: warning: unused parameter ‘count’ [-Wunused-parameter]
+Scroll.cpp: In member function 'void BBP::std::Terminal::TerminalApplication::ScrollForward(BBP::std::offset_t)':
+Scroll.cpp:8:70: warning: unused parameter 'count' [-Wunused-parameter]
     8 | void BBP::std::Terminal::TerminalApplication::ScrollForward(offset_t count)
       |                                                             ~~~~~~~~~^~~~~

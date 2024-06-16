@@ -1,36 +1,37 @@
-#include "../../include/KeyboardDriver.h"
-#include "../../include/Environment.h"
+#include "../../../include/KeyboardDriver.h"
 
-BBP::std::word Environment::Drivers::keyboard::sendDataToKeyboard(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &)
+BBP::std::word Host::Drivers::Keyboard::sendDataToKeyboard(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &page)
 {
-	// Does nothing
-	return 0; // Wrote 0 bytes
+	return 0;
 }
 
-BBP::std::word Environment::Drivers::keyboard::receiveDataFromKeyboard(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &)
+BBP::std::word Host::Drivers::Keyboard::receiveDataFromKeyboard(BBP::std::size_t amount, BBP::std::PAGE<BBP::std::string_element> &page)
 {
-	// Get pointer to active stdin
-	BBP::std::Stack<BBP::std::string_element> *stdin = &BBP::system::kernelSS()->getKernelSystemContext()->STDIN;
+	// Get amount of keyboard keys queued up
+	BBP::std::size_t queued;
+	keyCount(1, &queued);
 
-	// If it is nullptr, read 0 bytes
-	if (stdin == nullptr)
-		return 0; // Read 0 bytes
+	// Get amount to be read ('amount' or 'queued', whichever is less)
+	BBP::std::size_t toRead = (queued < amount) ? queued : amount;
 
-	// Store size before write to calculate difference later
-	BBP::std::size_t preWrite = keyboardStack.atElement;
+	// While that is true;
+	for (BBP::std::index_t idx = 0; idx < toRead; idx++)
+	{
+		// Declare key
+		BBP::std::word key;
 
-	// Write data from keyboard stack into STDIN
-	keyboardStack >>= BBP::system::kernelSS()->getKernelSystemContext()->STDIN;
+		// Read
+		captureKey(1, &key);
 
-	// Calculate difference
-	BBP::std::size_t wroteBytes = preWrite - keyboardStack.atElement;
+		// Set
+		page[idx] = key;
+	}
 
-	// Return that amount
-	return wroteBytes;
+	// Return amount of keys read
+	return toRead;
 }
 
-BBP::std::word Environment::Drivers::keyboard::receiveKeyboardMetadata(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &)
+BBP::std::word Host::Drivers::Keyboard::receiveKeyboardMetadata(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &page)
 {
-	// Does nothing.
-	return 0; // Wrote 0 bytes
+	return 0;
 }

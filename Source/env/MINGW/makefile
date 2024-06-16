@@ -2,29 +2,42 @@
 # | Module make utility |
 # +=====================+
 
-# =========== Drivers
-DRIVER_SRC = Actions.cpp Driver.cpp Loader.cpp Commands.cpp
-DRIVERS = Keyboard Screen File
+# Module information
+MODULE=ENV
 
 # =========== BIOS targets
-BIOS_SRC = BIOS/BIOS.cpp BIOS/POST.cpp
+BIOS_SRC= Boot Entry Files Keyboard Screen printf Splash Time
+
+# =========== Configuration targets
+CONF_SRC= Config Host Memsize CPUData RecordSearch
 
 # =========== EFI targets
-EFI_SRC = EFI/EFI.cpp EFI/Records.cpp
+EFI_SRC= DriverInterface InteractiveShell Formatting
 
-# =========== plugin targets
-PLUGINS= Time Memory Input File ECMA35
-PLUGINS_SRC= $(foreach plug,$(PLUGINS),./Plugins/$(plug).cpp)
+# =========== System targets
+SYS_SRC= Memory UserLogin
 
-# =========== Submodule information
-SUBMODULES= GTerm
+# =========== File system targets
+FILE_SRC= Info Inspection Reading Writing
 
-# =========== Module target details
-MODULE= ENV
-DRIVERS_SRCLIST= $(foreach drv,$(DRIVERS), $(foreach fil,$(DRIVER_SRC),./Drivers/$(drv)/$(fil))) ./Drivers/Manifests.cpp
-SUBMODULE_SRC= $(foreach submod,$(SUBMODULES),$(wildcard ./Source/$(submod)/*.cpp))
-MODULE_SRC= Boot.cpp $(EFI_SRC) $(BIOS_SRC) $(PLUGINS_SRC) $(DRIVERS_SRCLIST) $(SUBMODULE_SRC)
+# =========== Display targets
+DISP_SRC= Terminal Window Render
 
+# +++++++++++ Implemented driverss
+DRV_LIST= System FileSystem Screen Keyboard
+DRV_SRC= Actions Commands Loader
+
+# =========== Get list of targets from above lists
+BIOS_TGT= $(foreach var,$(BIOS_SRC),BIOS/$(var).cpp)
+CONF_TGT= $(foreach var,$(CONF_SRC),Configuration/$(var).cpp)
+DISP_TGT= $(foreach var,$(DISP_SRC),Display/$(var).cpp)
+EFI_TGT=  $(foreach var,$(EFI_SRC),EFI/$(var).cpp)
+SYS_TGT=  $(foreach var,$(SYS_SRC),System/$(var).cpp)
+FILE_TGT=  $(foreach var,$(FILE_SRC),FileSystem/$(var).cpp)
+DRV_TGT=  $(foreach drv,$(DRV_LIST),$(foreach var,$(DRV_SRC),Drivers/$(drv)/$(var).cpp))
+
+# Source files
+MODULE_SRC= $(BIOS_TGT) $(CONF_TGT) $(EFI_TGT) $(SYS_TGT) $(FILE_TGT) $(DRV_TGT) $(DISP_TGT) GTerm/GTerm.cpp
 
 # Actually include the makefile
 SOURCE_DIR=./../..

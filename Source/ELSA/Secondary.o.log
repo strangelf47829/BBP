@@ -1,13 +1,13 @@
-Secondary.cpp: In member function ‘const string_element* BBP::esa::esaProcessor::resolve(BBP::std::index_t, BBP::std::index_t)’:
-Secondary.cpp:349:22: warning: variable ‘numericalError’ set but not used [-Wunused-but-set-variable]
-  349 |     std::conststring numericalError = nullptr;
-      |                      ^~~~~~~~~~~~~~
-Secondary.cpp:412:7: warning: unused variable ‘expectedReference’ [-Wunused-variable]
-  412 |  bool expectedReference = !instruction.args[atArgument].isLiteralArg || instruction.args[atArgument].anyvalue;
-      |       ^~~~~~~~~~~~~~~~~
-Secondary.cpp:204:73: warning: unused parameter ‘at’ [-Wunused-parameter]
+Secondary.cpp: In member function 'const BBP::std::string_element* BBP::esa::esaProcessor::resolve(BBP::std::index_t, BBP::std::index_t)':
+Secondary.cpp:349:50: warning: variable 'numericalError' set but not used [-Wunused-but-set-variable]
+  349 |                                 std::conststring numericalError = nullptr;
+      |                                                  ^~~~~~~~~~~~~~
+Secondary.cpp:412:14: warning: unused variable 'expectedReference' [-Wunused-variable]
+  412 |         bool expectedReference = !instruction.args[atArgument].isLiteralArg || instruction.args[atArgument].anyvalue;
+      |              ^~~~~~~~~~~~~~~~~
+Secondary.cpp:204:73: warning: unused parameter 'at' [-Wunused-parameter]
   204 | BBP::std::conststring BBP::esa::esaProcessor::resolve(BBP::std::index_t at, BBP::std::index_t lastspace)
       |                                                       ~~~~~~~~~~~~~~~~~~^~
-Secondary.cpp:204:95: warning: unused parameter ‘lastspace’ [-Wunused-parameter]
+Secondary.cpp:204:95: warning: unused parameter 'lastspace' [-Wunused-parameter]
   204 | BBP::std::conststring BBP::esa::esaProcessor::resolve(BBP::std::index_t at, BBP::std::index_t lastspace)
       |                                                                             ~~~~~~~~~~~~~~~~~~^~~~~~~~~

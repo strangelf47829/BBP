@@ -167,7 +167,7 @@ void BBP::std::stack_trace::showStackTrace()
 	stack_trace_db db;
 
 	// Get reference address
-	std::address_t refAddress = 0x22710;
+	std::address_t refAddress = 0x227ee;
 
 	// Move up once. If unable to, break out
 	if (moveUp() == false)

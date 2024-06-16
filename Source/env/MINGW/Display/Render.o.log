@@ -1,0 +1,7 @@
+Display/Render.cpp: In function 'void Host::drawWindow(BBP::std::window*, SDL_Renderer*)':
+Display/Render.cpp:9:27: warning: comparison of integer expressions of different signedness: 'int' and 'BBP::std::size_t' {aka 'unsigned int'} [-Wsign-compare]
+    9 |         for (int X = 0; X < wind->width; X++)
+      |                         ~~^~~~~~~~~~~~~
+Display/Render.cpp:11:35: warning: comparison of integer expressions of different signedness: 'int' and 'BBP::std::size_t' {aka 'unsigned int'} [-Wsign-compare]
+   11 |                 for (int Y = 0; Y < wind->height; Y++)
+      |                                 ~~^~~~~~~~~~~~~~

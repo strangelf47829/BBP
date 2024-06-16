@@ -1,18 +1,18 @@
-C1Actions.cpp: In member function ‘void BBP::std::Terminal::TerminalApplication::ST_C1()’:
-C1Actions.cpp:87:10: warning: enumeration value ‘none’ not handled in switch [-Wswitch]
-   87 |   switch (stringState)
-      |          ^
-C1Actions.cpp: In member function ‘void BBP::std::Terminal::TerminalApplication::C1Action(BBP::std::Terminal::TerminalApplication::C1)’:
-C1Actions.cpp:133:9: warning: enumeration value ‘BPH’ not handled in switch [-Wswitch]
-  133 |  switch (action)
-      |         ^
-C1Actions.cpp:133:9: warning: enumeration value ‘NBH’ not handled in switch [-Wswitch]
-C1Actions.cpp:133:9: warning: enumeration value ‘HTS’ not handled in switch [-Wswitch]
-C1Actions.cpp:133:9: warning: enumeration value ‘HTJ’ not handled in switch [-Wswitch]
-C1Actions.cpp:133:9: warning: enumeration value ‘VTS’ not handled in switch [-Wswitch]
-C1Actions.cpp:133:9: warning: enumeration value ‘RI’ not handled in switch [-Wswitch]
-C1Actions.cpp:133:9: warning: enumeration value ‘SS2’ not handled in switch [-Wswitch]
-C1Actions.cpp:133:9: warning: enumeration value ‘SS3’ not handled in switch [-Wswitch]
-C1Actions.cpp:133:9: warning: enumeration value ‘STS’ not handled in switch [-Wswitch]
-C1Actions.cpp:133:9: warning: enumeration value ‘MW’ not handled in switch [-Wswitch]
-C1Actions.cpp:133:9: warning: enumeration value ‘SCI’ not handled in switch [-Wswitch]
+C1Actions.cpp: In member function 'void BBP::std::Terminal::TerminalApplication::ST_C1()':
+C1Actions.cpp:87:24: warning: enumeration value 'none' not handled in switch [-Wswitch]
+   87 |                 switch (stringState)
+      |                        ^
+C1Actions.cpp: In member function 'void BBP::std::Terminal::TerminalApplication::C1Action(C1)':
+C1Actions.cpp:133:16: warning: enumeration value 'BPH' not handled in switch [-Wswitch]
+  133 |         switch (action)
+      |                ^
+C1Actions.cpp:133:16: warning: enumeration value 'NBH' not handled in switch [-Wswitch]
+C1Actions.cpp:133:16: warning: enumeration value 'HTS' not handled in switch [-Wswitch]
+C1Actions.cpp:133:16: warning: enumeration value 'HTJ' not handled in switch [-Wswitch]
+C1Actions.cpp:133:16: warning: enumeration value 'VTS' not handled in switch [-Wswitch]
+C1Actions.cpp:133:16: warning: enumeration value 'RI' not handled in switch [-Wswitch]
+C1Actions.cpp:133:16: warning: enumeration value 'SS2' not handled in switch [-Wswitch]
+C1Actions.cpp:133:16: warning: enumeration value 'SS3' not handled in switch [-Wswitch]
+C1Actions.cpp:133:16: warning: enumeration value 'STS' not handled in switch [-Wswitch]
+C1Actions.cpp:133:16: warning: enumeration value 'MW' not handled in switch [-Wswitch]
+C1Actions.cpp:133:16: warning: enumeration value 'SCI' not handled in switch [-Wswitch]

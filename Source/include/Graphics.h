@@ -68,7 +68,7 @@ namespace BBP
 			} version;
 
 			// Glyphs and such
-			PAGE<mask_t> glyphs;
+			STATIC_PAGE<mask_t, 4096> glyphs;
 			STATIC_PAGE<offset_t, 256> mapping;
 
 		};
@@ -212,7 +212,7 @@ namespace BBP
 		void loadFont(Font &, ResourceManager &, std::PAGE<std::string_element> &);
 
 		// Load font per type
-		void loadFontPSF1(Font &, ResourceManager &, std::PAGE<std::string_element> &);
+		void loadFontPSF1(Font &, std::PAGE<std::string_element> &);
 		void loadFontPSF2(Font &, ResourceManager &, std::PAGE<std::string_element> &);
 
 		// Unload a font

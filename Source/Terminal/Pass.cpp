@@ -3,7 +3,7 @@
 void BBP::std::Terminal::TerminalApplication::addCharacterToPosition(CC character)
 {
 	// Get currently active string
-	std::string *activeString = state.terminalLines[state.activePresentationPosition.vertical];
+	std::w_string *activeString = state.terminalLines[state.activePresentationPosition.vertical];
 
 	// Get sequence length
 	size_t lineLength = seqlen(*activeString);
@@ -13,7 +13,7 @@ void BBP::std::Terminal::TerminalApplication::addCharacterToPosition(CC characte
 		extendLine();
 
 	// Write
-	std::string_element c = character;
+	std::wstring_element c = character;
 	write(activeString, c, (std::index_t)state.activePresentationPosition.horizontal);
 }
 

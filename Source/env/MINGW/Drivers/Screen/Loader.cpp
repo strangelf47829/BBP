@@ -1,27 +1,19 @@
-#include "../../include/ScreenDriver.h"
-#include "../../include/Environment.h"
+#include "../../../include/ScreenDriver.h"
+#include "../../../../include/drvcmd.h"
+#include "../../include/ScreenData.h"
 
-void Environment::Drivers::screen::loadScreenDriver(BBP::system::DeviceDriver &driver)
+// Reduces amount of characters needed to type
+namespace TTY = Host::Drivers::Screen;
+
+// Amount of screen commands
+constexpr BBP::std::size_t screenCMDsize = 4;
+
+// List of screen commands and actions
+BBP::system::HardwareCmd screenCMD[screenCMDsize] = { TTY::connectToScreen, TTY::disconnectFromScreen, TTY::clearScreen, TTY::printSplash };
+BBP::system::HardwareAction screenActions[3] = { TTY::sendDataToScreen, TTY::receiveDataScreen, TTY::receiveScreenMetadata };
+
+void Host::Drivers::Screen::loadScreenDriver(BBP::system::DeviceDriver &driver)
 {
-	// Set stack to kernel stuff whatever
-	stdoutStack = BBP::std::Stack<BBP::std::string_element>(&driver.hardwareDriver.getOutput(), driver.hardwareDriver.getOutput().dataSize);
-
-	// When written to, use the print screen thingy
-	stdoutStack.writeTo = print_stack_to_string;
-
-	// This driver is builtin.
-	driver.hardwareDriver.hwid = 0; // Reset
-
-	// Set appropriate flags
-	driver.hardwareDriver.hwid |= BBP::system::HardwareClassification::Builtin;
-	driver.hardwareDriver.hwid |= BBP::system::HardwareClassification::Async;
-	driver.hardwareDriver.hwid |= BBP::system::HardwareClassification::External;
-	driver.hardwareDriver.hwid |= BBP::system::HardwareClassification::SimplexReceiver;
-	driver.hardwareDriver.hwid |= BBP::system::HardwareClassification::System;
-
-	// Also do the same for STDOUT
-	BBP::system::kernelSS()->getKernelSystemContext()->STDOUT.writeTo = print_stack_to_string;
-
-	// Then set input page
-	driver.softwareDriver.setOutputPage(&stdoutStack);
+	// Set commands
+	driver.hardwareDriver.setHandleData(screenActions, screenCMDsize, screenCMD);
 }

@@ -1,0 +1,4 @@
+Drivers/Keyboard/Commands.cpp: In function 'bool Host::Drivers::Keyboard::pollKey(BBP::std::size_t, BBP::std::word*)':
+Drivers/Keyboard/Commands.cpp:103:25: warning: statement has no effect [-Wunused-value]
+  103 |                 argv[0] == !!(captured);
+      |                 ~~~~~~~~^~~~~~~~~~~~~~~

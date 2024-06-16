@@ -1,13 +1,18 @@
-#include "../../include/KeyboardDriver.h"
-#include "../../include/Environment.h"
+#include "../../../include/KeyboardDriver.h"
+#include "../../../../include/drvcmd.h"
 
+// Reduces amount of characters needed to type
+namespace KeyB = Host::Drivers::Keyboard;
 
-// Load the keyboard
-void Environment::Drivers::keyboard::loadKeyboardDriver(BBP::system::DeviceDriver &driver)
+// Amount of screen commands
+constexpr BBP::std::size_t keyboardCMDsize = 5;
+
+// List of screen commands and actions
+BBP::system::HardwareCmd keyboardCMD[keyboardCMDsize] = { KeyB::connectKeyboard, KeyB::disconnectKeyboard, KeyB::keyCount, KeyB::captureKey, KeyB::pollKey };
+BBP::system::HardwareAction keyboardActions[3] = { KeyB::sendDataToKeyboard, KeyB::receiveDataFromKeyboard, KeyB::receiveKeyboardMetadata };
+
+void Host::Drivers::Keyboard::loadKeyboardDriver(BBP::system::DeviceDriver &driver)
 {
-	// Set stack to hardware input stuff
-	keyboardStack = BBP::std::Stack<BBP::std::string_element>(&BBP::system::getKernelInstance().getKeyboardDriver().hardwareDriver.getInput(), BBP::system::deviceBufferSize);
-
-	// Set keyboard stack to keyboard stack
-	BBP::system::getKernelInstance().getKeyboardDriver().softwareDriver.setInputPage(&keyboardStack);
+	// Set commands
+	driver.hardwareDriver.setHandleData(keyboardActions, keyboardCMDsize, keyboardCMD);
 }

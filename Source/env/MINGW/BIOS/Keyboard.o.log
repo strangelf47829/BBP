@@ -1,0 +1,7 @@
+BIOS/Keyboard.cpp: In member function 'virtual bool Host::BIOS::getKeyboardInput(BBP::std::string_element&)':
+BIOS/Keyboard.cpp:21:31: warning: unused variable 'keyData' [-Wunused-variable]
+   21 |         const BBP::std::byte *keyData = SDL_GetKeyboardState(&numkeys);
+      |                               ^~~~~~~
+BIOS/Keyboard.cpp:8:61: warning: unused parameter 'ch' [-Wunused-parameter]
+    8 | bool Host::BIOS::getKeyboardInput(BBP::std::string_element &ch)
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~^~

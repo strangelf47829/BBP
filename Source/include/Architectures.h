@@ -33,7 +33,11 @@ namespace BBP
 	{
 
 		// Builtin size_t
+#ifndef SIZE_T_OVERRIDE
 		using __cxx_size_t = LONG_INT;
+#else
+		using __cxx_size_t = SIZE_T_OVERRIDE;
+#endif
 
 	}
 }

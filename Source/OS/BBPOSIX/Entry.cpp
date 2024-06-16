@@ -13,13 +13,9 @@ bool OS::BBPOSIX::EntryPoint(BBP::system::EFI *EFI, BBP::std::TaskPool *&pool)
 	// Set taskpool
 	pool = &OS::Scheduler::schedulerPool;
 
-	// Show message of the day
-	BBP::std::string str = "init-motd";
-	BBP::system::DaemonRecord::records[0].owner->functorFunctor(BBP::system::DaemonRecord::records[0].owner->lookupFunctor(str)->hash, 0, nullptr);
-
 	// Start shell
-	str = "shell-app";
-	BBP::system::DaemonRecord::records[0].owner->functorFunctor(BBP::system::DaemonRecord::records[0].owner->lookupFunctor(str)->hash, 0, nullptr);
+	BBP::std::errno_t error = ENONE;
+	BBP::system::DaemonRecord::executeService("initd", "shell-app", error, 0, nullptr);
 
 	return true;
 }

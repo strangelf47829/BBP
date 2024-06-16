@@ -53,6 +53,9 @@ namespace BBP
 			// This member 
 			static std::PAGE<DaemonRecord> records;
 
+			// Look up a thingy
+			static bool executeService(std::string, std::string, std::errno_t &, std::size_t, std::c_string *);
+
 			// Constructor automatically adds to records
 			DaemonRecord(Daemon *, std::conststring);
 			DaemonRecord();

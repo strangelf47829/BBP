@@ -1,0 +1,7 @@
+BIOS/Screen.cpp: In member function 'virtual void Host::BIOS::printCharacter(BBP::std::string_element)':
+BIOS/Screen.cpp:17:19: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+   17 |         if (++atX > w / 8 || c == '\n')
+      |             ~~~~~~^~~~~~~
+BIOS/Screen.cpp:20:27: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+   20 |                 if (++atY > h / 16)
+      |                     ~~~~~~^~~~~~~~

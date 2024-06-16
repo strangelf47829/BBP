@@ -10,7 +10,7 @@ void BBP::std::R2D::setActiveFont(window &w, Font &font)
 }
 
 // Load a font from memory
-void BBP::std::loadFontPSF1(Font & font, ResourceManager &allocator, std::PAGE<std::string_element> &element)
+void BBP::std::loadFontPSF1(Font & font, std::PAGE<std::string_element> &element)
 {
 	// Check if font has at least 4 bytes
 	if (element.dataSize < 4)
@@ -42,10 +42,6 @@ void BBP::std::loadFontPSF1(Font & font, ResourceManager &allocator, std::PAGE<s
 	// Set version
 	font.version = BBP::std::Font::PSF1;
 
-	// Allocate space
-	allocator.page_calloc(font.glyphs, 256 * size);
-	font.glyphs = std::PAGE<word>(256 * 4, (word*)::malloc(256 * 4 * 4));
-
 	// print out first 
 
 	// Print each 256 characters
@@ -69,11 +65,11 @@ void BBP::std::loadFontPSF1(Font & font, ResourceManager &allocator, std::PAGE<s
 				reordered = (b4 << 24) | (b3 << 16) | (b2 << 8) | b1;
 
 			// Set that as glyph
-			font.glyphs.data[idx * 4 + ((_word / 4))] = reordered;
+			font.glyphs[idx * 4 + ((_word / 4))] = reordered;
 		}
 
 		// Set mapping
-		font.mapping.data[idx] = idx * (size / 4);
+		font.mapping[idx] = idx * (size / 4);
 
 	}
 

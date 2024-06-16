@@ -171,8 +171,8 @@ bool BBP::std::strcmp(c_string a, c_string b)
 bool BBP::std::strcmp(string &a, string &b)
 {
 	// Get sequence length for both
-	std::size_t seqlen_a = seqlen(a);
-	std::size_t seqlen_b = seqlen(b);
+	std::size_t seqlen_a = strlen(a);
+	std::size_t seqlen_b = strlen(b);
 
 	// If they are both 0, return true
 	if (seqlen_a == seqlen_b && seqlen_a == 0)

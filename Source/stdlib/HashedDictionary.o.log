@@ -1,0 +1,24 @@
+In file included from ../include/Stack.h:88,
+                 from ../include/Resources.h:5,
+                 from ../include/Hashmap.h:5,
+                 from ../include/Dictionary.h:4,
+                 from HashedDictionary.cpp:1:
+../include/Stack.hxx: In member function 'void BBP::std::Stack<K>::Extend(BBP::std::ResourceManager*, BBP::std::index_t)':
+../include/Stack.hxx:135:81: warning: invalid use of incomplete type 'class BBP::std::ResourceManager'
+  135 |                         *page = std::PAGE<K>(page->dataSize + by, (K *)allocator->calloc(page->dataSize + by, sizeof(K)));
+      |                                                                                 ^~
+../include/Stack.h:11:23: note: forward declaration of 'class BBP::std::ResourceManager'
+   11 |                 class ResourceManager;
+      |                       ^~~~~~~~~~~~~~~
+../include/Stack.hxx:141:34: warning: invalid use of incomplete type 'class BBP::std::ResourceManager'
+  141 |                         allocator->free(oldData);
+      |                                  ^~
+../include/Stack.h:11:23: note: forward declaration of 'class BBP::std::ResourceManager'
+   11 |                 class ResourceManager;
+      |                       ^~~~~~~~~~~~~~~
+In file included from ../include/Dictionary.h:5:
+../include/Concepts.h: At global scope:
+../include/Concepts.h:16:25: warning: testing if a concept-id is a valid expression; add 'requires' to check satisfaction [-Wmissing-requires]
+   16 |                         Hashable_t<T>;
+      |                         ^
+      |                         requires 

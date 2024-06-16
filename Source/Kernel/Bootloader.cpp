@@ -3,9 +3,12 @@
 #include "../env/include/Bootloader.h"
 #include "../env/include/EFIConfig.h"
 
-int main(int argc, char **argv)
-{
+#ifndef ENTRY_OVERRIDE
+#define ENTRY_OVERRIDE main
+#endif
 
+extern "C" int ENTRY_OVERRIDE(int argc, char **argv)
+{
 	// Get reference to BIOS
 	BBP::BIOS *bios = Host::getBIOS();
 

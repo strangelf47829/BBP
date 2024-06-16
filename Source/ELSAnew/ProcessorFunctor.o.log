@@ -1,0 +1,8 @@
+In file included from ../include/ELSA/../Dictionary.h:5,
+                 from ../include/ELSA/Keywords.h:5,
+                 from ../include/ELSA/Processor.h:4,
+                 from ProcessorFunctor.cpp:1:
+../include/ELSA/../Concepts.h:16:25: warning: testing if a concept-id is a valid expression; add 'requires' to check satisfaction [-Wmissing-requires]
+   16 |                         Hashable_t<T>;
+      |                         ^
+      |                         requires 

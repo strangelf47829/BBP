@@ -1,12 +1,17 @@
-SymbolDatabase.cpp: In member function ‘BBP::elsa::symbol_db::symhandle_t BBP::elsa::symbol_db::initSymbol()’:
+In file included from ../include/ELSA/../Dictionary.h:5,
+                 from ../include/ELSA/Symbol.h:6,
+                 from SymbolDatabase.cpp:1:
+../include/ELSA/../Concepts.h:16:25: warning: testing if a concept-id is a valid expression; add 'requires' to check satisfaction [-Wmissing-requires]
+   16 |                         Hashable_t<T>;
+      |                         ^
+      |                         requires 
+SymbolDatabase.cpp: In member function 'BBP::elsa::symbol_db::symhandle_t BBP::elsa::symbol_db::initSymbol()':
 SymbolDatabase.cpp:15:1: warning: no return statement in function returning non-void [-Wreturn-type]
    15 | }
       | ^
-In file included from ../include/ELSA/../Dictionary.h:120,
-                 from ../include/ELSA/Symbol.h:6,
-                 from SymbolDatabase.cpp:1:
-../include/ELSA/../Dictionary.hxx: In instantiation of ‘void BBP::std::HashedDictionary<Key_t, Value_t>::add(Key_t, Value_t) [with Key_t = BBP::std::PAGE<char>; Value_t = BBP::elsa::symbol_db_entry]’:
-SymbolDatabase.cpp:76:53:   required from here
-../include/ELSA/../Dictionary.hxx:28:9: warning: unused variable ‘valueHash’ [-Wunused-variable]
-   28 |  hash_t valueHash = (hash_t)value;
-      |         ^~~~~~~~~
+In file included from ../include/ELSA/../Dictionary.h:120:
+../include/ELSA/../Dictionary.hxx: In instantiation of 'void BBP::std::HashedDictionary<Key_t, Value_t>::add(Key_t, Value_t) [with Key_t = BBP::std::PAGE<char>; Value_t = BBP::elsa::symbol_db_entry]':
+SymbolDatabase.cpp:76:16:   required from here
+../include/ELSA/../Dictionary.hxx:28:16: warning: unused variable 'valueHash' [-Wunused-variable]
+   28 |         hash_t valueHash = (hash_t)value;
+      |                ^~~~~~~~~

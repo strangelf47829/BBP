@@ -1,4 +1,4 @@
-BinaryExecutables.cpp: In member function ‘void BBP::userspace::BinaryExecutable::loadExecutable(BBP::std::ELF::ELFBuilder&, BBP::std::ResourceManager*)’:
-BinaryExecutables.cpp:95:14: warning: unused variable ‘data’ [-Wunused-variable]
-   95 |    std::word data = std::read(&binary.file, segmentOffset + idx);
-      |              ^~~~
+BinaryExecutables.cpp: In member function 'void BBP::userspace::BinaryExecutable::loadExecutable(BBP::std::ELF::ELFBuilder&, BBP::std::ResourceManager*)':
+BinaryExecutables.cpp:95:35: warning: unused variable 'data' [-Wunused-variable]
+   95 |                         std::word data = std::read(&binary.file, segmentOffset + idx);
+      |                                   ^~~~

@@ -1,0 +1,29 @@
+In file included from ../include/Stack.h:88,
+                 from ../include/Resources.h:5,
+                 from ../include/Hashmap.h:5,
+                 from Hashmap.cpp:1:
+../include/Stack.hxx: In member function 'void BBP::std::Stack<K>::Extend(BBP::std::ResourceManager*, BBP::std::index_t)':
+../include/Stack.hxx:135:81: warning: invalid use of incomplete type 'class BBP::std::ResourceManager'
+  135 |                         *page = std::PAGE<K>(page->dataSize + by, (K *)allocator->calloc(page->dataSize + by, sizeof(K)));
+      |                                                                                 ^~
+../include/Stack.h:11:23: note: forward declaration of 'class BBP::std::ResourceManager'
+   11 |                 class ResourceManager;
+      |                       ^~~~~~~~~~~~~~~
+../include/Stack.hxx:141:34: warning: invalid use of incomplete type 'class BBP::std::ResourceManager'
+  141 |                         allocator->free(oldData);
+      |                                  ^~
+../include/Stack.h:11:23: note: forward declaration of 'class BBP::std::ResourceManager'
+   11 |                 class ResourceManager;
+      |                       ^~~~~~~~~~~~~~~
+In file included from ../include/Resources.h:4:
+../include/Memory.h: In instantiation of 'BBP::std::PAGE<T>::PAGE(BBP::std::size_t, T*) [with T = BBP::std::HashMap_entry_t [8]; BBP::std::size_t = unsigned int]':
+../include/Resources.h:235:13:   required from 'void BBP::std::ResourceManager::page_calloc(BBP::std::PAGE<T>&, BBP::std::size_t, BBP::std::size_t) [with T = BBP::std::HashMap_entry_t [8]; BBP::std::size_t = unsigned int]'
+../include/Resources.h:246:16:   required from 'void BBP::std::ResourceManager::page_calloc(BBP::std::PAGE<T>&, BBP::std::size_t) [with T = BBP::std::HashMap_entry_t [8]; BBP::std::size_t = unsigned int]'
+Hashmap.cpp:9:23:   required from here
+../include/Memory.h:48:93: warning: expression does not compute the number of elements in this array; element type is 'BBP::std::HashMap_entry_t', not 'BBP::std::mem_t' {aka 'unsigned char'} [-Wsizeof-array-div]
+   48 |                         PAGE(size_t Size, T* dat) : dataSize(Size), bytes(Size * (sizeof(T) / sizeof(mem_t))), prevPage(nullptr), nextPage(nullptr), data(dat) {}
+      |                                                                                  ~~~~~~~~~~~^~~~~~~~~~~~~~~~
+../include/Memory.h:48:95: note: add parentheses around 'sizeof (BBP::std::mem_t)' to silence this warning
+   48 |                         PAGE(size_t Size, T* dat) : dataSize(Size), bytes(Size * (sizeof(T) / sizeof(mem_t))), prevPage(nullptr), nextPage(nullptr), data(dat) {}
+      |                                                                                               ^~~~~~~~~~~~~
+      |                                                                                               (            )

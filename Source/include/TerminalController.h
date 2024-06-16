@@ -248,6 +248,9 @@ namespace BBP
 
 			private:
 
+				// Is initialized?
+				bool initialized;
+
 				// Current string state
 				enum StringState
 				{
@@ -467,6 +470,9 @@ namespace BBP
 				void render(conststring);
 
 				void set(size_t, size_t);
+
+				// Initialize
+				void initialize();
 
 			};
 		}

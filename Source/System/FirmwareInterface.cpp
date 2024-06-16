@@ -27,13 +27,13 @@ BBP::FirmwareInterface::FirmwareInterface(BBP::BIOS *b, BBP::system::EFI *cfg)
 	if (configuration->drivers.loadFileSystem)
 		configuration->drivers.loadFileSystem(HardwareFile);
 
-	// Then load screen driver
-	if (configuration->drivers.loadScreen)
-		configuration->drivers.loadScreen(HardwareScreen);
-
-	// Finally load keyboard driver
+	// Then load keyboard driver
 	if (configuration->drivers.loadKeyboard)
 		configuration->drivers.loadKeyboard(HardwareKeyboard);
+
+	// Finally load screen driver
+	if (configuration->drivers.loadScreen)
+		configuration->drivers.loadScreen(HardwareScreen);
 
 	// If other drivers exist, load those
 	if (configuration->drivers.loadOtherDrivers)
@@ -51,4 +51,7 @@ void BBP::FirmwareInterface::SwitchToDrivers()
 
 	// Start capture
 	startCapture();
+
+	// Initialize terminal
+	initDisplay();
 }

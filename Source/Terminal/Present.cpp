@@ -19,7 +19,7 @@ void BBP::std::Terminal::TerminalApplication::presentTerminal()
 	// Just display characters as-is for now, just for testing.
 	for (std::index_t strIndex = 0; strIndex < state.lineCount; strIndex++)
 	{
-		std::string *str = state.terminalLines[strIndex];
+		std::w_string *str = state.terminalLines[strIndex];
 
 		while (str)
 		{

@@ -20,3 +20,31 @@ BBP::system::DaemonRecord::DaemonRecord()
 {
 
 }
+
+bool BBP::system::DaemonRecord::executeService(std::string name, std::string service, std::errno_t &errno, std::size_t argc, std::c_string *argv)
+{
+
+	// Look through each record
+	for (std::index_t idx = 0; idx < records.dataSize; idx++)
+	{
+		// If hashes don't match don't search
+		if (records[idx].daemonName != name)
+			continue;
+
+		// Found something, look up functor
+		DaemonService *serviceRecord = records[idx].owner->lookupFunctor(service);
+
+		// If service not available do nothing
+		if (serviceRecord == nullptr)
+			return false; // Not executed
+
+		// Otherwise execute
+		errno = records[idx].owner->functorFunctor(serviceRecord->hash, argc, argv);
+
+		// Return success
+		return true;
+	}
+	
+	// Return error: not found
+	return false;
+}

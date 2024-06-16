@@ -19,6 +19,6 @@ LDFLAGS= $(SYSLDFLAGS) $(EXTLDFLAGS)
 
 # =========== Binary flags specific to this environment
 SYSCFLAGS= -c
-SYSCXXFLAGS= -c -std=c++2a -Wall -Wextra -fdiagnostics-show-option -g
+SYSCXXFLAGS= -c -std=c++2a -Wall -Wextra -fdiagnostics-show-option -g -DSIZE_T_OVERRIDE="unsigned long long int" -DENTRY_OVERRIDE="SDL_main"
 SYSARFLAGS= cr
 SYSLDFLAGS= -lmingw32 -lSDL2main -lSDL2 -L./lib/

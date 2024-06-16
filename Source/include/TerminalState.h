@@ -47,10 +47,10 @@ namespace BBP
 				static const RGBA_t defaultBg = 0xFF000000;
 
 				// First line of the terminal
-				string firstLine;
+				w_string firstLine;
 
 				// Page of terminal lines.
-				PAGE<string *> terminalLines;
+				PAGE<w_string *> terminalLines;
 
 				// Set of active fonts
 				constexpr static size_t fontCount = 10;
@@ -102,6 +102,9 @@ namespace BBP
 
 				// Constructors
 				TerminalState(size_t lc, size_t vp_w, size_t vp_h, ResourceManager *man);
+
+				// Initialize (called once)
+				void initialize();
 
 			};
 
