@@ -382,6 +382,15 @@ namespace BBP
 				// Current argument
 				word currentArgument;
 				word currentArgumentRadix;
+
+				// Maximum amount of arguments
+				static constexpr size_t maxArguments = 5;
+
+				// At what argument are we?
+				index_t atArgument;
+
+				// The arguments
+				STATIC_PAGE<word, maxArguments> args;
 				
 				// Push arguments and receive arguments
 				void pushArgument(word);
@@ -454,6 +463,9 @@ namespace BBP
 
 				// Present entire terminal page to screen
 				void presentTerminal();
+
+				// Encode a wstring_element
+				wstring_element encodeState(CC);
 
 			public:
 

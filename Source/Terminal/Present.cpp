@@ -9,32 +9,31 @@ void BBP::std::Terminal::TerminalApplication::presentTerminal()
 	// Clear device
 	device->clearScreen(state);
 
-	// Go over each character from the beginning.... yeah...
-	Terminal::TerminalState::TerminalRect prevPos = state.activePresentationPosition;
-	state.activePresentationPosition = { 0, 0 };
+	// Get display position
+	Terminal::TerminalState::TerminalRect dispPos = state.viewportPosition;
 
-	// Turn off implicit scroll
-	state.implicitScroll = false;
-
-	// Just display characters as-is for now, just for testing.
-	for (std::index_t strIndex = 0; strIndex < state.lineCount; strIndex++)
+	// Get string index
+	for (std::index_t strIndex = 0; strIndex < state.viewportSize.vertical; strIndex++)
 	{
-		std::w_string *str = state.terminalLines[strIndex];
+		// Get active string
+		std::w_string *str = state.terminalLines[strIndex + state.viewportPosition.vertical];
 
-		while (str)
+		// Present lines
+		for (std::index_t ccIndex = 0; ccIndex < state.viewportSize.horizontal; ccIndex++)
 		{
-			// Go over each element in str
-			for (std::index_t ccIndex = 0; ccIndex < str->dataSize; ccIndex++)
-				PassCharacter(str->data[ccIndex]);
+			// get CC
+			std::wstring_element cc = (*str)[ccIndex + state.viewportPosition.horizontal];
 
-			str = str->nextPage;
+			// If '0' break
+			if ((cc & 0x7F) == 0)
+				break;
+
+			// Update dispPos
+			dispPos = { strIndex + state.viewportPosition.vertical, ccIndex + state.viewportPosition.horizontal };
+
+			// Display character (if it exists)
+			device->displayCharacter(cc, dispPos, state);
 		}
 	}
-
-	// Turn on implicit scroll
-	state.implicitScroll = true;
-
-	state.activePresentationPosition = prevPos;
-
 }
 

@@ -2,12 +2,12 @@
 
 BBP::std::RGBA_t BBP::std::R2D::readPixel(window &window, pos_t x, pos_t y)
 {
-    return window.backBuffer[window.width * y + x];
+    return window.getPixel(x, y);
 }
 
 void BBP::std::R2D::setPixel(window &window, pos_t x, pos_t y, RGBA_t colour)
 {
-    window.backBuffer[window.width * y + x] = colour;
+    window.setPixel(x, y, colour);
 }
 
 void BBP::std::R2D::setPixel(window &window, pos_t x, pos_t y, RGBA_t colour, word size)

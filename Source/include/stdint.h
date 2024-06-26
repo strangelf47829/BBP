@@ -49,8 +49,14 @@ namespace BBP
 	namespace std
 	{
 
+		// Get the amount of decimals (so log10)
 		uint32_t decimals(uint32_t value);
+
+		// Get a specific decimal
 		uint8_t getDecimal(uint32_t value, uint32_t position);
+
+		// Reverse the order of a value (base 10)
+		uint32_t reverse(uint32_t);
 
 	}
 }

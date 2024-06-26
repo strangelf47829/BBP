@@ -75,8 +75,8 @@ void Host::startDisplay(Host::BIOS &bios)
 
 	Host::hostDisplay.fontSize = 1;
 
-	Host::gterm.windowX = 50;
-	Host::gterm.windowY = 50;
+	Host::gterm.windowX = 5;
+	Host::gterm.windowY = 5;
 }
 
 void Host::closeDisplay()
@@ -88,5 +88,5 @@ void Host::closeDisplay()
 
 void Host::drawDisplay()
 {
-	drawWindow(&hostDisplay, _renderer);
+	drawWindow(&hostDisplay, _renderer, *screenSurface);
 }

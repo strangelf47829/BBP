@@ -3,24 +3,24 @@
 void BBP::std::R2D::PrintCharacterAt(window &window, pos_t x, pos_t y, ustring_element ch)
 {
 	// print with default stuff
-	PrintCharacterAt(window, x, y, ch, window.fontSize, window.Chroma);
+	PrintCharacterAt(window, x, y, ch, window.fontSize, window.Chroma, colour(0, 0, 0));
 }
 
 
 void BBP::std::R2D::PrintCharacterAt(window &w, pos_t x, pos_t y, ustring_element ch, word size)
 {
-	PrintCharacterAt(w, x, y, ch, size, w.Chroma);
+	PrintCharacterAt(w, x, y, ch, size, w.Chroma, colour(0, 0, 0));
 }
 
 
-void BBP::std::R2D::PrintCharacterAt(window &window, pos_t x, pos_t y, ustring_element ch, colour col)
+void BBP::std::R2D::PrintCharacterAt(window &window, pos_t x, pos_t y, ustring_element ch, colour fg, colour bg)
 {
 	// print with default stuff
-	PrintCharacterAt(window, x, y, ch, window.fontSize, col);
+	PrintCharacterAt(window, x, y, ch, window.fontSize, fg, bg);
 }
 
 
-void BBP::std::R2D::PrintCharacterAt(window &w, pos_t x, pos_t y, ustring_element ch, word size, colour col)
+void BBP::std::R2D::PrintCharacterAt(window &w, pos_t x, pos_t y, ustring_element ch, word size, colour fg, colour bg)
 {
 	// Check if window has font selected
 	if (w.activeFont.glyphs.data == nullptr)
@@ -51,5 +51,5 @@ void BBP::std::R2D::PrintCharacterAt(window &w, pos_t x, pos_t y, ustring_elemen
 	std::mask_t *mask = &w.activeFont.glyphs[fontOffset];
 
 	// Character
-	BBP::std::R2D::RectPixelMask(w, x, y, size, mask, wordCount, col);
+	BBP::std::R2D::RectPixelMask(w, x, y, size, mask, wordCount, fg, bg);
 }

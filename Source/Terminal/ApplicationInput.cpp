@@ -9,9 +9,6 @@ void BBP::std::Terminal::TerminalApplication::set(size_t w, size_t h)
 
 void BBP::std::Terminal::TerminalApplication::input(CC character)
 {
-	// Add character to input
-	addCharacterToPosition(character);
-
 	// If character is null do nothing
 	if (character == 0)
 		return;

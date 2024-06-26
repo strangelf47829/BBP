@@ -2,5 +2,5 @@
 
 OS::Terminal::GTerm Host::gterm;
 BBP::std::ResourceManager manager;
-BBP::std::Terminal::TerminalApplication Host::terminal({ 40, 110 }, 60, &manager, &Host::gterm);
+BBP::std::Terminal::TerminalApplication Host::terminal({ Host::tty_y, Host::tty_x }, 500, &manager, &Host::gterm);
 

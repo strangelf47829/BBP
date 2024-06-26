@@ -11,6 +11,7 @@
 #include "BootRecord.h"
 #include "Time.h"
 #include "License.h"
+#include "Graphics.h"
 
 namespace BBP
 {
@@ -89,6 +90,9 @@ namespace BBP
 			std::halfword xResolution;
 			std::halfword yResolution;
 			std::byte colourDepth;
+
+			// Where is the GOP?
+			std::PAGE<std::RGBA_t> GOP;
 		};
 		
 

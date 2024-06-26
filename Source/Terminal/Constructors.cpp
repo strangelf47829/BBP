@@ -11,6 +11,10 @@ BBP::std::Terminal::TerminalState::TerminalState(size_t lc, size_t vp_w, size_t 
 	// Set viewport information
 	viewportSize = { vp_h, vp_w };
 	tabularSettings = { 4, 4 };
+
+	// Set graphics
+	simple_fg = 7;
+	simple_bg = 0;
 }
 
 BBP::std::Terminal::TerminalApplication::TerminalApplication(TerminalState::TerminalRect vp_size, size_t lc, ResourceManager *manager, TerminalDevice *dev)

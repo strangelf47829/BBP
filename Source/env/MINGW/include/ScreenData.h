@@ -20,12 +20,12 @@ namespace Host
 	extern BBP::std::Terminal::TerminalApplication terminal;
 
 	// Window dimensions
-	constexpr BBP::std::pos_t w = 1200;
-	constexpr BBP::std::pos_t h = 800;
+	constexpr BBP::std::pos_t w = 640;
+	constexpr BBP::std::pos_t h = 350;
 
 	// Calculate tty_x and tty_y sizes
-	constexpr BBP::std::halfword tty_x = w / 10;
-	constexpr BBP::std::halfword tty_y = h / 10;
+	constexpr BBP::std::halfword tty_x = (w * 77) / 640;
+	constexpr BBP::std::halfword tty_y = (h * 20) / 350;
 
 	// Window
 	extern BBP::std::window hostDisplay;
@@ -37,7 +37,7 @@ namespace Host
 	void closeDisplay();
 
 	// Draw a display
-	void drawWindow(BBP::std::window *, SDL_Renderer *);
+	void drawWindow(BBP::std::window *, SDL_Renderer *, SDL_Surface &);
 
 	// Draw the display
 	void drawDisplay();

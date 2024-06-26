@@ -1,8 +1,14 @@
 #include "../include/ScreenData.h"
 
 // Draw a window
-void Host::drawWindow(BBP::std::window *wind, SDL_Renderer *_Renderer)
+void Host::drawWindow(BBP::std::window *wind, SDL_Renderer *_Renderer, SDL_Surface &surface)
 {
+	// Lock surface
+	SDL_LockSurface(&surface);
+
+	// Then get pointer to surface
+	BBP::std::pos_t *pixels = (BBP::std::pos_t *)surface.pixels;
+
 	SDL_SetRenderDrawColor(_Renderer, 255, 255, 255, 255);
 	SDL_RenderClear(_Renderer);
 	int last = 0;
@@ -22,6 +28,9 @@ void Host::drawWindow(BBP::std::window *wind, SDL_Renderer *_Renderer)
 			SDL_RenderDrawPoint(_Renderer, X + wind->xPos, Y + wind->yPos);
 		}
 	}
+
+	// Unlock pixels
+	SDL_UnlockSurface(&surface);
 
 	SDL_RenderPresent(_Renderer);
 }

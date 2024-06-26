@@ -6,6 +6,6 @@ In file included from Constructors.cpp:1:
 ../include/TerminalController.h:252:38: warning:   'bool BBP::std::Terminal::TerminalApplication::initialized' [-Wreorder]
   252 |                                 bool initialized;
       |                                      ^~~~~~~~~~~
-Constructors.cpp:16:1: warning:   when initialized here [-Wreorder]
-   16 | BBP::std::Terminal::TerminalApplication::TerminalApplication(TerminalState::TerminalRect vp_size, size_t lc, ResourceManager *manager, TerminalDevice *dev)
+Constructors.cpp:20:1: warning:   when initialized here [-Wreorder]
+   20 | BBP::std::Terminal::TerminalApplication::TerminalApplication(TerminalState::TerminalRect vp_size, size_t lc, ResourceManager *manager, TerminalDevice *dev)
       | ^~~

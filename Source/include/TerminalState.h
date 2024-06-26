@@ -38,6 +38,10 @@ namespace BBP
 				// The current active presentation position
 				TerminalRect activePresentationPosition;
 
+				// Simple fg and bg colours
+				nibble simple_fg;
+				nibble simple_bg;
+
 				// The current foreground and background colours
 				colour fg;
 				colour bg;

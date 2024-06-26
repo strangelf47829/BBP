@@ -5,6 +5,7 @@
 #include "../../include/FileSystemDriver.h"
 #include "../../include/ScreenDriver.h"
 #include "../../include/KeyboardDriver.h"
+#include "../include/ScreenData.h"
 
 // Daemons
 BBP::system::initd initdD;
@@ -32,16 +33,15 @@ void Host::configure(BBP::BIOS *bios, BBP::system::EFI &efi)
 	efi.systemReport.usefulHeap = Host::getSystemHeap();
 	efi.systemReport.totalMemory = Host::getSystemMemory();
 	efi.systemReport.supportsTTY = true;
-	efi.systemReport.supportsGUI = false;
+	efi.systemReport.supportsGUI = true;
 
 	// Get TTY Resolutions
-	BBP::std::word xres = 0;
-	BBP::std::word yres = 0;
-	getHostValue(xres, "tput cols");
-	getHostValue(yres, "tput lines");
+	efi.systemReport.TTYHorizontalPage = tty_x;
+	efi.systemReport.TTYVerticalPage = tty_y;
 
-	efi.systemReport.TTYHorizontalPage = xres;
-	efi.systemReport.TTYVerticalPage = yres;
+	// Get GUI Data
+	efi.systemReport.xResolution = w;
+	efi.systemReport.yResolution = h;
 
 	// Then get CPU info
 	Host::getCPUData(&efi);
@@ -79,6 +79,4 @@ void Host::configure(BBP::BIOS *bios, BBP::system::EFI &efi)
 
 	// Licensing info
 	efi.licenses.BIOSInfo = BBP::system::appInfo(1, 0, 0, 0);
-
-
 }

@@ -32,6 +32,10 @@ void BBP::std::Terminal::TerminalApplication::actCSI(CC character)
 		// If is within 0x30 and 0x3A (inclusive), add to argument
 		if (character >= 0x30 && character <= 0x3A)
 		{
+			// Check if valid radix
+			if (currentArgumentRadix == 0)
+				currentArgumentRadix = 1;
+
 			// Multiply by radix
 			word multipliedArgument = (character - 0x30) * currentArgumentRadix;
 
@@ -59,6 +63,7 @@ void BBP::std::Terminal::TerminalApplication::actCSI(CC character)
 		pushIntermediateByte(character);
 
 		// Return
+		return;
 	}
 
 	// Otherwise, check if final
@@ -68,12 +73,28 @@ void BBP::std::Terminal::TerminalApplication::actCSI(CC character)
 	// If neither, return since nothing is to be done.
 	if ((isFinal || isFinalPrivate) == false)
 		return;
+	
+	// If argument is still being constructed, push
+	if (currentArgument)
+	{
+		// Push argument,
+		pushArgument(currentArgument);
+
+		// Reset argument
+		currentArgument = 0;
+		currentArgumentRadix = 1;
+	}
 
 	// Do CSI action based on if intermediate bytes are present or not
 	if (startingIntermediateBytes)
 		return; //TODO: implement
 	else
 		CSIActionNoInters(character);
+
+	// Reset arguments
+	for (std::index_t idx = 0; idx < maxArguments; idx++)
+		args[idx] = 0;
+	atArgument = 0;
 
 }
 
@@ -111,9 +132,9 @@ void BBP::std::Terminal::TerminalApplication::actNormal(CC character)
 		return;
 	}
 
-	// Display character, if position is not before viewport
-	if (device && state.activePresentationPosition.vertical >= state.viewportPosition.vertical)
-		device->displayCharacter(character, state.activePresentationPosition, state);
+
+	// Add character to input
+	addCharacterToPosition(character);
 
 	// Then move active position
 	MoveForward(1);

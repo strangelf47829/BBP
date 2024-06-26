@@ -47,7 +47,7 @@ namespace OS
 			void str_Generic(BBP::std::Stack<BBP::std::string_element> &string);
 
 			// Display a character
-			void displayCharacter(BBP::std::Terminal::CC, BBP::std::Terminal::TerminalState::TerminalRect &, BBP::std::Terminal::TerminalState &);
+			void displayCharacter(BBP::std::wstring_element, BBP::std::Terminal::TerminalState::TerminalRect &, BBP::std::Terminal::TerminalState &);
 
 			// Screen operations
 			void clearScreen(BBP::std::Terminal::TerminalState &);

@@ -1,5 +1,24 @@
 #include "../include/GTerm.h"
 
+// Array for FG colours
+BBP::std::colour colours[16] = {
+	BBP::std::colour(0, 0, 0),
+	BBP::std::colour(170, 0, 0),
+	BBP::std::colour(0,170,0),
+	BBP::std::colour(170, 85, 0),
+	BBP::std::colour(0, 0, 170),
+	BBP::std::colour(170, 0, 170),
+	BBP::std::colour(0, 160, 170),
+	BBP::std::colour(170, 170, 170),
+	BBP::std::colour(85, 85, 85),
+	BBP::std::colour(255, 85, 85),
+	BBP::std::colour(85,255,85),
+	BBP::std::colour(255, 255, 85),
+	BBP::std::colour(85, 85, 255),
+	BBP::std::colour(255, 85, 255),
+	BBP::std::colour(85, 255, 255),
+	BBP::std::colour(255, 255, 255)};
+
 // Bell
 void OS::Terminal::GTerm::Bell()
 {
@@ -56,7 +75,7 @@ void OS::Terminal::GTerm::str_Generic(BBP::std::Stack<BBP::std::string_element> 
 
 }
 
-void OS::Terminal::GTerm::displayCharacter(BBP::std::Terminal::CC cc, BBP::std::Terminal::TerminalState::TerminalRect &pos, BBP::std::Terminal::TerminalState &state)
+void OS::Terminal::GTerm::displayCharacter(BBP::std::wstring_element cc, BBP::std::Terminal::TerminalState::TerminalRect &pos, BBP::std::Terminal::TerminalState &state)
 {
 	// X and Y modifiers
 	BBP::std::word xMod = window->fontSpacing * window->fontSize;
@@ -71,8 +90,12 @@ void OS::Terminal::GTerm::displayCharacter(BBP::std::Terminal::CC cc, BBP::std::
 
 	BBP::std::offset_t offset = 10;
 
+	// Get colour
+	BBP::std::nibble fg = (cc >> 8) & 0xF;
+	BBP::std::nibble bg = (cc >> 12) & 0xF;
+
 	// Print character
-	BBP::std::R2D::PrintCharacterAt(*window, xPos * xMod + windowX + offset, yPos * yMod + windowY + offset, cc);
+	BBP::std::R2D::PrintCharacterAt(*window, xPos * xMod + windowX + offset, yPos * yMod + windowY + offset, cc, window->fontSize, colours[fg], colours[bg]);
 }
 
 void OS::Terminal::GTerm::clearScreen(BBP::std::Terminal::TerminalState &state)

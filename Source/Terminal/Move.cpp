@@ -44,13 +44,14 @@ void BBP::std::Terminal::TerminalApplication::MoveUp(offset_t count)
 
 void BBP::std::Terminal::TerminalApplication::MoveDown(offset_t count)
 {
-	// If count is more than current position, set count
+	// If count is more than current position, insert a line for each count
 	if (count >= state.lineCount - state.activePresentationPosition.vertical)
 		state.activePresentationPosition.vertical = state.lineCount - 1;
-	else
-		state.activePresentationPosition.vertical += count;
+	
+	// Otherwise just add the count
+	else state.activePresentationPosition.vertical += count;
 
-	// If vertical is now below page, increment viewport by one
+	// If vertical is now below page, increment viewport the deficit
 	if (state.activePresentationPosition.vertical >= state.viewportPosition.vertical + state.viewportSize.vertical && state.implicitScroll)
 		ScrollDown(1);
 }

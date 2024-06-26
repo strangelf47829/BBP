@@ -2,6 +2,7 @@
 
 void BBP::std::Terminal::TerminalApplication::insertLine()
 {
+
 }
 
 void BBP::std::Terminal::TerminalApplication::deleteLine()

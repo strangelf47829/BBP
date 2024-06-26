@@ -12,8 +12,10 @@ void BBP::std::Terminal::TerminalApplication::addCharacterToPosition(CC characte
 	if (state.activePresentationPosition.horizontal >= lineLength)
 		extendLine();
 
-	// Write
-	std::wstring_element c = character;
+	// Encode character
+	std::wstring_element c = encodeState(character);
+
+	// Write character
 	write(activeString, c, (std::index_t)state.activePresentationPosition.horizontal);
 }
 

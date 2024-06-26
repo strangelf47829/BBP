@@ -42,7 +42,7 @@ namespace BBP
 				virtual void str_Generic(Stack<string_element> &string) = 0;
 
 				// Display a character
-				virtual void displayCharacter(CC, TerminalState::TerminalRect &, BBP::std::Terminal::TerminalState &) = 0;
+				virtual void displayCharacter(wstring_element, TerminalState::TerminalRect &, BBP::std::Terminal::TerminalState &) = 0;
 
 				// Screen operations
 				virtual void clearScreen(TerminalState &) = 0;

@@ -18,6 +18,14 @@ namespace BBP
 
 		/* The type used to signify a mask */
 		typedef word mask_t;
+
+		// Colour manipulation
+		namespace R2D
+		{
+			RGBA_t convertUCHARtoINT(chan_t r, chan_t g, chan_t b, chan_t a);
+			void convertINTtoUCHAR(chan_t &r, chan_t &g, chan_t &b, RGBA_t rgb);
+			void convertINTtoUCHAR(chan_t &r, chan_t &g, chan_t &b, chan_t &a, RGBA_t rgba);
+		}
 		
 		// Structure to hold colour information
 		struct colour
@@ -27,6 +35,18 @@ namespace BBP
 			chan_t B = 0xFF;
 			chan_t A = 0xFF;
 			RGBA_t RGBA = 0xFFFFFFFF;
+
+			// Default constructor
+			colour()
+				: R(0xFF), G(0xFF), B(0xFF), A(0xFF), RGBA(0xFFFFFFFF)
+			{}
+
+			// RGB Constructor
+			colour(chan_t r, chan_t g, chan_t b)
+				: R(r), G(g), B(b), A(0xFF)
+			{
+				RGBA = R2D::convertUCHARtoINT(r, g, b, A);
+			}
 		};
 
 		// Structure to hold font information (in PSF1/2 format)
@@ -114,13 +134,15 @@ namespace BBP
 				zPos = 0;
 			}
 
+			// Set pixel data
+			bool setPixel(pos_t x, pos_t y, RGBA_t colour);
+
+			// Read pixel data
+			RGBA_t getPixel(pos_t x, pos_t y);
 		};
 
 		namespace R2D
 		{
-			RGBA_t convertUCHARtoINT(chan_t r, chan_t g, chan_t b, chan_t a);
-			void convertINTtoUCHAR(chan_t &r, chan_t &g, chan_t &b, RGBA_t rgb);
-			void convertINTtoUCHAR(chan_t &r, chan_t &g, chan_t &b, chan_t &a, RGBA_t rgba);
 
 			void newWindow(window &, pos_t width, pos_t height, chan_t r, chan_t g, chan_t b);
 			void newWindow(window &, chan_t r, chan_t g, chan_t b);
@@ -163,13 +185,13 @@ namespace BBP
 			void Box(window &, pos_t x, pos_t y, pos_t w, pos_t h, colour);
 			void Frame(window &, pos_t x, pos_t y, pos_t w, pos_t h, colour);
 
-			void RectPixelMask(window &, pos_t x, pos_t y, mask_t mask, colour);
-			void RectPixelMask(window &, pos_t x, pos_t y, word size, mask_t mask, colour);
-			void RectPixelMaskAligned(window &, pos_t x, pos_t y, word size, mask_t mask, colour);
+			void RectPixelMask(window &, pos_t x, pos_t y, mask_t mask, colour, colour);
+			void RectPixelMask(window &, pos_t x, pos_t y, word size, mask_t mask, colour, colour);
+			void RectPixelMaskAligned(window &, pos_t x, pos_t y, word size, mask_t mask, colour, colour);
 
-			void RectPixelMask(window &, pos_t x, pos_t y, mask_t *maskv, word maskc, colour);
-			void RectPixelMask(window &, pos_t x, pos_t y, word size, mask_t *maskv, word maskc, colour);
-			void RectPixelMaskAligned(window &, pos_t x, pos_t y, word size, mask_t *maskv, word maskc, colour);
+			void RectPixelMask(window &, pos_t x, pos_t y, mask_t *maskv, word maskc, colour, colour);
+			void RectPixelMask(window &, pos_t x, pos_t y, word size, mask_t *maskv, word maskc, colour, colour);
+			void RectPixelMaskAligned(window &, pos_t x, pos_t y, word size, mask_t *maskv, word maskc, colour, colour);
 
 			RGBA_t readPixel(window &, pos_t x, pos_t y);
 
@@ -177,23 +199,23 @@ namespace BBP
 			void setPixel(window &, pos_t x, pos_t y, RGBA_t colour, word size);
 			void setPixelAligned(window &, pos_t x, pos_t y, RGBA_t colour, word size);
 
-			void PixelMask(window &, pos_t x, pos_t y, mask_t mask, colour);
-			void PixelMask(window &, pos_t x, pos_t y, word size, mask_t mask, colour);
-			void PixelMaskAligned(window &, pos_t x, pos_t y, word size, mask_t mask, colour);
+			void PixelMask(window &, pos_t x, pos_t y, mask_t mask, colour, colour);
+			void PixelMask(window &, pos_t x, pos_t y, word size, mask_t mask, colour, colour);
+			void PixelMaskAligned(window &, pos_t x, pos_t y, word size, mask_t mask, colour, colour);
 
-			void PixelMask(window &, pos_t x, pos_t y, mask_t *maskv, word maskc, colour);
-			void PixelMask(window &, pos_t x, pos_t y, word size, mask_t *maskv, word maskc, colour);
-			void PixelMaskAligned(window &, pos_t x, pos_t y, word size, mask_t *maskv, word maskc, colour);
+			void PixelMask(window &, pos_t x, pos_t y, mask_t *maskv, word maskc, colour, colour);
+			void PixelMask(window &, pos_t x, pos_t y, word size, mask_t *maskv, word maskc, colour, colour);
+			void PixelMaskAligned(window &, pos_t x, pos_t y, word size, mask_t *maskv, word maskc, colour, colour);
 
 			void PrintCharacterAt(window &, pos_t x, pos_t y, ustring_element ch);
 			void PrintCharacterAt(window &, pos_t x, pos_t y, ustring_element ch, word size);
 
-			void PrintCharacterAt(window &, pos_t x, pos_t y, ustring_element ch, colour col);
-			void PrintCharacterAt(window &, pos_t x, pos_t y, ustring_element ch, word size, colour col);
+			void PrintCharacterAt(window &, pos_t x, pos_t y, ustring_element ch, colour col, colour);
+			void PrintCharacterAt(window &, pos_t x, pos_t y, ustring_element ch, word size, colour col, colour);
 
-			void print(window &, ustring_element ch, colour col);
-			void print(window &, conststring str, colour col);
-			void print(window &, string str, colour col);
+			void print(window &, ustring_element ch, colour col, colour);
+			void print(window &, conststring str, colour col, colour);
+			void print(window &, string str, colour col, colour);
 
 			void print(window &, string str);
 			void print(window &, conststring str);
