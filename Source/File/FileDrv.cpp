@@ -45,8 +45,20 @@ void BBP::std::FILE::writeFileToDisk(std::PATH &path)
 	std::string *_data = data->page;
 	std::size_t dataSize = std::seqlen(*_data);
 
+	// Store old max_elements and atElement
+	std::size_t oldMax = data->max_elements;
+	std::size_t oldIdx = data->atElement;
+
+	// Resize stack to that size
+	data->max_elements = dataSize;
+	data->atElement = dataSize;
+
 	// Write file
 	system::Kernel::writeFileToDisk(path, b());
+
+	// Restore old values
+	data->max_elements = oldMax;
+	data->atElement = oldIdx;
 }
 
 void BBP::std::FILE::writeFileToDisk()

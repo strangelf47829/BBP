@@ -71,6 +71,9 @@ BBP::std::FileNode::FileNode(std::Stack<std::string_element> &data, std::VOLUME 
 	filePath(v, path.relName()),
 	filePathHash(0)
 {
+	// Copy data
+	fileData = data;
+
 	filePath.makeAbsolutePath(&BBP::system::Shell::getWorkingDirectory());
 	filePathHash = std::strhsh(filePath.relName());
 }

@@ -28,13 +28,15 @@ BBP::std::except BBP::std::exception(const char *msg, errno_t _errno)
 	// Get errno
 	std::strerror(_errno, errnoMessage);
 
-	// Print what happened
-	std::printf("An exception has occured: %s: %s. Showing stack trace:\n", errnoMessage.data, msg);
-
 	// Print where it happened
 	stack_trace trace;
 	trace.Capture();
-	trace.showStackTrace();
+	trace.moveUp();
+
+	// Print what happened
+	std::printf("An exception has occured at 0x%08x<0x%x>: %s: %s.", trace.activeFrame.functionAddress, trace.activeFrame.referenceAddress, errnoMessage.data, msg);
+	
+	//trace.showStackTrace();
 
 	// Done handling
 	handling = false;

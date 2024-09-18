@@ -1,4 +1,0 @@
-Except.cpp: In function 'BBP::std::except BBP::std::exception(const char*, errno_t)':
-Except.cpp:23:21: warning: unused variable 'msgLen' [-Wunused-variable]
-   23 |         std::size_t msgLen = std::strlen(msg);
-      |                     ^~~~~~

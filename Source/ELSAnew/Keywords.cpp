@@ -38,12 +38,12 @@ void BBP::elsa::keyword_t::Reset()
 }
 
 // Operate on virtual object
-BBP::elsa::keyword_return_t BBP::elsa::keyword_t::operator() ()
+BBP::elsa::keyword_return_t BBP::elsa::keyword_t::operator() (TranslationUnit &unit, std::index_t idx, keyword_t &word)
 {
 	// If no functor is available, throw error
 	if (functor == nullptr)
 		throw std::exception("No functor defined for keyword", ENODATA);
 
 	// Otherwise return functor
-	return (*functor)();
+	return (*functor)(unit, idx, word);
 }

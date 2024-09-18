@@ -44,7 +44,7 @@ BBP::std::errno_t BBP::system::initd::shellApplication(std::size_t argc, std::c_
 	std::string shellCMD0 = std::String("cd /");
 	shell(shellCMD0);
 
-	std::string shellCMD1 = std::String("ls");
+	std::string shellCMD1 = std::String("cp");
 	shell(shellCMD1);
 
 	//std::string shellCMD2 = std::String("rae");

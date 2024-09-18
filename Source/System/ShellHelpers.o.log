@@ -1,9 +1,0 @@
-ShellHelpers.cpp: In function 'void BBP::system::printShellDirectory()':
-ShellHelpers.cpp:25:46: warning: implicitly-declared 'constexpr BBP::std::PATH& BBP::std::PATH::operator=(const BBP::std::PATH&)' is deprecated [-Wdeprecated-copy]
-   25 |         fullpath = fullpath.resolveAbsolutes();
-      |                                              ^
-In file included from ../include/Shell.h:7,
-                 from ShellHelpers.cpp:3:
-../include/FileSys.h:94:25: note: because 'BBP::std::PATH' has user-provided 'BBP::std::PATH::PATH(BBP::std::PATH&)'
-   94 |                         PATH(std::PATH &);
-      |                         ^~~~

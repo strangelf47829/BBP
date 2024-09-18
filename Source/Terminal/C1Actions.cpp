@@ -43,12 +43,12 @@ void BBP::std::Terminal::TerminalApplication::DCS_C1()	// Begin a device command
 
 void BBP::std::Terminal::TerminalApplication::PU1_C1()	// Private use
 {
-
+	device->Private1();
 }
 
 void BBP::std::Terminal::TerminalApplication::PU2_C1()	// Private use
 {
-
+	device->Private2();
 }
 
 void BBP::std::Terminal::TerminalApplication::CCH_C1()	// DEL

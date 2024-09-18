@@ -68,8 +68,12 @@ namespace BBP
 		// Holds the information needed to store a stack trace
 		class stack_trace
 		{
+		public:
+
 			// Active frame being used
 			stack_frame activeFrame;
+
+		private:
 
 			// The frame as-is when captured
 			stack_frame capturedFrame;

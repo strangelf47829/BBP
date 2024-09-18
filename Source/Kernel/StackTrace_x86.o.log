@@ -1,4 +1,0 @@
-StackTrace_x86.cpp: In member function 'bool BBP::std::stack_trace::moveUp()':
-StackTrace_x86.cpp:33:22: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
-   33 |         lastFrame = ((stack_frame::frame_ptr_t)*lastFrame);
-      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

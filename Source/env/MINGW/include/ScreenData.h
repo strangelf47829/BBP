@@ -23,6 +23,9 @@ namespace Host
 	constexpr BBP::std::pos_t w = 640;
 	constexpr BBP::std::pos_t h = 350;
 
+	// Pointer to graphical data
+	extern BBP::std::RGBA_t *VBuff;
+
 	// Calculate tty_x and tty_y sizes
 	constexpr BBP::std::halfword tty_x = (w * 77) / 640;
 	constexpr BBP::std::halfword tty_y = (h * 20) / 350;

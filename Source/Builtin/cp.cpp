@@ -22,6 +22,66 @@
 #include "../include/Async.h"
 #include "../include/Tasks.h"
 #include "../include/TaskPool.h"
+#include "../include/ELSA/TranslationUnit.h"
+#include "../include/ELSA/ELF.h"
+
+void hihi(BBP::elsa::TranslationUnit &, BBP::std::index_t, BBP::elsa::keyword_t &)
+{
+	BBP::std::printf("Hello!");
+}
+
+BBP::std::string str = "eee Hello! eee";
+
+BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
+{
+
+	// Static page
+	std::STATIC_PAGE<elsa::Section *, 16> sections_static;
+
+	// Create ELF file
+	ELF::ELF elf = &sections_static;
+
+	// Just create something
+	elsa::Section textSection;
+
+	// Data
+	ELF::Section textSectionData;
+
+	// Then register
+	elf.registerSection(textSection, textSectionData, ".text");
+
+	// Create data
+	std::PAGE<std::byte> textData;
+	textSection.Allocate(textData, 3);
+	textData[0] = 1;
+	textData[1] = 2;
+	textData[2] = 3;
+
+	// Now reallocate
+	textSection.Allocate(textData, 3);
+	textData[0] = 4;
+	textData[1] = 5;
+	textData[2] = 6;
+
+	// Then add stuff to the text
+	textSectionData.type = 1;
+	textSectionData.writeData(elf.header.ident.littleEndian);
+
+	elf.saveFile("/home/new.out");
+	
+	
+
+	// Create a translation unit
+	//elsa::TranslationUnit unit;
+
+	// Then create keywords and actions
+	//unit.createAction("::sayhello", hihi);
+	//unit.createKeyword("Hello!", "::sayhello");
+
+	// Then get type (17th and 18th bit, use ident endiannes)
+	//std::printf("0x%02x + 0x%02x = 0x%04x", a, b, c);
+
+}
 
 /*
 void check(BBP::std::string str)
@@ -108,7 +168,7 @@ BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
 
 }*/
 
-
+/*
 int cp_stage_1(BBP::std::async_stack_t<int> &stack, BBP::std::async_stack_t<int> &arg)
 {
 	// Return arg
@@ -217,9 +277,10 @@ BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
 		std::printf(" - %s\n", entityName.data);
 	}
 
-	info.release();*/
+	info.release();
 
 	
 
 	return 0;
 }
+*/

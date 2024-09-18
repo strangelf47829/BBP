@@ -43,6 +43,9 @@ void Host::configure(BBP::BIOS *bios, BBP::system::EFI &efi)
 	efi.systemReport.xResolution = w;
 	efi.systemReport.yResolution = h;
 
+	// Get GOP data
+	efi.systemReport.GOP = Host::VBuff;
+
 	// Then get CPU info
 	Host::getCPUData(&efi);
 

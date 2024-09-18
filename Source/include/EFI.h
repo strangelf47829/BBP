@@ -92,7 +92,7 @@ namespace BBP
 			std::byte colourDepth;
 
 			// Where is the GOP?
-			std::PAGE<std::RGBA_t> GOP;
+			std::RGBA_t *GOP;
 		};
 		
 

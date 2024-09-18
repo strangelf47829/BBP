@@ -48,6 +48,11 @@ void BBP::elsa::processor_db::Reset()
 	actionIdx.Reset();
 }
 
+BBP::std::size_t BBP::elsa::keyword_db::getCount()
+{
+	return keywordCount;
+}
+
 // Access information
 BBP::elsa::processor_action_t &BBP::elsa::processor_db::operator[] (std::index_t idx)
 {

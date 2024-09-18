@@ -2,6 +2,7 @@
 #define BBP_ELSA_PROCESSOR_H
 
 #include "Keywords.h"
+#include "DebugUtils.h"
 
 namespace BBP
 {
@@ -9,7 +10,7 @@ namespace BBP
 	{
 
 		// Define a signature for processor action
-		using processor_action_t = keyword_return_t(*) ();
+		using processor_action_t = keyword_return_t(*) (TranslationUnit &, std::index_t, keyword_t &);
 
 		// Define new class of keywords
 		struct Processor_functor : public keyword_functor_t
@@ -19,10 +20,10 @@ namespace BBP
 			processor_action_t action;
 
 			// Override
-			keyword_return_t operator() () override;
+			keyword_return_t operator() (TranslationUnit &, std::index_t, keyword_t &) override;
 
 			// Constructor
-			Processor_functor(keyword_return_t(*act)()) : action(act) {}
+			Processor_functor(keyword_return_t(*act)(TranslationUnit &, std::index_t, keyword_t &)) : action(act) {}
 
 			// Other constructor
 			void *operator new(std::__cxx_size_t, Processor_functor *addr) { return addr; }
@@ -80,6 +81,9 @@ namespace BBP
 			// Which processor database is being used to retrieve functors
 			processor_db processorDB;
 
+			// Count of keywords
+			std::size_t keywordCount;
+
 		public:
 
 			// constructor
@@ -87,9 +91,13 @@ namespace BBP
 
 			// Register something
 			void Register(std::string, std::string);
+			void Register(std::string, std::string, keyword_identifier_t::keyword_flags flags);
 
 			// Reset
 			void Reset();
+
+			// Get a count of keywords
+			std::size_t getCount();
 
 			// Indexers
 			keyword_t &operator[] (std::index_t);

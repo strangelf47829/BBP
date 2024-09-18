@@ -124,7 +124,10 @@ void BBP::std::Terminal::TerminalApplication::CUP_CSINo()	// (2 arg) (default: 1
 
 	// If has lines, set lines
 	if (argVertical <= state.lineCount)
-		state.activePresentationPosition.horizontal = argVertical - 1;
+		state.activePresentationPosition.vertical = argVertical - 1;
+
+	// Calculate viewport
+	calculateViewport();
 }
 
 void BBP::std::Terminal::TerminalApplication::CHT_CSINo()	// (1 arg) (default: 1) move n tabs forward
@@ -142,8 +145,36 @@ void BBP::std::Terminal::TerminalApplication::CHT_CSINo()	// (1 arg) (default: 1
 		HT_C0();
 }
 
-void BBP::std::Terminal::TerminalApplication::ED_CSINo()	// No-op
+void BBP::std::Terminal::TerminalApplication::ED_CSINo()	// Erase all characters 
 {
+	// Get argument count. Must have at exactly one argument
+	size_t argCount = getArgumentCount();
+
+	if (argCount != 1)
+		return;
+
+	// Get argument
+	word arg = getArgument(0);
+
+	// If not 2, no-op (not implemented)
+	if (arg != 2)
+		return;
+
+	// Otherwise, set every current character to 0. Get current display position
+	TerminalState::TerminalRect dispPos = state.viewportPosition;
+
+	// Get string index
+	for (std::index_t strIndex = 0; strIndex < state.viewportSize.vertical; strIndex++)
+	{
+		// Get active string
+		std::w_string *str = state.terminalLines[strIndex + state.viewportPosition.vertical];
+
+		// Go over each character
+		for (std::index_t ccIndex = 0; ccIndex < state.viewportSize.horizontal; ccIndex++)
+		{
+			(*str)[ccIndex + state.viewportPosition.horizontal] = 0;
+		}
+	}
 
 }
 

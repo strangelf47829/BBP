@@ -42,7 +42,7 @@ void BBP::system::printShellDirectory()
 	{
 		std::printf("\n+---(\e[0;92m%s@", "kangel");
 		std::printf("%s\e[0;37m)-[", "dd");
-		std::printf("\e[1;34m%s\e[0;37m]\n+--$ ", fullpath.relName());
+		std::printf("\e[1;94m%s\e[0;37m]\n+--$ ", fullpath.relName());
 
 	}
 

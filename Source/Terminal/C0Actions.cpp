@@ -43,7 +43,18 @@ void BBP::std::Terminal::TerminalApplication::LF_C0()
 
 void BBP::std::Terminal::TerminalApplication::VT_C0()
 {
-	// Do nothing for now
+	// If tabulation is 0, do nothing
+	if (state.tabularSettings.vertical == 0)
+		return;
+
+	// Otherwise, get presentation and modulo that with state
+	std::size_t toIncrease = state.activePresentationPosition.vertical % state.tabularSettings.vertical;
+
+	// If this is 0, set to horizontal tab setting
+	toIncrease = state.tabularSettings.vertical - toIncrease;
+
+	// Move down that amount
+	MoveDown(toIncrease);
 }
 
 void BBP::std::Terminal::TerminalApplication::FF_C0()

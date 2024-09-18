@@ -7,12 +7,12 @@ BBP::std::FILE::FILE()
 	// Empty file, no nothing.
 }
 
-BBP::std::FILE::FILE(std::Stack<std::string_element> &data, std::conststring path)
-	: data(nullptr)
+BBP::std::FILE::FILE(std::Stack<std::string_element> &Stack, std::conststring path)
+	: data(&Stack)
 {
 	// Get INode info
 	std::PATH p(path);
-	system::Kernel::allocateINode(p);
+	this->node = system::Kernel::allocateINode(p);
 
 	// Check if it already exists
 	_unload_inode = !is_open();
@@ -24,8 +24,7 @@ BBP::std::FILE::FILE(std::Stack<std::string_element> &data, std::conststring pat
 #endif
 
 	// Create file node at corresponding INode
-	system::Kernel::openVirtualFile(this->node, data, &system::Shell::getPrimaryVolume(), p);
-	
+	system::Kernel::openVirtualFile(this->node, Stack, &system::Shell::getPrimaryVolume(), p);
 }
 
 BBP::std::FILE::FILE(std::PATH path)

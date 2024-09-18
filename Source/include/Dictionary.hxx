@@ -155,6 +155,14 @@ void BBP::std::HashedDictionary<Key_t, Value_t>::Reset()
 	allocator.clearAll();
 }
 
+// Set values
+template <BBP::std::Identifiable Key_t, BBP::std::Identifiable Value_t>
+BBP::std::HashedDictionary<Key_t, Value_t>::HashedDictionary()
+	: maxIndex(0)
+{
+
+}
+
 // Clear out everything
 template <BBP::std::Identifiable Key_t, BBP::std::Identifiable Value_t>
 BBP::std::HashedDictionary<Key_t, Value_t>::~HashedDictionary()

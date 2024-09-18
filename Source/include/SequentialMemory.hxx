@@ -60,6 +60,10 @@ T &BBP::std::SequentialMemory<T>::operator[] (std::index_t idx)
 
 	} while (this->activeIndex != 0);
 
+	// Otherwise look through next page
+	if (_nextPage)
+		return (*_nextPage)[idx - base];
+
 	// Error
 	std::raise(SIGSEGV);
 }

@@ -1,7 +1,0 @@
-mkdir.cpp: In function 'BBP::std::errno_t BBP::system::mkdir_builtin(BBP::std::size_t, BBP::std::string_element**)':
-mkdir.cpp:10:58: warning: unused parameter 'argc' [-Wunused-parameter]
-   10 | BBP::std::errno_t BBP::system::mkdir_builtin(std::size_t argc, std::c_string *argv)
-      |                                              ~~~~~~~~~~~~^~~~
-mkdir.cpp:10:79: warning: unused parameter 'argv' [-Wunused-parameter]
-   10 | BBP::std::errno_t BBP::system::mkdir_builtin(std::size_t argc, std::c_string *argv)
-      |                                                                ~~~~~~~~~~~~~~~^~~~

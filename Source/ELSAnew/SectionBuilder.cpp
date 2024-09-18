@@ -46,6 +46,14 @@ void BBP::elsa::Section::Reset()
 // Retrieve some data
 BBP::std::byte &BBP::elsa::Section::operator[] (std::index_t idx)
 {
+	// Get size
+	std::size_t size = memory.dataSize();
+
+	// If index is above size, and nextSection exists, return that instead
+	if (idx >= size && nextSection)
+		return (*nextSection)[idx - size];
+
+	// Otherwise simply return memory
 	return memory[idx];
 }
 
@@ -53,4 +61,14 @@ BBP::std::byte &BBP::elsa::Section::operator[] (std::index_t idx)
 BBP::std::size_t BBP::elsa::Section::size()
 {
 	return memory.dataSize();
+}
+
+// Link something
+BBP::elsa::Section &BBP::elsa::Section::Link(Section &section)
+{
+	// Write next section
+	nextSection = &section;
+
+	// Return section
+	return section;
 }

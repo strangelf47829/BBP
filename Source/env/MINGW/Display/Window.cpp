@@ -7,6 +7,9 @@ static SDL_Window *_window;
 static SDL_Renderer *_renderer;
 static SDL_Surface *screenSurface;
 
+// VBuffer
+BBP::std::RGBA_t *Host::VBuff = 0;
+
 // Page for BIOS font
 BBP::std::STATIC_PAGE<BBP::std::string_element, 6000> biosFont;
 
@@ -19,6 +22,9 @@ void Host::startDisplay(Host::BIOS &bios)
 	Host::hostDisplay.backBuffer = BBP::std::PAGE<BBP::std::RGBA_t>(vmem.dataSize, vmem.static_data);
 	Host::hostDisplay.width = w;
 	Host::hostDisplay.height = h;
+
+	// Set VBuff
+	VBuff = vmem.data;
 
 	if (SDL_Init(SDL_INIT_VIDEO) < 0)
 	{

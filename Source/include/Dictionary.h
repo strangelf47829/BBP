@@ -72,6 +72,9 @@ namespace BBP
 
 		public:
 
+			// Constructor
+			HashedDictionary();
+
 			// Add stuff to the dictionary
 			void add(Key_t, Value_t) override;
 

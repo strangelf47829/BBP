@@ -10,6 +10,9 @@ BBP::esa::BinaryApplication::BinaryApplication(std::conststring name, std::size_
 	file(builderStack, name),
 	mangled(&mangledPage, 128)
 {
+	// Create file
+	file = std::FILE(builderStack, name);
+
 	// Form the standard stuff
 	builder.formStandard(255, 255, 255, 255);
 }

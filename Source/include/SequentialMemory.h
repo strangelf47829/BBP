@@ -51,6 +51,14 @@ namespace BBP
 			// Free everything
 			void freeEverything();
 
+			// Templated constructor
+			IndexedPageMemory()
+			{
+				// Set all values of 'order' to 0
+				for (std::index_t idx = 0; idx < order.dataSize; idx++)
+					order[idx] = 0;
+			}
+
 		};
 
 		template<typename T>

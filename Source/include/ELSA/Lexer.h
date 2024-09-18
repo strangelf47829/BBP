@@ -7,52 +7,65 @@ namespace BBP
 {
 	namespace elsa
 	{
-		// set maximum input depth
-		constexpr std::size_t maximumLexerDepth = 10;
 
+		// Forward declaration of a debug database
+		class Debug_db;
 
-		// Input stream for a lexer
-		class LexerInputStream_t
+		// Forward declaration of keyword database
+		class keyword_db;
+
+		// The amount of input streams a lexer can hold
+		constexpr std::size_t maxLexerDepth = 10;
+
+		// The lexer input streams
+		struct LexerStream
 		{
-			// Stack
-			std::Stack<std::string_element> *stk;
+			// The file from which this lexer is reading
+			std::FILE data;
 
-		public:
+			// The position (in characters) of this stream
+			std::index_t position;
 
-			// Create a stream from a file
-			LexerInputStream_t(std::FILE &);
+			// The position (in characters) of the current line
+			std::index_t coloumn;
 
-			// Retrieve a character and advace the lexer
-			std::string_element Consume();
+			// The position (in characters) of the current row
+			std::index_t line;
 
-			// Check if still empty
-			bool hasData();
+			// The current 'delimiter' thingy of the stream
+			std::byte delimiterContext;
+
+			// Consume a character
+			bool consume(std::string_element &);
+
+			// Open a stream
+			void open(std::PATH);
+
+			// close a stream
+			void close();
+
+			// Is open?
+			bool isOpen;
+
 		};
 
 		class Lexer
 		{
-			// Static page
-			std::STATIC_PAGE<LexerInputStream_t, maximumLexerDepth> inputStreams;
+			// Static page with lexer data
+			std::STATIC_PAGE<LexerStream, maxLexerDepth> lexerStreams;
 
-			// What page are we on?
-			std::index_t activeInputStream;
+			// Index of lexer stream
+			std::index_t streamIndex;
 
-		public:
+			// Consume a character from the stream
+			std::string_element consume();
 
-			// Open an input stream
-			void open(LexerInputStream_t);
+			// Consume a character, and perform an action
+			bool consume(Debug_db &, keyword_db &);
 
-			// Perform a single fetch action (without processing anything)
-			void Fetch();
+			// Open a new stream
+			void open(std::PATH);
 
-			// Perform a single processing action (Update state basically)
-			void Process();
-
-			// Perform a single dequeue action (Perform queued actions)
-			void Dequeue();
-
-			// Perform a single backlog action (Check for debug emissions - Errors - Etc...)
-			void Backlog();
 
 		};
 

@@ -18,6 +18,9 @@ namespace BBP
 			// Own index
 			std::index_t _index;
 
+			// Next Section
+			Section *nextSection;
+
 		public:
 
 			// Allocate some memory
@@ -35,6 +38,9 @@ namespace BBP
 
 			// Retrieve total size
 			std::size_t size();
+
+			// Link after a page
+			Section &Link(Section &);
 
 		};
 

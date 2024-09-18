@@ -27,14 +27,29 @@ BBP::elsa::processor_db &BBP::elsa::keyword_db::getProcessor()
 
 void BBP::elsa::keyword_db::Register(std::string keyw, std::string func)
 {
+	// Default flags
+	keyword_identifier_t::keyword_flags defaultFlags = { 0, 0, 0 };
+
+	// Then call with default arguments (TODO: Unnecessary copying. Maybe use rvalues?)
+	Register(keyw, func, defaultFlags);
+}
+
+void BBP::elsa::keyword_db::Register(std::string keyw, std::string func, keyword_identifier_t::keyword_flags flags)
+{
 	// Constructor
 	new (&functors[activeKeyword]) Processor_functor(processorDB[func]);
 
 	// Constructor
 	keywords[activeKeyword] = keyword_t(keyw, &functors[activeKeyword]);
 
+	// Set flags
+	keywords[activeKeyword].identifier.flags = flags;
+
 	// Increment active keyword
 	activeKeyword++;
+
+	// Increment count
+	keywordCount;
 }
 
 void BBP::elsa::keyword_db::Reset()
@@ -54,6 +69,9 @@ void BBP::elsa::keyword_db::Reset()
 		allocator->free(functors.data);
 		functors = std::PAGE<Processor_functor>();
 	}
+
+	// Reset count
+	keywordCount = 0;
 
 	// Reset processor
 	processorDB.Reset();

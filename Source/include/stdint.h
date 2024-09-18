@@ -58,6 +58,36 @@ namespace BBP
 		// Reverse the order of a value (base 10)
 		uint32_t reverse(uint32_t);
 
+		// Convert 2 bytes into half word, taking endianness into account
+		uint16_t stitch(uint8_t, uint8_t, bool);
+
+		// Convert 2 halfwords into a word, taking endianness into account
+		uint32_t stitch(uint16_t, uint16_t, bool);
+
+		// Convert 4 bytes into a word, taking endianness into account
+		uint32_t stitch(uint8_t, uint8_t, uint8_t, uint8_t, bool);
+
+		// Convert a 16 bit value into two 8 byte values
+		void split(uint16_t, uint8_t &MSB, uint8_t &LSB, bool);
+
+		// Convert a 32 bit value into two 16 byte values
+		void split(uint32_t, uint16_t &MSB, uint16_t &LSB, bool);
+
+		// Convert a 32 bit value into four 8 byte values
+		void split(uint32_t, uint8_t &MSSB, uint8_t &LSSB, uint8_t &MSLB, uint8_t &LSLB, bool);
+
+		// What is the environment endianness policy?
+		bool isLittleEndianEnvironment();
+
+		// Set endianness globally
+		void setLittleEndianEnvironment();
+		void setBigEndianEnvironment();
+
+		// Above conversion functions but using global endianness values
+		uint16_t stitch(uint8_t, uint8_t);
+		uint32_t stitch(uint16_t, uint16_t);
+		uint32_t stitch(uint8_t, uint8_t, uint8_t, uint8_t);
+
 	}
 }
 
