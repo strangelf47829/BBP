@@ -1,0 +1,4 @@
+Entry.cpp: In function ‘bool OS::WINDOWSE20::EntryPoint(BBP::system::EFI*, BBP::std::TaskPool*&)’:
+Entry.cpp:6:51: warning: unused parameter ‘EFI’ [-Wunused-parameter]
+    6 | bool OS::WINDOWSE20::EntryPoint(BBP::system::EFI *EFI, BBP::std::TaskPool *&)
+      |                                 ~~~~~~~~~~~~~~~~~~^~~

@@ -1,6 +1,36 @@
 #include "../include/ELSA/ELFSection.h"
 #include "../include/stdint.h"
 
+// Initialize everything to 0
+BBP::ELF::Section::Section()
+	: name(0),
+	type(0),
+	flags(0),
+	address(0),
+	offset(0),
+	size(0),
+	link(0),
+	info(0),
+	addralign(0),
+	entsize(0)
+{
+
+}
+
+void BBP::ELF::Section::nullify()
+{
+	name = 0;
+	type = 0;
+	flags = 0;
+	address = 0;
+	offset = 0;
+	size = 0;
+	link = 0;
+	info = 0;
+	addralign = 0;
+	entsize = 0;
+}
+
 void BBP::ELF::Section::readData(bool endian)
 {
 	// name is index 0..3

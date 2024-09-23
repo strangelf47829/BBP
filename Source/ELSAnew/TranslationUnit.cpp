@@ -3,5 +3,5 @@
 BBP::elsa::TranslationUnit::TranslationUnit()
 	: keywords(&keywordAllocator, 16, 16)
 {
-	application.emitFile();
+	application.emitFile("/home/new2.out");
 }

@@ -13,6 +13,9 @@ BBP::ELF::ELF::ELF(BBP::std::PAGE<elsa::Section *> *sects)
 	header.e_shoff = 52;
 	header.e_shnum = 1;
 
+	// Set segment size
+	header.e_phentsize = 32;
+
 	// Create empty null-section
 	std::PAGE<std::byte> nullPage;
 	sectionTable.Allocate(nullPage, 40);
@@ -60,6 +63,9 @@ BBP::std::index_t BBP::ELF::ELF::registerSection(elsa::Section &section, BBP::EL
 	// And then set relevant data
 	sectionData.name = nameOffset;
 
+	// Then save
+	sectionData.writeData(header.ident.littleEndian);
+
 	// Then return index
 	return idx;
 }
@@ -76,11 +82,38 @@ BBP::std::offset_t BBP::ELF::ELF::pack()
 	// Address indicates current position, which advances with each section
 	std::address_t atPosition = header.e_ehsize;
 
-	// Then set shoff at position
-	header.e_shoff = atPosition;
+	// If ELF has any sections,
+	if (header.e_shnum != 0)
+	{
+		// Then set shoff at position
+		header.e_shoff = atPosition;
 
-	// Then advance position with amount of headers and its size
-	atPosition += (header.e_shnum * header.e_shentsize);
+		// Then advance position with amount of headers and its size
+		atPosition += (header.e_shnum * header.e_shentsize);
+	}
+	else
+	{
+		header.e_shoff = 0;
+		header.e_shentsize = 0;
+	}
+
+	// Else, if ELF has any segments
+	if (header.e_phnum != 0)
+	{
+		// Then set phoff at position
+		header.e_phoff = atPosition;
+
+		// Then advance position with amount of segments and its size
+		atPosition += (header.e_phnum * header.e_phentsize);
+	}
+	else
+	{
+		header.e_phoff = 0;
+		header.e_phentsize = 0;
+	}
+
+	// Write data
+	header.writeHeaderFields();
 
 	// Create sectionTable
 	BBP::ELF::Section sectionData;
@@ -165,6 +198,10 @@ void BBP::ELF::ELF::saveFile(std::conststring path)
 	for (std::index_t idx = 0; idx < header.e_shnum * header.e_shentsize; idx++)
 		bytes[idx + header.e_shoff] = sectionTable[idx];
 
+	// Then copy segment information
+	for (std::index_t idx = 0; idx < header.e_phnum * header.e_phentsize; idx++)
+		bytes[idx + header.e_phoff] = segmentTable[idx];
+
 	// Create sectionTable
 	BBP::ELF::Section sectionData;
 
@@ -189,4 +226,69 @@ void BBP::ELF::ELF::saveFile(std::conststring path)
 	// Then set filesize
 	stack.atElement = stack.max_elements;
 	file.writeFileToDisk();
+}
+
+// Find a section based on a name
+BBP::std::index_t BBP::ELF::ELF::find(std::string str)
+{
+	// Create section data
+	BBP::ELF::Section sectionData;
+
+	// Static data
+	std::STATIC_PAGE<std::byte, 40> sectionDataStatic;
+
+	// Then assign
+	sectionData.data = sectionDataStatic;
+
+	// Get string name
+	std::size_t nameLength = std::strlen(str);
+
+	// For each section count,
+	for (BBP::std::index_t idx = 1; idx < header.e_shnum; idx++)
+	{
+		// Copy over bytes into sectionData
+		for (std::index_t bidx = 0; bidx < header.e_shentsize; bidx++)
+			sectionData.data[bidx] = sectionTable[bidx + header.e_shentsize * idx];
+
+		// Then read
+		sectionData.readData(header.ident.littleEndian);
+
+		// Now check for name,
+		std::offset_t name = sectionData.name;
+
+		// Then compare name
+		for (std::index_t nidx = 0; nidx < nameLength; nidx++)
+			if (str[nidx] != sectionStringTable[nidx + name])
+				goto loopend; // Break out of two loops
+		
+		// Name coincides, return index
+		return idx;
+
+	loopend:
+		continue;
+	}
+
+	// Return 0
+	return 0;
+}
+
+// Find a section based on index
+BBP::elsa::Section *BBP::ELF::ELF::find(std::index_t idx)
+{
+	// If section is null, return nothing
+	if (sections == nullptr)
+		return nullptr;
+
+	// Otherwise if index is 0, return nothing
+	if (idx == 0)
+		return nullptr;
+
+	// Otherwise return based on index
+	return (*sections)[idx - 1];
+}
+
+// Find a section based on name
+BBP::elsa::Section *BBP::ELF::ELF::get(std::string str)
+{
+	return find(find(str));
 }

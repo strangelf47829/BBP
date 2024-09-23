@@ -1,0 +1,12 @@
+CSINoInters.cpp: In member function ‘void BBP::std::Terminal::TerminalApplication::ED_CSINo()’:
+CSINoInters.cpp:164:30: warning: variable ‘dispPos’ set but not used [-Wunused-but-set-variable]
+  164 |  TerminalState::TerminalRect dispPos = state.viewportPosition;
+      |                              ^~~~~~~
+CSINoInters.cpp: In member function ‘void BBP::std::Terminal::TerminalApplication::IL_CSINo()’:
+CSINoInters.cpp:190:7: warning: unused variable ‘arg’ [-Wunused-variable]
+  190 |  word arg = 1;
+      |       ^~~
+CSINoInters.cpp: In member function ‘void BBP::std::Terminal::TerminalApplication::DL_CSINo()’:
+CSINoInters.cpp:201:7: warning: unused variable ‘arg’ [-Wunused-variable]
+  201 |  word arg = 1;
+      |       ^~~

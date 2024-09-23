@@ -1,0 +1,21 @@
+In file included from ELFHeader.cpp:1:
+../include/ELSA/ELFHeader.h: In constructor ‘BBP::ELF::ELFHeader::ELFHeader()’:
+../include/ELSA/ELFHeader.h:119:18: warning: ‘BBP::ELF::ELFHeader::e_ehsize’ will be initialized after [-Wreorder]
+  119 |    std::halfword e_ehsize;
+      |                  ^~~~~~~~
+../include/ELSA/ELFHeader.h:116:18: warning:   ‘BBP::std::offset_t BBP::ELF::ELFHeader::e_phoff’ [-Wreorder]
+  116 |    std::offset_t e_phoff;
+      |                  ^~~~~~~
+ELFHeader.cpp:9:1: warning:   when initialized here [-Wreorder]
+    9 | BBP::ELF::ELFHeader::ELFHeader()
+      | ^~~
+In file included from ELFHeader.cpp:1:
+../include/ELSA/ELFHeader.h:122:18: warning: ‘BBP::ELF::ELFHeader::e_shentsize’ will be initialized after [-Wreorder]
+  122 |    std::halfword e_shentsize;
+      |                  ^~~~~~~~~~~
+../include/ELSA/ELFHeader.h:121:18: warning:   ‘BBP::std::halfword BBP::ELF::ELFHeader::e_phnum’ [-Wreorder]
+  121 |    std::halfword e_phnum;
+      |                  ^~~~~~~
+ELFHeader.cpp:9:1: warning:   when initialized here [-Wreorder]
+    9 | BBP::ELF::ELFHeader::ELFHeader()
+      | ^~~

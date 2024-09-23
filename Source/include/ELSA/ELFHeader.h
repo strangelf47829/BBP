@@ -91,19 +91,19 @@ namespace BBP
 				EM_386,
 				EM_68K,
 				EM_88K,
-				EM_860,
+				EM_860 = 7,
 				EM_MIPS,
-				EM_PARISC,
+				EM_PARISC = 15,
+				EM_VPP500 = 17,
 				EM_SPARC32PLUS,
+				EM_960,
 				EM_PPC,
 				EM_PPC64,
 				EM_S390,
-				EM_ARM,
-				EM_SH,
-				EM_SPARCV9,
-				EM_IA_64,
-				EM_X86_64,
-				EM_VAX
+				EM_ARM = 0x28,
+				EM_IA_64 = 0x32,
+				EM_X86_64 = 0x3E,
+				EM_VAX = 0x4B
 			};
 
 			// 'Special' fields

@@ -27,6 +27,9 @@ namespace BBP
 			std::offset_t Allocate(std::PAGE<std::byte> &, std::size_t);
 			std::offset_t Allocate(std::PAGE<std::byte> &, std::size_t, std::size_t);
 
+			// Free up a pointer, could be used to reallocate certain blocks
+			void Free(std::PAGE<std::byte> &);
+
 			// Index of this section
 			std::index_t &index();
 

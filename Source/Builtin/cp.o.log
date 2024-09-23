@@ -1,0 +1,22 @@
+cp.cpp:250:2: warning: "/*" within comment [-Wcomment]
+  250 |  /*
+      |   
+cp.cpp:251:125: warning: "/*" within comment [-Wcomment]
+  251 |  std::async_task<int (*)(int), int>::lambda_t k = [](std::async_stack_t<int> &stack, std::async_stack_t<int> &arg) -> int { /*Double stack.template get<0>() = 2 * arg.template get<0>(); return 0; };
+      |                                                                                                                              
+cp.cpp:252:125: warning: "/*" within comment [-Wcomment]
+  252 |  std::async_task<int (*)(int), int>::lambda_t l = [](std::async_stack_t<int> &stack, std::async_stack_t<int> &arg) -> int { /*Return double again return stack.template get<0>() * 2; };
+      |                                                                                                                              
+cp.cpp: In function ‘BBP::std::errno_t BBP::system::cp_builtin(BBP::std::size_t, BBP::std::string_element**)’:
+cp.cpp:44:2: warning: statement has no effect [-Wunused-value]
+   44 |  sizeof(elsa::TranslationUnit);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cp.cpp:99:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   99 | }
+      | ^
+cp.cpp:35:55: warning: unused parameter ‘argc’ [-Wunused-parameter]
+   35 | BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
+      |                                           ~~~~~~~~~~~~^~~~
+cp.cpp:35:76: warning: unused parameter ‘argv’ [-Wunused-parameter]
+   35 | BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
+      |                                                             ~~~~~~~~~~~~~~~^~~~

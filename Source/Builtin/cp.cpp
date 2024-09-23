@@ -35,6 +35,15 @@ BBP::std::string str = "eee Hello! eee";
 BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
 {
 
+	// Create a binary application
+	elsa::BinaryApplication application;
+
+	// Then save file
+	application.emitFile("/home/new2.out");
+
+	sizeof(elsa::TranslationUnit);
+
+	/*
 	// Static page
 	std::STATIC_PAGE<elsa::Section *, 16> sections_static;
 
@@ -53,22 +62,28 @@ BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
 	// Create data
 	std::PAGE<std::byte> textData;
 	textSection.Allocate(textData, 3);
-	textData[0] = 1;
-	textData[1] = 2;
-	textData[2] = 3;
+	textData[0] = 'H';
+	textData[1] = 'e';
+	textData[2] = 'l';
+
+	// Now find
+	BBP::elsa::Section *sect = elf.get(".text");
 
 	// Now reallocate
-	textSection.Allocate(textData, 3);
-	textData[0] = 4;
-	textData[1] = 5;
-	textData[2] = 6;
+	sect->Allocate(textData, 4);
+	textData[0] = 'l';
+	textData[1] = 'o';
+	textData[2] = '!';
+	textData[3] = 0;
 
 	// Then add stuff to the text
 	textSectionData.type = 1;
 	textSectionData.writeData(elf.header.ident.littleEndian);
 
+	// Save
 	elf.saveFile("/home/new.out");
-	
+
+	*/
 	
 
 	// Create a translation unit

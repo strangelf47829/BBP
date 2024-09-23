@@ -22,6 +22,9 @@ namespace BBP
 			// Section table
 			elsa::Section sectionTable;
 
+			// Segment table
+			elsa::Section segmentTable;
+
 			// Section name table
 			elsa::Section sectionStringTable;
 
@@ -33,6 +36,13 @@ namespace BBP
 
 			// Register a section
 			std::index_t registerSection(elsa::Section &, BBP::ELF::Section &, std::string);
+
+			// Look for a section
+			std::index_t find(std::string);
+			elsa::Section *find(std::index_t);
+
+			// Get section from name
+			elsa::Section *get(std::string);
 
 			// Pack sections
 			std::offset_t pack();

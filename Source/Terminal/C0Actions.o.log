@@ -1,0 +1,18 @@
+C0Actions.cpp: In member function ‘void BBP::std::Terminal::TerminalApplication::C0Action(BBP::std::Terminal::TerminalApplication::C0)’:
+C0Actions.cpp:182:9: warning: enumeration value ‘NUL’ not handled in switch [-Wswitch]
+  182 |  switch (action)
+      |         ^
+C0Actions.cpp:182:9: warning: enumeration value ‘SOH’ not handled in switch [-Wswitch]
+C0Actions.cpp:182:9: warning: enumeration value ‘STX’ not handled in switch [-Wswitch]
+C0Actions.cpp:182:9: warning: enumeration value ‘ETX’ not handled in switch [-Wswitch]
+C0Actions.cpp:182:9: warning: enumeration value ‘EOT’ not handled in switch [-Wswitch]
+C0Actions.cpp:182:9: warning: enumeration value ‘ENQ’ not handled in switch [-Wswitch]
+C0Actions.cpp:182:9: warning: enumeration value ‘ACK’ not handled in switch [-Wswitch]
+C0Actions.cpp:182:9: warning: enumeration value ‘LS1’ not handled in switch [-Wswitch]
+C0Actions.cpp:182:9: warning: enumeration value ‘LS0’ not handled in switch [-Wswitch]
+C0Actions.cpp:182:9: warning: enumeration value ‘DLE’ not handled in switch [-Wswitch]
+C0Actions.cpp:182:9: warning: enumeration value ‘NAK’ not handled in switch [-Wswitch]
+C0Actions.cpp:182:9: warning: enumeration value ‘SYN’ not handled in switch [-Wswitch]
+C0Actions.cpp:182:9: warning: enumeration value ‘ETB’ not handled in switch [-Wswitch]
+C0Actions.cpp:182:9: warning: enumeration value ‘CAN’ not handled in switch [-Wswitch]
+C0Actions.cpp:182:9: warning: enumeration value ‘EM’ not handled in switch [-Wswitch]

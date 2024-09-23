@@ -1,0 +1,822 @@
+Actions.cpp:969:31: warning: multi-character character constant [-Wmultichar]
+  969 |  processor.numericalArgument({'EMMA'}, false);
+      |                               ^~~~~~
+In file included from Actions.cpp:1:
+Actions.cpp: In function ‘const string_element* BBP::esa::pragma_include(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:276:168: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  276 | #define PRAGMA(name) BBP::std::conststring BBP::esa::pragma_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:14:1: note: in expansion of macro ‘PRAGMA’
+   14 | PRAGMA(include)
+      | ^~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::pragma_handler(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:276:99: warning: unused parameter ‘context’ [-Wunused-parameter]
+  276 | #define PRAGMA(name) BBP::std::conststring BBP::esa::pragma_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:47:1: note: in expansion of macro ‘PRAGMA’
+   47 | PRAGMA(handler)
+      | ^~~~~~
+Actions.h:276:126: warning: unused parameter ‘index’ [-Wunused-parameter]
+  276 | #define PRAGMA(name) BBP::std::conststring BBP::esa::pragma_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                            ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:47:1: note: in expansion of macro ‘PRAGMA’
+   47 | PRAGMA(handler)
+      | ^~~~~~
+Actions.h:276:168: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  276 | #define PRAGMA(name) BBP::std::conststring BBP::esa::pragma_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:47:1: note: in expansion of macro ‘PRAGMA’
+   47 | PRAGMA(handler)
+      | ^~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::pragma_define(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:276:168: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  276 | #define PRAGMA(name) BBP::std::conststring BBP::esa::pragma_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:52:1: note: in expansion of macro ‘PRAGMA’
+   52 | PRAGMA(define)
+      | ^~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::pragma_undef(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:276:168: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  276 | #define PRAGMA(name) BBP::std::conststring BBP::esa::pragma_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:121:1: note: in expansion of macro ‘PRAGMA’
+  121 | PRAGMA(undef)
+      | ^~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::pragma_ifndef(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:276:126: warning: unused parameter ‘index’ [-Wunused-parameter]
+  276 | #define PRAGMA(name) BBP::std::conststring BBP::esa::pragma_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                            ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:166:1: note: in expansion of macro ‘PRAGMA’
+  166 | PRAGMA(ifndef)
+      | ^~~~~~
+Actions.h:276:168: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  276 | #define PRAGMA(name) BBP::std::conststring BBP::esa::pragma_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:166:1: note: in expansion of macro ‘PRAGMA’
+  166 | PRAGMA(ifndef)
+      | ^~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::pragma_ifdef(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:276:126: warning: unused parameter ‘index’ [-Wunused-parameter]
+  276 | #define PRAGMA(name) BBP::std::conststring BBP::esa::pragma_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                            ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:212:1: note: in expansion of macro ‘PRAGMA’
+  212 | PRAGMA(ifdef)
+      | ^~~~~~
+Actions.h:276:168: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  276 | #define PRAGMA(name) BBP::std::conststring BBP::esa::pragma_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:212:1: note: in expansion of macro ‘PRAGMA’
+  212 | PRAGMA(ifdef)
+      | ^~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::pragma_endif(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:276:168: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  276 | #define PRAGMA(name) BBP::std::conststring BBP::esa::pragma_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:249:1: note: in expansion of macro ‘PRAGMA’
+  249 | PRAGMA(endif)
+      | ^~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::pragma_else(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:276:168: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  276 | #define PRAGMA(name) BBP::std::conststring BBP::esa::pragma_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:297:1: note: in expansion of macro ‘PRAGMA’
+  297 | PRAGMA(else)
+      | ^~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::pragma_atomic(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:276:99: warning: unused parameter ‘context’ [-Wunused-parameter]
+  276 | #define PRAGMA(name) BBP::std::conststring BBP::esa::pragma_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:327:1: note: in expansion of macro ‘PRAGMA’
+  327 | PRAGMA(atomic)
+      | ^~~~~~
+Actions.h:276:126: warning: unused parameter ‘index’ [-Wunused-parameter]
+  276 | #define PRAGMA(name) BBP::std::conststring BBP::esa::pragma_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                            ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:327:1: note: in expansion of macro ‘PRAGMA’
+  327 | PRAGMA(atomic)
+      | ^~~~~~
+Actions.h:276:168: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  276 | #define PRAGMA(name) BBP::std::conststring BBP::esa::pragma_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:327:1: note: in expansion of macro ‘PRAGMA’
+  327 | PRAGMA(atomic)
+      | ^~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::pragma_handover(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:276:99: warning: unused parameter ‘context’ [-Wunused-parameter]
+  276 | #define PRAGMA(name) BBP::std::conststring BBP::esa::pragma_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:332:1: note: in expansion of macro ‘PRAGMA’
+  332 | PRAGMA(handover)
+      | ^~~~~~
+Actions.h:276:126: warning: unused parameter ‘index’ [-Wunused-parameter]
+  276 | #define PRAGMA(name) BBP::std::conststring BBP::esa::pragma_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                            ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:332:1: note: in expansion of macro ‘PRAGMA’
+  332 | PRAGMA(handover)
+      | ^~~~~~
+Actions.h:276:168: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  276 | #define PRAGMA(name) BBP::std::conststring BBP::esa::pragma_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:332:1: note: in expansion of macro ‘PRAGMA’
+  332 | PRAGMA(handover)
+      | ^~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::pragma_continue(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:276:99: warning: unused parameter ‘context’ [-Wunused-parameter]
+  276 | #define PRAGMA(name) BBP::std::conststring BBP::esa::pragma_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:337:1: note: in expansion of macro ‘PRAGMA’
+  337 | PRAGMA(continue)
+      | ^~~~~~
+Actions.h:276:126: warning: unused parameter ‘index’ [-Wunused-parameter]
+  276 | #define PRAGMA(name) BBP::std::conststring BBP::esa::pragma_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                            ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:337:1: note: in expansion of macro ‘PRAGMA’
+  337 | PRAGMA(continue)
+      | ^~~~~~
+Actions.h:276:168: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  276 | #define PRAGMA(name) BBP::std::conststring BBP::esa::pragma_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:337:1: note: in expansion of macro ‘PRAGMA’
+  337 | PRAGMA(continue)
+      | ^~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::kw_static(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:274:95: warning: unused parameter ‘context’ [-Wunused-parameter]
+  274 | #define ACTION(name) BBP::std::conststring BBP::esa::kw_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:344:1: note: in expansion of macro ‘ACTION’
+  344 | ACTION(static)
+      | ^~~~~~
+Actions.h:274:122: warning: unused parameter ‘index’ [-Wunused-parameter]
+  274 | #define ACTION(name) BBP::std::conststring BBP::esa::kw_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                        ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:344:1: note: in expansion of macro ‘ACTION’
+  344 | ACTION(static)
+      | ^~~~~~
+Actions.h:274:164: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  274 | #define ACTION(name) BBP::std::conststring BBP::esa::kw_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:344:1: note: in expansion of macro ‘ACTION’
+  344 | ACTION(static)
+      | ^~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::kw_const(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:274:95: warning: unused parameter ‘context’ [-Wunused-parameter]
+  274 | #define ACTION(name) BBP::std::conststring BBP::esa::kw_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:349:1: note: in expansion of macro ‘ACTION’
+  349 | ACTION(const)
+      | ^~~~~~
+Actions.h:274:122: warning: unused parameter ‘index’ [-Wunused-parameter]
+  274 | #define ACTION(name) BBP::std::conststring BBP::esa::kw_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                        ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:349:1: note: in expansion of macro ‘ACTION’
+  349 | ACTION(const)
+      | ^~~~~~
+Actions.h:274:164: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  274 | #define ACTION(name) BBP::std::conststring BBP::esa::kw_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:349:1: note: in expansion of macro ‘ACTION’
+  349 | ACTION(const)
+      | ^~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::kw_virtual(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:274:95: warning: unused parameter ‘context’ [-Wunused-parameter]
+  274 | #define ACTION(name) BBP::std::conststring BBP::esa::kw_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:354:1: note: in expansion of macro ‘ACTION’
+  354 | ACTION(virtual)
+      | ^~~~~~
+Actions.h:274:122: warning: unused parameter ‘index’ [-Wunused-parameter]
+  274 | #define ACTION(name) BBP::std::conststring BBP::esa::kw_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                        ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:354:1: note: in expansion of macro ‘ACTION’
+  354 | ACTION(virtual)
+      | ^~~~~~
+Actions.h:274:164: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  274 | #define ACTION(name) BBP::std::conststring BBP::esa::kw_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:354:1: note: in expansion of macro ‘ACTION’
+  354 | ACTION(virtual)
+      | ^~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::kw_extern(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:274:95: warning: unused parameter ‘context’ [-Wunused-parameter]
+  274 | #define ACTION(name) BBP::std::conststring BBP::esa::kw_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:359:1: note: in expansion of macro ‘ACTION’
+  359 | ACTION(extern)
+      | ^~~~~~
+Actions.h:274:122: warning: unused parameter ‘index’ [-Wunused-parameter]
+  274 | #define ACTION(name) BBP::std::conststring BBP::esa::kw_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                        ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:359:1: note: in expansion of macro ‘ACTION’
+  359 | ACTION(extern)
+      | ^~~~~~
+Actions.h:274:164: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  274 | #define ACTION(name) BBP::std::conststring BBP::esa::kw_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:359:1: note: in expansion of macro ‘ACTION’
+  359 | ACTION(extern)
+      | ^~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::kw_procedure(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:274:95: warning: unused parameter ‘context’ [-Wunused-parameter]
+  274 | #define ACTION(name) BBP::std::conststring BBP::esa::kw_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:364:1: note: in expansion of macro ‘ACTION’
+  364 | ACTION(procedure)
+      | ^~~~~~
+Actions.h:274:122: warning: unused parameter ‘index’ [-Wunused-parameter]
+  274 | #define ACTION(name) BBP::std::conststring BBP::esa::kw_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                        ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:364:1: note: in expansion of macro ‘ACTION’
+  364 | ACTION(procedure)
+      | ^~~~~~
+Actions.h:274:164: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  274 | #define ACTION(name) BBP::std::conststring BBP::esa::kw_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:364:1: note: in expansion of macro ‘ACTION’
+  364 | ACTION(procedure)
+      | ^~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::kw_end(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:274:95: warning: unused parameter ‘context’ [-Wunused-parameter]
+  274 | #define ACTION(name) BBP::std::conststring BBP::esa::kw_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:379:1: note: in expansion of macro ‘ACTION’
+  379 | ACTION(end)
+      | ^~~~~~
+Actions.h:274:122: warning: unused parameter ‘index’ [-Wunused-parameter]
+  274 | #define ACTION(name) BBP::std::conststring BBP::esa::kw_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                        ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:379:1: note: in expansion of macro ‘ACTION’
+  379 | ACTION(end)
+      | ^~~~~~
+Actions.h:274:164: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  274 | #define ACTION(name) BBP::std::conststring BBP::esa::kw_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:379:1: note: in expansion of macro ‘ACTION’
+  379 | ACTION(end)
+      | ^~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::kw_endroutine(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:274:122: warning: unused parameter ‘index’ [-Wunused-parameter]
+  274 | #define ACTION(name) BBP::std::conststring BBP::esa::kw_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                        ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:414:1: note: in expansion of macro ‘ACTION’
+  414 | ACTION(endroutine)
+      | ^~~~~~
+Actions.h:274:164: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  274 | #define ACTION(name) BBP::std::conststring BBP::esa::kw_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:414:1: note: in expansion of macro ‘ACTION’
+  414 | ACTION(endroutine)
+      | ^~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::tk_newline(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:275:121: warning: unused parameter ‘index’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                       ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:461:1: note: in expansion of macro ‘TOKEN’
+  461 | TOKEN(newline)
+      | ^~~~~
+Actions.h:275:163: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:461:1: note: in expansion of macro ‘TOKEN’
+  461 | TOKEN(newline)
+      | ^~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::tk_semicolon(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:275:121: warning: unused parameter ‘index’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                       ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:549:1: note: in expansion of macro ‘TOKEN’
+  549 | TOKEN(semicolon)
+      | ^~~~~
+Actions.h:275:163: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:549:1: note: in expansion of macro ‘TOKEN’
+  549 | TOKEN(semicolon)
+      | ^~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::tk_closeDelimiter(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:275:94: warning: unused parameter ‘context’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:873:1: note: in expansion of macro ‘TOKEN’
+  873 | TOKEN(closeDelimiter)
+      | ^~~~~
+Actions.h:275:121: warning: unused parameter ‘index’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                       ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:873:1: note: in expansion of macro ‘TOKEN’
+  873 | TOKEN(closeDelimiter)
+      | ^~~~~
+Actions.h:275:163: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:873:1: note: in expansion of macro ‘TOKEN’
+  873 | TOKEN(closeDelimiter)
+      | ^~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::tk_comma(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:275:94: warning: unused parameter ‘context’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:878:1: note: in expansion of macro ‘TOKEN’
+  878 | TOKEN(comma)
+      | ^~~~~
+Actions.h:275:121: warning: unused parameter ‘index’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                       ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:878:1: note: in expansion of macro ‘TOKEN’
+  878 | TOKEN(comma)
+      | ^~~~~
+Actions.h:275:163: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:878:1: note: in expansion of macro ‘TOKEN’
+  878 | TOKEN(comma)
+      | ^~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::tk_caret(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:275:121: warning: unused parameter ‘index’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                       ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:883:1: note: in expansion of macro ‘TOKEN’
+  883 | TOKEN(caret)
+      | ^~~~~
+Actions.h:275:163: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:883:1: note: in expansion of macro ‘TOKEN’
+  883 | TOKEN(caret)
+      | ^~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::tk_doubleQuote(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:275:121: warning: unused parameter ‘index’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                       ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:904:1: note: in expansion of macro ‘TOKEN’
+  904 | TOKEN(doubleQuote)
+      | ^~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::tk_singleQuote(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:275:94: warning: unused parameter ‘context’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:933:1: note: in expansion of macro ‘TOKEN’
+  933 | TOKEN(singleQuote)
+      | ^~~~~
+Actions.h:275:121: warning: unused parameter ‘index’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                       ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:933:1: note: in expansion of macro ‘TOKEN’
+  933 | TOKEN(singleQuote)
+      | ^~~~~
+Actions.h:275:163: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:933:1: note: in expansion of macro ‘TOKEN’
+  933 | TOKEN(singleQuote)
+      | ^~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::tk_colon(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:275:94: warning: unused parameter ‘context’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:938:1: note: in expansion of macro ‘TOKEN’
+  938 | TOKEN(colon)
+      | ^~~~~
+Actions.h:275:121: warning: unused parameter ‘index’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                       ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:938:1: note: in expansion of macro ‘TOKEN’
+  938 | TOKEN(colon)
+      | ^~~~~
+Actions.h:275:163: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:938:1: note: in expansion of macro ‘TOKEN’
+  938 | TOKEN(colon)
+      | ^~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::tk_backslash(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:275:94: warning: unused parameter ‘context’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:973:1: note: in expansion of macro ‘TOKEN’
+  973 | TOKEN(backslash)
+      | ^~~~~
+Actions.h:275:121: warning: unused parameter ‘index’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                       ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:973:1: note: in expansion of macro ‘TOKEN’
+  973 | TOKEN(backslash)
+      | ^~~~~
+Actions.h:275:163: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:973:1: note: in expansion of macro ‘TOKEN’
+  973 | TOKEN(backslash)
+      | ^~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::tk_size(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:275:94: warning: unused parameter ‘context’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:978:1: note: in expansion of macro ‘TOKEN’
+  978 | TOKEN(size)
+      | ^~~~~
+Actions.h:275:121: warning: unused parameter ‘index’ [-Wunused-parameter]
+  275 | #define TOKEN(name) BBP::std::conststring BBP::esa::tk_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                       ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:978:1: note: in expansion of macro ‘TOKEN’
+  978 | TOKEN(size)
+      | ^~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_nil(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1011:1: note: in expansion of macro ‘INSTRUCTION’
+ 1011 | INSTRUCTION(nil)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1011:1: note: in expansion of macro ‘INSTRUCTION’
+ 1011 | INSTRUCTION(nil)
+      | ^~~~~~~~~~~
+Actions.h:277:169: warning: unused parameter ‘handle’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Actions.cpp:1011:1: note: in expansion of macro ‘INSTRUCTION’
+ 1011 | INSTRUCTION(nil)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_stack(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1018:1: note: in expansion of macro ‘INSTRUCTION’
+ 1018 | INSTRUCTION(stack)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1018:1: note: in expansion of macro ‘INSTRUCTION’
+ 1018 | INSTRUCTION(stack)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_ctrl(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1046:1: note: in expansion of macro ‘INSTRUCTION’
+ 1046 | INSTRUCTION(ctrl)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1046:1: note: in expansion of macro ‘INSTRUCTION’
+ 1046 | INSTRUCTION(ctrl)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_mem(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1105:1: note: in expansion of macro ‘INSTRUCTION’
+ 1105 | INSTRUCTION(mem)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1105:1: note: in expansion of macro ‘INSTRUCTION’
+ 1105 | INSTRUCTION(mem)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_inc(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1183:1: note: in expansion of macro ‘INSTRUCTION’
+ 1183 | INSTRUCTION(inc)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1183:1: note: in expansion of macro ‘INSTRUCTION’
+ 1183 | INSTRUCTION(inc)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_dec(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1203:1: note: in expansion of macro ‘INSTRUCTION’
+ 1203 | INSTRUCTION(dec)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1203:1: note: in expansion of macro ‘INSTRUCTION’
+ 1203 | INSTRUCTION(dec)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_neg(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1223:1: note: in expansion of macro ‘INSTRUCTION’
+ 1223 | INSTRUCTION(neg)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1223:1: note: in expansion of macro ‘INSTRUCTION’
+ 1223 | INSTRUCTION(neg)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_add(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1243:1: note: in expansion of macro ‘INSTRUCTION’
+ 1243 | INSTRUCTION(add)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1243:1: note: in expansion of macro ‘INSTRUCTION’
+ 1243 | INSTRUCTION(add)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_sub(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1287:1: note: in expansion of macro ‘INSTRUCTION’
+ 1287 | INSTRUCTION(sub)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1287:1: note: in expansion of macro ‘INSTRUCTION’
+ 1287 | INSTRUCTION(sub)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_mul(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1331:1: note: in expansion of macro ‘INSTRUCTION’
+ 1331 | INSTRUCTION(mul)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1331:1: note: in expansion of macro ‘INSTRUCTION’
+ 1331 | INSTRUCTION(mul)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_div(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1375:1: note: in expansion of macro ‘INSTRUCTION’
+ 1375 | INSTRUCTION(div)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1375:1: note: in expansion of macro ‘INSTRUCTION’
+ 1375 | INSTRUCTION(div)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_mod(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1403:1: note: in expansion of macro ‘INSTRUCTION’
+ 1403 | INSTRUCTION(mod)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1403:1: note: in expansion of macro ‘INSTRUCTION’
+ 1403 | INSTRUCTION(mod)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_lbs(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1431:1: note: in expansion of macro ‘INSTRUCTION’
+ 1431 | INSTRUCTION(lbs)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1431:1: note: in expansion of macro ‘INSTRUCTION’
+ 1431 | INSTRUCTION(lbs)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_rbs(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1445:1: note: in expansion of macro ‘INSTRUCTION’
+ 1445 | INSTRUCTION(rbs)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1445:1: note: in expansion of macro ‘INSTRUCTION’
+ 1445 | INSTRUCTION(rbs)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_or(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1459:1: note: in expansion of macro ‘INSTRUCTION’
+ 1459 | INSTRUCTION(or )
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1459:1: note: in expansion of macro ‘INSTRUCTION’
+ 1459 | INSTRUCTION(or )
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_xor(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1495:1: note: in expansion of macro ‘INSTRUCTION’
+ 1495 | INSTRUCTION(xor)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1495:1: note: in expansion of macro ‘INSTRUCTION’
+ 1495 | INSTRUCTION(xor)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_and(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1531:1: note: in expansion of macro ‘INSTRUCTION’
+ 1531 | INSTRUCTION(and)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1531:1: note: in expansion of macro ‘INSTRUCTION’
+ 1531 | INSTRUCTION(and)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_not(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1567:1: note: in expansion of macro ‘INSTRUCTION’
+ 1567 | INSTRUCTION(not)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1567:1: note: in expansion of macro ‘INSTRUCTION’
+ 1567 | INSTRUCTION(not)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_flag(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1603:1: note: in expansion of macro ‘INSTRUCTION’
+ 1603 | INSTRUCTION(flag)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1603:1: note: in expansion of macro ‘INSTRUCTION’
+ 1603 | INSTRUCTION(flag)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_jmp(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1623:1: note: in expansion of macro ‘INSTRUCTION’
+ 1623 | INSTRUCTION(jmp)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1623:1: note: in expansion of macro ‘INSTRUCTION’
+ 1623 | INSTRUCTION(jmp)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_jmpc(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1637:1: note: in expansion of macro ‘INSTRUCTION’
+ 1637 | INSTRUCTION(jmpc)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1637:1: note: in expansion of macro ‘INSTRUCTION’
+ 1637 | INSTRUCTION(jmpc)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_jmpz(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1679:1: note: in expansion of macro ‘INSTRUCTION’
+ 1679 | INSTRUCTION(jmpz)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1679:1: note: in expansion of macro ‘INSTRUCTION’
+ 1679 | INSTRUCTION(jmpz)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_page(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1742:1: note: in expansion of macro ‘INSTRUCTION’
+ 1742 | INSTRUCTION(page)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1742:1: note: in expansion of macro ‘INSTRUCTION’
+ 1742 | INSTRUCTION(page)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_signal(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1808:1: note: in expansion of macro ‘INSTRUCTION’
+ 1808 | INSTRUCTION(signal)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1808:1: note: in expansion of macro ‘INSTRUCTION’
+ 1808 | INSTRUCTION(signal)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_halt(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.h:277:100: warning: unused parameter ‘context’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+Actions.cpp:1824:1: note: in expansion of macro ‘INSTRUCTION’
+ 1824 | INSTRUCTION(halt)
+      | ^~~~~~~~~~~
+Actions.h:277:127: warning: unused parameter ‘index’ [-Wunused-parameter]
+  277 | #define INSTRUCTION(name) BBP::std::conststring BBP::esa::mn_##name (BBP::std::Lexer::lex_context *context, BBP::std::index_t index, BBP::std::Lexer::lex_keywordhandle handle)
+      |                                                                                                             ~~~~~~~~~~~~~~~~~~^~~~~
+Actions.cpp:1824:1: note: in expansion of macro ‘INSTRUCTION’
+ 1824 | INSTRUCTION(halt)
+      | ^~~~~~~~~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::tk_openDelimiter(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.cpp:736:4: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  736 |    if (!(processor.symbol.subtype & esa::SYMTMOD_EXTERN))
+      |    ^~
+Actions.cpp:742:3: note: here
+  742 |   case 0x2325a40c: // [[export]]. Used to indicate explicitly that this is for shared library linking
+      |   ^~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_jmpc(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.cpp:1645:10: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 1645 |   suffix = userspace::negated;
+      |   ~~~~~~~^~~~~~~~~~~~~~~~~~~~
+Actions.cpp:1646:2: note: here
+ 1646 |  case JLTR_HANDLE:
+      |  ^~~~
+Actions.cpp:1652:10: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 1652 |   suffix = userspace::negated;
+      |   ~~~~~~~^~~~~~~~~~~~~~~~~~~~
+Actions.cpp:1653:2: note: here
+ 1653 |  case JLT_HANDLE:
+      |  ^~~~
+Actions.cpp:1661:10: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 1661 |   suffix = userspace::negated;
+      |   ~~~~~~~^~~~~~~~~~~~~~~~~~~~
+Actions.cpp:1662:2: note: here
+ 1662 |  case JGTR_HANDLE:
+      |  ^~~~
+Actions.cpp:1668:10: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 1668 |   suffix = userspace::negated;
+      |   ~~~~~~~^~~~~~~~~~~~~~~~~~~~
+Actions.cpp:1669:2: note: here
+ 1669 |  case JGT_HANDLE:
+      |  ^~~~
+Actions.cpp: In function ‘const string_element* BBP::esa::mn_jmpz(BBP::std::Lexer::lex_context*, BBP::std::index_t, BBP::std::Lexer::lex_keywordhandle)’:
+Actions.cpp:1687:10: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 1687 |   suffix = userspace::negated;
+      |   ~~~~~~~^~~~~~~~~~~~~~~~~~~~
+Actions.cpp:1688:2: note: here
+ 1688 |  case JLZR_HANDLE:
+      |  ^~~~
+Actions.cpp:1694:10: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 1694 |   suffix = userspace::negated;
+      |   ~~~~~~~^~~~~~~~~~~~~~~~~~~~
+Actions.cpp:1695:2: note: here
+ 1695 |  case JLZ_HANDLE:
+      |  ^~~~
+Actions.cpp:1705:10: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 1705 |   suffix = userspace::negated;
+      |   ~~~~~~~^~~~~~~~~~~~~~~~~~~~
+Actions.cpp:1706:2: note: here
+ 1706 |  case JEZR_HANDLE:
+      |  ^~~~
+Actions.cpp:1712:10: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 1712 |   suffix = userspace::negated;
+      |   ~~~~~~~^~~~~~~~~~~~~~~~~~~~
+Actions.cpp:1713:2: note: here
+ 1713 |  case JEZ_HANDLE:
+      |  ^~~~
+Actions.cpp:1723:10: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 1723 |   suffix = userspace::negated;
+      |   ~~~~~~~^~~~~~~~~~~~~~~~~~~~
+Actions.cpp:1724:2: note: here
+ 1724 |  case JGZR_HANDLE:
+      |  ^~~~
+Actions.cpp:1730:10: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 1730 |   suffix = userspace::negated;
+      |   ~~~~~~~^~~~~~~~~~~~~~~~~~~~
+Actions.cpp:1731:2: note: here
+ 1731 |  case JGZ_HANDLE:
+      |  ^~~~

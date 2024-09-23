@@ -37,6 +37,15 @@ BBP::std::index_t &BBP::elsa::Section::index()
 	return _index;
 }
 
+void BBP::elsa::Section::Free(std::PAGE<std::byte> &page)
+{
+	// Free pointer
+	memory.Free(page.data);
+
+	// Then free page
+	page = std::PAGE<std::byte>(0, nullptr);
+}
+
 // Free some memory
 void BBP::elsa::Section::Reset()
 {

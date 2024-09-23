@@ -1,7 +1,0 @@
-Drivers/System/Driver.cpp: In function ‘bool Environment::Drivers::System::initClock(BBP::std::size_t, BBP::std::word*)’:
-Drivers/System/Driver.cpp:22:63: warning: unused parameter ‘argc’ [-Wunused-parameter]
-   22 | bool Environment::Drivers::System::initClock(BBP::std::size_t argc, BBP::std::word *argv)
-      |                                              ~~~~~~~~~~~~~~~~~^~~~
-Drivers/System/Driver.cpp:22:85: warning: unused parameter ‘argv’ [-Wunused-parameter]
-   22 | bool Environment::Drivers::System::initClock(BBP::std::size_t argc, BBP::std::word *argv)
-      |                                                                     ~~~~~~~~~~~~~~~~^~~~

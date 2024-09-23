@@ -1,0 +1,11 @@
+FileInfo.cpp: In function ‘bool BBP::std::populateVolumeInfo(BBP::std::VolumeInfo&, BBP::std::PATH&)’:
+FileInfo.cpp:4:52: warning: unused parameter ‘info’ [-Wunused-parameter]
+    4 | bool BBP::std::populateVolumeInfo(std::VolumeInfo &info, std::PATH &path)
+      |                                   ~~~~~~~~~~~~~~~~~^~~~
+FileInfo.cpp:4:69: warning: unused parameter ‘path’ [-Wunused-parameter]
+    4 | bool BBP::std::populateVolumeInfo(std::VolumeInfo &info, std::PATH &path)
+      |                                                          ~~~~~~~~~~~^~~~
+FileInfo.cpp: In member function ‘bool BBP::std::DirectoryInfo::scarce_populate(BBP::std::PATH&)’:
+FileInfo.cpp:68:15: warning: variable ‘entryPathAdjusted’ set but not used [-Wunused-but-set-variable]
+   68 |   std::string entryPathAdjusted = std::string(entryPath_length - pathString_length, entryPath.data + pathString_length);
+      |               ^~~~~~~~~~~~~~~~~

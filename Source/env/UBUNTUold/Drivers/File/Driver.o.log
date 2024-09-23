@@ -1,4 +1,0 @@
-Drivers/File/Driver.cpp: In function ‘void Environment::Drivers::Filesystem::emitName(BBP::std::size_t, BBP::std::PAGE<char>&)’:
-Drivers/File/Driver.cpp:209:66: warning: unused parameter ‘amount’ [-Wunused-parameter]
-  209 | void Environment::Drivers::Filesystem::emitName(BBP::std::size_t amount, BBP::std::PAGE<BBP::std::string_element> &string)
-      |                                                 ~~~~~~~~~~~~~~~~~^~~~~~
