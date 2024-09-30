@@ -1,7 +1,14 @@
 #include "../include/ELSA/Symbol.h"
+#include "../include/ELSA/ELFSymbol.h"
 
 void BBP::elsa::symbol_db::setDataSection(Section *sect) { dataSection = sect; }
 void BBP::elsa::symbol_db::setStringSection(Section *sect) { stringSection = sect; }
+void BBP::elsa::symbol_db::setSymbolSection(Section *sect) { symbolSection = sect; }
+void BBP::elsa::symbol_db::setRelocationSection(Section *sect) { relocationSection = sect; }
+
+BBP::elsa::symbol_db::symbol_db()
+	: dataSection(nullptr), stringSection(nullptr), symbolSection(nullptr), relocationSection(nullptr), currentStream(0), activeEntry(nullptr), activeSymbol(nullptr),
+	headEntry(nullptr) {}
 
 // Initialize a symbol
 BBP::elsa::symbol_db::symhandle_t BBP::elsa::symbol_db::initSymbol()
@@ -73,10 +80,38 @@ void BBP::elsa::symbol_db::UploadSymbol()
 	symbol_db_entry value(activeSymbol);
 
 	// Save symbol
-	dictionary.add(activeSymbol->identifier.name, value);
+	symbol_db_entry *newActiveEntry = &dictionary.add(activeSymbol->identifier.name, value);
+
+	// If activeEntry,
+	if (activeEntry)
+		activeEntry->next = newActiveEntry;
+
+	// Then set active entry
+	activeEntry = newActiveEntry;
+
+	// If no head entry, set it here
+	if (headEntry == nullptr)
+		headEntry = activeEntry;
 
 	// Reset active symbol
 	activeSymbol = nullptr;
+}
+
+BBP::elsa::symbol_db::symhandle_t BBP::elsa::symbol_db::createSymbol(std::string ident)
+{
+	// Create symbol
+	symhandle_t handle = initSymbol();
+
+	// Set its name
+	setSymbolName(ident);
+
+	// Set index to 0
+	activeSymbol->sectionInfo.sectionIndex = 0;
+
+	// Then upload
+	UploadSymbol();
+
+	return handle;	
 }
 
 BBP::elsa::symbol_db::symhandle_t BBP::elsa::symbol_db::createSymbol(std::string ident, std::string data)
@@ -164,6 +199,111 @@ void BBP::elsa::symbol_db::Reset()
 		stringSection = nullptr;
 	}
 
+	// If symbol section, clear symbol section
+	if (symbolSection)
+	{
+		symbolSection->Reset();
+		symbolSection = nullptr;
+	}
+
+	// If relocation section, clear relocation section
+	if (relocationSection)
+	{
+		relocationSection->Reset();
+		relocationSection = nullptr;
+	}
+
 	// Reset allocators
 	allocator.deleteAll();
+
+	// Reset dictionary
+	dictionary.Reset();
+
+	// Reset count
+	currentStream = 0;
+
+	// Reset active symbols, etc...
+	activeSymbol = nullptr;
+	activeEntry = nullptr;
+	headEntry = nullptr;
+
+}
+
+// Upload each symbol to binary
+void BBP::elsa::symbol_db::UploadToBinary(bool endian)
+{
+	// Must have symbol section defined
+	if (symbolSection == nullptr)
+		std::raise(std::SIGSEGV);
+
+	// Symbol data -- This is where all data is stored
+	std::PAGE<std::byte> globalSymbolData;
+
+	// Size of symbol entry
+	std::size_t symbolEntrySize = 16;
+
+	// Symbol object
+	ELF::Symbol sym;
+
+	// Get active symbol
+	symbol_db_entry *activeSymbol = headEntry;
+
+	// Get object count
+	std::size_t symCount = 0;
+
+	// Count symbols
+	while (activeSymbol)
+	{
+		activeSymbol = activeSymbol->next;
+		symCount++;
+	}
+
+	// Then reset active symbol
+	activeSymbol = headEntry;
+
+	// If no symbols are set, do nothing
+	if (symCount == 0)
+		return;
+
+	// Allocate bytes to global symbol data
+	symbolSection->Allocate(globalSymbolData, symbolEntrySize * symCount);
+
+	// Then, update
+	for (std::index_t symIndex = 0; symIndex < symCount; symIndex++)
+	{
+		// Set page
+		sym.data = std::PAGE<std::byte>(symbolEntrySize, globalSymbolData.data + symbolEntrySize * symIndex);
+
+		// If active symbol has a symbol, set data
+		if (activeSymbol->sym)
+		{
+			// Set name
+			sym.name = activeSymbol->sym->identifier.nameOffset;
+
+			// Set size
+			sym.size = activeSymbol->sym->sectionInfo.dataSize;
+
+			// Set value
+			sym.value = activeSymbol->sym->sectionInfo.sectionOffset;
+
+			// Set index
+			sym.shndx = activeSymbol->sym->sectionInfo.sectionIndex;
+
+			// Set info and other
+			sym.info = activeSymbol->sym->identifier.info;
+			sym.other = activeSymbol->sym->identifier.other;
+		}
+
+		// Otherwise do nothing
+		else
+		{
+			sym.Nullify();
+		}
+
+		// Then write data
+		sym.writeData(endian);
+
+		// Then update activeSymbol
+		activeSymbol = activeSymbol->next;
+	}
 }

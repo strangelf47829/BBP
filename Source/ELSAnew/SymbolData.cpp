@@ -62,7 +62,7 @@ void BBP::elsa::symbol_data_t::write(std::index_t idx, std::word value)
 void BBP::elsa::symbol_data_t::write(std::index_t idx, std::string str)
 {
 	// Get string length
-	std::size_t stringLength = std::strlen(str);
+	std::size_t stringLength = std::strlen(str) + 1;
 
 	// Write data at index
 	for (std::index_t stridx = 0; stridx < stringLength; stridx++)

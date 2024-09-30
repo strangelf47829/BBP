@@ -24,7 +24,7 @@ namespace BBP
 		public:
 
 			// Add stuff to the dictionary
-			virtual void add(Key_t, Value_t) = 0;
+			virtual Value_t &add(Key_t, Value_t) = 0;
 
 			// Get stuff from the dictionary
 			virtual Value_t &get(Key_t &) = 0;
@@ -76,7 +76,7 @@ namespace BBP
 			HashedDictionary();
 
 			// Add stuff to the dictionary
-			void add(Key_t, Value_t) override;
+			Value_t &add(Key_t, Value_t) override;
 
 			// Get stuff from the dictionary
 			Value_t &get(Key_t &) override;

@@ -34,14 +34,28 @@ BBP::std::string str = "eee Hello! eee";
 
 BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
 {
-
 	// Create a binary application
-	elsa::BinaryApplication application;
+	elsa::TranslationUnit tu;
+
+	// Set up symbols
+	tu.application.setup(tu.symbols);
+
+	tu.emitInterpreter("[path_goes_here]");
+
+	// Create two symbols
+	tu.symbols.createSymbol("first", "Hi max!");
+	tu.symbols.createSymbol("second", "Funny you see this");
+
+	std::string strr = ".text";
+	tu.application.setDataSection(tu.symbols, strr);
+
+	tu.symbols.createSymbol("third", "I do rlly like u :p");
+
+	// Then set to
+	tu.symbols.UploadToBinary(tu.application.isLittleEndian());
 
 	// Then save file
-	application.emitFile("/home/new2.out");
-
-	sizeof(elsa::TranslationUnit);
+	tu.application.emitFile("/home/new3.out");
 
 	/*
 	// Static page

@@ -1,11 +1,13 @@
 #include "../include/ELSA/Symbol.h"
 
 BBP::elsa::symbol_identifier_t::symbol_identifier_t()
+	: hash(0), nameOffset(0), info(0), other(0), stringTable(nullptr)
 {
 	// IDK
 }
 
 BBP::elsa::symbol_identifier_t::symbol_identifier_t(Section *section, std::string _name)
+	: hash(0), nameOffset(0), info(0), other(0), stringTable(nullptr)
 {
 	// If section is invalid, signal
 	if (section == nullptr)
@@ -29,4 +31,8 @@ BBP::elsa::symbol_identifier_t::symbol_identifier_t(Section *section, std::strin
 
 	// Now precompute hash
 	hash = std::strhsh(name);
+
+	// If no hash, set to empty string hash
+	if (hash == 0)
+		hash = 1;
 }

@@ -23,6 +23,9 @@ namespace BBP
 
 		public:
 
+			// Constructor
+			Section();
+
 			// Allocate some memory
 			std::offset_t Allocate(std::PAGE<std::byte> &, std::size_t);
 			std::offset_t Allocate(std::PAGE<std::byte> &, std::size_t, std::size_t);
@@ -45,6 +48,8 @@ namespace BBP
 			// Link after a page
 			Section &Link(Section &);
 
+			// Quietly link after a page
+			Section &QLink(Section &);
 		};
 
 	}

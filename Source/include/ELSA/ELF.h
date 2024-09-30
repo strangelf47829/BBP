@@ -45,10 +45,13 @@ namespace BBP
 			elsa::Section *get(std::string);
 
 			// Pack sections
-			std::offset_t pack();
+			std::offset_t packSections();
+
+			// Pack segments
+			void packSegments(std::size_t segmentCount);
 			
 			// Save to path
-			void saveFile(std::conststring);
+			void saveFile(std::conststring, std::size_t fileSize);
 
 		};
 

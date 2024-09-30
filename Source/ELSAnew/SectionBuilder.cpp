@@ -1,5 +1,7 @@
 #include "../include/ELSA/SectionBuilder.h"
 
+BBP::elsa::Section::Section()
+	: _index(0), nextSection(nullptr) { }
 
 // Allocate some memory
 BBP::std::offset_t BBP::elsa::Section::Allocate(std::PAGE<std::byte> &page, std::size_t _size)
@@ -77,6 +79,22 @@ BBP::elsa::Section &BBP::elsa::Section::Link(Section &section)
 {
 	// Write next section
 	nextSection = &section;
+
+	// index of next section is index of this section + 1
+	section._index = _index + 1;
+
+	// Return section
+	return section;
+}
+
+// Link something (without it actually counting as a visible thing)
+BBP::elsa::Section &BBP::elsa::Section::QLink(Section &section)
+{
+	// Write next section
+	nextSection = &section;
+
+	// index of next section is index of this section + 1
+	section._index = _index;
 
 	// Return section
 	return section;

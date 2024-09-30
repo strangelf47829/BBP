@@ -1,4 +1,5 @@
 #include "../include/ELSA/ELF.h"
+#include "../include/ELSA/ELFSegment.h"
 
 // Constructor
 BBP::ELF::ELF::ELF(BBP::std::PAGE<elsa::Section *> *sects)
@@ -70,48 +71,59 @@ BBP::std::index_t BBP::ELF::ELF::registerSection(elsa::Section &section, BBP::EL
 	return idx;
 }
 
-BBP::std::offset_t BBP::ELF::ELF::pack()
+BBP::std::offset_t BBP::ELF::ELF::packSections()
 {
-	// Packing means taking each section and putting them in place, sequentially
-	// This allows for the ELF object to be saved
-
-	// If sections page does not exist do nothing
+	// If no sections, exit
 	if (sections == nullptr)
 		return 0;
 
-	// Address indicates current position, which advances with each section
+	// string table data
+	BBP::ELF::Section stringTableData;
+
+	// Register string table
+	header.e_shstrndx = 1 + registerSection(sectionStringTable, stringTableData, ".shstrtab");
+
+	// Then change a whole bunch of stuff
+	stringTableData.type = 3;
+
+	// Write stuff
+	header.writeHeaderFields();
+	stringTableData.writeData(header.ident.littleEndian);
+
+	// Address indicates current position
 	std::address_t atPosition = header.e_ehsize;
 
-	// If ELF has any sections,
-	if (header.e_shnum != 0)
+	// Then, if this ELF file has sections,
+	if (header.e_shnum)
 	{
-		// Then set shoff at position
 		header.e_shoff = atPosition;
-
-		// Then advance position with amount of headers and its size
 		atPosition += (header.e_shnum * header.e_shentsize);
 	}
+	
+	// Otherwise do nothing
 	else
 	{
 		header.e_shoff = 0;
 		header.e_shentsize = 0;
 	}
 
-	// Else, if ELF has any segments
-	if (header.e_phnum != 0)
+	// If segment count,
+	if (header.e_phnum)
 	{
-		// Then set phoff at position
+		header.e_phentsize = 32;
 		header.e_phoff = atPosition;
-
-		// Then advance position with amount of segments and its size
 		atPosition += (header.e_phnum * header.e_phentsize);
 	}
+
+	// Otherwise set to 0
 	else
 	{
-		header.e_phoff = 0;
+		header.e_phnum = 0;
 		header.e_phentsize = 0;
+		header.e_phoff = 0;
 	}
 
+	// Then, for each section do:
 	// Write data
 	header.writeHeaderFields();
 
@@ -156,26 +168,45 @@ BBP::std::offset_t BBP::ELF::ELF::pack()
 
 	// Now return position
 	return atPosition;
-
 }
 
-void BBP::ELF::ELF::saveFile(std::conststring path)
+void BBP::ELF::ELF::packSegments(std::size_t segmentCount)
 {
-	// string table data
-	BBP::ELF::Section stringTableData;
 
-	// Register string table
-	header.e_shstrndx = 1 + registerSection(sectionStringTable, stringTableData, ".shstrtab");
+	// If segment count,
+	if (segmentCount)
+	{
+		header.e_phnum = segmentCount;
+		header.e_phentsize = 32;
+	}
 
-	// Then change a whole bunch of stuff
-	stringTableData.type = 3;
+	// Otherwise set to 0
+	else
+	{
+		header.e_phnum = 0;
+		header.e_phentsize = 0;
+		header.e_phoff = 0;
+	}
 
-	// Write stuff
-	header.writeHeaderFields();
-	stringTableData.writeData(header.ident.littleEndian);
+	// Now create segments
+	for (std::index_t idx = 0; idx < header.e_phnum; idx++)
+	{
+		// Create segment
+		BBP::ELF::Segment segment;
 
-	// Calculate file size
-	std::size_t fileSize = pack();
+		// Then allocate
+		segmentTable.Allocate(segment.data, header.e_phentsize);
+
+		// Then nullify
+		segment.nullify();
+
+		// Then write
+		segment.writeData(header.ident.littleEndian);
+	}
+}
+
+void BBP::ELF::ELF::saveFile(std::conststring path, std::size_t fileSize)
+{
 
 	// Create a page and allocator
 	std::pageAllocator allocator;

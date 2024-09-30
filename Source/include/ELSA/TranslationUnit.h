@@ -17,6 +17,7 @@ namespace BBP
 
 		class TranslationUnit
 		{
+		public:
 
 			// Output
 			BinaryApplication application;
@@ -36,10 +37,11 @@ namespace BBP
 			// Lexer
 			Lexer lexer;
 
-		public:
-
 			// Constructor
 			TranslationUnit();
+
+			// Set interpreter
+			void emitInterpreter(std::string);
 
 			// create new keyword
 			void createKeyword(std::string, std::string);

@@ -8,7 +8,7 @@ BBP::elsa::symbol_t::symbol_t()
 }
 
 // Setters
-void BBP::elsa::symbol_t::setDataTable(Section *data) { dataTable = data; }
+void BBP::elsa::symbol_t::setDataTable(Section *data) { dataTable = data; sectionInfo.sectionIndex = data->index(); }
 void BBP::elsa::symbol_t::setStringTable(Section *data) { stringTable = data; }
 
 // Initialize
@@ -101,8 +101,8 @@ BBP::elsa::symbol_db_entry::operator BBP::std::hash_t() const
 }
 
 // Constructors
-BBP::elsa::symbol_db_entry::symbol_db_entry() : sym(nullptr) {}
-BBP::elsa::symbol_db_entry::symbol_db_entry(symbol_t *s) : sym(s) {}
+BBP::elsa::symbol_db_entry::symbol_db_entry() : sym(nullptr), next(nullptr) {}
+BBP::elsa::symbol_db_entry::symbol_db_entry(symbol_t *s) : sym(s), next(nullptr) { }
 
 // Comparators
 bool BBP::elsa::symbol_db_entry::operator==(symbol_db_entry &b)

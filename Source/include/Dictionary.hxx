@@ -21,7 +21,7 @@ void BBP::std::HashedDictionary<Key_t, Value_t>::allocateMoreValues()
 
 // Add an object to a hashed dictionary.
 template <BBP::std::Identifiable Key_t, BBP::std::Identifiable Value_t>
-void BBP::std::HashedDictionary<Key_t, Value_t>::add(Key_t key, Value_t value)
+Value_t &BBP::std::HashedDictionary<Key_t, Value_t>::add(Key_t key, Value_t value)
 {
 	// Generate key and value hash
 	hash_t keyHash = (hash_t)key;
@@ -40,6 +40,9 @@ void BBP::std::HashedDictionary<Key_t, Value_t>::add(Key_t key, Value_t value)
 	// Set values
 	kvp->key = key;
 	kvp->value = value;
+
+	// Finally, return value
+	return kvp->value;
 }
 
 template <BBP::std::Identifiable Key_t, BBP::std::Identifiable Value_t>

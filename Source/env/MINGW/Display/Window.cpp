@@ -72,6 +72,9 @@ void Host::startDisplay(Host::BIOS &bios)
 	BBP::std::R2D::fill(Host::hostDisplay, 0x00FF00);
 	Host::hostDisplay.Chroma.RGBA = 0xFFFFFFFF;
 
+	// Set render thingy to 1
+	SDL_RenderSetScale(_renderer, 1, 1);
+
 	// Set other data
 	Host::hostDisplay.line = 20;
 	Host::hostDisplay.coloumn = 20;

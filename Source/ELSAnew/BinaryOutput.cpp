@@ -7,8 +7,11 @@
 BBP::elsa::BinaryApplication::BinaryApplication()
 	: elf(&sectionPointers)
 {
+	// Make big endian
+	elf.header.ident.littleEndian = std::isLittleEndianEnvironment();
+
 	// Link each section together
-	elf.sectionTable.Link(elf.segmentTable).Link(handlers)
+	elf.sectionTable.Link(elf.segmentTable).QLink(handlers)
 		.Link(got)
 		.Link(text)
 		.Link(rodata)
@@ -19,20 +22,30 @@ BBP::elsa::BinaryApplication::BinaryApplication()
 		.Link(symtab)
 		.Link(strtab);
 
+	// Set x86 header
+	elf.header.e_machine = elf.header.EM_386;
+
 	// Define sections
 	defineSections();
 
 	// Create page for symdata
-	std::PAGE<std::byte> symdata;
+	/*std::PAGE<std::byte> symdata;
+
+	std::string symName = "hi_max!";
+	std::size_t symNameLength = std::strlen(symName);
 
 	// Then allocate four bytes from strtab
-	strtab.Allocate(symdata, 4);
+	strtab.Allocate(symdata, 2 + symNameLength);
 
-	// Then, 0, h, i, 0
+	// Set 0 to 0
 	symdata[0] = 0;
-	symdata[1] = 'h';
-	symdata[2] = 'i';
-	symdata[3] = 0; 
+	
+	// And terminator
+	symdata[symNameLength + 1] = 0;
+
+	// Copy string
+	for (std::index_t idx = 0; idx < symNameLength; idx++)
+		symdata[idx + 1] = symName[idx];
 
 	// Create symbol
 	ELF::Symbol symb;
@@ -73,16 +86,7 @@ BBP::elsa::BinaryApplication::BinaryApplication()
 	reloc.type = 0;
 	reloc.value = 1;
 
-	reloc.writeData(elf.header.ident.littleEndian);
-
-	// Then allocate 8 bytes from strtab 
-	std::PAGE<std::byte> dat;
-	strtab.Allocate(dat, 32);
-
-	std::string str = "Hello-max,-it-works-:3";
-	std::strcpy((std::c_string)dat.data, str.data);
-
-	elf.header.e_machine = elf.header.EM_386;
+	reloc.writeData(elf.header.ident.littleEndian);*/
 
 }
 
@@ -240,20 +244,21 @@ void BBP::elsa::BinaryApplication::defineSegments()
 	// Create a segment
 	BBP::ELF::Segment segment;
 
-	// Allocate 3 tables
-	elf.segmentTable.Allocate(segment.data, elf.header.e_phentsize);
+	// Create a section
+	BBP::ELF::Section section;
+
+	// Get 0th byte of segmentTable
+	segment.data = std::PAGE<std::byte>(elf.header.e_phentsize, &elf.segmentTable[0]);
 	segment.nullify();
 
+	// Then get section data
+	section.data = std::PAGE<std::byte>(elf.header.e_shentsize, &elf.sectionTable[elf.header.e_shentsize * elf.find(".strtab")]);
+	section.readData(elf.header.ident.littleEndian);
+
 	segment.type = segment.PT_INTERP;
-	segment.offset = 0x344;
-	segment.paddr = 0x344;
-	segment.vaddr = 0x344;
-	segment.filesz = 0x10;
-	segment.memsz = 0x10;
+	segment.offset = section.offset;
 
 	segment.writeData(elf.header.ident.littleEndian);
-
-	elf.header.e_phnum = 1;
 }
 
 // Get byte
@@ -267,11 +272,51 @@ BBP::std::byte &BBP::elsa::BinaryApplication::operator[] (std::index_t idx)
 	return elf.sectionTable[idx - 52];
 }
 
+// Get section
+BBP::elsa::Section *BBP::elsa::BinaryApplication::operator[] (std::string str)
+{
+	// Otherwise, return sections data
+	return elf.get(str);
+}
+
+// Set up a symbol db page
+void BBP::elsa::BinaryApplication::setup(symbol_db &db)
+{
+	// Reset the db
+	db.Reset();
+
+	// Then set pages
+	db.setDataSection(&data);
+	db.setRelocationSection(&reltext);
+	db.setStringSection(&strtab);
+	db.setSymbolSection(&symtab);
+}
+
+// Set up a symbol db page
+void BBP::elsa::BinaryApplication::setDataSection(symbol_db &db, std::string &str)
+{
+	// Set
+	db.setDataSection(elf.get(str));
+}
+
+// Check if little endian
+bool BBP::elsa::BinaryApplication::isLittleEndian()
+{
+	return elf.header.ident.littleEndian;
+}
+
 // Emit a file
 void BBP::elsa::BinaryApplication::emitFile(std::conststring path)
 {
+	// Then pack segments
+	elf.packSegments(4);
+
+	// Pack segments
+	std::size_t fileSize = elf.packSections();
+
 	// Then define segments
 	defineSegments();
 
-	elf.saveFile(path);
+	// Then save, 
+	elf.saveFile(path, fileSize);
 }

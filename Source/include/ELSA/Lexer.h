@@ -51,6 +51,8 @@ namespace BBP
 
 		class Lexer
 		{
+		public:
+
 			// Static page with lexer data
 			std::STATIC_PAGE<LexerStream, maxLexerDepth> lexerStreams;
 

@@ -160,6 +160,9 @@ namespace BBP
 			// Pointer
 			symbol_t *sym;
 
+			// Next symbol
+			symbol_db_entry *next;
+
 			// Hashing function
 			explicit operator std::hash_t() const;
 
@@ -185,9 +188,17 @@ namespace BBP
 			// Currently active symbol
 			symbol_t *activeSymbol;
 
+			// Currently active symbol database entry
+			symbol_db_entry *headEntry;
+			symbol_db_entry *activeEntry;
+
 			// Section information for data section and string section
 			Section *dataSection;
 			Section *stringSection;
+
+			// Section information for symbol/relocation sections
+			Section *symbolSection;
+			Section *relocationSection;
 
 			// Running count for current stream
 			std::size_t currentStream;
@@ -197,9 +208,16 @@ namespace BBP
 			// Type for symbol handle. A handle is used externally to refer to different symbols.
 			using symhandle_t = std::index_t;
 
+			// Constructor
+			symbol_db();
+
 			// Set data section, set string section
 			void setDataSection(Section *);
 			void setStringSection(Section *);
+
+			// Set symbol section, set relocation section
+			void setSymbolSection(Section *);
+			void setRelocationSection(Section *);
 
 			// Initialize a new symbol with a unique handle.
 			symhandle_t initSymbol();
@@ -225,6 +243,12 @@ namespace BBP
 
 			// Save current value in dictionary
 			void UploadSymbol();
+
+			// Save all symbols to application
+			void UploadToBinary(bool endian);
+
+			// Quickly create empty symbol
+			symhandle_t createSymbol(std::string);
 
 			// Quickly create a dynamic symbol and copy data
 			symhandle_t createSymbol(std::string, std::string);

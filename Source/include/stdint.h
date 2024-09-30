@@ -88,6 +88,11 @@ namespace BBP
 		uint32_t stitch(uint16_t, uint16_t);
 		uint32_t stitch(uint8_t, uint8_t, uint8_t, uint8_t);
 
+		// Above split functions but using global endianness values
+		void split(uint16_t, uint8_t &MSB, uint8_t &LSB);
+		void split(uint32_t, uint16_t &MSB, uint16_t &LSB);
+		void split(uint32_t, uint8_t &MSSB, uint8_t &LSSB, uint8_t &MSLB, uint8_t &LSLB);
+
 	}
 }
 

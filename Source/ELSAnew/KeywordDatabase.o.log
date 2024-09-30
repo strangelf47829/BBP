@@ -6,13 +6,13 @@ In file included from ../include/ELSA/../Dictionary.h:123,
                  from ../include/ELSA/Keywords.h:5,
                  from ../include/ELSA/Processor.h:4,
                  from KeywordDatabase.cpp:1:
-../include/ELSA/../Dictionary.hxx: In instantiation of ‘void BBP::std::HashedDictionary<Key_t, Value_t>::add(Key_t, Value_t) [with Key_t = BBP::std::PAGE<char>; Value_t = unsigned int]’:
-../include/ELSA/../Dictionary.hxx:24:6:   required from here
+../include/ELSA/../Dictionary.hxx: In instantiation of ‘Value_t& BBP::std::HashedDictionary<Key_t, Value_t>::add(Key_t, Value_t) [with Key_t = BBP::std::PAGE<char>; Value_t = unsigned int]’:
+../include/ELSA/../Dictionary.hxx:24:10:   required from here
 ../include/ELSA/../Dictionary.hxx:28:9: warning: unused variable ‘valueHash’ [-Wunused-variable]
    28 |  hash_t valueHash = (hash_t)value;
       |         ^~~~~~~~~
 ../include/ELSA/../Dictionary.hxx: In instantiation of ‘void BBP::std::HashedDictionary<Key_t, Value_t>::remove(Key_t&&) [with Key_t = BBP::std::PAGE<char>; Value_t = unsigned int]’:
-../include/ELSA/../Dictionary.hxx:146:6:   required from here
-../include/ELSA/../Dictionary.hxx:146:65: warning: unused parameter ‘key’ [-Wunused-parameter]
-  146 | void BBP::std::HashedDictionary<Key_t, Value_t>::remove(Key_t &&key)
+../include/ELSA/../Dictionary.hxx:149:6:   required from here
+../include/ELSA/../Dictionary.hxx:149:65: warning: unused parameter ‘key’ [-Wunused-parameter]
+  149 | void BBP::std::HashedDictionary<Key_t, Value_t>::remove(Key_t &&key)
       |                                                         ~~~~~~~~^~~

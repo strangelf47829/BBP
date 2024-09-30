@@ -23,16 +23,13 @@ namespace BBP
 			Section handlers;
 			Section text;
 			Section got;
-			//Section dynstr;
 			Section data;
 			Section bss;
-			//Section data1;
 			Section rodata;
 			Section reltext;
 			Section relgot;
 			Section symtab;
 			Section strtab;
-			//Section hashtab;
 
 		public:
 
@@ -47,6 +44,18 @@ namespace BBP
 
 			// Get a byte from this file
 			std::byte &operator[] (std::index_t);
+
+			// Get section from this file
+			Section *operator[] (std::string);
+
+			// Is littleEndian?
+			bool isLittleEndian();
+
+			// Set up symbol db
+			void setup(symbol_db &);
+
+			// Set data section for symbol db
+			void setDataSection(symbol_db &, std::string &);
 
 			// Emit file
 			void emitFile(std::conststring);

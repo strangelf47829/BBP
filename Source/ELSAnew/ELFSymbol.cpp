@@ -42,7 +42,7 @@ void BBP::ELF::Symbol::writeData(bool endian)
 	 std::split(size, data[8], data[9], data[10], data[11], !endian);
 
 	 data[12] = info;
-	 data[13] = info;
+	 data[13] = other;
 
 	 std::split(shndx, data[14], data[15], !endian);
 }

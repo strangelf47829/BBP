@@ -1,12 +1,38 @@
+In file included from SymbolDatabase.cpp:1:
+../include/ELSA/Symbol.h: In constructor ‘BBP::elsa::symbol_db::symbol_db()’:
+../include/ELSA/Symbol.h:204:16: warning: ‘BBP::elsa::symbol_db::currentStream’ will be initialized after [-Wreorder]
+  204 |    std::size_t currentStream;
+      |                ^~~~~~~~~~~~~
+../include/ELSA/Symbol.h:193:21: warning:   ‘BBP::elsa::symbol_db_entry* BBP::elsa::symbol_db::activeEntry’ [-Wreorder]
+  193 |    symbol_db_entry *activeEntry;
+      |                     ^~~~~~~~~~~
+SymbolDatabase.cpp:9:1: warning:   when initialized here [-Wreorder]
+    9 | BBP::elsa::symbol_db::symbol_db()
+      | ^~~
+In file included from SymbolDatabase.cpp:1:
+../include/ELSA/Symbol.h:193:21: warning: ‘BBP::elsa::symbol_db::activeEntry’ will be initialized after [-Wreorder]
+  193 |    symbol_db_entry *activeEntry;
+      |                     ^~~~~~~~~~~
+../include/ELSA/Symbol.h:189:14: warning:   ‘BBP::elsa::symbol_t* BBP::elsa::symbol_db::activeSymbol’ [-Wreorder]
+  189 |    symbol_t *activeSymbol;
+      |              ^~~~~~~~~~~~
+SymbolDatabase.cpp:9:1: warning:   when initialized here [-Wreorder]
+    9 | BBP::elsa::symbol_db::symbol_db()
+      | ^~~
 SymbolDatabase.cpp: In member function ‘BBP::elsa::symbol_db::symhandle_t BBP::elsa::symbol_db::initSymbol()’:
-SymbolDatabase.cpp:15:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   15 | }
+SymbolDatabase.cpp:22:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   22 | }
       | ^
 In file included from ../include/ELSA/../Dictionary.h:123,
                  from ../include/ELSA/Symbol.h:6,
                  from SymbolDatabase.cpp:1:
-../include/ELSA/../Dictionary.hxx: In instantiation of ‘void BBP::std::HashedDictionary<Key_t, Value_t>::add(Key_t, Value_t) [with Key_t = BBP::std::PAGE<char>; Value_t = BBP::elsa::symbol_db_entry]’:
-SymbolDatabase.cpp:76:53:   required from here
+../include/ELSA/../Dictionary.hxx: In instantiation of ‘Value_t& BBP::std::HashedDictionary<Key_t, Value_t>::add(Key_t, Value_t) [with Key_t = BBP::std::PAGE<char>; Value_t = BBP::elsa::symbol_db_entry]’:
+SymbolDatabase.cpp:83:88:   required from here
 ../include/ELSA/../Dictionary.hxx:28:9: warning: unused variable ‘valueHash’ [-Wunused-variable]
    28 |  hash_t valueHash = (hash_t)value;
       |         ^~~~~~~~~
+../include/ELSA/../Dictionary.hxx: In instantiation of ‘void BBP::std::HashedDictionary<Key_t, Value_t>::remove(Key_t&&) [with Key_t = BBP::std::PAGE<char>; Value_t = BBP::elsa::symbol_db_entry]’:
+../include/ELSA/../Dictionary.hxx:149:6:   required from here
+../include/ELSA/../Dictionary.hxx:149:65: warning: unused parameter ‘key’ [-Wunused-parameter]
+  149 | void BBP::std::HashedDictionary<Key_t, Value_t>::remove(Key_t &&key)
+      |                                                         ~~~~~~~~^~~
