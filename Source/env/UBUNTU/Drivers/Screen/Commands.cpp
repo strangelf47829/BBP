@@ -24,10 +24,16 @@ bool Host::Drivers::Screen::printSplash(BBP::std::size_t argc, BBP::std::word *a
 	// Get BIOS
 	BBP::BIOS *bios = Host::getBIOS();
 
+	if (bios == nullptr)
+		return false;
+
 	// Print something
 	bios->print("+-+ |  " "\n"\
 	            "| | +-+" "\n"\
 	            "+-+ +-+" "\n");
+
+	// Then return true (was able to print)
+	return true;
 }
 
 bool Host::Drivers::Screen::connectToScreen(BBP::std::size_t, BBP::std::word *)

@@ -3,7 +3,7 @@
 # +=====================+
 
 # Module information
-MODULE=ENV
+MODULE=env
 
 # =========== BIOS targets
 BIOS_SRC= Boot Entry Files Keyboard Screen printf Splash Time

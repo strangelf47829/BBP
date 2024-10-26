@@ -55,7 +55,7 @@ void Host::configure(BBP::BIOS *bios, BBP::system::EFI &efi)
 
 	// Configure volume info
 	efi.system.volumeLabel = 'v';
-	efi.system.volumePath = "/mnt/v/";
+	efi.system.volumePath = "/home/kangel/BBP/";
 
 	// Configure root password
 	efi.system.rootPassword = "root";

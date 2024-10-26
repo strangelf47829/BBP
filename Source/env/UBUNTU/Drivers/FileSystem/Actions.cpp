@@ -20,6 +20,9 @@ BBP::std::word Host::Drivers::FileSystem::sendDataToFileSystem(BBP::std::size_t 
 		writeFile(amount, page);
 		return amount;
 	}
+
+	// Return 0, because nothing done
+	return 0;
 }
 
 BBP::std::word Host::Drivers::FileSystem::receiveDataFromFileSystem(BBP::std::size_t requested, BBP::std::PAGE<BBP::std::string_element> &page)
@@ -63,6 +66,9 @@ BBP::std::word Host::Drivers::FileSystem::receiveDataFromFileSystem(BBP::std::si
 		// Return amount
 		return requested;
 	}
+
+	// Return 0, because nothing done
+	return 0;
 }
 
 BBP::std::word Host::Drivers::FileSystem::receiveFileMetadata(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &)

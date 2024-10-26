@@ -106,11 +106,13 @@ bool Host::Drivers::FileSystem::closeFile(BBP::std::size_t argc, BBP::std::word 
 bool Host::Drivers::FileSystem::setReadMode(BBP::std::size_t argc, BBP::std::word *argv)
 {
 	mode = READ;
+	return true;
 }
 
 bool Host::Drivers::FileSystem::setWriteMode(BBP::std::size_t argc, BBP::std::word *argv)
 {
 	mode = WRITE;
+	return true;
 }
 
 bool Host::Drivers::FileSystem::pathInspect(BBP::std::size_t argc, BBP::std::word *argv)
