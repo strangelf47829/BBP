@@ -1,0 +1,18 @@
+Drivers/System/Commands.cpp: In function ‘bool Host::Drivers::System::handleSystemCall(BBP::std::size_t, BBP::std::word*)’:
+Drivers/System/Commands.cpp:26:32: warning: unused variable ‘call’ [-Wunused-variable]
+   26 |         BBP::system::syscall_t call = systemcall_;
+      |                                ^~~~
+Drivers/System/Commands.cpp: In function ‘bool Host::Drivers::System::initClock(BBP::std::size_t, BBP::std::word*)’:
+Drivers/System/Commands.cpp:55:56: warning: unused parameter ‘argc’ [-Wunused-parameter]
+   55 | bool Host::Drivers::System::initClock(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                       ~~~~~~~~~~~~~~~~~^~~~
+Drivers/System/Commands.cpp:55:78: warning: unused parameter ‘argv’ [-Wunused-parameter]
+   55 | bool Host::Drivers::System::initClock(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                                              ~~~~~~~~~~~~~~~~^~~~
+Drivers/System/Commands.cpp: In function ‘bool Host::Drivers::System::handleSystemCall(BBP::std::size_t, BBP::std::word*)’:
+Drivers/System/Commands.cpp:47:41: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   47 |                 Host::syscalls::sys_free(BBP::system::getInValue<void *>(*args, 0));
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Drivers/System/Commands.cpp:49:9: note: here
+   49 |         default:
+      |         ^~~~~~~

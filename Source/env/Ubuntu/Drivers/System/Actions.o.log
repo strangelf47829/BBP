@@ -1,0 +1,12 @@
+Drivers/System/Actions.cpp: In function ‘BBP::std::index_t Host::Drivers::System::sendDataToSystem(BBP::std::size_t, BBP::std::PAGE<char>&)’:
+Drivers/System/Actions.cpp:3:119: warning: unused parameter ‘page’ [-Wunused-parameter]
+    3 | BBP::std::index_t Host::Drivers::System::sendDataToSystem(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &page)
+      |                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+Drivers/System/Actions.cpp: In function ‘BBP::std::index_t Host::Drivers::System::receiveDataFromSystem(BBP::std::size_t, BBP::std::PAGE<char>&)’:
+Drivers/System/Actions.cpp:8:124: warning: unused parameter ‘page’ [-Wunused-parameter]
+    8 | BBP::std::index_t Host::Drivers::System::receiveDataFromSystem(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &page)
+      |                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+Drivers/System/Actions.cpp: In function ‘BBP::std::index_t Host::Drivers::System::receiveSystemMetadata(BBP::std::size_t, BBP::std::PAGE<char>&)’:
+Drivers/System/Actions.cpp:13:124: warning: unused parameter ‘page’ [-Wunused-parameter]
+   13 | BBP::std::index_t Host::Drivers::System::receiveSystemMetadata(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &page)
+      |                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
