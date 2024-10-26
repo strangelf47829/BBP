@@ -11,5 +11,8 @@ BBP::std::errno_t BBP::system::logout_builtin(std::size_t argc, std::c_string *a
 {
 	// Unwind the kernel
 	BBP::std::kernel_unwind();
+
+	// Shouldn't be possible to access this place, throw error
+	throw 0;
 }
 

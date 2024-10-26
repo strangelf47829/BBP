@@ -55,7 +55,7 @@ void BBP::userspace::lvalue::dereference(userspace::StateMachine &state, std::ad
 		isAddress = false;
 		PhysicalAddress = 0;
 		VirtualMemory = lvalueFor;
-		
+
 		return;
 
 	}
@@ -95,6 +95,9 @@ BBP::std::address_t BBP::userspace::lvalue::getOwnPhysicalAddress()
 
 	// Cannot get physical address of register.
 	std::raise(std::SIGSEGV);
+
+	// Throw error
+	throw 0;
 }
 
 BBP::std::address_t BBP::userspace::lvalue::getOwnVirtualAddress()
@@ -122,6 +125,9 @@ BBP::std::word BBP::userspace::lvalue::resolve(userspace::StateMachine &state)
 
 	// If not anything, SIGSEGV
 	std::raise(std::SIGSEGV);
+
+	// Throw error
+	throw 0;
 }
 
 void BBP::userspace::lvalue::assign(userspace::StateMachine &state, pvalue &assignee, std::byte bytes)
@@ -135,7 +141,7 @@ void BBP::userspace::lvalue::assign(userspace::StateMachine &state, pvalue &assi
 		setRegister(*_register, data);
 		return;
 	}
-	
+
 	// Otherwise, if is address, write directly into physical address. But only the specified amount of bytes
 	for (std::byte atByte = 0; atByte < bytes; atByte++)
 	{

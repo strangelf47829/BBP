@@ -156,7 +156,7 @@ BBP::std::errno_t indicies[] =
 	15,
 	16,
 	17,
-	19,
+	18,
 	19,
 	20,
 	21,
@@ -285,7 +285,7 @@ void BBP::std::strerror(std::errno_t error, std::string &str)
 		// If error fits in, do that
 		if (indicies[idx] == error)
 		{
-			str = std::String(strings[indicies[idx]]);
+			str = std::String(strings[idx]);
 			return;
 		}
 	}

@@ -1,31 +1,31 @@
-StateMachineOpcodes.cpp: In member function ‘BBP::std::word BBP::userspace::StateMachine::MathOperate(BBP::userspace::StateMachine::arithmeticOperation, BBP::userspace::StateMachine::arithmeticOperation, BBP::userspace::StateMachine::arithmeticOperation, BBP::userspace::StateMachine::arithmeticOperation, BBP::std::word)’:
-StateMachineOpcodes.cpp:148:28: warning: comparison of integer expressions of different signedness: ‘int’ and ‘BBP::std::word’ {aka ‘unsigned int’} [-Wsign-compare]
-  148 |   if (initial && atArg + 1 == initial)
-      |                  ~~~~~~~~~~^~~~~~~~~~
+StateMachineOpcodes.cpp: In member function ‘BBP::std::word BBP::userspace::StateMachine::MathOperate(arithmeticOperation, arithmeticOperation, arithmeticOperation, arithmeticOperation, BBP::std::word)’:
+StateMachineOpcodes.cpp:148:42: warning: comparison of integer expressions of different signedness: ‘int’ and ‘BBP::std::word’ {aka ‘unsigned int’} [-Wsign-compare]
+  148 |                 if (initial && atArg + 1 == initial)
+      |                                ~~~~~~~~~~^~~~~~~~~~
 StateMachineOpcodes.cpp: In lambda function:
-StateMachineOpcodes.cpp:684:63: warning: unused parameter ‘arg2’ [-Wunused-parameter]
-  684 |  arithmeticOperation nominal = [](std::word& arg1, std::word& arg2) { return (std::word)!arg1; };
-      |                                                    ~~~~~~~~~~~^~~~
+StateMachineOpcodes.cpp:684:70: warning: unused parameter ‘arg2’ [-Wunused-parameter]
+  684 |         arithmeticOperation nominal = [](std::word& arg1, std::word& arg2) { return (std::word)!arg1; };
+      |                                                           ~~~~~~~~~~~^~~~
 StateMachineOpcodes.cpp: In lambda function:
-StateMachineOpcodes.cpp:685:63: warning: unused parameter ‘arg2’ [-Wunused-parameter]
-  685 |  arithmeticOperation bitwise = [](std::word& arg1, std::word& arg2) { return ~arg1; };
-      |                                                    ~~~~~~~~~~~^~~~
+StateMachineOpcodes.cpp:685:70: warning: unused parameter ‘arg2’ [-Wunused-parameter]
+  685 |         arithmeticOperation bitwise = [](std::word& arg1, std::word& arg2) { return ~arg1; };
+      |                                                           ~~~~~~~~~~~^~~~
 StateMachineOpcodes.cpp: In member function ‘void BBP::userspace::StateMachine::PAGE()’:
-StateMachineOpcodes.cpp:895:59: warning: comparison is always false due to limited range of data type [-Wtype-limits]
-  895 |    if (activePage >= activeThread->maxPages || activePage < 0)
-      |                                                ~~~~~~~~~~~^~~
-StateMachineOpcodes.cpp:905:59: warning: comparison is always false due to limited range of data type [-Wtype-limits]
-  905 |    if (activePage >= activeThread->maxPages || activePage < 0)
-      |                                                ~~~~~~~~~~~^~~
-StateMachineOpcodes.cpp:977:58: warning: comparison is always false due to limited range of data type [-Wtype-limits]
-  977 |   if (activePage >= activeThread->maxPages || activePage < 0)
-      |                                               ~~~~~~~~~~~^~~
-StateMachineOpcodes.cpp:1012:58: warning: comparison is always false due to limited range of data type [-Wtype-limits]
- 1012 |   if (activePage >= activeThread->maxPages || activePage < 0)
-      |                                               ~~~~~~~~~~~^~~
-StateMachineOpcodes.cpp:1038:58: warning: comparison is always false due to limited range of data type [-Wtype-limits]
- 1038 |   if (activePage >= activeThread->maxPages || activePage < 0)
-      |                                               ~~~~~~~~~~~^~~
-StateMachineOpcodes.cpp:1062:58: warning: comparison is always false due to limited range of data type [-Wtype-limits]
- 1062 |   if (activePage >= activeThread->maxPages || activePage < 0)
-      |                                               ~~~~~~~~~~~^~~
+StateMachineOpcodes.cpp:895:80: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  895 |                         if (activePage >= activeThread->maxPages || activePage < 0)
+      |                                                                     ~~~~~~~~~~~^~~
+StateMachineOpcodes.cpp:905:80: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  905 |                         if (activePage >= activeThread->maxPages || activePage < 0)
+      |                                                                     ~~~~~~~~~~~^~~
+StateMachineOpcodes.cpp:977:72: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  977 |                 if (activePage >= activeThread->maxPages || activePage < 0)
+      |                                                             ~~~~~~~~~~~^~~
+StateMachineOpcodes.cpp:1012:72: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+ 1012 |                 if (activePage >= activeThread->maxPages || activePage < 0)
+      |                                                             ~~~~~~~~~~~^~~
+StateMachineOpcodes.cpp:1038:72: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+ 1038 |                 if (activePage >= activeThread->maxPages || activePage < 0)
+      |                                                             ~~~~~~~~~~~^~~
+StateMachineOpcodes.cpp:1062:72: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+ 1062 |                 if (activePage >= activeThread->maxPages || activePage < 0)
+      |                                                             ~~~~~~~~~~~^~~

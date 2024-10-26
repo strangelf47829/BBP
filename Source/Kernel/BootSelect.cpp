@@ -71,4 +71,7 @@ BBP::system::BootRecord::bootRecordEntryPoint BBP::system::Kernel::enterBootSele
 		}
 
 	}
+
+	// None found, throww error
+	throw std::exception("Could not load boot records", ENODATA);
 }

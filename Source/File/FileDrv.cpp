@@ -3,7 +3,15 @@
 
 bool BBP::std::FILE::doesFileExistOnDisk(BBP::std::PATH &_path)
 {
+	// Check if entity is on disk (But this could also be a directory)
 	_is_on_disk = system::Kernel::isFileOnDisk(_path);
+
+	// Confirm whether this is a file
+	bool isFile = system::Kernel::isPathOfTypeFile(_path);
+
+	// If "is on disk" but not a file, throw a NOT_FILE error
+	if (_is_on_disk && isFile == false)
+		throw std::exception("ERR_DIR_NOTFILE", EISDIR);
 
 	return _is_on_disk;
 }

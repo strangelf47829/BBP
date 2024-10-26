@@ -12,6 +12,10 @@ namespace BBP
 		struct except;
 		except exception(const char *msg, errno_t _errno);
 
+		// Log level for printing error information at exceptions
+		void setExceptionLogLevel(std::byte);
+		std::byte getExceptionLogLevel();
+
 
 #ifndef BBP_STDLIB_EXCEPT_H
 #define BBP_STDLIB_EXCEPT_H

@@ -7,8 +7,7 @@
 
 BBP::std::errno_t BBP::system::initd::shell(std::size_t argc, std::c_string *argv)
 {
-
-
+	return ENONE;
 }
 
 // Is builtin?
@@ -34,7 +33,7 @@ bool BBP::system::initd::isBuiltin()
 		// If command hash is not the same, exit
 		if (command->hash != argumentOneHash)
 			continue;
-		
+
 		// If strings are equal, return true
 		if (std::strcmp(command->name.data, argumentVectors[0]))
 			return true;
@@ -42,6 +41,28 @@ bool BBP::system::initd::isBuiltin()
 
 	// Default is no.
 	return false;
+}
+
+// initializre the shell
+BBP::std::errno_t BBP::system::initd::shellInit(std::size_t argc, std::c_string *argv)
+{
+	// Expecting at least one argument (EFI primary volume). If no arguments, return error
+	if (argc == 0 || argv == nullptr)
+		return EINVAL;
+
+	// Now get c_string from argument list
+	std::c_string pathStr = argv[0];
+
+	// If this is nullptr, return error
+	if (pathStr == nullptr)
+		return ENODATA;
+
+	// Now set
+	BBP::system::Shell::getPrimaryVolume().volumePath = pathStr;
+
+	// Return no error
+	return ENONE;
+
 }
 
 // Execute builtin action

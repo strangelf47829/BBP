@@ -27,10 +27,13 @@ BBP::std::errno_t BBP::system::initd::shell()
 	// Check if builtin
 	bool isCmdBuiltin = isBuiltin();
 
-	if (isCmdBuiltin)
-		shellBuiltin(argumentCount, argumentVectors.static_data);
-	else
+	if (isCmdBuiltin == false)
+	{
 		std::printf("%s: command not found.\n", argumentVectors[0]);
+		return -ENODATA;
+	}
+
+	return shellBuiltin(argumentCount, argumentVectors.static_data);
 }
 
 // Spawn application
@@ -44,14 +47,13 @@ BBP::std::errno_t BBP::system::initd::shellApplication(std::size_t argc, std::c_
 	std::string shellCMD0 = std::String("cd /");
 	shell(shellCMD0);
 
-	std::string shellCMD1 = std::String("cp");
+	std::string shellCMD1 = std::String("cd /home/");
 	shell(shellCMD1);
 
 	//std::string shellCMD2 = std::String("rae");
 	//shell(shellCMD2);
 
-	std::string shellCMD3 = std::String("cp");
-	shell(shellCMD3);
+	std::string shellCMD3 = std::String("cd ..");
 	shell(shellCMD3);
 
 	// Get a shell Line

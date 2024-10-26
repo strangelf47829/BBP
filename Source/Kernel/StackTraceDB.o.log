@@ -1,26 +1,26 @@
 StackTraceDB.cpp: In member function ‘void BBP::std::stack_trace_db::printName()’:
-StackTraceDB.cpp:17:15: warning: comparison of integer expressions of different signedness: ‘BBP::std::index_t’ {aka ‘unsigned int’} and ‘int’ [-Wsign-compare]
-   17 |  if (binIndex == -1 || functionStart == -1 || functionOffset == -1 || line == -1)
-      |      ~~~~~~~~~^~~~~
-StackTraceDB.cpp:17:38: warning: comparison of integer expressions of different signedness: ‘BBP::std::address_t’ {aka ‘unsigned int’} and ‘int’ [-Wsign-compare]
-   17 |  if (binIndex == -1 || functionStart == -1 || functionOffset == -1 || line == -1)
-      |                        ~~~~~~~~~~~~~~^~~~~
-StackTraceDB.cpp:17:62: warning: comparison of integer expressions of different signedness: ‘BBP::std::offset_t’ {aka ‘unsigned int’} and ‘int’ [-Wsign-compare]
-   17 |  if (binIndex == -1 || functionStart == -1 || functionOffset == -1 || line == -1)
-      |                                               ~~~~~~~~~~~~~~~^~~~~
-StackTraceDB.cpp:17:76: warning: comparison of integer expressions of different signedness: ‘BBP::std::index_t’ {aka ‘unsigned int’} and ‘int’ [-Wsign-compare]
-   17 |  if (binIndex == -1 || functionStart == -1 || functionOffset == -1 || line == -1)
-      |                                                                       ~~~~~^~~~~
+StackTraceDB.cpp:17:22: warning: comparison of integer expressions of different signedness: ‘BBP::std::index_t’ {aka ‘unsigned int’} and ‘int’ [-Wsign-compare]
+   17 |         if (binIndex == -1 || functionStart == -1 || functionOffset == -1 || line == -1)
+      |             ~~~~~~~~~^~~~~
+StackTraceDB.cpp:17:45: warning: comparison of integer expressions of different signedness: ‘BBP::std::address_t’ {aka ‘unsigned int’} and ‘int’ [-Wsign-compare]
+   17 |         if (binIndex == -1 || functionStart == -1 || functionOffset == -1 || line == -1)
+      |                               ~~~~~~~~~~~~~~^~~~~
+StackTraceDB.cpp:17:69: warning: comparison of integer expressions of different signedness: ‘BBP::std::offset_t’ {aka ‘unsigned int’} and ‘int’ [-Wsign-compare]
+   17 |         if (binIndex == -1 || functionStart == -1 || functionOffset == -1 || line == -1)
+      |                                                      ~~~~~~~~~~~~~~~^~~~~
+StackTraceDB.cpp:17:83: warning: comparison of integer expressions of different signedness: ‘BBP::std::index_t’ {aka ‘unsigned int’} and ‘int’ [-Wsign-compare]
+   17 |         if (binIndex == -1 || functionStart == -1 || functionOffset == -1 || line == -1)
+      |                                                                              ~~~~~^~~~~
 StackTraceDB.cpp: In member function ‘void BBP::std::stack_trace_db::lineLookup()’:
-StackTraceDB.cpp:26:15: warning: comparison of integer expressions of different signedness: ‘BBP::std::index_t’ {aka ‘unsigned int’} and ‘int’ [-Wsign-compare]
-   26 |  if (binIndex == -1 || functionStart == -1 || functionOffset == -1 || line == -1)
-      |      ~~~~~~~~~^~~~~
-StackTraceDB.cpp:26:38: warning: comparison of integer expressions of different signedness: ‘BBP::std::address_t’ {aka ‘unsigned int’} and ‘int’ [-Wsign-compare]
-   26 |  if (binIndex == -1 || functionStart == -1 || functionOffset == -1 || line == -1)
-      |                        ~~~~~~~~~~~~~~^~~~~
-StackTraceDB.cpp:26:62: warning: comparison of integer expressions of different signedness: ‘BBP::std::offset_t’ {aka ‘unsigned int’} and ‘int’ [-Wsign-compare]
-   26 |  if (binIndex == -1 || functionStart == -1 || functionOffset == -1 || line == -1)
-      |                                               ~~~~~~~~~~~~~~~^~~~~
-StackTraceDB.cpp:26:76: warning: comparison of integer expressions of different signedness: ‘BBP::std::index_t’ {aka ‘unsigned int’} and ‘int’ [-Wsign-compare]
-   26 |  if (binIndex == -1 || functionStart == -1 || functionOffset == -1 || line == -1)
-      |                                                                       ~~~~~^~~~~
+StackTraceDB.cpp:26:22: warning: comparison of integer expressions of different signedness: ‘BBP::std::index_t’ {aka ‘unsigned int’} and ‘int’ [-Wsign-compare]
+   26 |         if (binIndex == -1 || functionStart == -1 || functionOffset == -1 || line == -1)
+      |             ~~~~~~~~~^~~~~
+StackTraceDB.cpp:26:45: warning: comparison of integer expressions of different signedness: ‘BBP::std::address_t’ {aka ‘unsigned int’} and ‘int’ [-Wsign-compare]
+   26 |         if (binIndex == -1 || functionStart == -1 || functionOffset == -1 || line == -1)
+      |                               ~~~~~~~~~~~~~~^~~~~
+StackTraceDB.cpp:26:69: warning: comparison of integer expressions of different signedness: ‘BBP::std::offset_t’ {aka ‘unsigned int’} and ‘int’ [-Wsign-compare]
+   26 |         if (binIndex == -1 || functionStart == -1 || functionOffset == -1 || line == -1)
+      |                                                      ~~~~~~~~~~~~~~~^~~~~
+StackTraceDB.cpp:26:83: warning: comparison of integer expressions of different signedness: ‘BBP::std::index_t’ {aka ‘unsigned int’} and ‘int’ [-Wsign-compare]
+   26 |         if (binIndex == -1 || functionStart == -1 || functionOffset == -1 || line == -1)
+      |                                                                              ~~~~~^~~~~

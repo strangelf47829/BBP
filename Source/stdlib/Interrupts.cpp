@@ -31,6 +31,9 @@ BBP::std::hash_t BBP::std::calculateIRQHash(IRQ &irq)
 	// Flip the 2nd, 5th, and 9th bit if must be removed from queue
 	if (irq.removeFromQueue)
 		irqHash ^= 0b0100100001;
+
+	// Return hash
+	return irqHash;
 }
 
 // Disable IRQ

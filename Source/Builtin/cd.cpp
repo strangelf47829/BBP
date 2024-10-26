@@ -48,9 +48,19 @@ BBP::std::errno_t BBP::system::cd_builtin(std::size_t argc, std::c_string *argv)
 	// Now get path
 	std::c_string pathName = currentPath.relName();
 
-	// Check if changeto is now defined as root or not. If it is, move forward.
+	// Get length of primary volume relative name
+	std::size_t primVolumeLength = std::strlen(system::Shell::getPrimaryVolume().volumePath.relName());
+
+	// Check if primary volume has been set correctly
+	if (primVolumeLength == 0)
+	{
+		std::printf("cd: Shell primary volume not set.");
+		return EBADFD;
+	}
+
+	// Check if changeto is now defined as root or not, and if the length of the current volume is not 0. If it is, move forward.
 	if (changeTo.isDefinedFromRoot())
-		pathName += std::strlen(system::Shell::getPrimaryVolume().volumePath.relName()) - 1;
+		pathName += primVolumeLength - 1;
 
 	// Create new path
 	std::PATH newPath(pathName);
@@ -67,14 +77,14 @@ BBP::std::errno_t BBP::system::cd_builtin(std::size_t argc, std::c_string *argv)
 		// Handle thing is not directory.
 		if (info.is_directory() == false)
 		{
-			std::printf("cd: %s: Not a directory\n", changeTo.relName());
+			std::printf("cd: %s: Not a directory\n", newPath.relName());
 			return 1;
 		}
 
 		// Handle thing does not exist.
 		if (info.path_exists() == false)
 		{
-			std::printf("cd: %s: No such file or directory\n", changeTo.relName());
+			std::printf("cd: %s: No such file or directory\n", newPath.relName());
 			return 2;
 		}
 

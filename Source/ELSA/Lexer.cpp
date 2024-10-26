@@ -44,8 +44,8 @@ bool BBP::elsa::Lexer::consume(Debug_db &debug, keyword_db &keyword)
 	if (consumed == 0)
 		return false;
 
-	// Then consume over 
+	// Then consume over \
 	keyword.getCount();
 
-
+	return true;
 }

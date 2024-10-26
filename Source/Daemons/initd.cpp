@@ -7,6 +7,7 @@ BBP::std::errno_t BBP::system::initd::initialize()
 	// Set shell service
 	shellService = { std::static_hash("shell-invoke"), true, 0, "help", "version" };
 	shellApplicationService = { std::static_hash("shell-app"), true, 1, "help", "version" };
+	shellInitService = { std::static_hash("shell-init"), true, 2, "help", "version" };
 
 	return 0;
 }
@@ -37,6 +38,9 @@ BBP::system::DaemonService *BBP::system::initd::lookupFunctor(std::string &str)
 
 	case std::static_hash("shell-builtin"):
 		return &shellBuiltinService;
+
+	case std::static_hash("shell-init"):
+		return &shellInitService;
 	}
 
 	return nullptr;
@@ -55,7 +59,12 @@ BBP::std::errno_t BBP::system::initd::functorFunctor(std::hash_t hash, std::size
 
 	case std::static_hash("shell-builtin"):
 		return shellBuiltin(argc, argv);
+
+	case std::static_hash("shell-init"):
+		return shellInit(argc, argv);
 	}
 
+	// No functor found!
+	return -ENODATA;
 }
 

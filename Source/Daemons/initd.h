@@ -4,11 +4,11 @@
 #include "../include/Daemon.h"
 
 /*
-INITD Daemon - 
+INITD Daemon -
 
 This daemon is responsible for keeping other daemons organized.
 This means for example that this daemon registers all other daemons together,
-Simplifies 
+Simplifies
 
 */
 
@@ -22,7 +22,7 @@ namespace BBP
 		{
 		private:
 			// Services
-			static constexpr std::size_t serviceCount = 3;
+			static constexpr std::size_t serviceCount = 4;
 			BBP::std::STATIC_PAGE<DaemonService, serviceCount> initdServices;
 
 			// Maximum length for a shell command
@@ -46,6 +46,10 @@ namespace BBP
 			// This service invokes a builtin shell action
 			DaemonService shellBuiltinService;
 			std::errno_t shellBuiltin(std::size_t, std::c_string *);
+
+			// This service initialises the shell before use. MAY ONLY BE DONE ONCE, MUST BE CALLED FROM OS!
+			DaemonService shellInitService;
+			std::errno_t shellInit(std::size_t, std::c_string *);
 
 			// Load line from user
 			std::size_t loadUserInput();

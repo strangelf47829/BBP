@@ -19,4 +19,7 @@ bool BBP::system::Kernel::kernelUpdateCycle(std::async_stack_t<> &stack, std::as
 	// Kill
 	if (osStep == false)
 		arg.template get<0>()->Kill();
+
+	// Return true
+	return true;
 }

@@ -1,4 +1,4 @@
-Executable.cpp: In function ‘void BBP::std::execute(BBP::std::executable_main, int, char**)’:
+Executable.cpp: In function ‘void BBP::std::execute(executable_main, int, char**)’:
 Executable.cpp:15:45: warning: unused parameter ‘mainFunc’ [-Wunused-parameter]
    15 | void BBP::std::execute(std::executable_main mainFunc, int argc, char **argv)
       |                        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~

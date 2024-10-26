@@ -294,6 +294,51 @@ BBP::std::PATH &BBP::std::PATH::resolveAbsolutes()
 	return getFileAndPaths();
 }
 
+void BBP::std::PATH::DeriveFromShellDirectory(std::PATH &path)
+{
+	// Do based on text
+	DeriveFromShellDirectory(path.relName());
+}
+
+void BBP::std::PATH::DeriveFromShellDirectory(std::c_string str)
+{
+	// Create string
+	std::c_string pathTo = str;
+
+	// If argument is '.', change to './'
+	if (std::strcmp(str, (std::c_string)"."))
+		pathTo = "./";
+	else if (std::strcmp(str, (std::c_string)".."))
+		pathTo = "../";
+
+	// Now create paths
+	std::PATH currentPath;
+	std::PATH changeTo = pathTo;
+
+	// Copy data from old path into current path
+	currentPath.copyFrom(system::Shell::getWorkingDirectory());
+
+	// Combine current path with input path
+	currentPath = changeTo.makeAbsolutePath(&currentPath);
+
+	// Get C string path
+	std::c_string pathName = currentPath.relName();
+
+	// Now get length of primary volume relative name to readjust names
+	std::size_t primVolumeLength = std::strlen(system::Shell::getPrimaryVolume().volumePath.relName());
+
+	// Check if primary volume has been set correctly
+	if (primVolumeLength == 0)
+		throw std::exception("Shell Primary Volume not set", EBADFD);
+
+	// Otherwise, if defined from root,
+	if (changeTo.isDefinedFromRoot())
+		pathName += primVolumeLength - 1;
+
+	// now set path
+	*this = pathName;
+}
+
 void BBP::std::PATH::makeRelative(PATH &reference, PATH &dir)
 {
 	if (!dir.isRelativeToRoot())

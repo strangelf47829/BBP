@@ -124,4 +124,6 @@ BBP::std::errno_t BBP::system::elsa_builtin(std::size_t argc, std::c_string *arg
 	// Process one file
 	esa::processor.translate(input, output);
 
+	return ENONE;
+
 }

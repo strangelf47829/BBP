@@ -20,6 +20,9 @@ bool BBP::elsa::symbol_t::initializeConstant(std::word value, std::DYN_PAGE::Ali
 
 	// Construct items
 	data = symbol_data_t(sectionInfo, dataTable, alignment, value);
+
+	// Return success
+	return true;
 }
 
 // Initialize
@@ -31,6 +34,9 @@ bool BBP::elsa::symbol_t::initializeDynamic(std::size_t size)
 
 	// Construct items
 	data = symbol_data_t(sectionInfo, dataTable, size);
+
+	// Return success
+	return false;
 }
 
 

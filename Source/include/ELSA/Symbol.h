@@ -202,6 +202,9 @@ namespace BBP
 
 			// Running count for current stream
 			std::size_t currentStream;
+			
+			// Current unique handle for symbol
+			std::index_t uniqueCount;
 
 		public:
 

@@ -48,7 +48,8 @@ namespace BBP
 		extern BuiltinCommand kill_command;
 		extern BuiltinCommand logout_command;
 		extern BuiltinCommand type_command;
-		
+		extern BuiltinCommand cat_command;
+
 		// "Binaries"
 		extern BuiltinCommand cp_command;
 		extern BuiltinCommand echo_command;
@@ -101,6 +102,7 @@ namespace BBP
 		shell_builtin_t kill_builtin;
 		shell_builtin_t logout_builtin;
 		shell_builtin_t type_builtin;
+		shell_builtin_t cat_builtin;
 
 		// "Binaries"
 		shell_builtin_t cp_builtin;

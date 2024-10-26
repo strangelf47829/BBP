@@ -8,7 +8,7 @@ void BBP::elsa::symbol_db::setRelocationSection(Section *sect) { relocationSecti
 
 BBP::elsa::symbol_db::symbol_db()
 	: dataSection(nullptr), stringSection(nullptr), symbolSection(nullptr), relocationSection(nullptr), currentStream(0), activeEntry(nullptr), activeSymbol(nullptr),
-	headEntry(nullptr) {}
+	headEntry(nullptr), uniqueCount(0) {}
 
 // Initialize a symbol
 BBP::elsa::symbol_db::symhandle_t BBP::elsa::symbol_db::initSymbol()
@@ -19,6 +19,8 @@ BBP::elsa::symbol_db::symhandle_t BBP::elsa::symbol_db::initSymbol()
 	// Set sections
 	activeSymbol->setDataTable(dataSection);
 	activeSymbol->setStringTable(stringSection);
+
+	return uniqueCount++;
 }
 
 // Set symbol name
@@ -226,6 +228,9 @@ void BBP::elsa::symbol_db::Reset()
 	activeSymbol = nullptr;
 	activeEntry = nullptr;
 	headEntry = nullptr;
+
+	// Set unique count back to 0
+	uniqueCount = 0;
 
 }
 

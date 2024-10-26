@@ -1,7 +1,7 @@
 kill.cpp: In function ‘BBP::std::errno_t BBP::system::kill_builtin(BBP::std::size_t, BBP::std::string_element**)’:
-kill.cpp:32:7: warning: unused variable ‘c’ [-Wunused-variable]
-   32 |  char c = '\033';
-      |       ^
+kill.cpp:32:14: warning: unused variable ‘c’ [-Wunused-variable]
+   32 |         char c = '\033';
+      |              ^
 kill.cpp:10:57: warning: unused parameter ‘argc’ [-Wunused-parameter]
    10 | BBP::std::errno_t BBP::system::kill_builtin(std::size_t argc, std::c_string *argv)
       |                                             ~~~~~~~~~~~~^~~~

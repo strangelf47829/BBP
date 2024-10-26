@@ -185,6 +185,7 @@ BBP::std::conststring BBP::esa::esaProcessor::setSize(std::size_t size)
 		return "WSize declaration for anonymous symbols will be ignored.";
 	}
 
+	return nullptr;
 }
 
 void BBP::esa::esaProcessor::addWord(std::word w)

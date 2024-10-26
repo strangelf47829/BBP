@@ -1,4 +1,4 @@
 Boot.cpp: In static member function ‘static BBP::std::errno_t BBP::system::Kernel::enterKernelSpace(BBP::system::EFI&, BBP::FirmwareInterface&)’:
-Boot.cpp:102:16: warning: unused variable ‘status’ [-Wunused-variable]
-  102 |   std::errno_t status = record->owner->initialize();
-      |                ^~~~~~
+Boot.cpp:102:30: warning: unused variable ‘status’ [-Wunused-variable]
+  102 |                 std::errno_t status = record->owner->initialize();
+      |                              ^~~~~~

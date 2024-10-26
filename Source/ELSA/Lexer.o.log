@@ -1,7 +1,17 @@
+Lexer.cpp:47:9: warning: multi-line comment [-Wcomment]
+   47 |         // Then consume over \
+      |         ^
+In file included from ../include/ELSA/../Dictionary.h:5,
+                 from ../include/ELSA/Keywords.h:5,
+                 from Lexer.cpp:3:
+../include/ELSA/../Concepts.h:16:25: warning: testing if a concept-id is a valid expression; add ‘requires’ to check satisfaction [-Wmissing-requires]
+   16 |                         Hashable_t<T>;
+      |                         ^
+      |                         requires 
 Lexer.cpp: In member function ‘bool BBP::elsa::Lexer::consume(BBP::elsa::Debug_db&, BBP::elsa::keyword_db&)’:
 Lexer.cpp:38:42: warning: unused parameter ‘debug’ [-Wunused-parameter]
    38 | bool BBP::elsa::Lexer::consume(Debug_db &debug, keyword_db &keyword)
       |                                ~~~~~~~~~~^~~~~
-Lexer.cpp:51:1: warning: control reaches end of non-void function [-Wreturn-type]
-   51 | }
-      | ^
+Lexer.cpp:38:61: warning: unused parameter ‘keyword’ [-Wunused-parameter]
+   38 | bool BBP::elsa::Lexer::consume(Debug_db &debug, keyword_db &keyword)
+      |                                                 ~~~~~~~~~~~~^~~~~~~

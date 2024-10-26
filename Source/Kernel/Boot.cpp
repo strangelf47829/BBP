@@ -33,7 +33,7 @@ BBP::std::errno_t BBP::system::Kernel::enterKernelSpace(system::EFI &EFI, Firmwa
 		return systemDriverStatus;
 
 	// Load file driver
-	std::errno_t fileDriverStatus = 0;// singleton.loadFileDriver(EFI);
+	std::errno_t fileDriverStatus = singleton.loadFileDriver(EFI);
 
 	// If set, return
 	if (fileDriverStatus)
@@ -156,9 +156,6 @@ BBP::std::errno_t BBP::system::Kernel::enterKernelSpace(system::EFI &EFI, Firmwa
 	// Clear screen
 	clearScreen();
 
-	// Show BIOS splash screen
-	biosSplashCommand(EFI);
-
 	// Set delay
 	std::time_t delay = (canBootIntoBIOS ? EFI.post.biosModeDelay : 0);
 	std::time_t calledAt = millis();
@@ -207,19 +204,47 @@ BBP::std::errno_t BBP::system::Kernel::enterKernelSpace(system::EFI &EFI, Firmwa
 	// Add task to taskpool
 	singleton.taskpool.Add(singleton.kernelUpdateCycleTask());
 
-	// Load entry point
-	bool couldEnter = entryPoint(&EFI, singleton.extTaskPool);
+	// Catc any kernel signal here
+	try
+	{
 
-	// If could not enter, return error
-	if (couldEnter == false)
+		// Load entry point
+		bool couldEnter = entryPoint(&EFI, singleton.extTaskPool);
+
+		// If could not enter, return error
+		if (couldEnter == false)
 		return OSError;
 
-	// Otherwise, continue until cold
-	while (singleton.taskpool.Step());
+		// Otherwise, continue until cold
+		while (singleton.taskpool.Step());
+	}
+	catch (BBP::std::KernelSignal &e)
+	{
+		// If unwinding was intended, break out of catch block
+		if (e.intendedUnwind)
+			goto KERNEL_DEINIT;
 
-	// Then unload all drivers
+		// Unintended unwind, return value to reflect that
+		return EINTR;
+	}
+	catch (BBP::std::word number)
+	{
+		// A number was thrown, meaning the program continued executing after a stack unwinding.
+		// Return Exec format error becuase execution error (ERRNO making things difficult...)
+		return ENOEXEC;
+	}
+	catch (...)
+	{
+		// Something else was caught, return generic value
+		return EPERM;
+	}
+
+	// Label to end kernel
+KERNEL_DEINIT:
+
+	// Only unload drivers after catch block, since drivers might be needed to handle signals
 	singleton.Core().firmware->stopCapture();
 
 	// Return
-	return 0;
+	return ENONE;
 }

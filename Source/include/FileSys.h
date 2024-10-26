@@ -68,6 +68,10 @@ namespace BBP
 
 			// Resolve any absolute file references.
 			PATH &resolveAbsolutes();
+			
+			// Make this path relative to the current shell working directory. The path is modified in place, taking the active directory as root and modifying it using the argument supplied
+			void DeriveFromShellDirectory(PATH &dir);
+			void DeriveFromShellDirectory(std::c_string str);
 
 			// Make dir relative to reference
 			static void makeRelative(PATH &reference, PATH &dir);

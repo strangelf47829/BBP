@@ -3,7 +3,7 @@
 # +=====================+
 
 # Module information
-MODULE= parser
+MODULE= Parser
 
 # Source files
 MODULE_SRC= Lexer.cpp

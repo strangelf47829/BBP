@@ -41,7 +41,7 @@ T &BBP::std::SequentialMemory<T>::operator[] (std::index_t idx)
 {
 	// Reset to 0
 	this->setActivePage(0);
-	
+
 	// Keep track of base
 	std::size_t base = 0;
 
@@ -66,6 +66,9 @@ T &BBP::std::SequentialMemory<T>::operator[] (std::index_t idx)
 
 	// Error
 	std::raise(SIGSEGV);
+
+	// Cannot return value, throw '0'
+	throw 0;
 }
 
 #endif

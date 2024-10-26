@@ -41,7 +41,6 @@ BBP::userspace::xvalue::xvalue(userspace::StateMachine &state, userspace::Instru
 
 	// Uninitialized
 	std::raise(std::SIGSEGV);
-
 }
 
 void BBP::userspace::xvalue::dereference(userspace::StateMachine &state, std::address_t lvalueFor)
@@ -81,6 +80,9 @@ BBP::std::address_t BBP::userspace::xvalue::getOwnPhysicalAddress()
 
 	// Uninitialized value
 	std::raise(std::SIGSEGV);
+
+	// Throw error
+	throw 0;
 }
 
 BBP::std::address_t BBP::userspace::xvalue::getOwnVirtualAddress()
@@ -92,6 +94,9 @@ BBP::std::address_t BBP::userspace::xvalue::getOwnVirtualAddress()
 
 	// Uninitialized value
 	std::raise(std::SIGSEGV);
+
+	// Throw error
+	throw 0;
 }
 
 BBP::std::word BBP::userspace::xvalue::resolve(userspace::StateMachine &state)
@@ -103,6 +108,9 @@ BBP::std::word BBP::userspace::xvalue::resolve(userspace::StateMachine &state)
 
 	// Uninitialized value
 	std::raise(std::SIGSEGV);
+
+	// Throw error
+	throw 0;
 }
 
 void BBP::userspace::xvalue::assign(userspace::StateMachine &state, pvalue &assignee, std::byte bytes)
@@ -140,6 +148,9 @@ bool BBP::userspace::xvalue::canUserExecuteFrom(userspace::StateMachine& state)
 
 	// Uninitialized
 	std::raise(std::SIGSEGV);
+
+	// Throw error
+	throw 0;
 }
 
 bool BBP::userspace::xvalue::canUserReadFrom(userspace::StateMachine& state)
@@ -151,6 +162,9 @@ bool BBP::userspace::xvalue::canUserReadFrom(userspace::StateMachine& state)
 
 	// Uninitialized
 	std::raise(std::SIGSEGV);
+
+	// Throw error
+	throw 0;
 }
 
 bool BBP::userspace::xvalue::canUserWriteTo(userspace::StateMachine& state)
@@ -162,4 +176,7 @@ bool BBP::userspace::xvalue::canUserWriteTo(userspace::StateMachine& state)
 
 	// Uninitialized
 	std::raise(std::SIGSEGV);
+
+	// Throw error
+	throw 0;
 }

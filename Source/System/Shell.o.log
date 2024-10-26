@@ -1,10 +1,16 @@
 Shell.cpp: In member function ‘BBP::std::errno_t BBP::system::initd::shell(BBP::std::size_t, BBP::std::string_element**)’:
-Shell.cpp:12:1: warning: no return statement in function returning non-void [-Wreturn-type]
-   12 | }
-      | ^
 Shell.cpp:8:57: warning: unused parameter ‘argc’ [-Wunused-parameter]
     8 | BBP::std::errno_t BBP::system::initd::shell(std::size_t argc, std::c_string *argv)
       |                                             ~~~~~~~~~~~~^~~~
 Shell.cpp:8:78: warning: unused parameter ‘argv’ [-Wunused-parameter]
     8 | BBP::std::errno_t BBP::system::initd::shell(std::size_t argc, std::c_string *argv)
       |                                                               ~~~~~~~~~~~~~~~^~~~
+Shell.cpp: In member function ‘BBP::std::errno_t BBP::system::initd::shellInit(BBP::std::size_t, BBP::std::string_element**)’:
+Shell.cpp:61:61: warning: implicitly-declared ‘constexpr BBP::std::PATH& BBP::std::PATH::operator=(const BBP::std::PATH&)’ is deprecated [-Wdeprecated-copy]
+   61 |         BBP::system::Shell::getPrimaryVolume().volumePath = pathStr;
+      |                                                             ^~~~~~~
+In file included from ../include/Shell.h:7,
+                 from Shell.cpp:3:
+../include/FileSys.h:98:25: note: because ‘BBP::std::PATH’ has user-provided ‘BBP::std::PATH::PATH(BBP::std::PATH&)’
+   98 |                         PATH(std::PATH &);
+      |                         ^~~~

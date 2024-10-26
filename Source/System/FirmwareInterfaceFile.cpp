@@ -157,8 +157,7 @@ BBP::std::errno_t BBP::FirmwareInterface::Inspect(std::PATH &path)
 	setPath(path);
 
 	// Then query metadata for file
-	HardwareFile.hardwareDriver.executeCommand(std::inspectPath, 0, 0);
-
+	return HardwareFile.hardwareDriver.executeCommand(std::inspectPath, 0, 0);
 }
 
 // Step iterator

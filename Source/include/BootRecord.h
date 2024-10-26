@@ -2,7 +2,7 @@
 #define BBP_KERNEL_BOOTRECORD_H
 
 #include "Strings.h"
-#include "Taskpool.h"
+#include "TaskPool.h"
 
 
 namespace BBP

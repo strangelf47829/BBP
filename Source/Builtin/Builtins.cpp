@@ -8,6 +8,7 @@ BBP::system::BuiltinCommand BBP::system::help_command("help", BBP::system::help_
 BBP::system::BuiltinCommand BBP::system::kill_command("kill", BBP::system::kill_builtin, "[-S signal] pid");
 BBP::system::BuiltinCommand BBP::system::logout_command("logout", BBP::system::logout_builtin, "");
 BBP::system::BuiltinCommand BBP::system::type_command("type", BBP::system::type_builtin, "file");
+BBP::system::BuiltinCommand BBP::system::cat_command("cat", BBP::system::cat_builtin, "file");
 
 // "Binaries"
 BBP::system::BuiltinCommand BBP::system::cp_command("cp", BBP::system::cp_builtin, "filename1 filename2");
@@ -50,10 +51,10 @@ BBP::system::BuiltinCommand BBP::system::daemon_command("daemon", BBP::system::d
 BBP::system::BuiltinCommand BBP::system::neofetch_command("neofetch", BBP::system::neofetch_builtin, "[-s]");
 
 // Builtin command count
-constexpr BBP::std::size_t builtinCommandCount = 30;
+constexpr BBP::std::size_t builtinCommandCount = 31;
 
 // Array of all builtins
-BBP::system::BuiltinCommand *commands[builtinCommandCount] = { 
+BBP::system::BuiltinCommand *commands[builtinCommandCount] = {
 	&BBP::system::builtin_command,
 	&BBP::system::cd_command,
 	&BBP::system::exit_command,
@@ -62,6 +63,7 @@ BBP::system::BuiltinCommand *commands[builtinCommandCount] = {
 	&BBP::system::kill_command,
 	&BBP::system::logout_command,
 	&BBP::system::type_command,
+	&BBP::system::cat_command,
 	&BBP::system::cp_command,
 	&BBP::system::echo_command,
 	&BBP::system::mkdir_command,
@@ -83,7 +85,7 @@ BBP::system::BuiltinCommand *commands[builtinCommandCount] = {
 	&BBP::system::status_command,
 	&BBP::system::rae_command,
 	&BBP::system::daemon_command,
-	&BBP::system::neofetch_command 
+	&BBP::system::neofetch_command
 };
 
 // Page for builtins
