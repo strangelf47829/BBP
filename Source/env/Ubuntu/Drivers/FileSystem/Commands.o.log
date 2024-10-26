@@ -1,0 +1,43 @@
+Drivers/FileSystem/Commands.cpp: In function ‘bool Host::Drivers::FileSystem::openFile(BBP::std::size_t, BBP::std::word*)’:
+Drivers/FileSystem/Commands.cpp:75:16: warning: enumeration value ‘READPATH’ not handled in switch [-Wswitch]
+   75 |         switch (mode)
+      |                ^
+Drivers/FileSystem/Commands.cpp:75:16: warning: enumeration value ‘INSPECT’ not handled in switch [-Wswitch]
+Drivers/FileSystem/Commands.cpp:72:59: warning: unused parameter ‘argc’ [-Wunused-parameter]
+   72 | bool Host::Drivers::FileSystem::openFile(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                          ~~~~~~~~~~~~~~~~~^~~~
+Drivers/FileSystem/Commands.cpp:72:81: warning: unused parameter ‘argv’ [-Wunused-parameter]
+   72 | bool Host::Drivers::FileSystem::openFile(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                                                 ~~~~~~~~~~~~~~~~^~~~
+Drivers/FileSystem/Commands.cpp: In function ‘bool Host::Drivers::FileSystem::closeFile(BBP::std::size_t, BBP::std::word*)’:
+Drivers/FileSystem/Commands.cpp:92:16: warning: enumeration value ‘READPATH’ not handled in switch [-Wswitch]
+   92 |         switch (mode)
+      |                ^
+Drivers/FileSystem/Commands.cpp:92:16: warning: enumeration value ‘INSPECT’ not handled in switch [-Wswitch]
+Drivers/FileSystem/Commands.cpp:89:60: warning: unused parameter ‘argc’ [-Wunused-parameter]
+   89 | bool Host::Drivers::FileSystem::closeFile(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                           ~~~~~~~~~~~~~~~~~^~~~
+Drivers/FileSystem/Commands.cpp:89:82: warning: unused parameter ‘argv’ [-Wunused-parameter]
+   89 | bool Host::Drivers::FileSystem::closeFile(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                                                  ~~~~~~~~~~~~~~~~^~~~
+Drivers/FileSystem/Commands.cpp: In function ‘bool Host::Drivers::FileSystem::setReadMode(BBP::std::size_t, BBP::std::word*)’:
+Drivers/FileSystem/Commands.cpp:106:62: warning: unused parameter ‘argc’ [-Wunused-parameter]
+  106 | bool Host::Drivers::FileSystem::setReadMode(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                             ~~~~~~~~~~~~~~~~~^~~~
+Drivers/FileSystem/Commands.cpp:106:84: warning: unused parameter ‘argv’ [-Wunused-parameter]
+  106 | bool Host::Drivers::FileSystem::setReadMode(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                                                    ~~~~~~~~~~~~~~~~^~~~
+Drivers/FileSystem/Commands.cpp: In function ‘bool Host::Drivers::FileSystem::setWriteMode(BBP::std::size_t, BBP::std::word*)’:
+Drivers/FileSystem/Commands.cpp:112:63: warning: unused parameter ‘argc’ [-Wunused-parameter]
+  112 | bool Host::Drivers::FileSystem::setWriteMode(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                              ~~~~~~~~~~~~~~~~~^~~~
+Drivers/FileSystem/Commands.cpp:112:85: warning: unused parameter ‘argv’ [-Wunused-parameter]
+  112 | bool Host::Drivers::FileSystem::setWriteMode(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                                                     ~~~~~~~~~~~~~~~~^~~~
+Drivers/FileSystem/Commands.cpp: In function ‘bool Host::Drivers::FileSystem::pathInspect(BBP::std::size_t, BBP::std::word*)’:
+Drivers/FileSystem/Commands.cpp:118:62: warning: unused parameter ‘argc’ [-Wunused-parameter]
+  118 | bool Host::Drivers::FileSystem::pathInspect(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                             ~~~~~~~~~~~~~~~~~^~~~
+Drivers/FileSystem/Commands.cpp:118:84: warning: unused parameter ‘argv’ [-Wunused-parameter]
+  118 | bool Host::Drivers::FileSystem::pathInspect(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                                                    ~~~~~~~~~~~~~~~~^~~~

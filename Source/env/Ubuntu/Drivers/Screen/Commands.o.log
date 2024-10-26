@@ -1,0 +1,7 @@
+Drivers/Screen/Commands.cpp: In function ‘bool Host::Drivers::Screen::printSplash(BBP::std::size_t, BBP::std::word*)’:
+Drivers/Screen/Commands.cpp:22:58: warning: unused parameter ‘argc’ [-Wunused-parameter]
+   22 | bool Host::Drivers::Screen::printSplash(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                         ~~~~~~~~~~~~~~~~~^~~~
+Drivers/Screen/Commands.cpp:22:80: warning: unused parameter ‘argv’ [-Wunused-parameter]
+   22 | bool Host::Drivers::Screen::printSplash(BBP::std::size_t argc, BBP::std::word *argv)
+      |                                                                ~~~~~~~~~~~~~~~~^~~~

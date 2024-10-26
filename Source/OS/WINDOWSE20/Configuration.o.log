@@ -1,0 +1,4 @@
+Configuration.cpp: In function ‘bool OS::WINDOWSE20::canBoot(BBP::system::EFI*)’:
+Configuration.cpp:10:48: warning: unused parameter ‘EFI’ [-Wunused-parameter]
+   10 | bool OS::WINDOWSE20::canBoot(BBP::system::EFI *EFI)
+      |                              ~~~~~~~~~~~~~~~~~~^~~

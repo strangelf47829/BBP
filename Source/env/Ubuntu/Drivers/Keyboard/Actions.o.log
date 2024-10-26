@@ -1,0 +1,8 @@
+Drivers/Keyboard/Actions.cpp: In function ‘BBP::std::word Host::Drivers::Keyboard::sendDataToKeyboard(BBP::std::size_t, BBP::std::PAGE<char>&)’:
+Drivers/Keyboard/Actions.cpp:3:120: warning: unused parameter ‘page’ [-Wunused-parameter]
+    3 | BBP::std::word Host::Drivers::Keyboard::sendDataToKeyboard(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &page)
+      |                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+Drivers/Keyboard/Actions.cpp: In function ‘BBP::std::word Host::Drivers::Keyboard::receiveKeyboardMetadata(BBP::std::size_t, BBP::std::PAGE<char>&)’:
+Drivers/Keyboard/Actions.cpp:34:125: warning: unused parameter ‘page’ [-Wunused-parameter]
+   34 | BBP::std::word Host::Drivers::Keyboard::receiveKeyboardMetadata(BBP::std::size_t, BBP::std::PAGE<BBP::std::string_element> &page)
+      |                                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
