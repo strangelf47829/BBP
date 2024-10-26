@@ -129,6 +129,9 @@ namespace BBP
 			// Add a value to the hashmap, returns its index
 			std::index_t add(hashmap_val_t);
 
+			// Reset function
+			void Reset();
+
 			// Destructor frees all allocations
 			~Hashmap();
 

@@ -53,6 +53,9 @@ namespace BBP
 			// Save to path
 			void saveFile(std::conststring, std::size_t fileSize);
 
+			// Reset
+			void Reset();
+
 		};
 
 	}

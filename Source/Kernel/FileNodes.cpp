@@ -16,8 +16,8 @@ bool BBP::system::Kernel::isFileOpened(std::PATH &path)
 		if (nodeHash != hash)
 			continue;
 
-		// Otherwise check both against eachother
-		if (std::strcmp(path.relName(), singleton.Core().fileTable[idx].filePath.relName()))
+		// Otherwise check both against eachother. If not the same, continue
+		if (std::strcmp(path.relName(), singleton.Core().fileTable[idx].filePath.relName()) == false)
 			continue;
 
 		// Found, set node
@@ -65,13 +65,13 @@ BBP::std::noderef_t BBP::system::Kernel::deallocateINode(std::noderef_t node, bo
 	return singleton.Core().fileTable.dataSize;
 }
 
-BBP::std::noderef_t BBP::system::Kernel::allocateINode(std::PATH &path)
+BBP::std::noderef_t BBP::system::Kernel::allocateINode(std::PATH &path, bool &isOpen)
 {
 	// Resolve names
 	path.makeAbsolutePath(&system::Shell::getWorkingDirectory());
 
 	// Check if file is open
-	bool isOpen = system::Kernel::isFileOpened(path);
+	isOpen = system::Kernel::isFileOpened(path);
 
 	// If not open, set node and exit
 	if (isOpen)

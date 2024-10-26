@@ -5,3 +5,22 @@ BBP::elsa::TranslationUnit::TranslationUnit()
 {
 	//application.emitFile("/home/new2.out");
 }
+
+BBP::elsa::TranslationUnit::~TranslationUnit()
+{
+	// Clean up the application
+	keywordAllocator.freeAll();
+}
+
+void BBP::elsa::TranslationUnit::Reset()
+{
+	// Clean up keyword allocator
+	keywordAllocator.freeAll();
+
+	// Then reset application
+	application.Reset();
+
+	// Then reset symbol_db
+	symbols.Reset();
+
+}

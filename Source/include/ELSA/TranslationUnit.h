@@ -40,6 +40,12 @@ namespace BBP
 			// Constructor
 			TranslationUnit();
 
+			// Destructor
+			~TranslationUnit();
+
+			// Reset everything
+			void Reset();
+
 			// Set interpreter
 			void emitInterpreter(std::string);
 

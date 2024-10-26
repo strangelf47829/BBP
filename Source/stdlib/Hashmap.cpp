@@ -72,9 +72,21 @@ bool BBP::std::Hashmap::stepIterator(Hashmap_iterator_t &iterator)
 	return true;
 }
 
+void BBP::std::Hashmap::Reset()
+{
+	// Clear all allocator data
+	allocator.clearAll();
+
+	// Then reset all other values
+	this->Frames = std::PAGE<std::Hashmap::Hashmap_frame_t>(0, nullptr);
+
+	// Then reset totalChain count
+	totalChainCount = 0;
+}
+
 BBP::std::Hashmap::~Hashmap()
 {
-	allocator.clearAll();
+	Reset();
 }
 
 void BBP::std::Hashmap::moveToEndOfChain(Hashmap_iterator_t &iterator, halfword bin)

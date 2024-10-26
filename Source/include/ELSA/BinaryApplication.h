@@ -36,6 +36,9 @@ namespace BBP
 			// Constructor
 			BinaryApplication();
 
+			// Destructor
+			~BinaryApplication();
+
 			// Define sections
 			void defineSections();
 			
@@ -59,6 +62,9 @@ namespace BBP
 
 			// Emit file
 			void emitFile(std::conststring);
+
+			// Reset
+			void Reset();
 
 
 

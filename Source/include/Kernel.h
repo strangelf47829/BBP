@@ -91,7 +91,7 @@ namespace BBP
 			static void setError(std::errno_t);
 
 			// File node stuff
-			static std::noderef_t allocateINode(std::PATH &);
+			static std::noderef_t allocateINode(std::PATH &, bool &);
 			static std::noderef_t deallocateINode(std::noderef_t, bool, bool);
 			static std::PATH &getNodePath(std::noderef_t);
 

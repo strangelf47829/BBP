@@ -12,10 +12,12 @@ BBP::std::FILE::FILE(std::Stack<std::string_element> &Stack, std::conststring pa
 {
 	// Get INode info
 	std::PATH p(path);
-	this->node = system::Kernel::allocateINode(p);
 
-	// Check if it already exists
-	_unload_inode = !is_open();
+	// Allocate Inode and write if open into _unload_inode.
+	this->node = system::Kernel::allocateINode(p, _unload_inode);
+
+	// Then negate _unload_inode
+	_unload_inode = !_unload_inode;
 
 #ifndef BBP_STDLIB_FILESYS_OVERWRITEEXISTINGFILES
 	// If BBP_STDLIB_FILESYS_OVERWRITEEXISTINGFILES is set, check if file already exists and throw exception if it does
@@ -30,17 +32,20 @@ BBP::std::FILE::FILE(std::Stack<std::string_element> &Stack, std::conststring pa
 BBP::std::FILE::FILE(std::PATH path)
 	: data(nullptr)
 {
-	this->node = system::Kernel::allocateINode(path);
+	// Is alread open?
+	bool isOpen;
+
+	this->node = system::Kernel::allocateINode(path, isOpen);
 
 	// Check if file exists on disk
 	bool exists = doesFileExistOnDisk(path);
 
 	// If file does not exist on disk or in memory, throw error
-	if (!is_open() && !on_disk())
+	if (!isOpen && !on_disk())
 		throw std::exception("ERR_FILE_NOEXIST", ENOENT);
 
 	// Only read from disk if file exists on disk, but is also not already in memory
-	if (exists && !is_open())
+	if (exists && !isOpen)
 	{
 		// Read data from file
 		data = system::Kernel::readFileFromDisk(this->node, path);

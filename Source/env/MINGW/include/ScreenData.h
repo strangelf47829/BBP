@@ -20,8 +20,8 @@ namespace Host
 	extern BBP::std::Terminal::TerminalApplication terminal;
 
 	// Window dimensions
-	constexpr BBP::std::pos_t w = 640;
-	constexpr BBP::std::pos_t h = 350;
+	constexpr BBP::std::pos_t w = 480;
+	constexpr BBP::std::pos_t h = 320;
 
 	// Pointer to graphical data
 	extern BBP::std::RGBA_t *VBuff;

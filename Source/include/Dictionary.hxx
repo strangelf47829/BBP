@@ -155,7 +155,14 @@ void BBP::std::HashedDictionary<Key_t, Value_t>::remove(Key_t &&key)
 template <BBP::std::Identifiable Key_t, BBP::std::Identifiable Value_t>
 void BBP::std::HashedDictionary<Key_t, Value_t>::Reset()
 {
+	// Reset all allocated values
 	allocator.clearAll();
+
+	// Then clear totalChainCount
+	Indicies.Reset();
+
+	// Then clear frames
+	this->Frames = std::PAGE<std::DictionaryKeyValuePair<Key_t, Value_t>>(0, nullptr);
 }
 
 // Set values
