@@ -51,13 +51,13 @@ BBP::std::errno_t BBP::system::initd::shellApplication(std::size_t argc, std::c_
 	std::string shellCMD1 = std::String("cd /home/");
 	shell(shellCMD1);
 
-	std::string shellCMD1 = std::String("cp");
+	shellCMD1 = std::String("cp");
 
 	for (std::index_t idx = 0; idx < 255; idx++)
 		shell(shellCMD1);
 
 	std::string shellCMD3 = std::String("logout");
-	shell(shellCMD3);
+//	shell(shellCMD3);
 
 	// Get a shell Line
 	while (1)
