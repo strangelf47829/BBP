@@ -57,6 +57,8 @@ BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
 	// Then save file
 	tu.application.emitFile("/home/new3.out");
 
+	tu.Reset();
+
 	return ENONE;
 
 	/*

@@ -3,6 +3,7 @@
 *.lib
 *.o
 *.o.log
+*.log
 
 # Build artifacts
 *.generic.log

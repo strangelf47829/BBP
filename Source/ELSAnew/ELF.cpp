@@ -257,6 +257,23 @@ void BBP::ELF::ELF::saveFile(std::conststring path, std::size_t fileSize)
 	// Then set filesize
 	stack.atElement = stack.max_elements;
 	file.writeFileToDisk();
+
+	file.close();
+
+	// Free up allocations
+	allocator.free(bytes.data);
+}
+
+void BBP::ELF::ELF::Reset()
+{
+	// Reset section table
+	sectionTable.Reset();
+
+	// Reset segment table
+	segmentTable.Reset();
+
+	// Reset section name table
+	sectionStringTable.Reset();
 }
 
 // Find a section based on a name

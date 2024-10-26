@@ -90,6 +90,31 @@ BBP::elsa::BinaryApplication::BinaryApplication()
 
 }
 
+// Reset everything upon destruction
+BBP::elsa::BinaryApplication::~BinaryApplication()
+{
+	Reset();
+}
+
+// Reset everything
+void BBP::elsa::BinaryApplication::Reset()
+{
+	// Reset ELF sections
+	elf.Reset();
+
+	// Reset Own sections
+	handlers.Reset();
+	text.Reset();
+	got.Reset();
+	data.Reset();
+	bss.Reset();
+	rodata.Reset();
+	reltext.Reset();
+	relgot.Reset();
+	symtab.Reset();
+	strtab.Reset();
+}
+
 // Define each section as defined by ELF standards
 void BBP::elsa::BinaryApplication::defineSections()
 {
