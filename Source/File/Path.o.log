@@ -25,22 +25,16 @@ Path.cpp: In constructor ‘BBP::std::PATH::PATH(BBP::std::VOLUME*, BBP::std::co
 Path.cpp:25:21: warning: unused variable ‘pathlength’ [-Wunused-variable]
    25 |         std::size_t pathlength = std::strlen(str);
       |                     ^~~~~~~~~~
-Path.cpp: In member function ‘void BBP::std::PATH::DeriveFromShellDirectory(BBP::std::c_string)’:
-Path.cpp:310:26: warning: ISO C++ forbids converting a string constant to ‘BBP::std::c_string’ {aka ‘char*’} [-Wwrite-strings]
-  310 |                 pathTo = "./";
-      |                          ^~~~
-Path.cpp:312:26: warning: ISO C++ forbids converting a string constant to ‘BBP::std::c_string’ {aka ‘char*’} [-Wwrite-strings]
-  312 |                 pathTo = "../";
-      |                          ^~~~~
-Path.cpp:322:61: warning: implicitly-declared ‘constexpr BBP::std::PATH& BBP::std::PATH::operator=(const BBP::std::PATH&)’ is deprecated [-Wdeprecated-copy]
-  322 |         currentPath = changeTo.makeAbsolutePath(&currentPath);
+Path.cpp: In member function ‘void BBP::std::PATH::DeriveFromShellDirectory(BBP::std::conststring)’:
+Path.cpp:319:61: warning: implicitly-declared ‘constexpr BBP::std::PATH& BBP::std::PATH::operator=(const BBP::std::PATH&)’ is deprecated [-Wdeprecated-copy]
+  319 |         currentPath = changeTo.makeAbsolutePath(&currentPath);
       |                                                             ^
-Path.cpp:39:1: note: because ‘BBP::std::PATH’ has user-provided ‘BBP::std::PATH::PATH(BBP::std::PATH&)’
-   39 | BBP::std::PATH::PATH(std::PATH &path)
+Path.cpp:46:1: note: because ‘BBP::std::PATH’ has user-provided ‘BBP::std::PATH::PATH(BBP::std::PATH&)’
+   46 | BBP::std::PATH::PATH(std::PATH &path)
       | ^~~
-Path.cpp:339:17: warning: implicitly-declared ‘constexpr BBP::std::PATH& BBP::std::PATH::operator=(const BBP::std::PATH&)’ is deprecated [-Wdeprecated-copy]
-  339 |         *this = pathName;
-      |                 ^~~~~~~~
-Path.cpp:39:1: note: because ‘BBP::std::PATH’ has user-provided ‘BBP::std::PATH::PATH(BBP::std::PATH&)’
-   39 | BBP::std::PATH::PATH(std::PATH &path)
+Path.cpp:336:23: warning: implicitly-declared ‘constexpr BBP::std::PATH& BBP::std::PATH::operator=(const BBP::std::PATH&)’ is deprecated [-Wdeprecated-copy]
+  336 |         currentPath = pathName;
+      |                       ^~~~~~~~
+Path.cpp:46:1: note: because ‘BBP::std::PATH’ has user-provided ‘BBP::std::PATH::PATH(BBP::std::PATH&)’
+   46 | BBP::std::PATH::PATH(std::PATH &path)
       | ^~~

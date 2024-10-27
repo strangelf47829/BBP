@@ -5,6 +5,9 @@
 *.o.log
 *.log
 
+# Swap files created by whoever (probably vim)
+*.swp
+
 # Build artifacts
 *.generic.log
 *.bak

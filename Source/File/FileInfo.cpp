@@ -1,16 +1,20 @@
 #include "../include/FileSysInfo.h"
 #include "../include/Kernel.h"
 
-bool BBP::std::populateVolumeInfo(std::VolumeInfo &info, std::PATH &path)
+BBP::std::errno_t BBP::std::populateVolumeInfo(std::VolumeInfo &info, std::PATH &path)
 {
-	return false;
+	return ENOSYS;
 }
 
-bool BBP::std::DirectoryInfo::scarce_populate(std::PATH &path)
+// Populate a directory iterator with path names to files and directories
+BBP::std::errno_t BBP::std::DirectoryInfo::scarce_populate(std::PATH &path)
 {
 	// Get full-path name
 	std::PATH absPath;
+
+	// Now copy over data from path
 	absPath.copyFrom(path);
+
 	absPath.makeAbsolutePath();
 
 	// Get string thereof
@@ -21,14 +25,14 @@ bool BBP::std::DirectoryInfo::scarce_populate(std::PATH &path)
 
 	// if does not exist...
 	if (this->exists == false)
-		return false;
+		return ENOENT;
 
 	// Check if is directory
 	this->isDirectory = system::Kernel::isPathOfTypeDirectory(absPath);
 
 	// If no such directory...
 	if (this->isDirectory == false)
-		return false;
+		return ENOTDIR;
 
 	// Initialize values
 	fileCount = 0;
@@ -57,15 +61,15 @@ bool BBP::std::DirectoryInfo::scarce_populate(std::PATH &path)
 		std::size_t entryPath_length = std::strlen(entryPath);
 
 		// If entryPath is smaller than or equal to pathString, skip the entry.
-		if (entryPath_length <= pathString_length)
+		/*if (entryPath_length <= pathString_length)
 		{
 			// Step over
 			system::Kernel::stepInspectionIterator();
 			continue;
-		}
+		}*/
 
 		// Set offset (Fix directory issues later)
-		std::string entryPathAdjusted = std::string(entryPath_length - pathString_length, entryPath.data + pathString_length);
+		//std::string entryPathAdjusted = std::string(entryPath_length - pathString_length, entryPath.data + pathString_length);
 
 		// Check for entry type
 		if (system::Kernel::getInspectorFileType() == std::FileSysInfo::Directory)
@@ -93,10 +97,10 @@ bool BBP::std::DirectoryInfo::scarce_populate(std::PATH &path)
 	dirLength += dirCount;
 
 	// Return success
-	return true;
+	return ENONE;
 }
 
-bool BBP::std::DirectoryInfo::populate(std::PATH &path, std::ResourceManager *allocator)
+BBP::std::errno_t BBP::std::DirectoryInfo::populate(std::PATH &path, std::ResourceManager *allocator)
 {
 	// Check if populated. If it is, release resources
 	if (populated)
@@ -104,20 +108,14 @@ bool BBP::std::DirectoryInfo::populate(std::PATH &path, std::ResourceManager *al
 
 	// If allocator does not exist, return false already.
 	if (allocator == nullptr)
-		return false;
+		return ENOMEM;
 
 	// Set allocator
 	this->allocator = allocator;
 
 	// Path with root attached
-	std::PATH rootPath = path.makeAbsolutePath();
-
-	// Scarcely populate. 
-	bool scarce_result = scarce_populate(rootPath);
-	
-	// If could not scarcely populate, return error
-	if (scarce_result == false)
-		return false;
+	std::PATH rootPath = path;
+	rootPath = rootPath.makeAbsolutePath();
 
 	// Get full-path name
 	std::PATH absPath;
@@ -126,6 +124,13 @@ bool BBP::std::DirectoryInfo::populate(std::PATH &path, std::ResourceManager *al
 
 	// Get string thereof
 	std::c_string absPathString = absPath.relName();
+
+	// Then scarcely populate
+	errno_t scarce_result = scarce_populate(absPath);
+
+	// Check if error
+	if (scarce_result != ENONE)
+		return scarce_result;
 
 	// Allocate memory
 	allocator->page_calloc(stringTable, dirLength + fileLength);
@@ -146,10 +151,10 @@ bool BBP::std::DirectoryInfo::populate(std::PATH &path, std::ResourceManager *al
 	std::Stack<std::string_element> stringTableStack(&stringTable);
 
 	// Iterate over path
-	system::Kernel::Inspect(path);
+	system::Kernel::Inspect(absPath);
 
 	// Get current string length
-	std::size_t pathString_length = std::strlen(absPathString);
+	std::size_t pathString_length = std::strlen(path.relName());
 
 	// Iterate over everything
 	while (system::Kernel::canStepInspector())
@@ -164,11 +169,11 @@ bool BBP::std::DirectoryInfo::populate(std::PATH &path, std::ResourceManager *al
 		std::size_t entryPath_length = std::strlen(entryPath);
 
 		// If entryPath is smaller than or equal to pathString, skip the entry.
-		if (entryPath_length <= pathString_length)
-			continue;
+		//if (entryPath_length <= pathString_length)
+		//	continue;
 
 		// Set offset (Fix directory issues later)
-		std::string entryPathAdjusted = std::string(entryPath_length - pathString_length, entryPath.data + pathString_length);
+		std::string entryPathAdjusted = std::string(entryPath.dataSize - pathString_length, entryPath.data + pathString_length);
 
 		// Get current stack index
 		currentStringTableLength = stringTableStack.atElement;
@@ -202,5 +207,5 @@ bool BBP::std::DirectoryInfo::populate(std::PATH &path, std::ResourceManager *al
 		system::Kernel::stepInspectionIterator();
 	}
 
-	return true;
+	return ENONE;
 }

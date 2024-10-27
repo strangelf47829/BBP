@@ -26,7 +26,14 @@ BBP::std::PATH::PATH(std::VOLUME *v, std::conststring str)
 
 	// Zero out buffer
 	for (std::index_t idx = 0; idx < rawPath.dataSize; idx++)
-		rawPath.static_data[idx] = 0;
+	{
+		rawPath[idx] = 0;
+		_path[idx] = 0;
+	}
+
+	// Now set path addresses to static buffers
+	rawPath.data = rawPath.static_data;
+	_path.data = _path.static_data;
 
 	// Copy string into rawPath
 	std::strcpy(&rawPath, str);
@@ -111,45 +118,35 @@ BBP::std::PATH &BBP::std::PATH::getFileAndPaths()
 {
 	// Get length of rawPath, and create copy
 	std::size_t rawPathLength = std::strlen(rawPath);
-	char nul = '\0';
 
-	// Copy over string
-	for (index_t index = 0; index < rawPathLength; index++)
+	// Get index of last written index
+	std::index_t lastWriteIndex = 0;
+
+	// Go over each character in the raw path, and keep track of where the last '/' was found.
+	for (index_t idx = 0; idx < rawPathLength; idx++)
 	{
-		char c = __UNSAFE__(read)(&rawPath, index);
+		// Get character
+		std::string_element c = rawPath[idx];
 
+		// If '/', update file name
 		if (c == '/')
-			this->fileNameStartIndex = index;
-		__UNSAFE__(write)(&_path, c, index);
+			fileNameStartIndex = idx;
+
+		// Then copy over value into _path
+		_path[idx] = c;
+		lastWriteIndex = idx;
 	}
 
-	// Used to store index for copying over name
+	// Keep an index to which character is currently being copied over
 	std::index_t copyIndex = fileNameStartIndex;
 
-	if (fileNameStartIndex)
-	{
-		// Then seperate file from directory.
-		for (; copyIndex < rawPathLength; copyIndex++)
-			__UNSAFE__(write)(&_path, __UNSAFE__(read)(&rawPath, copyIndex), copyIndex + 1);
+	// Then write one '0' into that index, since the backup data is stored in rawPath anyway
+	_path[copyIndex] = 0;
+	_path[lastWriteIndex + 1] = 0;
 
-		// Null terminate directory.
-		__UNSAFE__(write)(&_path, nul, fileNameStartIndex + 1);
-
-		// Null terminate file
-		__UNSAFE__(write)(&_path, nul, copyIndex + 1);
-	}
-	else
-	{
-		
-		for (; copyIndex < rawPathLength; copyIndex++)
-			__UNSAFE__(write)(&_path, __UNSAFE__(read)(&rawPath, copyIndex), copyIndex + 2);
-
-		// Null terminate directory
-		__UNSAFE__(write)(&_path, nul, 0);
-
-		// Null terminate file
-		__UNSAFE__(write)(&_path, nul, copyIndex + 1);
-	}
+	// Then copy over
+	//for (; rawPath[copyIndex] && copyIndex < std::max_path_length - 1 /* null terminator must also fit */; copyIndex++)
+	//	_path[copyIndex + 1] = rawPath[copyIndex];
 
 	return *this;
 }
@@ -300,10 +297,10 @@ void BBP::std::PATH::DeriveFromShellDirectory(std::PATH &path)
 	DeriveFromShellDirectory(path.relName());
 }
 
-void BBP::std::PATH::DeriveFromShellDirectory(std::c_string str)
+void BBP::std::PATH::DeriveFromShellDirectory(std::conststring str)
 {
 	// Create string
-	std::c_string pathTo = str;
+	std::conststring pathTo = str;
 
 	// If argument is '.', change to './'
 	if (std::strcmp(str, (std::c_string)"."))
@@ -335,8 +332,14 @@ void BBP::std::PATH::DeriveFromShellDirectory(std::c_string str)
 	if (changeTo.isDefinedFromRoot())
 		pathName += primVolumeLength - 1;
 
-	// now set path
-	*this = pathName;
+	// now make changeTo to pathName
+	currentPath = pathName;
+
+	// Then copy from currentPath
+	this->copyFrom(currentPath);
+
+	// Then get files and path
+	getFileAndPaths();	
 }
 
 void BBP::std::PATH::makeRelative(PATH &reference, PATH &dir)
@@ -355,7 +358,7 @@ void BBP::std::PATH::makeRelative(PATH &reference, PATH &dir)
 bool BBP::std::PATH::isDirectory()
 {
 	// Check if file actually has something.
-	return (rawPath[fileNameStartIndex + 2] == 0);
+	return (rawPath[fileNameStartIndex + 1] == 0);
 }
 
 bool BBP::std::PATH::isFile()
@@ -381,28 +384,31 @@ BBP::std::PATH &BBP::std::PATH::makeDirectory()
 	// If already directory, do nothing.
 	if (isDirectory())
 		return *this;
+	
+	// Otherwise, get file and paths
+	getFileAndPaths();
 
 	// Keep track of index, for nullptr.
 	std::index_t totalLength = fileNameStartIndex;
 
-	// Otherwise, move file back and append '/', then get whatever.
-	for (std::index_t idx = fileNameStartIndex + 2; _path[idx] && idx < max_path_length - 2; idx++)
-	{
-		// Move back data
-		_path.static_data[idx - 1] = _path[idx];
+	// Add '/' to null spacing in between path and file
+	_path[fileNameStartIndex] = '/';
 
-		// Increase totalLength
-		totalLength++;
-	}
+	// Then move to end
+	while ((++totalLength + 1) < std::max_path_length && _path[totalLength]);
 
-	_path.static_data[totalLength + 1] = '/';
-	_path.static_data[totalLength + 2] = 0;
+	// Now append '/', if possible
+	if ((totalLength + 1) >= std::max_path_length)
+		return *this;
 
-	rawPath.static_data[totalLength + 1] = '/';
-	rawPath.static_data[totalLength + 2] = 0;
-	
-	// I could probably get rid of this? just leave this here for now.
-	getFileAndPaths();
+	// Append '/' to _path
+	_path[totalLength + 0] = '/';
+	_path[totalLength + 1] = 0;
+
+	// Then to rawPath
+	rawPath[totalLength + 0] = '/';
+	rawPath[totalLength + 1] = 0;
 
 	return *this;
+
 }

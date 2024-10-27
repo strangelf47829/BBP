@@ -56,7 +56,7 @@ namespace BBP
 		bool strcmp(string *sta, conststring stb);
 
 		/* Compare conventional string to conventional string */
-		bool strcmp(c_string sta, c_string stb);
+		bool strcmp(conststring sta, conststring stb);
 
 		/* Compare string to string */
 		bool strcmp(string &sta, string &stb);

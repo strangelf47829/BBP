@@ -1,6 +1,6 @@
 #include "../include/drvcmd.h"
 #include "../include/Kernel.h"
-
+#include "../include/Shell.h"
 
 // Query if file is on disk or not
 bool BBP::system::Kernel::isFileOnDisk(std::PATH &path)
@@ -75,8 +75,27 @@ bool BBP::system::Kernel::canStepInspector()
 // Get name of path
 void BBP::system::Kernel::getInspectorPath(std::string &str)
 {
+	// Create pathstring
+	std::static_string<std::max_path_length> pathStr;
+
+	// Get path name of shell primary volume
+	std::c_string primaryVolumePath = system::Shell::getPrimaryVolume().volumePath.relName();
+
+	// Now get length of system path string
+	std::size_t primaryVolumePathLength = std::strlen(primaryVolumePath);
+
 	// Core implemented
-	return singleton.Core().firmware->getInspectorPath(str);
+	singleton.Core().firmware->getInspectorPath(pathStr);
+
+	// Now get length of 'pathStr'
+	std::size_t pathStringLength = std::strlen(pathStr);
+
+	// Now copy string
+	for (std::index_t idx = 0; idx < (pathStringLength - primaryVolumePathLength) + 1; idx++)
+		str[idx] = pathStr[idx + primaryVolumePathLength - 1];
+	
+	// Null terminate
+	str[pathStringLength - primaryVolumePathLength + 1] = 0;
 }
 
 // Get inspector file type

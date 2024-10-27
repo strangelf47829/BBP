@@ -146,7 +146,7 @@ bool BBP::std::strcmp(string *str1, conststring str2)
 	return true;
 }
 
-bool BBP::std::strcmp(c_string a, c_string b)
+bool BBP::std::strcmp(conststring a, conststring b)
 {
 	// If both are equal to eachother, return true
 	if (a == b)

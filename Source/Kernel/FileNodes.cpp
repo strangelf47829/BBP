@@ -61,6 +61,10 @@ BBP::std::noderef_t BBP::system::Kernel::deallocateINode(std::noderef_t node, bo
 	if (_unload)
 		singleton.Core().fileTable[node].fileData.page = nullptr;
 
+	// Actually deallocate it you dumb fuck
+	singleton.Core().fileTable[node].filePathHash = 0;
+	singleton.Core().fileTable[node].filePath = std::PATH();
+
 	// Return invalid INode
 	return singleton.Core().fileTable.dataSize;
 }

@@ -7,6 +7,7 @@
 #include "../include/ELSA.h"
 #include "../include/BuiltinShell.h"
 #include "../include/FileSysInfo.h"
+#include "../include/errnoStrings.h"
 
 // CD: change directory.
 // If none is specified, go to home.
@@ -15,84 +16,45 @@ BBP::std::conststring defaultPath = "/home/";
 
 BBP::std::errno_t BBP::system::cd_builtin(std::size_t argc, std::c_string *argv)
 {
-	// Get string to cd into.
-	std::string pathTo = std::String(defaultPath);
+	// Default directory
+	std::conststring targetDir = "/home/";
 
-	// If argument exists
-	if (argc >= 2)
-	{
-		// If argument is '.', set path to './'
-		if (std::strcmp(argv[1], (std::c_string)"."))
-			pathTo = std::String("./");
-
-		// If argument is '.,', set path to '../'
-		else if (std::strcmp(argv[1], (std::c_string)".."))
-			pathTo = std::String("../");
-
-		// Otherwise, set path to argv[1]
-		else
-			pathTo = std::String(argv[1]);
-	}
-
-
-	// Get home directory
-	std::PATH currentPath;
-	std::PATH changeTo(pathTo);
-
-	// Copy data from old path into current path
-	currentPath.copyFrom(system::Shell::getWorkingDirectory());
-
-	// Combine them
-	currentPath = changeTo.makeAbsolutePath(&currentPath);
-
-	// Now get path
-	std::c_string pathName = currentPath.relName();
-
-	// Get length of primary volume relative name
-	std::size_t primVolumeLength = std::strlen(system::Shell::getPrimaryVolume().volumePath.relName());
-
-	// Check if primary volume has been set correctly
-	if (primVolumeLength == 0)
-	{
-		std::printf("cd: Shell primary volume not set.");
-		return EBADFD;
-	}
-
-	// Check if changeto is now defined as root or not, and if the length of the current volume is not 0. If it is, move forward.
-	if (changeTo.isDefinedFromRoot())
-		pathName += primVolumeLength - 1;
+	// If argv has a second parameter, set 'targetdir' to that parameter
+	if (argc > 1)
+		targetDir = argv[1];	
 
 	// Create new path
-	std::PATH newPath(pathName);
+	std::PATH newPath;
 
-	// Only scarcely populate, since 'cd' is not interested in 
+	// Then set that path relative to working directory
+	newPath.DeriveFromShellDirectory(targetDir);
+
+	// Only scarcely populate, since 'cd' is not interested in exact file information, etc... 
 	std::DirectoryInfo info;
-	bool success = info.scarce_populate(newPath);
+	std::errno_t success = info.scarce_populate(newPath);
 
-	// Copy over stuff from that path, if success
-	if (success)
-		system::Shell::getWorkingDirectory().copyFrom(newPath.makeDirectory());
-	else
+	// If there was an error, print error and abort
+	if (success != ENONE)
 	{
-		// Handle thing is not directory.
-		if (info.is_directory() == false)
-		{
-			std::printf("cd: %s: Not a directory\n", newPath.relName());
-			return 1;
-		}
+		// Allocate static string for error message
+		std::static_string<32> errnoMsg;
 
-		// Handle thing does not exist.
-		if (info.path_exists() == false)
-		{
-			std::printf("cd: %s: No such file or directory\n", newPath.relName());
-			return 2;
-		}
+		// Then get associated string
+		std::strerror(success, errnoMsg);
 
-		// General error
-		std::printf("cd: %s: Filesystem error\n", changeTo.relName());
-		return 3;
+		// Then print error
+		std::printf("cd: %s: %s", targetDir, errnoMsg.data);
+
+		// Then return errno
+		return success;
 	}
 
+	// Create directory
+	std::PATH dirPath = newPath.makeDirectory();
+
+	// Success, copy over data
+	system::Shell::getWorkingDirectory().copyFrom(newPath.makeDirectory());
+
 	// Success
-	return 0;
+	return ENONE;
 }

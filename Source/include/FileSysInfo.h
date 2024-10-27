@@ -24,7 +24,7 @@ namespace BBP
 		};
 
 		// Populate volume info
-		bool populateVolumeInfo(VolumeInfo &, PATH &);
+		std::errno_t populateVolumeInfo(VolumeInfo &, PATH &);
 
 		// Class used to get directory information
 		class DirectoryInfo
@@ -79,7 +79,7 @@ namespace BBP
 		public:
 
 			// Scarcely populate the directory information (Only count files, directories, and their sizes.)
-			bool scarce_populate(PATH &);
+			std::errno_t scarce_populate(PATH &);
 
 			// Get entity count
 			std::size_t entity_count();
@@ -97,7 +97,7 @@ namespace BBP
 			bool is_directory();
 
 			// Populate the directory information.
-			bool populate(PATH &, std::ResourceManager *allocator);
+			std::errno_t populate(PATH &, std::ResourceManager *allocator);
 
 			// Release directory information
 			void release();
