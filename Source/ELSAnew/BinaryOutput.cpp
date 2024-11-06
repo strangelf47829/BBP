@@ -279,9 +279,24 @@ void BBP::elsa::BinaryApplication::defineSegments()
 	// Then get section data
 	section.data = std::PAGE<std::byte>(elf.header.e_shentsize, &elf.sectionTable[elf.header.e_shentsize * elf.find(".strtab")]);
 	section.readData(elf.header.ident.littleEndian);
-
+	
+	// This function expects the interpreter segment to be the first segment of the binary file
+	// These lines set the actual interpreter string
 	segment.type = segment.PT_INTERP;
+
+	// Set segment data to the section offset (interpreter string is expected to be the first string)
 	segment.offset = section.offset;
+	segment.paddr = section.offset;
+	segment.vaddr = section.offset;
+
+	// Then set size to string size
+	segment.filesz = 5;
+	segment.memsz = 5;
+
+	// Then set align and flag
+	segment.align = 1;
+	segment.flags = 4;
+
 
 	segment.writeData(elf.header.ident.littleEndian);
 }

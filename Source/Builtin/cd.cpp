@@ -21,7 +21,7 @@ BBP::std::errno_t BBP::system::cd_builtin(std::size_t argc, std::c_string *argv)
 
 	// If argv has a second parameter, set 'targetdir' to that parameter
 	if (argc > 1)
-		targetDir = argv[1];	
+		targetDir = argv[1];
 
 	// Create new path
 	std::PATH newPath;
@@ -43,7 +43,7 @@ BBP::std::errno_t BBP::system::cd_builtin(std::size_t argc, std::c_string *argv)
 		std::strerror(success, errnoMsg);
 
 		// Then print error
-		std::printf("cd: %s: %s", targetDir, errnoMsg.data);
+		std::printf("cd: %s: %s\n", targetDir, errnoMsg.data);
 
 		// Then return errno
 		return success;
