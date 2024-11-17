@@ -1,10 +1,3 @@
-In file included from ../include/ELSA/../Dictionary.h:5,
-                 from ../include/ELSA/Symbol.h:6,
-                 from Symbols.cpp:1:
-../include/ELSA/../Concepts.h:16:25: warning: testing if a concept-id is a valid expression; add ‘requires’ to check satisfaction [-Wmissing-requires]
-   16 |                         Hashable_t<T>;
-      |                         ^
-      |                         requires 
 Symbols.cpp: In member function ‘bool BBP::elsa::symbol_t::operator==(BBP::elsa::symbol_t&)’:
 Symbols.cpp:89:49: warning: unused parameter ‘b’ [-Wunused-parameter]
    89 | bool BBP::elsa::symbol_t::operator ==(symbol_t &b)

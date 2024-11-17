@@ -17,18 +17,12 @@ In file included from ../include/ELSA/../Stack.h:88,
 ../include/ELSA/../Stack.h:11:23: note: forward declaration of ‘class BBP::std::ResourceManager’
    11 |                 class ResourceManager;
       |                       ^~~~~~~~~~~~~~~
-In file included from ../include/ELSA/../Dictionary.h:5,
-                 from ../include/ELSA/SectionDB.h:5:
-../include/ELSA/../Concepts.h: At global scope:
-../include/ELSA/../Concepts.h:16:25: warning: testing if a concept-id is a valid expression; add ‘requires’ to check satisfaction [-Wmissing-requires]
-   16 |                         Hashable_t<T>;
-      |                         ^
-      |                         requires 
 SectionDB.cpp: In member function ‘BBP::std::byte BBP::elsa::section_db::get(BBP::std::index_t)’:
 SectionDB.cpp:43:56: warning: unused parameter ‘idx’ [-Wunused-parameter]
    43 | BBP::std::byte BBP::elsa::section_db::get(std::index_t idx)
       |                                           ~~~~~~~~~~~~~^~~
-In file included from ../include/ELSA/../Dictionary.h:123:
+In file included from ../include/ELSA/../Dictionary.h:123,
+                 from ../include/ELSA/SectionDB.h:5:
 ../include/ELSA/../Dictionary.hxx: In instantiation of ‘Value_t& BBP::std::HashedDictionary<Key_t, Value_t>::add(Key_t, Value_t) [with Key_t = BBP::std::PAGE<char>; Value_t = unsigned int]’:
 SectionDB.cpp:29:14:   required from here
 ../include/ELSA/../Dictionary.hxx:28:16: warning: unused variable ‘valueHash’ [-Wunused-variable]

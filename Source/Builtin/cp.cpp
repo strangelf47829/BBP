@@ -53,6 +53,9 @@ BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
 
 	// Then set to
 	tu.symbols.UploadToBinary(tu.application.isLittleEndian());
+	
+	// Set a relocation
+	tu.emitRelocation();
 
 	// Then save file
 	tu.application.emitFile("/home/new3.out");

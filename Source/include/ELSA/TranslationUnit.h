@@ -61,6 +61,10 @@ namespace BBP
 			// Include a file
 			void lexFile(std::PATH path);
 
+			// Set a relocation
+			void emitRelocation();
+
+
 		};
 
 	}

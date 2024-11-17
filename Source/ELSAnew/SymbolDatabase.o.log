@@ -1,10 +1,4 @@
-In file included from ../include/ELSA/../Dictionary.h:5,
-                 from ../include/ELSA/Symbol.h:6,
-                 from SymbolDatabase.cpp:1:
-../include/ELSA/../Concepts.h:16:25: warning: testing if a concept-id is a valid expression; add ‘requires’ to check satisfaction [-Wmissing-requires]
-   16 |                         Hashable_t<T>;
-      |                         ^
-      |                         requires 
+In file included from SymbolDatabase.cpp:1:
 ../include/ELSA/Symbol.h: In constructor ‘BBP::elsa::symbol_db::symbol_db()’:
 ../include/ELSA/Symbol.h:204:37: warning: ‘BBP::elsa::symbol_db::currentStream’ will be initialized after [-Wreorder]
   204 |                         std::size_t currentStream;
@@ -24,7 +18,8 @@ SymbolDatabase.cpp:9:1: warning:   when initialized here [-Wreorder]
 SymbolDatabase.cpp:9:1: warning:   when initialized here [-Wreorder]
     9 | BBP::elsa::symbol_db::symbol_db()
       | ^~~
-In file included from ../include/ELSA/../Dictionary.h:123:
+In file included from ../include/ELSA/../Dictionary.h:123,
+                 from ../include/ELSA/Symbol.h:6:
 ../include/ELSA/../Dictionary.hxx: In instantiation of ‘Value_t& BBP::std::HashedDictionary<Key_t, Value_t>::add(Key_t, Value_t) [with Key_t = BBP::std::PAGE<char>; Value_t = BBP::elsa::symbol_db_entry]’:
 SymbolDatabase.cpp:85:51:   required from here
 ../include/ELSA/../Dictionary.hxx:28:16: warning: unused variable ‘valueHash’ [-Wunused-variable]

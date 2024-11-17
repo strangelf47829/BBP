@@ -60,12 +60,14 @@ namespace BBP
 			// Set data section for symbol db
 			void setDataSection(symbol_db &, std::string &);
 
+			// Get relocation page
+			void getRelocationPage(std::PAGE<std::byte> &);
+
 			// Emit file
 			void emitFile(std::conststring);
 
 			// Reset
 			void Reset();
-
 
 
 		};

@@ -276,8 +276,11 @@ void BBP::elsa::BinaryApplication::defineSegments()
 	segment.data = std::PAGE<std::byte>(elf.header.e_phentsize, &elf.segmentTable[0]);
 	segment.nullify();
 
+	// Get index of string tab (to find interpreter string)
+	std::index_t strtabIndex = elf.find(".strtab");
+
 	// Then get section data
-	section.data = std::PAGE<std::byte>(elf.header.e_shentsize, &elf.sectionTable[elf.header.e_shentsize * elf.find(".strtab")]);
+	section.data = std::PAGE<std::byte>(elf.header.e_shentsize, &elf.sectionTable[elf.header.e_shentsize * strtabIndex]);
 	section.readData(elf.header.ident.littleEndian);
 	
 	// This function expects the interpreter segment to be the first segment of the binary file
@@ -289,15 +292,38 @@ void BBP::elsa::BinaryApplication::defineSegments()
 	segment.paddr = section.offset;
 	segment.vaddr = section.offset;
 
-	// Then set size to string size
-	segment.filesz = 5;
-	segment.memsz = 5;
+	// Then get length of interpreter (first string in strtab)
+	// Find section
+	BBP::elsa::Section *strtabSection = elf.find(strtabIndex);
 
-	// Then set align and flag
-	segment.align = 1;
-	segment.flags = 4;
+	// Check if nullptr
+	if (strtabSection == nullptr)
+	{
+		// If nullptr, set everything to 0
+		segment.filesz = 0;
+		segment.memsz =  0;
 
+		segment.align = 0;
+		segment.flags = 0;
+	}
 
+	// Otherwise, get string size
+	else
+	{
+		// Get string size
+		std::size_t interpLength = 0;
+		while((*strtabSection)[interpLength++]);
+
+		// Then set sizes
+		segment.filesz = interpLength;
+		segment.memsz = interpLength;
+
+		// Align to 1 byte, then set flags to Readable and allocatable
+		segment.align = 1;
+		segment.flags = 4;
+	}
+
+	// Now write data into segment header
 	segment.writeData(elf.header.ident.littleEndian);
 }
 

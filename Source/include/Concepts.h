@@ -13,7 +13,7 @@ namespace BBP
 		concept Identifiable = requires (T & a, T & b)
 		{
 			// Must be hashable.
-			Hashable_t<T>;
+			requires Hashable_t<T>;
 
 			// Must be comparable
 			(bool)(a == b);
