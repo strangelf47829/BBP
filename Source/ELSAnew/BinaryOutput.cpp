@@ -28,6 +28,25 @@ BBP::elsa::BinaryApplication::BinaryApplication()
 	// Define sections
 	defineSections();
 
+	// Define null symbol
+	emitEmptySymbol();
+}
+
+void BBP::elsa::BinaryApplication::emitEmptySymbol()
+{
+	// Create symbol
+	ELF::Symbol symbol;
+
+	// Allocate bytes for symbol
+	symtab.Allocate(symbol.data, 16);
+
+	// Set to 0
+	symbol.Nullify();
+
+	// Then write to data
+	symbol.writeData(elf.header.ident.littleEndian);
+}
+
 	// Create page for symdata
 	/*std::PAGE<std::byte> symdata;
 
@@ -39,7 +58,7 @@ BBP::elsa::BinaryApplication::BinaryApplication()
 
 	// Set 0 to 0
 	symdata[0] = 0;
-	
+
 	// And terminator
 	symdata[symNameLength + 1] = 0;
 
@@ -66,7 +85,7 @@ BBP::elsa::BinaryApplication::BinaryApplication()
 	// Create new relocation
 	ELF::Relocation reloc;
 
-	// Then allocate 8 bytes from rel.text 
+	// Then allocate 8 bytes from rel.text
 	reltext.Allocate(reloc.data, 8);
 
 	// Now write
@@ -77,7 +96,7 @@ BBP::elsa::BinaryApplication::BinaryApplication()
 
 	reloc.writeData(elf.header.ident.littleEndian);
 
-	// Then allocate 8 bytes from rel.got 
+	// Then allocate 8 bytes from rel.got
 	relgot.Allocate(reloc.data, 8);
 
 	// Now write
@@ -87,8 +106,6 @@ BBP::elsa::BinaryApplication::BinaryApplication()
 	reloc.value = 1;
 
 	reloc.writeData(elf.header.ident.littleEndian);*/
-
-}
 
 // Reset everything upon destruction
 BBP::elsa::BinaryApplication::~BinaryApplication()
@@ -264,7 +281,7 @@ void BBP::elsa::BinaryApplication::defineSections()
 }
 
 // Create some segments
-void BBP::elsa::BinaryApplication::defineSegments()
+void BBP::elsa::BinaryApplication::defineSegments(std::offset_t interpreterOffset)
 {
 	// Create a segment
 	BBP::ELF::Segment segment;
@@ -287,10 +304,10 @@ void BBP::elsa::BinaryApplication::defineSegments()
 	// These lines set the actual interpreter string
 	segment.type = segment.PT_INTERP;
 
-	// Set segment data to the section offset (interpreter string is expected to be the first string)
-	segment.offset = section.offset;
-	segment.paddr = section.offset;
-	segment.vaddr = section.offset;
+	// Set segment data to the section offset (interpreter string is expected to be the first string, right after the first '0')
+	segment.offset = section.offset + interpreterOffset;
+	segment.paddr = section.offset + interpreterOffset;
+	segment.vaddr = section.offset + interpreterOffset;
 
 	// Then get length of interpreter (first string in strtab)
 	// Find section
@@ -312,7 +329,7 @@ void BBP::elsa::BinaryApplication::defineSegments()
 	{
 		// Get string size
 		std::size_t interpLength = 0;
-		while((*strtabSection)[interpLength++]);
+		while((*strtabSection)[interpreterOffset + interpLength++]);
 
 		// Then set sizes
 		segment.filesz = interpLength;
@@ -381,7 +398,7 @@ void BBP::elsa::BinaryApplication::emitFile(std::conststring path)
 	std::size_t fileSize = elf.packSections();
 
 	// Then define segments
-	defineSegments();
+	defineSegments(1);
 
 	// Then save, 
 	elf.saveFile(path, fileSize);

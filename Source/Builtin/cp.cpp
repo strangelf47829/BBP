@@ -40,11 +40,12 @@ BBP::std::errno_t BBP::system::cp_builtin(std::size_t argc, std::c_string *argv)
 	// Set up symbols
 	tu.application.setup(tu.symbols);
 
-	tu.emitInterpreter("/lib64/ld-linux-x86-64.so.2");
+	tu.emitInterpreter(1, "denny");
 
 	// Create two symbols
 	tu.symbols.createSymbol("first", "Hi dino!");
 	tu.symbols.createSymbol("second", "Funny you see this");
+	tu.symbols.createSymbol("danny", "my name is danny");
 
 	std::string strr = ".text";
 	tu.application.setDataSection(tu.symbols, strr);

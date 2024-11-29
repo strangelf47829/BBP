@@ -31,6 +31,9 @@ namespace BBP
 			Section symtab;
 			Section strtab;
 
+			// Emit empty symbol (should only be used in constructor)
+			void emitEmptySymbol();
+
 		public:
 
 			// Constructor
@@ -43,7 +46,7 @@ namespace BBP
 			void defineSections();
 			
 			// Define segments
-			void defineSegments();
+			void defineSegments(std::offset_t);
 
 			// Get a byte from this file
 			std::byte &operator[] (std::index_t);
