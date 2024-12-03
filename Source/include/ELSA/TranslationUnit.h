@@ -47,7 +47,7 @@ namespace BBP
 			void Reset();
 
 			// Set interpreter
-			void emitInterpreter(std::string);
+			void emitInterpreter(std::offset_t, std::string);
 
 			// create new keyword
 			void createKeyword(std::string, std::string);

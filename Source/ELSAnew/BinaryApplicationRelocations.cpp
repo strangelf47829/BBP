@@ -14,7 +14,7 @@ void BBP::elsa::BinaryApplication::getRelocationPage(std::PAGE<std::byte> & page
 	// Read section from file
 	elfSection.readData(elf.header.ident.littleEndian);
 
-	// Get size for relocation 
+	// Get size for relocation
 	std::size_t allocationEntitySize = elfSection.entsize;
 
 	// Then allocate that amount from reltext
