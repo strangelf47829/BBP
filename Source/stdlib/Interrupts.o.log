@@ -1,4 +1,4 @@
-Interrupts.cpp: In function ‘BBP::std::hash_t BBP::std::calculateIRQHash(IRQ&)’:
+Interrupts.cpp: In function 'BBP::std::hash_t BBP::std::calculateIRQHash(IRQ&)':
 Interrupts.cpp:26:17: warning: statement has no effect [-Wunused-value]
    26 |         irqHash >> irq.argumentCount;
       |         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~

@@ -1,18 +1,18 @@
 In file included from SymbolDatabase.cpp:1:
-../include/ELSA/Symbol.h: In constructor ‘BBP::elsa::symbol_db::symbol_db()’:
-../include/ELSA/Symbol.h:204:37: warning: ‘BBP::elsa::symbol_db::currentStream’ will be initialized after [-Wreorder]
+../include/ELSA/Symbol.h: In constructor 'BBP::elsa::symbol_db::symbol_db()':
+../include/ELSA/Symbol.h:204:37: warning: 'BBP::elsa::symbol_db::currentStream' will be initialized after [-Wreorder]
   204 |                         std::size_t currentStream;
       |                                     ^~~~~~~~~~~~~
-../include/ELSA/Symbol.h:193:42: warning:   ‘BBP::elsa::symbol_db_entry* BBP::elsa::symbol_db::activeEntry’ [-Wreorder]
+../include/ELSA/Symbol.h:193:42: warning:   'BBP::elsa::symbol_db_entry* BBP::elsa::symbol_db::activeEntry' [-Wreorder]
   193 |                         symbol_db_entry *activeEntry;
       |                                          ^~~~~~~~~~~
 SymbolDatabase.cpp:9:1: warning:   when initialized here [-Wreorder]
     9 | BBP::elsa::symbol_db::symbol_db()
       | ^~~
-../include/ELSA/Symbol.h:193:42: warning: ‘BBP::elsa::symbol_db::activeEntry’ will be initialized after [-Wreorder]
+../include/ELSA/Symbol.h:193:42: warning: 'BBP::elsa::symbol_db::activeEntry' will be initialized after [-Wreorder]
   193 |                         symbol_db_entry *activeEntry;
       |                                          ^~~~~~~~~~~
-../include/ELSA/Symbol.h:189:35: warning:   ‘BBP::elsa::symbol_t* BBP::elsa::symbol_db::activeSymbol’ [-Wreorder]
+../include/ELSA/Symbol.h:189:35: warning:   'BBP::elsa::symbol_t* BBP::elsa::symbol_db::activeSymbol' [-Wreorder]
   189 |                         symbol_t *activeSymbol;
       |                                   ^~~~~~~~~~~~
 SymbolDatabase.cpp:9:1: warning:   when initialized here [-Wreorder]
@@ -20,13 +20,13 @@ SymbolDatabase.cpp:9:1: warning:   when initialized here [-Wreorder]
       | ^~~
 In file included from ../include/ELSA/../Dictionary.h:123,
                  from ../include/ELSA/Symbol.h:6:
-../include/ELSA/../Dictionary.hxx: In instantiation of ‘Value_t& BBP::std::HashedDictionary<Key_t, Value_t>::add(Key_t, Value_t) [with Key_t = BBP::std::PAGE<char>; Value_t = BBP::elsa::symbol_db_entry]’:
+../include/ELSA/../Dictionary.hxx: In instantiation of 'Value_t& BBP::std::HashedDictionary<Key_t, Value_t>::add(Key_t, Value_t) [with Key_t = BBP::std::PAGE<char>; Value_t = BBP::elsa::symbol_db_entry]':
 SymbolDatabase.cpp:85:51:   required from here
-../include/ELSA/../Dictionary.hxx:28:16: warning: unused variable ‘valueHash’ [-Wunused-variable]
+../include/ELSA/../Dictionary.hxx:28:16: warning: unused variable 'valueHash' [-Wunused-variable]
    28 |         hash_t valueHash = (hash_t)value;
       |                ^~~~~~~~~
-../include/ELSA/../Dictionary.hxx: In instantiation of ‘void BBP::std::HashedDictionary<Key_t, Value_t>::remove(Key_t&&) [with Key_t = BBP::std::PAGE<char>; Value_t = BBP::elsa::symbol_db_entry]’:
+../include/ELSA/../Dictionary.hxx: In instantiation of 'void BBP::std::HashedDictionary<Key_t, Value_t>::remove(Key_t&&) [with Key_t = BBP::std::PAGE<char>; Value_t = BBP::elsa::symbol_db_entry]':
 ../include/ELSA/../Dictionary.hxx:149:6:   required from here
-../include/ELSA/../Dictionary.hxx:149:65: warning: unused parameter ‘key’ [-Wunused-parameter]
+../include/ELSA/../Dictionary.hxx:149:65: warning: unused parameter 'key' [-Wunused-parameter]
   149 | void BBP::std::HashedDictionary<Key_t, Value_t>::remove(Key_t &&key)
       |                                                         ~~~~~~~~^~~

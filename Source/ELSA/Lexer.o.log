@@ -1,10 +1,10 @@
 Lexer.cpp:47:9: warning: multi-line comment [-Wcomment]
    47 |         // Then consume over \
       |         ^
-Lexer.cpp: In member function ‘bool BBP::elsa::Lexer::consume(BBP::elsa::Debug_db&, BBP::elsa::keyword_db&)’:
-Lexer.cpp:38:42: warning: unused parameter ‘debug’ [-Wunused-parameter]
+Lexer.cpp: In member function 'bool BBP::elsa::Lexer::consume(BBP::elsa::Debug_db&, BBP::elsa::keyword_db&)':
+Lexer.cpp:38:42: warning: unused parameter 'debug' [-Wunused-parameter]
    38 | bool BBP::elsa::Lexer::consume(Debug_db &debug, keyword_db &keyword)
       |                                ~~~~~~~~~~^~~~~
-Lexer.cpp:38:61: warning: unused parameter ‘keyword’ [-Wunused-parameter]
+Lexer.cpp:38:61: warning: unused parameter 'keyword' [-Wunused-parameter]
    38 | bool BBP::elsa::Lexer::consume(Debug_db &debug, keyword_db &keyword)
       |                                                 ~~~~~~~~~~~~^~~~~~~

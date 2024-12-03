@@ -26,7 +26,7 @@ namespace BBP
 			void convertINTtoUCHAR(chan_t &r, chan_t &g, chan_t &b, RGBA_t rgb);
 			void convertINTtoUCHAR(chan_t &r, chan_t &g, chan_t &b, chan_t &a, RGBA_t rgba);
 		}
-		
+
 		// Structure to hold colour information
 		struct colour
 		{

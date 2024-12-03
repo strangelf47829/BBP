@@ -1,9 +1,9 @@
 In file included from ELFRelocation.cpp:1:
-../include/ELSA/ELFRelocation.h: In constructor ‘BBP::ELF::Relocation::Relocation()’:
-../include/ELSA/ELFRelocation.h:21:35: warning: ‘BBP::ELF::Relocation::type’ will be initialized after [-Wreorder]
+../include/ELSA/ELFRelocation.h: In constructor 'BBP::ELF::Relocation::Relocation()':
+../include/ELSA/ELFRelocation.h:21:35: warning: 'BBP::ELF::Relocation::type' will be initialized after [-Wreorder]
    21 |                         std::byte type;
       |                                   ^~~~
-../include/ELSA/ELFRelocation.h:20:35: warning:   ‘BBP::std::word BBP::ELF::Relocation::value’ [-Wreorder]
+../include/ELSA/ELFRelocation.h:20:35: warning:   'BBP::std::word BBP::ELF::Relocation::value' [-Wreorder]
    20 |                         std::word value;
       |                                   ^~~~~
 ELFRelocation.cpp:5:1: warning:   when initialized here [-Wreorder]

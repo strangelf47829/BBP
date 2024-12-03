@@ -1,4 +1,4 @@
-Scheduler.cpp: In static member function ‘static bool BBP::system::Kernel::kernelUpdateCycle(BBP::std::async_stack_t<>&, BBP::std::async_stack_t<BBP::std::TaskFlowInterface*>&)’:
-Scheduler.cpp:3:67: warning: unused parameter ‘stack’ [-Wunused-parameter]
+Scheduler.cpp: In static member function 'static bool BBP::system::Kernel::kernelUpdateCycle(BBP::std::async_stack_t<>&, BBP::std::async_stack_t<BBP::std::TaskFlowInterface*>&)':
+Scheduler.cpp:3:67: warning: unused parameter 'stack' [-Wunused-parameter]
     3 | bool BBP::system::Kernel::kernelUpdateCycle(std::async_stack_t<> &stack, std::async_stack_t<std::TaskFlowInterface *> &arg)
       |                                             ~~~~~~~~~~~~~~~~~~~~~~^~~~~

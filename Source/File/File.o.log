@@ -2,11 +2,11 @@ In file included from ../include/FirmwareInterface.h:5,
                  from ../include/KernelCore.h:11,
                  from ../include/Kernel.h:4,
                  from File.cpp:1:
-../include/FileSys.h: In constructor ‘BBP::std::FILE::FILE()’:
-../include/FileSys.h:182:35: warning: ‘BBP::std::FILE::node’ will be initialized after [-Wreorder]
+../include/FileSys.h: In constructor 'BBP::std::FILE::FILE()':
+../include/FileSys.h:182:35: warning: 'BBP::std::FILE::node' will be initialized after [-Wreorder]
   182 |                         noderef_t node;
       |                                   ^~~~
-../include/FileSys.h:181:48: warning:   ‘BBP::std::Stack<char>* BBP::std::FILE::data’ [-Wreorder]
+../include/FileSys.h:181:48: warning:   'BBP::std::Stack<char>* BBP::std::FILE::data' [-Wreorder]
   181 |                         Stack<string_element> *data;
       |                                                ^~~~
 File.cpp:4:1: warning:   when initialized here [-Wreorder]

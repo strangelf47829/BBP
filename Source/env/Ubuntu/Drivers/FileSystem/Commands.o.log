@@ -1,8 +1,8 @@
 Drivers/FileSystem/Commands.cpp: In function ‘bool Host::Drivers::FileSystem::openFile(BBP::std::size_t, BBP::std::word*)’:
-Drivers/FileSystem/Commands.cpp:75:16: warning: enumeration value ‘READPATH’ not handled in switch [-Wswitch]
-   75 |         switch (mode)
-      |                ^
-Drivers/FileSystem/Commands.cpp:75:16: warning: enumeration value ‘INSPECT’ not handled in switch [-Wswitch]
+Drivers/FileSystem/Commands.cpp:75:9: warning: enumeration value ‘READPATH’ not handled in switch [-Wswitch]
+   75 |  switch (mode)
+      |         ^
+Drivers/FileSystem/Commands.cpp:75:9: warning: enumeration value ‘INSPECT’ not handled in switch [-Wswitch]
 Drivers/FileSystem/Commands.cpp:72:59: warning: unused parameter ‘argc’ [-Wunused-parameter]
    72 | bool Host::Drivers::FileSystem::openFile(BBP::std::size_t argc, BBP::std::word *argv)
       |                                          ~~~~~~~~~~~~~~~~~^~~~
@@ -10,10 +10,10 @@ Drivers/FileSystem/Commands.cpp:72:81: warning: unused parameter ‘argv’ [-Wu
    72 | bool Host::Drivers::FileSystem::openFile(BBP::std::size_t argc, BBP::std::word *argv)
       |                                                                 ~~~~~~~~~~~~~~~~^~~~
 Drivers/FileSystem/Commands.cpp: In function ‘bool Host::Drivers::FileSystem::closeFile(BBP::std::size_t, BBP::std::word*)’:
-Drivers/FileSystem/Commands.cpp:92:16: warning: enumeration value ‘READPATH’ not handled in switch [-Wswitch]
-   92 |         switch (mode)
-      |                ^
-Drivers/FileSystem/Commands.cpp:92:16: warning: enumeration value ‘INSPECT’ not handled in switch [-Wswitch]
+Drivers/FileSystem/Commands.cpp:92:9: warning: enumeration value ‘READPATH’ not handled in switch [-Wswitch]
+   92 |  switch (mode)
+      |         ^
+Drivers/FileSystem/Commands.cpp:92:9: warning: enumeration value ‘INSPECT’ not handled in switch [-Wswitch]
 Drivers/FileSystem/Commands.cpp:89:60: warning: unused parameter ‘argc’ [-Wunused-parameter]
    89 | bool Host::Drivers::FileSystem::closeFile(BBP::std::size_t argc, BBP::std::word *argv)
       |                                           ~~~~~~~~~~~~~~~~~^~~~

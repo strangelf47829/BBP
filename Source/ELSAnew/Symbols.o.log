@@ -1,8 +1,8 @@
-Symbols.cpp: In member function ‘bool BBP::elsa::symbol_t::operator==(BBP::elsa::symbol_t&)’:
-Symbols.cpp:89:49: warning: unused parameter ‘b’ [-Wunused-parameter]
+Symbols.cpp: In member function 'bool BBP::elsa::symbol_t::operator==(BBP::elsa::symbol_t&)':
+Symbols.cpp:89:49: warning: unused parameter 'b' [-Wunused-parameter]
    89 | bool BBP::elsa::symbol_t::operator ==(symbol_t &b)
       |                                       ~~~~~~~~~~^
-Symbols.cpp: In member function ‘bool BBP::elsa::symbol_t::operator!=(BBP::elsa::symbol_t&)’:
-Symbols.cpp:94:49: warning: unused parameter ‘b’ [-Wunused-parameter]
+Symbols.cpp: In member function 'bool BBP::elsa::symbol_t::operator!=(BBP::elsa::symbol_t&)':
+Symbols.cpp:94:49: warning: unused parameter 'b' [-Wunused-parameter]
    94 | bool BBP::elsa::symbol_t::operator !=(symbol_t &b)
       |                                       ~~~~~~~~~~^

@@ -1,7 +1,7 @@
-status.cpp: In function ‘BBP::std::errno_t BBP::system::status_builtin(BBP::std::size_t, BBP::std::string_element**)’:
-status.cpp:10:59: warning: unused parameter ‘argc’ [-Wunused-parameter]
+status.cpp: In function 'BBP::std::errno_t BBP::system::status_builtin(BBP::std::size_t, BBP::std::string_element**)':
+status.cpp:10:59: warning: unused parameter 'argc' [-Wunused-parameter]
    10 | BBP::std::errno_t BBP::system::status_builtin(std::size_t argc, std::c_string *argv)
       |                                               ~~~~~~~~~~~~^~~~
-status.cpp:10:80: warning: unused parameter ‘argv’ [-Wunused-parameter]
+status.cpp:10:80: warning: unused parameter 'argv' [-Wunused-parameter]
    10 | BBP::std::errno_t BBP::system::status_builtin(std::size_t argc, std::c_string *argv)
       |                                                                 ~~~~~~~~~~~~~~~^~~~

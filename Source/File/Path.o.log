@@ -2,39 +2,39 @@ In file included from ../include/FirmwareInterface.h:5,
                  from ../include/KernelCore.h:11,
                  from ../include/Kernel.h:4,
                  from Path.cpp:2:
-../include/FileSys.h: In constructor ‘BBP::std::PATH::PATH()’:
-../include/FileSys.h:118:33: warning: ‘BBP::std::PATH::Volume’ will be initialized after [-Wreorder]
+../include/FileSys.h: In constructor 'BBP::std::PATH::PATH()':
+../include/FileSys.h:118:33: warning: 'BBP::std::PATH::Volume' will be initialized after [-Wreorder]
   118 |                         VOLUME *Volume;
       |                                 ^~~~~~
-../include/FileSys.h:115:47: warning:   ‘BBP::std::ResourceManager* BBP::std::PATH::allocator’ [-Wreorder]
+../include/FileSys.h:115:47: warning:   'BBP::std::ResourceManager* BBP::std::PATH::allocator' [-Wreorder]
   115 |                         std::ResourceManager *allocator;
       |                                               ^~~~~~~~~
 Path.cpp:5:1: warning:   when initialized here [-Wreorder]
     5 | BBP::std::PATH::PATH()
       | ^~~
-../include/FileSys.h:115:47: warning: ‘BBP::std::PATH::allocator’ will be initialized after [-Wreorder]
+../include/FileSys.h:115:47: warning: 'BBP::std::PATH::allocator' will be initialized after [-Wreorder]
   115 |                         std::ResourceManager *allocator;
       |                                               ^~~~~~~~~
-../include/FileSys.h:112:38: warning:   ‘BBP::std::index_t BBP::std::PATH::fileNameStartIndex’ [-Wreorder]
+../include/FileSys.h:112:38: warning:   'BBP::std::index_t BBP::std::PATH::fileNameStartIndex' [-Wreorder]
   112 |                         std::index_t fileNameStartIndex;
       |                                      ^~~~~~~~~~~~~~~~~~
 Path.cpp:5:1: warning:   when initialized here [-Wreorder]
     5 | BBP::std::PATH::PATH()
       | ^~~
-Path.cpp: In constructor ‘BBP::std::PATH::PATH(BBP::std::VOLUME*, BBP::std::conststring)’:
-Path.cpp:25:21: warning: unused variable ‘pathlength’ [-Wunused-variable]
+Path.cpp: In constructor 'BBP::std::PATH::PATH(BBP::std::VOLUME*, BBP::std::conststring)':
+Path.cpp:25:21: warning: unused variable 'pathlength' [-Wunused-variable]
    25 |         std::size_t pathlength = std::strlen(str);
       |                     ^~~~~~~~~~
-Path.cpp: In member function ‘void BBP::std::PATH::DeriveFromShellDirectory(BBP::std::conststring)’:
-Path.cpp:319:61: warning: implicitly-declared ‘constexpr BBP::std::PATH& BBP::std::PATH::operator=(const BBP::std::PATH&)’ is deprecated [-Wdeprecated-copy]
+Path.cpp: In member function 'void BBP::std::PATH::DeriveFromShellDirectory(BBP::std::conststring)':
+Path.cpp:319:61: warning: implicitly-declared 'constexpr BBP::std::PATH& BBP::std::PATH::operator=(const BBP::std::PATH&)' is deprecated [-Wdeprecated-copy]
   319 |         currentPath = changeTo.makeAbsolutePath(&currentPath);
       |                                                             ^
-Path.cpp:46:1: note: because ‘BBP::std::PATH’ has user-provided ‘BBP::std::PATH::PATH(BBP::std::PATH&)’
+Path.cpp:46:1: note: because 'BBP::std::PATH' has user-provided 'BBP::std::PATH::PATH(BBP::std::PATH&)'
    46 | BBP::std::PATH::PATH(std::PATH &path)
       | ^~~
-Path.cpp:336:23: warning: implicitly-declared ‘constexpr BBP::std::PATH& BBP::std::PATH::operator=(const BBP::std::PATH&)’ is deprecated [-Wdeprecated-copy]
+Path.cpp:336:23: warning: implicitly-declared 'constexpr BBP::std::PATH& BBP::std::PATH::operator=(const BBP::std::PATH&)' is deprecated [-Wdeprecated-copy]
   336 |         currentPath = pathName;
       |                       ^~~~~~~~
-Path.cpp:46:1: note: because ‘BBP::std::PATH’ has user-provided ‘BBP::std::PATH::PATH(BBP::std::PATH&)’
+Path.cpp:46:1: note: because 'BBP::std::PATH' has user-provided 'BBP::std::PATH::PATH(BBP::std::PATH&)'
    46 | BBP::std::PATH::PATH(std::PATH &path)
       | ^~~
